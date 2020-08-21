@@ -1,0 +1,1835 @@
+﻿[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: session3
+ScriptType: v4.00+
+Collisions: Normal
+PlayDepth: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H0300FFFF,&H00000000,&H02000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:56.48,0:01:01.48,Default,,0,0,0,,
+Dialogue: 0,0:02:07.44,0:02:12.44,Default,,0,0,0,,
+Dialogue: 0,0:03:17.52,0:03:22.52,Default,,0,0,0,,
+Dialogue: 0,0:04:21.00,0:04:26.00,Default,,0,0,0,,
+Dialogue: 0,0:05:15.00,0:05:20.00,Default,,0,0,0,,
+Dialogue: 0,0:06:18.72,0:06:23.72,Default,,0,0,0,,
+Dialogue: 0,0:08:15.84,0:08:20.84,Default,,0,0,0,,
+Dialogue: 0,0:09:30.00,0:09:33.00,Default,,0,0,0,,
+Dialogue: 0,0:11:40.52,0:11:43.24,Default,,0,0,0,,JEREMY GIBBONS: Hello, my\Nname is Jeremy Gibbons,
+Dialogue: 0,0:11:43.24,0:11:44.80,Default,,0,0,0,,together with Shriram Krishnamurthi,
+Dialogue: 0,0:11:44.80,0:11:48.32,Default,,0,0,0,,I'm editor and chief of\NThe Journal of Functional Programming.
+Dialogue: 0,0:11:48.32,0:11:52.72,Default,,0,0,0,,This year, we are trying out a new\Ninteraction between JFP and ICFP.
+Dialogue: 0,0:11:52.72,0:11:55.04,Default,,0,0,0,,Authors of JFP papers\Npublished in the previous year
+Dialogue: 0,0:11:55.04,0:11:57.16,Default,,0,0,0,,are offered the opportunity\Nto present their work
+Dialogue: 0,0:11:57.16,0:11:58.96,Default,,0,0,0,,at that year's conference
+Dialogue: 0,0:11:58.96,0:12:00.44,Default,,0,0,0,,provided that the paper\Nhasn't arisen out
+Dialogue: 0,0:12:00.44,0:12:02.84,Default,,0,0,0,,of an earlier presentation.
+Dialogue: 0,0:12:02.84,0:12:05.48,Default,,0,0,0,,This year authors of eight\Npapers took up the opportunity
+Dialogue: 0,0:12:05.48,0:12:08.00,Default,,0,0,0,,and their presentations are\Ncollected in this session.
+Dialogue: 0,0:12:08.00,0:12:11.60,Default,,0,0,0,,Copies of those papers are freely\Naccessible on the JFP website
+Dialogue: 0,0:12:11.60,0:12:14.68,Default,,0,0,0,,with links from the ICFP website.
+Dialogue: 0,0:12:14.68,0:12:16.40,Default,,0,0,0,,The session is being streamed twice
+Dialogue: 0,0:12:16.40,0:12:18.44,Default,,0,0,0,,one is at a convenient\Ntime in New York
+Dialogue: 0,0:12:18.44,0:12:22.12,Default,,0,0,0,,and again 11 hours later,\Nat a convenient time in Asia.
+Dialogue: 0,0:12:22.12,0:12:24.64,Default,,0,0,0,,I remind you that registered\NICFP participants
+Dialogue: 0,0:12:24.64,0:12:26.40,Default,,0,0,0,,will get the full\Nexperience through Clowdr
+Dialogue: 0,0:12:26.40,0:12:30.04,Default,,0,0,0,,including text chat during the talk.
+Dialogue: 0,0:12:30.04,0:12:31.72,Default,,0,0,0,,Depending on the availability\Nof the authors,
+Dialogue: 0,0:12:31.72,0:12:35.08,Default,,0,0,0,,there may also be a live video\NQ&A session after the talk
+Dialogue: 0,0:12:35.08,0:12:38.76,Default,,0,0,0,,in the New York stream and I will\Nannounce that at the end of the talk
+Dialogue: 0,0:12:38.76,0:12:43.12,Default,,0,0,0,,but there's no live Q&A\Nin the Asia stream.
+Dialogue: 0,0:12:43.12,0:12:45.20,Default,,0,0,0,,The first talk is\Na presentation of the paper,
+Dialogue: 0,0:12:45.20,0:12:48.32,Default,,0,0,0,,A Theory of RPC Calculi\Nfor Client-Server Model
+Dialogue: 0,0:12:48.32,0:12:50.72,Default,,0,0,0,,which extends existing\Nstateless calculi
+Dialogue: 0,0:12:50.72,0:12:53.04,Default,,0,0,0,,to cover stateful interactions.
+Dialogue: 0,0:12:53.04,0:12:55.56,Default,,0,0,0,,The authors of the paper are\NKwanghoon Choi
+Dialogue: 0,0:12:55.56,0:12:59.08,Default,,0,0,0,,and Byeong-Mo Chang\Nand Kwanghoon will be presenting.
+Dialogue: 0,0:13:01.00,0:13:02.72,Default,,0,0,0,,KWANGHOON CHOI: Hello everyone.
+Dialogue: 0,0:13:02.72,0:13:04.40,Default,,0,0,0,,I'd like to give a talk about
+Dialogue: 0,0:13:04.40,0:13:06.96,Default,,0,0,0,,A Theory of RPC\NCalculi for Client-Server Model.
+Dialogue: 0,0:13:08.00,0:13:09.96,Default,,0,0,0,,My name is Kwanghoon Choi,
+Dialogue: 0,0:13:09.96,0:13:13.52,Default,,0,0,0,,this is a joint work\Nwith Byeong-Mo Chan.
+Dialogue: 0,0:13:13.52,0:13:15.80,Default,,0,0,0,,Let me start with a background.
+Dialogue: 0,0:13:15.80,0:13:20.80,Default,,0,0,0,,Developing distributed systems is\Nknown as complex and error-prone.
+Dialogue: 0,0:13:21.36,0:13:23.96,Default,,0,0,0,,For example, consider a web system.
+Dialogue: 0,0:13:23.96,0:13:27.68,Default,,0,0,0,,You have to develop two\Nprogrammes, one for client
+Dialogue: 0,0:13:27.68,0:13:29.36,Default,,0,0,0,,and the other for server in-
+Dialogue: 0,0:13:29.36,0:13:33.16,Default,,0,0,0,,generally, in two\Ndifferent form languages.
+Dialogue: 0,0:13:33.16,0:13:37.20,Default,,0,0,0,,Also, the two programmes\Nneed to be put together
+Dialogue: 0,0:13:37.20,0:13:41.04,Default,,0,0,0,,for testing and maintenance.
+Dialogue: 0,0:13:41.04,0:13:42.80,Default,,0,0,0,,tierless programme languages
+Dialogue: 0,0:13:42.80,0:13:45.76,Default,,0,0,0,,also known also called\Nmultitier programme languages
+Dialogue: 0,0:13:45.76,0:13:48.40,Default,,0,0,0,,can address this problem.
+Dialogue: 0,0:13:48.40,0:13:52.84,Default,,0,0,0,,You have only to develop\Na single tierless programme.
+Dialogue: 0,0:13:52.84,0:13:55.08,Default,,0,0,0,,Assuming a client-server model,
+Dialogue: 0,0:13:55.08,0:14:01.48,Default,,0,0,0,,a slicing compiler will automatically\Nslice it into a client programme
+Dialogue: 0,0:14:01.48,0:14:03.60,Default,,0,0,0,,and a server programme.
+Dialogue: 0,0:14:03.60,0:14:07.52,Default,,0,0,0,,The communication between\Nthe two sliced programmes
+Dialogue: 0,0:14:07.52,0:14:11.52,Default,,0,0,0,,will be automatically supportive.
+Dialogue: 0,0:14:11.52,0:14:15.56,Default,,0,0,0,,Particularly, we are\Ninterested in a seamlessly
+Dialogue: 0,0:14:15.56,0:14:19.64,Default,,0,0,0,,tierless programme language\Nfor client-server model.
+Dialogue: 0,0:14:19.64,0:14:24.16,Default,,0,0,0,,It is basically a programme language\Ndesigned for a single computer
+Dialogue: 0,0:14:24.16,0:14:29.56,Default,,0,0,0,,but naturally extended\Nwith a seamless RPC.
+Dialogue: 0,0:14:29.56,0:14:33.04,Default,,0,0,0,,By the seamless remote\Nprocedure call, RPC,
+Dialogue: 0,0:14:33.04,0:14:37.72,Default,,0,0,0,,I mean the remote procedure\Ncalls are language supported,
+Dialogue: 0,0:14:37.72,0:14:43.04,Default,,0,0,0,,bi-directional\Nand fully transparent.
+Dialogue: 0,0:14:43.04,0:14:47.80,Default,,0,0,0,,Links is a real world seamlessly\Ntierless programme language
+Dialogue: 0,0:14:47.80,0:14:50.84,Default,,0,0,0,,for a client-server model.
+Dialogue: 0,0:14:50.84,0:14:55.84,Default,,0,0,0,,One advantage of the seamlessly\Ntierless programme language is this.
+Dialogue: 0,0:14:56.36,0:15:00.60,Default,,0,0,0,,If you look at this example\Nprogramme written in links,
+Dialogue: 0,0:15:00.60,0:15:07.60,Default,,0,0,0,,you know that tierless programme can\Nbe written exactly in the same way
+Dialogue: 0,0:15:07.60,0:15:10.44,Default,,0,0,0,,as writing single computer programmes.
+Dialogue: 0,0:15:10.44,0:15:14.88,Default,,0,0,0,,The only difference is specifying\Nthe locational function.
+Dialogue: 0,0:15:14.88,0:15:19.48,Default,,0,0,0,,Here, client means that\Nthe main is a client function
+Dialogue: 0,0:15:19.48,0:15:22.52,Default,,0,0,0,,that must run at client.
+Dialogue: 0,0:15:22.52,0:15:27.28,Default,,0,0,0,,Here, server means that\Nthe authenticate is a server function
+Dialogue: 0,0:15:27.28,0:15:31.56,Default,,0,0,0,,that must run as server.
+Dialogue: 0,0:15:31.56,0:15:36.56,Default,,0,0,0,,Firstly, it is language\Nsupported not library-based.
+Dialogue: 0,0:15:37.36,0:15:42.28,Default,,0,0,0,,Second, you can call a server\Nfunction from the client
+Dialogue: 0,0:15:42.28,0:15:46.76,Default,,0,0,0,,and also you can call a client\Nfunction from the server,
+Dialogue: 0,0:15:46.76,0:15:49.48,Default,,0,0,0,,so, it is bi-directional.
+Dialogue: 0,0:15:49.48,0:15:54.88,Default,,0,0,0,,Third, the same syntax of\Nlambda application is used,
+Dialogue: 0,0:15:54.88,0:15:58.96,Default,,0,0,0,,first, for local procedure call\Nand remote procedure call.
+Dialogue: 0,0:15:58.96,0:16:03.88,Default,,0,0,0,,No extra RPC keyword is\Nused in the syntax.
+Dialogue: 0,0:16:03.88,0:16:08.04,Default,,0,0,0,,So, links is the seamlessly\Ntierless programming language
+Dialogue: 0,0:16:08.04,0:16:11.68,Default,,0,0,0,,for client-server model.
+Dialogue: 0,0:16:11.68,0:16:16.12,Default,,0,0,0,,The RPC calculus is\Na seamlessly tierless calculus
+Dialogue: 0,0:16:16.12,0:16:21.12,Default,,0,0,0,,that extends the lambda\Ncalculus with an RPC feature.
+Dialogue: 0,0:16:22.00,0:16:29.32,Default,,0,0,0,,It was proposed as a foundation\Nof links by Cooper and Wadler.
+Dialogue: 0,0:16:29.32,0:16:33.76,Default,,0,0,0,,In the calculus, c is\Nthe client location,
+Dialogue: 0,0:16:33.76,0:16:37.48,Default,,0,0,0,,s denote the server location.
+Dialogue: 0,0:16:37.48,0:16:41.16,Default,,0,0,0,,Every lambda extraction has\Na location annotation a
+Dialogue: 0,0:16:41.16,0:16:46.16,Default,,0,0,0,,meaning that this must run\Nat a specified location a.
+Dialogue: 0,0:16:47.72,0:16:51.40,Default,,0,0,0,,The RPC feature is described
+Dialogue: 0,0:16:51.40,0:16:52.92,Default,,0,0,0,,by the big steps semantics.
+Dialogue: 0,0:16:54.16,0:16:58.00,Default,,0,0,0,,When you evaluate a lambda\Napplication at location a,
+Dialogue: 0,0:16:59.00,0:17:01.24,Default,,0,0,0,,you evaluate the functional term L
+Dialogue: 0,0:17:01.96,0:17:03.28,Default,,0,0,0,,at the same location a
+Dialogue: 0,0:17:04.52,0:17:08.24,Default,,0,0,0,,into a lambda abstraction with\Nlocation and notation b.
+Dialogue: 0,0:17:09.48,0:17:12.68,Default,,0,0,0,,You also evaluate an argument M
+Dialogue: 0,0:17:14.16,0:17:16.44,Default,,0,0,0,,to our value W at the same location.
+Dialogue: 0,0:17:17.92,0:17:24.24,Default,,0,0,0,,And then finally you do beta\Nreduction at the location b not a.
+Dialogue: 0,0:17:24.84,0:17:27.44,Default,,0,0,0,,In the semantic rule for\Nlambda application,
+Dialogue: 0,0:17:28.44,0:17:32.92,Default,,0,0,0,,the caller location a,\Nand the function location is b.
+Dialogue: 0,0:17:33.92,0:17:40.40,Default,,0,0,0,,If a is different from b, then\Nthe lambda application LM
+Dialogue: 0,0:17:40.40,0:17:42.16,Default,,0,0,0,,is a remote procedure call.
+Dialogue: 0,0:17:42.64,0:17:47.08,Default,,0,0,0,,If a is the same as b,\Nit is a local procedure call.
+Dialogue: 0,0:17:47.60,0:17:53.48,Default,,0,0,0,,We use the same syntax for both\Ncalls so it is fully transparent.
+Dialogue: 0,0:17:55.48,0:17:59.16,Default,,0,0,0,,The seamless RPC is good for\Ntireless programming.
+Dialogue: 0,0:17:59.64,0:18:03.60,Default,,0,0,0,,However, due to the transparency\Nof the seamless RPC
+Dialogue: 0,0:18:04.84,0:18:08.40,Default,,0,0,0,,every lambda abstraction has to\Ncheck the function location
+Dialogue: 0,0:18:08.40,0:18:12.40,Default,,0,0,0,,in runtime to decide\Nif it is RPC or not.
+Dialogue: 0,0:18:13.16,0:18:17.52,Default,,0,0,0,,This happens even in the sliced\Nclient and server programmes
+Dialogue: 0,0:18:17.52,0:18:19.36,Default,,0,0,0,,after the slicing compilation.
+Dialogue: 0,0:18:21.60,0:18:25.00,Default,,0,0,0,,Our solution is to have\Nlocated function types
+Dialogue: 0,0:18:25.72,0:18:28.64,Default,,0,0,0,,to trap function\Nlocation statically.
+Dialogue: 0,0:18:29.40,0:18:35.48,Default,,0,0,0,,Then we can statically decide\Nif given lambda application
+Dialogue: 0,0:18:35.96,0:18:38.88,Default,,0,0,0,,is local procedure call\Nor remote procedure call.
+Dialogue: 0,0:18:39.88,0:18:45.96,Default,,0,0,0,,As a result, programmemers can enjoy\Nthe advantage of the seamless RPC
+Dialogue: 0,0:18:46.72,0:18:48.00,Default,,0,0,0,,in the tierless programmes
+Dialogue: 0,0:18:48.76,0:18:52.28,Default,,0,0,0,,but no more runtime location\Nchecking is required
+Dialogue: 0,0:18:52.76,0:18:55.88,Default,,0,0,0,,in the sliced client\Nand server programmes.
+Dialogue: 0,0:18:58.88,0:19:02.40,Default,,0,0,0,,A key idea behind our\Ntyped RPC calculus
+Dialogue: 0,0:19:03.92,0:19:07.24,Default,,0,0,0,,is a location annotation\Non a function type.
+Dialogue: 0,0:19:08.52,0:19:12.72,Default,,0,0,0,,It is a reminiscent of a location\Nannotation on a lambda extraction.
+Dialogue: 0,0:19:14.00,0:19:16.28,Default,,0,0,0,,The located function type means that
+Dialogue: 0,0:19:16.80,0:19:18.96,Default,,0,0,0,,every lambda extraction\Nof these type
+Dialogue: 0,0:19:19.48,0:19:24.56,Default,,0,0,0,,must run, is guaranteed to run\Nat a specified location a.
+Dialogue: 0,0:19:25.56,0:19:28.04,Default,,0,0,0,,For example the argument f
+Dialogue: 0,0:19:28.76,0:19:30.16,Default,,0,0,0,,has a client function type
+Dialogue: 0,0:19:30.92,0:19:35.16,Default,,0,0,0,,because a client function is\Ngoing to be bounded to f.
+Dialogue: 0,0:19:36.16,0:19:40.92,Default,,0,0,0,,In the second example, f has\Nneither a client function type
+Dialogue: 0,0:19:40.92,0:19:42.36,Default,,0,0,0,,nor a server function type.
+Dialogue: 0,0:19:43.60,0:19:47.08,Default,,0,0,0,,Because depending on\Nthe value of if conditioner
+Dialogue: 0,0:19:48.08,0:19:51.76,Default,,0,0,0,,was client function and server function\Ncan be bounded to f.
+Dialogue: 0,0:19:53.00,0:19:54.80,Default,,0,0,0,,In the typed RPC characters
+Dialogue: 0,0:19:55.32,0:19:57.88,Default,,0,0,0,,only monomorphic\Nlocations are allowed
+Dialogue: 0,0:19:57.88,0:19:59.52,Default,,0,0,0,,so it is not well typed.
+Dialogue: 0,0:20:01.76,0:20:06.76,Default,,0,0,0,,The other key idea is that\Nin the typed RPC calculus
+Dialogue: 0,0:20:06.76,0:20:12.88,Default,,0,0,0,,you can identify all remote procedure\Ncalls statically in compared time.
+Dialogue: 0,0:20:14.16,0:20:16.16,Default,,0,0,0,,Let us see, it is typing rule.
+Dialogue: 0,0:20:17.44,0:20:22.44,Default,,0,0,0,,This is a refinement of the conventional\Nlambda application typing rule
+Dialogue: 0,0:20:22.44,0:20:25.44,Default,,0,0,0,,with respect to a caller location A
+Dialogue: 0,0:20:25.96,0:20:28.16,Default,,0,0,0,,and a functional location B.
+Dialogue: 0,0:20:29.16,0:20:33.20,Default,,0,0,0,,Once your tierless programme\Nis successfully type checked
+Dialogue: 0,0:20:33.92,0:20:35.84,Default,,0,0,0,,in every lambda application LM
+Dialogue: 0,0:20:36.60,0:20:39.76,Default,,0,0,0,,the caller location A\Nand the function location B
+Dialogue: 0,0:20:40.24,0:20:44.60,Default,,0,0,0,,are fully analysed\Nand known in compared time.
+Dialogue: 0,0:20:45.84,0:20:51.44,Default,,0,0,0,,Then caller location a is equal\Nto the function location b
+Dialogue: 0,0:20:51.44,0:20:55.64,Default,,0,0,0,,then that lambda application\Nis local procedure call.
+Dialogue: 0,0:20:56.92,0:21:00.04,Default,,0,0,0,,Otherwise a is different from b
+Dialogue: 0,0:21:00.76,0:21:03.20,Default,,0,0,0,,then this is a remote\Nprocedure call.
+Dialogue: 0,0:21:04.48,0:21:08.92,Default,,0,0,0,,In this way, you can statically decide\Nif given lambda application
+Dialogue: 0,0:21:09.44,0:21:11.60,Default,,0,0,0,,is local or remote procedure calls.
+Dialogue: 0,0:21:12.60,0:21:14.92,Default,,0,0,0,,By the type soundness property
+Dialogue: 0,0:21:14.92,0:21:18.92,Default,,0,0,0,,every remote procedure call\Ndoes analyse statically
+Dialogue: 0,0:21:19.68,0:21:22.84,Default,,0,0,0,,will never be dynamically\Nchanged into any local one.
+Dialogue: 0,0:21:25.60,0:21:27.12,Default,,0,0,0,,Thanks to this property,
+Dialogue: 0,0:21:27.12,0:21:32.12,Default,,0,0,0,,we can design a location information\Ndirected slicing compilation
+Dialogue: 0,0:21:33.56,0:21:36.36,Default,,0,0,0,,whose sliced clients and subprogrammes
+Dialogue: 0,0:21:36.36,0:21:41.36,Default,,0,0,0,,will never do location checking,\Ndynamically in a long time.
+Dialogue: 0,0:21:42.56,0:21:46.12,Default,,0,0,0,,This is an advantage over\Nthe untyped RPC calculus
+Dialogue: 0,0:21:46.12,0:21:48.40,Default,,0,0,0,,that always does location checking
+Dialogue: 0,0:21:48.92,0:21:51.88,Default,,0,0,0,,in the sliced client\Nand several programmes.
+Dialogue: 0,0:21:55.40,0:21:58.36,Default,,0,0,0,,The typed RPC calculus\Nis good so far
+Dialogue: 0,0:21:58.84,0:22:00.80,Default,,0,0,0,,but it has a problem
+Dialogue: 0,0:22:01.32,0:22:04.52,Default,,0,0,0,,because of using only\Nmonomorphic locations
+Dialogue: 0,0:22:04.52,0:22:06.28,Default,,0,0,0,,such as client and server
+Dialogue: 0,0:22:06.80,0:22:09.24,Default,,0,0,0,,not something to report both.
+Dialogue: 0,0:22:10.24,0:22:12.84,Default,,0,0,0,,For example you cannot write
+Dialogue: 0,0:22:12.84,0:22:16.24,Default,,0,0,0,,a single polymorphically\Nlocated map function.
+Dialogue: 0,0:22:16.96,0:22:19.52,Default,,0,0,0,,Instead you have to write\Na client map function
+Dialogue: 0,0:22:19.52,0:22:22.00,Default,,0,0,0,,and a server map\Nfunction separately.
+Dialogue: 0,0:22:24.28,0:22:27.52,Default,,0,0,0,,A solution is to introduce\Npolymorphic locations
+Dialogue: 0,0:22:28.24,0:22:29.72,Default,,0,0,0,,to the typed RPC calculus.
+Dialogue: 0,0:22:31.44,0:22:35.28,Default,,0,0,0,,It is proposed by our sequel\Nresearch to the JFP paper
+Dialogue: 0,0:22:36.04,0:22:38.60,Default,,0,0,0,,about a polymorphic RPC calculus.
+Dialogue: 0,0:22:38.60,0:22:43.28,Default,,0,0,0,,This is joint work with James Cheney,\NSimon Fowler and Sam Lindley.
+Dialogue: 0,0:22:44.80,0:22:46.84,Default,,0,0,0,,In the polymorphic RPC calculus,
+Dialogue: 0,0:22:46.84,0:22:49.44,Default,,0,0,0,,you can write a polymorphically\Nlocated function
+Dialogue: 0,0:22:49.44,0:22:52.44,Default,,0,0,0,,with the location f traction\Nover location variable
+Dialogue: 0,0:22:53.16,0:22:56.16,Default,,0,0,0,,and location application\Nas you see in the slide.
+Dialogue: 0,0:22:56.16,0:22:59.20,Default,,0,0,0,,Then you have only to apply\Nto the client location
+Dialogue: 0,0:22:59.20,0:23:00.80,Default,,0,0,0,,to get a client map function.
+Dialogue: 0,0:23:02.04,0:23:05.12,Default,,0,0,0,,You can also apply to\Nthe server location
+Dialogue: 0,0:23:06.12,0:23:07.56,Default,,0,0,0,,to get a server map function.
+Dialogue: 0,0:23:09.04,0:23:12.16,Default,,0,0,0,,This slide shows the comparison\Namong the RPC calculi
+Dialogue: 0,0:23:12.68,0:23:16.44,Default,,0,0,0,,to support the slicing compilation\Nof the polymorphic RPC calculus
+Dialogue: 0,0:23:16.92,0:23:18.28,Default,,0,0,0,,there are two approaches.
+Dialogue: 0,0:23:18.28,0:23:21.84,Default,,0,0,0,,One is a study approach that is\Ndescribed in the sequel paper
+Dialogue: 0,0:23:22.36,0:23:25.64,Default,,0,0,0,,the other is a dynamic approach\Nthat we are currently working on.
+Dialogue: 0,0:23:26.64,0:23:31.24,Default,,0,0,0,,In this talk, I presented\Ntheory of RPC calculi.
+Dialogue: 0,0:23:31.24,0:23:34.00,Default,,0,0,0,,There are potential\Napplication of location types
+Dialogue: 0,0:23:34.00,0:23:37.48,Default,,0,0,0,,to other areas such as securities\Nand communication optimisation.
+Dialogue: 0,0:23:38.20,0:23:41.12,Default,,0,0,0,,Also, we want to develop\Na fully fledged seamless
+Dialogue: 0,0:23:41.12,0:23:43.56,Default,,0,0,0,,tierless functional from\Nthe language based on the series.
+Dialogue: 0,0:23:44.04,0:23:45.72,Default,,0,0,0,,Thank you for your attention.
+Dialogue: 0,0:23:45.72,0:23:50.72,Default,,0,0,0,,(APPLAUSE)
+Dialogue: 0,0:23:53.32,0:23:54.76,Default,,0,0,0,,JEREMY GIBBONS: Thanks Kwanghoon.
+Dialogue: 0,0:23:56.04,0:23:57.76,Default,,0,0,0,,If you are watching\Nthe New York stream in Clowdr
+Dialogue: 0,0:23:57.76,0:23:59.20,Default,,0,0,0,,you should now see a Q&A link,
+Dialogue: 0,0:23:59.20,0:24:02.00,Default,,0,0,0,,where I hope you can ask\NKwanghoon question by video chat.
+Dialogue: 0,0:24:08.52,0:24:10.76,Default,,0,0,0,,The next talk is\Nthe presentation of the paper
+Dialogue: 0,0:24:10.76,0:24:13.04,Default,,0,0,0,,The Full Reducing Krivine\NAbstract Machine KN
+Dialogue: 0,0:24:13.04,0:24:15.72,Default,,0,0,0,,simulates pure normal-order reduction\Nin lockstep
+Dialogue: 0,0:24:16.20,0:24:18.64,Default,,0,0,0,,which adds to the framework\Nfor environment machines
+Dialogue: 0,0:24:18.64,0:24:21.68,Default,,0,0,0,,developed by Małgorzata Biernacka\Nand Olivier Danvy.
+Dialogue: 0,0:24:22.68,0:24:26.52,Default,,0,0,0,,The authors of the paper are\NAlvaro Garcia-Perez and Pablo Nogueira
+Dialogue: 0,0:24:27.00,0:24:28.36,Default,,0,0,0,,And Alvaro will be presenting it.
+Dialogue: 0,0:24:28.88,0:24:30.24,Default,,0,0,0,,ALVARO GARCIA-PEREZ: In this talk,
+Dialogue: 0,0:24:30.24,0:24:32.24,Default,,0,0,0,,we prove properties of\Nan abstract machine.
+Dialogue: 0,0:24:32.76,0:24:35.92,Default,,0,0,0,,In particular that the machine\Ndefines the same strategy
+Dialogue: 0,0:24:35.92,0:24:38.28,Default,,0,0,0,,than the normal other strategy\Nof the lambda calculus.
+Dialogue: 0,0:24:39.28,0:24:42.24,Default,,0,0,0,,We prove this result by\Nintroducing a semantic artefact
+Dialogue: 0,0:24:42.24,0:24:44.08,Default,,0,0,0,,that corresponds to the machine
+Dialogue: 0,0:24:44.08,0:24:46.44,Default,,0,0,0,,and it is retrofitted for\Nthe proof of the property.
+Dialogue: 0,0:24:47.44,0:24:50.52,Default,,0,0,0,,The corresponding artefact is\Na reduction of strategy in a calculus
+Dialogue: 0,0:24:50.52,0:24:51.52,Default,,0,0,0,,of closures.
+Dialogue: 0,0:24:52.52,0:24:54.56,Default,,0,0,0,,As this quote by Cregut shows,
+Dialogue: 0,0:24:54.56,0:24:58.08,Default,,0,0,0,,the importance of full reduction\Nis widely recognised
+Dialogue: 0,0:24:58.08,0:25:01.28,Default,,0,0,0,,in the full implementation of programming\Nlanguages and (INAUDIBLE).
+Dialogue: 0,0:25:02.04,0:25:06.16,Default,,0,0,0,,Full reduction refers to reducing\Nthe term up to a normal form.
+Dialogue: 0,0:25:06.16,0:25:08.80,Default,,0,0,0,,That is a term without (INAUDIBLE)
+Dialogue: 0,0:25:09.80,0:25:12.76,Default,,0,0,0,,For instance, this is especially\Nimportant with nowadays
+Dialogue: 0,0:25:12.76,0:25:14.52,Default,,0,0,0,,proven systems with\Nthe (INAUDIBLE) types
+Dialogue: 0,0:25:14.52,0:25:17.56,Default,,0,0,0,,which needs to reach\Nthe normal form of a type
+Dialogue: 0,0:25:17.56,0:25:20.04,Default,,0,0,0,,in order to implement\Ntype conversion rules.
+Dialogue: 0,0:25:20.80,0:25:24.40,Default,,0,0,0,,The machine we study is Cregut's\Nfull reducing version of
+Dialogue: 0,0:25:24.40,0:25:25.68,Default,,0,0,0,,the Krivine abstract machine
+Dialogue: 0,0:25:26.20,0:25:27.52,Default,,0,0,0,,which we abbreviate to KN.
+Dialogue: 0,0:25:28.52,0:25:31.52,Default,,0,0,0,,In a nutshell, KN takes\Nas input a lambda term
+Dialogue: 0,0:25:31.52,0:25:34.88,Default,,0,0,0,,that it embeds in closure in\Nan environment that disturbs bindings
+Dialogue: 0,0:25:35.40,0:25:37.24,Default,,0,0,0,,and uses a continuation of stack
+Dialogue: 0,0:25:37.24,0:25:41.08,Default,,0,0,0,,and tracks the lambda nesting\Nlevel of the term being evaluated.
+Dialogue: 0,0:25:42.32,0:25:44.12,Default,,0,0,0,,The machine looks up in environment
+Dialogue: 0,0:25:44.12,0:25:47.00,Default,,0,0,0,,the binding of a variable\Nrepresented by a De Bruijn index
+Dialogue: 0,0:25:47.52,0:25:50.16,Default,,0,0,0,,pushes the operant of\Nan application onto the stack
+Dialogue: 0,0:25:51.16,0:25:54.16,Default,,0,0,0,,retrieves such an operant when\Nthe operator is an abstraction
+Dialogue: 0,0:25:54.16,0:25:56.24,Default,,0,0,0,,and place it as a binding\Nin the environment.
+Dialogue: 0,0:25:57.48,0:25:59.64,Default,,0,0,0,,Reduces the body of\Nan applied abstraction
+Dialogue: 0,0:25:59.64,0:26:01.60,Default,,0,0,0,,by pushing a special\Nsymbol on the stack
+Dialogue: 0,0:26:02.08,0:26:04.96,Default,,0,0,0,,and placing in the environment\Nthe lambda nesting level
+Dialogue: 0,0:26:04.96,0:26:06.48,Default,,0,0,0,,of the formal parameter\Nof the abstraction.
+Dialogue: 0,0:26:07.48,0:26:11.08,Default,,0,0,0,,Calculates the De Bruijn index\Nof such a formal parameter
+Dialogue: 0,0:26:11.08,0:26:12.44,Default,,0,0,0,,retrieved from the environment,
+Dialogue: 0,0:26:13.20,0:26:15.52,Default,,0,0,0,,reduces the operant\Nof a normal form
+Dialogue: 0,0:26:15.52,0:26:17.56,Default,,0,0,0,,which is embedded in\Na special kind of closure
+Dialogue: 0,0:26:17.56,0:26:19.08,Default,,0,0,0,,that disturbs (INAUDIBLE) theorems.
+Dialogue: 0,0:26:19.56,0:26:23.00,Default,,0,0,0,,And finally flattens\Nthe stack into a normal form
+Dialogue: 0,0:26:23.00,0:26:26.60,Default,,0,0,0,,that is returned when all\Nthe symbols in the stack are consumed.
+Dialogue: 0,0:26:27.84,0:26:30.96,Default,,0,0,0,,KN has been proven to find\Nthe normal form of a term
+Dialogue: 0,0:26:30.96,0:26:32.00,Default,,0,0,0,,when it has some.
+Dialogue: 0,0:26:32.52,0:26:35.40,Default,,0,0,0,,However the machine is\Nthe first order transition system
+Dialogue: 0,0:26:35.40,0:26:38.36,Default,,0,0,0,,that manipulates environments\Nand (INAUDIBLE) stacks at the low level.
+Dialogue: 0,0:26:39.36,0:26:41.60,Default,,0,0,0,,And this format is not ready\Nto the deploy proofs by
+Dialogue: 0,0:26:41.60,0:26:42.68,Default,,0,0,0,,structural induction.
+Dialogue: 0,0:26:44.40,0:26:47.88,Default,,0,0,0,,Our approach is to introduce a\Nhigher order calculus of closures
+Dialogue: 0,0:26:47.88,0:26:50.44,Default,,0,0,0,,with a reduction strategy\Nthat mimics the machine
+Dialogue: 0,0:26:50.96,0:26:53.80,Default,,0,0,0,,and that is suited for deployment\Nproofs by structural induction.
+Dialogue: 0,0:26:54.56,0:26:58.68,Default,,0,0,0,,And later to prove that the set\Ncalculus realises the normal order
+Dialogue: 0,0:26:58.68,0:27:00.64,Default,,0,0,0,,of the strategy of\Nthe pure lambda calculus.
+Dialogue: 0,0:27:01.88,0:27:04.24,Default,,0,0,0,,We arrived at such\Ncalculus of closures
+Dialogue: 0,0:27:04.24,0:27:07.68,Default,,0,0,0,,from the ones in the tradition of\NCurien's calculus of closures
+Dialogue: 0,0:27:07.68,0:27:08.68,Default,,0,0,0,,lambda rho.
+Dialogue: 0,0:27:09.64,0:27:12.16,Default,,0,0,0,,Curien's calculus\Ncontains proper closures
+Dialogue: 0,0:27:12.16,0:27:14.52,Default,,0,0,0,,made up of a term\Nand an environment.
+Dialogue: 0,0:27:15.76,0:27:18.08,Default,,0,0,0,,The term uses the De Bruijn\Nindices representation,
+Dialogue: 0,0:27:19.08,0:27:20.72,Default,,0,0,0,,the environment stores closures
+Dialogue: 0,0:27:20.72,0:27:24.04,Default,,0,0,0,,and the indices are used to access\Nthe bindings in the environment
+Dialogue: 0,0:27:24.52,0:27:27.24,Default,,0,0,0,,where positions in\Nthe environment start at 0.
+Dialogue: 0,0:27:28.00,0:27:31.48,Default,,0,0,0,,In the example here,\Nreduction starts with a closure
+Dialogue: 0,0:27:31.48,0:27:32.80,Default,,0,0,0,,with empty environment.
+Dialogue: 0,0:27:33.80,0:27:35.64,Default,,0,0,0,,When an application is reached
+Dialogue: 0,0:27:36.12,0:27:38.24,Default,,0,0,0,,it's operant is embedded\Ninto a closure
+Dialogue: 0,0:27:38.24,0:27:40.36,Default,,0,0,0,,and prepended to\Nthe current environment.
+Dialogue: 0,0:27:41.36,0:27:45.52,Default,,0,0,0,,Then the binding at position\N0 is looked up and retrieved
+Dialogue: 0,0:27:45.52,0:27:46.80,Default,,0,0,0,,from the environment.
+Dialogue: 0,0:27:47.56,0:27:50.24,Default,,0,0,0,,And then reduction\Nresumes on such bindings.
+Dialogue: 0,0:27:51.00,0:27:53.16,Default,,0,0,0,,In the better rule of this calculus
+Dialogue: 0,0:27:53.16,0:27:54.72,Default,,0,0,0,,the operator in an application
+Dialogue: 0,0:27:54.72,0:27:58.28,Default,,0,0,0,,is reduced multiple step fashion\Nto a weakened normal form.
+Dialogue: 0,0:27:59.52,0:28:02.76,Default,,0,0,0,,This poses some problems when\Ndefinding a reduction relation
+Dialogue: 0,0:28:02.76,0:28:04.20,Default,,0,0,0,,which is purely single step.
+Dialogue: 0,0:28:05.44,0:28:07.68,Default,,0,0,0,,This issue whilst\Nobserved and fixed
+Dialogue: 0,0:28:07.68,0:28:11.08,Default,,0,0,0,,in the Biernacka and Danvy's\NLambda hat Rho calculus.
+Dialogue: 0,0:28:12.32,0:28:16.12,Default,,0,0,0,,This variant of Curien's\Ncalculus considers a constructor
+Dialogue: 0,0:28:16.12,0:28:17.68,Default,,0,0,0,,for closure application
+Dialogue: 0,0:28:17.68,0:28:20.80,Default,,0,0,0,,that enables the reduction\Nrelations to be lift
+Dialogue: 0,0:28:20.80,0:28:22.32,Default,,0,0,0,,to the scope of the operator.
+Dialogue: 0,0:28:23.84,0:28:26.48,Default,,0,0,0,,The calculus also includes\Nan expansion rule
+Dialogue: 0,0:28:26.48,0:28:29.24,Default,,0,0,0,,that expands applications\Nto closure applications.
+Dialogue: 0,0:28:30.48,0:28:33.80,Default,,0,0,0,,This mechanism is reminiscent\Nof the applied stage
+Dialogue: 0,0:28:33.80,0:28:36.96,Default,,0,0,0,,in the (INAUDIBLE) evaluators\Nin the classical literature
+Dialogue: 0,0:28:36.96,0:28:38.64,Default,,0,0,0,,in higher order\Nfunctional programming.
+Dialogue: 0,0:28:40.16,0:28:42.40,Default,,0,0,0,,Now reduction expanse applications.
+Dialogue: 0,0:28:43.12,0:28:44.92,Default,,0,0,0,,Reduces the operator if needed,
+Dialogue: 0,0:28:44.92,0:28:46.76,Default,,0,0,0,,performs better with action
+Dialogue: 0,0:28:47.24,0:28:50.28,Default,,0,0,0,,and then continues to\Nreduce as before.
+Dialogue: 0,0:28:51.04,0:28:54.00,Default,,0,0,0,,The Biernacka and Danvy's\Nlambda hat rho
+Dialogue: 0,0:28:54.00,0:28:55.64,Default,,0,0,0,,is enough for weak reduction.
+Dialogue: 0,0:28:56.36,0:28:59.44,Default,,0,0,0,,They give account of\Nboth call by name and call by value
+Dialogue: 0,0:28:59.44,0:29:01.40,Default,,0,0,0,,weak reducing strategies\Nin this calculus.
+Dialogue: 0,0:29:02.16,0:29:05.40,Default,,0,0,0,,However it cannot accommodate\Nfull reducing strategies.
+Dialogue: 0,0:29:06.64,0:29:09.92,Default,,0,0,0,,We remedy this by further\Nextending the calculus
+Dialogue: 0,0:29:09.92,0:29:12.76,Default,,0,0,0,,with a constructure for\Nclosure abstraction.
+Dialogue: 0,0:29:13.76,0:29:16.08,Default,,0,0,0,,We also provide a new expansion rule
+Dialogue: 0,0:29:16.84,0:29:19.32,Default,,0,0,0,,that expands abstractions\Ninto closure abstractions.
+Dialogue: 0,0:29:20.60,0:29:22.56,Default,,0,0,0,,But before presenting\Nthis rule in detail
+Dialogue: 0,0:29:23.04,0:29:25.96,Default,,0,0,0,,we discuss how to represent\Nthe formal parameter
+Dialogue: 0,0:29:25.96,0:29:27.52,Default,,0,0,0,,of the abstraction\Nin the environment.
+Dialogue: 0,0:29:28.80,0:29:32.60,Default,,0,0,0,,In calculus, a variable is\Nrepresented by a De Bruijn index
+Dialogue: 0,0:29:33.32,0:29:35.28,Default,,0,0,0,,which stands for\Nthe relative distance
+Dialogue: 0,0:29:35.28,0:29:37.76,Default,,0,0,0,,between the applied\Noccurance of the variable
+Dialogue: 0,0:29:37.76,0:29:41.20,Default,,0,0,0,,and it's binding occurrence\Nin the abstracts index tree.
+Dialogue: 0,0:29:42.72,0:29:46.08,Default,,0,0,0,,If the binding lambda is\Nimmediately above the variable,
+Dialogue: 0,0:29:46.84,0:29:47.96,Default,,0,0,0,,then the index is 0.
+Dialogue: 0,0:29:48.48,0:29:52.08,Default,,0,0,0,,Otherwise the index gets\Nincremented as the distance
+Dialogue: 0,0:29:52.08,0:29:53.68,Default,,0,0,0,,to its binding lambda increases.
+Dialogue: 0,0:29:55.92,0:29:59.76,Default,,0,0,0,,However if we place the De Bruijn\Nindex of the formal parameter
+Dialogue: 0,0:29:59.76,0:30:03.08,Default,,0,0,0,,in a scope which is nested\Nunder more lambdas
+Dialogue: 0,0:30:03.08,0:30:04.44,Default,,0,0,0,,than it's binding occurrence,
+Dialogue: 0,0:30:04.92,0:30:07.48,Default,,0,0,0,,then we have to adjust that\Nindex by adding to it
+Dialogue: 0,0:30:07.48,0:30:09.48,Default,,0,0,0,,the number of lambdas going down.
+Dialogue: 0,0:30:11.24,0:30:15.08,Default,,0,0,0,,Inspired by KN, we used\Ninstead De Bruijn level
+Dialogue: 0,0:30:15.08,0:30:17.64,Default,,0,0,0,,of the formal parameter\Nhere over lined
+Dialogue: 0,0:30:18.16,0:30:20.80,Default,,0,0,0,,which stands for the absolute\Nlambda nesting level
+Dialogue: 0,0:30:20.80,0:30:23.08,Default,,0,0,0,,of the binding lambda in\Nthe abstract index tree.
+Dialogue: 0,0:30:24.32,0:30:26.40,Default,,0,0,0,,One stands for the first lambda.
+Dialogue: 0,0:30:26.88,0:30:30.32,Default,,0,0,0,,And the level increases if\Nthe binding lambda is further down.
+Dialogue: 0,0:30:31.56,0:30:33.60,Default,,0,0,0,,The advantage of\Nthe De Bruijn levels
+Dialogue: 0,0:30:33.60,0:30:37.24,Default,,0,0,0,,is that they need not be a adjusted\Nwhen placed in scopes of the term
+Dialogue: 0,0:30:37.24,0:30:39.20,Default,,0,0,0,,that are nested under more lambdas.
+Dialogue: 0,0:30:40.20,0:30:41.92,Default,,0,0,0,,In order to use the De Bruijn level
+Dialogue: 0,0:30:42.44,0:30:44.92,Default,,0,0,0,,we first decorate our\Nreduction relation
+Dialogue: 0,0:30:44.92,0:30:46.76,Default,,0,0,0,,with the current\Nlambda nesting level.
+Dialogue: 0,0:30:47.52,0:30:50.68,Default,,0,0,0,,And then the expansion rule\Npushes into the environment
+Dialogue: 0,0:30:50.68,0:30:52.72,Default,,0,0,0,,the current level increment by one.
+Dialogue: 0,0:30:52.72,0:30:55.00,Default,,0,0,0,,Since the formal parameter\Nhas crossed the lambda.
+Dialogue: 0,0:30:56.00,0:30:59.40,Default,,0,0,0,,We also add to the calculus\Na construction for such levels
+Dialogue: 0,0:30:59.92,0:31:03.88,Default,,0,0,0,,and we restrict the environments\Nto either contain proper closures
+Dialogue: 0,0:31:03.88,0:31:07.88,Default,,0,0,0,,or levels since this would be\Nenough for the reduction strategy
+Dialogue: 0,0:31:07.88,0:31:09.24,Default,,0,0,0,,that mimics KN.
+Dialogue: 0,0:31:10.24,0:31:12.32,Default,,0,0,0,,When the level is retrieved\Nfrom the environment
+Dialogue: 0,0:31:12.32,0:31:15.56,Default,,0,0,0,,the index corresponding\Nto it can be calculated
+Dialogue: 0,0:31:15.56,0:31:18.64,Default,,0,0,0,,by subtracting the level from\Nthe current lambda nesting level.
+Dialogue: 0,0:31:19.64,0:31:21.96,Default,,0,0,0,,A new rule takes care\Nof this calculation
+Dialogue: 0,0:31:22.48,0:31:25.92,Default,,0,0,0,,and embeds the calculated\Nindex into a new construction
+Dialogue: 0,0:31:25.92,0:31:27.08,Default,,0,0,0,,for absolute indices.
+Dialogue: 0,0:31:28.36,0:31:31.68,Default,,0,0,0,,Absolute indices are formal parameters\Nof an applied abstractions
+Dialogue: 0,0:31:31.68,0:31:33.96,Default,,0,0,0,,that are not relative\Nto any environment.
+Dialogue: 0,0:31:34.96,0:31:38.08,Default,,0,0,0,,We show an example of a reduction\Nsequence in our calculus.
+Dialogue: 0,0:31:38.84,0:31:41.88,Default,,0,0,0,,The sequence starts with\Na term within the environment
+Dialogue: 0,0:31:41.88,0:31:44.32,Default,,0,0,0,,and expands the application\Ninto a closure application.
+Dialogue: 0,0:31:45.32,0:31:48.80,Default,,0,0,0,,But now it also expands\Nthe operator to a closure abstraction
+Dialogue: 0,0:31:48.80,0:31:50.48,Default,,0,0,0,,before performing the beta step
+Dialogue: 0,0:31:50.96,0:31:53.64,Default,,0,0,0,,which replaces the formal\Nparameter by the operand
+Dialogue: 0,0:31:54.12,0:31:56.64,Default,,0,0,0,,then the sequel goes on as before.
+Dialogue: 0,0:31:57.88,0:31:59.84,Default,,0,0,0,,We also show how reduction acts
+Dialogue: 0,0:31:59.84,0:32:01.68,Default,,0,0,0,,on any applied abstraction.
+Dialogue: 0,0:32:02.16,0:32:04.56,Default,,0,0,0,,The abstraction is expanded\Nto a closure abstraction
+Dialogue: 0,0:32:04.56,0:32:07.32,Default,,0,0,0,,and later the level of\Nthe formal parameter
+Dialogue: 0,0:32:07.32,0:32:09.04,Default,,0,0,0,,is retrieved from the environment.
+Dialogue: 0,0:32:10.04,0:32:13.36,Default,,0,0,0,,No reduction moves the scope to\Nthe body of the closure abstraction
+Dialogue: 0,0:32:13.36,0:32:15.96,Default,,0,0,0,,by the means of a compatibility rule
+Dialogue: 0,0:32:16.48,0:32:19.32,Default,,0,0,0,,that increments the level decoration\Nof the reduction relation.
+Dialogue: 0,0:32:20.32,0:32:22.68,Default,,0,0,0,,Combine with the rule\Nfor index calculation
+Dialogue: 0,0:32:23.40,0:32:26.60,Default,,0,0,0,,this results in the level\None of the formal parameter
+Dialogue: 0,0:32:26.60,0:32:29.68,Default,,0,0,0,,being subtracted from\Nthe current lambda nesting level.
+Dialogue: 0,0:32:30.20,0:32:33.24,Default,,0,0,0,,Which is embedded as\Nthe absolute index 0.
+Dialogue: 0,0:32:35.00,0:32:37.40,Default,,0,0,0,,Notice that the input term\Nwas already a normal form
+Dialogue: 0,0:32:37.92,0:32:41.44,Default,,0,0,0,,and that reduction has only\Nperformed administrative steps
+Dialogue: 0,0:32:41.44,0:32:44.52,Default,,0,0,0,,which amount to flattening\Nthe (INAUDIBLE) substitution in the closure
+Dialogue: 0,0:32:44.52,0:32:45.68,Default,,0,0,0,,into a term.
+Dialogue: 0,0:32:47.20,0:32:50.20,Default,,0,0,0,,Our main result is a one\Nto one correspondence
+Dialogue: 0,0:32:50.20,0:32:53.92,Default,,0,0,0,,between the non-administrative\Nsteps in our calculus
+Dialogue: 0,0:32:53.92,0:32:56.48,Default,,0,0,0,,and the steps of normal\Norder in lambda.
+Dialogue: 0,0:32:58.24,0:33:01.40,Default,,0,0,0,,This correspondence is captured\Nby the commuting diagram here.
+Dialogue: 0,0:33:02.16,0:33:05.36,Default,,0,0,0,,On the top, C or more\Nadministrative steps
+Dialogue: 0,0:33:05.36,0:33:07.08,Default,,0,0,0,,followed by one beta step
+Dialogue: 0,0:33:07.60,0:33:10.20,Default,,0,0,0,,correspond to the one\Nbeta step on the bottom.
+Dialogue: 0,0:33:11.48,0:33:15.48,Default,,0,0,0,,A substitution function sigma\Nmediates between the closures above
+Dialogue: 0,0:33:15.48,0:33:16.84,Default,,0,0,0,,and the terms below.
+Dialogue: 0,0:33:17.84,0:33:20.68,Default,,0,0,0,,The substitution function\Nflattens the closure
+Dialogue: 0,0:33:20.68,0:33:23.20,Default,,0,0,0,,by performing only\Nadministrative reduction.
+Dialogue: 0,0:33:24.72,0:33:27.16,Default,,0,0,0,,The main technique used in\Nthe proof of this result
+Dialogue: 0,0:33:27.16,0:33:29.84,Default,,0,0,0,,is a structural induction\Non the derivation (INAUDIBLE)
+Dialogue: 0,0:33:29.84,0:33:31.20,Default,,0,0,0,,of reduction judgements
+Dialogue: 0,0:33:31.20,0:33:32.64,Default,,0,0,0,,which has been possible
+Dialogue: 0,0:33:32.64,0:33:35.48,Default,,0,0,0,,thanks to the features of\Nour calculus of closures.
+Dialogue: 0,0:33:36.48,0:33:40.40,Default,,0,0,0,,In a previous work, we used\Nprogramme transformation techniques
+Dialogue: 0,0:33:40.40,0:33:42.84,Default,,0,0,0,,to interderive KN
+Dialogue: 0,0:33:42.84,0:33:45.92,Default,,0,0,0,,..and the reduction in\Nstrategy in our calculus.
+Dialogue: 0,0:33:45.92,0:33:49.00,Default,,0,0,0,,Together with this previous\Nwork, our main result entails
+Dialogue: 0,0:33:49.00,0:33:51.04,Default,,0,0,0,,that KN and normal order,
+Dialogue: 0,0:33:51.04,0:33:55.60,Default,,0,0,0,,perform the same beta reduction\Nsteps, and in the same order.
+Dialogue: 0,0:33:55.60,0:33:58.84,Default,,0,0,0,,To conclude, our contribution\Nhas been possible
+Dialogue: 0,0:33:58.84,0:34:01.08,Default,,0,0,0,,thanks to the\Nintegration techniques,
+Dialogue: 0,0:34:01.08,0:34:03.28,Default,,0,0,0,,and to our judicious use\Nof scopes and levels
+Dialogue: 0,0:34:03.28,0:34:06.00,Default,,0,0,0,,in our calculus of closures.
+Dialogue: 0,0:34:06.00,0:34:09.28,Default,,0,0,0,,We have proven our result, which is\Nstronger than the known result,
+Dialogue: 0,0:34:09.28,0:34:14.40,Default,,0,0,0,,that KN finds the normal form\Nof a term, if it exists.
+Dialogue: 0,0:34:14.40,0:34:15.80,Default,,0,0,0,,Our contribution adds
+Dialogue: 0,0:34:15.80,0:34:19.64,Default,,0,0,0,,to the increasing corpus of\Nknowledge of full reduction.
+Dialogue: 0,0:34:19.64,0:34:21.84,Default,,0,0,0,,We conjecture that\Nvariance of our calculus
+Dialogue: 0,0:34:21.84,0:34:23.72,Default,,0,0,0,,could be used to\Nprove similar results
+Dialogue: 0,0:34:23.72,0:34:26.12,Default,,0,0,0,,for other full reducing strategies.
+Dialogue: 0,0:34:26.12,0:34:31.12,Default,,0,0,0,,In particular for the eager strategies\Nin the call by value family.
+Dialogue: 0,0:34:47.80,0:34:55.72,Default,,0,0,0,,(APPLAUSE)
+Dialogue: 0,0:34:55.72,0:34:57.12,Default,,0,0,0,,JEREMY GIBBONS: Thanks, Alvaro.
+Dialogue: 0,0:34:57.12,0:34:59.64,Default,,0,0,0,,If you're watching the New\NYork stream in Clowdr,
+Dialogue: 0,0:34:59.64,0:35:01.04,Default,,0,0,0,,you should now see a Q&A link,
+Dialogue: 0,0:35:01.04,0:35:05.20,Default,,0,0,0,,where you can ask Alvaro\Nquestions by video chat.
+Dialogue: 0,0:35:10.24,0:35:12.12,Default,,0,0,0,,The next talk is\Na presentation of the paper
+Dialogue: 0,0:35:12.12,0:35:14.08,Default,,0,0,0,,Local Algebraic Effects Theories,
+Dialogue: 0,0:35:14.08,0:35:17.00,Default,,0,0,0,,which extends the algebraic\Neffects and handlers approach
+Dialogue: 0,0:35:17.00,0:35:20.32,Default,,0,0,0,,to track which equational theory\Nthe effects are required to satisfy
+Dialogue: 0,0:35:20.32,0:35:23.08,Default,,0,0,0,,in which sub-parts of a programme.
+Dialogue: 0,0:35:23.08,0:35:26.24,Default,,0,0,0,,The authors of the paper are\NZiga Luksic and Matija Pretnar,
+Dialogue: 0,0:35:26.24,0:35:29.72,Default,,0,0,0,,and Ziga will be presenting.
+Dialogue: 0,0:35:29.72,0:35:31.16,Default,,0,0,0,,ZIGA LUKSIC: Hi, I'm Ziga Luksic,
+Dialogue: 0,0:35:31.16,0:35:33.92,Default,,0,0,0,,and I will present joint\Nwork with Matija Pretnar,
+Dialogue: 0,0:35:33.92,0:35:37.84,Default,,0,0,0,,on local algebraic effect\Ntheories, which was developed
+Dialogue: 0,0:35:37.84,0:35:42.84,Default,,0,0,0,,to aid with reasoning in\Nlanguages with effect handlers.
+Dialogue: 0,0:35:42.84,0:35:46.60,Default,,0,0,0,,In reasoning about programmes, we\Noften rely on certain equivalences
+Dialogue: 0,0:35:46.60,0:35:50.00,Default,,0,0,0,,such as the ones stemming from\Nmathematical properties.
+Dialogue: 0,0:35:50.00,0:35:54.04,Default,,0,0,0,,For instance, the functions f1\Nand f2 can be considered equal,
+Dialogue: 0,0:35:54.04,0:35:57.88,Default,,0,0,0,,since x+x = 2*x.
+Dialogue: 0,0:35:57.88,0:36:00.28,Default,,0,0,0,,Programme equivalents gets much harder
+Dialogue: 0,0:36:00.28,0:36:03.04,Default,,0,0,0,,when we start using\Ncomputational effects.
+Dialogue: 0,0:36:03.04,0:36:04.72,Default,,0,0,0,,For instance, when using print,
+Dialogue: 0,0:36:04.72,0:36:08.48,Default,,0,0,0,,it's not entirely clear why they're\Nprinting the same string twice,
+Dialogue: 0,0:36:08.48,0:36:11.92,Default,,0,0,0,,is the same as printing\Na double string.
+Dialogue: 0,0:36:11.92,0:36:15.00,Default,,0,0,0,,We do not know whether the language\Nadds a new line separator
+Dialogue: 0,0:36:15.00,0:36:16.36,Default,,0,0,0,,at the end of each output,
+Dialogue: 0,0:36:16.36,0:36:20.48,Default,,0,0,0,,or perhaps the prints are\Ncounted for a message log.
+Dialogue: 0,0:36:20.48,0:36:22.24,Default,,0,0,0,,We must therefore know the specifics
+Dialogue: 0,0:36:22.24,0:36:24.24,Default,,0,0,0,,of the language implementation.
+Dialogue: 0,0:36:24.24,0:36:26.68,Default,,0,0,0,,So just imagine how much\Nmore difficult it becomes
+Dialogue: 0,0:36:26.68,0:36:30.12,Default,,0,0,0,,if effect behaviour is user defined.
+Dialogue: 0,0:36:30.12,0:36:31.80,Default,,0,0,0,,This is precisely the case
+Dialogue: 0,0:36:31.80,0:36:35.08,Default,,0,0,0,,in languages with\Nalgebraic effect handlers.
+Dialogue: 0,0:36:35.08,0:36:38.64,Default,,0,0,0,,In such a language, effects\Nare modelled by operations
+Dialogue: 0,0:36:38.64,0:36:43.00,Default,,0,0,0,,which are assigned types in\Nthe so called effect signature.
+Dialogue: 0,0:36:43.00,0:36:45.64,Default,,0,0,0,,For instance, here we have\Nan operation Choose,
+Dialogue: 0,0:36:45.64,0:36:48.00,Default,,0,0,0,,that represents a binary choice.
+Dialogue: 0,0:36:48.00,0:36:52.72,Default,,0,0,0,,It accepts a unit argument\Nand returns a boolean value.
+Dialogue: 0,0:36:52.72,0:36:54.88,Default,,0,0,0,,The operation itself is only a construct,
+Dialogue: 0,0:36:54.88,0:36:57.00,Default,,0,0,0,,and its behaviour is specified
+Dialogue: 0,0:36:57.00,0:37:00.52,Default,,0,0,0,,by the handler that intercepts\Nthe operation call.
+Dialogue: 0,0:37:00.52,0:37:05.76,Default,,0,0,0,,The true handler has\Nan effect case for Choose,
+Dialogue: 0,0:37:05.76,0:37:09.28,Default,,0,0,0,,and here we have the unit\Nargument of the operation call,
+Dialogue: 0,0:37:09.28,0:37:11.76,Default,,0,0,0,,and the programme continuation k,
+Dialogue: 0,0:37:11.76,0:37:17.20,Default,,0,0,0,,which is captured at\Nthe time of the operation call.
+Dialogue: 0,0:37:17.20,0:37:21.12,Default,,0,0,0,,The effect case states that\Nwhenever Choose is invoked,
+Dialogue: 0,0:37:21.12,0:37:25.00,Default,,0,0,0,,the continuation is resumed\Nwith the value true.
+Dialogue: 0,0:37:25.00,0:37:30.40,Default,,0,0,0,,This causes every call of Choose\Nto simply return the value of true.
+Dialogue: 0,0:37:31.40,0:37:35.28,Default,,0,0,0,,Now when using this handler,\Nthe behaviour is crystal clear.
+Dialogue: 0,0:37:35.28,0:37:40.84,Default,,0,0,0,,The code always returns one,\Nbecause Choose always returns true.
+Dialogue: 0,0:37:40.84,0:37:43.24,Default,,0,0,0,,And for a slightly more\Ninteresting example,
+Dialogue: 0,0:37:43.24,0:37:48.68,Default,,0,0,0,,if we build a function choice, that\Nreturns one of its two arguments,
+Dialogue: 0,0:37:48.68,0:37:52.48,Default,,0,0,0,,where the selection is,\Nagain done with Choose,
+Dialogue: 0,0:37:52.48,0:37:56.32,Default,,0,0,0,,we can again use the handler\Nthat always returns true.
+Dialogue: 0,0:37:56.32,0:38:01.40,Default,,0,0,0,,And in that case, choice always\Nchooses the last argument.
+Dialogue: 0,0:38:01.40,0:38:04.64,Default,,0,0,0,,So the functions f1\Nand f2 are equal,
+Dialogue: 0,0:38:04.64,0:38:09.64,Default,,0,0,0,,since... well, they both\Nalways return zero.
+Dialogue: 0,0:38:09.64,0:38:12.48,Default,,0,0,0,,They're also equivalent\Nin a broader sense.
+Dialogue: 0,0:38:12.48,0:38:16.52,Default,,0,0,0,,Every handler that results in\Nan associative implementation of choice
+Dialogue: 0,0:38:16.52,0:38:19.80,Default,,0,0,0,,results in f1 being\Nequivalent to f2.
+Dialogue: 0,0:38:19.80,0:38:22.32,Default,,0,0,0,,So another instance of\Na suitable handler
+Dialogue: 0,0:38:22.32,0:38:26.12,Default,,0,0,0,,is one that collects\Nall possible results.
+Dialogue: 0,0:38:26.12,0:38:28.00,Default,,0,0,0,,And on the other hand,
+Dialogue: 0,0:38:28.00,0:38:32.52,Default,,0,0,0,,if we randomly select one of\Nthe options with a 50% chance,
+Dialogue: 0,0:38:32.52,0:38:35.88,Default,,0,0,0,,that is not a suitable\Nimplementation.
+Dialogue: 0,0:38:35.88,0:38:41.88,Default,,0,0,0,,The main issue here is how\Nexactly to state such a property.
+Dialogue: 0,0:38:41.88,0:38:46.52,Default,,0,0,0,,One way to do that is to use\Nequations. In the original approach,
+Dialogue: 0,0:38:46.52,0:38:50.44,Default,,0,0,0,,the effect handlers, the theory\Nconsisted of an effect signature
+Dialogue: 0,0:38:50.44,0:38:53.36,Default,,0,0,0,,and equations between operations.
+Dialogue: 0,0:38:53.36,0:38:55.84,Default,,0,0,0,,For instance,\Nassociativity of choice,
+Dialogue: 0,0:38:55.84,0:38:58.28,Default,,0,0,0,,which is what we wanted\Nin the previous example,
+Dialogue: 0,0:38:58.28,0:39:02.80,Default,,0,0,0,,can easily be expressed\Nwith an equation.
+Dialogue: 0,0:39:02.80,0:39:05.68,Default,,0,0,0,,Using equations allows\Nus to abstract away
+Dialogue: 0,0:39:05.68,0:39:08.40,Default,,0,0,0,,from concrete implementations.
+Dialogue: 0,0:39:08.40,0:39:13.32,Default,,0,0,0,,We can focus on effect\Nimplementations that satisfy
+Dialogue: 0,0:39:13.32,0:39:18.12,Default,,0,0,0,,certain requirements that are\Nset by the equational theory.
+Dialogue: 0,0:39:18.12,0:39:22.92,Default,,0,0,0,,The original approach assumes\Na single global effect theory,
+Dialogue: 0,0:39:22.92,0:39:25.88,Default,,0,0,0,,but this turned out to\Nbe very restricting.
+Dialogue: 0,0:39:25.88,0:39:27.40,Default,,0,0,0,,There are many useful handlers
+Dialogue: 0,0:39:27.40,0:39:30.48,Default,,0,0,0,,that work with entirely\Ndifferent theories, and
+Dialogue: 0,0:39:30.48,0:39:35.88,Default,,0,0,0,,by fixing the global theory,\Nwe are unable to solve them.
+Dialogue: 0,0:39:35.88,0:39:38.52,Default,,0,0,0,,This is where our work comes in.
+Dialogue: 0,0:39:38.52,0:39:41.28,Default,,0,0,0,,We transition to local theories
+Dialogue: 0,0:39:41.28,0:39:46.28,Default,,0,0,0,,by packing equations into\Ncomputation types instead.
+Dialogue: 0,0:39:47.08,0:39:51.96,Default,,0,0,0,,A computation type now state\Nthe type of return values,
+Dialogue: 0,0:39:51.96,0:39:55.12,Default,,0,0,0,,the names and types of\Noperations that may be called,
+Dialogue: 0,0:39:55.12,0:39:58.04,Default,,0,0,0,,and the equational theory.
+Dialogue: 0,0:39:58.04,0:40:01.84,Default,,0,0,0,,Of this type, all computations\Nare considered equivalent,
+Dialogue: 0,0:40:01.84,0:40:05.12,Default,,0,0,0,,modulo the equations ε.
+Dialogue: 0,0:40:05.12,0:40:08.08,Default,,0,0,0,,Let's take a look at\Na small example.
+Dialogue: 0,0:40:08.08,0:40:11.16,Default,,0,0,0,,In this signature, we\Ndefine operation signal
+Dialogue: 0,0:40:11.16,0:40:14.20,Default,,0,0,0,,that accepts a unit\Nand returns a unit.
+Dialogue: 0,0:40:14.20,0:40:16.48,Default,,0,0,0,,It truly does nothing\Nmore than just signal
+Dialogue: 0,0:40:16.48,0:40:19.36,Default,,0,0,0,,to the handler that it was called.
+Dialogue: 0,0:40:19.36,0:40:23.20,Default,,0,0,0,,And in the effect theory we\Ncan be a bit more expressive.
+Dialogue: 0,0:40:23.20,0:40:26.08,Default,,0,0,0,,The equation states that\Nif we signal twice,
+Dialogue: 0,0:40:26.08,0:40:29.08,Default,,0,0,0,,and then proceed with\Nan arbitrary computation, that
+Dialogue: 0,0:40:29.08,0:40:32.20,Default,,0,0,0,,it's no different than\Nif we signal only once
+Dialogue: 0,0:40:32.20,0:40:34.52,Default,,0,0,0,,and then continue with that.
+Dialogue: 0,0:40:34.52,0:40:37.20,Default,,0,0,0,,Now an example of a handler\Nthat fits the equation
+Dialogue: 0,0:40:37.20,0:40:40.76,Default,,0,0,0,,is one that returns true as\Nsoon as a signal occurs,
+Dialogue: 0,0:40:40.76,0:40:46.00,Default,,0,0,0,,and false if the computation is\Nevaluated without a single signal.
+Dialogue: 0,0:40:47.00,0:40:51.84,Default,,0,0,0,,And an example of handler that\Ndoes not respect the equation
+Dialogue: 0,0:40:51.84,0:40:53.80,Default,,0,0,0,,would be a handler that instead
+Dialogue: 0,0:40:53.80,0:40:58.00,Default,,0,0,0,,returns the number of\Nsignals received.
+Dialogue: 0,0:40:59.24,0:41:00.96,Default,,0,0,0,,We can now use this equation
+Dialogue: 0,0:41:00.96,0:41:04.80,Default,,0,0,0,,to restrict possible\Neffect implementations.
+Dialogue: 0,0:41:04.80,0:41:07.52,Default,,0,0,0,,Here we have two\Nfunctions f1 and f2,
+Dialogue: 0,0:41:07.52,0:41:12.52,Default,,0,0,0,,and f1 has no equations, while\Nf2 uses the above equation.
+Dialogue: 0,0:41:12.52,0:41:16.72,Default,,0,0,0,,This means that f1 can be handled\Nby any handler for signal,
+Dialogue: 0,0:41:16.72,0:41:19.88,Default,,0,0,0,,while f2 requires\Nthe handler to now differentiate
+Dialogue: 0,0:41:19.88,0:41:22.40,Default,,0,0,0,,between one and many signals.
+Dialogue: 0,0:41:22.40,0:41:27.92,Default,,0,0,0,,We can of course use such handlers\Nfor f1 as well, but not vice versa.
+Dialogue: 0,0:41:28.72,0:41:31.76,Default,,0,0,0,,This already shows the difference\Nbetween global and local theories,
+Dialogue: 0,0:41:31.76,0:41:34.12,Default,,0,0,0,,since in the global\Nsetting, we either require
+Dialogue: 0,0:41:34.12,0:41:38.12,Default,,0,0,0,,all handlers to respect\Nthe equation, or none of them.
+Dialogue: 0,0:41:38.12,0:41:41.60,Default,,0,0,0,,In the first case, we can't use\Nsuch a wide variety of handlers
+Dialogue: 0,0:41:41.60,0:41:44.16,Default,,0,0,0,,for handling f1,\Nand in the second case,
+Dialogue: 0,0:41:44.16,0:41:51.64,Default,,0,0,0,,we can't use the equation as\Na reasoning tool in the body of the f2.
+Dialogue: 0,0:41:51.64,0:41:55.32,Default,,0,0,0,,And when implementing effective\Nbehaviour with handlers,
+Dialogue: 0,0:41:55.32,0:41:57.00,Default,,0,0,0,,we of course need to be mindful of
+Dialogue: 0,0:41:57.00,0:41:59.40,Default,,0,0,0,,the fact theory that\Nwe're working in.
+Dialogue: 0,0:41:59.40,0:42:02.80,Default,,0,0,0,,Handler type informs us about\Nthe kind of computations
+Dialogue: 0,0:42:02.80,0:42:05.04,Default,,0,0,0,,that the handler is used for,
+Dialogue: 0,0:42:05.04,0:42:08.08,Default,,0,0,0,,and what the resulting\Ncomputation type is.
+Dialogue: 0,0:42:08.08,0:42:11.88,Default,,0,0,0,,Since two computation\Ntypes are involved,
+Dialogue: 0,0:42:11.88,0:42:14.64,Default,,0,0,0,,equations occur in two spots.
+Dialogue: 0,0:42:14.64,0:42:18.36,Default,,0,0,0,,The ε on the left sets\Nthe requirements for the implementation,
+Dialogue: 0,0:42:18.36,0:42:22.96,Default,,0,0,0,,and ε′ on the right states\Nthe theory of the (INAUDIBLE)
+Dialogue: 0,0:42:23.68,0:42:27.12,Default,,0,0,0,,We have to check that\Nfor every equation in ε,
+Dialogue: 0,0:42:27.12,0:42:32.24,Default,,0,0,0,,if we handle both sides, we end\Nup with equivalent computations.
+Dialogue: 0,0:42:32.24,0:42:36.28,Default,,0,0,0,,The equivalence is considered\Nin the theory of ε′,
+Dialogue: 0,0:42:36.28,0:42:42.56,Default,,0,0,0,,so we may be aided by\Nthe equations that are acting ε′.
+Dialogue: 0,0:42:42.56,0:42:45.16,Default,,0,0,0,,Handler correctness is undecidable.
+Dialogue: 0,0:42:45.16,0:42:48.40,Default,,0,0,0,,So the proofs are\Nconstructed in a logic
+Dialogue: 0,0:42:48.40,0:42:52.20,Default,,0,0,0,,that is coupled with\Nthe type system.
+Dialogue: 0,0:42:53.76,0:42:58.08,Default,,0,0,0,,Using equations comes with extra\Nwork when typing handlers,
+Dialogue: 0,0:42:58.08,0:43:00.16,Default,,0,0,0,,but provides a strong\Ntool for reasoning
+Dialogue: 0,0:43:00.16,0:43:04.88,Default,,0,0,0,,and it's a very natural\Nfit for algebraic effects.
+Dialogue: 0,0:43:04.88,0:43:08.52,Default,,0,0,0,,Local effect theories impose less\Nrestrictions than global ones
+Dialogue: 0,0:43:08.52,0:43:14.00,Default,,0,0,0,,and we consider them an all around\Nimprovement over global theories.
+Dialogue: 0,0:43:14.00,0:43:17.60,Default,,0,0,0,,Equations are vital for\Nreasoning about effect behaviour.
+Dialogue: 0,0:43:17.60,0:43:21.32,Default,,0,0,0,,And the type system can also be\Ncoupled with different kinds of logic.
+Dialogue: 0,0:43:21.32,0:43:26.32,Default,,0,0,0,,So we can use a system that\Nfits the problem at hand.
+Dialogue: 0,0:43:27.88,0:43:30.64,Default,,0,0,0,,Or if we use local effect theories,
+Dialogue: 0,0:43:30.64,0:43:33.36,Default,,0,0,0,,the changes to the language\Nare rather minor,
+Dialogue: 0,0:43:33.36,0:43:36.92,Default,,0,0,0,,and the resulting system\Nis also easy to use.
+Dialogue: 0,0:43:36.92,0:43:40.08,Default,,0,0,0,,We do not need to switch to\Ndenotational semantics,
+Dialogue: 0,0:43:40.08,0:43:45.08,Default,,0,0,0,,or to a full-fledged\Ndependently type checking.
+Dialogue: 0,0:43:45.76,0:43:50.16,Default,,0,0,0,,The drawback is clearly the need for\Nuser input when typing handlers,
+Dialogue: 0,0:43:50.16,0:43:53.76,Default,,0,0,0,,but handler definitions are\Nthe only point where this is required,
+Dialogue: 0,0:43:53.76,0:43:58.32,Default,,0,0,0,,so most of the work\Nis still automated.
+Dialogue: 0,0:43:58.32,0:43:59.64,Default,,0,0,0,,Since the paper was published,
+Dialogue: 0,0:43:59.64,0:44:03.16,Default,,0,0,0,,we have done some\Nconsiderable advancements.
+Dialogue: 0,0:44:03.16,0:44:05.92,Default,,0,0,0,,We have extended\Nthe language with recursion
+Dialogue: 0,0:44:05.92,0:44:09.72,Default,,0,0,0,,and some basic data types,\Nproducts or lists.
+Dialogue: 0,0:44:09.72,0:44:14.16,Default,,0,0,0,,We also included the non-trivial\Nextension of subtyping,
+Dialogue: 0,0:44:14.16,0:44:18.04,Default,,0,0,0,,which greatly improves\Nthe usefulness of the language.
+Dialogue: 0,0:44:18.04,0:44:22.48,Default,,0,0,0,,All of this has been formalised\Nin the Coq proof assistant,
+Dialogue: 0,0:44:22.48,0:44:25.12,Default,,0,0,0,,alongside some smaller examples.
+Dialogue: 0,0:44:25.12,0:44:26.76,Default,,0,0,0,,And we also constructed a
+Dialogue: 0,0:44:26.76,0:44:29.24,Default,,0,0,0,,sound and eloquent\Ndenotational semantics,
+Dialogue: 0,0:44:29.24,0:44:33.92,Default,,0,0,0,,which takes into account all\Nthe formation (INAUDIBLE).
+Dialogue: 0,0:44:33.92,0:44:38.64,Default,,0,0,0,,The approach was also implemented\Non top of the f framework.
+Dialogue: 0,0:44:38.64,0:44:42.12,Default,,0,0,0,,We decided to use\Na bi-directional type inference
+Dialogue: 0,0:44:42.12,0:44:46.28,Default,,0,0,0,,as it's more suited for\Nworking with effect theories.
+Dialogue: 0,0:44:46.28,0:44:49.76,Default,,0,0,0,,But the system does not\Nautomate correctness proofs,
+Dialogue: 0,0:44:49.76,0:44:51.60,Default,,0,0,0,,which are left to the user.
+Dialogue: 0,0:44:51.60,0:44:54.32,Default,,0,0,0,,The proofs can be done\Nby pen and paper,
+Dialogue: 0,0:44:54.32,0:44:56.12,Default,,0,0,0,,or they can also be constructed
+Dialogue: 0,0:44:56.12,0:44:59.60,Default,,0,0,0,,in the Coq formalisation\Nof the language.
+Dialogue: 0,0:45:00.44,0:45:03.12,Default,,0,0,0,,We also considered\Na few future goals.
+Dialogue: 0,0:45:03.12,0:45:08.80,Default,,0,0,0,,The important extension that has\Nnot yet been done is polymorphism.
+Dialogue: 0,0:45:08.80,0:45:12.32,Default,,0,0,0,,We wish to have times that are\Npolymorphic in the value component,
+Dialogue: 0,0:45:12.32,0:45:16.84,Default,,0,0,0,,as well as polymorphic in\Nthe signature and equations.
+Dialogue: 0,0:45:16.84,0:45:18.52,Default,,0,0,0,,The extension could\Nbe far from trivial
+Dialogue: 0,0:45:18.52,0:45:21.96,Default,,0,0,0,,but it's ultimately important\Nif you want the language,
+Dialogue: 0,0:45:21.96,0:45:24.36,Default,,0,0,0,,it can be used in practice.
+Dialogue: 0,0:45:24.36,0:45:27.60,Default,,0,0,0,,Another key aspect that we're\Nnot yet entirely satisfied with,
+Dialogue: 0,0:45:27.60,0:45:30.64,Default,,0,0,0,,is proving handler correctness.
+Dialogue: 0,0:45:30.64,0:45:34.44,Default,,0,0,0,,Automation would be great,\Nbut even just easing the burden
+Dialogue: 0,0:45:34.44,0:45:42.92,Default,,0,0,0,,by providing better tools for user\Nproofs would be a great start.
+Dialogue: 0,0:45:43.60,0:45:46.04,Default,,0,0,0,,Perhaps also very important is
+Dialogue: 0,0:45:46.04,0:45:51.48,Default,,0,0,0,,finding good use cases for\Nlocal effect theories.
+Dialogue: 0,0:45:51.48,0:45:53.80,Default,,0,0,0,,We feel that we are now at the point
+Dialogue: 0,0:45:53.80,0:45:57.40,Default,,0,0,0,,where future work should\Nbe guided by shortcomings
+Dialogue: 0,0:45:57.40,0:46:03.08,Default,,0,0,0,,when trying to apply it\Nto actual problems.
+Dialogue: 0,0:46:03.08,0:46:06.36,Default,,0,0,0,,Anyone interested is\Nwelcome to read our paper,
+Dialogue: 0,0:46:06.36,0:46:08.84,Default,,0,0,0,,and thank you for your time.
+Dialogue: 0,0:46:08.84,0:46:17.48,Default,,0,0,0,,(APPLAUSE)
+Dialogue: 0,0:46:17.48,0:46:19.08,Default,,0,0,0,,JEREMY: Thanks, Ziga.
+Dialogue: 0,0:46:19.08,0:46:21.40,Default,,0,0,0,,If you're watching the New\NYork stream in Clowdr,
+Dialogue: 0,0:46:21.40,0:46:22.76,Default,,0,0,0,,you should now see a Q&A link,
+Dialogue: 0,0:46:22.76,0:46:26.44,Default,,0,0,0,,where you can get\Nquestions by video chat.
+Dialogue: 0,0:46:31.56,0:46:34.20,Default,,0,0,0,,The next talk is a presentation\Nof the functional pearl,
+Dialogue: 0,0:46:34.20,0:46:37.04,Default,,0,0,0,,heterogeneous binary\Nrandom-access lists.
+Dialogue: 0,0:46:37.04,0:46:39.40,Default,,0,0,0,,Which you can use for example,\Nto implement efficient
+Dialogue: 0,0:46:39.40,0:46:42.52,Default,,0,0,0,,typed environments for\Na well typed interpreter.
+Dialogue: 0,0:46:42.52,0:46:45.60,Default,,0,0,0,,The paper's by Wouter Swierstra.
+Dialogue: 0,0:46:45.60,0:46:47.88,Default,,0,0,0,,WOUTER SWIERSTRA: Thank you\Nfor that introduction, Jeremy.
+Dialogue: 0,0:46:47.88,0:46:50.56,Default,,0,0,0,,So my name is Wouter Swierstra,\Nand I'm here to say a little bit about
+Dialogue: 0,0:46:50.56,0:46:53.64,Default,,0,0,0,,the functional pearl that\NI published in JFP last year.
+Dialogue: 0,0:46:53.64,0:46:56.16,Default,,0,0,0,,So let's start by\Ntalking about lists.
+Dialogue: 0,0:46:56.16,0:46:57.92,Default,,0,0,0,,So lists are one of\Nthe very first data types
+Dialogue: 0,0:46:57.92,0:47:00.04,Default,,0,0,0,,that we teach our\Nundergrad students.
+Dialogue: 0,0:47:00.04,0:47:02.44,Default,,0,0,0,,And they're a great vehicle\Nfor explaining concepts
+Dialogue: 0,0:47:02.44,0:47:05.20,Default,,0,0,0,,such as higher order function\Nwith maps and folds,
+Dialogue: 0,0:47:05.20,0:47:07.52,Default,,0,0,0,,recursion, or polymorphism.
+Dialogue: 0,0:47:07.52,0:47:08.92,Default,,0,0,0,,But as our students mature,
+Dialogue: 0,0:47:08.92,0:47:10.88,Default,,0,0,0,,they typically take one\Nof two career paths
+Dialogue: 0,0:47:10.88,0:47:13.28,Default,,0,0,0,,if they're interested in\Nfunctional programming.
+Dialogue: 0,0:47:13.28,0:47:15.96,Default,,0,0,0,,On the one hand, if they\Nchoose to go into industry,
+Dialogue: 0,0:47:15.96,0:47:17.80,Default,,0,0,0,,they quickly realise that\Nif they need to store
+Dialogue: 0,0:47:17.80,0:47:21.40,Default,,0,0,0,,any serious amount of data, you\Nneed better data structures,
+Dialogue: 0,0:47:21.40,0:47:25.16,Default,,0,0,0,,such as finite maps or some\Nform of balanced binary tree.
+Dialogue: 0,0:47:25.16,0:47:28.04,Default,,0,0,0,,Other students might pursue\Na career in academia.
+Dialogue: 0,0:47:28.04,0:47:30.32,Default,,0,0,0,,And in that case, they\Nspend their time writing
+Dialogue: 0,0:47:30.32,0:47:33.48,Default,,0,0,0,,intrinsically typed evaluators\Nfor a lambda calculi,
+Dialogue: 0,0:47:33.48,0:47:35.60,Default,,0,0,0,,or any kind of fancy\Nthing like that,
+Dialogue: 0,0:47:35.60,0:47:40.16,Default,,0,0,0,,which requires a list, where\Nthe values stored in the list
+Dialogue: 0,0:47:40.16,0:47:41.84,Default,,0,0,0,,might actually have different types.
+Dialogue: 0,0:47:41.84,0:47:43.48,Default,,0,0,0,,And to do this in\Na typesafe fashion,
+Dialogue: 0,0:47:43.48,0:47:47.72,Default,,0,0,0,,you typically use something called\Na heterogeneous list or a H list.
+Dialogue: 0,0:47:47.72,0:47:51.28,Default,,0,0,0,,So this paper asked the question,\Ncan we have our cake and eat it?
+Dialogue: 0,0:47:51.28,0:47:52.60,Default,,0,0,0,,Can we define a data structure
+Dialogue: 0,0:47:52.60,0:47:55.84,Default,,0,0,0,,that's both heterogeneous\Nand efficient?
+Dialogue: 0,0:47:55.84,0:47:58.56,Default,,0,0,0,,And this isn't just\Na theoretical probe.
+Dialogue: 0,0:47:58.56,0:48:02.12,Default,,0,0,0,,So people who work in\Nindustry and academia,
+Dialogue: 0,0:48:02.12,0:48:05.20,Default,,0,0,0,,such as David Christian, who\Nhas co-authored (INAUDIBLE),
+Dialogue: 0,0:48:05.20,0:48:06.68,Default,,0,0,0,,they wrote an experience report
+Dialogue: 0,0:48:06.68,0:48:09.56,Default,,0,0,0,,on Dependently Typed Haskell\Nin Industry last year,
+Dialogue: 0,0:48:09.56,0:48:13.04,Default,,0,0,0,,that they have this experience of\Nprofiling crucible that showed
+Dialogue: 0,0:48:13.04,0:48:17.92,Default,,0,0,0,,that linear axis imposed an unacceptable\Noverhead on the simulator.
+Dialogue: 0,0:48:17.92,0:48:20.04,Default,,0,0,0,,As a result, they actually\Nabandoned the typesafe
+Dialogue: 0,0:48:20.04,0:48:22.76,Default,,0,0,0,,dependently typed approach\Nthat they were taking,
+Dialogue: 0,0:48:22.76,0:48:26.84,Default,,0,0,0,,in favour of data dot map\Nand an unsafe course.
+Dialogue: 0,0:48:26.84,0:48:29.84,Default,,0,0,0,,So what's in the paper? So\NI show how to implement
+Dialogue: 0,0:48:29.84,0:48:33.12,Default,,0,0,0,,an heterogeneous binary\Nrandom access list and act.
+Dialogue: 0,0:48:33.12,0:48:36.80,Default,,0,0,0,,And this has the same API as just\Nregular heterogeneous list.
+Dialogue: 0,0:48:36.80,0:48:39.68,Default,,0,0,0,,So there's an empty structure, nil,
+Dialogue: 0,0:48:39.68,0:48:41.48,Default,,0,0,0,,and there's an operation\Nto add new elements
+Dialogue: 0,0:48:41.48,0:48:44.56,Default,,0,0,0,,to the front of the list\Nand operation to access elements
+Dialogue: 0,0:48:44.56,0:48:47.12,Default,,0,0,0,,within those two lookup,\Nor a bang, bang.
+Dialogue: 0,0:48:47.12,0:48:50.20,Default,,0,0,0,,And all of these operations\Nare both total and typesafe.
+Dialogue: 0,0:48:50.20,0:48:53.36,Default,,0,0,0,,And furthermore, there are no\Ncoercions or lemmas necessary
+Dialogue: 0,0:48:53.36,0:48:58.20,Default,,0,0,0,,for everything to type check. It's\Nintrinsically typed by design.
+Dialogue: 0,0:48:59.00,0:49:01.52,Default,,0,0,0,,So in this talk, I won't try\Nto cover the whole paper.
+Dialogue: 0,0:49:01.52,0:49:04.04,Default,,0,0,0,,But instead, I'll just focus\Non the homogeneous case,
+Dialogue: 0,0:49:04.04,0:49:05.88,Default,,0,0,0,,where we have binary\Nrandom access list
+Dialogue: 0,0:49:05.88,0:49:08.20,Default,,0,0,0,,originally proposed\Nby Chris Okasaki,
+Dialogue: 0,0:49:08.20,0:49:11.04,Default,,0,0,0,,in his book on purely\Nfunctional data structures,
+Dialogue: 0,0:49:11.04,0:49:13.24,Default,,0,0,0,,and show how to\Nimplement that in Agda,
+Dialogue: 0,0:49:13.24,0:49:15.88,Default,,0,0,0,,in a kind of total and typesafe way.
+Dialogue: 0,0:49:15.88,0:49:20.12,Default,,0,0,0,,And then the heterogeneous version\Nfollows quite naturally from this.
+Dialogue: 0,0:49:20.12,0:49:23.20,Default,,0,0,0,,So if we need better than\Nlinear access times,
+Dialogue: 0,0:49:23.20,0:49:26.24,Default,,0,0,0,,we need to shift from\Nlists to trees.
+Dialogue: 0,0:49:26.24,0:49:29.32,Default,,0,0,0,,And for the moment, let's\Njust make the assumption
+Dialogue: 0,0:49:29.32,0:49:33.20,Default,,0,0,0,,that we only ever have to store\Ntwo to the power of n elements.
+Dialogue: 0,0:49:33.20,0:49:34.80,Default,,0,0,0,,And that's very easy to do
+Dialogue: 0,0:49:34.80,0:49:37.56,Default,,0,0,0,,because we can store two to\Nthe power of n elements
+Dialogue: 0,0:49:37.56,0:49:40.64,Default,,0,0,0,,in a perfectly balanced\Nbinary tree of depth n.
+Dialogue: 0,0:49:40.64,0:49:45.16,Default,,0,0,0,,So here are a few examples of\Nperfectly balanced binary trees,
+Dialogue: 0,0:49:45.16,0:49:48.32,Default,,0,0,0,,where I'm going to draw black dots\Nfor the leaf storing data,
+Dialogue: 0,0:49:48.32,0:49:51.88,Default,,0,0,0,,and white dots for\Nthe nodes which store no data.
+Dialogue: 0,0:49:51.88,0:49:53.64,Default,,0,0,0,,If I want to write this in Agda,
+Dialogue: 0,0:49:53.64,0:49:55.68,Default,,0,0,0,,I can define a little\Ndatatype for my trees
+Dialogue: 0,0:49:55.68,0:49:59.40,Default,,0,0,0,,indexed by natural number corresponding\Nto the depth of the tree.
+Dialogue: 0,0:49:59.40,0:50:03.20,Default,,0,0,0,,So I can have a leaf which\Nstores an element of type a
+Dialogue: 0,0:50:03.20,0:50:04.36,Default,,0,0,0,,and has depth zero,
+Dialogue: 0,0:50:04.36,0:50:08.36,Default,,0,0,0,,or I can have a node which has\Ntwo sub trees of equal length,
+Dialogue: 0,0:50:08.36,0:50:12.88,Default,,0,0,0,,and then return to tree\Nwhich is one deeper.
+Dialogue: 0,0:50:12.88,0:50:15.96,Default,,0,0,0,,Now if I want to kind of denote any\Nparticular value in such a tree,
+Dialogue: 0,0:50:15.96,0:50:19.04,Default,,0,0,0,,I typically use a path\Nthrough that tree.
+Dialogue: 0,0:50:19.04,0:50:23.24,Default,,0,0,0,,The data type path here is just\Nisomorphic to a vector of (INAUDIBLE)
+Dialogue: 0,0:50:23.24,0:50:25.80,Default,,0,0,0,,but it's nice to have\Nthis separate data type.
+Dialogue: 0,0:50:25.80,0:50:28.08,Default,,0,0,0,,The idea is that this path\Ntells me for every node
+Dialogue: 0,0:50:28.08,0:50:30.04,Default,,0,0,0,,whether I should go left or right.
+Dialogue: 0,0:50:30.04,0:50:31.76,Default,,0,0,0,,And then I can define\Na lookup operation
+Dialogue: 0,0:50:31.76,0:50:34.28,Default,,0,0,0,,which just follows that\Npath with the tree.
+Dialogue: 0,0:50:34.28,0:50:36.20,Default,,0,0,0,,going to the left subtree
+Dialogue: 0,0:50:36.20,0:50:38.00,Default,,0,0,0,,if the path starts with\Nthe left constructor
+Dialogue: 0,0:50:38.00,0:50:40.24,Default,,0,0,0,,and the right subtree if it starts\Nwith the right constructor.
+Dialogue: 0,0:50:40.76,0:50:42.24,Default,,0,0,0,,At the end of the path I know
+Dialogue: 0,0:50:42.24,0:50:45.16,Default,,0,0,0,,that I've hit a leaf and turn\Nthe value stored there.
+Dialogue: 0,0:50:45.68,0:50:47.60,Default,,0,0,0,,The important thing to notice here
+Dialogue: 0,0:50:48.12,0:50:51.08,Default,,0,0,0,,is that the type in the C ensure\Nthat the depth of the tree
+Dialogue: 0,0:50:51.08,0:50:52.68,Default,,0,0,0,,and the length of the path coincide.
+Dialogue: 0,0:50:53.20,0:50:56.48,Default,,0,0,0,,So I can always return\Nthe value of type (INAUDIBLE)
+Dialogue: 0,0:50:57.24,0:51:01.24,Default,,0,0,0,,Now if I only have to store\N2 to the power of n elements
+Dialogue: 0,0:51:01.24,0:51:02.56,Default,,0,0,0,,this would be the end of the talk.
+Dialogue: 0,0:51:03.04,0:51:05.32,Default,,0,0,0,,But you'd be very\Nright to complain that
+Dialogue: 0,0:51:05.32,0:51:08.68,Default,,0,0,0,,I can't just assume that\Neverything is a power of 2.
+Dialogue: 0,0:51:09.44,0:51:11.24,Default,,0,0,0,,But there is one\Nobservation I can make
+Dialogue: 0,0:51:11.72,0:51:14.44,Default,,0,0,0,,which is that any number\Ncan be written as a sum
+Dialogue: 0,0:51:14.44,0:51:17.28,Default,,0,0,0,,of powers of two using it's\Nbinary representation.
+Dialogue: 0,0:51:17.80,0:51:22.12,Default,,0,0,0,,And that's the key idea behind\Nthis binary random access list.
+Dialogue: 0,0:51:22.88,0:51:25.04,Default,,0,0,0,,So binary random\Naccess list consists
+Dialogue: 0,0:51:25.04,0:51:28.32,Default,,0,0,0,,of the list of perfectly\Nbalanced binary trees
+Dialogue: 0,0:51:28.32,0:51:29.32,Default,,0,0,0,,of increasing depths.
+Dialogue: 0,0:51:29.32,0:51:30.88,Default,,0,0,0,,And the ith position in this list
+Dialogue: 0,0:51:30.88,0:51:34.88,Default,,0,0,0,,there may or there may not be\Na perfect binary tree of depth i.
+Dialogue: 0,0:51:35.40,0:51:36.88,Default,,0,0,0,,So let's look at some examples.
+Dialogue: 0,0:51:36.88,0:51:39.24,Default,,0,0,0,,So if I need to store three elements
+Dialogue: 0,0:51:39.24,0:51:41.08,Default,,0,0,0,,in a binary random access list.
+Dialogue: 0,0:51:41.08,0:51:46.08,Default,,0,0,0,,I can do this with a leaf followed\Nby a binary tree of depth one.
+Dialogue: 0,0:51:47.00,0:51:50.88,Default,,0,0,0,,If I need four elements,\NI omit the first two tree
+Dialogue: 0,0:51:50.88,0:51:52.92,Default,,0,0,0,,but I have a tree of depth two.
+Dialogue: 0,0:51:53.44,0:51:55.92,Default,,0,0,0,,If I need five elements\NI have a leaf,
+Dialogue: 0,0:51:56.40,0:51:58.24,Default,,0,0,0,,I have no tree in position two
+Dialogue: 0,0:51:58.24,0:52:02.04,Default,,0,0,0,,and I have a tree of depth two in\Nthe second position in the list.
+Dialogue: 0,0:52:03.28,0:52:05.88,Default,,0,0,0,,I guess if you are familiar\Nwith binary numbers
+Dialogue: 0,0:52:05.88,0:52:07.08,Default,,0,0,0,,you can see how this one works.
+Dialogue: 0,0:52:09.08,0:52:13.08,Default,,0,0,0,,So the numbers\Nrepresentation in binary
+Dialogue: 0,0:52:13.08,0:52:15.80,Default,,0,0,0,,determines the shape of\Nthe binary random access list
+Dialogue: 0,0:52:15.80,0:52:17.12,Default,,0,0,0,,storing that many elements.
+Dialogue: 0,0:52:17.12,0:52:18.32,Default,,0,0,0,,So it'll need some binary numbers.
+Dialogue: 0,0:52:18.32,0:52:19.80,Default,,0,0,0,,Let's right that anecdote.
+Dialogue: 0,0:52:19.80,0:52:22.08,Default,,0,0,0,,So we can have a simple\Ntype for binary numbers,
+Dialogue: 0,0:52:22.80,0:52:25.00,Default,,0,0,0,,0s and 1s are the end of the binary.
+Dialogue: 0,0:52:26.24,0:52:28.40,Default,,0,0,0,,We can define a successful operation
+Dialogue: 0,0:52:28.40,0:52:29.80,Default,,0,0,0,,which increments the binary number.
+Dialogue: 0,0:52:30.28,0:52:33.56,Default,,0,0,0,,The important thing here is that\Nwe have the least significant bit
+Dialogue: 0,0:52:34.32,0:52:35.80,Default,,0,0,0,,at the beginning of\Nthe binary number.
+Dialogue: 0,0:52:35.80,0:52:37.68,Default,,0,0,0,,So if we see a 0
+Dialogue: 0,0:52:37.68,0:52:38.72,Default,,0,0,0,,we can flip it to one,
+Dialogue: 0,0:52:38.72,0:52:41.64,Default,,0,0,0,,if we see a one we flip\Nit to a 0 of course.
+Dialogue: 0,0:52:42.88,0:52:46.16,Default,,0,0,0,,So now we can finally define\Nour random access list.
+Dialogue: 0,0:52:46.16,0:52:48.76,Default,,0,0,0,,There are three type arguments\Nthat you can see here.
+Dialogue: 0,0:52:49.52,0:52:52.88,Default,,0,0,0,,The type A corresponding\Nto the type of the values
+Dialogue: 0,0:52:52.88,0:52:54.32,Default,,0,0,0,,stored in the random access list.
+Dialogue: 0,0:52:54.80,0:52:57.68,Default,,0,0,0,,The number N which is\Nthe depth of the list
+Dialogue: 0,0:52:57.68,0:52:59.72,Default,,0,0,0,,as we are going down\Nand a binary number
+Dialogue: 0,0:52:59.72,0:53:02.28,Default,,0,0,0,,which kind of represents\Nthe shape of the list
+Dialogue: 0,0:53:03.28,0:53:04.60,Default,,0,0,0,,of the random access list
+Dialogue: 0,0:53:04.60,0:53:07.52,Default,,0,0,0,,but it also kind of counts\Nthe number of elements in this list.
+Dialogue: 0,0:53:08.80,0:53:10.08,Default,,0,0,0,,So there are three constructors.
+Dialogue: 0,0:53:10.08,0:53:12.68,Default,,0,0,0,,So nil is the end of the list
+Dialogue: 0,0:53:12.68,0:53:15.88,Default,,0,0,0,,and the kind of, corresponds\Nthe empty binary word.
+Dialogue: 0,0:53:16.64,0:53:20.72,Default,,0,0,0,,If we are kind of using a one
+Dialogue: 0,0:53:21.24,0:53:23.32,Default,,0,0,0,,if the binary number\Nstarts with a one
+Dialogue: 0,0:53:23.32,0:53:26.68,Default,,0,0,0,,we have a tree of depth n and a tail
+Dialogue: 0,0:53:26.68,0:53:29.60,Default,,0,0,0,,which kind of, it has\Na shape of kind of binary
+Dialogue: 0,0:53:29.60,0:53:31.80,Default,,0,0,0,,of the remainder of\Nthe tail of the binary word.
+Dialogue: 0,0:53:32.80,0:53:35.32,Default,,0,0,0,,And if the binary word\Nstarts with a zero
+Dialogue: 0,0:53:35.80,0:53:38.00,Default,,0,0,0,,then we have no tree\Nbut we have kind of a tail
+Dialogue: 0,0:53:38.00,0:53:39.36,Default,,0,0,0,,of the random access list
+Dialogue: 0,0:53:39.36,0:53:40.60,Default,,0,0,0,,that we might still have.
+Dialogue: 0,0:53:41.84,0:53:44.16,Default,,0,0,0,,So the binary number, counts\Nthe number of elements
+Dialogue: 0,0:53:44.16,0:53:46.24,Default,,0,0,0,,and determines the shape of\Nour random access list.
+Dialogue: 0,0:53:46.72,0:53:48.96,Default,,0,0,0,,And one thing which you can see here
+Dialogue: 0,0:53:48.96,0:53:51.64,Default,,0,0,0,,is that the number n grows\Nas we go down the list.
+Dialogue: 0,0:53:51.64,0:53:54.04,Default,,0,0,0,,And this is not what you\Nmight be familiar with
+Dialogue: 0,0:53:54.52,0:53:56.28,Default,,0,0,0,,if you reduce\Nthe things like vectors
+Dialogue: 0,0:53:56.28,0:53:58.56,Default,,0,0,0,,or the vector, a little\Nnumber kind of counts down
+Dialogue: 0,0:53:58.56,0:53:59.56,Default,,0,0,0,,to the end of the list.
+Dialogue: 0,0:54:00.08,0:54:02.28,Default,,0,0,0,,Here n counts up as\Nwe go down the list
+Dialogue: 0,0:54:02.28,0:54:04.48,Default,,0,0,0,,because they are kind of\Nincreasingly deeper trees
+Dialogue: 0,0:54:04.48,0:54:05.48,Default,,0,0,0,,as we go down the list.
+Dialogue: 0,0:54:06.24,0:54:08.24,Default,,0,0,0,,And typically we consider\Nrandom access lists
+Dialogue: 0,0:54:08.24,0:54:09.64,Default,,0,0,0,,starting with the n zero
+Dialogue: 0,0:54:10.36,0:54:12.72,Default,,0,0,0,,but it's good to be a little\Nbit more general sometimes.
+Dialogue: 0,0:54:14.72,0:54:17.28,Default,,0,0,0,,So now we can define\Na data for positions
+Dialogue: 0,0:54:17.28,0:54:18.52,Default,,0,0,0,,in a look up function.
+Dialogue: 0,0:54:18.52,0:54:21.44,Default,,0,0,0,,And these positions they are\Nkind of take a natural number
+Dialogue: 0,0:54:21.44,0:54:23.68,Default,,0,0,0,,in a binary number.
+Dialogue: 0,0:54:24.48,0:54:25.92,Default,,0,0,0,,And these positions kind of
+Dialogue: 0,0:54:25.92,0:54:30.60,Default,,0,0,0,,they essentially combine the usual\Nkind of linear position in a list
+Dialogue: 0,0:54:30.60,0:54:32.20,Default,,0,0,0,,and the path in a tree.
+Dialogue: 0,0:54:32.20,0:54:35.16,Default,,0,0,0,,So if we know that the binary number
+Dialogue: 0,0:54:35.16,0:54:37.72,Default,,0,0,0,,corresponds to the shape\Nof their own access list
+Dialogue: 0,0:54:37.72,0:54:40.44,Default,,0,0,0,,that we are accessing,\Nstarts with a one,
+Dialogue: 0,0:54:40.44,0:54:44.72,Default,,0,0,0,,then we can choose to have\Na path of length n in the tree
+Dialogue: 0,0:54:44.72,0:54:45.72,Default,,0,0,0,,at the head of the list.
+Dialogue: 0,0:54:46.48,0:54:48.08,Default,,0,0,0,,That's what the here\Nconstructor does.
+Dialogue: 0,0:54:48.08,0:54:50.04,Default,,0,0,0,,The other two constructors there,
+Dialogue: 0,0:54:50.04,0:54:52.84,Default,,0,0,0,,they basically jump\Nover any kind of tree
+Dialogue: 0,0:54:52.84,0:54:54.56,Default,,0,0,0,,which may or may not be there
+Dialogue: 0,0:54:54.56,0:54:56.40,Default,,0,0,0,,and the kind of out most\Nlist in the structure
+Dialogue: 0,0:54:56.88,0:54:58.96,Default,,0,0,0,,until we find the tree\Nthat we are looking for
+Dialogue: 0,0:54:58.96,0:55:00.36,Default,,0,0,0,,and then we have the path
+Dialogue: 0,0:55:00.36,0:55:02.60,Default,,0,0,0,,in that tree to one of\Nthe individual elements.
+Dialogue: 0,0:55:03.84,0:55:06.08,Default,,0,0,0,,And then we can define\Na look up
+Dialogue: 0,0:55:06.08,0:55:08.68,Default,,0,0,0,,function in kind of\Nquite a straightforward now.
+Dialogue: 0,0:55:10.16,0:55:12.24,Default,,0,0,0,,If we want to add new\Nelements to this,
+Dialogue: 0,0:55:12.24,0:55:13.32,Default,,0,0,0,,this is a little bit tricky.
+Dialogue: 0,0:55:13.32,0:55:17.60,Default,,0,0,0,,The first thing you might try\Nwould be to define a cons function
+Dialogue: 0,0:55:17.60,0:55:18.64,Default,,0,0,0,,which takes an A,
+Dialogue: 0,0:55:18.64,0:55:20.80,Default,,0,0,0,,which takes a random access list
+Dialogue: 0,0:55:20.80,0:55:22.60,Default,,0,0,0,,starting with depth zero
+Dialogue: 0,0:55:22.60,0:55:25.72,Default,,0,0,0,,and then produces\Na new random access list
+Dialogue: 0,0:55:25.72,0:55:27.24,Default,,0,0,0,,where we have one more element.
+Dialogue: 0,0:55:27.24,0:55:30.96,Default,,0,0,0,,So we kind of implemented\Nthe number of elements
+Dialogue: 0,0:55:30.96,0:55:33.32,Default,,0,0,0,,which is represented by\Nthe binary number B.
+Dialogue: 0,0:55:34.52,0:55:36.76,Default,,0,0,0,,But if we try this we\Nget stuck quite quickly.
+Dialogue: 0,0:55:37.76,0:55:40.20,Default,,0,0,0,,As we kind of need to\Nmake a recursive call,
+Dialogue: 0,0:55:40.68,0:55:42.68,Default,,0,0,0,,the tail of the binary random\Naccess list actually list
+Dialogue: 0,0:55:42.68,0:55:45.36,Default,,0,0,0,,actually has larger access tree in\Nwhich we are trying to add an A
+Dialogue: 0,0:55:45.36,0:55:47.80,Default,,0,0,0,,which kind of no longer\Nlines up some how.
+Dialogue: 0,0:55:48.80,0:55:52.56,Default,,0,0,0,,So the solution is to define kind\Nof a more general operation,
+Dialogue: 0,0:55:52.56,0:55:55.36,Default,,0,0,0,,a cons tree operations\Nwhich adds a tree of depths
+Dialogue: 0,0:55:55.36,0:55:57.52,Default,,0,0,0,,and to a random access list
+Dialogue: 0,0:55:58.80,0:56:02.76,Default,,0,0,0,,starting with n and then increments\Nthe number of elements stored.
+Dialogue: 0,0:56:03.52,0:56:06.12,Default,,0,0,0,,And then we have the degenerate case
+Dialogue: 0,0:56:07.60,0:56:11.00,Default,,0,0,0,,where n equals 0 then it\Ncorresponds to the cons operation
+Dialogue: 0,0:56:11.00,0:56:12.00,Default,,0,0,0,,that we have there.
+Dialogue: 0,0:56:12.76,0:56:15.88,Default,,0,0,0,,If you want to know a little bit more\Nabout, the details are in the paper
+Dialogue: 0,0:56:15.88,0:56:18.44,Default,,0,0,0,,but the cons tree\Noperation closely mimics
+Dialogue: 0,0:56:18.44,0:56:21.12,Default,,0,0,0,,the kind of successful\Noperations on binary numbers.
+Dialogue: 0,0:56:22.60,0:56:23.88,Default,,0,0,0,,So to wrap up a little bit,
+Dialogue: 0,0:56:23.88,0:56:25.92,Default,,0,0,0,,we can extend this to\Nthe heterogenous case
+Dialogue: 0,0:56:25.92,0:56:28.92,Default,,0,0,0,,by writing a heterogeneous\Nbinary random access list
+Dialogue: 0,0:56:28.92,0:56:31.08,Default,,0,0,0,,index by a random access list
+Dialogue: 0,0:56:31.08,0:56:34.00,Default,,0,0,0,,which stores some type information\Nfirst time universe u.
+Dialogue: 0,0:56:35.00,0:56:37.32,Default,,0,0,0,,And despite like\Nthe apparent complexity,
+Dialogue: 0,0:56:37.80,0:56:39.20,Default,,0,0,0,,there is an example in the paper
+Dialogue: 0,0:56:39.20,0:56:41.68,Default,,0,0,0,,where I write an efficient\Nlambda calculus evaluator
+Dialogue: 0,0:56:41.68,0:56:44.40,Default,,0,0,0,,using heterogeneous binary\Nrandom access lists.
+Dialogue: 0,0:56:44.92,0:56:47.04,Default,,0,0,0,,And this turns out to be\Nno harder than just using
+Dialogue: 0,0:56:47.04,0:56:48.56,Default,,0,0,0,,kind of heterogeneous list
+Dialogue: 0,0:56:48.56,0:56:50.56,Default,,0,0,0,,that you would use in the situation.
+Dialogue: 0,0:56:51.32,0:56:54.24,Default,,0,0,0,,Furthermore it's fairly easy\Nto port this code to Haskell.
+Dialogue: 0,0:56:54.24,0:56:57.12,Default,,0,0,0,,It turns out that you only\Nneed about 130 lines
+Dialogue: 0,0:56:57.12,0:57:00.20,Default,,0,0,0,,to define the data\Nstructure of the nill,
+Dialogue: 0,0:57:00.20,0:57:02.00,Default,,0,0,0,,the cons and the look up operations
+Dialogue: 0,0:57:03.52,0:57:05.68,Default,,0,0,0,,of which I should point\Nout that maybe ten percent
+Dialogue: 0,0:57:05.68,0:57:07.40,Default,,0,0,0,,is language extension pragmas
+Dialogue: 0,0:57:07.40,0:57:10.64,Default,,0,0,0,,but there is nothing too\Nfancy going on there.
+Dialogue: 0,0:57:11.64,0:57:14.72,Default,,0,0,0,,So in conclusion if you can\Nchoose the right data structure,
+Dialogue: 0,0:57:14.72,0:57:17.96,Default,,0,0,0,,one very nice things about\Nthese binary random access list
+Dialogue: 0,0:57:17.96,0:57:20.08,Default,,0,0,0,,is that there is no\Nrotation involved.
+Dialogue: 0,0:57:20.08,0:57:22.20,Default,,0,0,0,,Everything kind of\Nstays in the same order
+Dialogue: 0,0:57:23.44,0:57:27.68,Default,,0,0,0,,regardless of when we add things\Nthat kind of stays well formed.
+Dialogue: 0,0:57:28.40,0:57:31.32,Default,,0,0,0,,And if we choose our type\Nindices in such a way
+Dialogue: 0,0:57:31.32,0:57:33.08,Default,,0,0,0,,that we can enforce the key variance
+Dialogue: 0,0:57:33.08,0:57:34.20,Default,,0,0,0,,that we are interested in
+Dialogue: 0,0:57:34.20,0:57:37.92,Default,,0,0,0,,this ensures that all of our definitions\Ncan go through quite cleanly
+Dialogue: 0,0:57:37.92,0:57:40.92,Default,,0,0,0,,and we really can have\Nour cake and eat it.
+Dialogue: 0,0:57:42.20,0:57:47.16,Default,,0,0,0,,(APPLAUSE)
+Dialogue: 0,0:57:49.72,0:57:50.92,Default,,0,0,0,,JEREMY: Thanks, Wouter.
+Dialogue: 0,0:57:51.40,0:57:53.40,Default,,0,0,0,,If you are watching the New\NYork streaming Clowdr,
+Dialogue: 0,0:57:53.40,0:57:54.72,Default,,0,0,0,,you should now see a Q&A link
+Dialogue: 0,0:57:54.72,0:57:57.04,Default,,0,0,0,,where you can ask Walter\Nquestions by video chat.
+Dialogue: 0,0:58:03.52,0:58:05.60,Default,,0,0,0,,The next talk is\Nthe presentation of the paper
+Dialogue: 0,0:58:05.60,0:58:09.04,Default,,0,0,0,,POPLMark reloaded; Mechanising\Nproofs by logical relations
+Dialogue: 0,0:58:10.04,0:58:12.16,Default,,0,0,0,,which presents a new collection\Nof benchmark problems
+Dialogue: 0,0:58:12.16,0:58:14.60,Default,,0,0,0,,in mechanising the matters area\Nof programming languages.
+Dialogue: 0,0:58:15.12,0:58:17.80,Default,,0,0,0,,The authors of\Nthe papers are Andres Abel,
+Dialogue: 0,0:58:17.80,0:58:22.96,Default,,0,0,0,,Gias Allais, Alia Hameer, Brigitte\NPientka, Alberto Moenigliano
+Dialogue: 0,0:58:22.96,0:58:25.12,Default,,0,0,0,,Steven Schafer and Kathrine Stark.
+Dialogue: 0,0:58:25.12,0:58:26.84,Default,,0,0,0,,And Brigitte will be presenting.
+Dialogue: 0,0:58:30.84,0:58:33.20,Default,,0,0,0,,BRIGITTE PIENTKA: Hello\Nand welcome, thanks for coming.
+Dialogue: 0,0:58:33.20,0:58:36.92,Default,,0,0,0,,This talk is going to summarise\Nour POPLMark reloaded
+Dialogue: 0,0:58:36.92,0:58:38.92,Default,,0,0,0,,mechanising proofs by\Nlogical relations.
+Dialogue: 0,0:58:39.40,0:58:40.72,Default,,0,0,0,,My name is Brigitte Pientka
+Dialogue: 0,0:58:40.72,0:58:44.24,Default,,0,0,0,,and this is joined work by\NAndreas Andreas Abel, G. Allais,
+Dialogue: 0,0:58:44.24,0:58:48.16,Default,,0,0,0,,Alia Hameer, Alberto Moenigiliano,\NSteven Schafer and Katherine Stark.
+Dialogue: 0,0:58:49.92,0:58:53.08,Default,,0,0,0,,So today mechanisation are common\Nplace in programming languages.
+Dialogue: 0,0:58:53.60,0:58:55.72,Default,,0,0,0,,However they are also time consuming
+Dialogue: 0,0:58:55.72,0:58:57.76,Default,,0,0,0,,and there are few design guidelines.
+Dialogue: 0,0:58:59.00,0:59:00.32,Default,,0,0,0,,So what's the problem?
+Dialogue: 0,0:59:00.32,0:59:02.88,Default,,0,0,0,,The problem is that proofs\Nare tricky to write.
+Dialogue: 0,0:59:02.88,0:59:06.04,Default,,0,0,0,,Both on paper as well as\Nin proof assistancts.
+Dialogue: 0,0:59:06.04,0:59:08.60,Default,,0,0,0,,There are a lot of challenging\Ndetails to keep track of.
+Dialogue: 0,0:59:08.60,0:59:11.88,Default,,0,0,0,,On paper it's hard to keep\Ntrack of dependencies
+Dialogue: 0,0:59:11.88,0:59:14.40,Default,,0,0,0,,among different theorems\Nand the definitions
+Dialogue: 0,0:59:14.40,0:59:18.40,Default,,0,0,0,,and you might think that proof\Nis in a sense are the answer.
+Dialogue: 0,0:59:18.92,0:59:21.68,Default,,0,0,0,,But in proof assistants there\Nis sort of another overhead
+Dialogue: 0,0:59:21.68,0:59:22.88,Default,,0,0,0,,we have to deal with.
+Dialogue: 0,0:59:22.88,0:59:27.20,Default,,0,0,0,,We have to build up the infrastructure\Nfor modelling for example
+Dialogue: 0,0:59:27.20,0:59:29.16,Default,,0,0,0,,bindings and context and so on.
+Dialogue: 0,0:59:29.16,0:59:32.32,Default,,0,0,0,,So there is quite\Na lot of time that gets
+Dialogue: 0,0:59:32.32,0:59:34.12,Default,,0,0,0,,into the building this\Nparticular infrastructure.
+Dialogue: 0,0:59:34.64,0:59:37.48,Default,,0,0,0,,It's often hard to understand\Nhow different features interact,
+Dialogue: 0,0:59:37.48,0:59:40.72,Default,,0,0,0,,difficulties increase with\Nthe size of the mechanisation
+Dialogue: 0,0:59:41.20,0:59:43.16,Default,,0,0,0,,and it can be really\Nquite time consuming.
+Dialogue: 0,0:59:43.16,0:59:46.08,Default,,0,0,0,,It's through this that often\Na whole team of students
+Dialogue: 0,0:59:46.08,0:59:49.00,Default,,0,0,0,,is actually tacking some of\Nthis mechanisation efforts.
+Dialogue: 0,0:59:49.52,0:59:51.52,Default,,0,0,0,,Now experience very much matters.
+Dialogue: 0,0:59:54.00,0:59:57.96,Default,,0,0,0,,Now the goal of this paper was\Nto develop a benchmark problem
+Dialogue: 0,0:59:57.96,1:00:01.76,Default,,0,0,0,,that would allow us to gain a deeper\Nunderstanding of the similarities
+Dialogue: 0,1:00:01.76,1:00:05.84,Default,,0,0,0,,and differences in how we mechanise\Nproblems in programming languages
+Dialogue: 0,1:00:06.36,1:00:10.48,Default,,0,0,0,,Now we as developers of proof\Nassistance and libraries
+Dialogue: 0,1:00:10.48,1:00:13.00,Default,,0,0,0,,wanted to make our\Napproaches more robust
+Dialogue: 0,1:00:13.00,1:00:15.08,Default,,0,0,0,,and identify parameters\Nand abstractions
+Dialogue: 0,1:00:15.08,1:00:17.40,Default,,0,0,0,,to better structure\Nproofs and bring down
+Dialogue: 0,1:00:17.40,1:00:19.08,Default,,0,0,0,,the cost of verification overall.
+Dialogue: 0,1:00:21.08,1:00:24.52,Default,,0,0,0,,So it's worthwhile to take\Na look back at POPLMark in 2005.
+Dialogue: 0,1:00:25.52,1:00:30.12,Default,,0,0,0,,Back in 2005 POPLMark challenge\Nwas to mechanise system FSAP
+Dialogue: 0,1:00:30.64,1:00:33.44,Default,,0,0,0,,And that is a problem that can\Nbe fairly easily understood.
+Dialogue: 0,1:00:33.44,1:00:35.92,Default,,0,0,0,,It's described in types of\Nprogramming languages,
+Dialogue: 0,1:00:36.68,1:00:38.80,Default,,0,0,0,,it can be mechanised in\Na couple of hours.
+Dialogue: 0,1:00:38.80,1:00:41.48,Default,,0,0,0,,It focuses really on\Nrepresenting and reasoning
+Dialogue: 0,1:00:41.48,1:00:44.04,Default,,0,0,0,,about structures with binders\Nin particular RV model
+Dialogue: 0,1:00:44.52,1:00:45.80,Default,,0,0,0,,of the polymorphic functions base.
+Dialogue: 0,1:00:46.56,1:00:49.32,Default,,0,0,0,,All proofs for syntactic\Nstructural induction.
+Dialogue: 0,1:00:49.32,1:00:52.32,Default,,0,0,0,,And it was a great way of\Nexploring different encoding
+Dialogue: 0,1:00:52.32,1:00:54.04,Default,,0,0,0,,techniques for\Nrepresenting bindings.
+Dialogue: 0,1:00:54.04,1:00:57.60,Default,,0,0,0,,In fact people used strings,\NDe Bruijn, nominal encodings,
+Dialogue: 0,1:00:57.60,1:01:01.96,Default,,0,0,0,,(INAUDIBLE) as well\Nas high (INAUDIBLE)
+Dialogue: 0,1:01:03.24,1:01:07.20,Default,,0,0,0,,But on the flip side it did not\Nreally identify any bugs or flaws
+Dialogue: 0,1:01:07.20,1:01:08.40,Default,,0,0,0,,in existing sytems.
+Dialogue: 0,1:01:08.40,1:01:11.32,Default,,0,0,0,,It did not inspire the development\Nof new theoretical foundations
+Dialogue: 0,1:01:12.04,1:01:14.60,Default,,0,0,0,,nor did it push any existing\Nsystems to their limit.
+Dialogue: 0,1:01:14.60,1:01:17.68,Default,,0,0,0,,All systems were in some\Nsense, equally suitable.
+Dialogue: 0,1:01:19.44,1:01:21.96,Default,,0,0,0,,So we want to go beyond\Nthe POPLMark challenge.
+Dialogue: 0,1:01:21.96,1:01:23.76,Default,,0,0,0,,And in fact one doesn't\Nneed to go very far,
+Dialogue: 0,1:01:23.76,1:01:26.20,Default,,0,0,0,,one just needs to look in\Nthe conclusion of this paper
+Dialogue: 0,1:01:26.20,1:01:28.64,Default,,0,0,0,,and one sees that\None of the problems
+Dialogue: 0,1:01:28.64,1:01:32.36,Default,,0,0,0,,one challenges in (INAUDIBLE)\Nis Proof by Logical Relations.
+Dialogue: 0,1:01:33.60,1:01:37.60,Default,,0,0,0,,So our contribution here in this\Npaper is to describe a tutorial
+Dialogue: 0,1:01:37.60,1:01:40.68,Default,,0,0,0,,for a stronger normalisation\Nproofs for a valid type terms
+Dialogue: 0,1:01:40.68,1:01:42.68,Default,,0,0,0,,using Kripke-style\Nlogical relations.
+Dialogue: 0,1:01:43.20,1:01:46.64,Default,,0,0,0,,The really few standard\Ntextbook chapters out there
+Dialogue: 0,1:01:46.64,1:01:48.92,Default,,0,0,0,,that focus on strong\Nnormalisation proofs.
+Dialogue: 0,1:01:49.92,1:01:54.92,Default,,0,0,0,,And although it has been really\Na good standard in some sense
+Dialogue: 0,1:01:55.52,1:01:59.68,Default,,0,0,0,,to evaluate proof assistance\Nusing a strong normalisation proof
+Dialogue: 0,1:01:59.68,1:02:00.88,Default,,0,0,0,,by logical operations.
+Dialogue: 0,1:02:01.40,1:02:04.28,Default,,0,0,0,,See for example there is\NAltenkirch work in 1993
+Dialogue: 0,1:02:05.80,1:02:08.28,Default,,0,0,0,,where he used lego to\Ngive mechanisation
+Dialogue: 0,1:02:08.28,1:02:11.64,Default,,0,0,0,,of a strong normalisation proof\Nfor (INAUDIBLE) calculus.
+Dialogue: 0,1:02:12.12,1:02:16.92,Default,,0,0,0,,Now one difference between\Nall this work and ours is that
+Dialogue: 0,1:02:16.92,1:02:20.12,Default,,0,0,0,,we are really focusing on\Nwell-typed term represantations
+Dialogue: 0,1:02:20.12,1:02:23.40,Default,,0,0,0,,and that leads us to\Na Kripke-style of logical relation
+Dialogue: 0,1:02:23.40,1:02:26.60,Default,,0,0,0,,where we talk about extentions\Nof typing context.
+Dialogue: 0,1:02:27.84,1:02:30.68,Default,,0,0,0,,And this also brings\Nme to the challenges
+Dialogue: 0,1:02:30.68,1:02:34.20,Default,,0,0,0,,which really go beyond\Nthe original POPLMark challenge
+Dialogue: 0,1:02:34.20,1:02:36.84,Default,,0,0,0,,because we need to model\Nthe simultaneous substitutions
+Dialogue: 0,1:02:36.84,1:02:40.56,Default,,0,0,0,,and renamings, context extensions,\Nobstruction properties
+Dialogue: 0,1:02:40.56,1:02:43.48,Default,,0,0,0,,such as weakening and extension\Nstrengthening play much more,
+Dialogue: 0,1:02:43.48,1:02:47.88,Default,,0,0,0,,central role and in order to\Ndescribe the reducibility definition
+Dialogue: 0,1:02:47.88,1:02:50.52,Default,,0,0,0,,we need to have a way\Nof distinguishing
+Dialogue: 0,1:02:50.52,1:02:52.52,Default,,0,0,0,,between inductive\Nand stratified definitions.
+Dialogue: 0,1:02:53.76,1:02:56.28,Default,,0,0,0,,And last we implemented\Nour solutions
+Dialogue: 0,1:02:56.28,1:02:57.80,Default,,0,0,0,,in three different proof assistance.
+Dialogue: 0,1:02:57.80,1:02:59.16,Default,,0,0,0,,Beluga, Coq and Agda.
+Dialogue: 0,1:03:01.44,1:03:03.68,Default,,0,0,0,,Now I also want to mention\Nsome considerations
+Dialogue: 0,1:03:03.68,1:03:06.36,Default,,0,0,0,,that went into choosing this\Nparticular bench marks
+Dialogue: 0,1:03:06.36,1:03:08.32,Default,,0,0,0,,because there are of course\Nmany different kinds
+Dialogue: 0,1:03:08.32,1:03:12.12,Default,,0,0,0,,of logic relations proofs\Nand Kripke-style logical relational proof.
+Dialogue: 0,1:03:12.64,1:03:15.64,Default,,0,0,0,,In particular, there have been\Nvery proper for reasoning
+Dialogue: 0,1:03:15.64,1:03:18.00,Default,,0,0,0,,about concurrent\Nand imperative programmes
+Dialogue: 0,1:03:18.00,1:03:21.04,Default,,0,0,0,,where we reasoned about\Nmemory extension
+Dialogue: 0,1:03:21.04,1:03:22.96,Default,,0,0,0,,rather than typing\Ncontext extensions.
+Dialogue: 0,1:03:23.68,1:03:26.88,Default,,0,0,0,,Nevertheless we focus here\Non logical relations proofs
+Dialogue: 0,1:03:26.88,1:03:27.96,Default,,0,0,0,,for typed terms.
+Dialogue: 0,1:03:28.44,1:03:31.24,Default,,0,0,0,,(INAUDIBLE) no state.
+Dialogue: 0,1:03:31.24,1:03:33.88,Default,,0,0,0,,But we believe that this\Nis a good spring board
+Dialogue: 0,1:03:33.88,1:03:35.48,Default,,0,0,0,,for richer theories in particular
+Dialogue: 0,1:03:35.48,1:03:36.60,Default,,0,0,0,,dependent type theories.
+Dialogue: 0,1:03:36.60,1:03:39.60,Default,,0,0,0,,One problem in particular\Nthat often comes up
+Dialogue: 0,1:03:39.60,1:03:41.32,Default,,0,0,0,,when you think about\Ndependant theories is
+Dialogue: 0,1:03:42.08,1:03:44.12,Default,,0,0,0,,the notion of equality.
+Dialogue: 0,1:03:44.12,1:03:47.16,Default,,0,0,0,,And we need to sort of reason\Nabout some as in completeness
+Dialogue: 0,1:03:47.16,1:03:49.48,Default,,0,0,0,,of algorithmic type\Ndirected equality.
+Dialogue: 0,1:03:49.48,1:03:53.72,Default,,0,0,0,,And the proof of soundness completeness\Nof typed directed equality
+Dialogue: 0,1:03:53.72,1:03:57.40,Default,,0,0,0,,exhibits many of the same\Nideas and challenges
+Dialogue: 0,1:03:57.40,1:04:00.48,Default,,0,0,0,,that we have in the proof\Nof strong analyzations
+Dialogue: 0,1:04:00.48,1:04:02.04,Default,,0,0,0,,towards simple lambda calculus.
+Dialogue: 0,1:04:03.28,1:04:06.96,Default,,0,0,0,,And last our guiding principle\Nwas really to design a benchmark
+Dialogue: 0,1:04:06.96,1:04:10.32,Default,,0,0,0,,that is reasonable so grad\Nstudents would be able to do it
+Dialogue: 0,1:04:10.32,1:04:11.68,Default,,0,0,0,,after reading the tutorial.
+Dialogue: 0,1:04:14.44,1:04:16.64,Default,,0,0,0,,So how do we define\Nstrong normalisation.
+Dialogue: 0,1:04:16.64,1:04:20.72,Default,,0,0,0,,So traditionally, we define it by\Nsaying M is strongly normalising
+Dialogue: 0,1:04:20.72,1:04:25.08,Default,,0,0,0,,if all rewrite sequences starting\Nin M end in a normal form.
+Dialogue: 0,1:04:25.08,1:04:27.20,Default,,0,0,0,,And this often characterised using
+Dialogue: 0,1:04:27.20,1:04:29.32,Default,,0,0,0,,what is called\Nan accessibility relation.
+Dialogue: 0,1:04:29.80,1:04:33.28,Default,,0,0,0,,But in fact the proof become\Nincreasingly annoying
+Dialogue: 0,1:04:33.28,1:04:36.32,Default,,0,0,0,,when we need to reason about all\Nthese different rewrite sequences
+Dialogue: 0,1:04:36.32,1:04:38.44,Default,,0,0,0,,and analyse different reducts.
+Dialogue: 0,1:04:40.16,1:04:43.40,Default,,0,0,0,,So the alternative was\Nproposed by a F van Raamsdonk
+Dialogue: 0,1:04:43.40,1:04:46.44,Default,,0,0,0,,and Paula Severi going\Nback also (IANUDIBLE)
+Dialogue: 0,1:04:46.44,1:04:49.04,Default,,0,0,0,,this kind of modular approach\Nfor strongly normalising
+Dialogue: 0,1:04:49.80,1:04:52.88,Default,,0,0,0,,where we have inductive\Ncharacterisations in normal forms.
+Dialogue: 0,1:04:53.36,1:04:55.20,Default,,0,0,0,,And this leads to modular proofs
+Dialogue: 0,1:04:55.20,1:04:57.16,Default,,0,0,0,,both on paper\Nand mechanisations and the proofs
+Dialogue: 0,1:04:57.16,1:04:58.76,Default,,0,0,0,,essentially becomes much similar.
+Dialogue: 0,1:04:59.76,1:05:02.72,Default,,0,0,0,,So the first child problem\Nis to prove the equivalence
+Dialogue: 0,1:05:02.72,1:05:06.32,Default,,0,0,0,,between the accessibility relation\Nand inductive definition
+Dialogue: 0,1:05:06.32,1:05:07.84,Default,,0,0,0,,of strong normalising terms.
+Dialogue: 0,1:05:08.36,1:05:11.40,Default,,0,0,0,,And the second one is actually\Nproving strong normalisation
+Dialogue: 0,1:05:11.40,1:05:14.80,Default,,0,0,0,,for simply typed lambda calculus\Nusing the inductive definition.
+Dialogue: 0,1:05:15.56,1:05:17.64,Default,,0,0,0,,And that will have\Ncertain set problems
+Dialogue: 0,1:05:17.64,1:05:19.88,Default,,0,0,0,,that will also be\Ndescribed in the paper
+Dialogue: 0,1:05:19.88,1:05:20.88,Default,,0,0,0,,and outlined the proofs.
+Dialogue: 0,1:05:22.40,1:05:26.44,Default,,0,0,0,,So in the remaining few minutes\NI want to talk about our solutions
+Dialogue: 0,1:05:26.44,1:05:29.52,Default,,0,0,0,,of one Beluga which is this\Ncontextual High order of syntax
+Dialogue: 0,1:05:29.52,1:05:33.08,Default,,0,0,0,,and then Adga and Coq where we\Nuse the De Bruijn codings.
+Dialogue: 0,1:05:35.08,1:05:37.28,Default,,0,0,0,,So Beluga is probably\Nthe youngest system
+Dialogue: 0,1:05:37.28,1:05:38.96,Default,,0,0,0,,on this three proof assistance.
+Dialogue: 0,1:05:38.96,1:05:42.44,Default,,0,0,0,,The proof tiered syntax based on\Nthe logic of (INAUDIBLE)
+Dialogue: 0,1:05:42.44,1:05:46.04,Default,,0,0,0,,and therefore is of course\Ngreat to model by instructors.
+Dialogue: 0,1:05:46.52,1:05:48.96,Default,,0,0,0,,Beluga also has build in\Nsupport for substitutions
+Dialogue: 0,1:05:48.96,1:05:50.56,Default,,0,0,0,,and renamings and in that sense
+Dialogue: 0,1:05:50.56,1:05:53.12,Default,,0,0,0,,it's kind of ideally suited\Nfor that particular problem.
+Dialogue: 0,1:05:53.88,1:05:56.56,Default,,0,0,0,,But it was also a great case\Nstudy for finding bugs
+Dialogue: 0,1:05:56.56,1:05:57.92,Default,,0,0,0,,and making the system more robust.
+Dialogue: 0,1:05:57.92,1:06:00.60,Default,,0,0,0,,In particular it allowed us to\Nfind bugs in coverage checking
+Dialogue: 0,1:06:00.60,1:06:02.96,Default,,0,0,0,,and in extend termination checking.
+Dialogue: 0,1:06:02.96,1:06:05.24,Default,,0,0,0,,In over the last year,\Nwe also implemented
+Dialogue: 0,1:06:05.24,1:06:07.76,Default,,0,0,0,,an interactive proof\Ndevelopment mode Harpoon
+Dialogue: 0,1:06:07.76,1:06:10.48,Default,,0,0,0,,to make it easier to develop\Nsuch proofs in general.
+Dialogue: 0,1:06:10.96,1:06:12.80,Default,,0,0,0,,But there is no proof automation.
+Dialogue: 0,1:06:13.56,1:06:16.28,Default,,0,0,0,,Now Coq on the other hand we used
+Dialogue: 0,1:06:16.28,1:06:18.84,Default,,0,0,0,,de Bruijn encodings\Nfor modelling findings.
+Dialogue: 0,1:06:19.84,1:06:21.68,Default,,0,0,0,,We have in fact two solutions
+Dialogue: 0,1:06:21.68,1:06:23.72,Default,,0,0,0,,developed by Katherine\NStark and Stephen Schafer.
+Dialogue: 0,1:06:24.72,1:06:26.88,Default,,0,0,0,,The first one was on\Nwell-scoped syntax
+Dialogue: 0,1:06:26.88,1:06:29.52,Default,,0,0,0,,and the boilerplate was\Ngenerated by Autosubst 2.
+Dialogue: 0,1:06:30.00,1:06:33.72,Default,,0,0,0,,And the second solution focus on\Nwell-typed de Bruijn encodings
+Dialogue: 0,1:06:33.72,1:06:36.20,Default,,0,0,0,,and the boilerplate sort\Nof proven manually.
+Dialogue: 0,1:06:37.44,1:06:40.12,Default,,0,0,0,,Both proofs were a sort\Nof very much developed
+Dialogue: 0,1:06:40.12,1:06:43.40,Default,,0,0,0,,and close collaboration with\Nour proofs and Beluga.
+Dialogue: 0,1:06:43.40,1:06:45.20,Default,,0,0,0,,So they have a very\Nsimilar structure.
+Dialogue: 0,1:06:45.72,1:06:47.68,Default,,0,0,0,,So everything can be\Nproven as expected.
+Dialogue: 0,1:06:48.44,1:06:50.64,Default,,0,0,0,,It's very worthwhile nothing that\Nsubstitutions and beginnings
+Dialogue: 0,1:06:50.64,1:06:54.00,Default,,0,0,0,,are functions mapping\Nfrom positions to terms
+Dialogue: 0,1:06:54.00,1:06:55.88,Default,,0,0,0,,or positions to other positions.
+Dialogue: 0,1:06:55.88,1:06:58.56,Default,,0,0,0,,And repetitive proofs\Nare kind of factored out
+Dialogue: 0,1:06:58.56,1:07:01.48,Default,,0,0,0,,using proofs, scripts\Nand Coq tactics.
+Dialogue: 0,1:07:02.72,1:07:06.20,Default,,0,0,0,,It also led to a way of\Nmaybe rethinking Autosubst.
+Dialogue: 0,1:07:06.20,1:07:08.40,Default,,0,0,0,,Maybe one should have an Autosubst 3
+Dialogue: 0,1:07:08.40,1:07:11.60,Default,,0,0,0,,where we actually can\Ngenerate boilerplate codes
+Dialogue: 0,1:07:11.60,1:07:13.44,Default,,0,0,0,,for valid types\Nand tax automatically.
+Dialogue: 0,1:07:14.68,1:07:17.96,Default,,0,0,0,,And last Agda, we used to\Ngenerate syntax library
+Dialogue: 0,1:07:17.96,1:07:19.24,Default,,0,0,0,,from (INAUDIBLE)
+Dialogue: 0,1:07:19.24,1:07:22.96,Default,,0,0,0,,It worked very well as\Nan expert user to test
+Dialogue: 0,1:07:22.96,1:07:24.56,Default,,0,0,0,,and stress test his
+Dialogue: 0,1:07:25.72,1:07:27.52,Default,,0,0,0,,library,\Nit led for example
+Dialogue: 0,1:07:27.52,1:07:29.44,Default,,0,0,0,,to implementing additional\Ngeneric results
+Dialogue: 0,1:07:29.44,1:07:33.56,Default,,0,0,0,,as part of the generic-syntax\Nlibrary because they were missing.
+Dialogue: 0,1:07:33.56,1:07:35.76,Default,,0,0,0,,And the abstractions\Nprovided by the library
+Dialogue: 0,1:07:35.76,1:07:37.72,Default,,0,0,0,,led to very compact proofs.
+Dialogue: 0,1:07:37.72,1:07:39.56,Default,,0,0,0,,Now, the theory of\Nrenaming and substitution
+Dialogue: 0,1:07:39.56,1:07:44.32,Default,,0,0,0,,is however not internalised\Nand there is no automation.
+Dialogue: 0,1:07:44.32,1:07:48.32,Default,,0,0,0,,So overall, I think all of us\Nfelt it was a success.
+Dialogue: 0,1:07:48.32,1:07:51.16,Default,,0,0,0,,These benchmarks did expose\Nbugs and shortcomings
+Dialogue: 0,1:07:51.16,1:07:52.52,Default,,0,0,0,,in existing systems.
+Dialogue: 0,1:07:52.52,1:07:54.80,Default,,0,0,0,,It made libraries\Nand systems more robust.
+Dialogue: 0,1:07:54.80,1:07:57.20,Default,,0,0,0,,It helped us restructure\Nour approves,
+Dialogue: 0,1:07:57.20,1:07:59.92,Default,,0,0,0,,and it helped us to gain a deeper\Nunderstanding of each approach
+Dialogue: 0,1:07:59.92,1:08:02.48,Default,,0,0,0,,and how they're actually related.
+Dialogue: 0,1:08:02.48,1:08:04.08,Default,,0,0,0,,So benchmarks can be great.
+Dialogue: 0,1:08:04.08,1:08:07.12,Default,,0,0,0,,We would encourage\Nyou to explore them.
+Dialogue: 0,1:08:07.12,1:08:09.28,Default,,0,0,0,,Hopefully we'll see\Na solution from you.
+Dialogue: 0,1:08:09.28,1:08:13.24,Default,,0,0,0,,We already saw a solution developed\Nin F star, which is wonderful.
+Dialogue: 0,1:08:13.24,1:08:17.24,Default,,0,0,0,,But we also hope that some of\Nthe considerations and discussions
+Dialogue: 0,1:08:17.24,1:08:20.36,Default,,0,0,0,,that led to the choice of\Nour benchmark problem
+Dialogue: 0,1:08:20.36,1:08:23.12,Default,,0,0,0,,helps you to formulate\Nother challenge problems.
+Dialogue: 0,1:08:23.12,1:08:25.48,Default,,0,0,0,,Of course, this isn't the end.
+Dialogue: 0,1:08:25.48,1:08:27.76,Default,,0,0,0,,So thanks for listening.
+Dialogue: 0,1:08:27.76,1:08:34.68,Default,,0,0,0,,(APPLAUSE)
+Dialogue: 0,1:08:35.56,1:08:37.76,Default,,0,0,0,,JEREMY: Thanks Brigitte.
+Dialogue: 0,1:08:37.76,1:08:39.76,Default,,0,0,0,,If you're watching the\NNew York streaming Clowdr,
+Dialogue: 0,1:08:39.76,1:08:41.44,Default,,0,0,0,,you should not see a Q&A link
+Dialogue: 0,1:08:41.44,1:08:45.28,Default,,0,0,0,,where you can ask Brigitte\Nquestions by video chat.
+Dialogue: 0,1:08:50.08,1:08:52.64,Default,,0,0,0,,The next talk is\Na presentation of the paper,
+Dialogue: 0,1:08:52.64,1:08:55.64,Default,,0,0,0,,perturbation confusion in forward\Nautomatic differentiation
+Dialogue: 0,1:08:55.64,1:08:57.44,Default,,0,0,0,,of higher-order functions,
+Dialogue: 0,1:08:57.44,1:08:59.00,Default,,0,0,0,,which describes a longstanding bug
+Dialogue: 0,1:08:59.00,1:09:02.32,Default,,0,0,0,,and the implementations of these\Nand two potential solutions.
+Dialogue: 0,1:09:02.32,1:09:06.48,Default,,0,0,0,,The authors of the paper are\NOleksandr Manzyuk, Barak Pearlmutter,
+Dialogue: 0,1:09:06.48,1:09:09.76,Default,,0,0,0,,Alexey Radul, David Rush,\Nand Jeﬀrey Mark Siskind.
+Dialogue: 0,1:09:09.76,1:09:13.52,Default,,0,0,0,,And Barak will be presenting.
+Dialogue: 0,1:09:14.12,1:09:15.92,Default,,0,0,0,,BARAK PEARLMUTTER: My name\Nis Barak Pearlmutter,
+Dialogue: 0,1:09:15.92,1:09:19.60,Default,,0,0,0,,and I'd like to tell you about\Na bug that we encountered
+Dialogue: 0,1:09:19.60,1:09:24.12,Default,,0,0,0,,in allowing derivatives of\Nhigher-order functions.
+Dialogue: 0,1:09:24.12,1:09:25.80,Default,,0,0,0,,This work is part of\Na sustained effort
+Dialogue: 0,1:09:25.80,1:09:27.28,Default,,0,0,0,,to make automatic differentiation
+Dialogue: 0,1:09:27.28,1:09:30.52,Default,,0,0,0,,robust, performance general,\Nand ultimately ubiquitous,
+Dialogue: 0,1:09:30.52,1:09:32.08,Default,,0,0,0,,and of course, correct.
+Dialogue: 0,1:09:32.08,1:09:33.96,Default,,0,0,0,,It should be easy to\Ntake a derivative
+Dialogue: 0,1:09:33.96,1:09:36.68,Default,,0,0,0,,as it is to take a square\Nroot or write a loop.
+Dialogue: 0,1:09:36.68,1:09:38.60,Default,,0,0,0,,That means programmemers should\Nbe able to take derivatives
+Dialogue: 0,1:09:38.60,1:09:41.00,Default,,0,0,0,,of anything who's\Nderivative make sense.
+Dialogue: 0,1:09:41.00,1:09:43.20,Default,,0,0,0,,So derivatives of functions,
+Dialogue: 0,1:09:43.20,1:09:47.56,Default,,0,0,0,,which themselves take\Nor return functions,
+Dialogue: 0,1:09:47.56,1:09:51.32,Default,,0,0,0,,like solving an ODE\Nor the derivative of map.
+Dialogue: 0,1:09:51.32,1:09:54.08,Default,,0,0,0,,And of course, we want to take\Nderivatives of functions
+Dialogue: 0,1:09:54.08,1:09:55.96,Default,,0,0,0,,which internally take derivatives.
+Dialogue: 0,1:09:55.96,1:09:58.92,Default,,0,0,0,,So we want to allow nesting.
+Dialogue: 0,1:09:59.56,1:10:01.60,Default,,0,0,0,,Let me set up what we need\Nto explore this issue.
+Dialogue: 0,1:10:01.60,1:10:03.36,Default,,0,0,0,,I'll review our notation\Nand terminology
+Dialogue: 0,1:10:03.36,1:10:05.16,Default,,0,0,0,,for forward automatic\Ndifferentiation.
+Dialogue: 0,1:10:05.16,1:10:07.28,Default,,0,0,0,,Although the same issue\Ncrops up in all other modes,
+Dialogue: 0,1:10:07.28,1:10:09.28,Default,,0,0,0,,we'll use forward for clarity.
+Dialogue: 0,1:10:09.28,1:10:11.44,Default,,0,0,0,,Then I'll talk about classic\Nperturbation confusion
+Dialogue: 0,1:10:11.44,1:10:13.32,Default,,0,0,0,,and how it's avoided using tags.
+Dialogue: 0,1:10:13.32,1:10:15.20,Default,,0,0,0,,We'll think about derivatives\Nof higher-order functions
+Dialogue: 0,1:10:15.20,1:10:17.84,Default,,0,0,0,,and see how allowing them breaks\Nthe one-to-one correspondence
+Dialogue: 0,1:10:17.84,1:10:20.68,Default,,0,0,0,,between invoking derivative\Noperators and taking derivatives,
+Dialogue: 0,1:10:20.68,1:10:22.28,Default,,0,0,0,,thus allowing this bug.
+Dialogue: 0,1:10:22.28,1:10:26.04,Default,,0,0,0,,After that's all unpacked,\Nlook at ways to address the problem.
+Dialogue: 0,1:10:26.04,1:10:27.72,Default,,0,0,0,,In forward automatic\Ndifferentiation,
+Dialogue: 0,1:10:27.72,1:10:30.24,Default,,0,0,0,,derivatives are piggybacked\Non primal values.
+Dialogue: 0,1:10:30.24,1:10:32.72,Default,,0,0,0,,So we have x plus x prime epsilon,
+Dialogue: 0,1:10:32.72,1:10:37.64,Default,,0,0,0,,x is the primal, x prime is\Nthe derivative value called a tangent.
+Dialogue: 0,1:10:37.64,1:10:41.96,Default,,0,0,0,,This is like a dual number,\Nlike a complex number inside the computer,
+Dialogue: 0,1:10:41.96,1:10:45.24,Default,,0,0,0,,it's represented as\Na two element pair.
+Dialogue: 0,1:10:45.24,1:10:47.84,Default,,0,0,0,,These are propagated according\Nto the rules of calculus,
+Dialogue: 0,1:10:47.84,1:10:51.04,Default,,0,0,0,,and we have an operator for\Nextracting the epsilon coefficient,
+Dialogue: 0,1:10:51.04,1:10:53.12,Default,,0,0,0,,the tangent of an output.
+Dialogue: 0,1:10:53.12,1:10:56.40,Default,,0,0,0,,I'll show how his is used to perform\Nforward automatic differentiation
+Dialogue: 0,1:10:56.40,1:10:59.08,Default,,0,0,0,,on a simple but topical function.
+Dialogue: 0,1:10:59.08,1:11:02.48,Default,,0,0,0,,Let's say f of t is one over one\Nplus e to the minus t.
+Dialogue: 0,1:11:02.48,1:11:06.40,Default,,0,0,0,,We define the operator D to take\Nthe derivative of f at a point x
+Dialogue: 0,1:11:06.40,1:11:14.12,Default,,0,0,0,,by fiting x plus epsilon into f\Nextracting the tangent of the output.
+Dialogue: 0,1:11:14.12,1:11:16.68,Default,,0,0,0,,We can take f of two\Nto get 0.881,
+Dialogue: 0,1:11:16.68,1:11:18.88,Default,,0,0,0,,and take the derivative of f at two,
+Dialogue: 0,1:11:18.88,1:11:21.60,Default,,0,0,0,,take f of two plus epsilon,
+Dialogue: 0,1:11:21.60,1:11:26.56,Default,,0,0,0,,crank that through,\Nwe get 0.881 plus 0.105 epsilon.
+Dialogue: 0,1:11:26.56,1:11:31.60,Default,,0,0,0,,We extract the tangent to\Nget the derivative of 0.105.
+Dialogue: 0,1:11:31.60,1:11:35.48,Default,,0,0,0,,This function is also the solution\Nto Verhulst epidemic equation.
+Dialogue: 0,1:11:35.48,1:11:37.20,Default,,0,0,0,,The derivative is\Nthe rate of infection.
+Dialogue: 0,1:11:37.20,1:11:41.80,Default,,0,0,0,,So did you really think you could\Ngo whole talk without Coronavirus?
+Dialogue: 0,1:11:41.80,1:11:43.88,Default,,0,0,0,,It used to be that\Nnesting was initial idea,
+Dialogue: 0,1:11:43.88,1:11:46.36,Default,,0,0,0,,but many applications\Ndemand nesting.
+Dialogue: 0,1:11:46.36,1:11:47.96,Default,,0,0,0,,When done in frameworks\Nthat don't support it
+Dialogue: 0,1:11:47.96,1:11:51.00,Default,,0,0,0,,programmeers end up going through\Nall kinds of crazy hoops
+Dialogue: 0,1:11:51.00,1:11:52.08,Default,,0,0,0,,to get nesting working.
+Dialogue: 0,1:11:52.08,1:11:53.52,Default,,0,0,0,,Said scripts depatch source code
+Dialogue: 0,1:11:53.52,1:11:55.68,Default,,0,0,0,,between multiple passes\Nthrough preprocessors,
+Dialogue: 0,1:11:55.68,1:11:57.16,Default,,0,0,0,,manual closure conversion,
+Dialogue: 0,1:11:57.16,1:11:59.88,Default,,0,0,0,,all kinds of heroic technical\Ndebt creating shenanigans.
+Dialogue: 0,1:11:59.88,1:12:02.28,Default,,0,0,0,,We want it to be natural.
+Dialogue: 0,1:12:02.92,1:12:04.56,Default,,0,0,0,,Here's some simple nesting.
+Dialogue: 0,1:12:04.56,1:12:08.08,Default,,0,0,0,,D takes a derivative at a point.
+Dialogue: 0,1:12:09.24,1:12:12.32,Default,,0,0,0,,On the left here is conventional\Nmathematical notation
+Dialogue: 0,1:12:12.32,1:12:13.48,Default,,0,0,0,,for nesting derivative.
+Dialogue: 0,1:12:13.48,1:12:16.68,Default,,0,0,0,,Notice how much nicer the functional\Nnotation on the right is.
+Dialogue: 0,1:12:16.68,1:12:20.76,Default,,0,0,0,,Regular calculus is better\Nwith lambda calculus, right?
+Dialogue: 0,1:12:20.76,1:12:23.12,Default,,0,0,0,,Look at the definition of D.
+Dialogue: 0,1:12:23.12,1:12:26.40,Default,,0,0,0,,Now there's this fresh thing\Nthat there wasn't before.
+Dialogue: 0,1:12:26.40,1:12:30.72,Default,,0,0,0,,That means we get a fresh\Nepsilon every time we invoke D.
+Dialogue: 0,1:12:30.72,1:12:35.16,Default,,0,0,0,,So that nested invocations\Nhave different epsilon tags.
+Dialogue: 0,1:12:35.16,1:12:38.04,Default,,0,0,0,,And so their tangents don't collide.
+Dialogue: 0,1:12:38.04,1:12:41.32,Default,,0,0,0,,That's critical to\Ngetting the right answer.
+Dialogue: 0,1:12:41.32,1:12:44.12,Default,,0,0,0,,When I say epsilon i\Nor a different tag,
+Dialogue: 0,1:12:44.12,1:12:46.72,Default,,0,0,0,,these might be implemented\Nin lots of different ways,
+Dialogue: 0,1:12:46.72,1:12:49.92,Default,,0,0,0,,like by nested structures with\Nexistential types for safety
+Dialogue: 0,1:12:49.92,1:12:51.56,Default,,0,0,0,,or a variety of other techniques.
+Dialogue: 0,1:12:51.56,1:12:53.28,Default,,0,0,0,,We're abstracting all that away
+Dialogue: 0,1:12:53.28,1:12:58.52,Default,,0,0,0,,and just saying tag, different\Nepsilon tags, different indices.
+Dialogue: 0,1:13:04.00,1:13:07.24,Default,,0,0,0,,Recent formulations often\Nstill get this wrong.
+Dialogue: 0,1:13:07.24,1:13:09.76,Default,,0,0,0,,For some of them it's out of scope,\Nyou can't even express nesting.
+Dialogue: 0,1:13:09.76,1:13:14.72,Default,,0,0,0,,For others they crash,\Nyou get the wrong answer.
+Dialogue: 0,1:13:14.72,1:13:17.20,Default,,0,0,0,,The phrase higher-order\Nautomatic differentiation
+Dialogue: 0,1:13:17.20,1:13:19.56,Default,,0,0,0,,is used in a bunch of different\Nsenses in the literature.
+Dialogue: 0,1:13:19.56,1:13:22.72,Default,,0,0,0,,When we use it here\Nwe mean the hard one.
+Dialogue: 0,1:13:22.72,1:13:26.40,Default,,0,0,0,,This first definition, taking\Nderivatives of higher-order functions,
+Dialogue: 0,1:13:26.40,1:13:28.60,Default,,0,0,0,,not plain or higher-order\Nderivatives,
+Dialogue: 0,1:13:28.60,1:13:30.56,Default,,0,0,0,,and not derivatives of\Nfirst order functions
+Dialogue: 0,1:13:30.56,1:13:34.60,Default,,0,0,0,,defined using\Nhigher-order operators.
+Dialogue: 0,1:13:35.08,1:13:38.04,Default,,0,0,0,,What is meant by the derivative\Nof a higher-order function?
+Dialogue: 0,1:13:38.04,1:13:40.44,Default,,0,0,0,,Well, in part there\Nwas the motivation
+Dialogue: 0,1:13:40.44,1:13:43.08,Default,,0,0,0,,for the development of the whole\Nfield of differential geometry
+Dialogue: 0,1:13:43.08,1:13:45.72,Default,,0,0,0,,100s of years ago.
+Dialogue: 0,1:13:46.44,1:13:51.24,Default,,0,0,0,,But let's give a simple example\Nof binary curried function.
+Dialogue: 0,1:13:51.24,1:13:54.80,Default,,0,0,0,,So f of xy equals x squared\Nplus blah, blah, blah.
+Dialogue: 0,1:13:54.80,1:13:59.08,Default,,0,0,0,,We can take F at the 0.5\Nand get a function from y,
+Dialogue: 0,1:13:59.08,1:14:01.28,Default,,0,0,0,,225 plus yq, blah, blah, blah.
+Dialogue: 0,1:14:01.28,1:14:04.16,Default,,0,0,0,,We take the derivative of f at five,
+Dialogue: 0,1:14:04.16,1:14:06.68,Default,,0,0,0,,and we'll get\Nthe partial derivative of f
+Dialogue: 0,1:14:06.68,1:14:09.04,Default,,0,0,0,,with respect to its first argument.
+Dialogue: 0,1:14:09.04,1:14:12.68,Default,,0,0,0,,So map from y to the derivative\Nof that expression,
+Dialogue: 0,1:14:12.68,1:14:17.68,Default,,0,0,0,,with respect to x at\Nthe point x equals five and y.
+Dialogue: 0,1:14:18.88,1:14:22.08,Default,,0,0,0,,I'm ignoring derivatives of function\Nwhose domain is a function.
+Dialogue: 0,1:14:22.08,1:14:24.76,Default,,0,0,0,,Read the paper for that.
+Dialogue: 0,1:14:24.76,1:14:26.64,Default,,0,0,0,,In order for this to go through,
+Dialogue: 0,1:14:26.64,1:14:28.68,Default,,0,0,0,,we're going to have to extend\Nthe derivative operator.
+Dialogue: 0,1:14:28.68,1:14:30.52,Default,,0,0,0,,Well, not the derivative\Noperator itself
+Dialogue: 0,1:14:30.52,1:14:33.16,Default,,0,0,0,,whose definition remains\Nthe same, but it's type.
+Dialogue: 0,1:14:33.16,1:14:36.64,Default,,0,0,0,,And also we have to extend\Nthe tangent operator.
+Dialogue: 0,1:14:37.80,1:14:41.92,Default,,0,0,0,,The tangent operator operates\Non numbers the same way,
+Dialogue: 0,1:14:41.92,1:14:47.04,Default,,0,0,0,,but on functions by\Npost-composition.
+Dialogue: 0,1:14:47.04,1:14:50.72,Default,,0,0,0,,OK. Now we're in a position to\Ndo something very disturbing
+Dialogue: 0,1:14:50.72,1:14:51.84,Default,,0,0,0,,or quite amazing,
+Dialogue: 0,1:14:51.84,1:14:54.28,Default,,0,0,0,,depending on whether you like to\Nbuild large correct artefacts
+Dialogue: 0,1:14:54.28,1:14:57.52,Default,,0,0,0,,or enjoy watching slow\Nmotion train wrecks.
+Dialogue: 0,1:14:57.52,1:14:59.68,Default,,0,0,0,,So I'm going to define\Nan offset operator s,
+Dialogue: 0,1:14:59.68,1:15:02.12,Default,,0,0,0,,it takes an offset u\Nand a function f
+Dialogue: 0,1:15:02.12,1:15:05.60,Default,,0,0,0,,and returns f offset by u.
+Dialogue: 0,1:15:05.60,1:15:08.28,Default,,0,0,0,,And I'm going to define D hat\Nto be the derivative of s
+Dialogue: 0,1:15:08.28,1:15:10.72,Default,,0,0,0,,at the point zero.
+Dialogue: 0,1:15:10.72,1:15:15.76,Default,,0,0,0,,If we look at D of f at x,\Nwe expand things out, turn the crank,
+Dialogue: 0,1:15:15.76,1:15:17.16,Default,,0,0,0,,and we get f prime of x.
+Dialogue: 0,1:15:17.16,1:15:20.64,Default,,0,0,0,,Similarly, if we take\ND hat of f at x,
+Dialogue: 0,1:15:20.64,1:15:24.76,Default,,0,0,0,,we expand out the definition\Nof D hat, turn the crank,
+Dialogue: 0,1:15:24.76,1:15:26.56,Default,,0,0,0,,and we get f prime of x.
+Dialogue: 0,1:15:26.56,1:15:30.08,Default,,0,0,0,,So we should have D hat equals D.
+Dialogue: 0,1:15:30.08,1:15:32.56,Default,,0,0,0,,But if we use them in\Na nested fashion,
+Dialogue: 0,1:15:32.56,1:15:35.72,Default,,0,0,0,,D is operating correctly\Non a scalar function h
+Dialogue: 0,1:15:35.72,1:15:37.68,Default,,0,0,0,,takes a second derivative,
+Dialogue: 0,1:15:37.68,1:15:41.08,Default,,0,0,0,,but D hat gives us\Na constant function zero
+Dialogue: 0,1:15:41.08,1:15:44.32,Default,,0,0,0,,when used in this nested fashion.
+Dialogue: 0,1:15:44.32,1:15:45.76,Default,,0,0,0,,What happened?
+Dialogue: 0,1:15:45.76,1:15:49.52,Default,,0,0,0,,Well, the fresh triggered\Nwhen D was invoked,
+Dialogue: 0,1:15:49.52,1:15:55.12,Default,,0,0,0,,the thing is Ds of\Nzero returned a value
+Dialogue: 0,1:15:55.12,1:15:58.64,Default,,0,0,0,,which has a single tag in it,\Na single concrete tag.
+Dialogue: 0,1:15:58.64,1:16:02.36,Default,,0,0,0,,So when it's nested,\Nwe can get a collision.
+Dialogue: 0,1:16:05.40,1:16:08.16,Default,,0,0,0,,That's really bad.
+Dialogue: 0,1:16:08.76,1:16:10.08,Default,,0,0,0,,OK, I'll unpack.
+Dialogue: 0,1:16:10.08,1:16:13.24,Default,,0,0,0,,That's the dirty laundry of higher-order\Nautomatic differentiation.
+Dialogue: 0,1:16:13.24,1:16:16.68,Default,,0,0,0,,Now, let's get to\Nthe bottom of this mess.
+Dialogue: 0,1:16:17.52,1:16:19.08,Default,,0,0,0,,What's the root cause?
+Dialogue: 0,1:16:19.08,1:16:22.24,Default,,0,0,0,,Note D was invoked once in\Nthe definition of D hat,
+Dialogue: 0,1:16:22.24,1:16:24.04,Default,,0,0,0,,but we can still get\Nnested derivatives.
+Dialogue: 0,1:16:24.04,1:16:25.96,Default,,0,0,0,,And that's cause derivatives\Nof higher-order functions
+Dialogue: 0,1:16:25.96,1:16:27.80,Default,,0,0,0,,breaks the one-to-one relationship
+Dialogue: 0,1:16:27.80,1:16:32.44,Default,,0,0,0,,between invoking a derivative\Noperator and taking a derivative.
+Dialogue: 0,1:16:32.44,1:16:35.08,Default,,0,0,0,,It's like those corny jokes\Nabout engineers and accountants
+Dialogue: 0,1:16:35.08,1:16:37.44,Default,,0,0,0,,travelling with fewer tickets\Nthen people are hiding in the loo
+Dialogue: 0,1:16:37.44,1:16:39.12,Default,,0,0,0,,and the conductor comes\Nto check tickets.
+Dialogue: 0,1:16:39.12,1:16:42.52,Default,,0,0,0,,There's a disconnect between allocating\Nthe tags and using the tags.
+Dialogue: 0,1:16:42.52,1:16:46.24,Default,,0,0,0,,And we have poor enforcement of\Nthe one tag per nested derivative
+Dialogue: 0,1:16:46.24,1:16:49.40,Default,,0,0,0,,calculation policy.
+Dialogue: 0,1:16:50.44,1:16:54.84,Default,,0,0,0,,The key issue is, that we need\Nto distinguish the tangents,
+Dialogue: 0,1:16:54.84,1:16:56.68,Default,,0,0,0,,the tags for different derivatives,
+Dialogue: 0,1:16:56.68,1:17:00.12,Default,,0,0,0,,even though the different derivative\Noperator is called only once.
+Dialogue: 0,1:17:00.12,1:17:03.52,Default,,0,0,0,,If we don't, we get\Nperturbation confusion.
+Dialogue: 0,1:17:03.52,1:17:05.24,Default,,0,0,0,,Here's an idea for a workaround.
+Dialogue: 0,1:17:05.24,1:17:06.68,Default,,0,0,0,,We would have gotten\Nthe correct result
+Dialogue: 0,1:17:06.68,1:17:10.68,Default,,0,0,0,,if D hat had been left un-reduced.
+Dialogue: 0,1:17:12.16,1:17:14.52,Default,,0,0,0,,So, instead of writing that\Nexpression at the bottom
+Dialogue: 0,1:17:14.52,1:17:16.16,Default,,0,0,0,,where we use D hat twice,
+Dialogue: 0,1:17:16.16,1:17:19.88,Default,,0,0,0,,we could define D hat twice\Nand use the two different definitions.
+Dialogue: 0,1:17:19.88,1:17:22.72,Default,,0,0,0,,That would be OK,\Nexcept it's manual and horrible.
+Dialogue: 0,1:17:22.72,1:17:25.16,Default,,0,0,0,,We want programmeists to just take\Nderivatives and get the right answer
+Dialogue: 0,1:17:25.16,1:17:27.96,Default,,0,0,0,,and not have to worry about\Nwhat's under the hood.
+Dialogue: 0,1:17:27.96,1:17:30.76,Default,,0,0,0,,So here's an idea for accomplishing\Nthis more transparently.
+Dialogue: 0,1:17:30.76,1:17:32.36,Default,,0,0,0,,We could use eta expansion.
+Dialogue: 0,1:17:32.36,1:17:33.52,Default,,0,0,0,,We would delay the fresh
+Dialogue: 0,1:17:33.52,1:17:36.64,Default,,0,0,0,,until all the arguments needed\Nfor post-composition of tangent
+Dialogue: 0,1:17:36.64,1:17:37.64,Default,,0,0,0,,are available.
+Dialogue: 0,1:17:37.64,1:17:40.64,Default,,0,0,0,,So immediately beta reduces to\Na non-function containing value.
+Dialogue: 0,1:17:40.64,1:17:43.24,Default,,0,0,0,,So we'd have separate versions of D,
+Dialogue: 0,1:17:43.24,1:17:48.24,Default,,0,0,0,,for scalar functions,\Nbinary curried functions, etc.
+Dialogue: 0,1:17:49.40,1:17:53.12,Default,,0,0,0,,This could also be accomplished\Nusing polymorphic recursion.
+Dialogue: 0,1:17:53.12,1:17:56.40,Default,,0,0,0,,Although that gets hairy when\Nthe underlying language
+Dialogue: 0,1:17:56.40,1:17:58.36,Default,,0,0,0,,gets more complicated.
+Dialogue: 0,1:17:58.36,1:18:00.48,Default,,0,0,0,,Here's another idea.
+Dialogue: 0,1:18:00.48,1:18:04.08,Default,,0,0,0,,What's going wrong is that\Nthe value passed into the function
+Dialogue: 0,1:18:04.08,1:18:05.88,Default,,0,0,0,,whose tangent is being taken,
+Dialogue: 0,1:18:05.88,1:18:10.64,Default,,0,0,0,,might have the same tag that's\Nin play in that function.
+Dialogue: 0,1:18:10.64,1:18:16.32,Default,,0,0,0,,So we could augment it with a rapper\Nto guard the tag in the function
+Dialogue: 0,1:18:16.32,1:18:18.08,Default,,0,0,0,,so that if it occurs externally,
+Dialogue: 0,1:18:18.08,1:18:20.96,Default,,0,0,0,,the external one gets renamed\Naway and then renamed back
+Dialogue: 0,1:18:20.96,1:18:24.40,Default,,0,0,0,,after being passed through.
+Dialogue: 0,1:18:24.40,1:18:26.24,Default,,0,0,0,,OK, take home message.
+Dialogue: 0,1:18:26.24,1:18:28.24,Default,,0,0,0,,We can import\Nthe standard definitions
+Dialogue: 0,1:18:28.24,1:18:30.04,Default,,0,0,0,,of derivatives of\Nhigher-order functions
+Dialogue: 0,1:18:30.04,1:18:31.84,Default,,0,0,0,,into automatic differentiation,
+Dialogue: 0,1:18:31.84,1:18:36.84,Default,,0,0,0,,but allowing them breaks\Nthe automatic differentiation machinery.
+Dialogue: 0,1:18:37.56,1:18:40.24,Default,,0,0,0,,Now, it might be a stretch to\Ncall this the amazing bug.
+Dialogue: 0,1:18:40.24,1:18:41.44,Default,,0,0,0,,It's a pretty crowded field,
+Dialogue: 0,1:18:41.44,1:18:44.12,Default,,0,0,0,,but I hope you'll agree\Nthat it's an amazing bug.
+Dialogue: 0,1:18:44.12,1:18:47.16,Default,,0,0,0,,We have some ideas for solving this.
+Dialogue: 0,1:18:47.16,1:18:49.60,Default,,0,0,0,,And I propose two\Nsolution frameworks.
+Dialogue: 0,1:18:49.60,1:18:51.28,Default,,0,0,0,,One is based on eta expansion,
+Dialogue: 0,1:18:51.28,1:18:55.92,Default,,0,0,0,,and the other is on renaming tags away\Nand then renaming them back
+Dialogue: 0,1:18:55.92,1:19:00.92,Default,,0,0,0,,when they're passing through\Nthe tangents of closures.
+Dialogue: 0,1:19:03.60,1:19:07.44,Default,,0,0,0,,Recent formulations of forward\Nof automatic differentiation
+Dialogue: 0,1:19:07.44,1:19:09.24,Default,,0,0,0,,still often get this wrong.
+Dialogue: 0,1:19:09.24,1:19:13.60,Default,,0,0,0,,For some it's out of scope,\Nothers get the wrong answer.
+Dialogue: 0,1:19:13.60,1:19:15.16,Default,,0,0,0,,The two solutions that I proposed,
+Dialogue: 0,1:19:15.16,1:19:17.48,Default,,0,0,0,,they solve the correctness issue
+Dialogue: 0,1:19:17.48,1:19:20.44,Default,,0,0,0,,but they do have some issues\Nwith complexity.
+Dialogue: 0,1:19:20.44,1:19:24.00,Default,,0,0,0,,So we would like to\Nwork on this some more
+Dialogue: 0,1:19:24.00,1:19:26.92,Default,,0,0,0,,to get the efficiency right,\Nthose constant factor efficiency,
+Dialogue: 0,1:19:26.92,1:19:30.24,Default,,0,0,0,,and these solutions\Nimplemented naively at least
+Dialogue: 0,1:19:30.24,1:19:34.28,Default,,0,0,0,,would seem to break some of\Nthe complexity guarantees
+Dialogue: 0,1:19:34.28,1:19:38.28,Default,,0,0,0,,that we'd like to make\Nan automatic differentiation.
+Dialogue: 0,1:19:38.28,1:19:39.48,Default,,0,0,0,,Thank you for listening.
+Dialogue: 0,1:19:39.48,1:19:41.00,Default,,0,0,0,,I hope this story has\Nbeen of interest.
+Dialogue: 0,1:19:41.00,1:19:42.56,Default,,0,0,0,,And I'd like to thank the organisers
+Dialogue: 0,1:19:42.56,1:19:44.88,Default,,0,0,0,,for arranging this\Nfantastic virtual gathering
+Dialogue: 0,1:19:44.88,1:19:47.44,Default,,0,0,0,,under very difficult circumstances.
+Dialogue: 0,1:19:47.44,1:19:49.84,Default,,0,0,0,,I'd be happy to answer\Nany questions.
+Dialogue: 0,1:19:49.84,1:19:56.56,Default,,0,0,0,,(APPLAUSE)
+Dialogue: 0,1:19:58.04,1:19:59.64,Default,,0,0,0,,JEREMY: Thanks Barak.
+Dialogue: 0,1:19:59.64,1:20:01.92,Default,,0,0,0,,If you're watching the\NNew York streaming Clowdr,
+Dialogue: 0,1:20:01.92,1:20:03.32,Default,,0,0,0,,you can now see a Q&A link
+Dialogue: 0,1:20:03.32,1:20:07.28,Default,,0,0,0,,where you can ask Barak\Nand Jeffrey questions by video chat.
+Dialogue: 0,1:20:13.08,1:20:15.52,Default,,0,0,0,,The next talk is\Na presentation in the paper
+Dialogue: 0,1:20:15.52,1:20:17.60,Default,,0,0,0,,elastic sheet defined functions,
+Dialogue: 0,1:20:17.60,1:20:21.40,Default,,0,0,0,,generalising spreadsheet functions\Nto variable size input arrays,
+Dialogue: 0,1:20:21.40,1:20:24.12,Default,,0,0,0,,which is about helping end users\Nspreadsheet programmemers
+Dialogue: 0,1:20:24.12,1:20:25.84,Default,,0,0,0,,to write more flexible functions
+Dialogue: 0,1:20:25.84,1:20:29.00,Default,,0,0,0,,that work over inputs\Nof arbitrary size.
+Dialogue: 0,1:20:29.00,1:20:32.60,Default,,0,0,0,,The authors of the paper are\NMatt McCutchen, Judith Borghouts,
+Dialogue: 0,1:20:32.60,1:20:36.28,Default,,0,0,0,,Andy Gordon, Simon Peyton Jones\Nand Advait Sarkar.
+Dialogue: 0,1:20:36.28,1:20:38.96,Default,,0,0,0,,And Matt will be presenting.
+Dialogue: 0,1:20:38.96,1:20:40.04,Default,,0,0,0,,MATT MCCUTCHEN:\NHi, I'm Matt McCutchen
+Dialogue: 0,1:20:40.04,1:20:41.68,Default,,0,0,0,,and I'm going to talk\Nabout a method of
+Dialogue: 0,1:20:41.68,1:20:43.80,Default,,0,0,0,,automatically generalising\Nspreadsheet functions
+Dialogue: 0,1:20:43.80,1:20:45.80,Default,,0,0,0,,through variable-size input arrays,
+Dialogue: 0,1:20:45.80,1:20:49.76,Default,,0,0,0,,which we've nicknamed elastic\Nsheet-defined functions.
+Dialogue: 0,1:20:49.76,1:20:52.00,Default,,0,0,0,,The spreadsheet is by far\Nthe most widely used
+Dialogue: 0,1:20:52.00,1:20:55.04,Default,,0,0,0,,functional programming environment\Nbecause it's so easy to use
+Dialogue: 0,1:20:55.04,1:20:58.04,Default,,0,0,0,,even for people unfamiliar with\Nconventional programming.
+Dialogue: 0,1:20:58.04,1:21:00.20,Default,,0,0,0,,For instance, suppose we're\Nshopping for a set of foods
+Dialogue: 0,1:21:00.20,1:21:02.24,Default,,0,0,0,,and the prices are\Ngiven without tax.
+Dialogue: 0,1:21:02.24,1:21:05.44,Default,,0,0,0,,We want to compute the total amount\Nwe'll pay including the tax.
+Dialogue: 0,1:21:05.44,1:21:07.48,Default,,0,0,0,,We just type our starting\Ndata into the cells
+Dialogue: 0,1:21:07.48,1:21:10.64,Default,,0,0,0,,and enter the formulas we want\Nto calculate into other cells.
+Dialogue: 0,1:21:10.64,1:21:12.64,Default,,0,0,0,,If it's too mind-bending\Nto calculate the tax
+Dialogue: 0,1:21:12.64,1:21:14.12,Default,,0,0,0,,on all the foods at once,
+Dialogue: 0,1:21:14.12,1:21:17.28,Default,,0,0,0,,we can do it for the apple\Nand then copy the formula.
+Dialogue: 0,1:21:17.28,1:21:20.04,Default,,0,0,0,,We have to be a little careful with\Nrelative and absolute referencing
+Dialogue: 0,1:21:20.04,1:21:23.44,Default,,0,0,0,,but if we make a mistake,\Nit's easy to spot and fix.
+Dialogue: 0,1:21:23.44,1:21:26.48,Default,,0,0,0,,We can work one step at a time\Nand always see all the data at once.
+Dialogue: 0,1:21:26.48,1:21:30.84,Default,,0,0,0,,So for a simple problem like this\Nwe never have to think very hard.
+Dialogue: 0,1:21:30.84,1:21:33.56,Default,,0,0,0,,Now suppose we want to total\Na lot of shopping lists.
+Dialogue: 0,1:21:33.56,1:21:37.08,Default,,0,0,0,,Of course, rather than make many\Nindependent copies of the formulas,
+Dialogue: 0,1:21:37.08,1:21:39.64,Default,,0,0,0,,we'd like to reuse them so that\Nif we have to fix the bug
+Dialogue: 0,1:21:39.64,1:21:41.16,Default,,0,0,0,,in the original formulas,
+Dialogue: 0,1:21:41.16,1:21:43.56,Default,,0,0,0,,the fix takes effect on\Nall the shopping lists.
+Dialogue: 0,1:21:43.56,1:21:46.72,Default,,0,0,0,,Since we're familiar with calling\Nbuilt in functions like sum,
+Dialogue: 0,1:21:46.72,1:21:48.96,Default,,0,0,0,,can we define our own function\Nfor the shopping list
+Dialogue: 0,1:21:48.96,1:21:50.36,Default,,0,0,0,,that we could call?
+Dialogue: 0,1:21:50.36,1:21:52.84,Default,,0,0,0,,In current mainstream\Nspreadsheet tools we can,
+Dialogue: 0,1:21:52.84,1:21:55.52,Default,,0,0,0,,but we have to rewrite the logic in\Na separate programming language
+Dialogue: 0,1:21:55.52,1:21:57.00,Default,,0,0,0,,such as visual basic,
+Dialogue: 0,1:21:57.00,1:22:01.96,Default,,0,0,0,,which sacrifices all the usability\Nadvantages of spreadsheets.
+Dialogue: 0,1:22:01.96,1:22:03.44,Default,,0,0,0,,Fortunately, there's\Nan easier approach
+Dialogue: 0,1:22:03.44,1:22:05.44,Default,,0,0,0,,that has appeared in\Nmany research systems.
+Dialogue: 0,1:22:05.44,1:22:08.52,Default,,0,0,0,,And we think it's only a matter of\Ntime before it becomes mainstream,
+Dialogue: 0,1:22:08.52,1:22:10.52,Default,,0,0,0,,the sheet defined function or SDF.
+Dialogue: 0,1:22:10.52,1:22:13.40,Default,,0,0,0,,To make our original\Nformulas into an SDF,
+Dialogue: 0,1:22:13.40,1:22:15.16,Default,,0,0,0,,we just mark\Nthe cells that represent
+Dialogue: 0,1:22:15.16,1:22:17.64,Default,,0,0,0,,the inputs and output of\Nthe function and give it a name.
+Dialogue: 0,1:22:17.64,1:22:19.56,Default,,0,0,0,,Now we can call shop\Non the second list,
+Dialogue: 0,1:22:19.56,1:22:22.24,Default,,0,0,0,,just like a built in function.
+Dialogue: 0,1:22:22.24,1:22:25.12,Default,,0,0,0,,Semantically, the tool makes\Na temporary copy of the function body
+Dialogue: 0,1:22:25.12,1:22:28.24,Default,,0,0,0,,with our new input substituted in\Nand returns to new output.
+Dialogue: 0,1:22:28.24,1:22:30.80,Default,,0,0,0,,But of course the tool can\Noptimise this process.
+Dialogue: 0,1:22:30.80,1:22:33.56,Default,,0,0,0,,The user can open the temporary\Nsheet to see what happened.
+Dialogue: 0,1:22:33.56,1:22:35.60,Default,,0,0,0,,This requires users to\Nthink a little harder,
+Dialogue: 0,1:22:35.60,1:22:38.16,Default,,0,0,0,,but we think many of them will\Nbe comfortable defining SDFs
+Dialogue: 0,1:22:38.16,1:22:42.08,Default,,0,0,0,,and the rest will at least be\Ncomfortable calling them.
+Dialogue: 0,1:22:42.08,1:22:43.72,Default,,0,0,0,,However, we quickly\Nrun into a problem
+Dialogue: 0,1:22:43.72,1:22:46.12,Default,,0,0,0,,if we call shop on a shopping list\Nof a different length
+Dialogue: 0,1:22:46.12,1:22:47.36,Default,,0,0,0,,than the original,
+Dialogue: 0,1:22:47.36,1:22:49.84,Default,,0,0,0,,when we try to put the pretax\Nprices in the input range
+Dialogue: 0,1:22:49.84,1:22:53.04,Default,,0,0,0,,they'll get cut off\Nand we'll get the wrong answer.
+Dialogue: 0,1:22:53.04,1:22:55.12,Default,,0,0,0,,The result we like is\Nif the body of shop
+Dialogue: 0,1:22:55.12,1:22:57.00,Default,,0,0,0,,are resized to fit the input,
+Dialogue: 0,1:22:57.00,1:23:00.04,Default,,0,0,0,,how can we make shop\Nbehave this way?
+Dialogue: 0,1:23:00.04,1:23:02.48,Default,,0,0,0,,One approach is to let\Nthe entire array of prices
+Dialogue: 0,1:23:02.48,1:23:04.12,Default,,0,0,0,,be stored in a single cell.
+Dialogue: 0,1:23:04.12,1:23:06.60,Default,,0,0,0,,If we apply an operator\Nlike plus to two arrays,
+Dialogue: 0,1:23:06.60,1:23:09.24,Default,,0,0,0,,we're implicitly adding\Nthe corresponding elements.
+Dialogue: 0,1:23:09.24,1:23:12.16,Default,,0,0,0,,This will work regardless of\Nthe sizes of the arrays.
+Dialogue: 0,1:23:12.16,1:23:13.84,Default,,0,0,0,,This is a little more\Nfor users to learn,
+Dialogue: 0,1:23:13.84,1:23:17.16,Default,,0,0,0,,but it's a plausible\Nsolution for shop.
+Dialogue: 0,1:23:17.16,1:23:18.76,Default,,0,0,0,,However, for more complex SDFs,
+Dialogue: 0,1:23:18.76,1:23:21.52,Default,,0,0,0,,the array programming approach\Nbecomes unmanageable.
+Dialogue: 0,1:23:21.52,1:23:23.64,Default,,0,0,0,,Here's the sheet containing\Nthe transaction history
+Dialogue: 0,1:23:23.64,1:23:26.24,Default,,0,0,0,,for a bank account with\Ninterest compounded daily.
+Dialogue: 0,1:23:26.24,1:23:28.72,Default,,0,0,0,,To compute the balance\Nafter a transaction,
+Dialogue: 0,1:23:28.72,1:23:31.08,Default,,0,0,0,,first we apply the interest\Nof the previous balance
+Dialogue: 0,1:23:31.08,1:23:34.20,Default,,0,0,0,,based on the number of days\Nsince the previous transaction,
+Dialogue: 0,1:23:34.20,1:23:37.08,Default,,0,0,0,,then we add the amount of\Nthe current transaction.
+Dialogue: 0,1:23:37.08,1:23:39.04,Default,,0,0,0,,This example presents\Ntwo new problems
+Dialogue: 0,1:23:39.04,1:23:41.12,Default,,0,0,0,,for the array programming approach.
+Dialogue: 0,1:23:41.12,1:23:43.28,Default,,0,0,0,,To line up the previous dates\Nwith the current dates,
+Dialogue: 0,1:23:43.28,1:23:46.04,Default,,0,0,0,,we need to shift the array\Nin A4 down one element
+Dialogue: 0,1:23:46.04,1:23:47.60,Default,,0,0,0,,and add A3 at the top.
+Dialogue: 0,1:23:47.60,1:23:50.16,Default,,0,0,0,,Let's assume that a spreadsheet tool\Ndesigned for array programming
+Dialogue: 0,1:23:50.16,1:23:52.44,Default,,0,0,0,,will have a shift down\Nfunction to do that.
+Dialogue: 0,1:23:52.44,1:23:54.68,Default,,0,0,0,,But for the reference to\Nthe previous balance,
+Dialogue: 0,1:23:54.68,1:23:56.44,Default,,0,0,0,,if we tried to do the same thing,
+Dialogue: 0,1:23:56.44,1:23:58.92,Default,,0,0,0,,we'd ended up with the whole\Narray in C4 depending on itself
+Dialogue: 0,1:23:58.92,1:24:00.28,Default,,0,0,0,,which won't work.
+Dialogue: 0,1:24:00.28,1:24:01.40,Default,,0,0,0,,To handle the iteration,
+Dialogue: 0,1:24:01.40,1:24:03.80,Default,,0,0,0,,we need to use this special\Nfunction called VSCAN2
+Dialogue: 0,1:24:03.80,1:24:04.84,Default,,0,0,0,,and pass the lambda function
+Dialogue: 0,1:24:04.84,1:24:07.40,Default,,0,0,0,,that computes each element\Nfrom the previous one.
+Dialogue: 0,1:24:07.40,1:24:09.16,Default,,0,0,0,,Most users won't be able\Nto come up with this
+Dialogue: 0,1:24:09.16,1:24:11.48,Default,,0,0,0,,unless they find an example on\Nthe web that's similar enough
+Dialogue: 0,1:24:11.48,1:24:14.88,Default,,0,0,0,,that they can adapt\Nto their problem.
+Dialogue: 0,1:24:14.88,1:24:17.16,Default,,0,0,0,,If that isn't bad enough,\Nhere's another SDF
+Dialogue: 0,1:24:17.16,1:24:18.16,Default,,0,0,0,,with a naive model
+Dialogue: 0,1:24:18.16,1:24:20.36,Default,,0,0,0,,of cascading delays in\Nthe bus transit system.
+Dialogue: 0,1:24:20.88,1:24:22.64,Default,,0,0,0,,The idea is that\Na departure from a station
+Dialogue: 0,1:24:22.64,1:24:24.32,Default,,0,0,0,,will be delayed if\Nthe bus that was supposed
+Dialogue: 0,1:24:24.32,1:24:26.56,Default,,0,0,0,,to make the trip hasn't arrived yet.
+Dialogue: 0,1:24:26.56,1:24:29.48,Default,,0,0,0,,We want this SDF to re\Nsize in three different
+Dialogue: 0,1:24:29.48,1:24:31.36,Default,,0,0,0,,ways, the of time\Nsteps in the simulation
+Dialogue: 0,1:24:31.36,1:24:33.72,Default,,0,0,0,,and the vertical direction,\Nand the numbers of stations
+Dialogue: 0,1:24:33.72,1:24:35.88,Default,,0,0,0,,and routes both in\Nthe horizontal direction,
+Dialogue: 0,1:24:36.40,1:24:39.20,Default,,0,0,0,,this mutual recursion\Namong four of the arrays.
+Dialogue: 0,1:24:39.20,1:24:40.72,Default,,0,0,0,,While we think this\Nis possible to write
+Dialogue: 0,1:24:40.72,1:24:41.72,Default,,0,0,0,,using array programming
+Dialogue: 0,1:24:41.72,1:24:43.80,Default,,0,0,0,,it's going to be such a mess\Nthat I won't even try.
+Dialogue: 0,1:24:45.84,1:24:47.12,Default,,0,0,0,,So it seems we really do want
+Dialogue: 0,1:24:47.12,1:24:49.16,Default,,0,0,0,,to resize an SDF at the cell level,
+Dialogue: 0,1:24:49.16,1:24:51.32,Default,,0,0,0,,effectively generalising\Nit to handle input
+Dialogue: 0,1:24:51.32,1:24:54.80,Default,,0,0,0,,of variable size,\Nwe call the result in elastic SDF.
+Dialogue: 0,1:24:54.80,1:24:56.28,Default,,0,0,0,,Maybe the user can somehow
+Dialogue: 0,1:24:56.28,1:24:58.12,Default,,0,0,0,,specify how\Nthe resizing should work.
+Dialogue: 0,1:24:58.12,1:25:00.00,Default,,0,0,0,,But it turns out that for many SPF's
+Dialogue: 0,1:25:00.00,1:25:01.76,Default,,0,0,0,,including all three\Nwe've seen so far,
+Dialogue: 0,1:25:01.76,1:25:03.32,Default,,0,0,0,,the user doesn't need to do anything
+Dialogue: 0,1:25:03.32,1:25:05.88,Default,,0,0,0,,because we can figure out\Nthe resizing automatically.
+Dialogue: 0,1:25:05.88,1:25:07.56,Default,,0,0,0,,That's the topic of our paper.
+Dialogue: 0,1:25:09.04,1:25:11.40,Default,,0,0,0,,Let's see how\Nthe generalisation process works
+Dialogue: 0,1:25:11.40,1:25:13.00,Default,,0,0,0,,in the simplest shop example
+Dialogue: 0,1:25:13.00,1:25:14.84,Default,,0,0,0,,for the purpose of\Ndescribing our work,
+Dialogue: 0,1:25:14.84,1:25:17.08,Default,,0,0,0,,we use a textual\Nnotation for SDF's.
+Dialogue: 0,1:25:17.08,1:25:19.52,Default,,0,0,0,,Users don't need to know anything\Nabout this notation
+Dialogue: 0,1:25:19.52,1:25:22.44,Default,,0,0,0,,though we have evidence that\Nsome users may find it helpful.
+Dialogue: 0,1:25:22.44,1:25:25.56,Default,,0,0,0,,Here we have the function name\Nand the input and output ranges.
+Dialogue: 0,1:25:25.56,1:25:28.04,Default,,0,0,0,,Each line of the body\Ndescribes the rectangular tile
+Dialogue: 0,1:25:28.04,1:25:30.44,Default,,0,0,0,,of one or more cells with\Nthe copied formula.
+Dialogue: 0,1:25:30.44,1:25:33.76,Default,,0,0,0,,For example, the first line\Ndescribes these three cells,
+Dialogue: 0,1:25:33.76,1:25:35.96,Default,,0,0,0,,the given formula is placed\Nin the top left cell
+Dialogue: 0,1:25:35.96,1:25:37.08,Default,,0,0,0,,and copied to the others
+Dialogue: 0,1:25:37.08,1:25:39.08,Default,,0,0,0,,with the usual adjustment\Nof relative references.
+Dialogue: 0,1:25:40.48,1:25:42.36,Default,,0,0,0,,We can now write the elastic SDF
+Dialogue: 0,1:25:42.36,1:25:43.72,Default,,0,0,0,,that we want in this notation
+Dialogue: 0,1:25:43.72,1:25:45.60,Default,,0,0,0,,by introducing a length\Nvariable alpha,
+Dialogue: 0,1:25:45.60,1:25:47.64,Default,,0,0,0,,that can take any non\Nnegative integer value.
+Dialogue: 0,1:25:48.20,1:25:51.68,Default,,0,0,0,,Of course, if we set off in three\Nwe get the original shot back,
+Dialogue: 0,1:25:51.68,1:25:54.68,Default,,0,0,0,,we'll call this elastic SDF shop\None for reference in this talk,
+Dialogue: 0,1:25:54.68,1:25:57.32,Default,,0,0,0,,Though the user would invoke it\Nusing the original name shop.
+Dialogue: 0,1:25:58.72,1:26:00.80,Default,,0,0,0,,When an elastic SDF is called,
+Dialogue: 0,1:26:00.80,1:26:03.76,Default,,0,0,0,,We set the length variables\Nto match the argument sizes
+Dialogue: 0,1:26:03.76,1:26:05.80,Default,,0,0,0,,in this case setting off with a six
+Dialogue: 0,1:26:05.80,1:26:07.56,Default,,0,0,0,,and substitute them\Ninto the definition
+Dialogue: 0,1:26:07.56,1:26:10.44,Default,,0,0,0,,giving an ordinary SDF that\Nwe can evaluate as before.
+Dialogue: 0,1:26:11.08,1:26:13.68,Default,,0,0,0,,Now if the tiles may\Ncolllide when they expand,
+Dialogue: 0,1:26:13.68,1:26:15.68,Default,,0,0,0,,we address this by\Nlabelling each reference
+Dialogue: 0,1:26:15.68,1:26:17.84,Default,,0,0,0,,with the tile or tiles that\Noriginally pointed to
+Dialogue: 0,1:26:17.84,1:26:19.68,Default,,0,0,0,,and having it read only\Nfrom those tiles,
+Dialogue: 0,1:26:19.68,1:26:21.76,Default,,0,0,0,,even if others overlap them.
+Dialogue: 0,1:26:21.76,1:26:24.88,Default,,0,0,0,,Here the reference, in the sum\Nreached the age seven of tile four,
+Dialogue: 0,1:26:24.88,1:26:28.16,Default,,0,0,0,,while the output reference reached\Nthe age seven and tile five.
+Dialogue: 0,1:26:28.16,1:26:29.48,Default,,0,0,0,,We do this for all SDF's but
+Dialogue: 0,1:26:29.48,1:26:30.96,Default,,0,0,0,,to reduce clutter we won't show
+Dialogue: 0,1:26:30.96,1:26:32.52,Default,,0,0,0,,the labels for the rest of the talk.
+Dialogue: 0,1:26:34.28,1:26:35.88,Default,,0,0,0,,The question immediately comes up
+Dialogue: 0,1:26:35.88,1:26:38.88,Default,,0,0,0,,Is the best generalisation of\Nthe given SDF always clear?
+Dialogue: 0,1:26:38.88,1:26:41.76,Default,,0,0,0,,for one thing we want\Na generalisation that's well defined,
+Dialogue: 0,1:26:41.76,1:26:43.52,Default,,0,0,0,,meaning that its\Nreferences stay in bounds
+Dialogue: 0,1:26:43.52,1:26:45.68,Default,,0,0,0,,for all values of length variables.
+Dialogue: 0,1:26:45.68,1:26:47.44,Default,,0,0,0,,For example, if we set the height
+Dialogue: 0,1:26:47.44,1:26:49.12,Default,,0,0,0,,of the column H tile to alpha,
+Dialogue: 0,1:26:49.12,1:26:51.04,Default,,0,0,0,,but the height of\Nthe column G tile the three.
+Dialogue: 0,1:26:51.04,1:26:53.52,Default,,0,0,0,,Then when alpha increases the H tile
+Dialogue: 0,1:26:53.52,1:26:56.16,Default,,0,0,0,,will be referring to undefined\Ncells below the G tile
+Dialogue: 0,1:26:56.16,1:26:58.52,Default,,0,0,0,,so this generalisation\Nis not well defined.
+Dialogue: 0,1:26:58.52,1:27:01.52,Default,,0,0,0,,From now on we'll consider only\Nwell defined generalisations.
+Dialogue: 0,1:27:02.80,1:27:04.04,Default,,0,0,0,,To illustrate the next point
+Dialogue: 0,1:27:04.04,1:27:06.24,Default,,0,0,0,,consider this contrived sum two SPF
+Dialogue: 0,1:27:06.24,1:27:08.60,Default,,0,0,0,,that sums two arrays\Nand adds the totals.
+Dialogue: 0,1:27:08.60,1:27:10.84,Default,,0,0,0,,Here are two well\Ndefined generalisations
+Dialogue: 0,1:27:10.84,1:27:13.88,Default,,0,0,0,,sum 2 D allows the arrays to be\Ndifferent lengths alpha and beta,
+Dialogue: 0,1:27:13.88,1:27:17.16,Default,,0,0,0,,while some to S requires them\Nto be the same length alpha.
+Dialogue: 0,1:27:17.16,1:27:20.04,Default,,0,0,0,,We say that sum two D is more\Ngeneral than a sum two S
+Dialogue: 0,1:27:20.04,1:27:21.88,Default,,0,0,0,,since it can be\Nconverted to sum two S
+Dialogue: 0,1:27:21.88,1:27:24.08,Default,,0,0,0,,by substituting for\Nthe length variables,
+Dialogue: 0,1:27:24.08,1:27:26.08,Default,,0,0,0,,we prefer sum two D to make sure
+Dialogue: 0,1:27:26.08,1:27:27.84,Default,,0,0,0,,we generalise as many\Ndegrees of freedom
+Dialogue: 0,1:27:27.84,1:27:29.84,Default,,0,0,0,,in the original SDF as possible.
+Dialogue: 0,1:27:31.08,1:27:33.12,Default,,0,0,0,,So given an SDF like shop.
+Dialogue: 0,1:27:33.12,1:27:34.64,Default,,0,0,0,,If there's a well\Ndefined generalisation
+Dialogue: 0,1:27:34.64,1:27:36.48,Default,,0,0,0,,that is more general\Nthan all the others,
+Dialogue: 0,1:27:36.48,1:27:37.68,Default,,0,0,0,,which we call principle.
+Dialogue: 0,1:27:37.68,1:27:38.96,Default,,0,0,0,,That's the one we want.
+Dialogue: 0,1:27:38.96,1:27:40.68,Default,,0,0,0,,Unfortunately there\Nare several problems
+Dialogue: 0,1:27:40.68,1:27:42.92,Default,,0,0,0,,that can cause them to be no\Nprinciple generalisation,
+Dialogue: 0,1:27:42.92,1:27:44.68,Default,,0,0,0,,we'll look at one of them.
+Dialogue: 0,1:27:44.68,1:27:46.00,Default,,0,0,0,,In addition to shop one
+Dialogue: 0,1:27:46.00,1:27:48.72,Default,,0,0,0,,that we saw earlier shop\Nhas two other contrived,
+Dialogue: 0,1:27:48.72,1:27:50.52,Default,,0,0,0,,but well defined generalisations
+Dialogue: 0,1:27:50.52,1:27:52.28,Default,,0,0,0,,one that uses only\Nthe first three items
+Dialogue: 0,1:27:52.28,1:27:54.96,Default,,0,0,0,,of the input and one\Nis the last three.
+Dialogue: 0,1:27:54.96,1:27:57.08,Default,,0,0,0,,None of these generalisations\Ncan be converted
+Dialogue: 0,1:27:57.08,1:27:59.52,Default,,0,0,0,,to any of the others by\Nsubstituting for alpha.
+Dialogue: 0,1:27:59.52,1:28:00.60,Default,,0,0,0,,And since they can all give
+Dialogue: 0,1:28:00.60,1:28:02.24,Default,,0,0,0,,different answers on the same input,
+Dialogue: 0,1:28:02.24,1:28:03.56,Default,,0,0,0,,it should be intuitively clear
+Dialogue: 0,1:28:03.56,1:28:05.24,Default,,0,0,0,,there isn't a principle\Ngeneralisation
+Dialogue: 0,1:28:05.24,1:28:07.12,Default,,0,0,0,,that's more general than all three.
+Dialogue: 0,1:28:07.12,1:28:08.60,Default,,0,0,0,,The user probably want shop one,
+Dialogue: 0,1:28:08.60,1:28:10.76,Default,,0,0,0,,But we have to\Nformalise that somehow.
+Dialogue: 0,1:28:10.76,1:28:13.56,Default,,0,0,0,,So we introduced the concept\Nof irregular generalisation
+Dialogue: 0,1:28:13.56,1:28:16.80,Default,,0,0,0,,which satisfies several conditions\Non top as well defined S,
+Dialogue: 0,1:28:16.80,1:28:18.20,Default,,0,0,0,,one of which is that\Na cell reference
+Dialogue: 0,1:28:18.20,1:28:20.56,Default,,0,0,0,,can pick three elements\Nout of a larger tile,
+Dialogue: 0,1:28:20.56,1:28:21.68,Default,,0,0,0,,so sharp one is regular
+Dialogue: 0,1:28:21.68,1:28:23.68,Default,,0,0,0,,and the other two\Ngeneralisations are not.
+Dialogue: 0,1:28:25.32,1:28:27.40,Default,,0,0,0,,Now out of all the well\Ndefined generalisations
+Dialogue: 0,1:28:27.40,1:28:30.96,Default,,0,0,0,,of an SDF, if we keep only\Nthe regular generalisations,
+Dialogue: 0,1:28:30.96,1:28:32.16,Default,,0,0,0,,we can prove that there's
+Dialogue: 0,1:28:32.16,1:28:34.48,Default,,0,0,0,,always a principle\Nregular generalisation.
+Dialogue: 0,1:28:34.48,1:28:37.36,Default,,0,0,0,,And that's the elastic SDF we use.
+Dialogue: 0,1:28:37.36,1:28:38.92,Default,,0,0,0,,This can be seen as the analogue
+Dialogue: 0,1:28:38.92,1:28:42.24,Default,,0,0,0,,of the principal type of terminal\Nfunctional programming language
+Dialogue: 0,1:28:44.12,1:28:45.64,Default,,0,0,0,,or algorithm defined the principle
+Dialogue: 0,1:28:45.64,1:28:48.16,Default,,0,0,0,,regular generalisation\Nintroduces all the variables
+Dialogue: 0,1:28:48.16,1:28:49.92,Default,,0,0,0,,that could possibly need
+Dialogue: 0,1:28:49.92,1:28:51.52,Default,,0,0,0,,generate constraints on them
+Dialogue: 0,1:28:51.52,1:28:53.44,Default,,0,0,0,,based on the definition\Nof regularity.
+Dialogue: 0,1:28:53.96,1:28:55.92,Default,,0,0,0,,And then solves the constraints.
+Dialogue: 0,1:28:55.92,1:28:57.96,Default,,0,0,0,,For example, because of\Nthe relative reference
+Dialogue: 0,1:28:57.96,1:29:00.44,Default,,0,0,0,,between the files in\Ncolumns G and H,
+Dialogue: 0,1:29:00.44,1:29:01.96,Default,,0,0,0,,we generate a constraint that
+Dialogue: 0,1:29:01.96,1:29:03.72,Default,,0,0,0,,the heights of those tiles are equal.
+Dialogue: 0,1:29:03.72,1:29:06.16,Default,,0,0,0,,Again this is analogous to\Nthe type inference algorithm
+Dialogue: 0,1:29:06.16,1:29:07.88,Default,,0,0,0,,in a functional\Nprogramming language.
+Dialogue: 0,1:29:10.24,1:29:12.84,Default,,0,0,0,,We've seen that in order to have\Na principle generalisation
+Dialogue: 0,1:29:12.84,1:29:15.04,Default,,0,0,0,,we needed to introduce\Na concept of regularity
+Dialogue: 0,1:29:15.04,1:29:17.72,Default,,0,0,0,,that excludes some well\Ndefined generalisations.
+Dialogue: 0,1:29:17.72,1:29:19.52,Default,,0,0,0,,We try to make\Nand capture user intent,
+Dialogue: 0,1:29:19.52,1:29:22.60,Default,,0,0,0,,which inevitably involves\Njudgement calls or goals,
+Dialogue: 0,1:29:22.60,1:29:25.12,Default,,0,0,0,,aside from having a principle\Nof regular generalisation,
+Dialogue: 0,1:29:25.12,1:29:29.00,Default,,0,0,0,,or to support as many realistic\NSTF design patterns as we can,
+Dialogue: 0,1:29:29.00,1:29:31.16,Default,,0,0,0,,and keep the process\Npredictable for users,
+Dialogue: 0,1:29:31.16,1:29:33.48,Default,,0,0,0,,even if they don't know\Nthe detailed rules.
+Dialogue: 0,1:29:33.48,1:29:35.00,Default,,0,0,0,,Our work represents the first draft
+Dialogue: 0,1:29:35.00,1:29:38.00,Default,,0,0,0,,of the definition,\Nwe expect future work will refine it.
+Dialogue: 0,1:29:39.48,1:29:40.92,Default,,0,0,0,,This is all technically elegant
+Dialogue: 0,1:29:40.92,1:29:42.68,Default,,0,0,0,,but we need to make\Nsure we're actually
+Dialogue: 0,1:29:42.68,1:29:44.80,Default,,0,0,0,,making things easier for users.
+Dialogue: 0,1:29:44.80,1:29:47.40,Default,,0,0,0,,So we did a user's study\Nto compare elastic SDF
+Dialogue: 0,1:29:47.40,1:29:48.84,Default,,0,0,0,,to the best existing alternative,
+Dialogue: 0,1:29:48.84,1:29:51.44,Default,,0,0,0,,namely array programming\Non a set of tasks
+Dialogue: 0,1:29:51.44,1:29:54.28,Default,,0,0,0,,based on real world spreadsheets\Nwe previously collected.
+Dialogue: 0,1:29:55.76,1:29:58.04,Default,,0,0,0,,I'd like to highlight\Na few findings.
+Dialogue: 0,1:29:58.04,1:29:59.88,Default,,0,0,0,,First users experience\Nlower cognitive
+Dialogue: 0,1:29:59.88,1:30:03.36,Default,,0,0,0,,workload using elastic SDF\Ncompared to array programming,
+Dialogue: 0,1:30:03.36,1:30:04.68,Default,,0,0,0,,based on the standard survey
+Dialogue: 0,1:30:04.68,1:30:07.00,Default,,0,0,0,,called the NASA task load index.
+Dialogue: 0,1:30:07.00,1:30:08.84,Default,,0,0,0,,Second, we have partial\Ndata suggesting
+Dialogue: 0,1:30:08.84,1:30:10.92,Default,,0,0,0,,that users solve tasks\Nfaster on average
+Dialogue: 0,1:30:10.92,1:30:13.40,Default,,0,0,0,,using elastic SDF compared\Nto array programming.
+Dialogue: 0,1:30:14.08,1:30:16.00,Default,,0,0,0,,And finally, while users\Nstated a preference
+Dialogue: 0,1:30:16.00,1:30:17.92,Default,,0,0,0,,for array programming\Nfor simple tasks
+Dialogue: 0,1:30:17.92,1:30:21.00,Default,,0,0,0,,they preferred elastic SDF\Nfor more complex tasks.
+Dialogue: 0,1:30:21.00,1:30:23.20,Default,,0,0,0,,This is no surprise\Ngiven the complex tasks
+Dialogue: 0,1:30:23.20,1:30:25.64,Default,,0,0,0,,are much harder to solve\Nwith array programming.
+Dialogue: 0,1:30:25.64,1:30:27.52,Default,,0,0,0,,These results are\Nreally promising them,
+Dialogue: 0,1:30:27.52,1:30:30.48,Default,,0,0,0,,more work is needed to further\Noptimise the user experience.
+Dialogue: 0,1:30:32.24,1:30:34.68,Default,,0,0,0,,So, we've seen briefly\Nhow we can use ideas
+Dialogue: 0,1:30:34.68,1:30:36.96,Default,,0,0,0,,from programming language\Ntheory to offer spreadsheets
+Dialogue: 0,1:30:36.96,1:30:40.80,Default,,0,0,0,,uses an easier way to reuse logic\Non inputs of different sizes.
+Dialogue: 0,1:30:40.80,1:30:43.84,Default,,0,0,0,,You can find the full definitions\Nalgorithms and proofs in the paper.
+Dialogue: 0,1:30:44.48,1:30:46.16,Default,,0,0,0,,We look forward to making\Nthis functionality
+Dialogue: 0,1:30:46.16,1:30:48.64,Default,,0,0,0,,widely available to improve\Nthese to productivity.
+Dialogue: 0,1:30:48.64,1:30:49.80,Default,,0,0,0,,Thanks for listening,
+Dialogue: 0,1:30:49.80,1:30:52.16,Default,,0,0,0,,and we look forward to your\Nquestions and feedback.
+Dialogue: 0,1:30:52.76,1:30:58.64,Default,,0,0,0,,(CLAPPING BACKGROUND)
+Dialogue: 0,1:31:00.12,1:31:04.20,Default,,0,0,0,,JEREMY: Thanks Matt, if you're watching\Nthe New York streaming Clowdr.
+Dialogue: 0,1:31:04.20,1:31:06.12,Default,,0,0,0,,You should now see a Q&A link,
+Dialogue: 0,1:31:06.12,1:31:08.00,Default,,0,0,0,,where you can ask Matt\Nquestions by video chat.
+Dialogue: 0,1:31:13.72,1:31:16.16,Default,,0,0,0,,The next and final\Ntalk in this session
+Dialogue: 0,1:31:16.16,1:31:17.40,Default,,0,0,0,,is a presentation of\Nthe paper,
+Dialogue: 0,1:31:17.40,1:31:21.48,Default,,0,0,0,,Emerging Languages and Alternative\NApproach to Teaching Programme
+Dialogue: 0,1:31:21.48,1:31:24.96,Default,,0,0,0,,by Saverio Perugini, which argues that a\Ncourse on
+Dialogue: 0,1:31:24.96,1:31:27.68,Default,,0,0,0,,The principles of programming\Nlanguages should not be structured
+Dialogue: 0,1:31:27.68,1:31:30.68,Default,,0,0,0,,according to those principles,\Nbut around emerging languages
+Dialogue: 0,1:31:30.68,1:31:33.24,Default,,0,0,0,,such as Lula and Elixir instead.
+Dialogue: 0,1:31:34.76,1:31:37.60,Default,,0,0,0,,SAVERIO PERUGINI: Hello, my name\Nis Saverio Perugini.
+Dialogue: 0,1:31:38.48,1:31:40.88,Default,,0,0,0,,And today I'm going to be presenting
+Dialogue: 0,1:31:40.88,1:31:44.24,Default,,0,0,0,,our journal of functional programming\Npaper emerging languages.
+Dialogue: 0,1:31:44.24,1:31:47.60,Default,,0,0,0,,An alternative approach to\Nteaching programming languages.
+Dialogue: 0,1:31:47.60,1:31:52.12,Default,,0,0,0,,I'm in the Department of Computer\NScience at the University of Dayton.
+Dialogue: 0,1:31:55.60,1:31:57.40,Default,,0,0,0,,So, while the learning outcomes
+Dialogue: 0,1:31:57.40,1:32:00.72,Default,,0,0,0,,of a course in programming\Nlanguages are well established
+Dialogue: 0,1:32:00.72,1:32:02.48,Default,,0,0,0,,the most effective approach
+Dialogue: 0,1:32:02.48,1:32:06.36,Default,,0,0,0,,to teach a languages course,\Nis not a settled matter.
+Dialogue: 0,1:32:06.36,1:32:08.88,Default,,0,0,0,,There is, there are\Na myriad of approaches
+Dialogue: 0,1:32:08.88,1:32:10.68,Default,,0,0,0,,there the two predominant approaches
+Dialogue: 0,1:32:10.68,1:32:12.84,Default,,0,0,0,,are the principles slash\Nconcepts based approach
+Dialogue: 0,1:32:12.84,1:32:14.80,Default,,0,0,0,,and the interpreter based approach.
+Dialogue: 0,1:32:14.80,1:32:17.88,Default,,0,0,0,,There's also a paradigm\Nsurvey based approach,
+Dialogue: 0,1:32:17.88,1:32:19.92,Default,,0,0,0,,there are hybrids of these.
+Dialogue: 0,1:32:19.92,1:32:21.20,Default,,0,0,0,,Each involve challenges
+Dialogue: 0,1:32:22.36,1:32:27.32,Default,,0,0,0,,In this work we challenged the idea\Nthat of course intended
+Dialogue: 0,1:32:27.32,1:32:29.96,Default,,0,0,0,,to convey the concepts of languages
+Dialogue: 0,1:32:29.96,1:32:36.00,Default,,0,0,0,,should therefore be structured,\Naccording to those concepts.
+Dialogue: 0,1:32:36.00,1:32:38.80,Default,,0,0,0,,We saw that each programming languages\Nfrom a different perspective,
+Dialogue: 0,1:32:39.44,1:32:42.68,Default,,0,0,0,,the approach we developed involves
+Dialogue: 0,1:32:42.68,1:32:45.96,Default,,0,0,0,,using emerging languages\Nas a conduit through
+Dialogue: 0,1:32:45.96,1:32:50.24,Default,,0,0,0,,which students incidentally bump\Ninto the concepts of languages,
+Dialogue: 0,1:32:50.24,1:32:52.60,Default,,0,0,0,,the implementation options\Navailable for them,
+Dialogue: 0,1:32:52.60,1:32:56.24,Default,,0,0,0,,and the compelling consequences\Nof those options on programming,
+Dialogue: 0,1:32:56.24,1:32:59.68,Default,,0,0,0,,which are the student learning\Noutcomes the SLO's,
+Dialogue: 0,1:32:59.68,1:33:01.36,Default,,0,0,0,,of course in programming languages.
+Dialogue: 0,1:33:01.84,1:33:05.52,Default,,0,0,0,,Now, when we say emerging languages
+Dialogue: 0,1:33:05.52,1:33:08.36,Default,,0,0,0,,what we mean here is languages
+Dialogue: 0,1:33:08.36,1:33:11.96,Default,,0,0,0,,that have adopted functional\Nfeatures to some extent or another.
+Dialogue: 0,1:33:11.96,1:33:13.80,Default,,0,0,0,,In the last 20 years or so
+Dialogue: 0,1:33:13.80,1:33:18.00,Default,,0,0,0,,so languages like lula\Nelixir, go, python, and so on.
+Dialogue: 0,1:33:18.80,1:33:21.60,Default,,0,0,0,,And despite the moniker\Nfor this approach.
+Dialogue: 0,1:33:21.60,1:33:23.52,Default,,0,0,0,,The goal here is not\Nto teach students,
+Dialogue: 0,1:33:23.52,1:33:27.80,Default,,0,0,0,,emerging languages, and thus\Nthe course must not involve,
+Dialogue: 0,1:33:28.48,1:33:32.36,Default,,0,0,0,,or perhaps I should say\Ndevolved into an isolated row
+Dialogue: 0,1:33:32.36,1:33:35.48,Default,,0,0,0,,investigation of a sequence\Nof emerging languages.
+Dialogue: 0,1:33:35.48,1:33:37.52,Default,,0,0,0,,Rather, the goal here\Nis to teach students
+Dialogue: 0,1:33:37.52,1:33:40.32,Default,,0,0,0,,the principles concepts\Nof languages.
+Dialogue: 0,1:33:40.32,1:33:44.44,Default,,0,0,0,,As an intended, though, on\Nadvertised side effect
+Dialogue: 0,1:33:44.44,1:33:46.24,Default,,0,0,0,,of covering these\Nemerging languages,
+Dialogue: 0,1:33:46.24,1:33:51.64,Default,,0,0,0,,under the guise of a survey course\Non a variety of ha new languages.
+Dialogue: 0,1:33:53.48,1:33:56.92,Default,,0,0,0,,The central thesis of this work is\Nthat this alternative approach,
+Dialogue: 0,1:33:57.84,1:34:02.76,Default,,0,0,0,,results in a variety of\Ncourse deezer durata
+Dialogue: 0,1:34:03.56,1:34:07.60,Default,,0,0,0,,scope for an instructor\Ncustomisation alignment
+Dialogue: 0,1:34:07.60,1:34:11.04,Default,,0,0,0,,with current trends and language\Nevolution practice and research,
+Dialogue: 0,1:34:11.60,1:34:16.20,Default,,0,0,0,,and probably better aligned\Nwith industrial needs.
+Dialogue: 0,1:34:18.52,1:34:21.80,Default,,0,0,0,,What I'm going to discuss\Nhere is the rationale for.
+Dialogue: 0,1:34:23.08,1:34:27.64,Default,,0,0,0,,the course mechanics supporting\Nand the consequences of this approach.
+Dialogue: 0,1:34:29.64,1:34:32.96,Default,,0,0,0,,So, the rational for\Nthe emerging languages approach
+Dialogue: 0,1:34:32.96,1:34:35.56,Default,,0,0,0,,is based on some simple ideas.
+Dialogue: 0,1:34:35.56,1:34:38.92,Default,,0,0,0,,First, let's recognise that
+Dialogue: 0,1:34:38.92,1:34:43.04,Default,,0,0,0,,students think in terms of\Nlanguages, not concepts.
+Dialogue: 0,1:34:43.04,1:34:46.80,Default,,0,0,0,,I call that the the students\Nlanguage centric perspective,
+Dialogue: 0,1:34:46.80,1:34:49.20,Default,,0,0,0,,learning concepts of\Nprogramming language itself
+Dialogue: 0,1:34:49.20,1:34:51.12,Default,,0,0,0,,sounds dull and academic\Nlearning languages,
+Dialogue: 0,1:34:51.12,1:34:53.16,Default,,0,0,0,,especially new and emerging ones,
+Dialogue: 0,1:34:53.16,1:34:55.08,Default,,0,0,0,,and how those languages\Napply in domains
+Dialogue: 0,1:34:55.08,1:34:57.48,Default,,0,0,0,,in which students have passion.
+Dialogue: 0,1:34:57.48,1:35:00.16,Default,,0,0,0,,Like game programming,\NInternet of Things,
+Dialogue: 0,1:35:00.16,1:35:02.44,Default,,0,0,0,,web frameworks, sounds like fun.
+Dialogue: 0,1:35:02.44,1:35:06.60,Default,,0,0,0,,So why not take advantage of\Nthe junxtaposition of the circumstances.
+Dialogue: 0,1:35:06.60,1:35:09.88,Default,,0,0,0,,If we tell students we're going to,\Nthey're going to to learn the lula.
+Dialogue: 0,1:35:09.88,1:35:13.40,Default,,0,0,0,,Python, Ruby, that's something\Nthey can get excited about.
+Dialogue: 0,1:35:13.88,1:35:16.60,Default,,0,0,0,,Let's get students excited\Nabout what they're studying
+Dialogue: 0,1:35:16.60,1:35:21.76,Default,,0,0,0,,and then most effectively\Nharness that motivating
+Dialogue: 0,1:35:21.76,1:35:25.24,Default,,0,0,0,,spirit to meet the learning\Noutcomes of the course.
+Dialogue: 0,1:35:26.04,1:35:28.56,Default,,0,0,0,,Exploring the concepts,\Nimplementation options,
+Dialogue: 0,1:35:28.56,1:35:31.20,Default,,0,0,0,,and then the implications of\Nthose options on programme.
+Dialogue: 0,1:35:32.68,1:35:37.68,Default,,0,0,0,,So, step one, student thing concepts,\Nstinks languages is not concepts.
+Dialogue: 0,1:35:38.32,1:35:40.60,Default,,0,0,0,,Let's further recognise,\Nthat students are motivated
+Dialogue: 0,1:35:40.60,1:35:41.96,Default,,0,0,0,,to learn emerging technologies
+Dialogue: 0,1:35:41.96,1:35:45.44,Default,,0,0,0,,they perceive as relevant\Nto the software industry,
+Dialogue: 0,1:35:45.44,1:35:47.64,Default,,0,0,0,,even if the only\Nephemerally relevant.
+Dialogue: 0,1:35:48.32,1:35:52.84,Default,,0,0,0,,That's what I would call the student\Nrelevance centric perspective.
+Dialogue: 0,1:35:52.84,1:35:56.88,Default,,0,0,0,,Most average students are\Ntypically not going to get excited
+Dialogue: 0,1:35:56.88,1:35:59.92,Default,,0,0,0,,about a required concepts of\Nprogramming languages course,
+Dialogue: 0,1:36:00.44,1:36:02.60,Default,,0,0,0,,whose description indicates the use
+Dialogue: 0,1:36:02.60,1:36:05.68,Default,,0,0,0,,of Lisp as\Nan implementation language,
+Dialogue: 0,1:36:05.68,1:36:09.36,Default,,0,0,0,,which the students perceive as\Nnot being used in industry,
+Dialogue: 0,1:36:09.36,1:36:13.16,Default,,0,0,0,,not building the resume\Nand not helping them get a job.
+Dialogue: 0,1:36:14.04,1:36:16.92,Default,,0,0,0,,Students, however, are motivated\Nto learn new hot languages
+Dialogue: 0,1:36:16.92,1:36:19.24,Default,,0,0,0,,and novel emerging technologies.
+Dialogue: 0,1:36:19.24,1:36:21.40,Default,,0,0,0,,Students perceive emerging languages
+Dialogue: 0,1:36:21.40,1:36:23.56,Default,,0,0,0,,like Python and Ruby\Nas less academic,
+Dialogue: 0,1:36:24.12,1:36:27.48,Default,,0,0,0,,more fun and more practically\Napplicable to real world problems
+Dialogue: 0,1:36:28.64,1:36:31.96,Default,,0,0,0,,than languages like Lisp, which they\Nperceive as archaic and arcane.
+Dialogue: 0,1:36:32.48,1:36:35.76,Default,,0,0,0,,I think the reason\Nfor this perception
+Dialogue: 0,1:36:35.76,1:36:37.40,Default,,0,0,0,,is that this perception is formed
+Dialogue: 0,1:36:37.40,1:36:41.36,Default,,0,0,0,,and influenced by the culture\Nof the online ecosystem
+Dialogue: 0,1:36:41.36,1:36:44.40,Default,,0,0,0,,in which students explore\Nprobe experiences,
+Dialogue: 0,1:36:44.40,1:36:46.72,Default,,0,0,0,,new languages and new\Ntechnologies on their own.
+Dialogue: 0,1:36:47.24,1:36:51.68,Default,,0,0,0,,Things like vlogs, YouTube videos,\NStackOverflow, GitHub, and so on.
+Dialogue: 0,1:36:53.48,1:36:56.04,Default,,0,0,0,,So why can't we teach\Nstudents first class
+Dialogue: 0,1:36:56.04,1:36:59.76,Default,,0,0,0,,in high order functions and closures\Nin Python rather than Lisp?
+Dialogue: 0,1:36:59.76,1:37:01.68,Default,,0,0,0,,I mean, ultimately, nobody cares
+Dialogue: 0,1:37:01.68,1:37:03.04,Default,,0,0,0,,if a student can programme less
+Dialogue: 0,1:37:03.04,1:37:05.44,Default,,0,0,0,,rather, they care\Nif a student can think
+Dialogue: 0,1:37:05.44,1:37:08.44,Default,,0,0,0,,like a Lisp programmemer in\Nhigher order abstractions.
+Dialogue: 0,1:37:08.44,1:37:11.08,Default,,0,0,0,,metaprogramming and\Na variety of other languages.
+Dialogue: 0,1:37:12.60,1:37:16.96,Default,,0,0,0,,So let's harness that process\Nof programming language
+Dialogue: 0,1:37:16.96,1:37:18.56,Default,,0,0,0,,acculturation incubation in which
+Dialogue: 0,1:37:18.56,1:37:21.40,Default,,0,0,0,,students participate,\Nperhaps unconsciously.
+Dialogue: 0,1:37:23.12,1:37:26.76,Default,,0,0,0,,Given those circumstances,\Nwe think it's reasonable
+Dialogue: 0,1:37:26.76,1:37:28.88,Default,,0,0,0,,to use emerging\Nlanguages as a method
+Dialogue: 0,1:37:28.88,1:37:31.24,Default,,0,0,0,,or conduit by which to dispel
+Dialogue: 0,1:37:31.24,1:37:34.32,Default,,0,0,0,,Distil concepts of\Nlanguages to students.
+Dialogue: 0,1:37:35.48,1:37:39.52,Default,,0,0,0,,And then of course, let's build\Na course framework around that idea.
+Dialogue: 0,1:37:39.52,1:37:41.72,Default,,0,0,0,,And let's use course\Nmechanics that leverage
+Dialogue: 0,1:37:41.72,1:37:45.40,Default,,0,0,0,,how students learn languages on\Ntheir own, to teach them concepts.
+Dialogue: 0,1:37:47.72,1:37:50.04,Default,,0,0,0,,So that's what we did. We\Ndesigned a course framer
+Dialogue: 0,1:37:50.04,1:37:52.12,Default,,0,0,0,,to support that approach\Nor to order operate
+Dialogue: 0,1:37:52.12,1:37:54.00,Default,,0,0,0,,operationalise that approach.
+Dialogue: 0,1:37:54.00,1:37:58.44,Default,,0,0,0,,And the model we came\Nup with involves three
+Dialogue: 0,1:37:58.44,1:38:01.16,Default,,0,0,0,,it's a module based approach.\NIt involves three modules.
+Dialogue: 0,1:38:01.16,1:38:03.16,Default,,0,0,0,,It's a modular based\Ndesign, I should say,
+Dialogue: 0,1:38:03.16,1:38:04.60,Default,,0,0,0,,involves three modules.
+Dialogue: 0,1:38:05.12,1:38:06.64,Default,,0,0,0,,Students were given a foundation
+Dialogue: 0,1:38:06.64,1:38:09.00,Default,,0,0,0,,and a vocabulary in language,
+Dialogue: 0,1:38:09.00,1:38:11.64,Default,,0,0,0,,a brief foundation of vocabulary\Nin language concepts
+Dialogue: 0,1:38:11.64,1:38:14.00,Default,,0,0,0,,through sort of a functional\Nprogramming tutorial
+Dialogue: 0,1:38:14.00,1:38:17.88,Default,,0,0,0,,in module one which which was formed
+Dialogue: 0,1:38:17.88,1:38:20.04,Default,,0,0,0,,the background from\Nwhich they deconstructed
+Dialogue: 0,1:38:20.04,1:38:23.52,Default,,0,0,0,,the emerging languages\Npresented in module two
+Dialogue: 0,1:38:23.52,1:38:25.80,Default,,0,0,0,,deconstruct those languages\Ninto the concepts
+Dialogue: 0,1:38:25.80,1:38:29.08,Default,,0,0,0,,and then probe those\Nconcepts for subsequent
+Dialogue: 0,1:38:30.24,1:38:32.48,Default,,0,0,0,,comparisons synthesis\Nuse application
+Dialogue: 0,1:38:33.00,1:38:39.12,Default,,0,0,0,,of those concepts in final\Nculminating projects in module three,
+Dialogue: 0,1:38:39.12,1:38:44.12,Default,,0,0,0,,so, Module one, Brief Introduction\NIdentification of Language Concepts,
+Dialogue: 0,1:38:44.12,1:38:47.04,Default,,0,0,0,,Module two Deconstructing the Emerging
+Dialogue: 0,1:38:47.04,1:38:50.00,Default,,0,0,0,,Languages Presented to Prove those\NConcepts
+Dialogue: 0,1:38:50.00,1:38:53.52,Default,,0,0,0,,in Module three Reconstruct,\NReconstruct, Synthesise,
+Dialogue: 0,1:38:53.52,1:38:56.76,Default,,0,0,0,,Apply those Concepts in,\Nin, in Projects.
+Dialogue: 0,1:38:56.76,1:39:00.52,Default,,0,0,0,,now, that that third\Nmodule also helps
+Dialogue: 0,1:39:00.52,1:39:04.60,Default,,0,0,0,,connect those languages back to\Nthe concepts in module one.
+Dialogue: 0,1:39:05.16,1:39:12.36,Default,,0,0,0,,Module two is really the\Nthe heart and soul of the course
+Dialogue: 0,1:39:12.36,1:39:17.40,Default,,0,0,0,,that the most number of\Nweeks, six to eight weeks,
+Dialogue: 0,1:39:17.40,1:39:20.28,Default,,0,0,0,,it's really the the body of\Nthe course the meat of the course.
+Dialogue: 0,1:39:21.88,1:39:24.16,Default,,0,0,0,,Now, I do want to\Nmention in module two
+Dialogue: 0,1:39:24.16,1:39:26.16,Default,,0,0,0,,module two is really\Nwhere the instructor
+Dialogue: 0,1:39:26.16,1:39:30.40,Default,,0,0,0,,has the opportunity to\Nemulate as much as possible
+Dialogue: 0,1:39:30.40,1:39:33.64,Default,,0,0,0,,the process by which students\Nlearn languages on their own
+Dialogue: 0,1:39:33.64,1:39:37.04,Default,,0,0,0,,through those those online\Nfor I was discussing earlier.
+Dialogue: 0,1:39:37.04,1:39:39.24,Default,,0,0,0,,So this is the module where we,
+Dialogue: 0,1:39:40.88,1:39:44.92,Default,,0,0,0,,we, we did YouTube videos, we did.
+Dialogue: 0,1:39:47.12,1:39:50.28,Default,,0,0,0,,Language cheat sheets or\Nquick reference sheets.
+Dialogue: 0,1:39:50.28,1:39:55.60,Default,,0,0,0,,We did online style, blog webpages,\Nwe did language Synopsys.
+Dialogue: 0,1:39:56.32,1:39:58.04,Default,,0,0,0,,A lot of active learning going on.
+Dialogue: 0,1:39:58.04,1:40:01.16,Default,,0,0,0,,Students presented each language
+Dialogue: 0,1:40:01.16,1:40:04.04,Default,,0,0,0,,over the course of two\Nconsecutive 75 minute periods
+Dialogue: 0,1:40:04.04,1:40:05.72,Default,,0,0,0,,really trying to emulate the process
+Dialogue: 0,1:40:05.72,1:40:08.44,Default,,0,0,0,,by white, by which students\Nlearn, learn languages.
+Dialogue: 0,1:40:10.08,1:40:15.12,Default,,0,0,0,,This also provide a graded\Npreparation for their final,
+Dialogue: 0,1:40:15.12,1:40:16.12,Default,,0,0,0,,the same sort of mechanics that
+Dialogue: 0,1:40:16.12,1:40:17.72,Default,,0,0,0,,we're using their final\Nculminating project.
+Dialogue: 0,1:40:19.20,1:40:21.60,Default,,0,0,0,,We've offered this\Ncourse three times
+Dialogue: 0,1:40:21.60,1:40:23.56,Default,,0,0,0,,three offerings using this approach.
+Dialogue: 0,1:40:23.56,1:40:25.04,Default,,0,0,0,,And these are some of the languages
+Dialogue: 0,1:40:25.04,1:40:27.56,Default,,0,0,0,,that we use, across some\Nof those offerings.
+Dialogue: 0,1:40:27.56,1:40:28.96,Default,,0,0,0,,This is a subset of them.
+Dialogue: 0,1:40:29.88,1:40:33.32,Default,,0,0,0,,And this is are\Nthe student artefacts
+Dialogue: 0,1:40:33.32,1:40:35.04,Default,,0,0,0,,and final projects and cheat sheets
+Dialogue: 0,1:40:35.04,1:40:37.96,Default,,0,0,0,,and YouTube videos are all\Nposted in this GitHub site,
+Dialogue: 0,1:40:37.96,1:40:39.52,Default,,0,0,0,,which I probably won't be able
+Dialogue: 0,1:40:39.52,1:40:42.52,Default,,0,0,0,,to demonstrate or at\Nleast illustrate later.
+Dialogue: 0,1:40:46.40,1:40:48.68,Default,,0,0,0,,Module three is really the module
+Dialogue: 0,1:40:48.68,1:40:51.32,Default,,0,0,0,,where where students are\Ngiven the opportunity
+Dialogue: 0,1:40:51.32,1:40:54.04,Default,,0,0,0,,to demonstrate a mastery of\Nthose concepts distil
+Dialogue: 0,1:40:54.04,1:40:57.12,Default,,0,0,0,,during the emerging\Nlanguages presentations.
+Dialogue: 0,1:40:58.04,1:41:00.08,Default,,0,0,0,,and really demonstrate\Nhow they can use
+Dialogue: 0,1:41:00.08,1:41:02.92,Default,,0,0,0,,their intuition to\Nindependently discern
+Dialogue: 0,1:41:02.92,1:41:05.92,Default,,0,0,0,,how and when and creatively harness
+Dialogue: 0,1:41:06.40,1:41:08.16,Default,,0,0,0,,an integration of a subset\Nof those concept
+Dialogue: 0,1:41:08.80,1:41:11.92,Default,,0,0,0,,that they absorbed\Nin that module to craft a
+Dialogue: 0,1:41:11.92,1:41:16.60,Default,,0,0,0,,solution to a practical computing\Nproblem in module three.
+Dialogue: 0,1:41:16.60,1:41:21.08,Default,,0,0,0,,The project involved the software\Nsystem, a formal term paper
+Dialogue: 0,1:41:21.08,1:41:24.56,Default,,0,0,0,,using the ACM conference\Nstyle and law tech and
+Dialogue: 0,1:41:24.56,1:41:26.84,Default,,0,0,0,,an in class presentation\Nto classmates.
+Dialogue: 0,1:41:26.84,1:41:33.56,Default,,0,0,0,,Now without a formal research\Nexperiment, it's challenging to
+Dialogue: 0,1:41:33.56,1:41:35.48,Default,,0,0,0,,ascertain the merit\Nof this approach and
+Dialogue: 0,1:41:35.48,1:41:36.92,Default,,0,0,0,,helping students understand,
+Dialogue: 0,1:41:36.92,1:41:38.80,Default,,0,0,0,,understand the core\Nlanguage concepts.
+Dialogue: 0,1:41:38.80,1:41:42.44,Default,,0,0,0,,We can, however, offer some\Nanecdotal and formal evidence.
+Dialogue: 0,1:41:42.44,1:41:46.28,Default,,0,0,0,,This table I'm showing you here\Npresents the observed frequency
+Dialogue: 0,1:41:46.28,1:41:49.96,Default,,0,0,0,,of the use of language concepts\Nof the language concepts
+Dialogue: 0,1:41:49.96,1:41:51.88,Default,,0,0,0,,in the source code of\Nthe final projects.
+Dialogue: 0,1:41:51.88,1:41:57.04,Default,,0,0,0,,Now, again, while the observation\Nof an application and
+Dialogue: 0,1:41:57.04,1:41:59.92,Default,,0,0,0,,integration and a use of these\Nconcepts in the final and
+Dialogue: 0,1:41:59.92,1:42:03.96,Default,,0,0,0,,the final projects can on its\Nown serve as formal evidence
+Dialogue: 0,1:42:03.96,1:42:05.68,Default,,0,0,0,,that they understood the concepts.
+Dialogue: 0,1:42:05.68,1:42:08.40,Default,,0,0,0,,It does provide some\Nanecdotal evidence,
+Dialogue: 0,1:42:08.40,1:42:11.52,Default,,0,0,0,,particularly because many\Nof these projects were
+Dialogue: 0,1:42:11.52,1:42:14.88,Default,,0,0,0,,of high quality and some\Nwere even published.
+Dialogue: 0,1:42:15.60,1:42:19.56,Default,,0,0,0,,OK. wrapping up here,\Nwhat are the what can you
+Dialogue: 0,1:42:19.56,1:42:21.92,Default,,0,0,0,,expect from this approach?\NWhat are the consequences.
+Dialogue: 0,1:42:21.92,1:42:26.72,Default,,0,0,0,,It's customizable. The\Ninstructors picking
+Dialogue: 0,1:42:26.72,1:42:28.04,Default,,0,0,0,,different languages every semester.
+Dialogue: 0,1:42:28.04,1:42:29.80,Default,,0,0,0,,The mechanics are\Nsomewhat customizable,
+Dialogue: 0,1:42:29.80,1:42:33.08,Default,,0,0,0,,although to a lesser extent, because\Nwe're trying to use mechanics,
+Dialogue: 0,1:42:33.08,1:42:36.08,Default,,0,0,0,,which, which one of the main\Nideas here is using mechanics,
+Dialogue: 0,1:42:36.08,1:42:38.32,Default,,0,0,0,,which would dovetail\Nnicely with how students
+Dialogue: 0,1:42:38.32,1:42:39.80,Default,,0,0,0,,learn languages on their own.
+Dialogue: 0,1:42:39.80,1:42:42.52,Default,,0,0,0,,It gets students away from\Ntheir Java-centric worldview.
+Dialogue: 0,1:42:42.52,1:42:44.16,Default,,0,0,0,,We're covering a wide\Nspectrum of languages
+Dialogue: 0,1:42:44.16,1:42:45.80,Default,,0,0,0,,in a relatively short\Nperiod of time,
+Dialogue: 0,1:42:45.80,1:42:51.16,Default,,0,0,0,,which really radically shatters\Nstudents, Java-centric, a worldview,
+Dialogue: 0,1:42:51.16,1:42:54.76,Default,,0,0,0,,promoting the idea that\Nstudents should use languages
+Dialogue: 0,1:42:55.32,1:42:58.88,Default,,0,0,0,,for the particular problem\Ndomain we're covering things
+Dialogue: 0,1:42:58.88,1:43:02.76,Default,,0,0,0,,like you know, a new\Nconcurrency models.
+Dialogue: 0,1:43:02.76,1:43:07.44,Default,,0,0,0,,CSP actor Julia scientific\Ncomputing law game
+Dialogue: 0,1:43:07.44,1:43:12.32,Default,,0,0,0,,programming MapReduce. So on\Npromotes academic integrity.
+Dialogue: 0,1:43:12.32,1:43:15.92,Default,,0,0,0,,You're rotating the languages\Nout every semester.
+Dialogue: 0,1:43:15.92,1:43:19.92,Default,,0,0,0,,Doesn't require a big inordinate,\Nan excess of work on the
+Dialogue: 0,1:43:19.92,1:43:23.48,Default,,0,0,0,,instructors part because the students\Nare producing the artefacts.
+Dialogue: 0,1:43:23.48,1:43:25.32,Default,,0,0,0,,It doesn't compromise\Nlearning outcomes.
+Dialogue: 0,1:43:25.32,1:43:28.68,Default,,0,0,0,,The outcomes are the same,\Nthe mechanisms different.
+Dialogue: 0,1:43:28.68,1:43:32.68,Default,,0,0,0,,Aligns well with industrial\Nneeds, promotes professional
+Dialogue: 0,1:43:33.56,1:43:35.08,Default,,0,0,0,,preparation\Nand academic preparation.
+Dialogue: 0,1:43:35.08,1:43:38.12,Default,,0,0,0,,Of course, there are challenges.\NScaling the approach
+Dialogue: 0,1:43:38.12,1:43:41.08,Default,,0,0,0,,is certainly a challenge,\Nespecially in sections with large
+Dialogue: 0,1:43:41.08,1:43:44.40,Default,,0,0,0,,number of students, 50\Nto a hundred students.
+Dialogue: 0,1:43:44.40,1:43:48.08,Default,,0,0,0,,There's an entire section of\Nthe paper dedicated to some
+Dialogue: 0,1:43:48.08,1:43:52.88,Default,,0,0,0,,sort of rough calculations\Non how you might adapt
+Dialogue: 0,1:43:52.88,1:43:54.28,Default,,0,0,0,,the approach to large sections.
+Dialogue: 0,1:43:54.28,1:43:55.92,Default,,0,0,0,,There are some other\Nchallenges as well,
+Dialogue: 0,1:43:55.92,1:43:57.44,Default,,0,0,0,,which are mentioned in the paper.
+Dialogue: 0,1:43:57.44,1:44:01.92,Default,,0,0,0,,Concluding the idea presented\Nhere, the approach presented
+Dialogue: 0,1:44:01.92,1:44:04.28,Default,,0,0,0,,here is based on the idea that\Nwe should teach programming
+Dialogue: 0,1:44:04.28,1:44:06.96,Default,,0,0,0,,languages to students in\Na mode that meshes well and
+Dialogue: 0,1:44:06.96,1:44:11.48,Default,,0,0,0,,leverages both how students\Nthink languages, not concepts.
+Dialogue: 0,1:44:11.48,1:44:16.88,Default,,0,0,0,,They put languages before\Nconcepts and how they learn
+Dialogue: 0,1:44:16.88,1:44:19.76,Default,,0,0,0,,languages and new technologies\Non their own online for
+Dialogue: 0,1:44:19.76,1:44:21.92,Default,,0,0,0,,YouTube videos, stack overflow\Nand things like that.
+Dialogue: 0,1:44:21.92,1:44:26.48,Default,,0,0,0,,I hope my goal with this\Npresentation in this paper is that
+Dialogue: 0,1:44:26.48,1:44:28.60,Default,,0,0,0,,get the discussion going,\Nchallenge the idea,
+Dialogue: 0,1:44:28.60,1:44:29.92,Default,,0,0,0,,how we teach programming languages.
+Dialogue: 0,1:44:29.92,1:44:32.60,Default,,0,0,0,,I hope it encouraged people to\Nthink this folks that think
+Dialogue: 0,1:44:32.60,1:44:36.64,Default,,0,0,0,,differently and to bring this\Nback to their institutions.
+Dialogue: 0,1:44:37.72,1:44:44.68,Default,,0,0,0,,I encourage you to explore our\Nwebpages, especially our get hub site,
+Dialogue: 0,1:44:44.68,1:44:50.32,Default,,0,0,0,,which involves all the the language\NSynopsys, YouTube videos,
+Dialogue: 0,1:44:50.32,1:44:52.88,Default,,0,0,0,,presentations, and then some of\Nthe projects are posted as well.
+Dialogue: 0,1:44:52.88,1:44:55.00,Default,,0,0,0,,At this point, I'd like to\Nthank you for your attention.
+Dialogue: 0,1:44:55.00,1:44:57.16,Default,,0,0,0,,And I certainly welcome\Nyou to contact me
+Dialogue: 0,1:44:57.16,1:45:00.40,Default,,0,0,0,,with questions\Nand comments. Thank you.
+Dialogue: 0,1:45:02.24,1:45:09.28,Default,,0,0,0,,(CLAPS)
+Dialogue: 0,1:45:09.28,1:45:13.28,Default,,0,0,0,,RICHARD: Thanks. I'm afraid that\NSaverio is not available for
+Dialogue: 0,1:45:13.28,1:45:15.84,Default,,0,0,0,,live Q&A So that\Nends this session.
+Dialogue: 0,1:45:15.84,1:45:20.84,Default,,0,0,0,,Please do, let me know what\Nyou think of this scheme. Bye.
+Dialogue: 0,1:46:06.20,1:50:09.12,Default,,0,0,0,,(UPLIFTING ORCHESTRAL MUSIC)
+Dialogue: 0,1:50:59.20,1:53:49.40,Default,,0,0,0,,(UPLIFTING ORCHESTRAL MUSIC)
+Dialogue: 0,1:54:57.84,1:57:25.44,Default,,0,0,0,,(UPLIFTING ORCHESTRAL MUSIC)

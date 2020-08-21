@@ -1,0 +1,7766 @@
+﻿1
+00:00:54,400 --> 00:00:59,400
+
+
+2
+00:04:10,640 --> 00:04:15,640
+
+
+3
+00:07:42,400 --> 00:07:47,400
+
+
+4
+00:13:00,760 --> 00:13:01,800
+ADAM CHLIPALA: Hello,
+I'm Adam Chlipala,
+
+5
+00:13:01,800 --> 00:13:03,840
+Program Chair of ICFP 2020.
+
+6
+00:13:03,840 --> 00:13:05,000
+And it's my pleasure to kick off our
+
+7
+00:13:05,000 --> 00:13:06,000
+first session of contributed talks.
+
+8
+00:13:06,840 --> 00:13:09,640
+We're making these
+available to the public on YouTube.
+
+9
+00:13:09,640 --> 00:13:12,040
+Though for those of you who've
+registered for the conference,
+
+10
+00:13:12,040 --> 00:13:15,080
+you also have access to an
+additional service called Clowdr,
+
+11
+00:13:15,080 --> 00:13:17,080
+which gives you a more
+interactive experience.
+
+12
+00:13:17,080 --> 00:13:19,360
+So, if you're registering,
+but you're not in Clowdr right now,
+
+13
+00:13:19,360 --> 00:13:21,920
+please head over there
+and look for current
+
+14
+00:13:21,920 --> 00:13:24,800
+and upcoming talk titles
+highlighted on the screen.
+
+15
+00:13:24,800 --> 00:13:26,960
+For instance, right now,
+you should see stable relations
+
+16
+00:13:26,960 --> 00:13:29,440
+and abstract interpretation
+for higher order programmes
+
+17
+00:13:29,440 --> 00:13:32,960
+the very next talk. So, you can
+click a talk title like that one,
+
+18
+00:13:32,960 --> 00:13:35,280
+and get the full
+interactive experience,
+
+19
+00:13:35,280 --> 00:13:36,880
+including text chat
+during the talk,
+
+20
+00:13:36,880 --> 00:13:40,120
+and a video Q&A with
+the authors afterward.
+
+21
+00:13:40,120 --> 00:13:42,800
+Actually, you might find the
+authors participating alongside you
+
+22
+00:13:42,800 --> 00:13:45,640
+in both of those because they
+pre recorded their talk videos,
+
+23
+00:13:45,640 --> 00:13:48,160
+So, they can join
+the text chat.
+
+24
+00:13:48,160 --> 00:13:51,040
+Not all authors are
+joining the video Q&A
+
+25
+00:13:51,040 --> 00:13:54,440
+in both the New York and Asia
+time bands that we're offering.
+
+26
+00:13:54,440 --> 00:13:58,240
+So, check Clowdr for links
+to Q&A sessions that are happening.
+
+27
+00:13:58,240 --> 00:14:00,160
+If you don't see the
+one you're interested
+
+28
+00:14:00,160 --> 00:14:02,600
+in for a talk that's playing
+now then probably the authors
+
+29
+00:14:02,600 --> 00:14:06,560
+are on the other time band instead.
+Alright, so, remind yourself
+
+30
+00:14:06,560 --> 00:14:09,760
+In these details as we
+progress through the session.
+
+31
+00:14:09,760 --> 00:14:12,120
+First up, we're going to have
+Benoit Montagu telling us
+
+32
+00:14:12,120 --> 00:14:16,360
+about abstract interpretation
+for higher order programmes.
+
+33
+00:14:16,360 --> 00:14:18,280
+BENOIT MONTAGU: Hello, my name
+is Benoit Montagu,
+
+34
+00:14:18,280 --> 00:14:21,200
+and I'm going to tell you about
+a joint work with Thomas Jensen
+
+35
+00:14:21,200 --> 00:14:25,400
+but the abstract interpretation
+of high order programmes.
+
+36
+00:14:25,400 --> 00:14:29,880
+The problem we're interested in is
+the inference of program frames.
+
+37
+00:14:29,880 --> 00:14:31,120
+This means that
+we want to detect
+
+38
+00:14:31,120 --> 00:14:33,440
+what a function call
+does not change.
+
+39
+00:14:33,440 --> 00:14:36,520
+For imperative programs,
+it amounts to finding
+
+40
+00:14:36,520 --> 00:14:40,400
+which parts of the global state
+are not modified by a function call.
+
+41
+00:14:40,400 --> 00:14:43,560
+For functional programs,
+it amounts to finding
+
+42
+00:14:43,560 --> 00:14:48,400
+which parts of the inputs
+and the outputs are the same.
+
+43
+00:14:49,360 --> 00:14:51,360
+This frame information
+can be used for example,
+
+44
+00:14:51,360 --> 00:14:54,160
+in optimising compilers
+to perform common
+
+45
+00:14:54,160 --> 00:14:56,760
+sub expression elimination
+and across function calls.
+
+46
+00:14:56,760 --> 00:14:58,520
+The same information can also
+
+47
+00:14:58,520 --> 00:15:00,720
+be exploited in
+program verification.
+
+48
+00:15:00,720 --> 00:15:04,760
+In particular, violent preservation
+proves the properties
+
+49
+00:15:04,760 --> 00:15:07,080
+of the parts
+of the Other states
+
+50
+00:15:07,080 --> 00:15:11,520
+that have not changed
+or indeed automatically preserved.
+
+51
+00:15:12,480 --> 00:15:15,360
+Last year, we published
+a paper on what we call
+
+52
+00:15:15,360 --> 00:15:18,680
+correlation analysis.
+It's a static analysis
+
+53
+00:15:18,680 --> 00:15:21,360
+that infers frames for,
+for other programmes.
+
+54
+00:15:21,360 --> 00:15:24,280
+We applied it to the verification
+of an OS micro-kernel.
+
+55
+00:15:24,280 --> 00:15:27,800
+And it was able
+to prove automatically 68%
+
+56
+00:15:27,800 --> 00:15:30,240
+of the environment
+reservation limits.
+
+57
+00:15:30,240 --> 00:15:35,080
+This means that inferring frames
+is really useful in practice.
+
+58
+00:15:35,680 --> 00:15:38,600
+In this work, we want
+to extend the correlation analysis
+
+59
+00:15:38,600 --> 00:15:41,280
+to infer frames for
+higher order language.
+
+60
+00:15:41,280 --> 00:15:45,240
+Our long term goal is to
+integrate such an analysis
+
+61
+00:15:45,240 --> 00:15:47,400
+in a general purpose
+proof assistance
+
+62
+00:15:47,400 --> 00:15:51,360
+to make the verification
+of large programmes easier.
+
+63
+00:15:51,360 --> 00:15:53,400
+to infer friends
+for the lambda calculus,
+
+64
+00:15:53,400 --> 00:15:56,040
+we follow the methodology
+that is offered
+
+65
+00:15:56,040 --> 00:15:58,680
+by the abstract
+interpretation framework.
+
+66
+00:15:58,680 --> 00:16:01,400
+The first step
+is to clearly define
+
+67
+00:16:01,400 --> 00:16:03,240
+what property
+you're interested in.
+
+68
+00:16:03,240 --> 00:16:05,320
+In this work,
+we want to find relations
+
+69
+00:16:05,320 --> 00:16:09,760
+between the inputs
+and The output of a lambda term.
+
+70
+00:16:09,760 --> 00:16:11,600
+The second step
+of the methodology
+
+71
+00:16:11,600 --> 00:16:15,840
+is to define the collecting
+semantics for your property.
+
+72
+00:16:15,840 --> 00:16:18,560
+It describes how
+your property evolves
+
+73
+00:16:18,560 --> 00:16:21,360
+when your programme
+gets evaluated.
+
+74
+00:16:21,360 --> 00:16:24,120
+In this work, the collecting
+semantics takes the form of
+
+75
+00:16:24,120 --> 00:16:30,040
+a denotation of a lambda term
+into input, output relations.
+
+76
+00:16:30,040 --> 00:16:33,000
+We have proved that this
+denotation is something completes
+
+77
+00:16:33,000 --> 00:16:37,080
+And as a bonus,
+you will find in the paper
+
+78
+00:16:37,080 --> 00:16:41,240
+an equivalent definition
+in the form of a programme logic.
+
+79
+00:16:41,240 --> 00:16:43,520
+The third and final step
+of the abstract
+
+80
+00:16:43,520 --> 00:16:47,800
+interpretation methodology
+is to apply successive abstractions
+
+81
+00:16:47,800 --> 00:16:52,080
+on the collecting semantics.
+By doing so you obtain an analysis
+
+82
+00:16:52,080 --> 00:16:54,960
+with which you
+can effectively compute.
+
+83
+00:16:54,960 --> 00:16:57,320
+In this work,
+we have used two abstractions.
+
+84
+00:16:57,320 --> 00:16:59,840
+The first one is
+a variant of a well known
+
+85
+00:16:59,840 --> 00:17:04,040
+independent attribute abstraction,
+and the second one introduces
+
+86
+00:17:04,040 --> 00:17:06,600
+the correlation domain
+represented last year.
+
+87
+00:17:06,600 --> 00:17:10,640
+That we extend it to
+support first class functions.
+
+88
+00:17:10,640 --> 00:17:14,920
+What we get in the end
+is a simple modular analysis
+
+89
+00:17:14,920 --> 00:17:19,600
+that is already quite expressive.
+And we have mechanically verified
+
+90
+00:17:19,600 --> 00:17:23,080
+all these results
+in the corporate systems.
+
+91
+00:17:23,080 --> 00:17:26,000
+The language we study
+in the paper is the n type call
+
+92
+00:17:26,000 --> 00:17:30,080
+by value lambda calculus
+extended with pairs and binary sums.
+
+93
+00:17:30,080 --> 00:17:32,520
+The definition of values
+in this language
+
+94
+00:17:32,520 --> 00:17:35,240
+is the standard one
+and we use the standard
+
+95
+00:17:35,240 --> 00:17:37,280
+small step semantics
+for call by value
+
+96
+00:17:37,280 --> 00:17:42,040
+that perform a substitution t,
+to reduce a beta (INAUDIBLE).
+
+97
+00:17:42,600 --> 00:17:45,240
+For this for this
+higher order language,
+
+98
+00:17:45,240 --> 00:17:48,640
+we want to infer relations
+between the inputs of programmes
+
+99
+00:17:48,640 --> 00:17:52,440
+and the outputs.
+But what are the inputs?
+
+100
+00:17:52,440 --> 00:17:54,800
+We consider the inputs
+of a programme
+
+101
+00:17:54,800 --> 00:17:57,480
+are the possible
+substitutions sigma
+
+102
+00:17:57,480 --> 00:17:59,920
+that assign values to
+the free variables
+
+103
+00:17:59,920 --> 00:18:03,200
+of that programme.
+Then the input output relation
+
+104
+00:18:03,200 --> 00:18:06,400
+of its own T
+for a set of inputs I
+
+105
+00:18:06,400 --> 00:18:09,280
+is the set of pairs
+made from substitutions drawn
+
+106
+00:18:09,280 --> 00:18:12,800
+from the set of inputs
+and the values that are obtained
+
+107
+00:18:12,800 --> 00:18:15,400
+from evaluating
+the term t sigma.
+
+108
+00:18:15,400 --> 00:18:19,120
+That is t where all its
+free variables have been replaced
+
+109
+00:18:19,120 --> 00:18:23,040
+with the values defined
+by the substitution sigma.
+
+110
+00:18:23,040 --> 00:18:25,360
+With the semantics
+of input, output relations,
+
+111
+00:18:25,360 --> 00:18:29,880
+we can for instance state
+that a term t always returns zero
+
+112
+00:18:29,880 --> 00:18:33,080
+when the input x
+is assigned to a negative value
+
+113
+00:18:33,080 --> 00:18:36,800
+or that T returns a value
+that remains above
+
+114
+00:18:36,800 --> 00:18:42,120
+the value of the input x.
+Now, we remarked that if C
+
+115
+00:18:42,120 --> 00:18:45,640
+might define all the inputs
+of a programme t,
+
+116
+00:18:45,640 --> 00:18:48,760
+then you can use
+any substitution sigma prime
+
+117
+00:18:48,760 --> 00:18:51,640
+that defines more inputs,
+even some inputs around
+
+118
+00:18:51,640 --> 00:18:54,800
+that necessary to T
+without changing the meaning
+
+119
+00:18:54,800 --> 00:18:57,800
+of the programme T.
+In such a case, we say
+
+120
+00:18:57,800 --> 00:19:00,920
+that sigma prime
+extends sigma.
+
+121
+00:19:00,920 --> 00:19:04,000
+And because specifying
+values for more inputs
+
+122
+00:19:04,000 --> 00:19:06,960
+than necessary does not change
+the meaning of a programme
+
+123
+00:19:06,960 --> 00:19:09,880
+We can actually close
+the set of inputs IE
+
+124
+00:19:09,880 --> 00:19:13,640
+under the extension
+ordering of substitutions
+
+125
+00:19:13,640 --> 00:19:16,040
+and by doing so,
+the input, output relation
+
+126
+00:19:16,040 --> 00:19:18,880
+of the term
+becomes what we call
+
+127
+00:19:18,880 --> 00:19:21,760
+a stable relation.
+A relation is stable
+
+128
+00:19:21,760 --> 00:19:24,440
+when if an input
+substitution sigma
+
+129
+00:19:24,440 --> 00:19:27,840
+related to similar
+is related to summary put V,
+
+130
+00:19:27,840 --> 00:19:30,960
+then any substitution
+that is more defined
+
+131
+00:19:30,960 --> 00:19:35,800
+than sigma must also
+be related to the same value v.
+
+132
+00:19:35,800 --> 00:19:39,800
+This definition should not
+surprise the logicians among you,
+
+133
+00:19:39,800 --> 00:19:43,520
+what we call stability is similar
+to the notion of persistence
+
+134
+00:19:43,520 --> 00:19:46,320
+that is swans
+in Kripke's style semantics.
+
+135
+00:19:46,320 --> 00:19:49,440
+That is to say, if a property
+holds in some world
+
+136
+00:19:49,440 --> 00:19:53,880
+it will it must also hold
+in early larger world.
+
+137
+00:19:53,880 --> 00:19:56,880
+And the definition should be
+no surprise to the semantic system
+
+138
+00:19:56,880 --> 00:20:00,680
+on you either because
+a stable relation is in fact
+
+139
+00:20:00,680 --> 00:20:03,440
+a monotone function
+from substitutions
+
+140
+00:20:03,440 --> 00:20:06,240
+or there with
+the extension ordering
+
+141
+00:20:06,240 --> 00:20:10,080
+to sets of values
+ordered with set inclusion.
+
+142
+00:20:10,840 --> 00:20:13,000
+So we have defined
+in the paper a denotation
+
+143
+00:20:13,000 --> 00:20:16,000
+that's given a term T
+and environments
+
+144
+00:20:16,000 --> 00:20:18,960
+builds a stable relation
+between the inputs
+
+145
+00:20:18,960 --> 00:20:21,880
+and the outputs of t,
+the environment denotes
+
+146
+00:20:21,880 --> 00:20:25,480
+a set of admissible inputs.
+And as expected
+
+147
+00:20:25,480 --> 00:20:28,040
+in denotational semantics
+the denotation function
+
+148
+00:20:28,040 --> 00:20:32,080
+is defined in a compositional way
+by induction over
+
+149
+00:20:32,080 --> 00:20:37,200
+the syntax of the programme.
+For example, the denotation
+
+150
+00:20:37,200 --> 00:20:39,360
+of a programme that builds
+a pair out of
+
+151
+00:20:39,360 --> 00:20:44,240
+two sub programmes T1 & T2
+is the pairing of their denotations.
+
+152
+00:20:44,240 --> 00:20:46,560
+Here the pairing
+of relations relates
+
+153
+00:20:46,560 --> 00:20:49,200
+an input sigma
+to a pair of values,
+
+154
+00:20:49,200 --> 00:20:51,920
+where the first component
+of that value is related
+
+155
+00:20:51,920 --> 00:20:54,720
+to the input using
+the denotation of t1
+
+156
+00:20:54,720 --> 00:20:57,360
+and the second component
+of the value is related
+
+157
+00:20:57,360 --> 00:21:01,200
+to the same input
+using the denotation of t2.
+
+158
+00:21:02,400 --> 00:21:05,080
+We have proved that
+this denotation is sound
+
+159
+00:21:05,080 --> 00:21:07,560
+with respect to
+the input output in the sense
+
+160
+00:21:07,560 --> 00:21:12,200
+that it is an overall approximation
+of the input, output relation
+
+161
+00:21:12,200 --> 00:21:15,680
+This means that if you take
+an input substitution sigma
+
+162
+00:21:15,680 --> 00:21:18,880
+in the set of valid inputs
+described by the environment,
+
+163
+00:21:18,880 --> 00:21:22,200
+and if the evaluation
+of the programme t
+
+164
+00:21:22,200 --> 00:21:26,520
+with these inputs
+gives you an output value V,
+
+165
+00:21:26,520 --> 00:21:29,920
+then the input output pair
+sigma v is predictively
+
+166
+00:21:29,920 --> 00:21:32,880
+in the denotation
+of the programme.
+
+167
+00:21:33,840 --> 00:21:37,920
+Interestingly, the denotation
+we have defined is also complete.
+
+168
+00:21:37,920 --> 00:21:39,880
+This means that
+the denotation
+
+169
+00:21:39,880 --> 00:21:44,000
+of the input or output relation
+are the same.
+
+170
+00:21:44,920 --> 00:21:47,000
+We have mechanically
+verified these results
+
+171
+00:21:47,000 --> 00:21:52,520
+in the clock proof systems...
+A denotation must treat
+
+172
+00:21:52,520 --> 00:21:55,440
+variables very carefully
+and here is why.
+
+173
+00:21:55,440 --> 00:21:57,520
+You should expect
+that the denotation
+
+174
+00:21:57,520 --> 00:22:01,960
+of a variable is just a lookup
+for the variable in the environment.
+
+175
+00:22:01,960 --> 00:22:06,120
+This is indeed
+a correct overall approximation
+
+176
+00:22:06,120 --> 00:22:09,840
+Within the paper we give
+a sound and complete definition.
+
+177
+00:22:09,840 --> 00:22:13,120
+Here it is. I will not
+explain all the details,
+
+178
+00:22:13,120 --> 00:22:18,200
+but just notice that the definition
+uses a relation self (x).
+
+179
+00:22:18,200 --> 00:22:21,640
+This relation states that
+the output must be exactly
+
+180
+00:22:21,640 --> 00:22:24,600
+what was given
+as input for the variable x.
+
+181
+00:22:24,600 --> 00:22:29,040
+In particular, this means that
+the denotation of the variable x
+
+182
+00:22:29,040 --> 00:22:33,400
+is a relation in which
+the variable x occurs.
+
+183
+00:22:33,400 --> 00:22:35,520
+In other words,
+the denotation of a term
+
+184
+00:22:35,520 --> 00:22:39,080
+may involve
+the names of its inputs.
+
+185
+00:22:39,080 --> 00:22:41,240
+This means that
+the semantic denotations
+
+186
+00:22:41,240 --> 00:22:45,080
+can refer to syntactic variables.
+This has consequences
+
+187
+00:22:45,080 --> 00:22:47,480
+on the well form,
+less on the definition,
+
+188
+00:22:47,480 --> 00:22:50,600
+you need to show for example,
+that the free variables
+
+189
+00:22:50,600 --> 00:22:53,440
+of your denotations
+are included in the variables
+
+190
+00:22:53,440 --> 00:22:55,800
+that are defined
+by the environment.
+
+191
+00:22:55,800 --> 00:22:58,200
+But what does it even mean?
+
+192
+00:22:58,200 --> 00:23:01,520
+To be a free variable
+for a relation?
+
+193
+00:23:01,520 --> 00:23:05,400
+Relations are semantic objects
+that pieces of syntax.
+
+194
+00:23:05,400 --> 00:23:07,880
+And to answer this question
+We use nominal techniques
+
+195
+00:23:07,880 --> 00:23:10,840
+to carefully handle names.
+If you want to dive
+
+196
+00:23:10,840 --> 00:23:15,000
+into the details, please
+have a look at the paper.
+
+197
+00:23:15,000 --> 00:23:17,320
+Now how do we
+handle functions?
+
+198
+00:23:17,320 --> 00:23:20,040
+Let's start with
+function application.
+
+199
+00:23:20,040 --> 00:23:22,600
+The denotation of T1
+apply to teach you
+
+200
+00:23:22,600 --> 00:23:27,000
+is the app
+of the denotations.
+
+201
+00:23:27,000 --> 00:23:30,600
+This is a relation
+where,when you take values
+
+202
+00:23:30,600 --> 00:23:35,320
+in the denotations of T1 and T2
+and apply them together,
+
+203
+00:23:35,320 --> 00:23:38,960
+you must obtain
+a term that evaluates to a value v.
+
+204
+00:23:38,960 --> 00:23:42,000
+And this result value v
+must be the value
+
+205
+00:23:42,000 --> 00:23:46,680
+in the final denotation.
+That's it for applications.
+
+206
+00:23:47,440 --> 00:23:50,160
+Now for functions,
+I won't have time to show you
+
+207
+00:23:50,160 --> 00:23:52,520
+the full definition
+of the denotation
+
+208
+00:23:52,520 --> 00:23:56,200
+but you should remember that
+it can be over approximated
+
+209
+00:23:56,200 --> 00:23:58,920
+by a relation that
+assuming some condition
+
+210
+00:23:58,920 --> 00:24:02,160
+on the arguments,
+gives you the denotation
+
+211
+00:24:02,160 --> 00:24:07,480
+of the functions body.
+Here is the unfolded definition
+
+212
+00:24:07,480 --> 00:24:10,080
+where I have chosen to hide
+some PCs related
+
+213
+00:24:10,080 --> 00:24:13,280
+to name management.
+Let's go through it.
+
+214
+00:24:13,280 --> 00:24:17,280
+This is a relation where the output
+is supposed to be a function
+
+215
+00:24:17,280 --> 00:24:20,960
+for which we will consider
+all possible applications.
+
+216
+00:24:20,960 --> 00:24:24,440
+When we apply this function
+to an argument v1
+
+217
+00:24:24,440 --> 00:24:28,480
+that satisfies the condition
+or if the evaluation
+
+218
+00:24:28,480 --> 00:24:31,840
+gives a result v2, then v2
+must be in the denotation
+
+219
+00:24:31,840 --> 00:24:35,040
+of the function body.
+But the arguments
+
+220
+00:24:35,040 --> 00:24:38,360
+and results must be valid
+for all possible extensions
+
+221
+00:24:38,360 --> 00:24:41,600
+of the input substitutions,
+as is usually from
+
+222
+00:24:41,600 --> 00:24:46,760
+the in Kripke style semantics.
+And this is essential
+
+223
+00:24:46,760 --> 00:24:48,640
+because this quantification
+of our extensions
+
+224
+00:24:48,640 --> 00:24:51,480
+of the inputs is the reason
+that makes definition
+
+225
+00:24:51,480 --> 00:24:57,040
+a stable relation. In the end,
+we have a modular
+
+226
+00:24:57,040 --> 00:25:00,360
+denotation rule for functions
+that we later use
+
+227
+00:25:00,360 --> 00:25:03,600
+as a basis for
+the modular analysis of functions.
+
+228
+00:25:04,840 --> 00:25:06,520
+So we have
+defined this denotation
+
+229
+00:25:06,520 --> 00:25:08,880
+is collecting semantics
+that describes exactly
+
+230
+00:25:08,880 --> 00:25:11,800
+the input output
+behaviour of programmes.
+
+231
+00:25:11,800 --> 00:25:16,200
+And we use it as a starting point
+to build a static analysis.
+
+232
+00:25:16,200 --> 00:25:20,000
+So following the second operation
+interpretation methodology,
+
+233
+00:25:20,000 --> 00:25:23,040
+we applied successive
+instruction steps on.
+
+234
+00:25:23,040 --> 00:25:26,200
+So far our denotation
+tells us how the inputs
+
+235
+00:25:26,200 --> 00:25:31,720
+are related to the outputs globally.
+We first apply a variance
+
+236
+00:25:31,720 --> 00:25:34,720
+of the independent
+attribute abstraction,
+
+237
+00:25:34,720 --> 00:25:37,560
+working at this point
+what we call point-wise relations,
+
+238
+00:25:37,560 --> 00:25:41,320
+that, that tell us how each input
+is independently related
+
+239
+00:25:41,320 --> 00:25:44,720
+to the output.
+For each input x,
+
+240
+00:25:44,720 --> 00:25:48,760
+we obtain a binary relation
+on values, that says
+
+241
+00:25:48,760 --> 00:25:51,880
+how sigma of x is related
+to the output v.
+
+242
+00:25:52,800 --> 00:25:56,800
+Then, we abstract
+these binary relations on values
+
+243
+00:25:56,800 --> 00:25:59,400
+into an abstract domain
+that we call correlations,
+
+244
+00:25:59,400 --> 00:26:02,400
+and with which
+we can effectively compute.
+
+245
+00:26:02,920 --> 00:26:04,560
+This abstract domain
+is an extension
+
+246
+00:26:04,560 --> 00:26:07,720
+of the correlation of subdomain
+from our previous work
+
+247
+00:26:07,720 --> 00:26:10,640
+that we extended
+with first class functions.
+
+248
+00:26:10,640 --> 00:26:12,640
+You will find plenty of details
+on how we did this in the...
+
+249
+00:26:13,320 --> 00:26:14,320
+...paper.
+
+250
+00:26:15,200 --> 00:26:18,560
+We implemented the resulting
+analysis in OCaml.
+
+251
+00:26:18,560 --> 00:26:20,680
+This is a bottom-up modular analyser
+
+252
+00:26:20,680 --> 00:26:23,480
+that analyses functions only once.
+
+253
+00:26:23,480 --> 00:26:27,040
+For every function, it
+computes a function summary
+
+254
+00:26:27,040 --> 00:26:30,600
+that approximates the extensional
+behaviour of that function.
+
+255
+00:26:30,600 --> 00:26:33,280
+The analysis was really not
+designed to compete with
+
+256
+00:26:33,280 --> 00:26:39,120
+existing control for analysis
+and it does not compete.
+
+257
+00:26:39,120 --> 00:26:41,960
+Still, it can give
+very precise results
+
+258
+00:26:41,960 --> 00:26:44,440
+even though it follows
+a fully modular approach.
+
+259
+00:26:45,320 --> 00:26:48,520
+Let's consider this
+classic CFA example.
+
+260
+00:26:48,520 --> 00:26:50,760
+This program calls
+the identity function twice
+
+261
+00:26:50,760 --> 00:26:54,560
+on two different arguments and returns
+the result of one of the codes.
+
+262
+00:26:54,560 --> 00:26:58,320
+It's an example where 0-CFA
+is not precise enough
+
+263
+00:26:58,320 --> 00:27:01,920
+and 1-CFA is required to
+achieve good precision.
+
+264
+00:27:02,640 --> 00:27:07,000
+The analyser first computes
+a summary for the identity function.
+
+265
+00:27:07,000 --> 00:27:09,960
+The summary tells us
+that this is a function
+
+266
+00:27:09,960 --> 00:27:14,000
+whose result is equal to its argument
+whatever is the coding context.
+
+267
+00:27:14,800 --> 00:27:18,320
+This summary is instantiated
+once for the first application.
+
+268
+00:27:18,320 --> 00:27:23,240
+We get that y1 must be bound
+to the first injection.
+
+269
+00:27:23,240 --> 00:27:27,440
+Then, the summary is
+instantiated the second time
+
+270
+00:27:27,440 --> 00:27:30,960
+for the second application and
+
+271
+00:27:30,960 --> 00:27:34,360
+the analysis tells us that y2 must
+be bumped to the second injection.
+
+272
+00:27:34,360 --> 00:27:36,360
+Finally, the analysis
+for the results
+
+273
+00:27:36,360 --> 00:27:39,120
+is the domain we have
+obtained for y1,
+
+274
+00:27:39,120 --> 00:27:41,920
+that is to say it has to
+be the first injection.
+
+275
+00:27:42,600 --> 00:27:44,920
+On this example, we can
+see that the analysis
+
+276
+00:27:44,920 --> 00:27:49,160
+gives the most precise results
+and is on par with 1-CFA.
+
+277
+00:27:49,640 --> 00:27:52,480
+To wrap up, we have defined
+solid foundations for the
+
+278
+00:27:52,480 --> 00:27:54,720
+relational analysis of
+higher-order programs
+
+279
+00:27:54,720 --> 00:27:57,840
+by means of a sound
+and complete relational semantics
+
+280
+00:27:57,840 --> 00:27:59,440
+for the lambda calculus.
+
+281
+00:27:59,440 --> 00:28:03,280
+We exploited this collecting semantics
+to design an effective analysis
+
+282
+00:28:03,280 --> 00:28:09,240
+and we provide an artefact
+for the Coq formulization
+
+283
+00:28:09,240 --> 00:28:11,400
+of the theoretical development.
+
+284
+00:28:13,000 --> 00:28:16,480
+As a long-term goal, we would
+like to integrate such analysis
+
+285
+00:28:16,480 --> 00:28:19,120
+with a proof assistant to
+reduce the proof efforts
+
+286
+00:28:19,120 --> 00:28:21,520
+for the verification of
+large programs.
+
+287
+00:28:22,280 --> 00:28:26,800
+On the shorter term, we want to
+support more language features
+
+288
+00:28:26,800 --> 00:28:29,280
+and to increase
+the precision of the analysis,
+
+289
+00:28:29,280 --> 00:28:33,040
+for example by exploiting
+numeric abstract domains.
+
+290
+00:28:33,040 --> 00:28:36,960
+Finally, we are convinced
+that our denotation semantics
+
+291
+00:28:36,960 --> 00:28:39,320
+can serve as a basis
+for the future design
+
+292
+00:28:39,320 --> 00:28:42,360
+of novel relational
+control for analysis.
+
+293
+00:28:42,360 --> 00:28:45,000
+That's all. Thank you for watching.
+
+294
+00:28:46,520 --> 00:28:51,520
+(AUDIENCE CLAP)
+
+295
+00:28:54,640 --> 00:28:56,000
+ADAM: Thanks Benoit.
+
+296
+00:28:56,000 --> 00:28:57,640
+If you're watching in
+the New York time band,
+
+297
+00:28:57,640 --> 00:28:59,600
+you should now see a link
+appear in Clowdr
+
+298
+00:28:59,600 --> 00:29:03,560
+to join a video chat where you
+can ask Benoit questions.
+
+299
+00:29:03,560 --> 00:29:07,040
+Unfortunately, he is not
+available in the Asia time band.
+
+300
+00:29:12,440 --> 00:29:15,040
+OK. Let's get started
+with the next talk.
+
+301
+00:29:15,040 --> 00:29:18,640
+We have Scott Smith on symbolic
+evaluation of functional languages.
+
+302
+00:29:19,120 --> 00:29:20,720
+SCOTT SMITH: Welcome to our talk on
+
+303
+00:29:20,720 --> 00:29:24,400
+Higher-Order Demand-Driven
+Symbolic Evaluation.
+
+304
+00:29:24,400 --> 00:29:26,760
+Let's parse this title a bit.
+
+305
+00:29:26,760 --> 00:29:29,640
+Particularly, what is
+meant by demand-driven?
+
+306
+00:29:29,640 --> 00:29:31,360
+Demand-driven means goal-directed.
+
+307
+00:29:31,360 --> 00:29:33,640
+So, rather than working forward,
+
+308
+00:29:33,640 --> 00:29:36,440
+we're going to start with
+a goal and work backward.
+
+309
+00:29:36,440 --> 00:29:40,240
+And this is well-known from logic
+programming and tactic-based provers
+
+310
+00:29:40,240 --> 00:29:41,800
+where it's clear where your goal is.
+
+311
+00:29:41,800 --> 00:29:44,720
+And so, it's best to start from
+that goal and work backward
+
+312
+00:29:44,720 --> 00:29:47,000
+rather than trying to forward-chain,
+
+313
+00:29:47,000 --> 00:29:48,760
+although, sometimes
+forward-chain is good,
+
+314
+00:29:48,760 --> 00:29:51,840
+channeling your... shooting
+in the dark a lot of times
+
+315
+00:29:51,840 --> 00:29:53,840
+and you're very far
+away from your target.
+
+316
+00:29:53,840 --> 00:29:55,800
+So, goal-directed is
+clearly a win there
+
+317
+00:29:55,800 --> 00:29:57,400
+and it's the common approach.
+
+318
+00:29:57,400 --> 00:29:59,880
+Now, if we look at program analysis,
+
+319
+00:29:59,880 --> 00:30:01,800
+symbolic executors and interpreters,
+
+320
+00:30:01,800 --> 00:30:04,440
+it's more the opposite
+that tends to be...
+
+321
+00:30:04,440 --> 00:30:07,160
+You don't have a
+
+322
+00:30:07,160 --> 00:30:10,160
+fixed (INAUDIBLE)
+goal in this space.
+
+323
+00:30:10,160 --> 00:30:13,440
+It tends to be one around
+the whole program in all these cases.
+
+324
+00:30:13,440 --> 00:30:15,160
+So, they tend to be forward.
+
+325
+00:30:15,160 --> 00:30:17,240
+But there are some cases when
+
+326
+00:30:17,240 --> 00:30:19,920
+demand is useful
+if we have a particular
+
+327
+00:30:19,920 --> 00:30:22,760
+part of the program you want to
+get a very accurate result on
+
+328
+00:30:22,760 --> 00:30:24,520
+and a
+
+329
+00:30:24,520 --> 00:30:27,080
+demand program analysis
+could be effective
+
+330
+00:30:27,080 --> 00:30:28,680
+and you don't have to go
+through all the work
+
+331
+00:30:28,680 --> 00:30:30,280
+on the whole program.
+
+332
+00:30:30,280 --> 00:30:34,880
+And so, Reps and collaborators wrote
+a series of influential papers
+
+333
+00:30:34,880 --> 00:30:37,720
+doing this in
+the imperative language space
+
+334
+00:30:37,720 --> 00:30:40,240
+and there have been a few efforts
+in the functional space -
+
+335
+00:30:40,240 --> 00:30:42,520
+one is DDPA which is our work,
+
+336
+00:30:42,520 --> 00:30:44,160
+so, there are bends on functional
+
+337
+00:30:44,160 --> 00:30:45,240
+demand
+
+338
+00:30:45,240 --> 00:30:48,840
+program analysis. And in
+the symbolic execution
+
+339
+00:30:48,840 --> 00:30:54,560
+space, snugglebug is an imperative
+demand symbolic executor
+
+340
+00:30:54,560 --> 00:30:57,720
+and this paper is basically
+about filling in this box
+
+341
+00:30:57,720 --> 00:31:04,000
+with DDSE which is our functional
+demand symbolic executor.
+
+342
+00:31:04,000 --> 00:31:07,560
+And to do a functional
+demand symbolic executor,
+
+343
+00:31:07,560 --> 00:31:11,360
+we need an interpreter which is demand
+in which we're going to symbolize.
+
+344
+00:31:11,360 --> 00:31:14,480
+And so, we're also going to present
+DDI which is a new notion
+
+345
+00:31:14,480 --> 00:31:17,560
+of functional interpreter and
+
+346
+00:31:17,560 --> 00:31:21,280
+it is novel and has no substitution,
+environment or closures
+
+347
+00:31:21,280 --> 00:31:23,360
+because you can't...
+
+348
+00:31:23,360 --> 00:31:25,760
+These data sources are built
+on the forward direction
+
+349
+00:31:25,760 --> 00:31:28,320
+and we're not running forward.
+
+350
+00:31:28,320 --> 00:31:30,720
+And so, the interpreter itself
+is pretty interesting.
+
+351
+00:31:31,800 --> 00:31:33,480
+And so, the outline of the talk
+
+352
+00:31:33,480 --> 00:31:36,720
+is we're going to briefly talk
+about the language syntax.
+
+353
+00:31:36,720 --> 00:31:39,160
+Then, we're going to do
+this, novel interpreter.
+
+354
+00:31:39,160 --> 00:31:41,320
+And then, we're going to show
+how it can be generalized
+
+355
+00:31:41,320 --> 00:31:42,880
+to a symbolic evaluator.
+
+356
+00:31:42,880 --> 00:31:45,680
+And then, we're going to look at
+our implementation very briefly.
+
+357
+00:31:45,680 --> 00:31:48,440
+So, the syntax we have is
+pretty standard, very simple,
+
+358
+00:31:48,440 --> 00:31:50,640
+functional language in our theory.
+
+359
+00:31:50,640 --> 00:31:53,360
+And we're going to have input because
+
+360
+00:31:53,360 --> 00:31:56,760
+the way we're going to test
+our symbolic evaluators
+
+361
+00:31:56,760 --> 00:31:59,040
+is we're going to find
+
+362
+00:31:59,040 --> 00:32:02,040
+inputs that reads particular
+line of the program
+
+363
+00:32:02,040 --> 00:32:03,560
+and that's sort of our concrete
+
+364
+00:32:03,560 --> 00:32:05,760
+goal to show that the method works.
+
+365
+00:32:06,400 --> 00:32:08,920
+And recursion is this
+encoded via self-passing
+
+366
+00:32:08,920 --> 00:32:12,120
+and the implementation also
+has additional features
+
+367
+00:32:12,120 --> 00:32:14,800
+such as recursive data structures.
+
+368
+00:32:14,800 --> 00:32:17,920
+And the syntax we
+use is A-normal Form
+
+369
+00:32:17,920 --> 00:32:22,800
+and this is an example
+and you can see in A-normal Form,
+
+370
+00:32:22,800 --> 00:32:24,360
+every operator
+
+371
+00:32:24,360 --> 00:32:26,840
+the components are all atomic
+and this exposes the order
+
+372
+00:32:26,840 --> 00:32:28,200
+which is very useful because
+
+373
+00:32:28,200 --> 00:32:29,920
+we're going to be running
+programs backwards.
+
+374
+00:32:29,920 --> 00:32:33,160
+So, reading right to
+left is very handy
+
+375
+00:32:33,160 --> 00:32:35,160
+to know the order more explicitly.
+
+376
+00:32:35,160 --> 00:32:39,160
+And also, variable name's unique.
+So, here we have x, y and ret.
+
+377
+00:32:39,160 --> 00:32:41,600
+And those serve as
+the program points because
+
+378
+00:32:41,600 --> 00:32:42,760
+they're unique.
+
+379
+00:32:42,760 --> 00:32:44,000
+So, there's...
+
+380
+00:32:44,000 --> 00:32:46,280
+We'll use that to name
+points in a program.
+
+381
+00:32:47,240 --> 00:32:48,440
+So,
+
+382
+00:32:49,000 --> 00:32:51,960
+the main function we want to
+find is a lookup function.
+
+383
+00:32:51,960 --> 00:32:55,920
+And the lookup function, we want
+to find the value of a variable.
+
+384
+00:32:55,920 --> 00:32:57,800
+So, that's the variable
+we want to lookup.
+
+385
+00:32:57,800 --> 00:33:01,120
+That's the point at which we want to
+start in the program to look it up.
+
+386
+00:33:01,120 --> 00:33:04,480
+And this one parameter, we'll talk
+more about, is the call stack
+
+387
+00:33:04,480 --> 00:33:07,240
+which we use to disambiguate
+different activations
+
+388
+00:33:07,240 --> 00:33:09,720
+and the final result is a v.
+
+389
+00:33:09,720 --> 00:33:10,880
+(CLEARS THROAT)
+
+390
+00:33:10,880 --> 00:33:13,160
+So, yes, this is the program point.
+
+391
+00:33:13,160 --> 00:33:14,640
+Call stack.
+
+392
+00:33:14,640 --> 00:33:16,000
+In general, this is
+going to be a list,
+
+393
+00:33:16,000 --> 00:33:17,720
+but for now, we're just
+covering the case
+
+394
+00:33:17,720 --> 00:33:18,960
+where it's a single term.
+
+395
+00:33:18,960 --> 00:33:22,520
+And the idea is we're just going to
+walk back through the program,
+
+396
+00:33:22,520 --> 00:33:23,960
+define the variable
+
+397
+00:33:23,960 --> 00:33:24,960
+as the intuition.
+
+398
+00:33:24,960 --> 00:33:28,920
+So, here the variable y, if we
+actually add this definition,
+
+399
+00:33:28,920 --> 00:33:31,840
+it's axiomatic that the value is 1,
+
+400
+00:33:31,840 --> 00:33:35,480
+but if we're down here
+at this line f1...
+
+401
+00:33:35,480 --> 00:33:39,640
+So, remember the line we're
+looking up from the program point.
+
+402
+00:33:39,640 --> 00:33:44,320
+So, define y. This y, we basically
+can search back up through here
+
+403
+00:33:44,320 --> 00:33:46,120
+and we'll find it up here.
+
+404
+00:33:46,120 --> 00:33:48,080
+And more interesting if we're in
+
+405
+00:33:48,080 --> 00:33:50,400
+for example, this variable x here,
+
+406
+00:33:50,400 --> 00:33:52,680
+the only way we're going to
+reach that is that via call
+
+407
+00:33:52,680 --> 00:33:54,080
+from one of these call sites.
+
+408
+00:33:54,080 --> 00:33:56,800
+And here, this disambiguates
+which call we took.
+
+409
+00:33:56,800 --> 00:33:59,800
+So, we're in the call f1.
+That's how we got there.
+
+410
+00:33:59,800 --> 00:34:03,240
+And we are pretty clear
+if we're looking up x.
+
+411
+00:34:03,240 --> 00:34:07,200
+From the call f1, x is
+the argument passed in as y
+
+412
+00:34:07,200 --> 00:34:09,600
+and then, we can look up
+y and in turn get 1.
+
+413
+00:34:09,600 --> 00:34:11,160
+So, 1 is result of that.
+
+414
+00:34:12,160 --> 00:34:14,280
+So, let's go through that in detail
+
+415
+00:34:14,280 --> 00:34:16,440
+how we traced that call.
+
+416
+00:34:16,440 --> 00:34:19,480
+So, a little more about how
+the actual lookup function works.
+
+417
+00:34:20,240 --> 00:34:22,520
+And so, to lookup f1,
+
+418
+00:34:22,520 --> 00:34:26,840
+at this point, we know that if
+the return result of the function f.
+
+419
+00:34:26,840 --> 00:34:32,000
+So, it suffices to lookup
+the return variable fret in that code
+
+420
+00:34:32,000 --> 00:34:34,440
+at the last line of
+code which is fret.
+
+421
+00:34:34,440 --> 00:34:37,480
+So, we're looking up from
+the point that we're pointing to
+
+422
+00:34:37,480 --> 00:34:38,760
+and we're looking up that variable
+
+423
+00:34:38,760 --> 00:34:41,040
+and the value is immediately
+there. It's right in front of us.
+
+424
+00:34:41,040 --> 00:34:44,360
+And by the way, we have
+pushed a call frame
+
+425
+00:34:44,360 --> 00:34:47,080
+because we're in this
+call. So, f1 means the
+
+426
+00:34:47,080 --> 00:34:50,640
+the call frame that we're
+in on the call stack.
+
+427
+00:34:50,640 --> 00:34:52,040
+And so, it suffices
+
+428
+00:34:52,040 --> 00:34:54,520
+for fret, clearly, it's x+1.
+
+429
+00:34:54,520 --> 00:34:57,360
+So, I get is lookup x and add
+1 to it and have our results.
+
+430
+00:34:57,360 --> 00:35:00,160
+So, we're going to lookup x.
+That's the underlying lookup.
+
+431
+00:35:00,160 --> 00:35:01,640
+So, looking up x
+
+432
+00:35:01,640 --> 00:35:04,040
+from the top of the function,
+
+433
+00:35:04,040 --> 00:35:05,880
+at this point now it's pretty clear
+
+434
+00:35:05,880 --> 00:35:08,760
+that since we came
+in via the call f1,
+
+435
+00:35:09,480 --> 00:35:12,040
+we know that we came
+in this call here
+
+436
+00:35:12,040 --> 00:35:14,720
+and the parameter y is
+what gets passed to x.
+
+437
+00:35:14,720 --> 00:35:17,440
+So, just look up x, it
+suffices to look up y
+
+438
+00:35:17,440 --> 00:35:19,920
+from the top of
+the program, the empty stack
+
+439
+00:35:19,920 --> 00:35:22,200
+and that pretty
+clearly is going to be 1.
+
+440
+00:35:22,200 --> 00:35:23,960
+And the final result
+is 1+1 which is 2.
+
+441
+00:35:24,720 --> 00:35:27,280
+So, that's a simple lookup.
+
+442
+00:35:27,280 --> 00:35:30,600
+And a little more complicated case
+is if we have non-local variables.
+
+443
+00:35:31,360 --> 00:35:35,800
+And here's a simple example of
+a curated addition function
+
+444
+00:35:35,800 --> 00:35:39,320
+and let's start in
+the middle of this look up.
+
+445
+00:35:39,320 --> 00:35:41,520
+So, we want to lookup the value of x.
+
+446
+00:35:41,520 --> 00:35:43,920
+And this is the tricky case
+because it's a non-local variable.
+
+447
+00:35:43,920 --> 00:35:46,000
+This is defined all the way out here
+
+448
+00:35:46,000 --> 00:35:49,240
+and the way we got that - the way
+we're actually going to run this code
+
+449
+00:35:49,240 --> 00:35:51,760
+if we get the program, it's going to
+be from this call site here
+
+450
+00:35:51,760 --> 00:35:55,480
+because first, we got 5 for x
+and 1 for y and then, we're going to
+
+451
+00:35:55,480 --> 00:35:59,920
+do this call, in which
+case we're in this code.
+
+452
+00:35:59,920 --> 00:36:02,680
+So, that means that we
+had to have come in
+
+453
+00:36:02,680 --> 00:36:06,000
+via this call site,
+
+454
+00:36:06,000 --> 00:36:09,720
+ret call site here. So, this
+is an example of where we
+
+455
+00:36:10,720 --> 00:36:13,080
+could have gotten to
+
+456
+00:36:13,080 --> 00:36:15,680
+you know, lookup from the end
+of the program for example.
+
+457
+00:36:15,680 --> 00:36:19,400
+And so, we're at that line
+here gyret, its definition
+
+458
+00:36:19,400 --> 00:36:21,000
+we want to find the value of x.
+
+459
+00:36:21,000 --> 00:36:22,480
+So, how do we do?
+
+460
+00:36:22,480 --> 00:36:26,200
+Well, x is not in scope but
+
+461
+00:36:26,200 --> 00:36:29,560
+the principle of lexical scoping
+is the function we are running
+
+462
+00:36:29,560 --> 00:36:34,920
+i.e. this function here,
+gret, we know that the
+
+463
+00:36:34,920 --> 00:36:37,440
+x variable must have been in scope
+
+464
+00:36:37,440 --> 00:36:39,440
+when that function was defined
+
+465
+00:36:39,440 --> 00:36:41,000
+as you can see.
+
+466
+00:36:41,000 --> 00:36:42,880
+It's in scope at
+the function definition point.
+
+467
+00:36:42,880 --> 00:36:46,720
+And so, what we do is we know that
+that function is the value of g5
+
+468
+00:36:46,720 --> 00:36:49,440
+because that's
+the function we called -
+
+469
+00:36:49,440 --> 00:36:52,320
+this is the call site
+we came from, ret
+
+470
+00:36:52,320 --> 00:36:54,240
+and that function g5
+is called. So, the...
+
+471
+00:36:54,240 --> 00:36:56,920
+What we do is we write
+a lookup like this which means
+
+472
+00:36:56,920 --> 00:36:59,520
+let's first look for
+the function definition
+
+473
+00:36:59,520 --> 00:37:01,720
+for g5's code is
+
+474
+00:37:01,720 --> 00:37:05,880
+and then, pop up that off
+and resume a lookup for x.
+
+475
+00:37:05,880 --> 00:37:08,200
+And we should find it in that point.
+
+476
+00:37:08,200 --> 00:37:09,760
+So, let's do that.
+
+477
+00:37:09,760 --> 00:37:11,120
+(CLEARS THROAT)
+
+478
+00:37:11,120 --> 00:37:14,480
+So, define g5, in fact is
+the return result of this call.
+
+479
+00:37:14,480 --> 00:37:18,400
+So, we want to pop into g
+body and look for gret
+
+480
+00:37:18,400 --> 00:37:20,680
+which will be the value of g5.
+
+481
+00:37:20,680 --> 00:37:24,480
+So, to look up g5, it suffices to
+look at gret from within this call
+
+482
+00:37:25,000 --> 00:37:26,840
+at this line.
+
+483
+00:37:27,560 --> 00:37:30,720
+So, let's do that and to define
+
+484
+00:37:31,640 --> 00:37:33,080
+define gret,
+
+485
+00:37:33,560 --> 00:37:35,680
+well, it's right
+there - we found it.
+
+486
+00:37:35,680 --> 00:37:36,880
+It's the last line
+
+487
+00:37:36,880 --> 00:37:38,080
+of
+
+488
+00:37:38,080 --> 00:37:39,240
+the
+
+489
+00:37:39,240 --> 00:37:41,400
+code. So, all we have to do now
+
+490
+00:37:41,400 --> 00:37:42,760
+is
+
+491
+00:37:42,760 --> 00:37:44,440
+to pop
+
+492
+00:37:44,440 --> 00:37:46,360
+this frame of a stack and
+
+493
+00:37:46,360 --> 00:37:49,440
+resume looking up for
+x and look, we win,
+
+494
+00:37:49,440 --> 00:37:51,000
+x is within scope now.
+
+495
+00:37:51,000 --> 00:37:54,760
+So, in fact, it should be very
+easy to find the value of x.
+
+496
+00:37:54,760 --> 00:37:59,200
+It in fact is the parameter
+at the call site g5
+
+497
+00:37:59,200 --> 00:38:01,600
+which in fact is 5.
+
+498
+00:38:01,600 --> 00:38:03,000
+So, that's the answer.
+
+499
+00:38:03,000 --> 00:38:04,280
+And so, in general, the lookup,
+
+500
+00:38:04,280 --> 00:38:06,640
+if we have higher
+and higher order functions,
+
+501
+00:38:06,640 --> 00:38:08,480
+this list can grow longer and longer
+
+502
+00:38:10,280 --> 00:38:14,560
+but this is the full general
+signature of our lookup.
+
+503
+00:38:14,560 --> 00:38:17,680
+So, it has two lists of
+variables basically
+
+504
+00:38:17,680 --> 00:38:20,720
+and that's all of the (INAUDIBLE)
+structure of this interpreter.
+
+505
+00:38:21,840 --> 00:38:23,520
+And here are the full rules.
+
+506
+00:38:23,520 --> 00:38:24,680
+You can see there's...
+
+507
+00:38:24,680 --> 00:38:27,320
+It's a lot more complicated
+than the pure lambda calculus.
+
+508
+00:38:28,560 --> 00:38:31,160
+So, there are a lot of subtleties
+here but that's fit on the slide
+
+509
+00:38:31,160 --> 00:38:33,400
+so it's not hopelessly complex.
+
+510
+00:38:34,400 --> 00:38:37,840
+So, let's now look at how we make
+a symbolic version of this.
+
+511
+00:38:37,840 --> 00:38:40,280
+So, it's very similar parameters
+
+512
+00:38:40,280 --> 00:38:43,160
+and instead of returning a value,
+you're returning a variable
+
+513
+00:38:43,160 --> 00:38:44,880
+which in then in the constraints,
+
+514
+00:38:44,880 --> 00:38:46,640
+we also have the constraints set
+
+515
+00:38:46,640 --> 00:38:48,400
+and that is we're going to
+constrain that variable
+
+516
+00:38:48,400 --> 00:38:50,440
+to have some properties
+
+517
+00:38:50,440 --> 00:38:51,440
+(CLEARS THROAT)
+
+518
+00:38:51,440 --> 00:38:52,920
+which we can then use
+an SMT solver to find
+
+519
+00:38:52,920 --> 00:38:55,520
+an actual solution for...
+
+520
+00:38:55,520 --> 00:38:58,160
+And so, yeah, so this S here
+means the symbolic version
+
+521
+00:38:58,160 --> 00:39:00,080
+of lookups.
+
+522
+00:39:00,080 --> 00:39:04,000
+So, let's run that on the same example,
+the same lookup of f1's value.
+
+523
+00:39:04,000 --> 00:39:07,000
+So, we go into fret
+and look up fret's value
+
+524
+00:39:07,000 --> 00:39:09,760
+and we can immediately see
+it's right there. It's x+1.
+
+525
+00:39:10,760 --> 00:39:13,320
+So, actually, this time we're
+going to return a variable
+
+526
+00:39:13,320 --> 00:39:17,440
+and remember variables are
+indexed by the call stack.
+
+527
+00:39:17,440 --> 00:39:19,320
+So, this variable's indexed by
+
+528
+00:39:20,000 --> 00:39:21,080
+F1 in this case,
+
+529
+00:39:21,080 --> 00:39:24,080
+'cause that's how we came
+into this function.
+
+530
+00:39:24,080 --> 00:39:25,720
+So that's in fact
+the result of the lookup.
+
+531
+00:39:25,720 --> 00:39:28,280
+So we've done
+the result of looking up,
+
+532
+00:39:28,280 --> 00:39:33,560
+but additionally, we have a constraint
+which requires this variable
+
+533
+00:39:33,560 --> 00:39:36,880
+to have the value of whatever
+x's lookup is plus one.
+
+534
+00:39:36,880 --> 00:39:39,560
+And remember this lookup here is
+in turn going to return a variable.
+
+535
+00:39:39,560 --> 00:39:42,600
+So let's proceed with that
+lookup and see what it returns.
+
+536
+00:39:42,600 --> 00:39:45,760
+So to lookup x from this point here,
+
+537
+00:39:45,760 --> 00:39:52,400
+it suffices to look up the parameter
+of the coset, that coset was f1,
+
+538
+00:39:52,400 --> 00:39:55,840
+so the parameter is y
+so it suffices to look up y
+
+539
+00:39:55,840 --> 00:39:59,840
+and if we see, if we go up, we see
+y is up at the top of the program.
+
+540
+00:39:59,840 --> 00:40:01,080
+It's in fact an input.
+
+541
+00:40:01,080 --> 00:40:03,280
+So this is, by the way,
+use of the input syntax
+
+542
+00:40:03,280 --> 00:40:07,160
+and inputs are unconstrained because
+there's, they could be arbitrary.
+
+543
+00:40:07,160 --> 00:40:09,120
+And so in the symbolic execution,
+
+544
+00:40:09,120 --> 00:40:11,880
+we just return the variable
+with no added constraints.
+
+545
+00:40:11,880 --> 00:40:14,720
+So that means that
+the final constraint set
+
+546
+00:40:14,720 --> 00:40:17,440
+is that this fret equals
+this lookup here,
+
+547
+00:40:17,440 --> 00:40:20,440
+which returned just the value
+y in the empty stack plus one
+
+548
+00:40:20,440 --> 00:40:21,440
+so we get that.
+
+549
+00:40:21,440 --> 00:40:24,000
+That's the only constraint on
+this very simple example.
+
+550
+00:40:24,000 --> 00:40:27,640
+And it's clear there are many
+satisfiable solutions to it.
+
+551
+00:40:27,640 --> 00:40:31,400
+So that's an example of
+a symbolic execution.
+
+552
+00:40:32,160 --> 00:40:37,400
+So in the paper, we make
+a formal operational semantics
+
+553
+00:40:37,400 --> 00:40:39,240
+for all these systems.
+
+554
+00:40:39,240 --> 00:40:42,160
+And the main result we prove
+the most difficult result
+
+555
+00:40:42,160 --> 00:40:45,680
+is that a backward running
+demand operational semantics,
+
+556
+00:40:45,680 --> 00:40:48,600
+this lookup operation
+is in fact isomorphic
+
+557
+00:40:48,600 --> 00:40:50,800
+to a forward running
+operational semantics.
+
+558
+00:40:50,800 --> 00:40:51,920
+And it's a delicate proof
+
+559
+00:40:51,920 --> 00:40:55,040
+because they're running
+in opposite directions.
+
+560
+00:40:55,040 --> 00:40:59,320
+And we also proved that the symbolic
+evaluator is sounding complete
+
+561
+00:40:59,320 --> 00:41:02,080
+with respect to
+the operational semantics.
+
+562
+00:41:02,080 --> 00:41:05,560
+And a few subtle details that we
+have to skip because of time
+
+563
+00:41:05,560 --> 00:41:08,320
+is that the call stack, when
+we're starting in the middle,
+
+564
+00:41:08,320 --> 00:41:09,360
+we really want to
+start in the middle
+
+565
+00:41:09,360 --> 00:41:10,680
+'cause that's what
+domain lookup means.
+
+566
+00:41:10,680 --> 00:41:12,680
+We want to start from any
+point and you might not,
+
+567
+00:41:12,680 --> 00:41:16,640
+you will have no idea if the call
+stack when you start that run
+
+568
+00:41:16,640 --> 00:41:18,440
+and we may need to
+incrementally infer
+
+569
+00:41:18,440 --> 00:41:21,280
+where the call stack is as we go.
+
+570
+00:41:21,280 --> 00:41:24,000
+And also input will not come
+in their forward order
+
+571
+00:41:24,000 --> 00:41:25,680
+when we're doing a reverse lookup
+
+572
+00:41:25,680 --> 00:41:28,840
+and we need to basically do
+a sorting operation on the input
+
+573
+00:41:28,840 --> 00:41:30,800
+and that's all in the paper.
+
+574
+00:41:30,800 --> 00:41:36,920
+So for implementation, the artifact
+we produce is a test generator.
+
+575
+00:41:36,920 --> 00:41:39,600
+So given a program
+and a target line,
+
+576
+00:41:39,600 --> 00:41:43,680
+we will find inputs which reach
+that target line of code.
+
+577
+00:41:43,680 --> 00:41:47,960
+And we have an initial proof-of-concept
+implementation in OCaml.
+
+578
+00:41:47,960 --> 00:41:51,080
+And in order to make
+it usable at all,
+
+579
+00:41:51,080 --> 00:41:53,720
+we have to dovetail on all
+the different search paths,
+
+580
+00:41:53,720 --> 00:41:55,840
+or we get lost down
+some infinite path.
+
+581
+00:41:55,840 --> 00:42:00,120
+And so we use a coroutine
+non-determinism monad for that purpose.
+
+582
+00:42:00,120 --> 00:42:02,240
+And just to test it
+out a little bit,
+
+583
+00:42:02,240 --> 00:42:06,840
+there is a paper that has
+a forward symbolic evaluator in it,
+
+584
+00:42:06,840 --> 00:42:11,080
+and we basically solve
+the benchmarks from that paper
+
+585
+00:42:12,080 --> 00:42:15,560
+just sort of as a test to make
+sure our system is reasonable.
+
+586
+00:42:16,800 --> 00:42:18,960
+And to compare very
+briefly with related work,
+
+587
+00:42:18,960 --> 00:42:23,680
+so snugglebug is an imperative
+demand symbolic executer.
+
+588
+00:42:24,160 --> 00:42:26,800
+The Cruanes work that
+we just mentioned
+
+589
+00:42:26,800 --> 00:42:30,640
+is a forward functional
+symbolic executer.
+
+590
+00:42:30,640 --> 00:42:32,000
+And it also has restrictions.
+
+591
+00:42:32,000 --> 00:42:34,280
+For example, all functions
+have to be total
+
+592
+00:42:35,280 --> 00:42:37,600
+which we don't have in our system.
+
+593
+00:42:37,600 --> 00:42:41,240
+And Rosette is another forward
+symbolic execution framework.
+
+594
+00:42:41,240 --> 00:42:43,320
+And it has some restrictions on
+
+595
+00:42:43,960 --> 00:42:47,240
+data types not being
+arbitrarily sized.
+
+596
+00:42:47,240 --> 00:42:49,120
+And our work has,
+
+597
+00:42:49,120 --> 00:42:54,080
+it's the first that we know of demand
+functional symbolic evaluator,
+
+598
+00:42:54,080 --> 00:42:58,240
+and it has no restrictions
+on datatypes or recursion,
+
+599
+00:42:58,240 --> 00:43:01,440
+and we've proven it sound
+and complete. Thank you.
+
+600
+00:43:02,000 --> 00:43:07,000
+(APPLAUSE)
+
+601
+00:43:10,880 --> 00:43:11,880
+ADAM: Thanks, Scott.
+
+602
+00:43:11,880 --> 00:43:13,960
+In either time band, you should
+see a link appearing in Cloud
+
+603
+00:43:13,960 --> 00:43:17,560
+or to join a live Q&A session with
+at least one of the authors.
+
+604
+00:43:23,640 --> 00:43:25,840
+Alright, next up is Kazutaka Matsuda
+
+605
+00:43:25,840 --> 00:43:28,960
+on A language for partially
+invertible computations.
+
+606
+00:43:28,960 --> 00:43:32,040
+KAZUTAKA MATSUDA: Hello, I'm Kazutaka
+Matsuda from Tohoku University.
+
+607
+00:43:32,040 --> 00:43:35,480
+Today I'd like to introduce our
+new programming language, SPARCL,
+
+608
+00:43:35,480 --> 00:43:39,280
+which is a language for partially
+invertible computation.
+
+609
+00:43:39,280 --> 00:43:44,000
+SPARCL is named after a system for
+partially invertible computation
+
+610
+00:43:44,000 --> 00:43:45,760
+with linear types.
+
+611
+00:43:46,760 --> 00:43:50,960
+Let us start with a background:
+Invertible Programming.
+
+612
+00:43:50,960 --> 00:43:54,000
+Invertibility is a common
+and important concept
+
+613
+00:43:54,000 --> 00:43:56,000
+in software development.
+
+614
+00:43:56,000 --> 00:43:59,360
+For example, we have
+compression and decompression.
+
+615
+00:43:59,360 --> 00:44:01,840
+We have undoing and redoing.
+
+616
+00:44:01,840 --> 00:44:05,120
+We have serialization
+and deserialization.
+
+617
+00:44:06,160 --> 00:44:07,480
+Invertible programming
+
+618
+00:44:07,480 --> 00:44:11,520
+is a way to provide
+correctness by construction.
+
+619
+00:44:11,520 --> 00:44:14,120
+Then natural question arises.
+
+620
+00:44:14,120 --> 00:44:19,120
+For normal programming the basic
+building blocks are functions,
+
+621
+00:44:19,680 --> 00:44:24,840
+but for invertible programming, what
+should be the building blocks?
+
+622
+00:44:26,320 --> 00:44:28,160
+Our obvious approach is to use
+
+623
+00:44:28,160 --> 00:44:31,200
+invertible function for
+invertible programming.
+
+624
+00:44:31,200 --> 00:44:33,760
+However, this approach
+is restrictive
+
+625
+00:44:33,760 --> 00:44:37,480
+because invertible functions
+have to be injective,
+
+626
+00:44:37,960 --> 00:44:42,440
+but it is known that some
+functions become invertible
+
+627
+00:44:42,440 --> 00:44:45,480
+after fixing some argument.
+
+628
+00:44:45,480 --> 00:44:49,800
+These functions are called
+partially invertible functions.
+
+629
+00:44:50,600 --> 00:44:55,400
+An example of a partially invertible
+function is an addition,
+
+630
+00:44:57,400 --> 00:45:02,160
+which becomes invertible after
+fixing either of the arguments.
+
+631
+00:45:02,960 --> 00:45:06,560
+A more practical example of
+a partial invertible function
+
+632
+00:45:06,560 --> 00:45:08,240
+is Huffman encoding,
+
+633
+00:45:08,240 --> 00:45:12,760
+which becomes invertible after
+fixing Huffman encoding table.
+
+634
+00:45:13,240 --> 00:45:15,800
+And saying, a question is,
+
+635
+00:45:15,800 --> 00:45:18,480
+is it possible to do
+invertible programming
+
+636
+00:45:18,480 --> 00:45:21,320
+through a partially-invertible
+programming?
+
+637
+00:45:22,120 --> 00:45:26,960
+If so, what is a language for
+partially-invertible programming?
+
+638
+00:45:28,480 --> 00:45:30,960
+This paper answer to this question.
+
+639
+00:45:30,960 --> 00:45:32,680
+With designer SPARCL,
+
+640
+00:45:32,680 --> 00:45:36,120
+which is a programming language
+for writing invertible functions
+
+641
+00:45:36,120 --> 00:45:39,840
+through composing
+partially-invertible function.
+
+642
+00:45:39,840 --> 00:45:42,680
+This is because
+partially-invertible functions
+
+643
+00:45:42,680 --> 00:45:45,560
+are more natural and more explicit.
+
+644
+00:45:45,560 --> 00:45:47,280
+SPARCL uses linear types,
+
+645
+00:45:47,280 --> 00:45:50,600
+which is a key to
+correctness by construction.
+
+646
+00:45:51,920 --> 00:45:54,760
+Let us start with an example
+to explain the problem
+
+647
+00:45:54,760 --> 00:45:56,920
+and solution in more detail.
+
+648
+00:45:56,920 --> 00:45:59,320
+Consider a function
+that compute difference
+
+649
+00:45:59,320 --> 00:46:01,960
+of adjacent element in a list.
+
+650
+00:46:02,440 --> 00:46:06,600
+Starting from zero, this function
+repeatedly compute a difference
+
+651
+00:46:06,600 --> 00:46:08,480
+from a previous element.
+
+652
+00:46:08,960 --> 00:46:12,320
+For example, the difference
+between one and zero is one,
+
+653
+00:46:12,320 --> 00:46:14,200
+so it output one.
+
+654
+00:46:14,200 --> 00:46:18,400
+And the difference between two
+and one is one, so it output one.
+
+655
+00:46:18,400 --> 00:46:20,560
+The different between
+five and two is three,
+
+656
+00:46:20,560 --> 00:46:23,520
+so it outputs three and so on.
+
+657
+00:46:23,520 --> 00:46:27,400
+This is very simple
+function, but indeed useful.
+
+658
+00:46:27,880 --> 00:46:30,360
+Actually, a variant of this
+function can be used
+
+659
+00:46:30,360 --> 00:46:34,960
+as a pre-processing for image
+compression, as found in PNG.
+
+660
+00:46:36,560 --> 00:46:39,040
+The standard unidirectional
+implementation
+
+661
+00:46:39,040 --> 00:46:42,600
+of this transformation
+looks like this.
+
+662
+00:46:45,160 --> 00:46:49,320
+The subs take a list of int
+and returns a list of int.
+
+663
+00:46:49,320 --> 00:46:53,280
+This function calls go with
+additional arguments zero
+
+664
+00:46:53,280 --> 00:46:58,040
+which intuitively represent
+a previous element.
+
+665
+00:46:58,680 --> 00:47:03,440
+Go takes int and a list of int
+and returns a list of int.
+
+666
+00:47:04,040 --> 00:47:08,200
+If you apply go into the empty
+list, it returns an empty list.
+
+667
+00:47:08,200 --> 00:47:13,400
+If you apply go into x
+cos xs, it outputs x-n
+
+668
+00:47:13,400 --> 00:47:17,160
+and recurs it over x and xs.
+
+669
+00:47:19,480 --> 00:47:24,000
+Here, we have some observation
+about invertibility of subs.
+
+670
+00:47:24,000 --> 00:47:27,600
+First of all, subs
+itself is invertible.
+
+671
+00:47:28,280 --> 00:47:32,200
+Actually, we can recover
+the original input from this result
+
+672
+00:47:32,200 --> 00:47:35,360
+by using a cumulative summation.
+
+673
+00:47:35,360 --> 00:47:39,040
+For example, sum of
+this elements is one
+
+674
+00:47:39,040 --> 00:47:41,800
+and sum of these two
+elements is two.
+
+675
+00:47:41,800 --> 00:47:45,520
+Sum of these three elements
+is five and so on.
+
+676
+00:47:46,120 --> 00:47:49,040
+However, go, sorry.
+
+677
+00:47:49,040 --> 00:47:51,320
+However, subs itself is,
+
+678
+00:47:51,320 --> 00:47:55,600
+subs does not consist only
+of invertible functions.
+
+679
+00:47:56,320 --> 00:48:01,080
+In fact, go is not invertible
+but partially-invertible.
+
+680
+00:48:01,880 --> 00:48:07,680
+Specifically go n becomes invertible
+for any fixed or a static n.
+
+681
+00:48:10,680 --> 00:48:13,280
+This means that we
+need to care about
+
+682
+00:48:13,280 --> 00:48:16,760
+partial invertibility
+in programming go.
+
+683
+00:48:17,880 --> 00:48:20,640
+This example also illustrate
+
+684
+00:48:20,640 --> 00:48:24,240
+a challenge in partial
+invertible programming,
+
+685
+00:48:24,240 --> 00:48:28,320
+that is, dynamic data flow
+into a static position.
+
+686
+00:48:30,880 --> 00:48:36,240
+Here, we highlight
+the dynamic part with blue.
+
+687
+00:48:37,280 --> 00:48:40,320
+Here, x, which is dynamic,
+
+688
+00:48:40,320 --> 00:48:44,840
+flows into the first argument
+go, which is static,
+
+689
+00:48:45,480 --> 00:48:50,280
+because that go becomes invertible
+after fixing its first argument.
+
+690
+00:48:51,440 --> 00:48:52,840
+To overcome the situation,
+
+691
+00:48:52,840 --> 00:48:57,960
+we propose a SPARCL a language for
+partially-invertible computation.
+
+692
+00:48:57,960 --> 00:49:02,400
+SPARCL comes with linear
+types and invertible types.
+
+693
+00:49:02,400 --> 00:49:07,240
+Invertible types denoted
+by A superscript R.
+
+694
+00:49:07,720 --> 00:49:11,120
+Intuitively it means A-typed values
+
+695
+00:49:11,920 --> 00:49:16,600
+that has to be handled
+only in invertible ways.
+
+696
+00:49:16,600 --> 00:49:18,680
+Thanks to invertible types,
+
+697
+00:49:18,680 --> 00:49:24,240
+invertible functions are represented
+as ordinary linear functions
+
+698
+00:49:24,240 --> 00:49:28,640
+between invertible types
+in SPARCL like this.
+
+699
+00:49:29,120 --> 00:49:32,640
+This representation provide
+a unified framework
+
+700
+00:49:32,640 --> 00:49:37,000
+for describing invertible
+and partial invertible function.
+
+701
+00:49:37,000 --> 00:49:42,560
+For example, here we showed
+the types of subs and go in SPARCL.
+
+702
+00:49:42,560 --> 00:49:47,360
+Because subs is invertible function.
+
+703
+00:49:47,960 --> 00:49:54,160
+In SPARCL subs take list of int
+and it has an invertible list of int.
+
+704
+00:49:54,920 --> 00:49:57,840
+Because that go is
+a partially-invertible function,
+
+705
+00:49:57,840 --> 00:50:01,560
+which becomes invertible after
+fixing its first argument.
+
+706
+00:50:01,560 --> 00:50:06,440
+Int SPARCL go takes
+ordinary int and a list,
+
+707
+00:50:06,440 --> 00:50:10,400
+invertible list of int
+and returns a invertible list of int.
+
+708
+00:50:12,240 --> 00:50:14,480
+SPARCL also provides a pin operator
+
+709
+00:50:14,480 --> 00:50:17,520
+to bridge invertible
+and ordinary worlds.
+
+710
+00:50:17,520 --> 00:50:19,200
+By using pin operator,
+
+711
+00:50:19,200 --> 00:50:23,800
+we can convert invertible
+values into ordinary values
+
+712
+00:50:23,800 --> 00:50:26,360
+locally in this continuation.
+
+713
+00:50:27,080 --> 00:50:30,560
+Recall that it sometimes
+happens that dynamic dataflow
+
+714
+00:50:30,560 --> 00:50:32,040
+into static position,
+
+715
+00:50:32,040 --> 00:50:36,120
+which is a challenge in
+partially-invertible programming.
+
+716
+00:50:36,120 --> 00:50:39,720
+This pin operator is
+a remedy for this situation.
+
+717
+00:50:42,440 --> 00:50:44,640
+Let us start with
+very simple example
+
+718
+00:50:44,640 --> 00:50:47,560
+to explain programming
+basics in SPARCL.
+
+719
+00:50:47,560 --> 00:50:51,280
+SPARCL is a linear type, type of
+a function for given language,
+
+720
+00:50:51,280 --> 00:50:55,640
+only the special thing is
+that it has invertible types.
+
+721
+00:50:55,640 --> 00:51:00,040
+Here we explain how we handle
+values of invertible types.
+
+722
+00:51:03,200 --> 00:51:07,360
+Here is a partial invertible
+addition written in SPARCL.
+
+723
+00:51:07,360 --> 00:51:09,520
+This definition is very similar to
+
+724
+00:51:09,520 --> 00:51:12,040
+the standard unidirectional version.
+
+725
+00:51:12,560 --> 00:51:18,320
+But here our function takes
+ordinary natural number
+
+726
+00:51:18,800 --> 00:51:20,800
+and invertible natural number
+
+727
+00:51:20,800 --> 00:51:23,240
+and returns an invertible
+natural number
+
+728
+00:51:23,240 --> 00:51:26,200
+to highlight its
+partial invertibility.
+
+729
+00:51:27,240 --> 00:51:32,400
+To construct invertible
+natural number
+
+730
+00:51:32,400 --> 00:51:35,680
+instead of using
+ordinary constructors,
+
+731
+00:51:35,680 --> 00:51:41,240
+we use lifted constructors,
+such as S superscript R.
+
+732
+00:51:43,240 --> 00:51:48,600
+Here, which shows
+the partially-invertible multiplication
+
+733
+00:51:48,600 --> 00:51:50,760
+defined in SPARCL.
+
+734
+00:51:50,760 --> 00:51:55,640
+Multiplication is the similarity
+to the sub add function,
+
+735
+00:51:55,640 --> 00:52:00,520
+takes natural numbers,
+and invertible natural numbers
+
+736
+00:52:00,520 --> 00:52:04,040
+and return invertible
+natural number.
+
+737
+00:52:05,040 --> 00:52:07,440
+Unlike the add function,
+
+738
+00:52:07,440 --> 00:52:13,600
+the mul function uses case analysis
+of invertible natural numbers.
+
+739
+00:52:13,600 --> 00:52:17,200
+To do so, it uses
+invertible branching
+
+740
+00:52:17,200 --> 00:52:22,560
+indicated by invertible
+patterns like Z superscript R
+
+741
+00:52:22,560 --> 00:52:24,840
+and S y superscript R.
+
+742
+00:52:27,560 --> 00:52:29,960
+A special thing in
+invertible branching
+
+743
+00:52:29,960 --> 00:52:34,120
+is a branch comes with condition.
+
+744
+00:52:36,440 --> 00:52:41,360
+This with conditions are using SPARCL
+direction to determine branches
+
+745
+00:52:41,360 --> 00:52:44,640
+but we do not describe
+the details in this talk.
+
+746
+00:52:47,920 --> 00:52:51,160
+Now we are ready to show how
+we program subs in SPARCL.
+
+747
+00:52:51,800 --> 00:52:55,160
+Because subs is a function
+set computes the (INAUDIBLE)
+
+748
+00:52:55,160 --> 00:52:57,320
+of adjacent element in a list.
+
+749
+00:52:59,400 --> 00:53:01,680
+For comparison, we'll also show
+
+750
+00:53:01,680 --> 00:53:05,640
+the standard unidirectional
+definition of subs in Haskell.
+
+751
+00:53:06,960 --> 00:53:10,080
+So definition of the two
+programs look very similar
+
+752
+00:53:10,080 --> 00:53:15,760
+except the use of (INAUDIBLE).
+
+753
+00:53:18,480 --> 00:53:22,520
+Subs in SPARCL take
+an invertible list of the INT
+
+754
+00:53:22,520 --> 00:53:24,760
+and return invertible list of INT.
+
+755
+00:53:25,960 --> 00:53:29,600
+Surprisingly the right hand side
+of the SPARCL (INAUDIBLE) sub
+
+756
+00:53:29,600 --> 00:53:32,280
+is identical to
+unidirectional (INAUDIBLE).
+
+757
+00:53:34,480 --> 00:53:37,400
+The go in SPARCL takes ordinary INT
+
+758
+00:53:37,920 --> 00:53:42,120
+and invertible list INT
+and returns invertible list of INT.
+
+759
+00:53:45,880 --> 00:53:50,360
+To manipulate invertible
+list INT, the go function
+
+760
+00:53:50,360 --> 00:53:55,120
+uses lifted Cons structures
+and invertible branching.
+
+761
+00:53:56,600 --> 00:53:59,520
+The most important part
+in the definition is
+
+762
+00:53:59,520 --> 00:54:02,520
+that it uses the pin operator.
+
+763
+00:54:03,680 --> 00:54:08,680
+By using the pin operator, we
+convert x of type invertible INT
+
+764
+00:54:08,680 --> 00:54:12,640
+into z of type ordinary INT.
+
+765
+00:54:13,480 --> 00:54:18,400
+Thanks to this conversion, we
+can call go for z and xs.
+
+766
+00:54:19,480 --> 00:54:22,960
+Because that's
+the (INAUDIBLE) argument of go,
+
+767
+00:54:22,960 --> 00:54:26,600
+expect INT instead
+of invertible INT.
+
+768
+00:54:29,720 --> 00:54:33,240
+We say again that two
+programs look very similar.
+
+769
+00:54:34,360 --> 00:54:37,240
+In this, they have
+the same recorded structure.
+
+770
+00:54:37,760 --> 00:54:40,880
+This is a (INAUDIBLE)
+SPARCL compared with
+
+771
+00:54:40,880 --> 00:54:43,160
+existing reversible languages.
+
+772
+00:54:45,440 --> 00:54:48,000
+Once we have defined
+invertible function,
+
+773
+00:54:48,000 --> 00:54:52,640
+we can use INT by using
+the forward and backward functions.
+
+774
+00:54:53,240 --> 00:54:55,280
+Here fwd is a function
+
+775
+00:54:55,280 --> 00:54:59,440
+that lands an invertible function
+in the forward direction.
+
+776
+00:54:59,440 --> 00:55:01,920
+And bwd that the opposite.
+
+777
+00:55:03,520 --> 00:55:07,000
+For example, if we apply
+fwd subs to this list,
+
+778
+00:55:07,000 --> 00:55:09,040
+we will obtain this result.
+
+779
+00:55:09,040 --> 00:55:12,720
+And if we apply, bwd
+subs to this list,
+
+780
+00:55:12,720 --> 00:55:15,160
+we will obtain
+the original list again.
+
+781
+00:55:16,080 --> 00:55:21,080
+Indeed, our pair of fwd subs
+and bwd subs forms a bijection.
+
+782
+00:55:21,880 --> 00:55:24,640
+This is for SPARCL (INAUDIBLE).
+
+783
+00:55:26,480 --> 00:55:28,960
+This is a brief
+introduction to SPARCL.
+
+784
+00:55:29,520 --> 00:55:31,360
+But in our paper, we...
+
+785
+00:55:33,080 --> 00:55:34,840
+we discussed more things.
+
+786
+00:55:34,840 --> 00:55:36,960
+For example, we defined
+the class system
+
+787
+00:55:36,960 --> 00:55:39,680
+of the PI (INAUDIBLE) of SPARCL.
+
+788
+00:55:40,320 --> 00:55:43,160
+Now the PI(INAUDIBLE) is
+based on linear calculus,
+
+789
+00:55:43,160 --> 00:55:47,760
+and the q(INAUDIBLE) features
+a class system of linear Haskell.
+
+790
+00:55:47,760 --> 00:55:50,160
+So design around
+the PI(INAUDIBLE) is also
+
+791
+00:55:50,160 --> 00:55:53,160
+inspired by two-staged languages.
+
+792
+00:55:53,160 --> 00:55:56,440
+We shall see some formal properties
+about the PI(INAUDIBLE)
+
+793
+00:55:56,440 --> 00:55:59,120
+including type
+safety and bijectivity.
+
+794
+00:56:00,040 --> 00:56:03,840
+We'll also discuss larger
+examples including Huffman encoding
+
+795
+00:56:03,840 --> 00:56:07,120
+and calculation of developed
+native tree rebuilding
+
+796
+00:56:07,120 --> 00:56:09,720
+from in order and through
+other (INAUDIBLE).
+
+797
+00:56:11,240 --> 00:56:14,040
+Let us discuss some of related work.
+
+798
+00:56:14,040 --> 00:56:15,560
+These are some existing research
+
+799
+00:56:15,560 --> 00:56:18,000
+concerning partial invertibility.
+
+800
+00:56:18,000 --> 00:56:21,160
+In program transformation,
+there's an inversion method
+
+801
+00:56:21,160 --> 00:56:24,160
+called partial, impartial
+and semi-inversion.
+
+802
+00:56:25,480 --> 00:56:28,400
+Also there are some reverse
+programming languages
+
+803
+00:56:28,400 --> 00:56:31,680
+about a limited form of
+partial invertibility.
+
+804
+00:56:35,560 --> 00:56:40,000
+The design of SPARCL is inspired
+by our previous work HOBiT.
+
+805
+00:56:40,000 --> 00:56:42,920
+HOBiT is a higher-order
+bidirectional programming language
+
+806
+00:56:42,920 --> 00:56:46,720
+in which lenses are already
+presented as ordinary function.
+
+807
+00:56:46,720 --> 00:56:49,800
+More specifically
+Lens between S and T
+
+808
+00:56:49,800 --> 00:56:54,680
+is represented as an ordinary
+function between B S and B T.
+
+809
+00:56:55,200 --> 00:56:58,080
+Here, B S and B T are
+
+810
+00:56:58,080 --> 00:57:01,640
+very similar to invertible
+types in SPARCL.
+
+811
+00:57:02,640 --> 00:57:05,920
+But HOBiT does not use linear types
+
+812
+00:57:05,920 --> 00:57:09,560
+and it does not provide
+a pin operator,
+
+813
+00:57:09,560 --> 00:57:13,120
+which is very useful in partially
+invertible programming.
+
+814
+00:57:15,520 --> 00:57:17,800
+Let us conclude our talk.
+
+815
+00:57:17,800 --> 00:57:20,320
+We designed SPARCL,
+a programming language
+
+816
+00:57:20,320 --> 00:57:22,600
+for writing invertible functions
+
+817
+00:57:22,600 --> 00:57:25,800
+through composing
+partially-invertible functions.
+
+818
+00:57:25,800 --> 00:57:27,840
+Because partially-invertible
+functions
+
+819
+00:57:27,840 --> 00:57:30,240
+are more natural
+and more expressive.
+
+820
+00:57:31,040 --> 00:57:32,800
+SPARCL uses linear types,
+
+821
+00:57:32,800 --> 00:57:36,040
+which is the key to
+correctness by construction.
+
+822
+00:57:36,040 --> 00:57:37,160
+Thank you.
+
+823
+00:57:37,680 --> 00:57:44,960
+(APPLAUSE)
+
+824
+00:57:45,800 --> 00:57:47,080
+ADAM: Thanks Kazutaka.
+
+825
+00:57:47,080 --> 00:57:48,120
+In either time band,
+
+826
+00:57:48,120 --> 00:57:50,920
+you should see a Q&A
+link appear in Clowdr
+
+827
+00:57:50,920 --> 00:57:52,120
+that brings you to a video chat,
+
+828
+00:57:52,120 --> 00:57:54,120
+where you can ask
+Kazutaka your questions.
+
+829
+00:58:02,040 --> 00:58:04,240
+Welcome back for a talk
+by Aymeric Fromherz
+
+830
+00:58:04,240 --> 00:58:07,600
+on Concurrent Separation Logic
+in the F Programming Language.
+
+831
+00:58:08,280 --> 00:58:09,480
+AYMERIC FROMHERZ: Hi. I'm Aymeric
+
+832
+00:58:09,480 --> 00:58:11,840
+and it's my pleasure to be here
+today to present our work on,
+
+833
+00:58:11,840 --> 00:58:14,560
+SteelCore: An Extensible
+Concurrent Separation Logic
+
+834
+00:58:14,560 --> 00:58:16,600
+for Effectful Dependent Programs.
+
+835
+00:58:18,200 --> 00:58:21,360
+Our goal in this work is to
+verify concurrent programs.
+
+836
+00:58:21,360 --> 00:58:23,160
+And there has been
+lots of recent work
+
+837
+00:58:23,160 --> 00:58:24,440
+on this committee, on this topic,
+
+838
+00:58:24,440 --> 00:58:26,760
+especially on using Concurrent
+Separation Logic (CSL)
+
+839
+00:58:26,760 --> 00:58:27,760
+for verification.
+
+840
+00:58:28,360 --> 00:58:31,080
+But our main success stories
+is the Iris project,
+
+841
+00:58:31,080 --> 00:58:33,480
+which provides a comprehensive
+expressive logic
+
+842
+00:58:33,480 --> 00:58:35,040
+through reasonable
+concurrent programs.
+
+843
+00:58:35,640 --> 00:58:38,560
+Unfortunately, it only
+applies to deeply embedded,
+
+844
+00:58:38,560 --> 00:58:43,040
+simply-typed languages and we
+really do enjoy dependent types.
+
+845
+00:58:43,040 --> 00:58:44,480
+We really do enjoy, for instance,
+
+846
+00:58:44,480 --> 00:58:46,680
+the use in type (INAUDIBLE) Proof Assistance
+based (INAUDIBLE),
+
+847
+00:58:46,680 --> 00:58:49,280
+which allow us to combine
+multi-level reasoning
+
+848
+00:58:49,280 --> 00:58:52,480
+with strong instructions
+and strong specifications.
+
+849
+00:58:52,480 --> 00:58:54,560
+So one question, we
+asked ourselves is
+
+850
+00:58:55,120 --> 00:58:57,280
+how could we get
+a Concurrent Separation Logic
+
+851
+00:58:57,280 --> 00:58:59,120
+for a dependently-typed language?
+
+852
+00:58:59,120 --> 00:59:01,440
+Could, for instance,
+a shallow embedding work?
+
+853
+00:59:01,440 --> 00:59:03,720
+But it comes with
+certain challenges.
+
+854
+00:59:04,360 --> 00:59:07,120
+The first one is how do
+we actually reflect
+
+855
+00:59:07,120 --> 00:59:10,840
+the effect of concurrency in
+our dependently-typed language?
+
+856
+00:59:10,840 --> 00:59:13,640
+The second is how do we
+support partial correctness,
+
+857
+00:59:13,640 --> 00:59:15,240
+which is needed when
+reasoning with programs
+
+858
+00:59:15,240 --> 00:59:18,280
+that might have deadlocks
+and that might not terminate?
+
+859
+00:59:18,280 --> 00:59:21,120
+And lastly, high-risk of IRIS's
+very convenient feature
+
+860
+00:59:21,120 --> 00:59:22,440
+to reason out with
+concurrent programs
+
+861
+00:59:22,440 --> 00:59:24,560
+called dynamically
+allocated invariants.
+
+862
+00:59:24,560 --> 00:59:26,640
+How do we support these things
+
+863
+00:59:26,640 --> 00:59:27,880
+in a dependently-typed language?
+
+864
+00:59:27,880 --> 00:59:29,680
+And I'll come back to
+that a bit later.
+
+865
+00:59:31,800 --> 00:59:34,640
+Verified concurrent programs, we've
+been developing from
+
+866
+00:59:34,640 --> 00:59:35,680
+a core called Steel,
+
+867
+00:59:35,680 --> 00:59:38,480
+which is a concurrence
+version, which is DSL for F,
+
+868
+00:59:38,480 --> 00:59:41,520
+effectually dependently-typed
+language designed for verification.
+
+869
+00:59:41,520 --> 00:59:44,440
+And in this talk, I'm going to
+talk especially about Steel core,
+
+870
+00:59:44,440 --> 00:59:47,080
+which consists of the core
+semantics and program logic
+
+871
+00:59:47,080 --> 00:59:48,480
+of the Steel framework.
+
+872
+00:59:49,000 --> 00:59:51,440
+So at the very bottom
+of Steelcore,
+
+873
+00:59:51,440 --> 00:59:54,760
+we have a number of computations
+using action trees.
+
+874
+00:59:54,760 --> 00:59:58,280
+And these action trees are
+characterized by state typeclass,
+
+875
+00:59:58,280 --> 01:00:02,120
+which abstracts memory as well
+the structure of the separation logic.
+
+876
+01:00:02,720 --> 01:00:05,320
+And for these action
+trees, we provide
+
+877
+01:00:05,320 --> 01:00:08,920
+an intrinsically typed
+definitional interpreter.
+
+878
+01:00:08,920 --> 01:00:10,880
+And one of the interesting
+things about how we get
+
+879
+01:00:10,880 --> 01:00:15,440
+intrinsically typed here
+is that this allows us to,
+
+880
+01:00:15,440 --> 01:00:17,960
+reasonably to prove
+a soundness of our semantics,
+
+881
+01:00:17,960 --> 01:00:21,120
+without having to rely on
+explicit execution traces.
+
+882
+01:00:22,320 --> 01:00:24,800
+We then instantiate
+this state typeclass
+
+883
+01:00:24,800 --> 01:00:26,360
+of a rich Concurrent
+Separation Logic.
+
+884
+01:00:26,360 --> 01:00:29,000
+That we're going to talk about
+more in detail later.
+
+885
+01:00:29,000 --> 01:00:32,520
+And that provides the basis for
+our program logic in Steel.
+
+886
+01:00:32,520 --> 01:00:36,040
+And finally, on top of that,
+on top of this program logic
+
+887
+01:00:36,040 --> 01:00:39,600
+we can implement dependently-typed,
+verified libraries.
+
+888
+01:00:40,760 --> 01:00:43,200
+Let's have a look at how these
+different components work,
+
+889
+01:00:43,200 --> 01:00:44,640
+starting with our core semantics.
+
+890
+01:00:45,400 --> 01:00:48,600
+The first step is to define
+our state typeclass.
+
+891
+01:00:48,600 --> 01:00:52,000
+What this typeclass contains
+is first the type for memory
+
+892
+01:00:52,000 --> 01:00:55,800
+and second the type for separation
+logic assertions slprop.
+
+893
+01:00:55,800 --> 01:01:00,320
+As well as, operators
+which form a (INAUDIBLE) structure.
+
+894
+01:01:00,320 --> 01:01:03,280
+And lastly, we need to
+find a way to interpret
+
+895
+01:01:03,280 --> 01:01:05,360
+the separation logic
+assertion in a given memory.
+
+896
+01:01:05,360 --> 01:01:08,160
+That is, to decide whether
+the separation logic assertion
+
+897
+01:01:08,160 --> 01:01:11,640
+holds or not in a given memory,
+which is this intrep function.
+
+898
+01:01:12,680 --> 01:01:15,600
+Once this is done, we
+can encode computations
+
+899
+01:01:15,600 --> 01:01:18,640
+as action trees permitraized
+by our state typeclass.
+
+900
+01:01:19,280 --> 01:01:21,880
+These action trees are
+indexed by prefix.
+
+901
+01:01:21,880 --> 01:01:24,160
+First, the written type a,
+
+902
+01:01:24,160 --> 01:01:27,080
+which is the type of values
+returned by the computation.
+
+903
+01:01:27,600 --> 01:01:30,720
+Second, a precondition
+pre as a slprop
+
+904
+01:01:30,720 --> 01:01:33,200
+and lastly, a postcondition post,
+
+905
+01:01:33,200 --> 01:01:35,800
+which is a separation
+logic assertion
+
+906
+01:01:35,800 --> 01:01:38,280
+dependent on the value of
+(INAUDIBLE) interpretation.
+
+907
+01:01:39,680 --> 01:01:41,960
+We can then encode
+computations in a way
+
+908
+01:01:41,960 --> 01:01:43,920
+that is reminiscent of free monads.
+
+909
+01:01:43,920 --> 01:01:45,520
+First, we have two standard nodes.
+
+910
+01:01:45,520 --> 01:01:47,040
+Ret, which returns a value
+
+911
+01:01:47,040 --> 01:01:50,040
+and Act, which corresponds
+to activate actions
+
+912
+01:01:50,040 --> 01:01:51,720
+seen as computations.
+
+913
+01:01:52,320 --> 01:01:55,000
+We can then define composition
+of the computations
+
+914
+01:01:55,000 --> 01:01:56,560
+as a node Bind.
+
+915
+01:01:56,560 --> 01:02:00,240
+And that is here, how
+the indices of the computations
+
+916
+01:02:00,240 --> 01:02:03,040
+capture the standard role
+of separation logic.
+
+917
+01:02:03,040 --> 01:02:06,040
+The first condition q of
+the first computation
+
+918
+01:02:06,040 --> 01:02:09,320
+actually corresponds to the precondition
+of the second computation.
+
+919
+01:02:09,920 --> 01:02:12,400
+And another very
+interesting thing here
+
+920
+01:02:12,400 --> 01:02:14,440
+is to look at the type of
+
+921
+01:02:14,440 --> 01:02:17,040
+this continuation of
+the second computation.
+
+922
+01:02:17,040 --> 01:02:19,560
+We can see here this Dv effect,
+
+923
+01:02:19,560 --> 01:02:22,760
+which is a primitive effect
+in F for diversions.
+
+924
+01:02:23,240 --> 01:02:25,720
+What this means is that,
+in this composition,
+
+925
+01:02:25,720 --> 01:02:28,240
+we are actually encoding
+positive divergence,
+
+926
+01:02:28,240 --> 01:02:30,680
+positive non-terminating
+computations.
+
+927
+01:02:31,640 --> 01:02:35,640
+Lastly, we can define the node
+Par for structured parallelism.
+
+928
+01:02:36,360 --> 01:02:39,440
+The Par role is stand out in
+concurrent separation logic.
+
+929
+01:02:39,440 --> 01:02:43,040
+And observe again, how
+the indices of our computations
+
+930
+01:02:43,040 --> 01:02:45,120
+capture this classic role.
+
+931
+01:02:45,960 --> 01:02:48,120
+Assuming that
+the preconditions p and p prime,
+
+932
+01:02:48,120 --> 01:02:51,560
+offered to computations
+are disjoined,
+
+933
+01:02:51,560 --> 01:02:55,120
+then it can safely execute with
+computations in parallel.
+
+934
+01:02:55,120 --> 01:02:59,120
+Finally, returning the star of
+the first conditions q and q prime.
+
+935
+01:03:00,040 --> 01:03:01,800
+Bidding upon these action trees,
+
+936
+01:03:01,800 --> 01:03:05,680
+we implement an intrinsically-typed
+definitional interpreter
+
+937
+01:03:05,680 --> 01:03:08,600
+that non-deterministically
+interleaves atomic actions.
+
+938
+01:03:09,360 --> 01:03:13,520
+Basic interpreter run as
+the computation type NST.
+
+939
+01:03:13,520 --> 01:03:17,080
+NST corresponds to
+non-deterministic stateful
+
+940
+01:03:17,080 --> 01:03:19,640
+possibly divergent computations.
+
+941
+01:03:19,640 --> 01:03:21,440
+And what's interesting here is that
+
+942
+01:03:21,440 --> 01:03:24,080
+the type of
+the interpreter encapsulates
+
+943
+01:03:24,080 --> 01:03:26,560
+(INAUDIBLE) statement
+about those semantics.
+
+944
+01:03:27,160 --> 01:03:30,760
+If we initially have
+the validity of the precondition p
+
+945
+01:03:30,760 --> 01:03:32,840
+in our initial memory m,
+
+946
+01:03:32,840 --> 01:03:37,520
+then after execution, we do
+have that the postcondition q
+
+947
+01:03:37,520 --> 01:03:39,880
+is valid in the final memory of m1.
+
+948
+01:03:40,440 --> 01:03:43,520
+And here, all this is done in
+a partial-correctness setting
+
+949
+01:03:43,520 --> 01:03:47,120
+because NST can muddle possible
+diversions computations.
+
+950
+01:03:47,960 --> 01:03:49,920
+No that we have a generic semantics,
+
+951
+01:03:49,920 --> 01:03:52,960
+we need to instantiate
+a state typeclass
+
+952
+01:03:52,960 --> 01:03:54,640
+to provide a program logic.
+
+953
+01:03:55,400 --> 01:03:58,360
+The first step is to
+instantiate the memory type.
+
+954
+01:03:58,360 --> 01:04:01,000
+And for this, we're going to
+remain stand out
+
+955
+01:04:01,000 --> 01:04:02,800
+and consider memory to be the map
+
+956
+01:04:02,800 --> 01:04:05,280
+from abstract addresses
+to typed references.
+
+957
+01:04:06,280 --> 01:04:08,920
+We can then instantiate
+our separation logic.
+
+958
+01:04:08,920 --> 01:04:10,160
+And the first step is to provide
+
+959
+01:04:10,160 --> 01:04:11,760
+standard separation logic connectives,
+
+960
+01:04:11,760 --> 01:04:16,160
+such as star, magic wand,
+conjunction, quantification and so on.
+
+961
+01:04:17,240 --> 01:04:20,360
+That's we're also providing
+points to assertions,
+
+962
+01:04:20,360 --> 01:04:23,160
+which are indexed by Partial
+Commutative Monoids.
+
+963
+01:04:23,800 --> 01:04:25,200
+Partial Commutative
+Monoids have been
+
+964
+01:04:25,200 --> 01:04:27,200
+studied extensively in the literature,
+
+965
+01:04:27,200 --> 01:04:29,560
+and used to encode
+a variety of things
+
+966
+01:04:29,560 --> 01:04:32,200
+such as, for instance,
+sharing disciplines.
+
+967
+01:04:33,280 --> 01:04:37,640
+And lastly, they often provide
+dynamically allocated invariants
+
+968
+01:04:37,640 --> 01:04:40,280
+associated to separate
+logic assertions.
+
+969
+01:04:40,280 --> 01:04:43,160
+And that's what I will present next.
+
+970
+01:04:43,800 --> 01:04:45,960
+We'll consider named invariants,
+
+971
+01:04:45,960 --> 01:04:49,320
+where the name will be encoded
+as (INAUDIBLE) number.
+
+972
+01:04:49,320 --> 01:04:51,280
+And we will also have
+this proposition,
+
+973
+01:04:51,280 --> 01:04:53,960
+which is here, this squiggler,
+
+974
+01:04:53,960 --> 01:04:56,760
+which states that a specific name
+
+975
+01:04:56,760 --> 01:05:00,600
+is associated to one specific
+separation logic assertion p.
+
+976
+01:05:01,080 --> 01:05:03,760
+And so it still a named invariant
+
+977
+01:05:03,760 --> 01:05:07,760
+is going to be association of
+a name with this refinement,
+
+978
+01:05:07,760 --> 01:05:10,400
+that it's name is actually
+associated to one specific
+
+979
+01:05:10,400 --> 01:05:12,000
+separation logic assertion.
+
+980
+01:05:12,000 --> 01:05:13,640
+And what's interesting here is that
+
+981
+01:05:14,200 --> 01:05:16,560
+this invariants are just values.
+
+982
+01:05:16,560 --> 01:05:19,520
+And as such, they are
+freely duplicable
+
+983
+01:05:19,520 --> 01:05:22,280
+and they can be shared
+easily between friends.
+
+984
+01:05:23,160 --> 01:05:26,560
+Now to dynamically allocate
+invariants in Steel,
+
+985
+01:05:26,560 --> 01:05:28,760
+we provide this function
+new invariant,
+
+986
+01:05:28,760 --> 01:05:31,600
+which takes as an invariant
+separation logic assertion p.
+
+987
+01:05:33,320 --> 01:05:34,680
+This function has the computational
+type Steel,
+
+988
+01:05:34,680 --> 01:05:38,520
+which reflects the computation
+that we uncoded as action trees.
+
+989
+01:05:38,520 --> 01:05:42,040
+You can see here that
+the indices of the Steel effect
+
+990
+01:05:42,040 --> 01:05:45,240
+corresponds to the indices
+of all action trees.
+
+991
+01:05:45,240 --> 01:05:48,680
+First index is the type
+returned by the computation,
+
+992
+01:05:48,680 --> 01:05:51,560
+which is here an invariant
+associated to P.
+
+993
+01:05:51,560 --> 01:05:55,240
+And it has a precondition that
+initially we need ownership,
+
+994
+01:05:55,240 --> 01:05:59,000
+we need the validity of
+the separation trigger session P.
+
+995
+01:05:59,000 --> 01:06:02,000
+After execution of the function
+and creation of invariant,
+
+996
+01:06:02,000 --> 01:06:03,920
+we do not have access to
+this resource anymore,
+
+997
+01:06:03,920 --> 01:06:07,480
+it has been successfully locked
+away behind the invariant.
+
+998
+01:06:07,480 --> 01:06:09,120
+Implementing this function was
+
+999
+01:06:09,120 --> 01:06:11,640
+one of the main technical
+difficulties in Steel.
+
+1000
+01:06:11,640 --> 01:06:15,920
+The code is actually fairly involved
+and highlights on things like
+
+1001
+01:06:15,920 --> 01:06:17,480
+monotonic state.
+
+1002
+01:06:17,480 --> 01:06:20,560
+If you're interested, I invite
+you to go read the paper.
+
+1003
+01:06:20,560 --> 01:06:25,320
+Now that we defined invariants in
+Steel, where do we actually use them?
+
+1004
+01:06:25,320 --> 01:06:29,880
+The core idea of an invariant is
+that it has to hold at all times.
+
+1005
+01:06:29,880 --> 01:06:34,400
+And because of that, only atomic
+commands can access invariants
+
+1006
+01:06:34,400 --> 01:06:38,880
+as long as I restore
+them after execution.
+
+1007
+01:06:38,880 --> 01:06:40,920
+So, what is atomic
+commands in Steel?
+
+1008
+01:06:40,920 --> 01:06:44,440
+Well, first of all atomic
+actions are atomic commands,
+
+1009
+01:06:44,440 --> 01:06:48,160
+but there are possible composition
+with ghost computations
+
+1010
+01:06:48,160 --> 01:06:50,840
+is also considered to be
+an atomic command because
+
+1011
+01:06:50,840 --> 01:06:53,600
+these ghost computations are
+computationally irrelevant,
+
+1012
+01:06:53,600 --> 01:06:55,560
+they will not be actually executed,
+
+1013
+01:06:55,560 --> 01:06:59,080
+and hence they can safely
+be considered atomic.
+
+1014
+01:06:59,080 --> 01:07:02,840
+And to separate atomic computations
+from regulatory programs,
+
+1015
+01:07:02,840 --> 01:07:07,320
+we define a new effect SteelAtomic
+as the effect of the Steel effect.
+
+1016
+01:07:07,320 --> 01:07:10,040
+And you can see it has many
+similarities with the Steel effect.
+
+1017
+01:07:10,040 --> 01:07:11,440
+It still has original type A
+
+1018
+01:07:11,440 --> 01:07:14,040
+as well as the precondition
+p and postcondition q.
+
+1019
+01:07:14,040 --> 01:07:17,440
+But it also has the additional
+index is_ghost which indicates
+
+1020
+01:07:17,440 --> 01:07:19,760
+whether the computation
+is ghost or not
+
+1021
+01:07:19,760 --> 01:07:22,440
+and allow safe composition
+of atomic commands.
+
+1022
+01:07:22,440 --> 01:07:26,280
+It also has an additional index
+that I'll omit for now.
+
+1023
+01:07:26,280 --> 01:07:29,680
+Now that we have this effect, we
+can define an invariant handler
+
+1024
+01:07:29,680 --> 01:07:33,160
+which takes an argument
+an invariant I associated to an SRP
+
+1025
+01:07:33,160 --> 01:07:34,760
+and a function F.
+
+1026
+01:07:34,760 --> 01:07:38,280
+And what this handler says that
+if F is an atomic function,
+
+1027
+01:07:38,280 --> 01:07:41,480
+which accesses p, sorry
+tells it after execution,
+
+1028
+01:07:41,480 --> 01:07:44,680
+then you can safely open
+the invariant execute F
+
+1029
+01:07:44,680 --> 01:07:46,280
+and then close the invariant again.
+
+1030
+01:07:46,280 --> 01:07:47,960
+And because of that, we
+can give a signature
+
+1031
+01:07:47,960 --> 01:07:52,680
+that does not involve p in
+specification anymore.
+
+1032
+01:07:52,680 --> 01:07:56,120
+In practice, the last index
+(INAUDIBLE) manifest I was mentioning,
+
+1033
+01:07:56,120 --> 01:07:59,120
+is a set of currently
+open invariants
+
+1034
+01:07:59,120 --> 01:08:02,400
+(INAUDIBLE) that in
+the invariants are applicable,
+
+1035
+01:08:02,400 --> 01:08:05,320
+The separation track assertions
+that they protect might not be
+
+1036
+01:08:05,320 --> 01:08:07,760
+so opening an invariant
+several times
+
+1037
+01:08:07,760 --> 01:08:10,840
+might actually lead to unsoundness.
+
+1038
+01:08:10,840 --> 01:08:14,120
+And so that's what's
+SteelCore consists of.
+
+1039
+01:08:14,120 --> 01:08:17,080
+We provided two effects
+Steel and SteelAtomic,
+
+1040
+01:08:17,080 --> 01:08:19,440
+which reflect
+the effects of concurrency
+
+1041
+01:08:19,440 --> 01:08:22,840
+as defined by our
+semantics in F*.
+
+1042
+01:08:22,840 --> 01:08:26,520
+And then on top of this, we
+instantiated a program logic
+
+1043
+01:08:26,520 --> 01:08:29,400
+with a memory and original
+transportation logic
+
+1044
+01:08:29,400 --> 01:08:30,960
+containing standard connectors,
+
+1045
+01:08:30,960 --> 01:08:34,920
+as well as a PCM based
+memory model and invariance.
+
+1046
+01:08:34,920 --> 01:08:38,960
+And we also provide a variety of
+actions such as, for instance,
+
+1047
+01:08:38,960 --> 01:08:43,440
+an atomic compare and swap, which
+allows us to operate on memory.
+
+1048
+01:08:43,920 --> 01:08:48,760
+Now, we can actually use this to
+framework to implement verified
+
+1049
+01:08:48,760 --> 01:08:51,480
+dependently type libraries
+such as, for instance,
+
+1050
+01:08:51,480 --> 01:08:54,880
+the library for SpinLock,
+and there is no reason to stop here
+
+1051
+01:08:54,880 --> 01:08:58,520
+on top of SpinLock, we can
+use the SpinLock interface
+
+1052
+01:08:58,520 --> 01:09:01,480
+to implement new libraries
+such as, for instance,
+
+1053
+01:09:01,480 --> 01:09:03,320
+a library for ForkJoin operations,
+
+1054
+01:09:03,320 --> 01:09:05,280
+or a library for channel types.
+
+1055
+01:09:06,600 --> 01:09:10,040
+Channel types are a lightweight
+version of session types.
+
+1056
+01:09:10,040 --> 01:09:12,240
+The idea is that to each channel,
+
+1057
+01:09:12,240 --> 01:09:15,120
+we're going to associate
+one protocol P.
+
+1058
+01:09:15,120 --> 01:09:18,680
+And we're also going to provide
+two separation requisitions
+
+1059
+01:09:18,680 --> 01:09:22,680
+sender and receiver
+reasonable with channels.
+
+1060
+01:09:22,680 --> 01:09:25,120
+Using the separation requisitions,
+
+1061
+01:09:25,120 --> 01:09:28,480
+we can then specify
+an implement a send function,
+
+1062
+01:09:28,480 --> 01:09:32,680
+which will take as arguments for
+channel C associated to protocol P
+
+1063
+01:09:32,680 --> 01:09:36,200
+as well as message x,
+which is compatible
+
+1064
+01:09:36,200 --> 01:09:38,480
+with the current
+state of a protocol.
+
+1065
+01:09:38,480 --> 01:09:42,200
+And so what the signature of
+this function states is that
+
+1066
+01:09:42,200 --> 01:09:46,320
+if we initially have sent
+permission on this channel C,
+
+1067
+01:09:46,320 --> 01:09:48,560
+and the channel is
+currently as a stage where
+
+1068
+01:09:48,560 --> 01:09:52,840
+it currently needs to be executed, then
+we can indeed send this message.
+
+1069
+01:09:52,840 --> 01:09:56,760
+And we then get a send
+permision on this channel,
+
+1070
+01:09:56,760 --> 01:10:01,600
+where the protocol advanced
+one step after executing x.
+
+1071
+01:10:01,600 --> 01:10:04,520
+And so we can define
+the dual version of this,
+
+1072
+01:10:04,520 --> 01:10:07,600
+which would be a received function.
+
+1073
+01:10:07,600 --> 01:10:11,320
+Using this library, we can
+now specify and implement
+
+1074
+01:10:11,320 --> 01:10:13,800
+dependently type protocols
+such as, for instance,
+
+1075
+01:10:13,800 --> 01:10:18,040
+the simple PingPong protocol.
+What this protocol says is that
+
+1076
+01:10:18,040 --> 01:10:22,160
+we are first expected to send
+an integer on a channel
+
+1077
+01:10:22,160 --> 01:10:25,200
+and then we're going to
+receive a new integer
+
+1078
+01:10:25,200 --> 01:10:28,360
+which is unsure to be strictly
+greater than the one we sent.
+
+1079
+01:10:28,360 --> 01:10:31,480
+So, this is the specification
+of our protocol.
+
+1080
+01:10:31,480 --> 01:10:36,000
+And we can now implement
+the client version of his protocol
+
+1081
+01:10:36,000 --> 01:10:37,720
+that takes as argument a channel
+
+1082
+01:10:37,720 --> 01:10:40,480
+which is unsure to flow
+PingPong protocol.
+
+1083
+01:10:40,480 --> 01:10:43,840
+So, we first send
+a message on the channel,
+
+1084
+01:10:43,840 --> 01:10:49,000
+which we hear peak to be 17. We
+then received a new integer.
+
+1085
+01:10:49,000 --> 01:10:51,920
+And since the channel is
+expected to follow protocol,
+
+1086
+01:10:51,920 --> 01:10:55,200
+we can prove that this integer
+is actually strictly greater
+
+1087
+01:10:55,200 --> 01:10:58,200
+than the one we sent
+which here is 17.
+
+1088
+01:10:58,200 --> 01:11:01,800
+And what's really interesting is
+that all of this verification
+
+1089
+01:11:01,800 --> 01:11:04,880
+is done here statically by
+virtue of type checking.
+
+1090
+01:11:04,880 --> 01:11:08,040
+If we're for instance to start
+our client implementation
+
+1091
+01:11:08,040 --> 01:11:09,800
+by trying to receive a message,
+
+1092
+01:11:09,800 --> 01:11:12,600
+verification will fail because
+we political states that
+
+1093
+01:11:12,600 --> 01:11:15,840
+the first action has to be send.
+
+1094
+01:11:15,840 --> 01:11:17,240
+To conclude in this talk,
+
+1095
+01:11:17,240 --> 01:11:20,400
+I presented the call semantics
+and prognostic of steel
+
+1096
+01:11:20,400 --> 01:11:23,440
+the shallow embedding of
+concrete separation logic in F*
+
+1097
+01:11:23,440 --> 01:11:25,440
+with dependent-typed language.
+
+1098
+01:11:25,440 --> 01:11:27,600
+A Steel Program logic has
+a member model which is based
+
+1099
+01:11:27,600 --> 01:11:29,440
+on partial (INAUDIBLE)
+
+1100
+01:11:29,440 --> 01:11:31,480
+and it also enables
+concurrent reasoning
+
+1101
+01:11:31,480 --> 01:11:34,600
+through dynamically
+allocated invariants.
+
+1102
+01:11:34,600 --> 01:11:37,160
+All of our development
+is mechanized in about
+
+1103
+01:11:37,160 --> 01:11:39,120
+11,000 lines of code in F*.
+
+1104
+01:11:39,120 --> 01:11:41,520
+And it comes with a stack
+of verified libraries,
+
+1105
+01:11:41,520 --> 01:11:43,760
+which is growing every day.
+
+1106
+01:11:43,760 --> 01:11:46,200
+Hope we just a framework
+is ready to provide
+
+1107
+01:11:46,200 --> 01:11:48,680
+a full-fledged dependently
+type programming language,
+
+1108
+01:11:48,680 --> 01:11:50,400
+which would be useful for verified
+
+1109
+01:11:50,400 --> 01:11:52,240
+concurrent
+and distributed programming.
+
+1110
+01:11:52,240 --> 01:11:55,040
+All of this being built on
+top of a lower memory model.
+
+1111
+01:11:55,040 --> 01:11:58,280
+And with an extensible program
+logic which is expressed in
+
+1112
+01:11:58,280 --> 01:12:00,720
+an embedded wave in F*.
+
+1113
+01:12:00,720 --> 01:12:04,480
+During this talk, the're many details
+of our work they didn't mention.
+
+1114
+01:12:04,480 --> 01:12:07,200
+First of all automatics
+actually much more complicated
+
+1115
+01:12:07,200 --> 01:12:10,040
+to enable support for also reasoning
+
+1116
+01:12:10,040 --> 01:12:12,440
+in a style akin to
+Implic Dynamic Frames
+
+1117
+01:12:12,440 --> 01:12:14,720
+on top of separation logic.
+
+1118
+01:12:14,720 --> 01:12:17,760
+Second, we also allow
+reasoning on references,
+
+1119
+01:12:17,760 --> 01:12:19,920
+using monotonicity and preorders.
+
+1120
+01:12:19,920 --> 01:12:23,520
+And lastly, we provide
+several more libraries.
+
+1121
+01:12:23,520 --> 01:12:24,880
+First of all, we provide
+
+1122
+01:12:24,880 --> 01:12:27,440
+the SpinLocks and functional
+libraries that I mentioned.
+
+1123
+01:12:27,440 --> 01:12:29,760
+And we also model
+low coupling lists,
+
+1124
+01:12:29,760 --> 01:12:32,840
+as well as counters with
+local states using
+
+1125
+01:12:32,840 --> 01:12:37,160
+(INAUDIBLE) if you're interested
+by any of these things,
+
+1126
+01:12:37,160 --> 01:12:42,160
+I invite you to go read the paper.
+Thank you for your attention.
+
+1127
+01:12:50,600 --> 01:12:51,640
+ADAM: Thanks, Aymeric.
+
+1128
+01:12:51,640 --> 01:12:54,880
+In either time band, you should
+see a Q&A link appear in Clowdr
+
+1129
+01:12:54,880 --> 01:12:56,760
+taking you to a video
+chat with at least
+
+1130
+01:12:56,760 --> 01:13:00,640
+one of the authors of this paper.
+
+1131
+01:13:05,080 --> 01:13:07,680
+OK, let's jump into
+a talk by Mohsen Lesani.
+
+1132
+01:13:07,680 --> 01:13:10,960
+on compositional verification
+of distributed systems.
+
+1133
+01:13:10,960 --> 01:13:14,360
+MOHSEN LESANI: Good morning.
+I'm going to talk about TLC,
+
+1134
+01:13:14,360 --> 01:13:18,880
+temporal logic of distributed
+components. I am Mohsen Lesani,
+
+1135
+01:13:18,880 --> 01:13:23,000
+an assistant professor at
+the University of California Riverside.
+
+1136
+01:13:23,880 --> 01:13:26,680
+My student Jeremiah Griffin
+that is actively working
+
+1137
+01:13:26,680 --> 01:13:29,960
+on the COC framework is
+present in the conference.
+
+1138
+01:13:29,960 --> 01:13:34,600
+The other students that helped me
+are Narges Shadab and Xizhe Yin.
+
+1139
+01:13:34,600 --> 01:13:39,160
+Distributed systems are critical to
+reliable and scalable computing.
+
+1140
+01:13:39,160 --> 01:13:42,640
+However, they are complicated
+and prone to box.
+
+1141
+01:13:43,160 --> 01:13:44,960
+To manage this complexity,
+
+1142
+01:13:44,960 --> 01:13:47,520
+network middleware has
+been traditionally built
+
+1143
+01:13:47,520 --> 01:13:50,520
+in layered stacks of components.
+
+1144
+01:13:50,520 --> 01:13:54,520
+The state of the art for
+verification of distributed systems
+
+1145
+01:13:54,520 --> 01:13:57,600
+does not consider either
+compositional reasoning,
+
+1146
+01:13:57,600 --> 01:14:01,040
+program logics,
+or liveness properties.
+
+1147
+01:14:01,640 --> 01:14:05,080
+We present TLC,
+a novel program logic
+
+1148
+01:14:05,080 --> 01:14:07,640
+for composition on
+verification of both safety
+
+1149
+01:14:07,640 --> 01:14:11,920
+and liveness properties of
+distributed system stacks.
+
+1150
+01:14:11,920 --> 01:14:16,520
+This project includes a layered and
+functional programming model
+
+1151
+01:14:16,520 --> 01:14:19,360
+to capture distributed components,
+
+1152
+01:14:19,360 --> 01:14:23,760
+the temporal assertion language
+to specify both safety
+
+1153
+01:14:23,760 --> 01:14:26,080
+and liveness properties.
+
+1154
+01:14:26,080 --> 01:14:29,440
+Compositional verification
+of distributed stacks.
+
+1155
+01:14:29,440 --> 01:14:35,400
+A novel program logic that supports
+intuitive reasoning steps
+
+1156
+01:14:35,400 --> 01:14:39,240
+and an operational semantics
+for distributed stacks,
+
+1157
+01:14:39,240 --> 01:14:42,160
+and the soundness of the logic.
+
+1158
+01:14:42,160 --> 01:14:45,120
+We successfully applied
+it to compose and verify
+
+1159
+01:14:45,120 --> 01:14:48,640
+stacks of fundamental
+distributed components.
+
+1160
+01:14:48,640 --> 01:14:52,560
+The ultimate goal is to build
+certified distributed middleware.
+
+1161
+01:14:52,560 --> 01:14:55,840
+And towards this goal, we are
+mechanizing our pros and cons.
+
+1162
+01:14:55,840 --> 01:14:58,080
+We present a layered
+programming model
+
+1163
+01:14:58,080 --> 01:15:01,880
+to capture functional implementations
+of distributed components.
+
+1164
+01:15:02,880 --> 01:15:06,640
+The component receives incoming
+requests from the parent component,
+
+1165
+01:15:06,640 --> 01:15:10,160
+and incoming indications
+from the sub-components
+
+1166
+01:15:10,160 --> 01:15:14,880
+that defines 200 functions
+request an indication
+
+1167
+01:15:14,880 --> 01:15:16,360
+for these events.
+
+1168
+01:15:16,360 --> 01:15:19,960
+It also defines a handler
+that is periodically called.
+
+1169
+01:15:19,960 --> 01:15:25,000
+These handlers return a triple
+the new internal state of the component
+
+1170
+01:15:25,000 --> 01:15:29,760
+and the list of issued outgoing
+requests to subcomponents
+
+1171
+01:15:29,760 --> 01:15:33,640
+and outgoing indications
+to the parent component.
+
+1172
+01:15:33,640 --> 01:15:36,080
+Let us consider the
+perfect link competent,
+
+1173
+01:15:36,080 --> 01:15:39,080
+that uses a stubborn
+link subcomponent.
+
+1174
+01:15:39,080 --> 01:15:43,280
+We abbreviate their
+names as PL and SL.
+
+1175
+01:15:43,280 --> 01:15:48,160
+SL repeatedly resends messages so that
+they are eventually delivered.
+
+1176
+01:15:48,160 --> 01:15:50,640
+This results in multiple deliveries.
+
+1177
+01:15:50,640 --> 01:15:55,640
+Therefore PL is built on the top of
+SL to eliminate duplicate messages.
+
+1178
+01:15:57,680 --> 01:16:00,320
+The state of each
+node stores counter
+
+1179
+01:16:00,320 --> 01:16:04,360
+the number of messages sent by
+the current node and also received
+
+1180
+01:16:04,360 --> 01:16:07,040
+the set of received
+message identifiers.
+
+1181
+01:16:07,040 --> 01:16:08,960
+Each message is uniquely identified
+
+1182
+01:16:08,960 --> 01:16:11,440
+by the pair of
+the sender node identifier
+
+1183
+01:16:11,440 --> 01:16:14,440
+and the number of
+the messages in that node.
+
+1184
+01:16:15,280 --> 01:16:21,160
+Upon a request to send the message
+the counter is incremented
+
+1185
+01:16:21,160 --> 01:16:24,840
+and the message is sent together
+with the new counter value
+
+1186
+01:16:24,840 --> 01:16:27,840
+using the SL subcomponent.
+
+1187
+01:16:27,840 --> 01:16:32,080
+Upon a delivery indication of
+a message from the SL subcomponent,
+
+1188
+01:16:32,080 --> 01:16:36,200
+If the message is already
+received, it is ignored.
+
+1189
+01:16:36,200 --> 01:16:40,160
+Otherwise, the message identifier
+is added to the received set
+
+1190
+01:16:40,160 --> 01:16:43,160
+and appear delivery
+indication event is issued.
+
+1191
+01:16:43,160 --> 01:16:47,760
+Here we briefly illustrate
+the propagation of events across the stack.
+
+1192
+01:16:47,760 --> 01:16:50,720
+We have a stack of
+components on the left
+
+1193
+01:16:50,720 --> 01:16:55,280
+and a trace of events on the right
+with events at different levels.
+
+1194
+01:16:55,280 --> 01:16:59,200
+The request at the top-level
+results in a request
+
+1195
+01:16:59,200 --> 01:17:03,560
+for the left subcomponent that
+in turn results in a request
+
+1196
+01:17:03,560 --> 01:17:08,280
+for its own subcomponent that
+results in an indication
+
+1197
+01:17:08,280 --> 01:17:13,280
+and another indication-up and finally
+an indication at the top level.
+
+1198
+01:17:15,720 --> 01:17:16,880
+In the next few slides,
+
+1199
+01:17:16,880 --> 01:17:20,720
+we will use the indication
+identifier d of an event
+
+1200
+01:17:20,720 --> 01:17:23,440
+that is the reverse
+list of branch indices
+
+1201
+01:17:23,440 --> 01:17:26,240
+from the top component
+to that event.
+
+1202
+01:17:26,240 --> 01:17:29,760
+We now take a look at parts
+of the assertion language.
+
+1203
+01:17:29,760 --> 01:17:33,520
+We use the classical operators
+always and always in the past.
+
+1204
+01:17:33,520 --> 01:17:36,360
+And eventually
+and eventually in the past.
+
+1205
+01:17:36,360 --> 01:17:41,840
+The assertion A strong implies
+A' is syntactic sugar for
+
+1206
+01:17:41,840 --> 01:17:44,800
+always A implies A'.
+
+1207
+01:17:44,800 --> 01:17:49,440
+The assertion A leads to
+A' prime is syntactic sugar for
+
+1208
+01:17:49,440 --> 01:17:52,760
+always A implies eventually A'.
+
+1209
+01:17:52,760 --> 01:17:57,760
+Similarly, the assertion A preceded
+by A' is syntactic sugar for
+
+1210
+01:17:57,760 --> 01:18:01,920
+always A implies eventually
+in the past A'.
+
+1211
+01:18:01,920 --> 01:18:05,440
+The flexible valuables for
+the elements of an event are
+
+1212
+01:18:05,440 --> 01:18:09,600
+the identifier n of the node
+that executes the event.
+
+1213
+01:18:09,600 --> 01:18:14,320
+The location identifier d in
+the stack that the event is executed at
+
+1214
+01:18:14,320 --> 01:18:18,760
+the output requests ors
+an output indications
+
+1215
+01:18:18,760 --> 01:18:22,640
+ois that the event issues
+and the prestate s
+
+1216
+01:18:22,640 --> 01:18:25,840
+and the post state s' of the event.
+
+1217
+01:18:25,840 --> 01:18:28,840
+We use the syntactic
+sugar assertion self
+
+1218
+01:18:28,840 --> 01:18:33,040
+to describe events that are
+applied to the top component.
+
+1219
+01:18:33,040 --> 01:18:35,440
+Now important syntactic sugar,
+
+1220
+01:18:35,440 --> 01:18:39,320
+here down arrow denotes
+a request an up arrow denotes
+
+1221
+01:18:40,000 --> 01:18:42,040
+an indication.
+
+1222
+01:18:42,040 --> 01:18:45,680
+This syntactic sugar
+describes an event at node n
+
+1223
+01:18:45,680 --> 01:18:48,040
+at the top-level location T,
+
+1224
+01:18:48,040 --> 01:18:52,480
+where the request event
+send n' and m is executed.
+
+1225
+01:18:53,080 --> 01:18:55,800
+The bullet is just a separator.
+
+1226
+01:18:55,800 --> 01:19:00,800
+And this second syntactic sugar
+describes an event at node n
+
+1227
+01:19:01,280 --> 01:19:03,440
+at the child location one
+
+1228
+01:19:03,440 --> 01:19:07,440
+where the indication even
+deliver n' and m is executed.
+
+1229
+01:19:07,440 --> 01:19:10,560
+This specification of both
+safety and liveness properties
+
+1230
+01:19:10,560 --> 01:19:14,280
+of the perfect link can be
+written almost verbatim
+
+1231
+01:19:14,280 --> 01:19:17,440
+from their natural
+language descriptions.
+
+1232
+01:19:17,440 --> 01:19:21,880
+Let's see a reliable delivery
+as a liveness property.
+
+1233
+01:19:21,880 --> 01:19:27,200
+If a correct node n sends
+a message m to a correct node n',
+
+1234
+01:19:27,200 --> 01:19:30,320
+then n' will eventually deliver m
+
+1235
+01:19:31,440 --> 01:19:34,480
+A no-forge property
+as a safety property.
+
+1236
+01:19:34,480 --> 01:19:39,400
+If a node n delivers
+a message m with sender n'
+
+1237
+01:19:39,920 --> 01:19:44,840
+then n' has previously sent m to n.
+
+1238
+01:19:45,360 --> 01:19:49,000
+And a similar no-forge property
+is stated for stubborn links,
+
+1239
+01:19:49,000 --> 01:19:52,520
+let us consider
+compositional verification.
+
+1240
+01:19:52,520 --> 01:19:57,520
+We have two stacks S0 and S1 with
+the specifications I0 and I1
+
+1241
+01:19:59,000 --> 01:20:04,000
+To implement a new component C
+we use them as SOC components.
+
+1242
+01:20:04,600 --> 01:20:07,760
+We want to verify
+the specification A for C
+
+1243
+01:20:07,760 --> 01:20:10,000
+based on only the specifications
+
+1244
+01:20:10,000 --> 01:20:13,680
+and not the implementations
+of the sub-components.
+
+1245
+01:20:13,680 --> 01:20:15,960
+The fundamental question is
+
+1246
+01:20:15,960 --> 01:20:18,880
+how the specification of
+a component should be lowered
+
+1247
+01:20:18,880 --> 01:20:21,800
+to be used as a sub-component.
+
+1248
+01:20:21,800 --> 01:20:25,000
+Lowering is not possible
+for every assertion.
+
+1249
+01:20:25,000 --> 01:20:30,320
+We observed that lowering specifications
+requires certain information
+
+1250
+01:20:30,320 --> 01:20:33,000
+such as the location of
+events to be present,
+
+1251
+01:20:33,000 --> 01:20:38,000
+and certain operators such as next to
+be absent from the specification.
+
+1252
+01:20:39,360 --> 01:20:43,520
+We identify the subset of
+the assertion language that is both
+
+1253
+01:20:43,520 --> 01:20:47,000
+restrictive enough to allow
+the definition of the
+
+1254
+01:20:47,000 --> 01:20:50,360
+lowering transformation
+and expressive enough
+
+1255
+01:20:50,360 --> 01:20:53,680
+to represent specifications.
+
+1256
+01:20:53,680 --> 01:20:56,680
+The lower function first pushes
+
+1257
+01:20:57,440 --> 01:21:00,480
+and then restricts the assertion.
+
+1258
+01:21:01,320 --> 01:21:04,840
+We visit each one of these
+two functions in turn.
+
+1259
+01:21:04,840 --> 01:21:07,920
+When a component is used
+as a sub-component,
+
+1260
+01:21:07,920 --> 01:21:10,960
+its events appear at a deeper level.
+
+1261
+01:21:10,960 --> 01:21:14,120
+For example, the location of
+the events of the first component
+
+1262
+01:21:14,120 --> 01:21:18,120
+are at the top level
+shown by the empty path.
+
+1263
+01:21:18,120 --> 01:21:21,240
+But then the component is used
+as the first sub-component.
+
+1264
+01:21:21,240 --> 01:21:26,240
+The events appear at branch
+zero written as the path zero.
+
+1265
+01:21:26,880 --> 01:21:31,480
+The push transformation pushes
+the locations under branch I.
+
+1266
+01:21:31,480 --> 01:21:34,200
+The important case is the atom case.
+
+1267
+01:21:34,200 --> 01:21:37,080
+The location D is
+explicit in the atom
+
+1268
+01:21:37,080 --> 01:21:41,600
+appending I to the location D
+effectively pushes the events
+
+1269
+01:21:41,600 --> 01:21:44,840
+to branch I, next
+the restrict function.
+
+1270
+01:21:44,840 --> 01:21:49,200
+When a stack is at the top, all
+events belong to that stack.
+
+1271
+01:21:49,200 --> 01:21:53,960
+However, when it is pushed to
+a sub stack, it's not alone anymore.
+
+1272
+01:21:55,280 --> 01:21:57,520
+It's even sorely interleaved
+with the events from the
+
+1273
+01:21:57,520 --> 01:22:02,000
+sibling sub stacks
+and the top component.
+
+1274
+01:22:02,000 --> 01:22:05,520
+The restrict transformation
+restricts the specification
+
+1275
+01:22:05,520 --> 01:22:10,240
+to remain valid on traces that are
+extended with interlinking events.
+
+1276
+01:22:10,240 --> 01:22:13,480
+The important case is always A.
+
+1277
+01:22:13,480 --> 01:22:18,480
+After pushing the session always A
+does not necessarily remain valid.
+
+1278
+01:22:18,480 --> 01:22:23,280
+It remains valid on only
+the events under that branch.
+
+1279
+01:22:23,280 --> 01:22:27,640
+Therefore, the restricting condition
+of being under branch I is added.
+
+1280
+01:22:27,640 --> 01:22:30,120
+Let us take a look at a few basic
+
+1281
+01:22:30,120 --> 01:22:34,160
+and derived inference rules
+of the TLC program logic.
+
+1282
+01:22:34,160 --> 01:22:38,000
+The basic inference rules capture
+the fundamental reasoning steps
+
+1283
+01:22:38,000 --> 01:22:41,920
+and fit in half a page.
+Yet they provide the basis
+
+1284
+01:22:41,920 --> 01:22:46,360
+for the derive roles
+and verification of full stacks.
+
+1285
+01:22:46,360 --> 01:22:50,760
+Here we consider two basic
+roles and one derived role.
+
+1286
+01:22:50,760 --> 01:22:53,560
+The judgments of this form
+
+1287
+01:22:53,560 --> 01:22:58,200
+states that under
+the assumed assertions comma
+
+1288
+01:22:58,200 --> 01:23:02,920
+the assertion A holds
+for the component C.
+
+1289
+01:23:02,920 --> 01:23:06,720
+The rule OI for output
+indication states that
+
+1290
+01:23:06,720 --> 01:23:11,720
+if at a node n an output indication
+e is issued by a self event,
+
+1291
+01:23:12,280 --> 01:23:17,360
+then eventually at n
+and the top-level T,
+
+1292
+01:23:17,360 --> 01:23:21,280
+the indication event e is executed.
+
+1293
+01:23:21,280 --> 01:23:26,280
+The rule OI' states this relation
+in the opposite direction.
+
+1294
+01:23:26,880 --> 01:23:30,000
+If at the node n the top-level T
+
+1295
+01:23:30,000 --> 01:23:33,200
+an outward indication
+event e is executed,
+
+1296
+01:23:33,200 --> 01:23:37,640
+then in the past at that
+node n the indication event e
+
+1297
+01:23:37,640 --> 01:23:40,200
+should have been
+issued by a self event.
+
+1298
+01:23:40,200 --> 01:23:44,000
+Let us now look at
+the derived rule INVL.
+
+1299
+01:23:44,000 --> 01:23:48,240
+This rule reduces a global temporal
+invariant for the component
+
+1300
+01:23:48,240 --> 01:23:53,240
+to nontemporal and local proof
+obligations for its handler functions.
+
+1301
+01:23:54,320 --> 01:23:58,280
+It states that if
+a nontemporal assertion A
+
+1302
+01:23:58,280 --> 01:24:02,720
+holds for all the three handler
+functions of the component,
+
+1303
+01:24:02,720 --> 01:24:06,520
+request, indication, and periodic
+
+1304
+01:24:06,520 --> 01:24:10,360
+then the assertion holds
+in every self event.
+
+1305
+01:24:11,000 --> 01:24:14,320
+Does the functional
+implementation of the component
+
+1306
+01:24:14,320 --> 01:24:18,160
+can be used to derive
+invariants we showcase TLC
+
+1307
+01:24:18,160 --> 01:24:22,440
+with the example proof of
+the no-forge property for PL.
+
+1308
+01:24:22,440 --> 01:24:26,200
+If a PL delivery event is executed,
+
+1309
+01:24:26,200 --> 01:24:29,960
+it is preceded by its
+corresponding PL send event.
+
+1310
+01:24:29,960 --> 01:24:33,040
+Starting from the Pl delivery event,
+
+1311
+01:24:33,040 --> 01:24:38,040
+the first step states that
+if appeal delivery event is executed,
+
+1312
+01:24:39,040 --> 01:24:42,200
+the event should have
+been previously issued.
+
+1313
+01:24:43,560 --> 01:24:48,600
+Then the step two shows that
+if a PL delivery event is issued,
+
+1314
+01:24:48,600 --> 01:24:52,080
+it is issued by an SL deliver event.
+
+1315
+01:24:52,080 --> 01:24:55,920
+And step three uses the lower
+specification of the no-forge
+
+1316
+01:24:55,920 --> 01:25:01,400
+property of the SL subcomponent.
+Every SL deliver event
+
+1317
+01:25:01,400 --> 01:25:04,560
+is preceded by an SL send event.
+
+1318
+01:25:04,560 --> 01:25:10,000
+And the other steps are similar
+by transitivity of precedence,
+
+1319
+01:25:10,000 --> 01:25:14,920
+we get to no-forge property for PL
+these steps can be captured in TLC.
+
+1320
+01:25:14,920 --> 01:25:17,840
+Here we look at step two.
+
+1321
+01:25:17,840 --> 01:25:21,880
+We want to prove that if
+a PL deliver event is issued,
+
+1322
+01:25:21,880 --> 01:25:25,720
+the issuing event is
+an SL deliver event.
+
+1323
+01:25:25,720 --> 01:25:30,320
+To prove it, we use the rule
+INVL that we saw before
+
+1324
+01:25:30,320 --> 01:25:33,680
+with this assertion as
+A that states that
+
+1325
+01:25:33,680 --> 01:25:38,680
+the PL deliver event is issued
+by all the NSF deliver event
+
+1326
+01:25:39,440 --> 01:25:43,200
+and the definitional component SC.
+
+1327
+01:25:43,200 --> 01:25:47,000
+The first obligation is
+for the request handler.
+
+1328
+01:25:47,000 --> 01:25:52,000
+The request function issues
+an empty set of output indications
+
+1329
+01:25:53,080 --> 01:25:58,400
+and so the assertion
+A trivially halts.
+
+1330
+01:25:58,400 --> 01:26:02,760
+The next obligation is for
+the indication handler.
+
+1331
+01:26:02,760 --> 01:26:05,840
+It issues the PL deliver event,
+
+1332
+01:26:05,840 --> 01:26:09,640
+but that is when an SL
+deliver event is processed.
+
+1333
+01:26:09,640 --> 01:26:12,480
+So, the assertion A halts.
+
+1334
+01:26:12,480 --> 01:26:15,480
+And finally the obligation
+for the periodic handler
+
+1335
+01:26:15,480 --> 01:26:19,240
+trivially halts in this component.
+
+1336
+01:26:19,240 --> 01:26:22,800
+This results in this assertion.
+
+1337
+01:26:22,800 --> 01:26:24,240
+That is a simple rearrangement
+
+1338
+01:26:24,240 --> 01:26:26,320
+is equivalent to
+the assertion in step two.
+
+1339
+01:26:26,320 --> 01:26:30,000
+We define the operational
+semantics of distributed stacks.
+
+1340
+01:26:30,000 --> 01:26:33,240
+It models the propagation
+of events across the stack
+
+1341
+01:26:33,240 --> 01:26:36,840
+message passing actress nodes in
+partially synchronous networks
+
+1342
+01:26:36,840 --> 01:26:40,200
+and crash stop failures.
+
+1343
+01:26:40,200 --> 01:26:42,560
+We prove the soundness of TLC.
+
+1344
+01:26:42,560 --> 01:26:46,960
+TLC derives only valid assumptions
+from valid assumptions.
+
+1345
+01:26:46,960 --> 01:26:49,480
+We also proved
+the soundness of lowering,
+
+1346
+01:26:49,480 --> 01:26:53,840
+if an invariant is
+valid for a stack Si
+
+1347
+01:26:53,840 --> 01:26:57,880
+and Si is a sub stack
+of a stack S,
+
+1348
+01:26:57,880 --> 01:27:02,480
+then the lowered invariant
+is valid for S as well.
+
+1349
+01:27:03,600 --> 01:27:06,080
+We successfully
+applied this approach
+
+1350
+01:27:06,080 --> 01:27:09,400
+to stack of fundamental
+distributed components including
+
+1351
+01:27:09,400 --> 01:27:13,160
+stubborn links, perfectly
+links, best-effort broadcast,
+
+1352
+01:27:13,160 --> 01:27:18,280
+uniform reliable broadcast
+and epoch Paxos consensus.
+
+1353
+01:27:18,280 --> 01:27:20,960
+And towards the goal of
+certified middleware,
+
+1354
+01:27:20,960 --> 01:27:23,680
+we are mechanizing our
+proofs in a Coq framework.
+
+1355
+01:27:23,680 --> 01:27:26,000
+I invite you to read the paper
+
+1356
+01:27:26,000 --> 01:27:29,160
+and I will be glad to
+answer your questions.
+
+1357
+01:27:36,560 --> 01:27:38,560
+ADAM: Thanks, Mohsen.
+In either time band,
+
+1358
+01:27:38,560 --> 01:27:40,680
+you should now see
+a link appearing Clowdr
+
+1359
+01:27:40,680 --> 01:27:44,440
+to join the video Q&A
+with Mohsen.
+
+1360
+01:28:01,640 --> 01:28:03,720
+To close out the session
+we have Ningning Xie,
+
+1361
+01:28:03,720 --> 01:28:05,760
+presenting a variant
+of algebraic effects
+
+1362
+01:28:05,760 --> 01:28:08,640
+that admits efficient
+implementation.
+
+1363
+01:28:08,640 --> 01:28:10,840
+NINGNING XIE: Hello
+everyone, I'm Ningning.
+
+1364
+01:28:10,840 --> 01:28:15,720
+I'm going to present our work
+effect handlers evidently.
+
+1365
+01:28:15,720 --> 01:28:19,280
+Hello, in this work we show that
+
+1366
+01:28:19,280 --> 01:28:22,760
+we can elaborate algebraic
+effects the evidence passing
+
+1367
+01:28:22,760 --> 01:28:24,760
+to polymorphic lambda calculus.
+
+1368
+01:28:24,760 --> 01:28:28,200
+This gives new semantics
+of algebraic effects.
+
+1369
+01:28:28,200 --> 01:28:32,000
+In particular, there is no need
+for a special runtime system
+
+1370
+01:28:32,000 --> 01:28:35,840
+for implementations. This
+can be extremely useful
+
+1371
+01:28:35,840 --> 01:28:40,520
+if you want to compile algebraic
+effects to languages like C.
+
+1372
+01:28:40,520 --> 01:28:43,400
+Moreover, we show that
+with evidence passing
+
+1373
+01:28:43,400 --> 01:28:46,520
+such implimentations
+can be quite efficient.
+
+1374
+01:28:46,520 --> 01:28:48,560
+Before we go to
+the technical details
+
+1375
+01:28:48,560 --> 01:28:53,360
+let's start with an overview
+of algebraic effects.
+
+1376
+01:28:53,360 --> 01:28:56,720
+Algebraic effects and as
+extension with handlers
+
+1377
+01:28:56,720 --> 01:29:00,800
+are a powerful way to incorporate
+effects in programming languages.
+
+1378
+01:29:00,800 --> 01:29:02,360
+To understand how it works,
+
+1379
+01:29:02,360 --> 01:29:06,160
+we start with a typical
+example of the reader effect.
+
+1380
+01:29:06,160 --> 01:29:09,880
+On the left-hand side, we
+define a simple effect reader,
+
+1381
+01:29:09,880 --> 01:29:14,720
+which has a single operation
+ask. The type of ask says that
+
+1382
+01:29:14,720 --> 01:29:17,680
+you can ask by providing
+a unit argument,
+
+1383
+01:29:17,680 --> 01:29:20,160
+then you'll there
+return you an integer.
+
+1384
+01:29:20,160 --> 01:29:22,960
+Now we can already start using ask.
+
+1385
+01:29:22,960 --> 01:29:27,480
+The expressions below simply could
+ask twice and returns the sum.
+
+1386
+01:29:27,480 --> 01:29:31,080
+However, we still don't know
+how it would evaluate.
+
+1387
+01:29:31,080 --> 01:29:34,560
+The semantics of effects is
+given by effect handlers,
+
+1388
+01:29:34,560 --> 01:29:38,120
+where handlers provide
+operation implementations.
+
+1389
+01:29:38,120 --> 01:29:42,600
+we handle an expression by replicating a
+lambda which takes a unit.
+
+1390
+01:29:42,600 --> 01:29:46,960
+in our example, we use x to
+denote the operation argument.
+
+1391
+01:29:46,960 --> 01:29:51,760
+In this case unit. The extra
+argument k is implicitly provided
+
+1392
+01:29:51,760 --> 01:29:55,000
+by the system, which
+denotes the assumption,
+
+1393
+01:29:55,000 --> 01:29:59,720
+that is how to resume the computation
+where operation is performed.
+
+1394
+01:29:59,720 --> 01:30:02,840
+In this case, we always
+redeem with one.
+
+1395
+01:30:02,840 --> 01:30:06,320
+When the first ask is performed,
+the handler returns one
+
+1396
+01:30:06,320 --> 01:30:09,560
+and we have one plus
+perform as unit.
+
+1397
+01:30:09,560 --> 01:30:13,400
+Then the second ask is
+performed and we have 1+1
+
+1398
+01:30:13,400 --> 01:30:15,800
+which gives a result two.
+
+1399
+01:30:15,800 --> 01:30:18,400
+One remarkable feature
+of algebraic effects
+
+1400
+01:30:18,400 --> 01:30:22,560
+is a decoupling of effects and is
+the implementation of effects.
+
+1401
+01:30:22,560 --> 01:30:25,040
+In particular, we can
+use the same handler
+
+1402
+01:30:25,040 --> 01:30:27,680
+to handle a different computation or
+
+1403
+01:30:27,680 --> 01:30:32,680
+we can easily use a different handler
+to handle the same computation.
+
+1404
+01:30:34,000 --> 01:30:38,200
+In summary, algebraic effects
+provide a useful way to encode
+
+1405
+01:30:38,200 --> 01:30:42,520
+composable and modular computational
+effects by having effects,
+
+1406
+01:30:42,520 --> 01:30:46,640
+which define a family of operations
+separately for handlers,
+
+1407
+01:30:46,640 --> 01:30:49,000
+which gives semantics to operations.
+
+1408
+01:30:49,000 --> 01:30:51,560
+We have seen that example of reader
+
+1409
+01:30:51,560 --> 01:30:55,760
+and refer to our paper for
+more complicated examples.
+
+1410
+01:30:56,440 --> 01:31:00,560
+However, it is non-trivial to
+support algebraic effects
+
+1411
+01:31:00,560 --> 01:31:02,960
+in real words programming languages,
+
+1412
+01:31:02,960 --> 01:31:06,280
+we demonstrated
+the issue with this example.
+
+1413
+01:31:06,280 --> 01:31:10,400
+This code has three handlers,
+followed by an expression,
+
+1414
+01:31:10,400 --> 01:31:14,400
+which simply could ask twice
+as we have seen before.
+
+1415
+01:31:14,400 --> 01:31:18,360
+The three handlers are a reader
+handler, an Incr handler,
+
+1416
+01:31:18,360 --> 01:31:21,160
+which increases
+the computation results by one,
+
+1417
+01:31:21,160 --> 01:31:25,400
+and an exception handler, which
+returns a default value three
+
+1418
+01:31:25,400 --> 01:31:27,520
+if the computation fails.
+
+1419
+01:31:27,520 --> 01:31:31,000
+As before, since the reader
+always returns one,
+
+1420
+01:31:31,000 --> 01:31:33,720
+we expect the answer to be two.
+
+1421
+01:31:33,720 --> 01:31:38,720
+Now let's take a closer look at
+how this expression evaluates.
+
+1422
+01:31:39,400 --> 01:31:42,240
+We first evaluate to
+the reader handler.
+
+1423
+01:31:42,240 --> 01:31:44,200
+Now we need to remember that
+
+1424
+01:31:44,200 --> 01:31:46,000
+we have a reader handler
+available in the event
+
+1425
+01:31:47,280 --> 01:31:50,560
+evaluation context,
+since there, we may need to use
+
+1426
+01:31:50,560 --> 01:31:53,080
+the handler to handle
+certain operations.
+
+1427
+01:31:53,080 --> 01:31:56,840
+In a similar way, we
+evaluate the incr handler,
+
+1428
+01:31:56,840 --> 01:32:00,400
+and then the exception handler.
+
+1429
+01:32:00,400 --> 01:32:05,280
+We then hit the first ask,
+but we don't know how to handle it,
+
+1430
+01:32:05,280 --> 01:32:09,120
+thus, we yield up to
+the evaluation context,
+
+1431
+01:32:09,120 --> 01:32:12,040
+and hope to find a reader handle.
+
+1432
+01:32:12,040 --> 01:32:14,960
+So inner most handler
+is exception handler,
+
+1433
+01:32:14,960 --> 01:32:17,640
+which is not useful in this case,
+
+1434
+01:32:17,640 --> 01:32:21,120
+we keep going up
+and find an incr handler,
+
+1435
+01:32:21,120 --> 01:32:24,920
+which is again not
+useful in this case.
+
+1436
+01:32:24,920 --> 01:32:29,000
+Finally, we reach a reader
+handler, which states that,
+
+1437
+01:32:29,000 --> 01:32:32,000
+we should always resume
+with integer one.
+
+1438
+01:32:32,000 --> 01:32:36,160
+Now we need to resume and go
+back where the operation
+
+1439
+01:32:36,160 --> 01:32:41,040
+is handled, and this is
+where we hit the second ask.
+
+1440
+01:32:41,040 --> 01:32:44,560
+Now we need to repeat
+the whole process again
+
+1441
+01:32:44,560 --> 01:32:47,880
+by first yielding up
+and then resuming.
+
+1442
+01:32:47,880 --> 01:32:52,720
+As you may have noticed, implementing
+algebraic affects this way
+
+1443
+01:32:52,720 --> 01:32:55,400
+requires special runtime
+support to yield up,
+
+1444
+01:32:55,400 --> 01:32:59,240
+to capture the resumption
+and to resume.
+
+1445
+01:32:59,240 --> 01:33:03,240
+This is very difficult to add to
+existing programming languages,
+
+1446
+01:33:03,240 --> 01:33:07,280
+moreover, it is very inefficient.
+
+1447
+01:33:07,280 --> 01:33:12,000
+To support to asks, we have
+yield up, and resumed twice,
+
+1448
+01:33:12,000 --> 01:33:15,400
+and it can be more time
+consuming if the handler stack
+
+1449
+01:33:15,400 --> 01:33:17,920
+is even larger.
+
+1450
+01:33:17,920 --> 01:33:21,760
+Hence, the goal of our work
+is to have composable,
+
+1451
+01:33:21,760 --> 01:33:27,200
+modular, efficient, and easy to
+implement computational effects.
+
+1452
+01:33:27,200 --> 01:33:31,360
+To this end, we present new
+semantics of algebraic effects
+
+1453
+01:33:31,360 --> 01:33:34,560
+in terms of polymorphic
+lambda calculus,
+
+1454
+01:33:34,560 --> 01:33:39,120
+by first introducing
+an intermediate evidence calculus.
+
+1455
+01:33:39,120 --> 01:33:42,400
+We can then elaborate
+polymorphic algebraic effects,
+
+1456
+01:33:42,400 --> 01:33:47,000
+there are evidence passing
+translation to the evidence calculus.
+
+1457
+01:33:47,000 --> 01:33:51,080
+This turns out to be surprisingly
+tricky to get right.
+
+1458
+01:33:51,080 --> 01:33:56,080
+In particular, the coherence
+of evidence translation
+
+1459
+01:33:56,080 --> 01:33:59,440
+turns out to only be preserved
+under scoped resumptions.
+
+1460
+01:33:59,440 --> 01:34:03,200
+Finally, we define a monadic
+multi prompt translation
+
+1461
+01:34:03,200 --> 01:34:08,080
+for the evidence calculus to
+the polymorphic lambda calculus.
+
+1462
+01:34:08,080 --> 01:34:12,520
+Combining these two translations,
+we get an implementation
+
+1463
+01:34:12,520 --> 01:34:15,880
+of algebraic effects upon
+polymorphic lambda calculus,
+
+1464
+01:34:15,880 --> 01:34:19,080
+and that requires no
+special runtime support.
+
+1465
+01:34:19,080 --> 01:34:23,520
+We have proved awesomenesss
+and coherence of the translation.
+
+1466
+01:34:23,520 --> 01:34:27,280
+They also turn out that
+doing this translation
+
+1467
+01:34:27,280 --> 01:34:30,720
+does not only get rid of
+special runtime system,
+
+1468
+01:34:30,720 --> 01:34:35,480
+but also allows us to implement
+algebraic effects more efficiently,
+
+1469
+01:34:35,480 --> 01:34:39,200
+especially for
+presumptive operations.
+
+1470
+01:34:39,200 --> 01:34:41,960
+In the rest of the talk, we
+first go through the meaning
+
+1471
+01:34:41,960 --> 01:34:46,960
+of the scope resumptions, and then
+discuss these two translations.
+
+1472
+01:34:48,080 --> 01:34:52,120
+To understand the restriction
+of scoped resumptions,
+
+1473
+01:34:52,120 --> 01:34:54,080
+let's consider this example.
+
+1474
+01:34:54,080 --> 01:34:57,440
+Here, we have two
+handlers, h1 and hevil,
+
+1475
+01:34:57,440 --> 01:35:00,480
+that (INAUDIBLE) the expression E.
+
+1476
+01:35:00,480 --> 01:35:04,040
+The whole result is then given to F.
+
+1477
+01:35:04,040 --> 01:35:08,840
+The definition of E performs three
+operations, ask, evil, and ask.
+
+1478
+01:35:08,840 --> 01:35:13,200
+The handler h1 is a reader
+handler which handles ask
+
+1479
+01:35:13,200 --> 01:35:15,520
+by always resuming this one.
+
+1480
+01:35:15,520 --> 01:35:20,160
+A real expectation now in
+that these two asks in e
+
+1481
+01:35:20,160 --> 01:35:22,240
+with the return one.
+
+1482
+01:35:22,240 --> 01:35:27,520
+However, we show that while
+the first ask as expected
+
+1483
+01:35:27,520 --> 01:35:32,360
+gives back one, the second ask
+gives back a different number two.
+
+1484
+01:35:32,360 --> 01:35:35,120
+How is that possible?
+
+1485
+01:35:35,120 --> 01:35:36,960
+We define the evil
+handler in a way that
+
+1486
+01:35:36,960 --> 01:35:42,360
+instead of resuming, it directly
+returns the resumption K.
+
+1487
+01:35:42,360 --> 01:35:46,760
+F then gets the resumption,
+and applies the resumption
+
+1488
+01:35:46,760 --> 01:35:49,680
+under a different handler
+h2, which handles ask
+
+1489
+01:35:49,680 --> 01:35:52,480
+by returning two instead.
+
+1490
+01:35:52,480 --> 01:35:56,720
+Note in this example, K is
+captured under a handler
+
+1491
+01:35:56,720 --> 01:36:01,720
+contacts with h1, and is resumed
+under a different handler with h2,
+
+1492
+01:36:01,720 --> 01:36:04,960
+this is very powerful,
+perhaps too powerful
+
+1493
+01:36:04,960 --> 01:36:09,800
+that it can interfere with ability
+to reason about the program.
+
+1494
+01:36:09,800 --> 01:36:15,240
+We define the notion of scoped
+resumptions as a restriction
+
+1495
+01:36:15,240 --> 01:36:18,520
+of general effect handlers, where
+resumptions can only be applied
+
+1496
+01:36:18,520 --> 01:36:22,200
+in the very scope of their
+original handler context.
+
+1497
+01:36:22,200 --> 01:36:25,600
+Thus, the previous example is
+rejected under scoped assumptions.
+
+1498
+01:36:25,600 --> 01:36:29,120
+We believe that all
+important effected handlers
+
+1499
+01:36:29,120 --> 01:36:31,440
+can be written with
+scoped assumptions
+
+1500
+01:36:31,440 --> 01:36:34,840
+including complicated
+examples like (INAUDIBLE)
+
+1501
+01:36:34,840 --> 01:36:36,800
+or concurrent scheduling.
+
+1502
+01:36:36,800 --> 01:36:40,560
+The previous example can also be
+re-written to pass the restriction.
+
+1503
+01:36:40,560 --> 01:36:43,360
+In this work, we focus all
+the evidence translation
+
+1504
+01:36:43,360 --> 01:36:46,040
+and use a dynamic check
+in our (INAUDIBLE).
+
+1505
+01:36:46,040 --> 01:36:48,600
+In the paper, we also
+show several designs
+
+1506
+01:36:48,600 --> 01:36:52,760
+on how to check this properly.
+
+1507
+01:36:52,760 --> 01:36:56,640
+You scoped resumptions, we define
+the evidence passing translation.
+
+1508
+01:36:56,640 --> 01:37:01,640
+The key idea of evidence
+passing is that,
+
+1509
+01:37:01,640 --> 01:37:05,160
+a vector of handlers is passed
+down as an implicit parameter
+
+1510
+01:37:05,160 --> 01:37:08,600
+similar to
+the dictionary translation,
+
+1511
+01:37:08,600 --> 01:37:11,800
+it has (INAUDIBLE) protect classes.
+
+1512
+01:37:11,800 --> 01:37:14,360
+To understand how
+evidence passing works,
+
+1513
+01:37:14,360 --> 01:37:17,160
+we re-evaluate the previous example
+
+1514
+01:37:17,160 --> 01:37:20,040
+using the evidence
+passing semantics.
+
+1515
+01:37:20,040 --> 01:37:23,840
+As before, we first evaluate
+the reader handler.
+
+1516
+01:37:23,840 --> 01:37:27,520
+This time, we create
+a fresh unique marker
+
+1517
+01:37:27,520 --> 01:37:32,360
+represented as m1 to denote this
+particular reader handler,
+
+1518
+01:37:32,360 --> 01:37:35,560
+because the (INAUDIBLE) of
+the marker and the handler
+
+1519
+01:37:35,560 --> 01:37:40,400
+and evidence, and we pass
+the evidence down as we evaluate.
+
+1520
+01:37:40,400 --> 01:37:45,600
+We then evaluate the incr handler
+by creating an (INAUDIBLE)
+
+1521
+01:37:45,600 --> 01:37:48,120
+unique marker m2
+and pass the new evidence
+
+1522
+01:37:48,120 --> 01:37:51,240
+along with the existing
+reader evidence, that is,
+
+1523
+01:37:51,240 --> 01:37:54,160
+we now have an evidence vector.
+
+1524
+01:37:54,160 --> 01:37:57,800
+We denote our evidence
+vector using the letter w.
+
+1525
+01:37:57,800 --> 01:38:00,800
+We do the same for
+the exception handler,
+
+1526
+01:38:00,800 --> 01:38:03,520
+and get one more evidence.
+
+1527
+01:38:03,520 --> 01:38:05,760
+Now we hit the first ask operation,
+
+1528
+01:38:05,760 --> 01:38:09,680
+this time, we first inspect
+the evidence vector.
+
+1529
+01:38:09,680 --> 01:38:13,440
+From the evidence vector,
+we find the reader handler
+
+1530
+01:38:13,440 --> 01:38:18,200
+that is supposed to handle
+this operation has marker m1,
+
+1531
+01:38:18,200 --> 01:38:21,320
+we can then yield up,
+but in this case,
+
+1532
+01:38:21,320 --> 01:38:25,080
+finding the correct handler
+can be much faster than before
+
+1533
+01:38:25,080 --> 01:38:28,920
+because we only needed
+to compare the markers.
+
+1534
+01:38:28,920 --> 01:38:33,200
+Actually, the evaluation can
+be even faster, that is,
+
+1535
+01:38:33,200 --> 01:38:36,080
+we don't need to yield up at all.
+
+1536
+01:38:36,080 --> 01:38:39,520
+Because from the evidence
+vector, we do not only know
+
+1537
+01:38:39,520 --> 01:38:44,200
+the marker of the handler, but we
+have the handler itself available.
+
+1538
+01:38:44,200 --> 01:38:47,480
+From the handler
+implementation, we know that
+
+1539
+01:38:47,480 --> 01:38:51,120
+the reader handler has a tail
+resumptive implementation,
+
+1540
+01:38:51,120 --> 01:38:54,640
+therefore, we can evaluate
+the handler in place
+
+1541
+01:38:54,640 --> 01:39:01,160
+and get a result one, as the result
+of ask, and keep evaluating.
+
+1542
+01:39:01,160 --> 01:39:05,240
+We can then hit the second
+ask and get the other one.
+
+1543
+01:39:05,240 --> 01:39:08,360
+Compared to the previous evaluation,
+
+1544
+01:39:08,360 --> 01:39:11,040
+this time, the evaluation
+is a straight line,
+
+1545
+01:39:11,040 --> 01:39:14,880
+which means that it does not
+change the control flow at all,
+
+1546
+01:39:14,880 --> 01:39:18,880
+this is just much more efficient
+than the previous one.
+
+1547
+01:39:18,880 --> 01:39:22,120
+To make such evaluation
+strategies possible,
+
+1548
+01:39:22,120 --> 01:39:24,600
+we have proved
+the following theorem.
+
+1549
+01:39:24,600 --> 01:39:26,880
+The theorem essentially states that,
+
+1550
+01:39:26,880 --> 01:39:29,560
+while performing
+an operation of effect L,
+
+1551
+01:39:29,560 --> 01:39:32,720
+the handler we find in
+the evidence vector w
+
+1552
+01:39:32,720 --> 01:39:36,800
+which is w, l is exactly
+the innermost handler
+
+1553
+01:39:36,800 --> 01:39:41,440
+for that operation in the dynamic
+evaluation context, which is mh.
+
+1554
+01:39:41,440 --> 01:39:45,600
+Thus, with evidence processing,
+we significantly improve
+
+1555
+01:39:45,600 --> 01:39:48,720
+the efficiency of algebraic effects.
+
+1556
+01:39:48,720 --> 01:39:52,920
+In particular, tail resumption
+operations can evaluate in place.
+
+1557
+01:39:52,920 --> 01:39:56,440
+This (INAUDIBLE) is truly
+efficient effect operations
+
+1558
+01:39:56,440 --> 01:40:01,080
+at a cost similar to
+a virtual method.
+
+1559
+01:40:01,080 --> 01:40:04,800
+Non tail-resumptive operations
+still needed to yield up,
+
+1560
+01:40:04,800 --> 01:40:07,440
+but from the evidence vector,
+we can locally decide
+
+1561
+01:40:07,440 --> 01:40:10,440
+which marker to yield to,
+which is still more efficient
+
+1562
+01:40:10,440 --> 01:40:13,080
+than finding
+the handler dynamically.
+
+1563
+01:40:13,080 --> 01:40:17,360
+Hello everyone.
+
+1564
+01:40:17,360 --> 01:40:20,080
+Next at this passing, we
+can then implement handlers
+
+1565
+01:40:20,080 --> 01:40:22,960
+using multi-prompt continuations.
+
+1566
+01:40:22,960 --> 01:40:26,960
+So basically, given evidence
+mh, we can directly yield
+
+1567
+01:40:26,960 --> 01:40:31,920
+to a specific prompt n, moreover,
+since the evidence provided
+
+1568
+01:40:31,920 --> 01:40:35,280
+the handler implementation
+directly, it is no longer needed
+
+1569
+01:40:35,280 --> 01:40:36,840
+in the context.
+
+1570
+01:40:36,840 --> 01:40:41,440
+Such translation is very important
+and it provides the missing link
+
+1571
+01:40:41,440 --> 01:40:44,800
+between traditional implementation
+based on dynamic search
+
+1572
+01:40:44,800 --> 01:40:48,480
+for the handlers,
+and implementations of effect handlers
+
+1573
+01:40:48,480 --> 01:40:52,240
+using multi prompt
+delimited control.
+
+1574
+01:40:52,240 --> 01:40:55,440
+Specifically, we define
+a multi prompt translation
+
+1575
+01:40:55,440 --> 01:40:59,960
+from the evidence language into
+standard polymorphic lambda calculus
+
+1576
+01:40:59,960 --> 01:41:04,120
+where the monad implements
+the multi prompt semantics.
+
+1577
+01:41:04,120 --> 01:41:07,520
+Now, no special runtime
+system is needed anymore,
+
+1578
+01:41:07,520 --> 01:41:10,640
+and we can generate a code
+directly for languages
+
+1579
+01:41:10,640 --> 01:41:12,760
+for that assembly.
+
+1580
+01:41:12,760 --> 01:41:15,520
+Moreover, with our
+standard back end,
+
+1581
+01:41:15,520 --> 01:41:19,160
+advanced compilation structures
+can be used for example,
+
+1582
+01:41:19,160 --> 01:41:21,400
+compilation guided,
+reference counting.
+
+1583
+01:41:21,400 --> 01:41:23,760
+Hello everyone.
+
+1584
+01:41:23,760 --> 01:41:30,280
+We summarize (INAUDIBLE) in
+our paper using this figure.
+
+1585
+01:41:30,280 --> 01:41:34,640
+We have a polymorphic algebraic
+effect calculus system at e,
+
+1586
+01:41:34,640 --> 01:41:37,080
+we can erase the types
+in system at e,
+
+1587
+01:41:37,080 --> 01:41:41,800
+and gets to an untyped algebraic
+effect calculus, system lambda e.
+
+1588
+01:41:41,800 --> 01:41:44,720
+Also, we can do an evidence
+passing translation
+
+1589
+01:41:44,720 --> 01:41:48,880
+to a polymorphic evidence
+calculus, system at ev.
+
+1590
+01:41:48,880 --> 01:41:51,760
+Finally, we show that
+system at ev can use
+
+1591
+01:41:51,760 --> 01:41:54,960
+the multi-prompts translation
+and translate it to a polymorphic
+
+1592
+01:41:54,960 --> 01:41:57,360
+lambda calculus, system fv.
+
+1593
+01:41:57,360 --> 01:42:00,680
+With both translations available,
+we get an implementation
+
+1594
+01:42:00,680 --> 01:42:04,240
+of polymorphic algebraic
+effects in terms of polymorphic
+
+1595
+01:42:04,240 --> 01:42:06,120
+lambda calculus.
+
+1596
+01:42:06,120 --> 01:42:08,400
+Hello everyone.
+
+1597
+01:42:08,400 --> 01:42:10,360
+Please read our paper
+for more details,
+
+1598
+01:42:10,360 --> 01:42:13,760
+moreover, we have provided
+an implementation
+
+1599
+01:42:13,760 --> 01:42:15,640
+of the evidence passing translation
+
+1600
+01:42:15,640 --> 01:42:17,600
+in the Koka programming language.
+
+1601
+01:42:17,600 --> 01:42:20,440
+And initial benchmark
+results are very promising.
+
+1602
+01:42:20,440 --> 01:42:24,720
+Finally, we present a Haskell
+library of effect handlers
+
+1603
+01:42:24,720 --> 01:42:27,280
+based on the technique
+described here,
+
+1604
+01:42:27,280 --> 01:42:30,960
+but we encourage interested
+people to read our Haskell paper
+
+1605
+01:42:30,960 --> 01:42:33,000
+or watch the talk for more details.
+
+1606
+01:42:33,000 --> 01:42:35,120
+That's all, thank you for listening.
+
+1607
+01:42:35,120 --> 01:42:44,280
+(CROWD APPLAUDS)
+
+1608
+01:42:44,280 --> 01:42:46,440
+ADAM: Thanks, Ningning.
+
+1609
+01:42:46,440 --> 01:42:48,360
+On either time bound, you
+should see a Q&A link
+
+1610
+01:42:48,360 --> 01:42:49,920
+appear in Clowdr which you
+can click the video chat
+
+1611
+01:42:49,920 --> 01:42:51,680
+with at least one of
+the authors of this paper,
+
+1612
+01:42:51,680 --> 01:42:53,480
+and that's it for this session.
+
+1613
+01:42:53,480 --> 01:42:55,640
+Before, or after chatting with
+the authors of that last paper,
+
+1614
+01:42:55,640 --> 01:42:57,760
+please take advantage
+of our coffee break
+
+1615
+01:42:57,760 --> 01:43:00,800
+to for instance create your
+own ad hoc video chat room,
+
+1616
+01:43:00,800 --> 01:43:02,880
+or join one that you
+already see there.
+
+1617
+01:43:02,880 --> 01:43:05,400
+We really want to simulate what's
+created by the (INAUDIBLE)
+
+1618
+01:43:05,400 --> 01:43:08,240
+social experience so don't be shy.
+
+1619
+01:43:08,240 --> 01:43:10,960
+We'll also have some more
+structured social activities
+
+1620
+01:43:10,960 --> 01:43:13,280
+right after the coffee
+break as well as throughout
+
+1621
+01:43:13,280 --> 01:43:15,440
+the rest of the three
+days conference,
+
+1622
+01:43:15,440 --> 01:43:17,560
+and we'll be back here for
+the next technical session
+
+1623
+01:43:17,560 --> 01:43:19,920
+at 2:30 pm New York time.
+
+1624
+01:44:10,080 --> 01:44:52,680
+(BACKGROUND MUSIC)
+
+1625
+01:44:53,480 --> 01:44:58,480
+(UPBEAT FOLK MUSIC)
+
+1626
+01:46:37,680 --> 01:46:42,680
+(SOFT POP MUSIC)
+
+1627
+01:50:04,120 --> 01:50:09,120
+(ROCK MUSIC)
+
+1628
+01:52:34,120 --> 01:52:39,120
+(ELECTRONIC POP MUSIC)
+
