@@ -1542,7 +1542,7 @@ forward-chain is good,
 
 314
 00:29:48,760 --> 00:29:51,840
-channeling your... shooting
+generally you're... shooting
 in the dark a lot of times
 
 315
@@ -1578,7 +1578,7 @@ You don't have a
 
 322
 00:30:07,160 --> 00:30:10,160
-fixed (INAUDIBLE)
+fixed narrow
 goal in this space.
 
 323
@@ -1699,7 +1699,7 @@ because you can't...
 
 348
 00:31:23,360 --> 00:31:25,760
-These data sources are built
+These data structures are built
 on the forward direction
 
 349
@@ -1763,7 +1763,7 @@ is we're going to find
 
 362
 00:31:59,040 --> 00:32:02,040
-inputs that reads particular
+inputs for each particular
 line of the program
 
 363
@@ -1827,7 +1827,7 @@ to know the order more explicitly.
 
 376
 00:32:35,160 --> 00:32:39,160
-And also, variable name's unique.
+And also, variable names are unique.
 So, here we have x, y and ret.
 
 377
@@ -1910,7 +1910,7 @@ covering the case
 
 394
 00:33:17,720 --> 00:33:18,960
-where it's a single term.
+where it's a singleton.
 
 395
 00:33:18,960 --> 00:33:22,520
@@ -2018,7 +2018,7 @@ And so, to lookup f1,
 
 418
 00:34:22,520 --> 00:34:26,840
-at this point, we know that if
+at this point, we know that it's
 the return result of the function f.
 
 419
@@ -2137,7 +2137,7 @@ is if we have non-local variables.
 443
 00:35:31,360 --> 00:35:35,800
 And here's a simple example of
-a curated addition function
+a curried addition function
 
 444
 00:35:35,800 --> 00:35:39,320
@@ -2411,7 +2411,7 @@ variables basically
 
 504
 00:38:17,680 --> 00:38:20,720
-and that's all of the (INAUDIBLE)
+and that's all of the
 structure of this interpreter.
 
 505
@@ -2520,7 +2520,7 @@ So, this variable's indexed by
 
 528
 00:39:20,000 --> 00:39:21,080
-F1 in this case,
+f1 in this case,
 
 529
 00:39:21,080 --> 00:39:24,080
@@ -2564,7 +2564,7 @@ So to lookup x from this point here,
 537
 00:39:45,760 --> 00:39:52,400
 it suffices to look up the parameter
-of the coset, that coset was f1,
+of the call site, that call site was f1,
 
 538
 00:39:52,400 --> 00:39:55,840
@@ -2674,7 +2674,7 @@ in opposite directions.
 560
 00:40:55,040 --> 00:40:59,320
 And we also proved that the symbolic
-evaluator is sounding complete
+evaluator is sound and complete
 
 561
 00:40:59,320 --> 00:41:02,080

@@ -324,7 +324,7 @@ Dialogue: 0,0:29:40.24,0:29:41.80,Default,,0,0,0,,where it's clear where your go
 Dialogue: 0,0:29:41.80,0:29:44.72,Default,,0,0,0,,And so, it's best to start from\Nthat goal and work backward
 Dialogue: 0,0:29:44.72,0:29:47.00,Default,,0,0,0,,rather than trying to forward-chain,
 Dialogue: 0,0:29:47.00,0:29:48.76,Default,,0,0,0,,although, sometimes\Nforward-chain is good,
-Dialogue: 0,0:29:48.76,0:29:51.84,Default,,0,0,0,,channeling your... shooting\Nin the dark a lot of times
+Dialogue: 0,0:29:48.76,0:29:51.84,Default,,0,0,0,,generally you're... shooting\Nin the dark a lot of times
 Dialogue: 0,0:29:51.84,0:29:53.84,Default,,0,0,0,,and you're very far\Naway from your target.
 Dialogue: 0,0:29:53.84,0:29:55.80,Default,,0,0,0,,So, goal-directed is\Nclearly a win there
 Dialogue: 0,0:29:55.80,0:29:57.40,Default,,0,0,0,,and it's the common approach.
@@ -332,7 +332,7 @@ Dialogue: 0,0:29:57.40,0:29:59.88,Default,,0,0,0,,Now, if we look at program ana
 Dialogue: 0,0:29:59.88,0:30:01.80,Default,,0,0,0,,symbolic executors and interpreters,
 Dialogue: 0,0:30:01.80,0:30:04.44,Default,,0,0,0,,it's more the opposite\Nthat tends to be...
 Dialogue: 0,0:30:04.44,0:30:07.16,Default,,0,0,0,,You don't have a
-Dialogue: 0,0:30:07.16,0:30:10.16,Default,,0,0,0,,fixed (INAUDIBLE)\Ngoal in this space.
+Dialogue: 0,0:30:07.16,0:30:10.16,Default,,0,0,0,,fixed narrow\Ngoal in this space.
 Dialogue: 0,0:30:10.16,0:30:13.44,Default,,0,0,0,,It tends to be one around\Nthe whole program in all these cases.
 Dialogue: 0,0:30:13.44,0:30:15.16,Default,,0,0,0,,So, they tend to be forward.
 Dialogue: 0,0:30:15.16,0:30:17.24,Default,,0,0,0,,But there are some cases when
@@ -358,7 +358,7 @@ Dialogue: 0,0:31:11.36,0:31:14.48,Default,,0,0,0,,And so, we're also going to pr
 Dialogue: 0,0:31:14.48,0:31:17.56,Default,,0,0,0,,of functional interpreter and
 Dialogue: 0,0:31:17.56,0:31:21.28,Default,,0,0,0,,it is novel and has no substitution,\Nenvironment or closures
 Dialogue: 0,0:31:21.28,0:31:23.36,Default,,0,0,0,,because you can't...
-Dialogue: 0,0:31:23.36,0:31:25.76,Default,,0,0,0,,These data sources are built\Non the forward direction
+Dialogue: 0,0:31:23.36,0:31:25.76,Default,,0,0,0,,These data structures are built\Non the forward direction
 Dialogue: 0,0:31:25.76,0:31:28.32,Default,,0,0,0,,and we're not running forward.
 Dialogue: 0,0:31:28.32,0:31:30.72,Default,,0,0,0,,And so, the interpreter itself\Nis pretty interesting.
 Dialogue: 0,0:31:31.80,0:31:33.48,Default,,0,0,0,,And so, the outline of the talk
@@ -372,7 +372,7 @@ Dialogue: 0,0:31:48.44,0:31:50.64,Default,,0,0,0,,functional language in our the
 Dialogue: 0,0:31:50.64,0:31:53.36,Default,,0,0,0,,And we're going to have input because
 Dialogue: 0,0:31:53.36,0:31:56.76,Default,,0,0,0,,the way we're going to test\Nour symbolic evaluators
 Dialogue: 0,0:31:56.76,0:31:59.04,Default,,0,0,0,,is we're going to find
-Dialogue: 0,0:31:59.04,0:32:02.04,Default,,0,0,0,,inputs that reads particular\Nline of the program
+Dialogue: 0,0:31:59.04,0:32:02.04,Default,,0,0,0,,inputs for each particular\Nline of the program
 Dialogue: 0,0:32:02.04,0:32:03.56,Default,,0,0,0,,and that's sort of our concrete
 Dialogue: 0,0:32:03.56,0:32:05.76,Default,,0,0,0,,goal to show that the method works.
 Dialogue: 0,0:32:06.40,0:32:08.92,Default,,0,0,0,,And recursion is this\Nencoded via self-passing
@@ -386,7 +386,7 @@ Dialogue: 0,0:32:26.84,0:32:28.20,Default,,0,0,0,,which is very useful because
 Dialogue: 0,0:32:28.20,0:32:29.92,Default,,0,0,0,,we're going to be running\Nprograms backwards.
 Dialogue: 0,0:32:29.92,0:32:33.16,Default,,0,0,0,,So, reading right to\Nleft is very handy
 Dialogue: 0,0:32:33.16,0:32:35.16,Default,,0,0,0,,to know the order more explicitly.
-Dialogue: 0,0:32:35.16,0:32:39.16,Default,,0,0,0,,And also, variable name's unique.\NSo, here we have x, y and ret.
+Dialogue: 0,0:32:35.16,0:32:39.16,Default,,0,0,0,,And also, variable names are unique.\NSo, here we have x, y and ret.
 Dialogue: 0,0:32:39.16,0:32:41.60,Default,,0,0,0,,And those serve as\Nthe program points because
 Dialogue: 0,0:32:41.60,0:32:42.76,Default,,0,0,0,,they're unique.
 Dialogue: 0,0:32:42.76,0:32:44.00,Default,,0,0,0,,So, there's...
@@ -404,7 +404,7 @@ Dialogue: 0,0:33:10.88,0:33:13.16,Default,,0,0,0,,So, yes, this is the program p
 Dialogue: 0,0:33:13.16,0:33:14.64,Default,,0,0,0,,Call stack.
 Dialogue: 0,0:33:14.64,0:33:16.00,Default,,0,0,0,,In general, this is\Ngoing to be a list,
 Dialogue: 0,0:33:16.00,0:33:17.72,Default,,0,0,0,,but for now, we're just\Ncovering the case
-Dialogue: 0,0:33:17.72,0:33:18.96,Default,,0,0,0,,where it's a single term.
+Dialogue: 0,0:33:17.72,0:33:18.96,Default,,0,0,0,,where it's a singleton.
 Dialogue: 0,0:33:18.96,0:33:22.52,Default,,0,0,0,,And the idea is we're just going to\Nwalk back through the program,
 Dialogue: 0,0:33:22.52,0:33:23.96,Default,,0,0,0,,define the variable
 Dialogue: 0,0:33:23.96,0:33:24.96,Default,,0,0,0,,as the intuition.
@@ -428,7 +428,7 @@ Dialogue: 0,0:34:12.16,0:34:14.28,Default,,0,0,0,,So, let's go through that in d
 Dialogue: 0,0:34:14.28,0:34:16.44,Default,,0,0,0,,how we traced that call.
 Dialogue: 0,0:34:16.44,0:34:19.48,Default,,0,0,0,,So, a little more about how\Nthe actual lookup function works.
 Dialogue: 0,0:34:20.24,0:34:22.52,Default,,0,0,0,,And so, to lookup f1,
-Dialogue: 0,0:34:22.52,0:34:26.84,Default,,0,0,0,,at this point, we know that if\Nthe return result of the function f.
+Dialogue: 0,0:34:22.52,0:34:26.84,Default,,0,0,0,,at this point, we know that it's\Nthe return result of the function f.
 Dialogue: 0,0:34:26.84,0:34:32.00,Default,,0,0,0,,So, it suffices to lookup\Nthe return variable fret in that code
 Dialogue: 0,0:34:32.00,0:34:34.44,Default,,0,0,0,,at the last line of\Ncode which is fret.
 Dialogue: 0,0:34:34.44,0:34:37.48,Default,,0,0,0,,So, we're looking up from\Nthe point that we're pointing to
@@ -453,7 +453,7 @@ Dialogue: 0,0:35:19.92,0:35:22.20,Default,,0,0,0,,and that pretty\Nclearly is go
 Dialogue: 0,0:35:22.20,0:35:23.96,Default,,0,0,0,,And the final result\Nis 1+1 which is 2.
 Dialogue: 0,0:35:24.72,0:35:27.28,Default,,0,0,0,,So, that's a simple lookup.
 Dialogue: 0,0:35:27.28,0:35:30.60,Default,,0,0,0,,And a little more complicated case\Nis if we have non-local variables.
-Dialogue: 0,0:35:31.36,0:35:35.80,Default,,0,0,0,,And here's a simple example of\Na curated addition function
+Dialogue: 0,0:35:31.36,0:35:35.80,Default,,0,0,0,,And here's a simple example of\Na curried addition function
 Dialogue: 0,0:35:35.80,0:35:39.32,Default,,0,0,0,,and let's start in\Nthe middle of this look up.
 Dialogue: 0,0:35:39.32,0:35:41.52,Default,,0,0,0,,So, we want to lookup the value of x.
 Dialogue: 0,0:35:41.52,0:35:43.92,Default,,0,0,0,,And this is the tricky case\Nbecause it's a non-local variable.
@@ -514,7 +514,7 @@ Dialogue: 0,0:38:04.28,0:38:06.64,Default,,0,0,0,,if we have higher\Nand higher 
 Dialogue: 0,0:38:06.64,0:38:08.48,Default,,0,0,0,,this list can grow longer and longer
 Dialogue: 0,0:38:10.28,0:38:14.56,Default,,0,0,0,,but this is the full general\Nsignature of our lookup.
 Dialogue: 0,0:38:14.56,0:38:17.68,Default,,0,0,0,,So, it has two lists of\Nvariables basically
-Dialogue: 0,0:38:17.68,0:38:20.72,Default,,0,0,0,,and that's all of the (INAUDIBLE)\Nstructure of this interpreter.
+Dialogue: 0,0:38:17.68,0:38:20.72,Default,,0,0,0,,and that's all of the\Nstructure of this interpreter.
 Dialogue: 0,0:38:21.84,0:38:23.52,Default,,0,0,0,,And here are the full rules.
 Dialogue: 0,0:38:23.52,0:38:24.68,Default,,0,0,0,,You can see there's...
 Dialogue: 0,0:38:24.68,0:38:27.32,Default,,0,0,0,,It's a lot more complicated\Nthan the pure lambda calculus.
@@ -538,7 +538,7 @@ Dialogue: 0,0:39:07.00,0:39:09.76,Default,,0,0,0,,and we can immediately see\Nit
 Dialogue: 0,0:39:10.76,0:39:13.32,Default,,0,0,0,,So, actually, this time we're\Ngoing to return a variable
 Dialogue: 0,0:39:13.32,0:39:17.44,Default,,0,0,0,,and remember variables are\Nindexed by the call stack.
 Dialogue: 0,0:39:17.44,0:39:19.32,Default,,0,0,0,,So, this variable's indexed by
-Dialogue: 0,0:39:20.00,0:39:21.08,Default,,0,0,0,,F1 in this case,
+Dialogue: 0,0:39:20.00,0:39:21.08,Default,,0,0,0,,f1 in this case,
 Dialogue: 0,0:39:21.08,0:39:24.08,Default,,0,0,0,,'cause that's how we came\Ninto this function.
 Dialogue: 0,0:39:24.08,0:39:25.72,Default,,0,0,0,,So that's in fact\Nthe result of the lookup.
 Dialogue: 0,0:39:25.72,0:39:28.28,Default,,0,0,0,,So we've done\Nthe result of looking up,
@@ -547,7 +547,7 @@ Dialogue: 0,0:39:33.56,0:39:36.88,Default,,0,0,0,,to have the value of whatever\
 Dialogue: 0,0:39:36.88,0:39:39.56,Default,,0,0,0,,And remember this lookup here is\Nin turn going to return a variable.
 Dialogue: 0,0:39:39.56,0:39:42.60,Default,,0,0,0,,So let's proceed with that\Nlookup and see what it returns.
 Dialogue: 0,0:39:42.60,0:39:45.76,Default,,0,0,0,,So to lookup x from this point here,
-Dialogue: 0,0:39:45.76,0:39:52.40,Default,,0,0,0,,it suffices to look up the parameter\Nof the coset, that coset was f1,
+Dialogue: 0,0:39:45.76,0:39:52.40,Default,,0,0,0,,it suffices to look up the parameter\Nof the call site, that call site was f1,
 Dialogue: 0,0:39:52.40,0:39:55.84,Default,,0,0,0,,so the parameter is y\Nso it suffices to look up y
 Dialogue: 0,0:39:55.84,0:39:59.84,Default,,0,0,0,,and if we see, if we go up, we see\Ny is up at the top of the program.
 Dialogue: 0,0:39:59.84,0:40:01.08,Default,,0,0,0,,It's in fact an input.
@@ -570,7 +570,7 @@ Dialogue: 0,0:40:45.68,0:40:48.60,Default,,0,0,0,,this lookup operation\Nis in f
 Dialogue: 0,0:40:48.60,0:40:50.80,Default,,0,0,0,,to a forward running\Noperational semantics.
 Dialogue: 0,0:40:50.80,0:40:51.92,Default,,0,0,0,,And it's a delicate proof
 Dialogue: 0,0:40:51.92,0:40:55.04,Default,,0,0,0,,because they're running\Nin opposite directions.
-Dialogue: 0,0:40:55.04,0:40:59.32,Default,,0,0,0,,And we also proved that the symbolic\Nevaluator is sounding complete
+Dialogue: 0,0:40:55.04,0:40:59.32,Default,,0,0,0,,And we also proved that the symbolic\Nevaluator is sound and complete
 Dialogue: 0,0:40:59.32,0:41:02.08,Default,,0,0,0,,with respect to\Nthe operational semantics.
 Dialogue: 0,0:41:02.08,0:41:05.56,Default,,0,0,0,,And a few subtle details that we\Nhave to skip because of time
 Dialogue: 0,0:41:05.56,0:41:08.32,Default,,0,0,0,,is that the call stack, when\Nwe're starting in the middle,
