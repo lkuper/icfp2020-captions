@@ -6,3 +6,8 @@ To convert `sessionN.ass` file to `sessionN.srt`:
 ```
 ffmpeg -i sessionN.ass -f srt - | sed -e 's|</*font[^>]*>||g' > sessionN.srt `
 ```
+
+The `.srt` files from AI Media have DOS line endings, the ones produced by `ffmpeg` have Unix, so the first time you check in an `.srt` file:
+```
+dos2unix */*.srt
+```
