@@ -160,11 +160,11 @@ is Benoit Montagu,
 34
 00:14:18,280 --> 00:14:21,200
 and I'm going to tell you about
-a joint work with Thomas Jensen
+joint work with Thomas Jensen
 
 35
 00:14:21,200 --> 00:14:25,400
-but the abstract interpretation
+about the abstract interpretation
 of high order programmes.
 
 36
@@ -179,7 +179,7 @@ we want to detect
 
 38
 00:14:31,120 --> 00:14:33,440
-what a function call
+when a function call
 does not change.
 
 39
@@ -228,7 +228,7 @@ program verification.
 
 48
 00:15:00,720 --> 00:15:04,760
-In particular, violent preservation
+In particular, invariant preservation
 proves the properties
 
 49
@@ -254,7 +254,7 @@ It's a static analysis
 53
 00:15:18,680 --> 00:15:21,360
 that infers frames for,
-for other programmes.
+for first order programmes.
 
 54
 00:15:21,360 --> 00:15:24,280
@@ -268,8 +268,8 @@ to prove automatically 68%
 
 56
 00:15:27,800 --> 00:15:30,240
-of the environment
-reservation limits.
+of the invariant
+preservation lemmas.
 
 57
 00:15:30,240 --> 00:15:35,080
@@ -284,7 +284,7 @@ to extend the correlation analysis
 59
 00:15:38,600 --> 00:15:41,280
 to infer frames for
-higher order language.
+a higher order language.
 
 60
 00:15:41,280 --> 00:15:45,240
@@ -294,7 +294,7 @@ integrate such an analysis
 61
 00:15:45,240 --> 00:15:47,400
 in a general purpose
-proof assistance
+proof assistant
 
 62
 00:15:47,400 --> 00:15:51,360
@@ -303,7 +303,7 @@ of large programmes easier.
 
 63
 00:15:51,360 --> 00:15:53,400
-to infer friends
+To infer frames
 for the lambda calculus,
 
 64
@@ -334,7 +334,7 @@ we want to find relations
 69
 00:16:05,320 --> 00:16:09,760
 between the inputs
-and The output of a lambda term.
+and the outputs of a lambda term.
 
 70
 00:16:09,760 --> 00:16:11,600
@@ -364,16 +364,16 @@ semantics takes the form of
 75
 00:16:24,120 --> 00:16:30,040
 a denotation of a lambda term
-into input, output relations.
+into input-output relations.
 
 76
 00:16:30,040 --> 00:16:33,000
 We have proved that this
-denotation is something completes
+denotation is sound and complete,
 
 77
 00:16:33,000 --> 00:16:37,080
-And as a bonus,
+and as a bonus,
 you will find in the paper
 
 78
@@ -419,11 +419,11 @@ and the second one introduces
 86
 00:17:04,040 --> 00:17:06,600
 the correlation domain
-represented last year.
+represented last year,
 
 87
 00:17:06,600 --> 00:17:10,640
-That we extend it to
+that we extend to
 support first class functions.
 
 88
@@ -439,12 +439,12 @@ And we have mechanically verified
 90
 00:17:19,600 --> 00:17:23,080
 all these results
-in the corporate systems.
+in the Coq system.
 
 91
 00:17:23,080 --> 00:17:26,000
 The language we study
-in the paper is the n type call
+in the paper is the untyped call
 
 92
 00:17:26,000 --> 00:17:30,080
@@ -469,7 +469,7 @@ for call by value
 96
 00:17:37,280 --> 00:17:42,040
 that perform a substitution t,
-to reduce a beta (INAUDIBLE).
+to reduce a beta redex.
 
 97
 00:17:42,600 --> 00:17:45,240
@@ -508,7 +508,7 @@ Then the input output relation
 
 104
 00:18:03,200 --> 00:18:06,400
-of its own T
+of a term t
 for a set of inputs I
 
 105
@@ -539,7 +539,7 @@ by the substitution sigma.
 110
 00:18:23,040 --> 00:18:25,360
 With the semantics
-of input, output relations,
+of input-output relations,
 
 111
 00:18:25,360 --> 00:18:29,880
@@ -553,13 +553,13 @@ is assigned to a negative value
 
 113
 00:18:33,080 --> 00:18:36,800
-or that T returns a value
+or that t returns a value
 that remains above
 
 114
 00:18:36,800 --> 00:18:42,120
 the value of the input x.
-Now, we remarked that if C
+Now, we remark that if sigma
 
 115
 00:18:42,120 --> 00:18:45,640
@@ -574,16 +574,16 @@ any substitution sigma prime
 117
 00:18:48,760 --> 00:18:51,640
 that defines more inputs,
-even some inputs around
+even some inputs that are
 
 118
 00:18:51,640 --> 00:18:54,800
-that necessary to T
+not necessary to t
 without changing the meaning
 
 119
 00:18:54,800 --> 00:18:57,800
-of the programme T.
+of the programme t.
 In such a case, we say
 
 120
@@ -604,7 +604,7 @@ the meaning of a programme
 123
 00:19:06,960 --> 00:19:09,880
 We can actually close
-the set of inputs IE
+the set of inputs I
 
 124
 00:19:09,880 --> 00:19:13,640
@@ -614,7 +614,7 @@ ordering of substitutions
 125
 00:19:13,640 --> 00:19:16,040
 and by doing so,
-the input, output relation
+the input-output relation
 
 126
 00:19:16,040 --> 00:19:18,880
@@ -634,7 +634,7 @@ substitution sigma
 129
 00:19:24,440 --> 00:19:27,840
 related to similar
-is related to summary put V,
+is related to some input v,
 
 130
 00:19:27,840 --> 00:19:30,960
@@ -658,8 +658,8 @@ to the notion of persistence
 
 134
 00:19:43,520 --> 00:19:46,320
-that is swans
-in Kripke's style semantics.
+that is seen
+in Kripke-style semantics.
 
 135
 00:19:46,320 --> 00:19:49,440
@@ -669,16 +669,16 @@ holds in some world
 136
 00:19:49,440 --> 00:19:53,880
 it will it must also hold
-in early larger world.
+in any larger world.
 
 137
 00:19:53,880 --> 00:19:56,880
 And the definition should be
-no surprise to the semantic system
+no surprise to the semanticists
 
 138
 00:19:56,880 --> 00:20:00,680
-on you either because
+among you either because
 a stable relation is in fact
 
 139
@@ -688,7 +688,7 @@ from substitutions
 
 140
 00:20:03,440 --> 00:20:06,240
-or there with
+ordered with
 the extension ordering
 
 141
@@ -703,8 +703,8 @@ in the paper a denotation
 
 143
 00:20:13,000 --> 00:20:16,000
-that's given a term T
-and environments
+that's given a term t
+and environment E
 
 144
 00:20:16,000 --> 00:20:18,960
@@ -743,7 +743,7 @@ a pair out of
 
 151
 00:20:39,360 --> 00:20:44,240
-two sub programmes T1 & T2
+two sub programmes t1 and t2
 is the pairing of their denotations.
 
 152
@@ -784,12 +784,12 @@ this denotation is sound
 159
 00:21:05,080 --> 00:21:07,560
 with respect to
-the input output in the sense
+the input-output in the sense
 
 160
 00:21:07,560 --> 00:21:12,200
 that it is an overall approximation
-of the input, output relation
+of the input-output relation
 
 161
 00:21:12,200 --> 00:21:15,680
@@ -809,12 +809,12 @@ of the programme t
 164
 00:21:22,200 --> 00:21:26,520
 with these inputs
-gives you an output value V,
+gives you an output value v,
 
 165
 00:21:26,520 --> 00:21:29,920
-then the input output pair
-sigma v is predictively
+then the input-output pair
+(sigma, v) is predictively
 
 166
 00:21:29,920 --> 00:21:32,880
@@ -833,7 +833,7 @@ the denotation
 
 169
 00:21:39,880 --> 00:21:44,000
-of the input or output relation
+of the input-output relation
 are the same.
 
 170
@@ -843,7 +843,7 @@ verified these results
 
 171
 00:21:47,000 --> 00:21:52,520
-in the clock proof systems...
+in the Coq proof systems...
 A denotation must treat
 
 172
@@ -864,7 +864,7 @@ for the variable in the environment.
 175
 00:22:01,960 --> 00:22:06,120
 This is indeed
-a correct overall approximation
+a correct over-approximation
 
 176
 00:22:06,120 --> 00:22:09,840
@@ -923,8 +923,8 @@ This has consequences
 
 187
 00:22:45,080 --> 00:22:47,480
-on the well form,
-less on the definition,
+on the well-formedness,
+of the definition,
 
 188
 00:22:47,480 --> 00:22:50,600
@@ -943,17 +943,17 @@ by the environment.
 
 191
 00:22:55,800 --> 00:22:58,200
-But what does it even mean?
+But what does it even mean
 
 192
 00:22:58,200 --> 00:23:01,520
-To be a free variable
+to be a free variable
 for a relation?
 
 193
 00:23:01,520 --> 00:23:05,400
 Relations are semantic objects
-that pieces of syntax.
+not pieces of syntax.
 
 194
 00:23:05,400 --> 00:23:07,880
@@ -982,8 +982,8 @@ function application.
 
 199
 00:23:20,040 --> 00:23:22,600
-The denotation of T1
-apply to teach you
+The denotation of t1
+applied to t2
 
 200
 00:23:22,600 --> 00:23:27,000
@@ -997,7 +997,7 @@ where,when you take values
 
 202
 00:23:30,600 --> 00:23:35,320
-in the denotations of T1 and T2
+in the denotations of t1 and t2
 and apply them together,
 
 203
@@ -1048,7 +1048,7 @@ Here is the unfolded definition
 212
 00:24:07,480 --> 00:24:10,080
 where I have chosen to hide
-some PCs related
+some pieces related
 
 213
 00:24:10,080 --> 00:24:13,280
@@ -1072,8 +1072,8 @@ to an argument v1
 
 217
 00:24:24,440 --> 00:24:28,480
-that satisfies the condition
-or if the evaluation
+that satisfies the condition R,
+if the evaluation
 
 218
 00:24:28,480 --> 00:24:31,840
@@ -1147,13 +1147,13 @@ to build a static analysis.
 
 232
 00:25:16,200 --> 00:25:20,000
-So following the second operation
+So following the abstract
 interpretation methodology,
 
 233
 00:25:20,000 --> 00:25:23,040
 we applied successive
-instruction steps on.
+abstraction steps.
 
 234
 00:25:23,040 --> 00:25:26,200
@@ -1163,7 +1163,7 @@ tells us how the inputs
 235
 00:25:26,200 --> 00:25:31,720
 are related to the outputs globally.
-We first apply a variance
+We first apply a ivvariant
 
 236
 00:25:31,720 --> 00:25:34,720
@@ -1264,7 +1264,7 @@ designed to compete with
 
 256
 00:26:33,280 --> 00:26:39,120
-existing control for analysis
+existing control flow analysis
 and it does not compete.
 
 257
@@ -1290,7 +1290,7 @@ the identity function twice
 261
 00:26:50,760 --> 00:26:54,560
 on two different arguments and returns
-the result of one of the codes.
+the result of one of the calls.
 
 262
 00:26:54,560 --> 00:26:58,320
@@ -1315,7 +1315,7 @@ that this is a function
 266
 00:27:09,960 --> 00:27:14,000
 whose result is equal to its argument
-whatever is the coding context.
+whatever is the calling context.
 
 267
 00:27:14,800 --> 00:27:18,320
@@ -1339,7 +1339,7 @@ for the second application and
 271
 00:27:30,960 --> 00:27:34,360
 the analysis tells us that y2 must
-be bumped to the second injection.
+be bound to the second injection.
 
 272
 00:27:34,360 --> 00:27:36,360
@@ -1432,7 +1432,7 @@ numeric abstract domains.
 290
 00:28:33,040 --> 00:28:36,960
 Finally, we are convinced
-that our denotation semantics
+that our denotational semantics
 
 291
 00:28:36,960 --> 00:28:39,320
@@ -1442,7 +1442,7 @@ for the future design
 292
 00:28:39,320 --> 00:28:42,360
 of novel relational
-control for analysis.
+control flow analysis.
 
 293
 00:28:42,360 --> 00:28:45,000

@@ -44,11 +44,11 @@ Dialogue: 0,0:14:06.56,0:14:09.76,Default,,0,0,0,,of these details as we\Nprogre
 Dialogue: 0,0:14:09.76,0:14:12.12,Default,,0,0,0,,First up, we're going to have\NBenoit Montagu telling us
 Dialogue: 0,0:14:12.12,0:14:16.36,Default,,0,0,0,,about abstract interpretation\Nfor higher order programmes.
 Dialogue: 0,0:14:16.36,0:14:18.28,Default,,0,0,0,,BENOIT MONTAGU: Hello, my name\Nis Benoit Montagu,
-Dialogue: 0,0:14:18.28,0:14:21.20,Default,,0,0,0,,and I'm going to tell you about\Na joint work with Thomas Jensen
-Dialogue: 0,0:14:21.20,0:14:25.40,Default,,0,0,0,,but the abstract interpretation\Nof high order programmes.
+Dialogue: 0,0:14:18.28,0:14:21.20,Default,,0,0,0,,and I'm going to tell you about\Njoint work with Thomas Jensen
+Dialogue: 0,0:14:21.20,0:14:25.40,Default,,0,0,0,,about the abstract interpretation\Nof high order programmes.
 Dialogue: 0,0:14:25.40,0:14:29.88,Default,,0,0,0,,The problem we're interested in is\Nthe inference of program frames.
 Dialogue: 0,0:14:29.88,0:14:31.12,Default,,0,0,0,,This means that\Nwe want to detect
-Dialogue: 0,0:14:31.12,0:14:33.44,Default,,0,0,0,,what a function call\Ndoes not change.
+Dialogue: 0,0:14:31.12,0:14:33.44,Default,,0,0,0,,when a function call\Ndoes not change.
 Dialogue: 0,0:14:33.44,0:14:36.52,Default,,0,0,0,,For imperative programs,\Nit amounts to finding
 Dialogue: 0,0:14:36.52,0:14:40.40,Default,,0,0,0,,which parts of the global state\Nare not modified by a function call.
 Dialogue: 0,0:14:40.40,0:14:43.56,Default,,0,0,0,,For functional programs,\Nit amounts to finding
@@ -58,36 +58,36 @@ Dialogue: 0,0:14:51.36,0:14:54.16,Default,,0,0,0,,in optimising compilers\Nto pe
 Dialogue: 0,0:14:54.16,0:14:56.76,Default,,0,0,0,,sub expression elimination\Nand across function calls.
 Dialogue: 0,0:14:56.76,0:14:58.52,Default,,0,0,0,,The same information can also
 Dialogue: 0,0:14:58.52,0:15:00.72,Default,,0,0,0,,be exploited in\Nprogram verification.
-Dialogue: 0,0:15:00.72,0:15:04.76,Default,,0,0,0,,In particular, violent preservation\Nproves the properties
+Dialogue: 0,0:15:00.72,0:15:04.76,Default,,0,0,0,,In particular, invariant preservation\Nproves the properties
 Dialogue: 0,0:15:04.76,0:15:07.08,Default,,0,0,0,,of the parts\Nof the Other states
 Dialogue: 0,0:15:07.08,0:15:11.52,Default,,0,0,0,,that have not changed\Nor indeed automatically preserved.
 Dialogue: 0,0:15:12.48,0:15:15.36,Default,,0,0,0,,Last year, we published\Na paper on what we call
 Dialogue: 0,0:15:15.36,0:15:18.68,Default,,0,0,0,,correlation analysis.\NIt's a static analysis
-Dialogue: 0,0:15:18.68,0:15:21.36,Default,,0,0,0,,that infers frames for,\Nfor other programmes.
+Dialogue: 0,0:15:18.68,0:15:21.36,Default,,0,0,0,,that infers frames for,\Nfor first order programmes.
 Dialogue: 0,0:15:21.36,0:15:24.28,Default,,0,0,0,,We applied it to the verification\Nof an OS micro-kernel.
 Dialogue: 0,0:15:24.28,0:15:27.80,Default,,0,0,0,,And it was able\Nto prove automatically 68%
-Dialogue: 0,0:15:27.80,0:15:30.24,Default,,0,0,0,,of the environment\Nreservation limits.
+Dialogue: 0,0:15:27.80,0:15:30.24,Default,,0,0,0,,of the invariant\Npreservation lemmas.
 Dialogue: 0,0:15:30.24,0:15:35.08,Default,,0,0,0,,This means that inferring frames\Nis really useful in practice.
 Dialogue: 0,0:15:35.68,0:15:38.60,Default,,0,0,0,,In this work, we want\Nto extend the correlation analysis
-Dialogue: 0,0:15:38.60,0:15:41.28,Default,,0,0,0,,to infer frames for\Nhigher order language.
+Dialogue: 0,0:15:38.60,0:15:41.28,Default,,0,0,0,,to infer frames for\Na higher order language.
 Dialogue: 0,0:15:41.28,0:15:45.24,Default,,0,0,0,,Our long term goal is to\Nintegrate such an analysis
-Dialogue: 0,0:15:45.24,0:15:47.40,Default,,0,0,0,,in a general purpose\Nproof assistance
+Dialogue: 0,0:15:45.24,0:15:47.40,Default,,0,0,0,,in a general purpose\Nproof assistant
 Dialogue: 0,0:15:47.40,0:15:51.36,Default,,0,0,0,,to make the verification\Nof large programmes easier.
-Dialogue: 0,0:15:51.36,0:15:53.40,Default,,0,0,0,,to infer friends\Nfor the lambda calculus,
+Dialogue: 0,0:15:51.36,0:15:53.40,Default,,0,0,0,,To infer frames\Nfor the lambda calculus,
 Dialogue: 0,0:15:53.40,0:15:56.04,Default,,0,0,0,,we follow the methodology\Nthat is offered
 Dialogue: 0,0:15:56.04,0:15:58.68,Default,,0,0,0,,by the abstract\Ninterpretation framework.
 Dialogue: 0,0:15:58.68,0:16:01.40,Default,,0,0,0,,The first step\Nis to clearly define
 Dialogue: 0,0:16:01.40,0:16:03.24,Default,,0,0,0,,what property\Nyou're interested in.
 Dialogue: 0,0:16:03.24,0:16:05.32,Default,,0,0,0,,In this work,\Nwe want to find relations
-Dialogue: 0,0:16:05.32,0:16:09.76,Default,,0,0,0,,between the inputs\Nand The output of a lambda term.
+Dialogue: 0,0:16:05.32,0:16:09.76,Default,,0,0,0,,between the inputs\Nand the outputs of a lambda term.
 Dialogue: 0,0:16:09.76,0:16:11.60,Default,,0,0,0,,The second step\Nof the methodology
 Dialogue: 0,0:16:11.60,0:16:15.84,Default,,0,0,0,,is to define the collecting\Nsemantics for your property.
 Dialogue: 0,0:16:15.84,0:16:18.56,Default,,0,0,0,,It describes how\Nyour property evolves
 Dialogue: 0,0:16:18.56,0:16:21.36,Default,,0,0,0,,when your programme\Ngets evaluated.
 Dialogue: 0,0:16:21.36,0:16:24.12,Default,,0,0,0,,In this work, the collecting\Nsemantics takes the form of
-Dialogue: 0,0:16:24.12,0:16:30.04,Default,,0,0,0,,a denotation of a lambda term\Ninto input, output relations.
-Dialogue: 0,0:16:30.04,0:16:33.00,Default,,0,0,0,,We have proved that this\Ndenotation is something completes
-Dialogue: 0,0:16:33.00,0:16:37.08,Default,,0,0,0,,And as a bonus,\Nyou will find in the paper
+Dialogue: 0,0:16:24.12,0:16:30.04,Default,,0,0,0,,a denotation of a lambda term\Ninto input-output relations.
+Dialogue: 0,0:16:30.04,0:16:33.00,Default,,0,0,0,,We have proved that this\Ndenotation is sound and complete,
+Dialogue: 0,0:16:33.00,0:16:37.08,Default,,0,0,0,,and as a bonus,\Nyou will find in the paper
 Dialogue: 0,0:16:37.08,0:16:41.24,Default,,0,0,0,,an equivalent definition\Nin the form of a programme logic.
 Dialogue: 0,0:16:41.24,0:16:43.52,Default,,0,0,0,,The third and final step\Nof the abstract
 Dialogue: 0,0:16:43.52,0:16:47.80,Default,,0,0,0,,interpretation methodology\Nis to apply successive abstractions
@@ -96,17 +96,17 @@ Dialogue: 0,0:16:52.08,0:16:54.96,Default,,0,0,0,,with which you\Ncan effectivel
 Dialogue: 0,0:16:54.96,0:16:57.32,Default,,0,0,0,,In this work,\Nwe have used two abstractions.
 Dialogue: 0,0:16:57.32,0:16:59.84,Default,,0,0,0,,The first one is\Na variant of a well known
 Dialogue: 0,0:16:59.84,0:17:04.04,Default,,0,0,0,,independent attribute abstraction,\Nand the second one introduces
-Dialogue: 0,0:17:04.04,0:17:06.60,Default,,0,0,0,,the correlation domain\Nrepresented last year.
-Dialogue: 0,0:17:06.60,0:17:10.64,Default,,0,0,0,,That we extend it to\Nsupport first class functions.
+Dialogue: 0,0:17:04.04,0:17:06.60,Default,,0,0,0,,the correlation domain\Nrepresented last year,
+Dialogue: 0,0:17:06.60,0:17:10.64,Default,,0,0,0,,that we extend to\Nsupport first class functions.
 Dialogue: 0,0:17:10.64,0:17:14.92,Default,,0,0,0,,What we get in the end\Nis a simple modular analysis
 Dialogue: 0,0:17:14.92,0:17:19.60,Default,,0,0,0,,that is already quite expressive.\NAnd we have mechanically verified
-Dialogue: 0,0:17:19.60,0:17:23.08,Default,,0,0,0,,all these results\Nin the corporate systems.
-Dialogue: 0,0:17:23.08,0:17:26.00,Default,,0,0,0,,The language we study\Nin the paper is the n type call
+Dialogue: 0,0:17:19.60,0:17:23.08,Default,,0,0,0,,all these results\Nin the Coq system.
+Dialogue: 0,0:17:23.08,0:17:26.00,Default,,0,0,0,,The language we study\Nin the paper is the untyped call
 Dialogue: 0,0:17:26.00,0:17:30.08,Default,,0,0,0,,by value lambda calculus\Nextended with pairs and binary sums.
 Dialogue: 0,0:17:30.08,0:17:32.52,Default,,0,0,0,,The definition of values\Nin this language
 Dialogue: 0,0:17:32.52,0:17:35.24,Default,,0,0,0,,is the standard one\Nand we use the standard
 Dialogue: 0,0:17:35.24,0:17:37.28,Default,,0,0,0,,small step semantics\Nfor call by value
-Dialogue: 0,0:17:37.28,0:17:42.04,Default,,0,0,0,,that perform a substitution t,\Nto reduce a beta (INAUDIBLE).
+Dialogue: 0,0:17:37.28,0:17:42.04,Default,,0,0,0,,that perform a substitution t,\Nto reduce a beta redex.
 Dialogue: 0,0:17:42.60,0:17:45.24,Default,,0,0,0,,For this for this\Nhigher order language,
 Dialogue: 0,0:17:45.24,0:17:48.64,Default,,0,0,0,,we want to infer relations\Nbetween the inputs of programmes
 Dialogue: 0,0:17:48.64,0:17:52.44,Default,,0,0,0,,and the outputs.\NBut what are the inputs?
@@ -114,46 +114,46 @@ Dialogue: 0,0:17:52.44,0:17:54.80,Default,,0,0,0,,We consider the inputs\Nof a p
 Dialogue: 0,0:17:54.80,0:17:57.48,Default,,0,0,0,,are the possible\Nsubstitutions sigma
 Dialogue: 0,0:17:57.48,0:17:59.92,Default,,0,0,0,,that assign values to\Nthe free variables
 Dialogue: 0,0:17:59.92,0:18:03.20,Default,,0,0,0,,of that programme.\NThen the input output relation
-Dialogue: 0,0:18:03.20,0:18:06.40,Default,,0,0,0,,of its own T\Nfor a set of inputs I
+Dialogue: 0,0:18:03.20,0:18:06.40,Default,,0,0,0,,of a term t\Nfor a set of inputs I
 Dialogue: 0,0:18:06.40,0:18:09.28,Default,,0,0,0,,is the set of pairs\Nmade from substitutions drawn
 Dialogue: 0,0:18:09.28,0:18:12.80,Default,,0,0,0,,from the set of inputs\Nand the values that are obtained
 Dialogue: 0,0:18:12.80,0:18:15.40,Default,,0,0,0,,from evaluating\Nthe term t sigma.
 Dialogue: 0,0:18:15.40,0:18:19.12,Default,,0,0,0,,That is t where all its\Nfree variables have been replaced
 Dialogue: 0,0:18:19.12,0:18:23.04,Default,,0,0,0,,with the values defined\Nby the substitution sigma.
-Dialogue: 0,0:18:23.04,0:18:25.36,Default,,0,0,0,,With the semantics\Nof input, output relations,
+Dialogue: 0,0:18:23.04,0:18:25.36,Default,,0,0,0,,With the semantics\Nof input-output relations,
 Dialogue: 0,0:18:25.36,0:18:29.88,Default,,0,0,0,,we can for instance state\Nthat a term t always returns zero
 Dialogue: 0,0:18:29.88,0:18:33.08,Default,,0,0,0,,when the input x\Nis assigned to a negative value
-Dialogue: 0,0:18:33.08,0:18:36.80,Default,,0,0,0,,or that T returns a value\Nthat remains above
-Dialogue: 0,0:18:36.80,0:18:42.12,Default,,0,0,0,,the value of the input x.\NNow, we remarked that if C
+Dialogue: 0,0:18:33.08,0:18:36.80,Default,,0,0,0,,or that t returns a value\Nthat remains above
+Dialogue: 0,0:18:36.80,0:18:42.12,Default,,0,0,0,,the value of the input x.\NNow, we remark that if sigma
 Dialogue: 0,0:18:42.12,0:18:45.64,Default,,0,0,0,,might define all the inputs\Nof a programme t,
 Dialogue: 0,0:18:45.64,0:18:48.76,Default,,0,0,0,,then you can use\Nany substitution sigma prime
-Dialogue: 0,0:18:48.76,0:18:51.64,Default,,0,0,0,,that defines more inputs,\Neven some inputs around
-Dialogue: 0,0:18:51.64,0:18:54.80,Default,,0,0,0,,that necessary to T\Nwithout changing the meaning
-Dialogue: 0,0:18:54.80,0:18:57.80,Default,,0,0,0,,of the programme T.\NIn such a case, we say
+Dialogue: 0,0:18:48.76,0:18:51.64,Default,,0,0,0,,that defines more inputs,\Neven some inputs that are
+Dialogue: 0,0:18:51.64,0:18:54.80,Default,,0,0,0,,not necessary to t\Nwithout changing the meaning
+Dialogue: 0,0:18:54.80,0:18:57.80,Default,,0,0,0,,of the programme t.\NIn such a case, we say
 Dialogue: 0,0:18:57.80,0:19:00.92,Default,,0,0,0,,that sigma prime\Nextends sigma.
 Dialogue: 0,0:19:00.92,0:19:04.00,Default,,0,0,0,,And because specifying\Nvalues for more inputs
 Dialogue: 0,0:19:04.00,0:19:06.96,Default,,0,0,0,,than necessary does not change\Nthe meaning of a programme
-Dialogue: 0,0:19:06.96,0:19:09.88,Default,,0,0,0,,We can actually close\Nthe set of inputs IE
+Dialogue: 0,0:19:06.96,0:19:09.88,Default,,0,0,0,,We can actually close\Nthe set of inputs I
 Dialogue: 0,0:19:09.88,0:19:13.64,Default,,0,0,0,,under the extension\Nordering of substitutions
-Dialogue: 0,0:19:13.64,0:19:16.04,Default,,0,0,0,,and by doing so,\Nthe input, output relation
+Dialogue: 0,0:19:13.64,0:19:16.04,Default,,0,0,0,,and by doing so,\Nthe input-output relation
 Dialogue: 0,0:19:16.04,0:19:18.88,Default,,0,0,0,,of the term\Nbecomes what we call
 Dialogue: 0,0:19:18.88,0:19:21.76,Default,,0,0,0,,a stable relation.\NA relation is stable
 Dialogue: 0,0:19:21.76,0:19:24.44,Default,,0,0,0,,when if an input\Nsubstitution sigma
-Dialogue: 0,0:19:24.44,0:19:27.84,Default,,0,0,0,,related to similar\Nis related to summary put V,
+Dialogue: 0,0:19:24.44,0:19:27.84,Default,,0,0,0,,related to similar\Nis related to some input v,
 Dialogue: 0,0:19:27.84,0:19:30.96,Default,,0,0,0,,then any substitution\Nthat is more defined
 Dialogue: 0,0:19:30.96,0:19:35.80,Default,,0,0,0,,than sigma must also\Nbe related to the same value v.
 Dialogue: 0,0:19:35.80,0:19:39.80,Default,,0,0,0,,This definition should not\Nsurprise the logicians among you,
 Dialogue: 0,0:19:39.80,0:19:43.52,Default,,0,0,0,,what we call stability is similar\Nto the notion of persistence
-Dialogue: 0,0:19:43.52,0:19:46.32,Default,,0,0,0,,that is swans\Nin Kripke's style semantics.
+Dialogue: 0,0:19:43.52,0:19:46.32,Default,,0,0,0,,that is seen\Nin Kripke-style semantics.
 Dialogue: 0,0:19:46.32,0:19:49.44,Default,,0,0,0,,That is to say, if a property\Nholds in some world
-Dialogue: 0,0:19:49.44,0:19:53.88,Default,,0,0,0,,it will it must also hold\Nin early larger world.
-Dialogue: 0,0:19:53.88,0:19:56.88,Default,,0,0,0,,And the definition should be\Nno surprise to the semantic system
-Dialogue: 0,0:19:56.88,0:20:00.68,Default,,0,0,0,,on you either because\Na stable relation is in fact
+Dialogue: 0,0:19:49.44,0:19:53.88,Default,,0,0,0,,it will it must also hold\Nin any larger world.
+Dialogue: 0,0:19:53.88,0:19:56.88,Default,,0,0,0,,And the definition should be\Nno surprise to the semanticists
+Dialogue: 0,0:19:56.88,0:20:00.68,Default,,0,0,0,,among you either because\Na stable relation is in fact
 Dialogue: 0,0:20:00.68,0:20:03.44,Default,,0,0,0,,a monotone function\Nfrom substitutions
-Dialogue: 0,0:20:03.44,0:20:06.24,Default,,0,0,0,,or there with\Nthe extension ordering
+Dialogue: 0,0:20:03.44,0:20:06.24,Default,,0,0,0,,ordered with\Nthe extension ordering
 Dialogue: 0,0:20:06.24,0:20:10.08,Default,,0,0,0,,to sets of values\Nordered with set inclusion.
 Dialogue: 0,0:20:10.84,0:20:13.00,Default,,0,0,0,,So we have defined\Nin the paper a denotation
-Dialogue: 0,0:20:13.00,0:20:16.00,Default,,0,0,0,,that's given a term T\Nand environments
+Dialogue: 0,0:20:13.00,0:20:16.00,Default,,0,0,0,,that's given a term t\Nand environment E
 Dialogue: 0,0:20:16.00,0:20:18.96,Default,,0,0,0,,builds a stable relation\Nbetween the inputs
 Dialogue: 0,0:20:18.96,0:20:21.88,Default,,0,0,0,,and the outputs of t,\Nthe environment denotes
 Dialogue: 0,0:20:21.88,0:20:25.48,Default,,0,0,0,,a set of admissible inputs.\NAnd as expected
@@ -161,7 +161,7 @@ Dialogue: 0,0:20:25.48,0:20:28.04,Default,,0,0,0,,in denotational semantics\Nthe
 Dialogue: 0,0:20:28.04,0:20:32.08,Default,,0,0,0,,is defined in a compositional way\Nby induction over
 Dialogue: 0,0:20:32.08,0:20:37.20,Default,,0,0,0,,the syntax of the programme.\NFor example, the denotation
 Dialogue: 0,0:20:37.20,0:20:39.36,Default,,0,0,0,,of a programme that builds\Na pair out of
-Dialogue: 0,0:20:39.36,0:20:44.24,Default,,0,0,0,,two sub programmes T1 & T2\Nis the pairing of their denotations.
+Dialogue: 0,0:20:39.36,0:20:44.24,Default,,0,0,0,,two sub programmes t1 and t2\Nis the pairing of their denotations.
 Dialogue: 0,0:20:44.24,0:20:46.56,Default,,0,0,0,,Here the pairing\Nof relations relates
 Dialogue: 0,0:20:46.56,0:20:49.20,Default,,0,0,0,,an input sigma\Nto a pair of values,
 Dialogue: 0,0:20:49.20,0:20:51.92,Default,,0,0,0,,where the first component\Nof that value is related
@@ -169,23 +169,23 @@ Dialogue: 0,0:20:51.92,0:20:54.72,Default,,0,0,0,,to the input using\Nthe denota
 Dialogue: 0,0:20:54.72,0:20:57.36,Default,,0,0,0,,and the second component\Nof the value is related
 Dialogue: 0,0:20:57.36,0:21:01.20,Default,,0,0,0,,to the same input\Nusing the denotation of t2.
 Dialogue: 0,0:21:02.40,0:21:05.08,Default,,0,0,0,,We have proved that\Nthis denotation is sound
-Dialogue: 0,0:21:05.08,0:21:07.56,Default,,0,0,0,,with respect to\Nthe input output in the sense
-Dialogue: 0,0:21:07.56,0:21:12.20,Default,,0,0,0,,that it is an overall approximation\Nof the input, output relation
+Dialogue: 0,0:21:05.08,0:21:07.56,Default,,0,0,0,,with respect to\Nthe input-output in the sense
+Dialogue: 0,0:21:07.56,0:21:12.20,Default,,0,0,0,,that it is an overall approximation\Nof the input-output relation
 Dialogue: 0,0:21:12.20,0:21:15.68,Default,,0,0,0,,This means that if you take\Nan input substitution sigma
 Dialogue: 0,0:21:15.68,0:21:18.88,Default,,0,0,0,,in the set of valid inputs\Ndescribed by the environment,
 Dialogue: 0,0:21:18.88,0:21:22.20,Default,,0,0,0,,and if the evaluation\Nof the programme t
-Dialogue: 0,0:21:22.20,0:21:26.52,Default,,0,0,0,,with these inputs\Ngives you an output value V,
-Dialogue: 0,0:21:26.52,0:21:29.92,Default,,0,0,0,,then the input output pair\Nsigma v is predictively
+Dialogue: 0,0:21:22.20,0:21:26.52,Default,,0,0,0,,with these inputs\Ngives you an output value v,
+Dialogue: 0,0:21:26.52,0:21:29.92,Default,,0,0,0,,then the input-output pair\N(sigma, v) is predictively
 Dialogue: 0,0:21:29.92,0:21:32.88,Default,,0,0,0,,in the denotation\Nof the programme.
 Dialogue: 0,0:21:33.84,0:21:37.92,Default,,0,0,0,,Interestingly, the denotation\Nwe have defined is also complete.
 Dialogue: 0,0:21:37.92,0:21:39.88,Default,,0,0,0,,This means that\Nthe denotation
-Dialogue: 0,0:21:39.88,0:21:44.00,Default,,0,0,0,,of the input or output relation\Nare the same.
+Dialogue: 0,0:21:39.88,0:21:44.00,Default,,0,0,0,,of the input-output relation\Nare the same.
 Dialogue: 0,0:21:44.92,0:21:47.00,Default,,0,0,0,,We have mechanically\Nverified these results
-Dialogue: 0,0:21:47.00,0:21:52.52,Default,,0,0,0,,in the clock proof systems...\NA denotation must treat
+Dialogue: 0,0:21:47.00,0:21:52.52,Default,,0,0,0,,in the Coq proof systems...\NA denotation must treat
 Dialogue: 0,0:21:52.52,0:21:55.44,Default,,0,0,0,,variables very carefully\Nand here is why.
 Dialogue: 0,0:21:55.44,0:21:57.52,Default,,0,0,0,,You should expect\Nthat the denotation
 Dialogue: 0,0:21:57.52,0:22:01.96,Default,,0,0,0,,of a variable is just a lookup\Nfor the variable in the environment.
-Dialogue: 0,0:22:01.96,0:22:06.12,Default,,0,0,0,,This is indeed\Na correct overall approximation
+Dialogue: 0,0:22:01.96,0:22:06.12,Default,,0,0,0,,This is indeed\Na correct over-approximation
 Dialogue: 0,0:22:06.12,0:22:09.84,Default,,0,0,0,,Within the paper we give\Na sound and complete definition.
 Dialogue: 0,0:22:09.84,0:22:13.12,Default,,0,0,0,,Here it is. I will not\Nexplain all the details,
 Dialogue: 0,0:22:13.12,0:22:18.20,Default,,0,0,0,,but just notice that the definition\Nuses a relation self (x).
@@ -197,22 +197,22 @@ Dialogue: 0,0:22:33.40,0:22:35.52,Default,,0,0,0,,In other words,\Nthe denotatio
 Dialogue: 0,0:22:35.52,0:22:39.08,Default,,0,0,0,,may involve\Nthe names of its inputs.
 Dialogue: 0,0:22:39.08,0:22:41.24,Default,,0,0,0,,This means that\Nthe semantic denotations
 Dialogue: 0,0:22:41.24,0:22:45.08,Default,,0,0,0,,can refer to syntactic variables.\NThis has consequences
-Dialogue: 0,0:22:45.08,0:22:47.48,Default,,0,0,0,,on the well form,\Nless on the definition,
+Dialogue: 0,0:22:45.08,0:22:47.48,Default,,0,0,0,,on the well-formedness,\Nof the definition,
 Dialogue: 0,0:22:47.48,0:22:50.60,Default,,0,0,0,,you need to show for example,\Nthat the free variables
 Dialogue: 0,0:22:50.60,0:22:53.44,Default,,0,0,0,,of your denotations\Nare included in the variables
 Dialogue: 0,0:22:53.44,0:22:55.80,Default,,0,0,0,,that are defined\Nby the environment.
-Dialogue: 0,0:22:55.80,0:22:58.20,Default,,0,0,0,,But what does it even mean?
-Dialogue: 0,0:22:58.20,0:23:01.52,Default,,0,0,0,,To be a free variable\Nfor a relation?
-Dialogue: 0,0:23:01.52,0:23:05.40,Default,,0,0,0,,Relations are semantic objects\Nthat pieces of syntax.
+Dialogue: 0,0:22:55.80,0:22:58.20,Default,,0,0,0,,But what does it even mean
+Dialogue: 0,0:22:58.20,0:23:01.52,Default,,0,0,0,,to be a free variable\Nfor a relation?
+Dialogue: 0,0:23:01.52,0:23:05.40,Default,,0,0,0,,Relations are semantic objects\Nnot pieces of syntax.
 Dialogue: 0,0:23:05.40,0:23:07.88,Default,,0,0,0,,And to answer this question\NWe use nominal techniques
 Dialogue: 0,0:23:07.88,0:23:10.84,Default,,0,0,0,,to carefully handle names.\NIf you want to dive
 Dialogue: 0,0:23:10.84,0:23:15.00,Default,,0,0,0,,into the details, please\Nhave a look at the paper.
 Dialogue: 0,0:23:15.00,0:23:17.32,Default,,0,0,0,,Now how do we\Nhandle functions?
 Dialogue: 0,0:23:17.32,0:23:20.04,Default,,0,0,0,,Let's start with\Nfunction application.
-Dialogue: 0,0:23:20.04,0:23:22.60,Default,,0,0,0,,The denotation of T1\Napply to teach you
+Dialogue: 0,0:23:20.04,0:23:22.60,Default,,0,0,0,,The denotation of t1\Napplied to t2
 Dialogue: 0,0:23:22.60,0:23:27.00,Default,,0,0,0,,is the app\Nof the denotations.
 Dialogue: 0,0:23:27.00,0:23:30.60,Default,,0,0,0,,This is a relation\Nwhere,when you take values
-Dialogue: 0,0:23:30.60,0:23:35.32,Default,,0,0,0,,in the denotations of T1 and T2\Nand apply them together,
+Dialogue: 0,0:23:30.60,0:23:35.32,Default,,0,0,0,,in the denotations of t1 and t2\Nand apply them together,
 Dialogue: 0,0:23:35.32,0:23:38.96,Default,,0,0,0,,you must obtain\Na term that evaluates to a value v.
 Dialogue: 0,0:23:38.96,0:23:42.00,Default,,0,0,0,,And this result value v\Nmust be the value
 Dialogue: 0,0:23:42.00,0:23:46.68,Default,,0,0,0,,in the final denotation.\NThat's it for applications.
@@ -222,12 +222,12 @@ Dialogue: 0,0:23:52.52,0:23:56.20,Default,,0,0,0,,but you should remember that\N
 Dialogue: 0,0:23:56.20,0:23:58.92,Default,,0,0,0,,by a relation that\Nassuming some condition
 Dialogue: 0,0:23:58.92,0:24:02.16,Default,,0,0,0,,on the arguments,\Ngives you the denotation
 Dialogue: 0,0:24:02.16,0:24:07.48,Default,,0,0,0,,of the functions body.\NHere is the unfolded definition
-Dialogue: 0,0:24:07.48,0:24:10.08,Default,,0,0,0,,where I have chosen to hide\Nsome PCs related
+Dialogue: 0,0:24:07.48,0:24:10.08,Default,,0,0,0,,where I have chosen to hide\Nsome pieces related
 Dialogue: 0,0:24:10.08,0:24:13.28,Default,,0,0,0,,to name management.\NLet's go through it.
 Dialogue: 0,0:24:13.28,0:24:17.28,Default,,0,0,0,,This is a relation where the output\Nis supposed to be a function
 Dialogue: 0,0:24:17.28,0:24:20.96,Default,,0,0,0,,for which we will consider\Nall possible applications.
 Dialogue: 0,0:24:20.96,0:24:24.44,Default,,0,0,0,,When we apply this function\Nto an argument v1
-Dialogue: 0,0:24:24.44,0:24:28.48,Default,,0,0,0,,that satisfies the condition\Nor if the evaluation
+Dialogue: 0,0:24:24.44,0:24:28.48,Default,,0,0,0,,that satisfies the condition R,\Nif the evaluation
 Dialogue: 0,0:24:28.48,0:24:31.84,Default,,0,0,0,,gives a result v2, then v2\Nmust be in the denotation
 Dialogue: 0,0:24:31.84,0:24:35.04,Default,,0,0,0,,of the function body.\NBut the arguments
 Dialogue: 0,0:24:35.04,0:24:38.36,Default,,0,0,0,,and results must be valid\Nfor all possible extensions
@@ -242,10 +242,10 @@ Dialogue: 0,0:25:04.84,0:25:06.52,Default,,0,0,0,,So we have\Ndefined this denot
 Dialogue: 0,0:25:06.52,0:25:08.88,Default,,0,0,0,,is collecting semantics\Nthat describes exactly
 Dialogue: 0,0:25:08.88,0:25:11.80,Default,,0,0,0,,the input output\Nbehaviour of programmes.
 Dialogue: 0,0:25:11.80,0:25:16.20,Default,,0,0,0,,And we use it as a starting point\Nto build a static analysis.
-Dialogue: 0,0:25:16.20,0:25:20.00,Default,,0,0,0,,So following the second operation\Ninterpretation methodology,
-Dialogue: 0,0:25:20.00,0:25:23.04,Default,,0,0,0,,we applied successive\Ninstruction steps on.
+Dialogue: 0,0:25:16.20,0:25:20.00,Default,,0,0,0,,So following the abstract\Ninterpretation methodology,
+Dialogue: 0,0:25:20.00,0:25:23.04,Default,,0,0,0,,we applied successive\Nabstraction steps.
 Dialogue: 0,0:25:23.04,0:25:26.20,Default,,0,0,0,,So far our denotation\Ntells us how the inputs
-Dialogue: 0,0:25:26.20,0:25:31.72,Default,,0,0,0,,are related to the outputs globally.\NWe first apply a variance
+Dialogue: 0,0:25:26.20,0:25:31.72,Default,,0,0,0,,are related to the outputs globally.\NWe first apply a ivvariant
 Dialogue: 0,0:25:31.72,0:25:34.72,Default,,0,0,0,,of the independent\Nattribute abstraction,
 Dialogue: 0,0:25:34.72,0:25:37.56,Default,,0,0,0,,working at this point\Nwhat we call point-wise relations,
 Dialogue: 0,0:25:37.56,0:25:41.32,Default,,0,0,0,,that, that tell us how each input\Nis independently related
@@ -266,22 +266,22 @@ Dialogue: 0,0:26:20.68,0:26:23.48,Default,,0,0,0,,that analyses functions only o
 Dialogue: 0,0:26:23.48,0:26:27.04,Default,,0,0,0,,For every function, it\Ncomputes a function summary
 Dialogue: 0,0:26:27.04,0:26:30.60,Default,,0,0,0,,that approximates the extensional\Nbehaviour of that function.
 Dialogue: 0,0:26:30.60,0:26:33.28,Default,,0,0,0,,The analysis was really not\Ndesigned to compete with
-Dialogue: 0,0:26:33.28,0:26:39.12,Default,,0,0,0,,existing control for analysis\Nand it does not compete.
+Dialogue: 0,0:26:33.28,0:26:39.12,Default,,0,0,0,,existing control flow analysis\Nand it does not compete.
 Dialogue: 0,0:26:39.12,0:26:41.96,Default,,0,0,0,,Still, it can give\Nvery precise results
 Dialogue: 0,0:26:41.96,0:26:44.44,Default,,0,0,0,,even though it follows\Na fully modular approach.
 Dialogue: 0,0:26:45.32,0:26:48.52,Default,,0,0,0,,Let's consider this\Nclassic CFA example.
 Dialogue: 0,0:26:48.52,0:26:50.76,Default,,0,0,0,,This program calls\Nthe identity function twice
-Dialogue: 0,0:26:50.76,0:26:54.56,Default,,0,0,0,,on two different arguments and returns\Nthe result of one of the codes.
+Dialogue: 0,0:26:50.76,0:26:54.56,Default,,0,0,0,,on two different arguments and returns\Nthe result of one of the calls.
 Dialogue: 0,0:26:54.56,0:26:58.32,Default,,0,0,0,,It's an example where 0-CFA\Nis not precise enough
 Dialogue: 0,0:26:58.32,0:27:01.92,Default,,0,0,0,,and 1-CFA is required to\Nachieve good precision.
 Dialogue: 0,0:27:02.64,0:27:07.00,Default,,0,0,0,,The analyser first computes\Na summary for the identity function.
 Dialogue: 0,0:27:07.00,0:27:09.96,Default,,0,0,0,,The summary tells us\Nthat this is a function
-Dialogue: 0,0:27:09.96,0:27:14.00,Default,,0,0,0,,whose result is equal to its argument\Nwhatever is the coding context.
+Dialogue: 0,0:27:09.96,0:27:14.00,Default,,0,0,0,,whose result is equal to its argument\Nwhatever is the calling context.
 Dialogue: 0,0:27:14.80,0:27:18.32,Default,,0,0,0,,This summary is instantiated\Nonce for the first application.
 Dialogue: 0,0:27:18.32,0:27:23.24,Default,,0,0,0,,We get that y1 must be bound\Nto the first injection.
 Dialogue: 0,0:27:23.24,0:27:27.44,Default,,0,0,0,,Then, the summary is\Ninstantiated the second time
 Dialogue: 0,0:27:27.44,0:27:30.96,Default,,0,0,0,,for the second application and
-Dialogue: 0,0:27:30.96,0:27:34.36,Default,,0,0,0,,the analysis tells us that y2 must\Nbe bumped to the second injection.
+Dialogue: 0,0:27:30.96,0:27:34.36,Default,,0,0,0,,the analysis tells us that y2 must\Nbe bound to the second injection.
 Dialogue: 0,0:27:34.36,0:27:36.36,Default,,0,0,0,,Finally, the analysis\Nfor the results
 Dialogue: 0,0:27:36.36,0:27:39.12,Default,,0,0,0,,is the domain we have\Nobtained for y1,
 Dialogue: 0,0:27:39.12,0:27:41.92,Default,,0,0,0,,that is to say it has to\Nbe the first injection.
@@ -300,9 +300,9 @@ Dialogue: 0,0:28:19.12,0:28:21.52,Default,,0,0,0,,for the verification of\Nlarge
 Dialogue: 0,0:28:22.28,0:28:26.80,Default,,0,0,0,,On the shorter term, we want to\Nsupport more language features
 Dialogue: 0,0:28:26.80,0:28:29.28,Default,,0,0,0,,and to increase\Nthe precision of the analysis,
 Dialogue: 0,0:28:29.28,0:28:33.04,Default,,0,0,0,,for example by exploiting\Nnumeric abstract domains.
-Dialogue: 0,0:28:33.04,0:28:36.96,Default,,0,0,0,,Finally, we are convinced\Nthat our denotation semantics
+Dialogue: 0,0:28:33.04,0:28:36.96,Default,,0,0,0,,Finally, we are convinced\Nthat our denotational semantics
 Dialogue: 0,0:28:36.96,0:28:39.32,Default,,0,0,0,,can serve as a basis\Nfor the future design
-Dialogue: 0,0:28:39.32,0:28:42.36,Default,,0,0,0,,of novel relational\Ncontrol for analysis.
+Dialogue: 0,0:28:39.32,0:28:42.36,Default,,0,0,0,,of novel relational\Ncontrol flow analysis.
 Dialogue: 0,0:28:42.36,0:28:45.00,Default,,0,0,0,,That's all. Thank you for watching.
 Dialogue: 0,0:28:46.52,0:28:51.52,Default,,0,0,0,,(AUDIENCE CLAP)
 Dialogue: 0,0:28:54.64,0:28:56.00,Default,,0,0,0,,ADAM: Thanks Benoit.
