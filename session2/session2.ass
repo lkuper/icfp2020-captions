@@ -18,15 +18,15 @@ Dialogue: 0,0:09:55.16,0:09:57.80,Default,,0,0,0,,
 Dialogue: 0,0:10:38.64,0:10:43.64,Default,,0,0,0,,
 Dialogue: 0,0:12:23.92,0:12:24.92,Default,,0,0,0,,
 Dialogue: 0,0:12:59.84,0:13:00.96,Default,,0,0,0,,ALAN JEFFREY: Hello everybody.
-Dialogue: 0,0:13:00.96,0:13:05.92,Default,,0,0,0,,And welcome to the second\Nsession of ICFT 2020.
+Dialogue: 0,0:13:00.96,0:13:05.92,Default,,0,0,0,,And welcome to the second\Nsession of ICFP 2020.
 Dialogue: 0,0:13:05.96,0:13:07.80,Default,,0,0,0,,You're joining us on YouTube,
 Dialogue: 0,0:13:07.80,0:13:10.40,Default,,0,0,0,,and registered participants\Nfor the conference
 Dialogue: 0,0:13:10.44,0:13:12.84,Default,,0,0,0,,can also join us in chat,
-Dialogue: 0,0:13:12.96,0:13:15.28,Default,,0,0,0,,and on the Clowdr system.
+Dialogue: 0,0:13:12.96,0:13:15.28,Default,,0,0,0,,on the Clowdr system.
 Dialogue: 0,0:13:15.32,0:13:19.16,Default,,0,0,0,,And also, if they want\Nto join a live Q&A,
 Dialogue: 0,0:13:19.16,0:13:21.52,Default,,0,0,0,,with the authors, after the talk.
 Dialogue: 0,0:13:21.56,0:13:23.60,Default,,0,0,0,,And so the first talk\Nfor the session,
-Dialogue: 0,0:13:23.68,0:13:27.36,Default,,0,0,0,,is going to be achieving high\Nperformance a fuctional way,
+Dialogue: 0,0:13:23.68,0:13:27.36,Default,,0,0,0,,is going to be achieving high\Nperformance thre fuctional way,
 Dialogue: 0,0:13:27.40,0:13:28.92,Default,,0,0,0,,and it'll be presented by,
 Dialogue: 0,0:13:28.92,0:13:30.16,Default,,0,0,0,,Bastian Hagedorn.
 Dialogue: 0,0:13:31.76,0:13:33.56,Default,,0,0,0,,BASTIAN: Hi, this Bastian Hagedorn,
@@ -48,7 +48,7 @@ Dialogue: 0,0:14:07.12,0:14:08.64,Default,,0,0,0,,And this high cost is mostly d
 Dialogue: 0,0:14:08.96,0:14:12.52,Default,,0,0,0,,the long time required to train neural\Nnetworks on parallel hardware.
 Dialogue: 0,0:14:14.20,0:14:17.64,Default,,0,0,0,,It gets worse when you translate\Nthe dollar spent into carbon emitted.
 Dialogue: 0,0:14:18.32,0:14:20.12,Default,,0,0,0,,So here, training\Nthis neural network,
-Dialogue: 0,0:14:20.32,0:14:22.12,Default,,0,0,0,,releases about  five tons of carbon
+Dialogue: 0,0:14:20.32,0:14:22.12,Default,,0,0,0,,releases about five tons of carbon
 Dialogue: 0,0:14:22.12,0:14:23.12,Default,,0,0,0,,into the atmosphere,
 Dialogue: 0,0:14:23.44,0:14:27.00,Default,,0,0,0,,which is equivalent to driving\N11,000 miles with a car.
 Dialogue: 0,0:14:27.00,0:14:29.44,Default,,0,0,0,,And just to show you\Nhow insane it is,
@@ -86,7 +86,7 @@ Dialogue: 0,0:15:43.88,0:15:47.84,Default,,0,0,0,,in a time intensive\Nand incre
 Dialogue: 0,0:15:47.84,0:15:49.44,Default,,0,0,0,,So, another way,
 Dialogue: 0,0:15:49.44,0:15:50.80,Default,,0,0,0,,to achieve high performance,
 Dialogue: 0,0:15:50.96,0:15:53.52,Default,,0,0,0,,is what I call the decoupled way,
-Dialogue: 0,0:15:53.52,0:15:57.56,Default,,0,0,0,,which was pioneered by the main\Nspecific compiler called Halide.
+Dialogue: 0,0:15:53.52,0:15:57.56,Default,,0,0,0,,which was pioneered by the domain\Nspecific compiler called Halide.
 Dialogue: 0,0:15:57.56,0:15:58.84,Default,,0,0,0,,And the key idea here,
 Dialogue: 0,0:15:58.84,0:16:01.52,Default,,0,0,0,,is to decouple what\Nis being computed,
 Dialogue: 0,0:16:01.52,0:16:03.84,Default,,0,0,0,,from how it is optimized.
@@ -117,7 +117,7 @@ Dialogue: 0,0:17:04.64,0:17:06.68,Default,,0,0,0,,or at least that's the idea.
 Dialogue: 0,0:17:06.68,0:17:09.72,Default,,0,0,0,,So when you take\Na closer look at this,
 Dialogue: 0,0:17:09.72,0:17:11.32,Default,,0,0,0,,the schedule based approach,
 Dialogue: 0,0:17:11.32,0:17:13.24,Default,,0,0,0,,you'll find a few problems.
-Dialogue: 0,0:17:13.24,0:17:15.64,Default,,0,0,0,,The one of the first few\Nthings you might find is that
+Dialogue: 0,0:17:13.24,0:17:15.64,Default,,0,0,0,,One of the first few\Nthings you might find is that
 Dialogue: 0,0:17:15.64,0:17:19.00,Default,,0,0,0,,the algorithm and\Nthe schedule are not fully separated.
 Dialogue: 0,0:17:19.00,0:17:22.04,Default,,0,0,0,,Here, the schedule uses\Nthe same path in identifier,
 Dialogue: 0,0:17:22.04,0:17:24.12,Default,,0,0,0,,that has been declared\Nin the algorithm.
@@ -129,15 +129,15 @@ Dialogue: 0,0:17:31.40,0:17:34.88,Default,,0,0,0,,for optimizing\Na different co
 Dialogue: 0,0:17:34.88,0:17:37.68,Default,,0,0,0,,The next problem is that there's\Nno well-defined semantics,
 Dialogue: 0,0:17:37.68,0:17:39.64,Default,,0,0,0,,for the scheduling preemptives.
 Dialogue: 0,0:17:39.64,0:17:41.48,Default,,0,0,0,,So there's only\Na documentation online,
-Dialogue: 0,0:17:41.48,0:17:42.92,Default,,0,0,0,,And for some  preemptives,
+Dialogue: 0,0:17:41.48,0:17:42.92,Default,,0,0,0,,And for some primitives,
 Dialogue: 0,0:17:42.92,0:17:45.96,Default,,0,0,0,,this is quite cryptic\Nand basically requires,
 Dialogue: 0,0:17:45.96,0:17:48.60,Default,,0,0,0,,knowledge of how the compiler\Ninternally implements
-Dialogue: 0,0:17:48.60,0:17:50.68,Default,,0,0,0,,the scheduling preemptives.
-Dialogue: 0,0:17:50.68,0:17:54.04,Default,,0,0,0,,And finally, all scheduling\Npreemptives are built in,
+Dialogue: 0,0:17:48.60,0:17:50.68,Default,,0,0,0,,the scheduling primitives.
+Dialogue: 0,0:17:50.68,0:17:54.04,Default,,0,0,0,,And finally, all scheduling\Nprimitives are built in,
 Dialogue: 0,0:17:54.04,0:17:56.32,Default,,0,0,0,,which makes them hard to extend.
-Dialogue: 0,0:17:56.32,0:17:57.84,Default,,0,0,0,,So typically every  preemptive,
+Dialogue: 0,0:17:56.32,0:17:57.84,Default,,0,0,0,,So typically every  primitive,
 Dialogue: 0,0:17:57.84,0:17:59.24,Default,,0,0,0,,like tile or vectorize,
-Dialogue: 0,0:17:59.24,0:18:00.96,Default,,0,0,0,,represents a commonized\Noptimization,
+Dialogue: 0,0:17:59.24,0:18:00.96,Default,,0,0,0,,represents a common\Noptimization,
 Dialogue: 0,0:18:00.96,0:18:02.72,Default,,0,0,0,,you might want to apply,
 Dialogue: 0,0:18:02.72,0:18:04.88,Default,,0,0,0,,but as soon as you need\Nsomething slightly different
 Dialogue: 0,0:18:04.88,0:18:05.88,Default,,0,0,0,,you're in trouble.
@@ -145,10 +145,10 @@ Dialogue: 0,0:18:05.88,0:18:09.16,Default,,0,0,0,,Because, there's no easy way t
 Dialogue: 0,0:18:09.16,0:18:12.48,Default,,0,0,0,,besides digging deep into\Nthe implementation of the compiler itself.
 Dialogue: 0,0:18:12.52,0:18:16.32,Default,,0,0,0,,And this is something we\Ndon't often want to do.
 Dialogue: 0,0:18:17.44,0:18:20.20,Default,,0,0,0,,So, this is why with our\Nfunctional approach,
-Dialogue: 0,0:18:20.20,0:18:21.72,Default,,0,0,0,,we aim for a more principle way,
+Dialogue: 0,0:18:20.20,0:18:21.72,Default,,0,0,0,,we aim for a more principled way,
 Dialogue: 0,0:18:21.72,0:18:25.04,Default,,0,0,0,,to describe and apply high-performance\Nprogram optimizations.
-Dialogue: 0,0:18:26.20,0:18:29.72,Default,,0,0,0,,And specifically, we're\Ninto separate concerns, by
-Dialogue: 0,0:18:30.16,0:18:32.28,Default,,0,0,0,,SPEAKER 1: A computation at\Na high obstruction of the only,
+Dialogue: 0,0:18:26.20,0:18:29.72,Default,,0,0,0,,Specifically, we aim\Nto separate concerns, by
+Dialogue: 0,0:18:30.16,0:18:32.28,Default,,0,0,0,,specifying computation at\Na high obstruction level only,
 Dialogue: 0,0:18:32.28,0:18:36.84,Default,,0,0,0,,without changing them for\Nexpressing optimizations.
 Dialogue: 0,0:18:37.00,0:18:41.16,Default,,0,0,0,,We aim to facilitate reuse by\Ndefining optimization strategies,
 Dialogue: 0,0:18:41.16,0:18:44.28,Default,,0,0,0,,clearly separated from\Nthe computations.
@@ -160,14 +160,14 @@ Dialogue: 0,0:18:57.28,0:19:00.72,Default,,0,0,0,,And finally, we aim to be\Nexp
 Dialogue: 0,0:19:00.72,0:19:02.60,Default,,0,0,0,,default behavior of the compiler.
 Dialogue: 0,0:19:02.96,0:19:05.52,Default,,0,0,0,,And essentially we argue that\Na strategy language should
 Dialogue: 0,0:19:05.52,0:19:07.84,Default,,0,0,0,,be built with the same\Nstandards as a language
-Dialogue: 0,0:19:07.84,0:19:12.40,Default,,0,0,0,,describing the computation. Now,\Nlet me show you the function,
-Dialogue: 0,0:19:12.40,0:19:14.88,Default,,0,0,0,,the way of achieving\Nhigh performance.
-Dialogue: 0,0:19:15.32,0:19:18.16,Default,,0,0,0,,And our approach follows\Nthe same idea of decoupling
+Dialogue: 0,0:19:07.84,0:19:12.40,Default,,0,0,0,,describing the computation. Now,\Nlet me show you the functional,
+Dialogue: 0,0:19:12.40,0:19:14.88,Default,,0,0,0,,way of achieving\Nhigh performance.
+Dialogue: 0,0:19:15.32,0:19:18.16,Default,,0,0,0,,In our approach we follow\Nthe same idea of decoupling
 Dialogue: 0,0:19:18.16,0:19:22.20,Default,,0,0,0,,computations and optimizations,\Nbut we're using the well established
 Dialogue: 0,0:19:22.20,0:19:25.76,Default,,0,0,0,,functional programming\Ntechniques to express both.
 Dialogue: 0,0:19:25.92,0:19:29.36,Default,,0,0,0,,So on the top left, we have a high\Nlevel program that is written in
 Dialogue: 0,0:19:29.36,0:19:31.20,Default,,0,0,0,,the function programming\Nlanguage called rise.
-Dialogue: 0,0:19:31.20,0:19:34.76,Default,,0,0,0,,That is based on\Nthe 90th paper from 2015.
+Dialogue: 0,0:19:31.20,0:19:34.76,Default,,0,0,0,,That is based on\Nthe ICFP paper from 2015.
 Dialogue: 0,0:19:35.04,0:19:38.52,Default,,0,0,0,,And on the right, you see\Nan optimization strategy that describes
 Dialogue: 0,0:19:38.52,0:19:42.44,Default,,0,0,0,,how to optimize that rise program.\NAnd this is written in elevate,
 Dialogue: 0,0:19:42.44,0:19:46.08,Default,,0,0,0,,which is based on ideas already\Npublished in the late nineties.
@@ -187,22 +187,22 @@ Dialogue: 0,0:20:25.44,0:20:29.80,Default,,0,0,0,,we call a rewrite result and\N
 Dialogue: 0,0:20:29.80,0:20:33.44,Default,,0,0,0,,whether the applied strategy\Nsucceeded in which case it contains
 Dialogue: 0,0:20:33.44,0:20:36.84,Default,,0,0,0,,the rewritten program,\Nor it failed in which case it
 Dialogue: 0,0:20:36.84,0:20:39.32,Default,,0,0,0,,contained the strategy,\Nwhich failed.
-Dialogue: 0,0:20:39.52,0:20:42.32,Default,,0,0,0,,Rewrite groups are examples\Nfor very simple strategies.
+Dialogue: 0,0:20:39.52,0:20:42.32,Default,,0,0,0,,Rewrite rules are examples\Nfor very simple strategies.
 Dialogue: 0,0:20:42.32,0:20:44.52,Default,,0,0,0,,And you could, for example,\Ngo ahead and implement
-Dialogue: 0,0:20:44.52,0:20:49.04,Default,,0,0,0,,the typical (INAUDIBLE) rule for rise\Nprograms as an elevate strategy.
+Dialogue: 0,0:20:44.52,0:20:49.04,Default,,0,0,0,,the typical fusion rule for rise\Nprograms as an elevate strategy.
 Dialogue: 0,0:20:49.04,0:20:52.48,Default,,0,0,0,,As you see on the bottom. This\Nrule simply says that whenever
 Dialogue: 0,0:20:52.48,0:20:55.48,Default,,0,0,0,,you see a rise program that\Ncontains two consecutive maps,
-Dialogue: 0,0:20:55.48,0:20:58.48,Default,,0,0,0,,you confuse those maps\Nand return the fuse program,
+Dialogue: 0,0:20:55.48,0:20:58.48,Default,,0,0,0,,you can fuse those maps\Nand return the fused program,
 Dialogue: 0,0:20:58.48,0:21:00.76,Default,,0,0,0,,and if there are no\Nconsecutive two maps,
 Dialogue: 0,0:21:00.76,0:21:03.96,Default,,0,0,0,,then this rule is simply not\Napplicable and it fails.
-Dialogue: 0,0:21:05.24,0:21:08.72,Default,,0,0,0,,For building more powerful strategies,\Nwe can combine ringer goods
+Dialogue: 0,0:21:05.24,0:21:08.72,Default,,0,0,0,,For building more powerful strategies,\Nwe can combine tools
 Dialogue: 0,0:21:08.72,0:21:11.48,Default,,0,0,0,,and elevate using several\Ndifferent combinators.
-Dialogue: 0,0:21:11.64,0:21:14.60,Default,,0,0,0,,So for example,\Nthe sequence Combinator allows
+Dialogue: 0,0:21:11.64,0:21:14.60,Default,,0,0,0,,So for example,\Nthe sequence combinator allows
 Dialogue: 0,0:21:14.60,0:21:17.16,Default,,0,0,0,,to apply two strategies in sequence.
 Dialogue: 0,0:21:17.48,0:21:21.20,Default,,0,0,0,,The left choice operator\Nexpects also two strategies,
-Dialogue: 0,0:21:21.20,0:21:24.52,Default,,0,0,0,,but I only advice the second one\Nin case the first one fails.
-Dialogue: 0,0:21:24.88,0:21:28.52,Default,,0,0,0,,The try Combinator tries to\Napply the given strategy and
-Dialogue: 0,0:21:28.52,0:21:30.84,Default,,0,0,0,,if it is not applicable, it's\Nsimply returns beyond changed
+Dialogue: 0,0:21:21.20,0:21:24.52,Default,,0,0,0,,but only applies the second one\Nin case the first one fails.
+Dialogue: 0,0:21:24.88,0:21:28.52,Default,,0,0,0,,The try combinator tries to\Napply the given strategy and
+Dialogue: 0,0:21:28.52,0:21:30.84,Default,,0,0,0,,if it is not applicable, it's\Nsimply returns the unchanged
 Dialogue: 0,0:21:30.84,0:21:33.80,Default,,0,0,0,,input program by applying\Nthe ID strategy.
 Dialogue: 0,0:21:33.80,0:21:38.16,Default,,0,0,0,,And finally, the repeat strategy\Nallows us to repetitively apply
 Dialogue: 0,0:21:38.16,0:21:41.24,Default,,0,0,0,,the same strategy until it\Nis no longer applicable.
@@ -212,9 +212,9 @@ Dialogue: 0,0:21:48.12,0:21:51.60,Default,,0,0,0,,And if we now want to apply\Nt
 Dialogue: 0,0:21:51.60,0:21:54.52,Default,,0,0,0,,there are two possible\Nlocations for fusing the maps.
 Dialogue: 0,0:21:54.52,0:21:57.88,Default,,0,0,0,,So we can either use the first\Ntwo or the last two maps.
 Dialogue: 0,0:21:58.24,0:22:01.12,Default,,0,0,0,,And with elevate, you can\Nprecisely define locations in
-Dialogue: 0,0:22:01.12,0:22:03.92,Default,,0,0,0,,the ASD using so-called traverses.
+Dialogue: 0,0:22:01.12,0:22:03.92,Default,,0,0,0,,the AST using so-called traverses.
 Dialogue: 0,0:22:04.08,0:22:07.32,Default,,0,0,0,,So for example, the body traversal\Napplies a given strategy at
-Dialogue: 0,0:22:07.32,0:22:09.44,Default,,0,0,0,,the body of a function\Nobstruction mode.
+Dialogue: 0,0:22:07.32,0:22:09.44,Default,,0,0,0,,the body of a function\Nabstruction mode.
 Dialogue: 0,0:22:09.44,0:22:13.76,Default,,0,0,0,,And in this example, body\Nmapfusion would then fuse the
 Dialogue: 0,0:22:13.76,0:22:16.16,Default,,0,0,0,,first two maps as we've seen here.
 Dialogue: 0,0:22:16.52,0:22:19.48,Default,,0,0,0,,Similarly, we define traversals\Nfor the other nodes and
@@ -224,9 +224,9 @@ Dialogue: 0,0:22:26.44,0:22:29.32,Default,,0,0,0,,we explained in more detail ho
 Dialogue: 0,0:22:29.32,0:22:31.96,Default,,0,0,0,,using these and other traverses.
 Dialogue: 0,0:22:32.36,0:22:35.76,Default,,0,0,0,,Sometimes it's not desirable\Nto specify a precise path,
 Dialogue: 0,0:22:35.76,0:22:38.84,Default,,0,0,0,,but instead we might want to\Nsay something like apply this
-Dialogue: 0,0:22:38.84,0:22:41.32,Default,,0,0,0,,given strategy at\Nthe prose place you'll find,
+Dialogue: 0,0:22:38.84,0:22:41.32,Default,,0,0,0,,given strategy at\Nthe first place you'll find,
 Dialogue: 0,0:22:41.32,0:22:44.92,Default,,0,0,0,,and this is what bottom\Nup or top down do.
-Dialogue: 0,0:22:44.92,0:22:49.24,Default,,0,0,0,,So these traverses strategies,\Ntraverse DAC either like from top
+Dialogue: 0,0:22:44.92,0:22:49.24,Default,,0,0,0,,So these traverses strategies,\Ntraverse AST either like from top
 Dialogue: 0,0:22:49.24,0:22:52.24,Default,,0,0,0,,down or bottom up\Nand apply the given strategy
 Dialogue: 0,0:22:52.24,0:22:55.68,Default,,0,0,0,,at the first place where it's\Napplicable and then stop.
 Dialogue: 0,0:22:56.52,0:22:59.56,Default,,0,0,0,,Another useful traversal is\Nthe normalized strategy,
@@ -234,8 +234,8 @@ Dialogue: 0,0:22:59.56,0:23:02.60,Default,,0,0,0,,which applies a given strategy
 Dialogue: 0,0:23:02.60,0:23:05.28,Default,,0,0,0,,applicable anywhere in\Nthe give expression.
 Dialogue: 0,0:23:05.28,0:23:08.80,Default,,0,0,0,,And in the paper we define a few\Nnormal forms for rise expression.
 Dialogue: 0,0:23:08.80,0:23:11.44,Default,,0,0,0,,And one simple example\Nfor one of those is
-Dialogue: 0,0:23:11.44,0:23:14.68,Default,,0,0,0,,the beta eta-normal form, which\Nsimply applies better reduction
-Dialogue: 0,0:23:14.68,0:23:17.60,Default,,0,0,0,,and effort reduction\Nas often as possible.
+Dialogue: 0,0:23:11.44,0:23:14.68,Default,,0,0,0,,the beta eta-normal form, which\Nsimply applies beta reduction
+Dialogue: 0,0:23:14.68,0:23:17.60,Default,,0,0,0,,and eta reduction\Nas often as possible.
 Dialogue: 0,0:23:18.12,0:23:21.28,Default,,0,0,0,,Using those generic building\Nblocks, we then try to implement
 Dialogue: 0,0:23:21.28,0:23:24.64,Default,,0,0,0,,TVM scheduling language\Nand try to especially define
 Dialogue: 0,0:23:24.64,0:23:27.64,Default,,0,0,0,,elevate strategies that\Napply the same optimizations
@@ -245,48 +245,48 @@ Dialogue: 0,0:23:34.60,0:23:37.80,Default,,0,0,0,,And for TVM, we described\Nthe
 Dialogue: 0,0:23:37.80,0:23:40.88,Default,,0,0,0,,the pipe and API and use\Nthe default schedule
 Dialogue: 0,0:23:40.88,0:23:43.36,Default,,0,0,0,,to generate unoptimized code.
 Dialogue: 0,0:23:43.88,0:23:46.88,Default,,0,0,0,,For our functional way, we describe\Nthe matrix multiplication
-Dialogue: 0,0:23:46.88,0:23:50.00,Default,,0,0,0,,computation using rise\Nand its function away
-Dialogue: 0,0:23:50.00,0:23:51.76,Default,,0,0,0,,from the slide like\Nthat been reduced.
+Dialogue: 0,0:23:46.88,0:23:50.00,Default,,0,0,0,,computation using rise\Nand its functional array
+Dialogue: 0,0:23:50.00,0:23:51.76,Default,,0,0,0,,primitives like\Nmap and reduce.
 Dialogue: 0,0:23:51.76,0:23:54.84,Default,,0,0,0,,And we define a separate\Nstrategy in elevate,
 Dialogue: 0,0:23:54.84,0:23:58.56,Default,,0,0,0,,which explained how to\Noptimize this computation.
 Dialogue: 0,0:23:58.96,0:24:01.64,Default,,0,0,0,,And here we can already see that\Nwe have a clear separation
 Dialogue: 0,0:24:01.64,0:24:04.20,Default,,0,0,0,,between the computation\Nand the optimization.
 Dialogue: 0,0:24:04.48,0:24:09.36,Default,,0,0,0,,More crucially TVM's default\Nstrategy implicitly describes
-Dialogue: 0,0:24:09.36,0:24:12.48,Default,,0,0,0,,some way of lowering\Nthe program to execute a boot code.
+Dialogue: 0,0:24:09.36,0:24:12.48,Default,,0,0,0,,some way of lowering\Nthe program to execute the code.
 Dialogue: 0,0:24:12.48,0:24:15.60,Default,,0,0,0,,And we don't really know\Nhow this is performed.
 Dialogue: 0,0:24:15.92,0:24:19.28,Default,,0,0,0,,With our approach, we aim to\Ncompletely avoid implicit behavior
 Dialogue: 0,0:24:19.28,0:24:22.24,Default,,0,0,0,,and describe every\Ntransformation explicitly.
 Dialogue: 0,0:24:22.60,0:24:25.12,Default,,0,0,0,,So here, we're simply saying\Nthat the dot product should
 Dialogue: 0,0:24:25.12,0:24:28.16,Default,,0,0,0,,be computed using a single\Nstatement, by fusing the map and
-Dialogue: 0,0:24:28.16,0:24:32.32,Default,,0,0,0,,the reduced pattern, similar to\Nhow TVM computes the doc product.
+Dialogue: 0,0:24:28.16,0:24:32.32,Default,,0,0,0,,the reduce pattern, similar to\Nhow TVM computes the dot product.
 Dialogue: 0,0:24:32.96,0:24:35.44,Default,,0,0,0,,This way we implemented each of the
-Dialogue: 0,0:24:35.44,0:24:37.36,Default,,0,0,0,,seven differently up to my versions.
+Dialogue: 0,0:24:35.44,0:24:37.36,Default,,0,0,0,,seven differently optimized versions.
 Dialogue: 0,0:24:37.36,0:24:40.40,Default,,0,0,0,,And in the paper we described,\Nfor example, how to implement
 Dialogue: 0,0:24:40.40,0:24:43.56,Default,,0,0,0,,TVMs built-in tile\Noptimization as a composition
-Dialogue: 0,0:24:43.56,0:24:46.36,Default,,0,0,0,,of only a few (INAUDIBLE)\Nand the Combinator and
-Dialogue: 0,0:24:46.36,0:24:50.36,Default,,0,0,0,,traverses, we've just seen.\NAlso a functional approach
+Dialogue: 0,0:24:43.56,0:24:46.36,Default,,0,0,0,,of only a few rewrite rules\Nand the combinators and
+Dialogue: 0,0:24:46.36,0:24:50.36,Default,,0,0,0,,traversals we've just seen.\NAlso our functional approach
 Dialogue: 0,0:24:50.36,0:24:52.60,Default,,0,0,0,,allows us to define\Nthe different optimized versions
 Dialogue: 0,0:24:52.60,0:24:55.88,Default,,0,0,0,,as reusable strategies.\NSo here, for example,
 Dialogue: 0,0:24:55.88,0:24:57.88,Default,,0,0,0,,we define the loop perms strategy,
 Dialogue: 0,0:24:57.88,0:25:02.00,Default,,0,0,0,,which we will reuse in\Nthe following more optimized versions.
 Dialogue: 0,0:25:02.72,0:25:05.40,Default,,0,0,0,,This is the most optimized\Nversion implemented
-Dialogue: 0,0:25:05.40,0:25:07.32,Default,,0,0,0,,in both TVM and dollar approach.
+Dialogue: 0,0:25:05.40,0:25:07.32,Default,,0,0,0,,in both TVM and our approach.
 Dialogue: 0,0:25:07.32,0:25:10.32,Default,,0,0,0,,And here you can see that\Nwe are able to reuse and
 Dialogue: 0,0:25:10.32,0:25:12.44,Default,,0,0,0,,to build upon\Nthe loop perm strategy,
 Dialogue: 0,0:25:12.44,0:25:15.92,Default,,0,0,0,,whereas in TVM we always have to\Ndescribe the whole optimization
-Dialogue: 0,0:25:15.92,0:25:19.88,Default,,0,0,0,,from scratch because we cannot\Neasily define our own obstruction.
+Dialogue: 0,0:25:15.92,0:25:19.88,Default,,0,0,0,,from scratch because we cannot\Neasily define our own abstruction.
 Dialogue: 0,0:25:19.88,0:25:23.68,Default,,0,0,0,,One crucial problem is also that\Nthe TVM algorithm has to be
 Dialogue: 0,0:25:23.68,0:25:27.20,Default,,0,0,0,,changed a few times during\Nthe tutorial because the scheduling
 Dialogue: 0,0:25:27.20,0:25:28.92,Default,,0,0,0,,language is not powerful enough
 Dialogue: 0,0:25:28.92,0:25:31.52,Default,,0,0,0,,to express all desirable\Noptimizations.
 Dialogue: 0,0:25:31.84,0:25:35.32,Default,,0,0,0,,Our approach with rise and elevate\Ndoes not require us to do so.
-Dialogue: 0,0:25:35.32,0:25:39.12,Default,,0,0,0,,And we use the same rise matrix\Nmodification that is optimized
+Dialogue: 0,0:25:35.32,0:25:39.12,Default,,0,0,0,,And we use the same rise matrix\Nmultiplication that is optimized
 Dialogue: 0,0:25:39.12,0:25:42.64,Default,,0,0,0,,by seven different\Nand separate elevate strategies.
 Dialogue: 0,0:25:43.40,0:25:46.20,Default,,0,0,0,,To evaluate our approach,\Nwe look at two things.
 Dialogue: 0,0:25:46.20,0:25:51.92,Default,,0,0,0,,So first in the first experiment,\Nwe simply counted the number of
 Dialogue: 0,0:25:51.96,0:25:55.24,Default,,0,0,0,,successful rewrite steps for\Nversions, which you can see here.
-Dialogue: 0,0:25:55.24,0:25:58.80,Default,,0,0,0,,And since the baseline version\Ndoes not perform any interest
-Dialogue: 0,0:25:58.80,0:26:03.28,Default,,0,0,0,,in transformations it only\Nrequires a few regrets steps.
+Dialogue: 0,0:25:55.24,0:25:58.80,Default,,0,0,0,,And since the baseline version\Ndoes not perform any interesting
+Dialogue: 0,0:25:58.80,0:26:03.28,Default,,0,0,0,,transformations it only\Nrequires a few rewrite steps.
 Dialogue: 0,0:26:03.28,0:26:06.80,Default,,0,0,0,,But as soon as we're performing\Nactual program optimizations,
 Dialogue: 0,0:26:06.80,0:26:10.44,Default,,0,0,0,,we reach about yeah,\N45 thousands and
 Dialogue: 0,0:26:10.44,0:26:13.40,Default,,0,0,0,,later up to 62,000\Nseparate rewrites steps.
@@ -300,8 +300,8 @@ Dialogue: 0,0:26:33.68,0:26:35.60,Default,,0,0,0,,with our functional way\Nmatch
 Dialogue: 0,0:26:35.60,0:26:38.84,Default,,0,0,0,,achieved by the TVM compiler.\NAnd here you see the performance
 Dialogue: 0,0:26:38.84,0:26:41.88,Default,,0,0,0,,achieved for each of\Nthe seven different versions and
 Dialogue: 0,0:26:41.88,0:26:44.12,Default,,0,0,0,,you'll find that we are able\Nto achieve a similar trend,
-Dialogue: 0,0:26:44.12,0:26:46.52,Default,,0,0,0,,which means that our\Nelevate strategies and
-Dialogue: 0,0:26:46.52,0:26:49.68,Default,,0,0,0,,code the same high performance\Nprogram optimizations as applied
+Dialogue: 0,0:26:44.12,0:26:46.52,Default,,0,0,0,,which means that our\Nelevate strategies encode
+Dialogue: 0,0:26:46.52,0:26:49.68,Default,,0,0,0,,the same high performance\Nprogram optimizations as applied
 Dialogue: 0,0:26:49.68,0:26:52.28,Default,,0,0,0,,by the state of\Nthe art TVM compiler.
 Dialogue: 0,0:26:52.64,0:26:55.88,Default,,0,0,0,,And if you would like to find out\Nmore about a functional way of
 Dialogue: 0,0:26:55.88,0:26:58.28,Default,,0,0,0,,achieving high performance,\Nsimply contact us and
@@ -310,10 +310,10 @@ Dialogue: 0,0:27:00.68,0:27:02.12,Default,,0,0,0,,I'd like to end the presentati
 Dialogue: 0,0:27:02.12,0:27:04.48,Default,,0,0,0,,I mentioned that you can find\Nall our implementations
 Dialogue: 0,0:27:04.48,0:27:08.28,Default,,0,0,0,,online or in the artifacts.\NThanks for your attention.
 Dialogue: 0,0:27:08.28,0:27:18.68,Default,,0,0,0,,(CLAPS)\NALAN JEFFREY: So thank you, Bastian.
-Dialogue: 0,0:27:18.68,0:27:24.56,Default,,0,0,0,,So anybody who is wanting to join\Nthe authors for the live Q&A,
-Dialogue: 0,0:27:24.64,0:27:29.64,Default,,0,0,0,,you can click on the link that's\Nin the finer page for this talk.
+Dialogue: 0,0:27:18.68,0:27:24.56,Default,,0,0,0,,So for anybody who is wanting to join\Nthe authors for the live Q&A,
+Dialogue: 0,0:27:24.64,0:27:29.64,Default,,0,0,0,,you can click on the link that's\Nin the Clowdr page for this talk.
 Dialogue: 0,0:27:59.44,0:28:04.28,Default,,0,0,0,,Our next paper in the second\Nsession of ICFP 2020,
-Dialogue: 0,0:28:04.28,0:28:08.12,Default,,0,0,0,,is going to be Staged\Nselective combinators and
+Dialogue: 0,0:28:04.28,0:28:08.12,Default,,0,0,0,,is going to be Staged selective\Nparser combinators and
 Dialogue: 0,0:28:08.12,0:28:12.68,Default,,0,0,0,,it's going to be presented by\NJamie Willis and Nick Wu.
 Dialogue: 0,0:28:18.28,0:28:22.52,Default,,0,0,0,,JAMIE: Hello? Can you hear me?\NNICK: Hello? Yeah, I can hear you.
 Dialogue: 0,0:28:22.52,0:28:26.16,Default,,0,0,0,,JAMIE: Nice. I can hear you too.\NNICK: So I don't know if we've met.

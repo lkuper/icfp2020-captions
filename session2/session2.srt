@@ -29,7 +29,7 @@ ALAN JEFFREY: Hello everybody.
 8
 00:13:00,960 --> 00:13:05,920
 And welcome to the second
-session of ICFT 2020.
+session of ICFP 2020.
 
 9
 00:13:05,960 --> 00:13:07,800
@@ -46,7 +46,7 @@ can also join us in chat,
 
 12
 00:13:12,960 --> 00:13:15,280
-and on the Clowdr system.
+on the Clowdr system.
 
 13
 00:13:15,320 --> 00:13:19,160
@@ -65,7 +65,7 @@ for the session,
 16
 00:13:23,680 --> 00:13:27,360
 is going to be achieving high
-performance a fuctional way,
+performance thre fuctional way,
 
 17
 00:13:27,400 --> 00:13:28,920
@@ -164,7 +164,7 @@ this neural network,
 
 38
 00:14:20,320 --> 00:14:22,120
-releases about  five tons of carbon
+releases about five tons of carbon
 
 39
 00:14:22,120 --> 00:14:23,120
@@ -335,7 +335,7 @@ is what I call the decoupled way,
 
 76
 00:15:53,520 --> 00:15:57,560
-which was pioneered by the main
+which was pioneered by the domain
 specific compiler called Halide.
 
 77
@@ -478,7 +478,7 @@ you'll find a few problems.
 
 107
 00:17:13,240 --> 00:17:15,640
-The one of the first few
+One of the first few
 things you might find is that
 
 108
@@ -534,7 +534,7 @@ a documentation online,
 
 119
 00:17:41,480 --> 00:17:42,920
-And for some  preemptives,
+And for some primitives,
 
 120
 00:17:42,920 --> 00:17:45,960
@@ -548,12 +548,12 @@ internally implements
 
 122
 00:17:48,600 --> 00:17:50,680
-the scheduling preemptives.
+the scheduling primitives.
 
 123
 00:17:50,680 --> 00:17:54,040
 And finally, all scheduling
-preemptives are built in,
+primitives are built in,
 
 124
 00:17:54,040 --> 00:17:56,320
@@ -561,7 +561,7 @@ which makes them hard to extend.
 
 125
 00:17:56,320 --> 00:17:57,840
-So typically every  preemptive,
+So typically every  primitive,
 
 126
 00:17:57,840 --> 00:17:59,240
@@ -569,7 +569,7 @@ like tile or vectorize,
 
 127
 00:17:59,240 --> 00:18:00,960
-represents a commonized
+represents a common
 optimization,
 
 128
@@ -607,7 +607,7 @@ functional approach,
 
 135
 00:18:20,200 --> 00:18:21,720
-we aim for a more principle way,
+we aim for a more principled way,
 
 136
 00:18:21,720 --> 00:18:25,040
@@ -616,13 +616,13 @@ program optimizations.
 
 137
 00:18:26,200 --> 00:18:29,720
-And specifically, we're
-into separate concerns, by
+Specifically, we aim
+to separate concerns, by
 
 138
 00:18:30,160 --> 00:18:32,280
-SPEAKER 1: A computation at
-a high obstruction of the only,
+specifying computation at
+a high obstruction level only,
 
 139
 00:18:32,280 --> 00:18:36,840
@@ -681,16 +681,16 @@ standards as a language
 150
 00:19:07,840 --> 00:19:12,400
 describing the computation. Now,
-let me show you the function,
+let me show you the functional,
 
 151
 00:19:12,400 --> 00:19:14,880
-the way of achieving
+way of achieving
 high performance.
 
 152
 00:19:15,320 --> 00:19:18,160
-And our approach follows
+In our approach we follow
 the same idea of decoupling
 
 153
@@ -716,7 +716,7 @@ language called rise.
 157
 00:19:31,200 --> 00:19:34,760
 That is based on
-the 90th paper from 2015.
+the ICFP paper from 2015.
 
 158
 00:19:35,040 --> 00:19:38,520
@@ -813,7 +813,7 @@ which failed.
 
 177
 00:20:39,520 --> 00:20:42,320
-Rewrite groups are examples
+Rewrite rules are examples
 for very simple strategies.
 
 178
@@ -823,7 +823,7 @@ go ahead and implement
 
 179
 00:20:44,520 --> 00:20:49,040
-the typical (INAUDIBLE) rule for rise
+the typical fusion rule for rise
 programs as an elevate strategy.
 
 180
@@ -838,8 +838,8 @@ contains two consecutive maps,
 
 182
 00:20:55,480 --> 00:20:58,480
-you confuse those maps
-and return the fuse program,
+you can fuse those maps
+and return the fused program,
 
 183
 00:20:58,480 --> 00:21:00,760
@@ -854,7 +854,7 @@ applicable and it fails.
 185
 00:21:05,240 --> 00:21:08,720
 For building more powerful strategies,
-we can combine ringer goods
+we can combine tools
 
 186
 00:21:08,720 --> 00:21:11,480
@@ -864,7 +864,7 @@ different combinators.
 187
 00:21:11,640 --> 00:21:14,600
 So for example,
-the sequence Combinator allows
+the sequence combinator allows
 
 188
 00:21:14,600 --> 00:21:17,160
@@ -877,18 +877,18 @@ expects also two strategies,
 
 190
 00:21:21,200 --> 00:21:24,520
-but I only advice the second one
+but only applies the second one
 in case the first one fails.
 
 191
 00:21:24,880 --> 00:21:28,520
-The try Combinator tries to
+The try combinator tries to
 apply the given strategy and
 
 192
 00:21:28,520 --> 00:21:30,840
 if it is not applicable, it's
-simply returns beyond changed
+simply returns the unchanged
 
 193
 00:21:30,840 --> 00:21:33,800
@@ -937,7 +937,7 @@ precisely define locations in
 
 202
 00:22:01,120 --> 00:22:03,920
-the ASD using so-called traverses.
+the AST using so-called traverses.
 
 203
 00:22:04,080 --> 00:22:07,320
@@ -947,7 +947,7 @@ applies a given strategy at
 204
 00:22:07,320 --> 00:22:09,440
 the body of a function
-obstruction mode.
+abstruction mode.
 
 205
 00:22:09,440 --> 00:22:13,760
@@ -995,7 +995,7 @@ say something like apply this
 214
 00:22:38,840 --> 00:22:41,320
 given strategy at
-the prose place you'll find,
+the first place you'll find,
 
 215
 00:22:41,320 --> 00:22:44,920
@@ -1005,7 +1005,7 @@ up or top down do.
 216
 00:22:44,920 --> 00:22:49,240
 So these traverses strategies,
-traverse DAC either like from top
+traverse AST either like from top
 
 217
 00:22:49,240 --> 00:22:52,240
@@ -1045,11 +1045,11 @@ for one of those is
 224
 00:23:11,440 --> 00:23:14,680
 the beta eta-normal form, which
-simply applies better reduction
+simply applies beta reduction
 
 225
 00:23:14,680 --> 00:23:17,600
-and effort reduction
+and eta reduction
 as often as possible.
 
 226
@@ -1099,12 +1099,12 @@ the matrix multiplication
 235
 00:23:46,880 --> 00:23:50,000
 computation using rise
-and its function away
+and its functional array
 
 236
 00:23:50,000 --> 00:23:51,760
-from the slide like
-that been reduced.
+primitives like
+map and reduce.
 
 237
 00:23:51,760 --> 00:23:54,840
@@ -1134,7 +1134,7 @@ strategy implicitly describes
 242
 00:24:09,360 --> 00:24:12,480
 some way of lowering
-the program to execute a boot code.
+the program to execute the code.
 
 243
 00:24:12,480 --> 00:24:15,600
@@ -1163,8 +1163,8 @@ statement, by fusing the map and
 
 248
 00:24:28,160 --> 00:24:32,320
-the reduced pattern, similar to
-how TVM computes the doc product.
+the reduce pattern, similar to
+how TVM computes the dot product.
 
 249
 00:24:32,960 --> 00:24:35,440
@@ -1172,7 +1172,7 @@ This way we implemented each of the
 
 250
 00:24:35,440 --> 00:24:37,360
-seven differently up to my versions.
+seven differently optimized versions.
 
 251
 00:24:37,360 --> 00:24:40,400
@@ -1186,13 +1186,13 @@ optimization as a composition
 
 253
 00:24:43,560 --> 00:24:46,360
-of only a few (INAUDIBLE)
-and the Combinator and
+of only a few rewrite rules
+and the combinators and
 
 254
 00:24:46,360 --> 00:24:50,360
-traverses, we've just seen.
-Also a functional approach
+traversals we've just seen.
+Also our functional approach
 
 255
 00:24:50,360 --> 00:24:52,600
@@ -1220,7 +1220,7 @@ version implemented
 
 260
 00:25:05,400 --> 00:25:07,320
-in both TVM and dollar approach.
+in both TVM and our approach.
 
 261
 00:25:07,320 --> 00:25:10,320
@@ -1240,7 +1240,7 @@ describe the whole optimization
 264
 00:25:15,920 --> 00:25:19,880
 from scratch because we cannot
-easily define our own obstruction.
+easily define our own abstruction.
 
 265
 00:25:19,880 --> 00:25:23,680
@@ -1269,7 +1269,7 @@ does not require us to do so.
 270
 00:25:35,320 --> 00:25:39,120
 And we use the same rise matrix
-modification that is optimized
+multiplication that is optimized
 
 271
 00:25:39,120 --> 00:25:42,640
@@ -1294,12 +1294,12 @@ versions, which you can see here.
 275
 00:25:55,240 --> 00:25:58,800
 And since the baseline version
-does not perform any interest
+does not perform any interesting
 
 276
 00:25:58,800 --> 00:26:03,280
-in transformations it only
-requires a few regrets steps.
+transformations it only
+requires a few rewrite steps.
 
 277
 00:26:03,280 --> 00:26:06,800
@@ -1369,11 +1369,11 @@ to achieve a similar trend,
 290
 00:26:44,120 --> 00:26:46,520
 which means that our
-elevate strategies and
+elevate strategies encode
 
 291
 00:26:46,520 --> 00:26:49,680
-code the same high performance
+the same high performance
 program optimizations as applied
 
 292
@@ -1417,13 +1417,13 @@ ALAN JEFFREY: So thank you, Bastian.
 
 300
 00:27:18,680 --> 00:27:24,560
-So anybody who is wanting to join
+So for anybody who is wanting to join
 the authors for the live Q&A,
 
 301
 00:27:24,640 --> 00:27:29,640
 you can click on the link that's
-in the finer page for this talk.
+in the Clowdr page for this talk.
 
 302
 00:27:59,440 --> 00:28:04,280
@@ -1432,8 +1432,8 @@ session of ICFP 2020,
 
 303
 00:28:04,280 --> 00:28:08,120
-is going to be Staged
-selective combinators and
+is going to be Staged selective
+parser combinators and
 
 304
 00:28:08,120 --> 00:28:12,680
