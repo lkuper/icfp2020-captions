@@ -1760,19 +1760,19 @@ Dialogue: 0,1:40:45.40,1:40:48.40,Default,,0,0,0,,for a live Q&A and you're\Nin 
 Dialogue: 0,1:40:48.40,1:41:07.80,Default,,0,0,0,,and then you can click on\Nthe link in the Clowdr Room.
 Dialogue: 0,1:41:07.80,1:41:10.84,Default,,0,0,0,,And now we're going to have\N a short break,
 Dialogue: 0,1:41:10.84,1:41:12.32,Default,,0,0,0,,please come back and join us
-Dialogue: 0,1:41:12.32,1:41:30.12,Default,,0,0,0,,for the next paper in this session.
+Dialogue: 0,1:41:12.32,1:41:30.12,Default,,0,0,0,,for the next paper in this session. 
 Dialogue: 0,1:41:30.12,1:42:48.36,Default,,0,0,0,,(UPBEAT JAZZY MUSIC)
 Dialogue: 0,1:42:48.36,1:43:00.92,Default,,0,0,0,,(MUSIC FADES)
 Dialogue: 0,1:43:00.92,1:43:05.88,Default,,0,0,0,,So, welcome back to\Nthe second session of ICFP 2020,
 Dialogue: 0,1:43:05.88,1:43:07.84,Default,,0,0,0,,and our next paper is going to be
 Dialogue: 0,1:43:07.84,1:43:11.00,Default,,0,0,0,,"Retrofitting\NParallelism into OCaml."
-Dialogue: 0,1:43:11.00,1:43:17.08,Default,,0,0,0,,And it's been presented\Nby KC Sivaramakrishnan.
+Dialogue: 0,1:43:11.00,1:43:17.08,Default,,0,0,0,,And it's being presented\Nby KC Sivaramakrishnan.
 Dialogue: 0,1:43:17.08,1:43:20.52,Default,,0,0,0,,KC: Hi, I'm KC and I'm going\Nto present our work on
 Dialogue: 0,1:43:20.52,1:43:23.72,Default,,0,0,0,,retrofitting parallelism into OCaml.
 Dialogue: 0,1:43:23.72,1:43:26.56,Default,,0,0,0,,So OCaml is a reasonably\Npopular programming language
-Dialogue: 0,1:43:26.56,1:43:29.12,Default,,0,0,0,,that is used by several,\Nmultiple industries,
+Dialogue: 0,1:43:26.56,1:43:29.12,Default,,0,0,0,,that is used by several,\Nnotable industries,
 Dialogue: 0,1:43:29.12,1:43:31.56,Default,,0,0,0,,but also widely in the academia.
-Dialogue: 0,1:43:31.56,1:43:33.08,Default,,0,0,0,,Vocab and language has particularly
+Dialogue: 0,1:43:31.56,1:43:33.08,Default,,0,0,0,,OCaml language has particularly
 Dialogue: 0,1:43:33.08,1:43:36.96,Default,,0,0,0,,found favor for implementing
 Dialogue: 0,1:43:37.00,1:43:40.40,Default,,0,0,0,,software verification\Nand static analysis tools
 Dialogue: 0,1:43:40.40,1:43:43.24,Default,,0,0,0,,and also low-latency system services
@@ -1787,7 +1787,7 @@ Dialogue: 0,1:44:05.96,1:44:08.08,Default,,0,0,0,,with the help of effect handle
 Dialogue: 0,1:44:08.08,1:44:11.04,Default,,0,0,0,,but the focus of this\Nparticular talk is going to be
 Dialogue: 0,1:44:11.04,1:44:14.68,Default,,0,0,0,,on parallelism and in\Nparticular, we are going to
 Dialogue: 0,1:44:14.68,1:44:17.20,Default,,0,0,0,,look at the details of\Na multi-core capable
-Dialogue: 0,1:44:17.20,1:44:21.12,Default,,0,0,0,,garbage collector that we have\Nin (INAUDIBLE) types of OCaml.
+Dialogue: 0,1:44:17.20,1:44:21.12,Default,,0,0,0,,garbage collector that we have\Nimplemented for OCaml.
 Dialogue: 0,1:44:21.12,1:44:24.44,Default,,0,0,0,,The design space for\Nmulti-core OCaml,
 Dialogue: 0,1:44:24.44,1:44:28.40,Default,,0,0,0,,multi-core garbage\Ncollectors is quite wide.
 Dialogue: 0,1:44:28.44,1:44:31.36,Default,,0,0,0,,And what makes our\Nwork unique is that
@@ -1802,7 +1802,7 @@ Dialogue: 0,1:44:57.72,1:44:59.92,Default,,0,0,0,,and finalizers, which\Nclosely
 Dialogue: 0,1:44:59.92,1:45:02.96,Default,,0,0,0,,with the current GC.
 Dialogue: 0,1:45:02.96,1:45:06.28,Default,,0,0,0,,OCaml also exposes\Na low level of C API
 Dialogue: 0,1:45:06.28,1:45:09.48,Default,,0,0,0,,that allows the developers to\Nwrite very efficient code,
-Dialogue: 0,1:45:09.48,1:45:12.32,Default,,0,0,0,,but also bakes in the GC ingredients
+Dialogue: 0,1:45:09.48,1:45:12.32,Default,,0,0,0,,but also bakes in the GC invariants
 Dialogue: 0,1:45:12.32,1:45:15.56,Default,,0,0,0,,and the cost of refactoring\Nsequential code
 Dialogue: 0,1:45:15.56,1:45:17.68,Default,,0,0,0,,in order to work on\Na parallel run-time
 Dialogue: 0,1:45:17.68,1:45:18.92,Default,,0,0,0,,is quite prohibitive.
@@ -1810,10 +1810,10 @@ Dialogue: 0,1:45:18.92,1:45:24.16,Default,,0,0,0,,So that is not something\Nthat
 Dialogue: 0,1:45:24.16,1:45:26.68,Default,,0,0,0,,OCaml is also a type-safe language.
 Dialogue: 0,1:45:26.68,1:45:30.28,Default,,0,0,0,,The additional parallelism\Nshould break type-safety.
 Dialogue: 0,1:45:30.28,1:45:32.68,Default,,0,0,0,,For this, we directly\Nborrow the memory model
-Dialogue: 0,1:45:32.68,1:45:36.16,Default,,0,0,0,,that was presented\Nin the PLD 2018 paper,
-Dialogue: 0,1:45:36.16,1:45:38.52,Default,,0,0,0,,Bounding databases\Nin space and time,
+Dialogue: 0,1:45:32.68,1:45:36.16,Default,,0,0,0,,that was presented\Nin the PLDI 2018 paper,
+Dialogue: 0,1:45:36.16,1:45:38.52,Default,,0,0,0,,Bounding data races\Nin space and time,
 Dialogue: 0,1:45:38.52,1:45:41.32,Default,,0,0,0,,which guarantees not\Njust type-safety,
-Dialogue: 0,1:45:41.32,1:45:46.00,Default,,0,0,0,,but also other strong\Nproperties under databases.
+Dialogue: 0,1:45:41.32,1:45:46.00,Default,,0,0,0,,but also other strong\Nproperties about data races.
 Dialogue: 0,1:45:46.00,1:45:49.76,Default,,0,0,0,,Developers using OCaml have\Ncome to love and embrace
 Dialogue: 0,1:45:49.76,1:45:53.44,Default,,0,0,0,,the low latency and predictable\Nperformance of OCaml.
 Dialogue: 0,1:45:53.44,1:45:56.68,Default,,0,0,0,,And this is thanks to the GC design.
@@ -1853,41 +1853,41 @@ Dialogue: 0,1:47:17.72,1:47:20.76,Default,,0,0,0,,as Glasgow Haskell Compiler do
 Dialogue: 0,1:47:20.76,1:47:23.44,Default,,0,0,0,,This is because we want to reduce\Nthe burden of maintenance
 Dialogue: 0,1:47:23.44,1:47:26.16,Default,,0,0,0,,on the OCaml developers.
 Dialogue: 0,1:47:26.16,1:47:27.68,Default,,0,0,0,,Secondly, we want the performance of
-Dialogue: 0,1:47:27.68,1:47:29.72,Default,,0,0,0,,CDL programs to be the same,
-Dialogue: 0,1:47:29.72,1:47:32.00,Default,,0,0,0,,wile running on the battle\Nruntime in terms of
-Dialogue: 0,1:47:32.00,1:47:35.48,Default,,0,0,0,,the running time GC for\Nstains and memory usage.
-Dialogue: 0,1:47:35.48,1:47:38.48,Default,,0,0,0,,And lastly, we want our battle programs\Nto remain responsive.
-Dialogue: 0,1:47:38.48,1:47:41.36,Default,,0,0,0,,And then we want\Nthe pilot programs to be able
-Dialogue: 0,1:47:41.36,1:47:43.36,Default,,0,0,0,,to scale the traditional course.
+Dialogue: 0,1:47:27.68,1:47:29.72,Default,,0,0,0,,serial programs to be the same,
+Dialogue: 0,1:47:29.72,1:47:32.00,Default,,0,0,0,,while running on the parallel\Nruntime in terms of
+Dialogue: 0,1:47:32.00,1:47:35.48,Default,,0,0,0,,the running time GC for\Npausetime and memory usage.
+Dialogue: 0,1:47:35.48,1:47:38.48,Default,,0,0,0,,And lastly, we want our parallel programs\Nto remain responsive.
+Dialogue: 0,1:47:38.48,1:47:41.36,Default,,0,0,0,,And then we want\Nthe parallel programs to be able
+Dialogue: 0,1:47:41.36,1:47:43.36,Default,,0,0,0,,to scale with additional cores.
 Dialogue: 0,1:47:43.36,1:47:46.12,Default,,0,0,0,,We ordered the priorities this way
 Dialogue: 0,1:47:46.12,1:47:48.92,Default,,0,0,0,,because getting responsiveness\Nis much harder
 Dialogue: 0,1:47:48.92,1:47:52.24,Default,,0,0,0,,than making our programs go faster.
-Dialogue: 0,1:47:52.24,1:47:54.64,Default,,0,0,0,,So with that, we\Ndesigned a multicolor
+Dialogue: 0,1:47:52.24,1:47:54.64,Default,,0,0,0,,So with that, we\Ndesigned a multicore
 Dialogue: 0,1:47:54.64,1:47:56.84,Default,,0,0,0,,OCaml garbage collector.
-Dialogue: 0,1:47:57.68,1:47:59.80,Default,,0,0,0,,And our multicolor red\Nallocator is based
-Dialogue: 0,1:47:59.80,1:48:02.20,Default,,0,0,0,,on the screen Flow allocator,
-Dialogue: 0,1:48:02.20,1:48:04.40,Default,,0,0,0,,which uses thread local\Nsize segment of tree lists
-Dialogue: 0,1:48:04.40,1:48:07.28,Default,,0,0,0,,for small objects\Nand resorts two system alleys
-Dialogue: 0,1:48:07.28,1:48:09.00,Default,,0,0,0,,for large allocation.
+Dialogue: 0,1:47:57.68,1:47:59.80,Default,,0,0,0,,And our multicore-aware\Nallocator is based
+Dialogue: 0,1:47:59.80,1:48:02.20,Default,,0,0,0,,on the Streamflow allocator,
+Dialogue: 0,1:48:02.20,1:48:04.40,Default,,0,0,0,,which uses thread-local\Nsize-segmented free lists
+Dialogue: 0,1:48:04.40,1:48:07.28,Default,,0,0,0,,for small objects\Nand resorts to system malloc
+Dialogue: 0,1:48:07.28,1:48:09.00,Default,,0,0,0,,for large allocations.
 Dialogue: 0,1:48:09.00,1:48:11.92,Default,,0,0,0,,And the performance of\Nthis allocator is better
-Dialogue: 0,1:48:11.92,1:48:15.36,Default,,0,0,0,,than OCaml first expert allocator
+Dialogue: 0,1:48:11.92,1:48:15.36,Default,,0,0,0,,than OCaml's (INAUDIBLE) allocator
 Dialogue: 0,1:48:15.36,1:48:18.00,Default,,0,0,0,,and is on par with the recent
-Dialogue: 0,1:48:18.32,1:48:21.16,Default,,0,0,0,,best-fit allocator from OCaml.
+Dialogue: 0,1:48:18.32,1:48:21.16,Default,,0,0,0,,(INAUDIBLE) allocator from OCaml.
 Dialogue: 0,1:48:21.72,1:48:25.44,Default,,0,0,0,,And the major heap is\Ncollected with the
 Dialogue: 0,1:48:25.44,1:48:27.60,Default,,0,0,0,,mostly concurrent non-moving\Nmark and sweep collector,
-Dialogue: 0,1:48:27.60,1:48:29.92,Default,,0,0,0,,based on the VCDC design.
+Dialogue: 0,1:48:27.60,1:48:29.92,Default,,0,0,0,,based on the VCGC design.
 Dialogue: 0,1:48:29.92,1:48:32.60,Default,,0,0,0,,One nice aspect of this\Ndesign is that we only need
 Dialogue: 0,1:48:32.60,1:48:38.48,Default,,0,0,0,,a very short barrier at\Nthe end of every major cycle.
 Dialogue: 0,1:48:38.48,1:48:39.76,Default,,0,0,0,,And I should, at this point mention
-Dialogue: 0,1:48:39.76,1:48:43.40,Default,,0,0,0,,that domains are our\Nunits of adolescence.
+Dialogue: 0,1:48:39.76,1:48:43.40,Default,,0,0,0,,that domains are our\Nunits of parallelism.
 Dialogue: 0,1:48:43.40,1:48:45.68,Default,,0,0,0,,And in particular, there\Nis no phase separation
 Dialogue: 0,1:48:45.68,1:48:46.72,Default,,0,0,0,,between marking and sweeping
 Dialogue: 0,1:48:46.72,1:48:49.56,Default,,0,0,0,,and marking and sweeping phases
 Dialogue: 0,1:48:49.56,1:48:52.60,Default,,0,0,0,,between multiple\Ndomains may overlap.
 Dialogue: 0,1:48:52.60,1:48:55.36,Default,,0,0,0,,One of the major contributions\Nin this paper is
 Dialogue: 0,1:48:55.36,1:48:57.56,Default,,0,0,0,,extending this design\Nto support a variety
-Dialogue: 0,1:48:57.56,1:49:02.40,Default,,0,0,0,,of additional features such as\Nweak references, ephemeron,
-Dialogue: 0,1:49:03.44,1:49:06.60,Default,,0,0,0,,two different kinds of\Nfinalisers, fibers lazy values
+Dialogue: 0,1:48:57.56,1:49:02.40,Default,,0,0,0,,of additional features such as\Nweak references, ephemerons,
+Dialogue: 0,1:49:03.44,1:49:06.60,Default,,0,0,0,,two different kinds of\Nfinalisers, fibers, lazy values
 Dialogue: 0,1:49:06.60,1:49:08.84,Default,,0,0,0,,and so on.
 Dialogue: 0,1:49:08.84,1:49:12.00,Default,,0,0,0,,Ephemerons are particularly\Ntricky to get efficiently
 Dialogue: 0,1:49:12.00,1:49:14.80,Default,,0,0,0,,implemented in\Nthe concurrent multi-core GC.
@@ -1901,23 +1901,23 @@ Dialogue: 0,1:49:33.76,1:49:36.60,Default,,0,0,0,,And in this work,\Nwhat we've 
 Dialogue: 0,1:49:36.60,1:49:41.36,Default,,0,0,0,,we can implement a cycle\Ndelimited handshaking algorithm
 Dialogue: 0,1:49:41.36,1:49:44.16,Default,,0,0,0,,in order to perform\Nthe ephemeron marking,
 Dialogue: 0,1:49:44.16,1:49:48.56,Default,,0,0,0,,without requiring a global barrier.
-Dialogue: 0,1:49:48.56,1:49:50.44,Default,,0,0,0,,The two different kinds\Nof finaliser in Ocaml
+Dialogue: 0,1:49:48.56,1:49:50.44,Default,,0,0,0,,The two different kinds\Nof finalisers in Ocaml
 Dialogue: 0,1:49:50.44,1:49:54.84,Default,,0,0,0,,also need two barriers,\None barrier each.
-Dialogue: 0,1:49:54.84,1:49:57.72,Default,,0,0,0,,And in the worst case, we need\Nthe three barriers per cycle,
+Dialogue: 0,1:49:54.84,1:49:57.72,Default,,0,0,0,,And in the worst case, we need\Nthree barriers per cycle,
 Dialogue: 0,1:49:57.72,1:49:59.96,Default,,0,0,0,,a major cycle.
 Dialogue: 0,1:49:59.96,1:50:02.40,Default,,0,0,0,,And because this design\Nis quite tricky,
-Dialogue: 0,1:50:02.40,1:50:07.04,Default,,0,0,0,,we verify the model of\Nthis design (INAUDIBLE)
+Dialogue: 0,1:50:02.40,1:50:07.04,Default,,0,0,0,,we verify the model of this\Ndesign in the Spin model checker
 Dialogue: 0,1:50:07.04,1:50:12.96,Default,,0,0,0,,Next, we come to the issue of\Nwhat to do about minor GCs.
-Dialogue: 0,1:50:12.96,1:50:17.80,Default,,0,0,0,,Our initial design was based\Non a knowledge of 93 collector,
-Dialogue: 0,1:50:17.80,1:50:20.36,Default,,0,0,0,,which uses a minor heap domain,
-Dialogue: 0,1:50:20.36,1:50:22.32,Default,,0,0,0,,but it's a lazier on the line,
-Dialogue: 0,1:50:22.32,1:50:27.40,Default,,0,0,0,,serves the GC collector from\NMarlow and Peyton Jones, 2011.
+Dialogue: 0,1:50:12.96,1:50:17.80,Default,,0,0,0,,Our initial design was based\Non a Doligez/Leroy '93 collector,
+Dialogue: 0,1:50:17.80,1:50:20.36,Default,,0,0,0,,which uses a minor heap per domain,
+Dialogue: 0,1:50:20.36,1:50:22.32,Default,,0,0,0,,but it's lazier, on the lines,
+Dialogue: 0,1:50:22.32,1:50:27.40,Default,,0,0,0,,of the GC collector from\NMarlow and Peyton Jones, 2011.
 Dialogue: 0,1:50:29.96,1:50:31.88,Default,,0,0,0,,So this particular\Ndesign has an invariant
 Dialogue: 0,1:50:31.88,1:50:36.08,Default,,0,0,0,,that there are no pointers\Nbetween two minor heaps.
 Dialogue: 0,1:50:36.08,1:50:37.44,Default,,0,0,0,,And this allows each domain
 Dialogue: 0,1:50:37.44,1:50:41.32,Default,,0,0,0,,to be independently\Ngarbage collected.
-Dialogue: 0,1:50:41.80,1:50:45.32,Default,,0,0,0,,And unlike the original\NDialogue lever design,
-Dialogue: 0,1:50:45.32,1:50:49.16,Default,,0,0,0,,we are low pointers from\Nthe major to the minor heap.
+Dialogue: 0,1:50:41.80,1:50:45.32,Default,,0,0,0,,And unlike the original\NDoligez/Leroy design,
+Dialogue: 0,1:50:45.32,1:50:49.16,Default,,0,0,0,,we allow pointers from\Nthe major to the minor heap.
 Dialogue: 0,1:50:49.16,1:50:51.72,Default,,0,0,0,,And the reason why we\Nallow this is two fold.
 Dialogue: 0,1:50:51.72,1:50:55.92,Default,,0,0,0,,First, it prevents\Neager promotion, right?
 Dialogue: 0,1:50:55.92,1:50:58.28,Default,,0,0,0,,So early promotion is\Na problem where you point
@@ -1934,31 +1934,31 @@ Dialogue: 0,1:51:22.00,1:51:24.60,Default,,0,0,0,,So, what we need to do is\Nins
 Dialogue: 0,1:51:24.60,1:51:27.28,Default,,0,0,0,,on reading OCaml object fields
 Dialogue: 0,1:51:27.32,1:51:31.00,Default,,0,0,0,,which detects whether the result\Nof the read is going to be
 Dialogue: 0,1:51:31.00,1:51:32.92,Default,,0,0,0,,a value and a remote minor heap
-Dialogue: 0,1:51:33.28,1:51:36.76,Default,,0,0,0,,in which case, the domain\Nsensor interdomain entrap
-Dialogue: 0,1:51:36.76,1:51:39.52,Default,,0,0,0,,requesting the target domain\Nto come out the object
+Dialogue: 0,1:51:33.28,1:51:36.76,Default,,0,0,0,,in which case, the domain\Nsensor interdomain interrupt
+Dialogue: 0,1:51:36.76,1:51:39.52,Default,,0,0,0,,requesting the target domain\Nto promote the object
 Dialogue: 0,1:51:40.00,1:51:41.88,Default,,0,0,0,,which in turn might perform
 Dialogue: 0,1:51:42.24,1:51:44.24,Default,,0,0,0,,a local minor garbage collection.
 Dialogue: 0,1:51:45.12,1:51:47.16,Default,,0,0,0,,And then, the execution proceeds.
 Dialogue: 0,1:51:48.44,1:51:53.92,Default,,0,0,0,,Recall that I had mentioned that\NOCaml does not have read barriers
-Dialogue: 0,1:51:53.92,1:51:56.36,Default,,0,0,0,,and now, this design has\Ninterviews read barriers.
+Dialogue: 0,1:51:53.92,1:51:56.36,Default,,0,0,0,,and now, this design has\Nintroduced read barriers.
 Dialogue: 0,1:51:56.36,1:51:59.52,Default,,0,0,0,,So, the first challenge is that we\Nneed these read barriers to be
 Dialogue: 0,1:51:59.52,1:52:02.76,Default,,0,0,0,,implemented efficiently for\Nperformance backwards compatibility.
 Dialogue: 0,1:52:03.88,1:52:06.24,Default,,0,0,0,,And in the paper, we showed\Nthat we can do this
-Dialogue: 0,1:52:06.24,1:52:09.16,Default,,0,0,0,,but the clever vector of\Nvirtual memory mapping and
+Dialogue: 0,1:52:06.24,1:52:09.16,Default,,0,0,0,,with a clever bit of\Nvirtual memory mapping and
 Dialogue: 0,1:52:09.20,1:52:11.68,Default,,0,0,0,,a series of bit-twiddling tricks,
 Dialogue: 0,1:52:11.68,1:52:15.08,Default,,0,0,0,,using which, we have brought\Ndown the read barrier to
-Dialogue: 0,1:52:15.08,1:52:16.72,Default,,0,0,0,,three (INAUDIBLE) instructions.
+Dialogue: 0,1:52:15.08,1:52:16.72,Default,,0,0,0,,three x86 instructions.
 Dialogue: 0,1:52:16.72,1:52:19.84,Default,,0,0,0,,And the proof of correctness of\Nthis is available in the paper.
 Dialogue: 0,1:52:20.64,1:52:21.64,Default,,0,0,0,,And the...
-Dialogue: 0,1:52:22.32,1:52:23.84,Default,,0,0,0,,Because this
-Dialogue: 0,1:52:24.44,1:52:26.20,Default,,0,0,0,,(INAUDIBLE) are going to be sorted.
-Dialogue: 0,1:52:26.20,1:52:28.52,Default,,0,0,0,,The branch corrector correctly\Npredicts the branch
+Dialogue: 0,1:52:22.32,1:52:23.84,Default,,0,0,0,,Because these
+Dialogue: 0,1:52:24.44,1:52:26.20,Default,,0,0,0,,read faults are going to be so rare
+Dialogue: 0,1:52:26.20,1:52:28.52,Default,,0,0,0,,the branch prefictor correctly\Npredicts the branch
 Dialogue: 0,1:52:28.52,1:52:30.60,Default,,0,0,0,,almost every read.
 Dialogue: 0,1:52:30.88,1:52:32.88,Default,,0,0,0,,So, the performance impact of
 Dialogue: 0,1:52:32.88,1:52:35.52,Default,,0,0,0,,these additional instructions is\Nminimal on sequential code.
 Dialogue: 0,1:52:36.72,1:52:39.60,Default,,0,0,0,,Unfortunately though,\Nthe introduction of the read barriers
 Dialogue: 0,1:52:39.60,1:52:41.00,Default,,0,0,0,,breaks the C API.
-Dialogue: 0,1:52:41.96,1:52:43.80,Default,,0,0,0,,And check out this example where
+Dialogue: 0,1:52:41.96,1:52:43.80,Default,,0,0,0,,And consider this example where
 Dialogue: 0,1:52:43.80,1:52:46.80,Default,,0,0,0,,we have two domains, each\Nof which is reading
 Dialogue: 0,1:52:46.80,1:52:50.68,Default,,0,0,0,,a major heap object which\Npoints to the other domain.
 Dialogue: 0,1:52:51.32,1:52:53.28,Default,,0,0,0,,So, at this point, this domain
@@ -1972,9 +1972,9 @@ Dialogue: 0,1:53:11.44,1:53:15.24,Default,,0,0,0,,So, the issue is that because\
 Dialogue: 0,1:53:15.96,1:53:18.48,Default,,0,0,0,,a minor collection,
 Dialogue: 0,1:53:19.16,1:53:23.08,Default,,0,0,0,,a mutable read is in fact a GC\Nsafe point where GC may happen.
 Dialogue: 0,1:53:25.08,1:53:26.44,Default,,0,0,0,,But this
-Dialogue: 0,1:53:27.56,1:53:29.36,Default,,0,0,0,,breaks the (INAUDIBLE) that
-Dialogue: 0,1:53:29.36,1:53:31.44,Default,,0,0,0,,we haven't stored OCaml well.
-Dialogue: 0,1:53:31.44,1:53:33.16,Default,,0,0,0,,We don't have any\Nread barriers at all
+Dialogue: 0,1:53:27.56,1:53:29.36,Default,,0,0,0,,breaks the ivariant that
+Dialogue: 0,1:53:29.36,1:53:31.44,Default,,0,0,0,,we have in stock OCaml where
+Dialogue: 0,1:53:31.44,1:53:33.16,Default,,0,0,0,,we don't have any\Nread barriers at all
 Dialogue: 0,1:53:33.48,1:53:36.48,Default,,0,0,0,,and in particular, the C API\Nis often explicitly written
 Dialogue: 0,1:53:36.48,1:53:38.76,Default,,0,0,0,,with the knowledge of\Nwhen the GC may happen.
 Dialogue: 0,1:53:39.24,1:53:40.84,Default,,0,0,0,,And introducing
@@ -1986,14 +1986,14 @@ Dialogue: 0,1:53:56.80,1:54:00.92,Default,,0,0,0,,get around this, we also imple
 Dialogue: 0,1:54:00.92,1:54:03.44,Default,,0,0,0,,which does stop-the-world\Nparallel minor collection
 Dialogue: 0,1:54:03.44,1:54:06.08,Default,,0,0,0,,similar to GHCs minor collection.
 Dialogue: 0,1:54:06.40,1:54:08.16,Default,,0,0,0,,So, this shows
-Dialogue: 0,1:54:08.92,1:54:11.44,Default,,0,0,0,,a timeline of\Nthe concurring minor collector
+Dialogue: 0,1:54:08.92,1:54:11.44,Default,,0,0,0,,a timeline of\Nthe concurrent minor collector
 Dialogue: 0,1:54:11.76,1:54:12.80,Default,,0,0,0,,where we have two domains
-Dialogue: 0,1:54:12.80,1:54:14.60,Default,,0,0,0,,and the minor collections\Nhere can order
+Dialogue: 0,1:54:12.80,1:54:14.60,Default,,0,0,0,,and the minor collections\Nhere can overlap
 Dialogue: 0,1:54:14.60,1:54:17.20,Default,,0,0,0,,what are the activities being\Ndone on the other domains.
 Dialogue: 0,1:54:17.68,1:54:19.96,Default,,0,0,0,,And in particular, we read a barrier
 Dialogue: 0,1:54:20.48,1:54:22.80,Default,,0,0,0,,once per major cycle
 Dialogue: 0,1:54:23.80,1:54:25.96,Default,,0,0,0,,whereas in the parallel\Nminor collector, we read
-Dialogue: 0,1:54:26.60,1:54:27.60,Default,,0,0,0,,barrier
+Dialogue: 0,1:54:26.60,1:54:27.60,Default,,0,0,0,,a barrier
 Dialogue: 0,1:54:27.96,1:54:29.80,Default,,0,0,0,,two barriers for every\Nminor collection
 Dialogue: 0,1:54:29.80,1:54:31.72,Default,,0,0,0,,in order to indicate\Nthe start and end.
 Dialogue: 0,1:54:32.12,1:54:34.96,Default,,0,0,0,,And these minor collections\Nare very frequent
@@ -2004,16 +2004,16 @@ Dialogue: 0,1:54:42.12,1:54:43.72,Default,,0,0,0,,while we are waiting for
 Dialogue: 0,1:54:44.08,1:54:45.60,Default,,0,0,0,,the minor collections to complete
 Dialogue: 0,1:54:45.60,1:54:48.56,Default,,0,0,0,,and when a particular domain has\Ncompleted its minor collection
 Dialogue: 0,1:54:48.56,1:54:50.88,Default,,0,0,0,,but it's waiting for other domains\Nto complete the minor collections,
-Dialogue: 0,1:54:50.88,1:54:53.00,Default,,0,0,0,,we fill this (INAUDIBLE)\Nspace in the
+Dialogue: 0,1:54:50.88,1:54:53.00,Default,,0,0,0,,we fill this slop\Nspace in the
 Dialogue: 0,1:54:53.48,1:54:57.36,Default,,0,0,0,,in the barrier with major slices.
 Dialogue: 0,1:54:59.44,1:55:02.44,Default,,0,0,0,,The advantage of this design is that\Nwe don't read barriers anymore.
 Dialogue: 0,1:55:03.84,1:55:06.92,Default,,0,0,0,,But our global barriers\Nare quite frequent now.
 Dialogue: 0,1:55:07.28,1:55:11.00,Default,,0,0,0,,So, we need to be able to quickly\Nbring all of the domains to a stop.
 Dialogue: 0,1:55:11.52,1:55:15.08,Default,,0,0,0,,So, we insert poll points in our\Ncode for timely interrupt handling.
-Dialogue: 0,1:55:15.44,1:55:19.12,Default,,0,0,0,,And this is based on\NFeeley's paper from 93.
+Dialogue: 0,1:55:15.44,1:55:19.12,Default,,0,0,0,,And this is based on\NFeeley's paper from '93.
 Dialogue: 0,1:55:20.16,1:55:22.68,Default,,0,0,0,,So, the big question is\Nhow does this perform?
 Dialogue: 0,1:55:23.12,1:55:24.80,Default,,0,0,0,,So, we perform evaluation on a
-Dialogue: 0,1:55:24.88,1:55:27.68,Default,,0,0,0,,U circuit 14 quad Intel\NXeon on a Gold CPU
+Dialogue: 0,1:55:24.88,1:55:27.68,Default,,0,0,0,,two socket 14 core Intel\NXeon Gold CPU
 Dialogue: 0,1:55:27.68,1:55:30.32,Default,,0,0,0,,where we've isolated 24 cores\Nfor performance evaluation.
 Dialogue: 0,1:55:31.08,1:55:36.08,Default,,0,0,0,,And we observe that the sequential\Nthroughput is comparable to OCaml.
 Dialogue: 0,1:55:36.36,1:55:38.24,Default,,0,0,0,,The... Compared to stock Ocaml
@@ -2041,16 +2041,16 @@ Dialogue: 0,1:56:39.76,1:56:41.64,Default,,0,0,0,,except a few notable differenc
 Dialogue: 0,1:56:42.52,1:56:43.80,Default,,0,0,0,,On a few benchmarks,
 Dialogue: 0,1:56:43.80,1:56:46.28,Default,,0,0,0,,Concurrent Minor really\Nsuffers due to read faults
 Dialogue: 0,1:56:46.28,1:56:48.60,Default,,0,0,0,,where just performing\Na read requires
-Dialogue: 0,1:56:48.68,1:56:52.56,Default,,0,0,0,,sending an (INAUDIBLE), requesting\Nthe other domain to promote,
+Dialogue: 0,1:56:48.68,1:56:52.56,Default,,0,0,0,,sending an interrupt, requesting\Nthe other domain to promote,
 Dialogue: 0,1:56:52.56,1:56:54.56,Default,,0,0,0,,that domain promotes while
-Dialogue: 0,1:56:54.56,1:56:57.08,Default,,0,0,0,,the domain with read folder is
+Dialogue: 0,1:56:54.56,1:56:57.08,Default,,0,0,0,,the domain which read faulted is
 Dialogue: 0,1:56:57.48,1:56:58.76,Default,,0,0,0,,idly waiting.
 Dialogue: 0,1:56:59.16,1:57:02.64,Default,,0,0,0,,And we also see other cases\Nwhere the unbalanced allocation
 Dialogue: 0,1:57:02.64,1:57:05.64,Default,,0,0,0,,leads to inopportune minor\NGCs in Parallel Minor
 Dialogue: 0,1:57:06.12,1:57:09.00,Default,,0,0,0,,which causes scalability issues.
 Dialogue: 0,1:57:10.20,1:57:13.48,Default,,0,0,0,,We also observed that the parallel\NGC latency was roughly similar
 Dialogue: 0,1:57:13.48,1:57:15.40,Default,,0,0,0,,between Parallel Minor\Nand Concurrent Minor.
-Dialogue: 0,1:57:16.08,1:57:17.56,Default,,0,0,0,,And (INAUDIBLE) means
+Dialogue: 0,1:57:16.08,1:57:17.56,Default,,0,0,0,,And in our minds
 Dialogue: 0,1:57:17.56,1:57:19.68,Default,,0,0,0,,Parallel Minor wins\Nover Concurrent Minor
 Dialogue: 0,1:57:20.04,1:57:21.88,Default,,0,0,0,,because firstly, it\Ndoesn't break the C API.
 Dialogue: 0,1:57:21.88,1:57:24.68,Default,,0,0,0,,And it performs almost\Nsimilarly up to 24 cores.
@@ -2059,12 +2059,12 @@ Dialogue: 0,1:57:30.00,1:57:31.64,Default,,0,0,0,,will use Parallel Minor.
 Dialogue: 0,1:57:31.96,1:57:33.40,Default,,0,0,0,,We may reuse the Concurrent\NMinor later for
 Dialogue: 0,1:57:33.88,1:57:35.04,Default,,0,0,0,,a time when
 Dialogue: 0,1:57:36.20,1:57:37.92,Default,,0,0,0,,commodity machines will have lot of
-Dialogue: 0,1:57:38.36,1:57:40.04,Default,,0,0,0,,lot of codes than
+Dialogue: 0,1:57:38.36,1:57:40.04,Default,,0,0,0,,lot more cores than
 Dialogue: 0,1:57:40.88,1:57:42.40,Default,,0,0,0,,they do now.
 Dialogue: 0,1:57:43.44,1:57:44.96,Default,,0,0,0,,I'll stop here. Thank you.
 Dialogue: 0,1:57:45.88,1:57:50.88,Default,,0,0,0,,(AUDIENCE CLAPS)
 Dialogue: 0,1:57:54.00,1:57:55.32,Default,,0,0,0,,ALAN JEFFREY: So, thank you KC.
-Dialogue: 0,1:57:55.32,1:57:58.24,Default,,0,0,0,,And if you wanna join the authors
+Dialogue: 0,1:57:55.32,1:57:58.24,Default,,0,0,0,,And if you want to join the authors
 Dialogue: 0,1:57:58.24,1:58:00.36,Default,,0,0,0,,for a live Q&A,
 Dialogue: 0,1:58:00.36,1:58:02.56,Default,,0,0,0,,click on the link in Clowdr.
 Dialogue: 0,1:58:08.60,1:58:13.48,Default,,0,0,0,,Hello and welcome back to\Nthe second session for ICFP 2020.

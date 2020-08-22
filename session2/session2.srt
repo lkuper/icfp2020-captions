@@ -8234,7 +8234,7 @@ please come back and join us
 
 1750
 01:41:12,320 --> 01:41:30,120
-for the next paper in this session.
+for the next paper in this session. 
 
 1751
 01:41:30,120 --> 01:42:48,360
@@ -8260,7 +8260,7 @@ Parallelism into OCaml."
 
 1756
 01:43:11,000 --> 01:43:17,080
-And it's been presented
+And it's being presented
 by KC Sivaramakrishnan.
 
 1757
@@ -8280,7 +8280,7 @@ popular programming language
 1760
 01:43:26,560 --> 01:43:29,120
 that is used by several,
-multiple industries,
+notable industries,
 
 1761
 01:43:29,120 --> 01:43:31,560
@@ -8288,7 +8288,7 @@ but also widely in the academia.
 
 1762
 01:43:31,560 --> 01:43:33,080
-Vocab and language has particularly
+OCaml language has particularly
 
 1763
 01:43:33,080 --> 01:43:36,960
@@ -8357,7 +8357,7 @@ a multi-core capable
 1777
 01:44:17,200 --> 01:44:21,120
 garbage collector that we have
-in (INAUDIBLE) types of OCaml.
+implemented for OCaml.
 
 1778
 01:44:21,120 --> 01:44:24,440
@@ -8429,7 +8429,7 @@ write very efficient code,
 
 1792
 01:45:09,480 --> 01:45:12,320
-but also bakes in the GC ingredients
+but also bakes in the GC invariants
 
 1793
 01:45:12,320 --> 01:45:15,560
@@ -8467,11 +8467,11 @@ borrow the memory model
 1800
 01:45:32,680 --> 01:45:36,160
 that was presented
-in the PLD 2018 paper,
+in the PLDI 2018 paper,
 
 1801
 01:45:36,160 --> 01:45:38,520
-Bounding databases
+Bounding data races
 in space and time,
 
 1802
@@ -8482,7 +8482,7 @@ just type-safety,
 1803
 01:45:41,320 --> 01:45:46,000
 but also other strong
-properties under databases.
+properties about data races.
 
 1804
 01:45:46,000 --> 01:45:49,760
@@ -8667,31 +8667,31 @@ Secondly, we want the performance of
 
 1843
 01:47:27,680 --> 01:47:29,720
-CDL programs to be the same,
+serial programs to be the same,
 
 1844
 01:47:29,720 --> 01:47:32,000
-wile running on the battle
+while running on the parallel
 runtime in terms of
 
 1845
 01:47:32,000 --> 01:47:35,480
 the running time GC for
-stains and memory usage.
+pausetime and memory usage.
 
 1846
 01:47:35,480 --> 01:47:38,480
-And lastly, we want our battle programs
+And lastly, we want our parallel programs
 to remain responsive.
 
 1847
 01:47:38,480 --> 01:47:41,360
 And then we want
-the pilot programs to be able
+the parallel programs to be able
 
 1848
 01:47:41,360 --> 01:47:43,360
-to scale the traditional course.
+to scale with additional cores.
 
 1849
 01:47:43,360 --> 01:47:46,120
@@ -8709,7 +8709,7 @@ than making our programs go faster.
 1852
 01:47:52,240 --> 01:47:54,640
 So with that, we
-designed a multicolor
+designed a multicore
 
 1853
 01:47:54,640 --> 01:47:56,840
@@ -8717,26 +8717,26 @@ OCaml garbage collector.
 
 1854
 01:47:57,680 --> 01:47:59,800
-And our multicolor red
+And our multicore-aware
 allocator is based
 
 1855
 01:47:59,800 --> 01:48:02,200
-on the screen Flow allocator,
+on the Streamflow allocator,
 
 1856
 01:48:02,200 --> 01:48:04,400
-which uses thread local
-size segment of tree lists
+which uses thread-local
+size-segmented free lists
 
 1857
 01:48:04,400 --> 01:48:07,280
 for small objects
-and resorts two system alleys
+and resorts to system malloc
 
 1858
 01:48:07,280 --> 01:48:09,000
-for large allocation.
+for large allocations.
 
 1859
 01:48:09,000 --> 01:48:11,920
@@ -8745,7 +8745,7 @@ this allocator is better
 
 1860
 01:48:11,920 --> 01:48:15,360
-than OCaml first expert allocator
+than OCaml's (INAUDIBLE) allocator
 
 1861
 01:48:15,360 --> 01:48:18,000
@@ -8753,7 +8753,7 @@ and is on par with the recent
 
 1862
 01:48:18,320 --> 01:48:21,160
-best-fit allocator from OCaml.
+(INAUDIBLE) allocator from OCaml.
 
 1863
 01:48:21,720 --> 01:48:25,440
@@ -8767,7 +8767,7 @@ mark and sweep collector,
 
 1865
 01:48:27,600 --> 01:48:29,920
-based on the VCDC design.
+based on the VCGC design.
 
 1866
 01:48:29,920 --> 01:48:32,600
@@ -8786,7 +8786,7 @@ And I should, at this point mention
 1869
 01:48:39,760 --> 01:48:43,400
 that domains are our
-units of adolescence.
+units of parallelism.
 
 1870
 01:48:43,400 --> 01:48:45,680
@@ -8819,12 +8819,12 @@ to support a variety
 1876
 01:48:57,560 --> 01:49:02,400
 of additional features such as
-weak references, ephemeron,
+weak references, ephemerons,
 
 1877
 01:49:03,440 --> 01:49:06,600
 two different kinds of
-finalisers, fibers lazy values
+finalisers, fibers, lazy values
 
 1878
 01:49:06,600 --> 01:49:08,840
@@ -8891,7 +8891,7 @@ without requiring a global barrier.
 1891
 01:49:48,560 --> 01:49:50,440
 The two different kinds
-of finaliser in Ocaml
+of finalisers in Ocaml
 
 1892
 01:49:50,440 --> 01:49:54,840
@@ -8901,7 +8901,7 @@ one barrier each.
 1893
 01:49:54,840 --> 01:49:57,720
 And in the worst case, we need
-the three barriers per cycle,
+three barriers per cycle,
 
 1894
 01:49:57,720 --> 01:49:59,960
@@ -8914,8 +8914,8 @@ is quite tricky,
 
 1896
 01:50:02,400 --> 01:50:07,040
-we verify the model of
-this design (INAUDIBLE)
+we verify the model of this
+design in the Spin model checker
 
 1897
 01:50:07,040 --> 01:50:12,960
@@ -8925,19 +8925,19 @@ what to do about minor GCs.
 1898
 01:50:12,960 --> 01:50:17,800
 Our initial design was based
-on a knowledge of 93 collector,
+on a Doligez/Leroy '93 collector,
 
 1899
 01:50:17,800 --> 01:50:20,360
-which uses a minor heap domain,
+which uses a minor heap per domain,
 
 1900
 01:50:20,360 --> 01:50:22,320
-but it's a lazier on the line,
+but it's lazier, on the lines,
 
 1901
 01:50:22,320 --> 01:50:27,400
-serves the GC collector from
+of the GC collector from
 Marlow and Peyton Jones, 2011.
 
 1902
@@ -8962,11 +8962,11 @@ garbage collected.
 1906
 01:50:41,800 --> 01:50:45,320
 And unlike the original
-Dialogue lever design,
+Doligez/Leroy design,
 
 1907
 01:50:45,320 --> 01:50:49,160
-we are low pointers from
+we allow pointers from
 the major to the minor heap.
 
 1908
@@ -9046,12 +9046,12 @@ a value and a remote minor heap
 1924
 01:51:33,280 --> 01:51:36,760
 in which case, the domain
-sensor interdomain entrap
+sensor interdomain interrupt
 
 1925
 01:51:36,760 --> 01:51:39,520
 requesting the target domain
-to come out the object
+to promote the object
 
 1926
 01:51:40,000 --> 01:51:41,880
@@ -9073,7 +9073,7 @@ OCaml does not have read barriers
 1930
 01:51:53,920 --> 01:51:56,360
 and now, this design has
-interviews read barriers.
+introduced read barriers.
 
 1931
 01:51:56,360 --> 01:51:59,520
@@ -9092,7 +9092,7 @@ that we can do this
 
 1934
 01:52:06,240 --> 01:52:09,160
-but the clever vector of
+with a clever bit of
 virtual memory mapping and
 
 1935
@@ -9106,7 +9106,7 @@ down the read barrier to
 
 1937
 01:52:15,080 --> 01:52:16,720
-three (INAUDIBLE) instructions.
+three x86 instructions.
 
 1938
 01:52:16,720 --> 01:52:19,840
@@ -9119,15 +9119,15 @@ And the...
 
 1940
 01:52:22,320 --> 01:52:23,840
-Because this
+Because these
 
 1941
 01:52:24,440 --> 01:52:26,200
-(INAUDIBLE) are going to be sorted.
+read faults are going to be so rare
 
 1942
 01:52:26,200 --> 01:52:28,520
-The branch corrector correctly
+the branch prefictor correctly
 predicts the branch
 
 1943
@@ -9154,7 +9154,7 @@ breaks the C API.
 
 1948
 01:52:41,960 --> 01:52:43,800
-And check out this example where
+And consider this example where
 
 1949
 01:52:43,800 --> 01:52:46,800
@@ -9219,15 +9219,15 @@ But this
 
 1962
 01:53:27,560 --> 01:53:29,360
-breaks the (INAUDIBLE) that
+breaks the ivariant that
 
 1963
 01:53:29,360 --> 01:53:31,440
-we haven't stored OCaml well.
+we have in stock OCaml where
 
 1964
 01:53:31,440 --> 01:53:33,160
-We don't have any
+we don't have any
 read barriers at all
 
 1965
@@ -9283,7 +9283,7 @@ So, this shows
 1976
 01:54:08,920 --> 01:54:11,440
 a timeline of
-the concurring minor collector
+the concurrent minor collector
 
 1977
 01:54:11,760 --> 01:54:12,800
@@ -9292,7 +9292,7 @@ where we have two domains
 1978
 01:54:12,800 --> 01:54:14,600
 and the minor collections
-here can order
+here can overlap
 
 1979
 01:54:14,600 --> 01:54:17,200
@@ -9314,7 +9314,7 @@ minor collector, we read
 
 1983
 01:54:26,600 --> 01:54:27,600
-barrier
+a barrier
 
 1984
 01:54:27,960 --> 01:54:29,800
@@ -9363,7 +9363,7 @@ to complete the minor collections,
 
 1994
 01:54:50,880 --> 01:54:53,000
-we fill this (INAUDIBLE)
+we fill this slop
 space in the
 
 1995
@@ -9393,7 +9393,7 @@ code for timely interrupt handling.
 2000
 01:55:15,440 --> 01:55:19,120
 And this is based on
-Feeley's paper from 93.
+Feeley's paper from '93.
 
 2001
 01:55:20,160 --> 01:55:22,680
@@ -9406,8 +9406,8 @@ So, we perform evaluation on a
 
 2003
 01:55:24,880 --> 01:55:27,680
-U circuit 14 quad Intel
-Xeon on a Gold CPU
+two socket 14 core Intel
+Xeon Gold CPU
 
 2004
 01:55:27,680 --> 01:55:30,320
@@ -9535,7 +9535,7 @@ a read requires
 
 2031
 01:56:48,680 --> 01:56:52,560
-sending an (INAUDIBLE), requesting
+sending an interrupt, requesting
 the other domain to promote,
 
 2032
@@ -9544,7 +9544,7 @@ that domain promotes while
 
 2033
 01:56:54,560 --> 01:56:57,080
-the domain with read folder is
+the domain which read faulted is
 
 2034
 01:56:57,480 --> 01:56:58,760
@@ -9576,7 +9576,7 @@ and Concurrent Minor.
 
 2040
 01:57:16,080 --> 01:57:17,560
-And (INAUDIBLE) means
+And in our minds
 
 2041
 01:57:17,560 --> 01:57:19,680
@@ -9617,7 +9617,7 @@ commodity machines will have lot of
 
 2049
 01:57:38,360 --> 01:57:40,040
-lot of codes than
+lot more cores than
 
 2050
 01:57:40,880 --> 01:57:42,400
@@ -9637,7 +9637,7 @@ ALAN JEFFREY: So, thank you KC.
 
 2054
 01:57:55,320 --> 01:57:58,240
-And if you wanna join the authors
+And if you want to join the authors
 
 2055
 01:57:58,240 --> 01:58:00,360
