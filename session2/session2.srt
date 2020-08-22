@@ -1,24 +1,30 @@
 1
 00:00:55,960 --> 00:01:00,640
 
+
 2
 00:05:10,560 --> 00:05:11,560
+
 
 3
 00:06:08,280 --> 00:06:13,280
 
+
 4
 00:09:55,160 --> 00:09:57,800
+
 
 5
 00:10:38,640 --> 00:10:43,640
 
+
 6
 00:12:23,920 --> 00:12:24,920
 
+
 7
 00:12:59,840 --> 00:13:00,960
-SPEAKER: Hello everybody.
+ALAN JEFFREY: Hello everybody.
 
 8
 00:13:00,960 --> 00:13:05,920
@@ -1407,7 +1413,7 @@ Thanks for your attention.
 299
 00:27:08,280 --> 00:27:18,680
 (CLAPS)
-SPEAKER: So thank you, Bastian.
+ALAN JEFFREY: So thank you, Bastian.
 
 300
 00:27:18,680 --> 00:27:24,560
@@ -3000,7 +3006,7 @@ BACKGROUND CLAPPING
 
 632
 00:42:39,600 --> 00:42:41,640
-SPEAKER: OK, thank you. Jamie and Nic.
+ALAN JEFFREY: OK, thank you. Jamie and Nic.
 
 633
 00:42:42,240 --> 00:42:45,360
@@ -4196,7 +4202,7 @@ Thank you very much.
 
 890
 00:57:42,560 --> 00:57:44,600
-SPEAKER: So, thank you Gabriel.
+ALAN JEFFREY: So, thank you Gabriel.
 
 891
 00:57:44,600 --> 00:57:49,720
@@ -5464,7 +5470,7 @@ we have time for today.
 
 1155
 01:12:52,160 --> 01:12:53,920
-SPEAKER: Alright,
+ALAN JEFFREY: Alright,
 thank you, Daniel.
 
 1156
@@ -5572,7 +5578,7 @@ computability...
 
 1178
 01:14:00,480 --> 01:14:02,320
- complexity
+complexity
 and programmability.
 
 1179
@@ -6818,7 +6824,7 @@ and thank you for your attention.
 
 1444
 01:25:51,040 --> 01:25:53,400
-SPEAKER: All right, so,
+ALAN JEFFREY: All right, so,
 thank you, Daniel.
 
 1445
@@ -8199,7 +8205,7 @@ Thank you.
 
 1744
 01:40:38,880 --> 01:40:41,160
-SPEAKER: All right, so,
+ALAN JEFFREY: All right, so,
 thank you, Nick.
 
 1745
@@ -9627,7 +9633,7 @@ I'll stop here. Thank you.
 
 2053
 01:57:54,000 --> 01:57:55,320
-SPEAKER: So, thank you KC.
+ALAN JEFFREY: So, thank you KC.
 
 2054
 01:57:55,320 --> 01:57:58,240
@@ -10918,7 +10924,7 @@ available at this link.
 
 2328
 02:13:01,360 --> 02:13:04,440
-SPEAKER: Thank you June and Nadia.
+ALAN JEFFREY: Thank you June and Nadia.
 
 2329
 02:13:04,440 --> 02:13:09,240

@@ -17,7 +17,7 @@ Dialogue: 0,0:06:08.28,0:06:13.28,Default,,0,0,0,,
 Dialogue: 0,0:09:55.16,0:09:57.80,Default,,0,0,0,,
 Dialogue: 0,0:10:38.64,0:10:43.64,Default,,0,0,0,,
 Dialogue: 0,0:12:23.92,0:12:24.92,Default,,0,0,0,,
-Dialogue: 0,0:12:59.84,0:13:00.96,Default,,0,0,0,,SPEAKER: Hello everybody.
+Dialogue: 0,0:12:59.84,0:13:00.96,Default,,0,0,0,,ALAN JEFFREY: Hello everybody.
 Dialogue: 0,0:13:00.96,0:13:05.92,Default,,0,0,0,,And welcome to the second\Nsession of ICFT 2020.
 Dialogue: 0,0:13:05.96,0:13:07.80,Default,,0,0,0,,You're joining us on YouTube,
 Dialogue: 0,0:13:07.80,0:13:10.40,Default,,0,0,0,,and registered participants\Nfor the conference
@@ -309,7 +309,7 @@ Dialogue: 0,0:26:58.28,0:27:00.68,Default,,0,0,0,,have a look at our\Npaper and 
 Dialogue: 0,0:27:00.68,0:27:02.12,Default,,0,0,0,,I'd like to end the presentation.
 Dialogue: 0,0:27:02.12,0:27:04.48,Default,,0,0,0,,I mentioned that you can find\Nall our implementations
 Dialogue: 0,0:27:04.48,0:27:08.28,Default,,0,0,0,,online or in the artifacts.\NThanks for your attention.
-Dialogue: 0,0:27:08.28,0:27:18.68,Default,,0,0,0,,(CLAPS)\NSPEAKER: So thank you, Bastian.
+Dialogue: 0,0:27:08.28,0:27:18.68,Default,,0,0,0,,(CLAPS)\NALAN JEFFREY: So thank you, Bastian.
 Dialogue: 0,0:27:18.68,0:27:24.56,Default,,0,0,0,,So anybody who is wanting to join\Nthe authors for the live Q&A,
 Dialogue: 0,0:27:24.64,0:27:29.64,Default,,0,0,0,,you can click on the link that's\Nin the finer page for this talk.
 Dialogue: 0,0:27:59.44,0:28:04.28,Default,,0,0,0,,Our next paper in the second\Nsession of ICFP 2020,
@@ -642,7 +642,7 @@ Dialogue: 0,0:42:20.76,0:42:22.84,Default,,0,0,0,,NICOLAS: Well, you're pretty g
 Dialogue: 0,0:42:22.92,0:42:25.72,Default,,0,0,0,,and I'm pretty good at writing\Npapers quickly, so here you go.
 Dialogue: 0,0:42:29.08,0:42:31.56,Default,,0,0,0,,Cool. I'm gonna stop\Nrecording now I think.
 Dialogue: 0,0:42:32.12,0:42:38.60,Default,,0,0,0,,BACKGROUND CLAPPING
-Dialogue: 0,0:42:39.60,0:42:41.64,Default,,0,0,0,,SPEAKER: OK, thank you. Jamie and Nic.
+Dialogue: 0,0:42:39.60,0:42:41.64,Default,,0,0,0,,ALAN JEFFREY: OK, thank you. Jamie and Nic.
 Dialogue: 0,0:42:42.24,0:42:45.36,Default,,0,0,0,,So if you want to\Njoin the authors for
 Dialogue: 0,0:42:45.48,0:42:47.88,Default,,0,0,0,,a Q&A in the New York time zone.
 Dialogue: 0,0:42:48.28,0:42:51.16,Default,,0,0,0,,Then you can click on\Nthe link in the Clowdr room,
@@ -900,7 +900,7 @@ Dialogue: 0,0:57:25.64,0:57:28.76,Default,,0,0,0,,an extension to HM(X),\Nnovel 
 Dialogue: 0,0:57:28.76,0:57:33.44,Default,,0,0,0,,and it's constraint algorithm\Nand proof of completeness.
 Dialogue: 0,0:57:33.44,0:57:35.20,Default,,0,0,0,,That's all I have.\NThank you very much.
 Dialogue: 0,0:57:35.20,0:57:40.20,Default,,0,0,0,,(AUDIENCE APPLAUSE)
-Dialogue: 0,0:57:42.56,0:57:44.60,Default,,0,0,0,,SPEAKER: So, thank you Gabriel.
+Dialogue: 0,0:57:42.56,0:57:44.60,Default,,0,0,0,,ALAN JEFFREY: So, thank you Gabriel.
 Dialogue: 0,0:57:44.60,0:57:49.72,Default,,0,0,0,,So, if you want to join\Nthe authors for a live Q&A,
 Dialogue: 0,0:57:49.72,0:57:54.72,Default,,0,0,0,,click on the link in\Nthe slider for this paper.
 Dialogue: 0,0:58:00.12,0:58:04.76,Default,,0,0,0,,Hello and welcome back to\Nthe second session of ICFP 2020.
@@ -1165,7 +1165,7 @@ Dialogue: 0,1:12:36.24,1:12:39.72,Default,,0,0,0,,and the other constructions ar
 Dialogue: 0,1:12:39.72,1:12:41.12,Default,,0,0,0,,for very little payoff.
 Dialogue: 0,1:12:41.12,1:12:44.84,Default,,0,0,0,,And thank you, that's all\Nwe have time for today.
 Dialogue: 0,1:12:44.84,1:12:49.84,Default,,0,0,0,,(AUDIENCE APPLAUSE)
-Dialogue: 0,1:12:52.16,1:12:53.92,Default,,0,0,0,,SPEAKER: Alright,\Nthank you, Daniel.
+Dialogue: 0,1:12:52.16,1:12:53.92,Default,,0,0,0,,ALAN JEFFREY: Alright,\Nthank you, Daniel.
 Dialogue: 0,1:12:53.92,1:12:59.84,Default,,0,0,0,,So, if you're interested in joining\Nthe authors for a live Q&A,
 Dialogue: 0,1:12:59.92,1:13:01.72,Default,,0,0,0,,and during the New York time zone,
 Dialogue: 0,1:13:01.72,1:13:06.72,Default,,0,0,0,,and then click on the link in\Nthe slider page for this paper.
@@ -1454,7 +1454,7 @@ Dialogue: 0,1:25:21.24,1:25:22.80,Default,,0,0,0,,Thank you for tuning in to my 
 Dialogue: 0,1:25:22.80,1:25:24.20,Default,,0,0,0,,and thank you for your attention.
 Dialogue: 0,1:25:24.20,1:25:43.96,Default,,0,0,0,,(LIVELY PIANO MUSIC)
 Dialogue: 0,1:25:43.96,1:25:51.04,Default,,0,0,0,,(AUDIENCE APPLAUDS)
-Dialogue: 0,1:25:51.04,1:25:53.40,Default,,0,0,0,,SPEAKER: All right, so,\Nthank you, Daniel.
+Dialogue: 0,1:25:51.04,1:25:53.40,Default,,0,0,0,,ALAN JEFFREY: All right, so,\Nthank you, Daniel.
 Dialogue: 0,1:25:53.40,1:25:58.92,Default,,0,0,0,,So, if you want to join\Nthe authors for a live Q&A,
 Dialogue: 0,1:25:58.92,1:26:00.56,Default,,0,0,0,,again, you can just\Nclick on the link,
 Dialogue: 0,1:26:00.56,1:26:17.60,Default,,0,0,0,,and there, you find a room.
@@ -1754,7 +1754,7 @@ Dialogue: 0,1:40:24.20,1:40:27.40,Default,,0,0,0,,that's tracked by an effect sy
 Dialogue: 0,1:40:27.40,1:40:29.28,Default,,0,0,0,,That's all for focusing for now.
 Dialogue: 0,1:40:29.28,1:40:31.64,Default,,0,0,0,,Thank you.
 Dialogue: 0,1:40:31.64,1:40:38.88,Default,,0,0,0,,(APPLAUSE)
-Dialogue: 0,1:40:38.88,1:40:41.16,Default,,0,0,0,,SPEAKER: All right, so,\Nthank you, Nick.
+Dialogue: 0,1:40:38.88,1:40:41.16,Default,,0,0,0,,ALAN JEFFREY: All right, so,\Nthank you, Nick.
 Dialogue: 0,1:40:41.16,1:40:45.40,Default,,0,0,0,,If you're interested in joining\Nthe authors of this paper
 Dialogue: 0,1:40:45.40,1:40:48.40,Default,,0,0,0,,for a live Q&A and you're\Nin the New York timezone,
 Dialogue: 0,1:40:48.40,1:41:07.80,Default,,0,0,0,,and then you can click on\Nthe link in the Clowdr Room.
@@ -2063,7 +2063,7 @@ Dialogue: 0,1:57:38.36,1:57:40.04,Default,,0,0,0,,lot of codes than
 Dialogue: 0,1:57:40.88,1:57:42.40,Default,,0,0,0,,they do now.
 Dialogue: 0,1:57:43.44,1:57:44.96,Default,,0,0,0,,I'll stop here. Thank you.
 Dialogue: 0,1:57:45.88,1:57:50.88,Default,,0,0,0,,(AUDIENCE CLAPS)
-Dialogue: 0,1:57:54.00,1:57:55.32,Default,,0,0,0,,SPEAKER: So, thank you KC.
+Dialogue: 0,1:57:54.00,1:57:55.32,Default,,0,0,0,,ALAN JEFFREY: So, thank you KC.
 Dialogue: 0,1:57:55.32,1:57:58.24,Default,,0,0,0,,And if you wanna join the authors
 Dialogue: 0,1:57:58.24,1:58:00.36,Default,,0,0,0,,for a live Q&A,
 Dialogue: 0,1:58:00.36,1:58:02.56,Default,,0,0,0,,click on the link in Clowdr.
@@ -2338,7 +2338,7 @@ Dialogue: 0,2:12:42.76,2:12:44.68,Default,,0,0,0,,and suggest leak patches
 Dialogue: 0,2:12:44.68,2:12:48.00,Default,,0,0,0,,when the application does\Nnot satisfy the policies.
 Dialogue: 0,2:12:48.00,2:12:50.40,Default,,0,0,0,,You can play with lifty\Nthrough our web interface
 Dialogue: 0,2:12:50.40,2:12:55.40,Default,,0,0,0,,available at this link.
-Dialogue: 0,2:13:01.36,2:13:04.44,Default,,0,0,0,,SPEAKER: Thank you June and Nadia.
+Dialogue: 0,2:13:01.36,2:13:04.44,Default,,0,0,0,,ALAN JEFFREY: Thank you June and Nadia.
 Dialogue: 0,2:13:04.44,2:13:09.24,Default,,0,0,0,,So there's going to be\Nlive Q&A for this talk
 Dialogue: 0,2:13:09.32,2:13:12.52,Default,,0,0,0,,as you are in the New York timezone
 Dialogue: 0,2:13:12.52,2:13:17.08,Default,,0,0,0,,and you can get to it as\Nusual by going to the link.
