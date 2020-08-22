@@ -1147,10 +1147,10 @@ Dialogue: 0,1:13:10.96,1:13:14.36,Default,,0,0,0,,MOHSEN LESANI: Good morning.\N
 Dialogue: 0,1:13:14.36,1:13:18.88,Default,,0,0,0,,temporal logic of distributed\Ncomponents. I am Mohsen Lesani,
 Dialogue: 0,1:13:18.88,1:13:23.00,Default,,0,0,0,,an assistant professor at\Nthe University of California Riverside.
 Dialogue: 0,1:13:23.88,1:13:26.68,Default,,0,0,0,,My student Jeremiah Griffin\Nthat is actively working
-Dialogue: 0,1:13:26.68,1:13:29.96,Default,,0,0,0,,on the COC framework is\Npresent in the conference.
+Dialogue: 0,1:13:26.68,1:13:29.96,Default,,0,0,0,,on the Coq framework is\Npresent in the conference.
 Dialogue: 0,1:13:29.96,1:13:34.60,Default,,0,0,0,,The other students that helped me\Nare Narges Shadab and Xizhe Yin.
 Dialogue: 0,1:13:34.60,1:13:39.16,Default,,0,0,0,,Distributed systems are critical to\Nreliable and scalable computing.
-Dialogue: 0,1:13:39.16,1:13:42.64,Default,,0,0,0,,However, they are complicated\Nand prone to box.
+Dialogue: 0,1:13:39.16,1:13:42.64,Default,,0,0,0,,However, they are complicated\Nand prone to bugs.
 Dialogue: 0,1:13:43.16,1:13:44.96,Default,,0,0,0,,To manage this complexity,
 Dialogue: 0,1:13:44.96,1:13:47.52,Default,,0,0,0,,network middleware has\Nbeen traditionally built
 Dialogue: 0,1:13:47.52,1:13:50.52,Default,,0,0,0,,in layered stacks of components.
@@ -1158,7 +1158,7 @@ Dialogue: 0,1:13:50.52,1:13:54.52,Default,,0,0,0,,The state of the art for\Nveri
 Dialogue: 0,1:13:54.52,1:13:57.60,Default,,0,0,0,,does not consider either\Ncompositional reasoning,
 Dialogue: 0,1:13:57.60,1:14:01.04,Default,,0,0,0,,program logics,\Nor liveness properties.
 Dialogue: 0,1:14:01.64,1:14:05.08,Default,,0,0,0,,We present TLC,\Na novel program logic
-Dialogue: 0,1:14:05.08,1:14:07.64,Default,,0,0,0,,for composition on\Nverification of both safety
+Dialogue: 0,1:14:05.08,1:14:07.64,Default,,0,0,0,,for compositional\Nverification of both safety
 Dialogue: 0,1:14:07.64,1:14:11.92,Default,,0,0,0,,and liveness properties of\Ndistributed system stacks.
 Dialogue: 0,1:14:11.92,1:14:16.52,Default,,0,0,0,,This project includes a layered and\Nfunctional programming model
 Dialogue: 0,1:14:16.52,1:14:19.36,Default,,0,0,0,,to capture distributed components,
@@ -1171,7 +1171,7 @@ Dialogue: 0,1:14:39.24,1:14:42.16,Default,,0,0,0,,and the soundness of the logic
 Dialogue: 0,1:14:42.16,1:14:45.12,Default,,0,0,0,,We successfully applied\Nit to compose and verify
 Dialogue: 0,1:14:45.12,1:14:48.64,Default,,0,0,0,,stacks of fundamental\Ndistributed components.
 Dialogue: 0,1:14:48.64,1:14:52.56,Default,,0,0,0,,The ultimate goal is to build\Ncertified distributed middleware.
-Dialogue: 0,1:14:52.56,1:14:55.84,Default,,0,0,0,,And towards this goal, we are\Nmechanizing our pros and cons.
+Dialogue: 0,1:14:52.56,1:14:55.84,Default,,0,0,0,,And towards this goal, we are\Nmechanizing our proofs in Coq.
 Dialogue: 0,1:14:55.84,1:14:58.08,Default,,0,0,0,,We present a layered\Nprogramming model
 Dialogue: 0,1:14:58.08,1:15:01.88,Default,,0,0,0,,to capture functional implementations\Nof distributed components.
 Dialogue: 0,1:15:02.88,1:15:06.64,Default,,0,0,0,,The component receives incoming\Nrequests from the parent component,
@@ -1245,13 +1245,13 @@ Dialogue: 0,1:19:14.28,1:19:17.44,Default,,0,0,0,,from their natural\Nlanguage d
 Dialogue: 0,1:19:17.44,1:19:21.88,Default,,0,0,0,,Let's see a reliable delivery\Nas a liveness property.
 Dialogue: 0,1:19:21.88,1:19:27.20,Default,,0,0,0,,If a correct node n sends\Na message m to a correct node n',
 Dialogue: 0,1:19:27.20,1:19:30.32,Default,,0,0,0,,then n' will eventually deliver m
-Dialogue: 0,1:19:31.44,1:19:34.48,Default,,0,0,0,,A no-forge property\Nas a safety property.
+Dialogue: 0,1:19:31.44,1:19:34.48,Default,,0,0,0,,A no-forge property\Nis a safety property.
 Dialogue: 0,1:19:34.48,1:19:39.40,Default,,0,0,0,,If a node n delivers\Na message m with sender n'
 Dialogue: 0,1:19:39.92,1:19:44.84,Default,,0,0,0,,then n' has previously sent m to n.
 Dialogue: 0,1:19:45.36,1:19:49.00,Default,,0,0,0,,And a similar no-forge property\Nis stated for stubborn links,
 Dialogue: 0,1:19:49.00,1:19:52.52,Default,,0,0,0,,let us consider\Ncompositional verification.
 Dialogue: 0,1:19:52.52,1:19:57.52,Default,,0,0,0,,We have two stacks S0 and S1 with\Nthe specifications I0 and I1
-Dialogue: 0,1:19:59.00,1:20:04.00,Default,,0,0,0,,To implement a new component C\Nwe use them as SOC components.
+Dialogue: 0,1:19:59.00,1:20:04.00,Default,,0,0,0,,To implement a new component C\Nwe use them as subcomponents.
 Dialogue: 0,1:20:04.60,1:20:07.76,Default,,0,0,0,,We want to verify\Nthe specification A for C
 Dialogue: 0,1:20:07.76,1:20:10.00,Default,,0,0,0,,based on only the specifications
 Dialogue: 0,1:20:10.00,1:20:13.68,Default,,0,0,0,,and not the implementations\Nof the sub-components.
@@ -1285,7 +1285,7 @@ Dialogue: 0,1:21:49.20,1:21:53.96,Default,,0,0,0,,However, when it is pushed to\
 Dialogue: 0,1:21:55.28,1:21:57.52,Default,,0,0,0,,It's even sorely interleaved\Nwith the events from the
 Dialogue: 0,1:21:57.52,1:22:02.00,Default,,0,0,0,,sibling sub stacks\Nand the top component.
 Dialogue: 0,1:22:02.00,1:22:05.52,Default,,0,0,0,,The restrict transformation\Nrestricts the specification
-Dialogue: 0,1:22:05.52,1:22:10.24,Default,,0,0,0,,to remain valid on traces that are\Nextended with interlinking events.
+Dialogue: 0,1:22:05.52,1:22:10.24,Default,,0,0,0,,to remain valid on traces that are\Nextended with interleaving events.
 Dialogue: 0,1:22:10.24,1:22:13.48,Default,,0,0,0,,The important case is always A.
 Dialogue: 0,1:22:13.48,1:22:18.48,Default,,0,0,0,,After pushing the session always A\Ndoes not necessarily remain valid.
 Dialogue: 0,1:22:18.48,1:22:23.28,Default,,0,0,0,,It remains valid on only\Nthe events under that branch.
@@ -1294,8 +1294,8 @@ Dialogue: 0,1:22:27.64,1:22:30.12,Default,,0,0,0,,Let us take a look at a few ba
 Dialogue: 0,1:22:30.12,1:22:34.16,Default,,0,0,0,,and derived inference rules\Nof the TLC program logic.
 Dialogue: 0,1:22:34.16,1:22:38.00,Default,,0,0,0,,The basic inference rules capture\Nthe fundamental reasoning steps
 Dialogue: 0,1:22:38.00,1:22:41.92,Default,,0,0,0,,and fit in half a page.\NYet they provide the basis
-Dialogue: 0,1:22:41.92,1:22:46.36,Default,,0,0,0,,for the derive roles\Nand verification of full stacks.
-Dialogue: 0,1:22:46.36,1:22:50.76,Default,,0,0,0,,Here we consider two basic\Nroles and one derived role.
+Dialogue: 0,1:22:41.92,1:22:46.36,Default,,0,0,0,,for the derived rules\Nand verification of full stacks.
+Dialogue: 0,1:22:46.36,1:22:50.76,Default,,0,0,0,,Here we consider two basic\Nrules and one derived rule.
 Dialogue: 0,1:22:50.76,1:22:53.56,Default,,0,0,0,,The judgments of this form
 Dialogue: 0,1:22:53.56,1:22:58.20,Default,,0,0,0,,states that under\Nthe assumed assertions comma
 Dialogue: 0,1:22:58.20,1:23:02.92,Default,,0,0,0,,the assertion A holds\Nfor the component C.
@@ -1305,7 +1305,7 @@ Dialogue: 0,1:23:12.28,1:23:17.36,Default,,0,0,0,,then eventually at n\Nand the 
 Dialogue: 0,1:23:17.36,1:23:21.28,Default,,0,0,0,,the indication event e is executed.
 Dialogue: 0,1:23:21.28,1:23:26.28,Default,,0,0,0,,The rule OI' states this relation\Nin the opposite direction.
 Dialogue: 0,1:23:26.88,1:23:30.00,Default,,0,0,0,,If at the node n the top-level T
-Dialogue: 0,1:23:30.00,1:23:33.20,Default,,0,0,0,,an outward indication\Nevent e is executed,
+Dialogue: 0,1:23:30.00,1:23:33.20,Default,,0,0,0,,an output indication\Nevent e is executed,
 Dialogue: 0,1:23:33.20,1:23:37.64,Default,,0,0,0,,then in the past at that\Nnode n the indication event e
 Dialogue: 0,1:23:37.64,1:23:40.20,Default,,0,0,0,,should have been\Nissued by a self event.
 Dialogue: 0,1:23:40.20,1:23:44.00,Default,,0,0,0,,Let us now look at\Nthe derived rule INVL.
@@ -1315,13 +1315,13 @@ Dialogue: 0,1:23:54.32,1:23:58.28,Default,,0,0,0,,It states that if\Na nontempor
 Dialogue: 0,1:23:58.28,1:24:02.72,Default,,0,0,0,,holds for all the three handler\Nfunctions of the component,
 Dialogue: 0,1:24:02.72,1:24:06.52,Default,,0,0,0,,request, indication, and periodic
 Dialogue: 0,1:24:06.52,1:24:10.36,Default,,0,0,0,,then the assertion holds\Nin every self event.
-Dialogue: 0,1:24:11.00,1:24:14.32,Default,,0,0,0,,Does the functional\Nimplementation of the component
+Dialogue: 0,1:24:11.00,1:24:14.32,Default,,0,0,0,,Thus the functional\Nimplementation of the component
 Dialogue: 0,1:24:14.32,1:24:18.16,Default,,0,0,0,,can be used to derive\Ninvariants we showcase TLC
 Dialogue: 0,1:24:18.16,1:24:22.44,Default,,0,0,0,,with the example proof of\Nthe no-forge property for PL.
 Dialogue: 0,1:24:22.44,1:24:26.20,Default,,0,0,0,,If a PL delivery event is executed,
 Dialogue: 0,1:24:26.20,1:24:29.96,Default,,0,0,0,,it is preceded by its\Ncorresponding PL send event.
 Dialogue: 0,1:24:29.96,1:24:33.04,Default,,0,0,0,,Starting from the Pl delivery event,
-Dialogue: 0,1:24:33.04,1:24:38.04,Default,,0,0,0,,the first step states that\Nif appeal delivery event is executed,
+Dialogue: 0,1:24:33.04,1:24:38.04,Default,,0,0,0,,the first step states that\Nif a PL delivery event is executed,
 Dialogue: 0,1:24:39.04,1:24:42.20,Default,,0,0,0,,the event should have\Nbeen previously issued.
 Dialogue: 0,1:24:43.56,1:24:48.60,Default,,0,0,0,,Then the step two shows that\Nif a PL delivery event is issued,
 Dialogue: 0,1:24:48.60,1:24:52.08,Default,,0,0,0,,it is issued by an SL deliver event.
@@ -1334,9 +1334,9 @@ Dialogue: 0,1:25:14.92,1:25:17.84,Default,,0,0,0,,Here we look at step two.
 Dialogue: 0,1:25:17.84,1:25:21.88,Default,,0,0,0,,We want to prove that if\Na PL deliver event is issued,
 Dialogue: 0,1:25:21.88,1:25:25.72,Default,,0,0,0,,the issuing event is\Nan SL deliver event.
 Dialogue: 0,1:25:25.72,1:25:30.32,Default,,0,0,0,,To prove it, we use the rule\NINVL that we saw before
-Dialogue: 0,1:25:30.32,1:25:33.68,Default,,0,0,0,,with this assertion as\NA that states that
-Dialogue: 0,1:25:33.68,1:25:38.68,Default,,0,0,0,,the PL deliver event is issued\Nby all the NSF deliver event
-Dialogue: 0,1:25:39.44,1:25:43.20,Default,,0,0,0,,and the definitional component SC.
+Dialogue: 0,1:25:30.32,1:25:33.68,Default,,0,0,0,,with this assertion\NA that states that
+Dialogue: 0,1:25:33.68,1:25:38.68,Default,,0,0,0,,the PL deliver event is issued\Nby only an SL delivery
+Dialogue: 0,1:25:39.44,1:25:43.20,Default,,0,0,0,,and the definition of the component SC.
 Dialogue: 0,1:25:43.20,1:25:47.00,Default,,0,0,0,,The first obligation is\Nfor the request handler.
 Dialogue: 0,1:25:47.00,1:25:52.00,Default,,0,0,0,,The request function issues\Nan empty set of output indications
 Dialogue: 0,1:25:53.08,1:25:58.40,Default,,0,0,0,,and so the assertion\NA trivially halts.
@@ -1361,7 +1361,7 @@ Dialogue: 0,1:26:53.84,1:26:57.88,Default,,0,0,0,,and Si is a sub stack\Nof a st
 Dialogue: 0,1:26:57.88,1:27:02.48,Default,,0,0,0,,then the lowered invariant\Nis valid for S as well.
 Dialogue: 0,1:27:03.60,1:27:06.08,Default,,0,0,0,,We successfully\Napplied this approach
 Dialogue: 0,1:27:06.08,1:27:09.40,Default,,0,0,0,,to stack of fundamental\Ndistributed components including
-Dialogue: 0,1:27:09.40,1:27:13.16,Default,,0,0,0,,stubborn links, perfectly\Nlinks, best-effort broadcast,
+Dialogue: 0,1:27:09.40,1:27:13.16,Default,,0,0,0,,stubborn links, perfect\Nlinks, best-effort broadcast,
 Dialogue: 0,1:27:13.16,1:27:18.28,Default,,0,0,0,,uniform reliable broadcast\Nand epoch Paxos consensus.
 Dialogue: 0,1:27:18.28,1:27:20.96,Default,,0,0,0,,And towards the goal of\Ncertified middleware,
 Dialogue: 0,1:27:20.96,1:27:23.68,Default,,0,0,0,,we are mechanizing our\Nproofs in a Coq framework.

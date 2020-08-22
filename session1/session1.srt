@@ -5410,7 +5410,7 @@ that is actively working
 
 1137
 01:13:26,680 --> 01:13:29,960
-on the COC framework is
+on the Coq framework is
 present in the conference.
 
 1138
@@ -5426,7 +5426,7 @@ reliable and scalable computing.
 1140
 01:13:39,160 --> 01:13:42,640
 However, they are complicated
-and prone to box.
+and prone to bugs.
 
 1141
 01:13:43,160 --> 01:13:44,960
@@ -5463,7 +5463,7 @@ a novel program logic
 
 1148
 01:14:05,080 --> 01:14:07,640
-for composition on
+for compositional
 verification of both safety
 
 1149
@@ -5526,7 +5526,7 @@ certified distributed middleware.
 1161
 01:14:52,560 --> 01:14:55,840
 And towards this goal, we are
-mechanizing our pros and cons.
+mechanizing our proofs in Coq.
 
 1162
 01:14:55,840 --> 01:14:58,080
@@ -5882,7 +5882,7 @@ then n' will eventually deliver m
 1235
 01:19:31,440 --> 01:19:34,480
 A no-forge property
-as a safety property.
+is a safety property.
 
 1236
 01:19:34,480 --> 01:19:39,400
@@ -5911,7 +5911,7 @@ the specifications I0 and I1
 1241
 01:19:59,000 --> 01:20:04,000
 To implement a new component C
-we use them as SOC components.
+we use them as subcomponents.
 
 1242
 01:20:04,600 --> 01:20:07,760
@@ -6073,7 +6073,7 @@ restricts the specification
 1275
 01:22:05,520 --> 01:22:10,240
 to remain valid on traces that are
-extended with interlinking events.
+extended with interleaving events.
 
 1276
 01:22:10,240 --> 01:22:13,480
@@ -6115,13 +6115,13 @@ Yet they provide the basis
 
 1284
 01:22:41,920 --> 01:22:46,360
-for the derive roles
+for the derived rules
 and verification of full stacks.
 
 1285
 01:22:46,360 --> 01:22:50,760
 Here we consider two basic
-roles and one derived role.
+rules and one derived rule.
 
 1286
 01:22:50,760 --> 01:22:53,560
@@ -6167,7 +6167,7 @@ If at the node n the top-level T
 
 1295
 01:23:30,000 --> 01:23:33,200
-an outward indication
+an output indication
 event e is executed,
 
 1296
@@ -6216,7 +6216,7 @@ in every self event.
 
 1305
 01:24:11,000 --> 01:24:14,320
-Does the functional
+Thus the functional
 implementation of the component
 
 1306
@@ -6245,7 +6245,7 @@ Starting from the Pl delivery event,
 1311
 01:24:33,040 --> 01:24:38,040
 the first step states that
-if appeal delivery event is executed,
+if a PL delivery event is executed,
 
 1312
 01:24:39,040 --> 01:24:42,200
@@ -6306,17 +6306,17 @@ INVL that we saw before
 
 1324
 01:25:30,320 --> 01:25:33,680
-with this assertion as
+with this assertion
 A that states that
 
 1325
 01:25:33,680 --> 01:25:38,680
 the PL deliver event is issued
-by all the NSF deliver event
+by only an SL delivery
 
 1326
 01:25:39,440 --> 01:25:43,200
-and the definitional component SC.
+and the definition of the component SC.
 
 1327
 01:25:43,200 --> 01:25:47,000
@@ -6433,7 +6433,7 @@ distributed components including
 
 1351
 01:27:09,400 --> 01:27:13,160
-stubborn links, perfectly
+stubborn links, perfect
 links, best-effort broadcast,
 
 1352
