@@ -3947,7 +3947,7 @@ by Aymeric Fromherz
 830
 00:58:04,240 --> 00:58:07,600
 on Concurrent Separation Logic
-in the F Programming Language.
+in the F* Programming Language.
 
 831
 00:58:08,280 --> 00:58:09,480
@@ -3979,7 +3979,7 @@ lots of recent work
 
 837
 00:58:23,160 --> 00:58:24,440
-on this committee, on this topic,
+on this topic,
 
 838
 00:58:24,440 --> 00:58:26,760
@@ -4002,7 +4002,7 @@ expressive logic
 
 842
 00:58:33,480 --> 00:58:35,040
-through reasonable
+to reason about
 concurrent programs.
 
 843
@@ -4021,17 +4021,16 @@ We really do enjoy, for instance,
 
 846
 00:58:44,480 --> 00:58:46,680
-the use in type (INAUDIBLE) Proof Assistance
-based (INAUDIBLE),
+the use in type theory based proof assistants,
 
 847
 00:58:46,680 --> 00:58:49,280
 which allow us to combine
-multi-level reasoning
+modular reasoning
 
 848
 00:58:49,280 --> 00:58:52,480
-with strong instructions
+with strong abstractions
 and strong specifications.
 
 849
@@ -4085,12 +4084,12 @@ and that might not terminate?
 
 859
 00:59:18,280 --> 00:59:21,120
-And lastly, high-risk of IRIS's
+And lastly, IRIS provides this
 very convenient feature
 
 860
 00:59:21,120 --> 00:59:22,440
-to reason out with
+to reason about
 concurrent programs
 
 861
@@ -4113,21 +4112,21 @@ that a bit later.
 
 865
 00:59:31,800 --> 00:59:34,640
-Verified concurrent programs, we've
-been developing from
+To verify concurrent programs, we've
+been developing
 
 866
 00:59:34,640 --> 00:59:35,680
-a core called Steel,
+a framework called Steel,
 
 867
 00:59:35,680 --> 00:59:38,480
-which is a concurrence
-version, which is DSL for F,
+which is a concurreny
+version, which is DSL for F*,
 
 868
 00:59:38,480 --> 00:59:41,520
-effectually dependently-typed
+an effectful dependently-typed
 language designed for verification.
 
 869
@@ -4151,7 +4150,7 @@ of Steelcore,
 
 873
 00:59:51,440 --> 00:59:54,760
-we have a number of computations
+we have a model of computations
 using action trees.
 
 874
@@ -4251,7 +4250,7 @@ logic assertions slprop.
 893
 01:00:55,800 --> 01:01:00,320
 As well as, operators
-which form a (INAUDIBLE) structure.
+which form a commutative monoid structure.
 
 894
 01:01:00,320 --> 01:01:03,280
@@ -4280,7 +4279,7 @@ can encode computations
 
 899
 01:01:15,600 --> 01:01:18,640
-as action trees permitraized
+as action trees parameterized
 by our state typeclass.
 
 900
@@ -4313,8 +4312,7 @@ logic assertion
 
 906
 01:01:35,800 --> 01:01:38,280
-dependent on the value of
-(INAUDIBLE) interpretation.
+dependent on the value returned by the computation.
 
 907
 01:01:39,680 --> 01:01:41,960
@@ -4336,7 +4334,7 @@ Ret, which returns a value
 911
 01:01:47,040 --> 01:01:50,040
 and Act, which corresponds
-to activate actions
+to atomic actions
 
 912
 01:01:50,040 --> 01:01:51,720
@@ -4353,12 +4351,12 @@ as a node Bind.
 
 915
 01:01:56,560 --> 01:02:00,240
-And that is here, how
+And notice here, how
 the indices of the computations
 
 916
 01:02:00,240 --> 01:02:03,040
-capture the standard role
+capture the standard rule
 of separation logic.
 
 917
@@ -4392,7 +4390,7 @@ We can see here this Dv effect,
 923
 01:02:19,560 --> 01:02:22,760
 which is a primitive effect
-in F for diversions.
+in F* for diversions.
 
 924
 01:02:23,240 --> 01:02:25,720
@@ -4406,7 +4404,7 @@ positive divergence,
 
 926
 01:02:28,240 --> 01:02:30,680
-positive non-terminating
+possibly non-terminating
 computations.
 
 927
@@ -4450,7 +4448,7 @@ the first conditions q and q prime.
 
 935
 01:03:00,040 --> 01:03:01,800
-Bidding upon these action trees,
+Buildding upon these action trees,
 
 936
 01:03:01,800 --> 01:03:05,680
@@ -4464,7 +4462,7 @@ interleaves atomic actions.
 
 938
 01:03:09,360 --> 01:03:13,520
-Basic interpreter run as
+This interpreter run has
 the computation type NST.
 
 939
@@ -4487,7 +4485,7 @@ the interpreter encapsulates
 
 943
 01:03:24,080 --> 01:03:26,560
-(INAUDIBLE) statement
+the soundness statement
 about those semantics.
 
 944
@@ -4515,7 +4513,7 @@ a partial-correctness setting
 
 949
 01:03:43,520 --> 01:03:47,120
-because NST can muddle possible
+because NST can model possible
 diversions computations.
 
 950
@@ -4539,7 +4537,7 @@ instantiate the memory type.
 954
 01:03:58,360 --> 01:04:01,000
 And for this, we're going to
-remain stand out
+remain standard
 
 955
 01:04:01,000 --> 01:04:02,800
@@ -4570,7 +4568,7 @@ conjunction, quantification and so on.
 
 961
 01:04:17,240 --> 01:04:20,360
-That's we're also providing
+But we're also providing
 points to assertions,
 
 962
@@ -4618,7 +4616,7 @@ We'll consider named invariants,
 971
 01:04:45,960 --> 01:04:49,320
 where the name will be encoded
-as (INAUDIBLE) number.
+as a natural number.
 
 972
 01:04:49,320 --> 01:04:51,280
@@ -4627,7 +4625,7 @@ this proposition,
 
 973
 01:04:51,280 --> 01:04:53,960
-which is here, this squiggler,
+which is here, this squiggly arrow,
 
 974
 01:04:53,960 --> 01:04:56,760
@@ -4662,7 +4660,7 @@ And what's interesting here is that
 
 981
 01:05:14,200 --> 01:05:16,560
-this invariants are just values.
+these invariants are just values.
 
 982
 01:05:16,560 --> 01:05:19,520
@@ -4672,7 +4670,7 @@ freely duplicable
 983
 01:05:19,520 --> 01:05:22,280
 and they can be shared
-easily between friends.
+easily between threads.
 
 984
 01:05:23,160 --> 01:05:26,560
@@ -4727,7 +4725,7 @@ initially we need ownership,
 994
 01:05:55,240 --> 01:05:59,000
 we need the validity of
-the separation trigger session P.
+the separation logic assertion P.
 
 995
 01:05:59,000 --> 01:06:02,000
@@ -4756,7 +4754,7 @@ difficulties in Steel.
 1000
 01:06:11,640 --> 01:06:15,920
 The code is actually fairly involved
-and highlights on things like
+and relies on things like
 
 1001
 01:06:15,920 --> 01:06:17,480
@@ -4799,7 +4797,7 @@ actions are atomic commands,
 
 1009
 01:06:44,440 --> 01:06:48,160
-but there are possible composition
+but their possible composition
 with ghost computations
 
 1010
@@ -4824,7 +4822,7 @@ be considered atomic.
 1014
 01:06:59,080 --> 01:07:02,840
 And to separate atomic computations
-from regulatory programs,
+from regular Steel programs,
 
 1015
 01:07:02,840 --> 01:07:07,320
@@ -4873,7 +4871,7 @@ can define an invariant handler
 1024
 01:07:29,680 --> 01:07:33,160
 which takes an argument
-an invariant I associated to an SRP
+an invariant I associated to an slprop P
 
 1025
 01:07:33,160 --> 01:07:34,760
@@ -4886,8 +4884,8 @@ if F is an atomic function,
 
 1027
 01:07:38,280 --> 01:07:41,480
-which accesses p, sorry
-tells it after execution,
+which accesses p, but
+stores it after execution,
 
 1028
 01:07:41,480 --> 01:07:44,680
@@ -4906,12 +4904,12 @@ can give a signature
 1031
 01:07:47,960 --> 01:07:52,680
 that does not involve p in
-specification anymore.
+specification.
 
 1032
 01:07:52,680 --> 01:07:56,120
 In practice, the last index
-(INAUDIBLE) manifest I was mentioning,
+of the Steel effect I was mentioning,
 
 1033
 01:07:56,120 --> 01:07:59,120
@@ -4920,7 +4918,7 @@ open invariants
 
 1034
 01:07:59,120 --> 01:08:02,400
-(INAUDIBLE) that in
+in the sense that in
 the invariants are applicable,
 
 1035
@@ -4965,7 +4963,7 @@ instantiated a program logic
 1043
 01:08:26,520 --> 01:08:29,400
 with a memory and original
-transportation logic
+separation logic
 
 1044
 01:08:29,400 --> 01:08:30,960
@@ -5036,21 +5034,21 @@ one protocol P.
 1058
 01:09:15,120 --> 01:09:18,680
 And we're also going to provide
-two separation requisitions
+two separation logic assertions
 
 1059
 01:09:18,680 --> 01:09:22,680
 sender and receiver
-reasonable with channels.
+to reason about these channels.
 
 1060
 01:09:22,680 --> 01:09:25,120
-Using the separation requisitions,
+Using the separation logic assertions,
 
 1061
 01:09:25,120 --> 01:09:28,480
 we can then specify
-an implement a send function,
+and implement a send function,
 
 1062
 01:09:28,480 --> 01:09:32,680
@@ -5074,7 +5072,7 @@ this function states is that
 
 1066
 01:09:42,200 --> 01:09:46,320
-if we initially have sent
+if we initially have send
 permission on this channel C,
 
 1067
@@ -5104,7 +5102,7 @@ the dual version of this,
 
 1072
 01:10:04,520 --> 01:10:07,600
-which would be a received function.
+which would be a receive function.
 
 1073
 01:10:07,600 --> 01:10:11,320
@@ -5133,7 +5131,7 @@ receive a new integer
 
 1078
 01:10:25,200 --> 01:10:28,360
-which is unsure to be strictly
+which is ensured to be strictly
 greater than the one we sent.
 
 1079
@@ -5152,7 +5150,7 @@ that takes as argument a channel
 
 1082
 01:10:37,720 --> 01:10:40,480
-which is unsure to flow
+which is ensured to follow
 PingPong protocol.
 
 1083
@@ -5162,7 +5160,7 @@ a message on the channel,
 
 1084
 01:10:43,840 --> 01:10:49,000
-which we hear peak to be 17. We
+which we hear p to be 17. We
 then received a new integer.
 
 1085
@@ -5202,7 +5200,7 @@ by trying to receive a message,
 1092
 01:11:09,800 --> 01:11:12,600
 verification will fail because
-we political states that
+the protocol states that
 
 1093
 01:11:12,600 --> 01:11:15,840
@@ -5214,13 +5212,13 @@ To conclude in this talk,
 
 1095
 01:11:17,240 --> 01:11:20,400
-I presented the call semantics
+I presented the core semantics
 and prognostic of steel
 
 1096
 01:11:20,400 --> 01:11:23,440
 the shallow embedding of
-concrete separation logic in F*
+concurrent separation logic in F*
 
 1097
 01:11:23,440 --> 01:11:25,440
@@ -5233,7 +5231,7 @@ a member model which is based
 
 1099
 01:11:27,600 --> 01:11:29,440
-on partial (INAUDIBLE)
+on partial commutative monoids
 
 1100
 01:11:29,440 --> 01:11:31,480
@@ -5265,8 +5263,8 @@ which is growing every day.
 
 1106
 01:11:43,760 --> 01:11:46,200
-Hope we just a framework
-is ready to provide
+Our hope with the Steel framework
+is to provide
 
 1107
 01:11:46,200 --> 01:11:48,680
@@ -5294,16 +5292,16 @@ logic which is expressed in
 
 1112
 01:11:58,280 --> 01:12:00,720
-an embedded wave in F*.
+an embedded way in F*.
 
 1113
 01:12:00,720 --> 01:12:04,480
 During this talk, the're many details
-of our work they didn't mention.
+of our work I didn't mention.
 
 1114
 01:12:04,480 --> 01:12:07,200
-First of all automatics
+First of all our semantics
 actually much more complicated
 
 1115
@@ -5345,7 +5343,7 @@ libraries that I mentioned.
 1123
 01:12:27,440 --> 01:12:29,760
 And we also model
-low coupling lists,
+lock coupling lists,
 
 1124
 01:12:29,760 --> 01:12:32,840
@@ -5354,7 +5352,7 @@ local states using
 
 1125
 01:12:32,840 --> 01:12:37,160
-(INAUDIBLE) if you're interested
+closures over slprop. if you're interested
 by any of these things,
 
 1126
