@@ -902,7 +902,7 @@ Dialogue: 0,0:57:33.44,0:57:35.20,Default,,0,0,0,,That's all I have.\NThank you 
 Dialogue: 0,0:57:35.20,0:57:40.20,Default,,0,0,0,,(AUDIENCE APPLAUSE)
 Dialogue: 0,0:57:42.56,0:57:44.60,Default,,0,0,0,,ALAN JEFFREY: So, thank you Gabriel.
 Dialogue: 0,0:57:44.60,0:57:49.72,Default,,0,0,0,,So, if you want to join\Nthe authors for a live Q&A,
-Dialogue: 0,0:57:49.72,0:57:54.72,Default,,0,0,0,,click on the link in\Nthe slider for this paper.
+Dialogue: 0,0:57:49.72,0:57:54.72,Default,,0,0,0,,click on the link in\Nthe Clowdr room for this paper.
 Dialogue: 0,0:58:00.12,0:58:04.76,Default,,0,0,0,,Hello and welcome back to\Nthe second session of ICFP 2020.
 Dialogue: 0,0:58:05.20,0:58:07.56,Default,,0,0,0,,And our next paper is going to be
 Dialogue: 0,0:58:07.56,0:58:11.68,Default,,0,0,0,,'Sealing Pointer-based Optimizations\Nbehind Pure Functions',
@@ -915,7 +915,7 @@ Dialogue: 0,0:58:27.04,0:58:28.44,Default,,0,0,0,,Our paper is titled,
 Dialogue: 0,0:58:28.44,0:58:32.64,Default,,0,0,0,,'Sealing Pointer-based Optimizations\Nbehind Pure Functions'.
 Dialogue: 0,0:58:32.64,0:58:34.56,Default,,0,0,0,,Now, functional programming
 Dialogue: 0,0:58:34.56,0:58:37.84,Default,,0,0,0,,really shines for\Ninteractive theorem provers.
-Dialogue: 0,0:58:37.84,0:58:39.32,Default,,0,0,0,,They're for many reasons.
+Dialogue: 0,0:58:37.84,0:58:39.32,Default,,0,0,0,,For many reasons.
 Dialogue: 0,0:58:39.32,0:58:42.36,Default,,0,0,0,,It's easy to encode terms\Nwith inductive types,
 Dialogue: 0,0:58:42.36,0:58:46.64,Default,,0,0,0,,and this is actually\Nsurprisingly cumbersome in C++.
 Dialogue: 0,0:58:46.64,0:58:50.20,Default,,0,0,0,,It's easy to traverse terms\Nwith higher-order combinators,
@@ -924,7 +924,7 @@ Dialogue: 0,0:58:55.08,0:58:58.20,Default,,0,0,0,,of terms, or find sub-terms\Nm
 Dialogue: 0,0:58:58.20,0:59:02.32,Default,,0,0,0,,And it's easy to backtrack using\Npersistent data-structures.
 Dialogue: 0,0:59:02.32,0:59:05.96,Default,,0,0,0,,So, we can just snapshot the world,
 Dialogue: 0,0:59:05.96,0:59:09.92,Default,,0,0,0,,try tactic one in that\Nworld and if it fails,
-Dialogue: 0,0:59:09.92,0:59:12.92,Default,,0,0,0,,in costantine and no\Nextra programming effort,
+Dialogue: 0,0:59:09.92,0:59:12.92,Default,,0,0,0,,in constant time and no\Nextra programming effort,
 Dialogue: 0,0:59:12.92,0:59:16.84,Default,,0,0,0,,we can just roll back\Nthe world to the snapshot
 Dialogue: 0,0:59:16.84,0:59:21.12,Default,,0,0,0,,before we started tac1 and then\Ntry the second tactic in it.
 Dialogue: 0,0:59:21.12,0:59:24.04,Default,,0,0,0,,And as we would expect, most\Ninteractive thorem provers
@@ -941,7 +941,7 @@ Dialogue: 0,0:59:55.08,0:59:58.84,Default,,0,0,0,,Which is that, "Traversing\Na 
 Dialogue: 0,0:59:58.84,1:00:03.44,Default,,0,0,0,,to the tree size of the term,\Nas opposed to its graph size,
 Dialogue: 0,1:00:03.44,1:00:08.00,Default,,0,0,0,,which causes exponential blowup\Nin theory and in practice."
 Dialogue: 0,1:00:08.00,1:00:10.16,Default,,0,0,0,,And here's a little illustration.
-Dialogue: 0,1:00:10.16,1:00:15.12,Default,,0,0,0,,On the left, there's a term\Nwhose dag representation
+Dialogue: 0,1:00:10.16,1:00:15.12,Default,,0,0,0,,On the left, there's a term\Nwhose DAG representation
 Dialogue: 0,1:00:15.12,1:00:19.96,Default,,0,0,0,,has only four nodes, and in fact,\Nhas only four nodes in memory,
 Dialogue: 0,1:00:19.96,1:00:23.28,Default,,0,0,0,,but when you view it as a tree, it\Nhas two to the four minus one node.
 Dialogue: 0,1:00:23.28,1:00:27.36,Default,,0,0,0,,So, exponentially more nodes\Nin its tree representation
@@ -950,7 +950,7 @@ Dialogue: 0,1:00:29.92,1:00:33.36,Default,,0,0,0,,And perhaps a surprising\Nempi
 Dialogue: 0,1:00:33.36,1:00:35.84,Default,,0,0,0,,is that terms with\Nastronomic tree sizes
 Dialogue: 0,1:00:35.84,1:00:39.56,Default,,0,0,0,,are actually extremely common in\Ninteractive theorem provers.
 Dialogue: 0,1:00:39.56,1:00:43.28,Default,,0,0,0,,So, it's well known that even\Nbasic operations can produce them.
-Dialogue: 0,1:00:43.28,1:00:50.44,Default,,0,0,0,,So unifying two terms, where\Nthe function symbol has already in,
+Dialogue: 0,1:00:43.28,1:00:50.44,Default,,0,0,0,,So unifying two terms, where\Nthe function symbol has arity n,
 Dialogue: 0,1:00:50.44,1:00:55.56,Default,,0,0,0,,can produce a term whose\Ntree size is two to the n.
 Dialogue: 0,1:00:55.64,1:00:58.44,Default,,0,0,0,,But this is a somewhat\Ncontrived example.
 Dialogue: 0,1:00:58.44,1:01:02.60,Default,,0,0,0,,But in reality, terms are often\Nthe result of long chains
@@ -973,7 +973,7 @@ Dialogue: 0,1:01:57.16,1:01:59.32,Default,,0,0,0,,We show how to seal\Nthese opt
 Dialogue: 0,1:01:59.32,1:02:02.00,Default,,0,0,0,,behind pure functional interfaces.
 Dialogue: 0,1:02:02.00,1:02:04.60,Default,,0,0,0,,And here's the main idea.
 Dialogue: 0,1:02:04.60,1:02:07.16,Default,,0,0,0,,We start with a pure\Nreference implementation
-Dialogue: 0,1:02:07.16,1:02:10.32,Default,,0,0,0,,of something that we wanna optimize,
+Dialogue: 0,1:02:07.16,1:02:10.32,Default,,0,0,0,,of something that we want to optimize,
 Dialogue: 0,1:02:10.32,1:02:13.96,Default,,0,0,0,,we find sufficient conditions\Nfor a particular optimization
 Dialogue: 0,1:02:13.96,1:02:16.80,Default,,0,0,0,,to respect the reference\Nimplementation,
 Dialogue: 0,1:02:16.80,1:02:20.00,Default,,0,0,0,,we then create a new primitive\Nthat takes these conditions
@@ -1007,12 +1007,12 @@ Dialogue: 0,1:03:42.72,1:03:47.88,Default,,0,0,0,,and a thunk, k, that takes\Na 
 Dialogue: 0,1:03:47.88,1:03:54.24,Default,,0,0,0,,And the precondition, h,\Nis a proof that if x=y,
 Dialogue: 0,1:03:54.24,1:03:57.48,Default,,0,0,0,,then this thunk, k, is\Ngoing to return true.
 Dialogue: 0,1:03:57.48,1:04:00.76,Default,,0,0,0,,And then the overall primitive\NwithPtrEq returns Bool,
-Dialogue: 0,1:04:00.76,1:04:05.40,Default,,0,0,0,,and it's pure reference implementation\Njust simply evaluates...
+Dialogue: 0,1:04:00.76,1:04:05.40,Default,,0,0,0,,and it's pure reference implementation\Njust simply evaluates the thunk.
 Dialogue: 0,1:04:05.40,1:04:08.36,Default,,0,0,0,,And now, the compiler will\Ntreat this as opaque
 Dialogue: 0,1:04:08.36,1:04:10.96,Default,,0,0,0,,until reaching the low-level IR.
 Dialogue: 0,1:04:10.96,1:04:15.36,Default,,0,0,0,,At which point it will\Nexpand a call to withPtrEq,
 Dialogue: 0,1:04:15.36,1:04:18.28,Default,,0,0,0,,to the following\Npseudo code snippet:
-Dialogue: 0,1:04:18.28,1:04:22.32,Default,,0,0,0,,It first checks of the pointer\Naddresses of the sale of x and y,
+Dialogue: 0,1:04:18.28,1:04:22.32,Default,,0,0,0,,It first checks of the pointer\Naddresses are the same of x and y,
 Dialogue: 0,1:04:22.32,1:04:25.88,Default,,0,0,0,,if they are it returns true,\Notherwise it evaluates it up.
 Dialogue: 0,1:04:25.88,1:04:29.16,Default,,0,0,0,,And the precondition, h,\Nguarantees that this version
 Dialogue: 0,1:04:29.16,1:04:33.28,Default,,0,0,0,,respects the pure version\Nby a very simple argument.
@@ -1062,11 +1062,11 @@ Dialogue: 0,1:06:49.84,1:06:53.48,Default,,0,0,0,,and we can write a fast\Nconst
 Dialogue: 0,1:06:53.48,1:06:56.72,Default,,0,0,0,,that simply projects\Nout of this hash field.
 Dialogue: 0,1:06:56.72,1:06:59.04,Default,,0,0,0,,And we can write a smart constructor
 Dialogue: 0,1:06:59.04,1:07:02.64,Default,,0,0,0,,that internally calls\Nthe built in constructor,
-Dialogue: 0,1:07:02.64,1:07:04.84,Default,,0,0,0,,but we'll compute\Nthe hash automatically
+Dialogue: 0,1:07:02.64,1:07:04.84,Default,,0,0,0,,but will compute\Nthe hash automatically
 Dialogue: 0,1:07:04.84,1:07:08.56,Default,,0,0,0,,using the fast hash on the children.
 Dialogue: 0,1:07:08.56,1:07:12.28,Default,,0,0,0,,Now, Lean4 has reference counting\Nand disruptive-updates,
 Dialogue: 0,1:07:12.28,1:07:15.36,Default,,0,0,0,,so, we can actually use\Nimperative hash tables
-Dialogue: 0,1:07:15.36,1:07:19.24,Default,,0,0,0,,and get the desired expected\Ndig old one lookup times.
+Dialogue: 0,1:07:15.36,1:07:19.24,Default,,0,0,0,,and get the desired expected\NO(1) lookup time.
 Dialogue: 0,1:07:19.24,1:07:21.84,Default,,0,0,0,,But, if your language does\Nnot have this feature,
 Dialogue: 0,1:07:21.84,1:07:25.52,Default,,0,0,0,,then you can still use functional\Nor persistent hash tables,
 Dialogue: 0,1:07:25.52,1:07:29.40,Default,,0,0,0,,and then all of the same\Nconstructions applied,
@@ -1097,7 +1097,7 @@ Dialogue: 0,1:09:00.68,1:09:03.20,Default,,0,0,0,,of all sub-terms inside the te
 Dialogue: 0,1:09:03.20,1:09:07.28,Default,,0,0,0,,And now in the paper, we\Nintroduce additional primitives
 Dialogue: 0,1:09:07.28,1:09:11.00,Default,,0,0,0,,that allow writing pure\Nversions of this procedure
 Dialogue: 0,1:09:11.00,1:09:13.48,Default,,0,0,0,,from first principles\Nin linear time.
-Dialogue: 0,1:09:13.48,1:09:16.36,Default,,0,0,0,,But, as part of the runtime,
+Dialogue: 0,1:09:13.48,1:09:16.36,Default,,0,0,0,,But, as part of the Lean runtime,
 Dialogue: 0,1:09:16.36,1:09:19.68,Default,,0,0,0,,we already have a high performance\Nversion of this procedure
 Dialogue: 0,1:09:19.68,1:09:21.80,Default,,0,0,0,,that applies to objects of any type.
 Dialogue: 0,1:09:21.80,1:09:25.00,Default,,0,0,0,,So, there's no additional trust\Nrequired to simply expose it.
@@ -1156,8 +1156,8 @@ Dialogue: 0,1:12:05.40,1:12:07.80,Default,,0,0,0,,this precondition\Nisn't too r
 Dialogue: 0,1:12:07.80,1:12:10.28,Default,,0,0,0,,And we show in the paper\Nthat indeed we can do
 Dialogue: 0,1:12:10.28,1:12:14.84,Default,,0,0,0,,many many sophisticated\Nconstructions using withPtrAddr.
 Dialogue: 0,1:12:14.84,1:12:18.60,Default,,0,0,0,,And in fact, combining\NwithPtrEqResult and withPtrAddr,
-Dialogue: 0,1:12:18.60,1:12:22.16,Default,,0,0,0,,we can implement pointer\Ncaches, reverse principals,
-Dialogue: 0,1:12:22.16,1:12:26.40,Default,,0,0,0,,and we can implement shareCommon\Nreverse principals, and so forth.
+Dialogue: 0,1:12:18.60,1:12:22.16,Default,,0,0,0,,we can implement pointer\Ncaches from first principals,
+Dialogue: 0,1:12:22.16,1:12:26.40,Default,,0,0,0,,and we can implement shareCommon\Nfrom first principals, and so forth.
 Dialogue: 0,1:12:26.40,1:12:31.40,Default,,0,0,0,,We recommend the\NFastEqFastHashShareCommon approach
 Dialogue: 0,1:12:31.40,1:12:34.72,Default,,0,0,0,,in general. It gives very good performance in\Nall our use cases in practice,
 Dialogue: 0,1:12:34.72,1:12:36.24,Default,,0,0,0,,it's simple,
