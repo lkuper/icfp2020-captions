@@ -6555,7 +6555,7 @@ of algebraic effects.
 
 1376
 01:28:53,360 --> 01:28:56,720
-Algebraic effects and as
+Algebraic effects and an
 extension with handlers
 
 1377
@@ -6569,7 +6569,7 @@ To understand how it works,
 
 1379
 01:29:02,360 --> 01:29:06,160
-we start with a typical
+we start with a simple
 example of the reader effect.
 
 1380
@@ -6634,7 +6634,7 @@ argument k is implicitly provided
 1392
 01:29:51,760 --> 01:29:55,000
 by the system, which
-denotes the assumption,
+denotes the resumption,
 
 1393
 01:29:55,000 --> 01:29:59,720
@@ -6724,11 +6724,11 @@ support algebraic effects
 
 1411
 01:31:00,560 --> 01:31:02,960
-in real words programming languages,
+in real world programming languages,
 
 1412
 01:31:02,960 --> 01:31:06,280
-we demonstrated
+we demonstrate
 the issue with this example.
 
 1413
@@ -6776,7 +6776,7 @@ how this expression evaluates.
 
 1422
 01:31:39,400 --> 01:31:42,240
-We first evaluate to
+We first evaluate
 the reader handler.
 
 1423
@@ -6786,7 +6786,7 @@ Now we need to remember that
 1424
 01:31:44,200 --> 01:31:46,000
 we have a reader handler
-available in the event
+available in the
 
 1425
 01:31:47,280 --> 01:31:50,560
@@ -6896,7 +6896,7 @@ moreover, it is very inefficient.
 
 1447
 01:33:07,280 --> 01:33:12,000
-To support to asks, we have
+To support two asks, we have
 yield up, and resumed twice,
 
 1448
@@ -6985,8 +6985,8 @@ special runtime support.
 
 1465
 01:34:19,080 --> 01:34:23,520
-We have proved awesomenesss
-and coherence of the translation.
+We have proved soundness
+and completeness of the translation.
 
 1466
 01:34:23,520 --> 01:34:27,280
@@ -7006,7 +7006,7 @@ algebraic effects more efficiently,
 1469
 01:34:35,480 --> 01:34:39,200
 especially for
-presumptive operations.
+resumptive operations.
 
 1470
 01:34:39,200 --> 01:34:41,960
@@ -7015,7 +7015,7 @@ first go through the meaning
 
 1471
 01:34:41,960 --> 01:34:46,960
-of the scope resumptions, and then
+of the scoped resumptions, and then
 discuss these two translations.
 
 1472
@@ -7034,7 +7034,7 @@ handlers, h1 and hevil,
 
 1475
 01:34:57,440 --> 01:35:00,480
-that (INAUDIBLE) the expression E.
+that bracket the expression E.
 
 1476
 01:35:00,480 --> 01:35:04,040
@@ -7052,7 +7052,7 @@ handler which handles ask
 
 1479
 01:35:13,200 --> 01:35:15,520
-by always resuming this one.
+by always resuming with one.
 
 1480
 01:35:15,520 --> 01:35:20,160
@@ -7108,7 +7108,7 @@ captured under a handler
 
 1491
 01:35:56,720 --> 01:36:01,720
-contacts with h1, and is resumed
+context with h1, and is resumed
 under a different handler with h2,
 
 1492
@@ -7154,7 +7154,7 @@ scoped assumptions
 1500
 01:36:31,440 --> 01:36:34,840
 including complicated
-examples like (INAUDIBLE)
+examples like async
 
 1501
 01:36:34,840 --> 01:36:36,800
@@ -7167,13 +7167,13 @@ re-written to pass the restriction.
 
 1503
 01:36:40,560 --> 01:36:43,360
-In this work, we focus all
+In this work, we focus on
 the evidence translation
 
 1504
 01:36:43,360 --> 01:36:46,040
 and use a dynamic check
-in our (INAUDIBLE).
+in our formalism.
 
 1505
 01:36:46,040 --> 01:36:48,600
@@ -7186,7 +7186,7 @@ on how to check this properly.
 
 1507
 01:36:52,760 --> 01:36:56,640
-You scoped resumptions, we define
+Using scoped resumptions, we define
 the evidence passing translation.
 
 1508
@@ -7206,7 +7206,7 @@ the dictionary translation,
 
 1511
 01:37:08,600 --> 01:37:11,800
-it has (INAUDIBLE) protect classes.
+in Haskell for type classes.
 
 1512
 01:37:11,800 --> 01:37:14,360
@@ -7239,7 +7239,7 @@ particular reader handler,
 
 1518
 01:37:32,360 --> 01:37:35,560
-because the (INAUDIBLE) of
+we code the pair of
 the marker and the handler
 
 1519
@@ -7250,7 +7250,7 @@ the evidence down as we evaluate.
 1520
 01:37:40,400 --> 01:37:45,600
 We then evaluate the incr handler
-by creating an (INAUDIBLE)
+by creating another fresh
 
 1521
 01:37:45,600 --> 01:37:48,120
@@ -7427,13 +7427,13 @@ operations can evaluate in place.
 
 1557
 01:39:52,920 --> 01:39:56,440
-This (INAUDIBLE) is truly
+This optimization enables
 efficient effect operations
 
 1558
 01:39:56,440 --> 01:40:01,080
 at a cost similar to
-a virtual method.
+a virtual method call.
 
 1559
 01:40:01,080 --> 01:40:04,800
@@ -7500,7 +7500,7 @@ based on dynamic search
 1572
 01:40:44,800 --> 01:40:48,480
 for the handlers,
-and implementations of effect handlers
+and implementations of lexical effect handlers
 
 1573
 01:40:48,480 --> 01:40:52,240
@@ -7529,12 +7529,12 @@ system is needed anymore,
 
 1578
 01:41:07,520 --> 01:41:10,640
-and we can generate a code
+and we can generate code
 directly for languages
 
 1579
 01:41:10,640 --> 01:41:12,760
-for that assembly.
+like C or Web Assembly.
 
 1580
 01:41:12,760 --> 01:41:15,520
@@ -7557,7 +7557,7 @@ Hello everyone.
 
 1584
 01:41:23,760 --> 01:41:30,280
-We summarize (INAUDIBLE) in
+We summarize all calculi in
 our paper using this figure.
 
 1585
@@ -7673,7 +7673,7 @@ ADAM: Thanks, Ningning.
 
 1609
 01:42:46,440 --> 01:42:48,360
-On either time bound, you
+In either time band, you
 should see a Q&A link
 
 1610
@@ -7713,7 +7713,7 @@ already see there.
 1617
 01:43:02,880 --> 01:43:05,400
 We really want to simulate what's
-created by the (INAUDIBLE)
+created by the ICFP
 
 1618
 01:43:05,400 --> 01:43:08,240

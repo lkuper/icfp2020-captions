@@ -1386,10 +1386,10 @@ Dialogue: 0,1:28:40.52,1:28:43.40,Default,,0,0,0,,Moreover, we show that\Nwith e
 Dialogue: 0,1:28:43.40,1:28:46.52,Default,,0,0,0,,such implimentations\Ncan be quite efficient.
 Dialogue: 0,1:28:46.52,1:28:48.56,Default,,0,0,0,,Before we go to\Nthe technical details
 Dialogue: 0,1:28:48.56,1:28:53.36,Default,,0,0,0,,let's start with an overview\Nof algebraic effects.
-Dialogue: 0,1:28:53.36,1:28:56.72,Default,,0,0,0,,Algebraic effects and as\Nextension with handlers
+Dialogue: 0,1:28:53.36,1:28:56.72,Default,,0,0,0,,Algebraic effects and an\Nextension with handlers
 Dialogue: 0,1:28:56.72,1:29:00.80,Default,,0,0,0,,are a powerful way to incorporate\Neffects in programming languages.
 Dialogue: 0,1:29:00.80,1:29:02.36,Default,,0,0,0,,To understand how it works,
-Dialogue: 0,1:29:02.36,1:29:06.16,Default,,0,0,0,,we start with a typical\Nexample of the reader effect.
+Dialogue: 0,1:29:02.36,1:29:06.16,Default,,0,0,0,,we start with a simple\Nexample of the reader effect.
 Dialogue: 0,1:29:06.16,1:29:09.88,Default,,0,0,0,,On the left-hand side, we\Ndefine a simple effect reader,
 Dialogue: 0,1:29:09.88,1:29:14.72,Default,,0,0,0,,which has a single operation\Nask. The type of ask says that
 Dialogue: 0,1:29:14.72,1:29:17.68,Default,,0,0,0,,you can ask by providing\Na unit argument,
@@ -1402,7 +1402,7 @@ Dialogue: 0,1:29:34.56,1:29:38.12,Default,,0,0,0,,where handlers provide\Noperat
 Dialogue: 0,1:29:38.12,1:29:42.60,Default,,0,0,0,,we handle an expression by replicating a\Nlambda which takes a unit.
 Dialogue: 0,1:29:42.60,1:29:46.96,Default,,0,0,0,,in our example, we use x to\Ndenote the operation argument.
 Dialogue: 0,1:29:46.96,1:29:51.76,Default,,0,0,0,,In this case unit. The extra\Nargument k is implicitly provided
-Dialogue: 0,1:29:51.76,1:29:55.00,Default,,0,0,0,,by the system, which\Ndenotes the assumption,
+Dialogue: 0,1:29:51.76,1:29:55.00,Default,,0,0,0,,by the system, which\Ndenotes the resumption,
 Dialogue: 0,1:29:55.00,1:29:59.72,Default,,0,0,0,,that is how to resume the computation\Nwhere operation is performed.
 Dialogue: 0,1:29:59.72,1:30:02.84,Default,,0,0,0,,In this case, we always\Nredeem with one.
 Dialogue: 0,1:30:02.84,1:30:06.32,Default,,0,0,0,,When the first ask is performed,\Nthe handler returns one
@@ -1421,8 +1421,8 @@ Dialogue: 0,1:30:46.64,1:30:49.00,Default,,0,0,0,,which gives semantics to opera
 Dialogue: 0,1:30:49.00,1:30:51.56,Default,,0,0,0,,We have seen that example of reader
 Dialogue: 0,1:30:51.56,1:30:55.76,Default,,0,0,0,,and refer to our paper for\Nmore complicated examples.
 Dialogue: 0,1:30:56.44,1:31:00.56,Default,,0,0,0,,However, it is non-trivial to\Nsupport algebraic effects
-Dialogue: 0,1:31:00.56,1:31:02.96,Default,,0,0,0,,in real words programming languages,
-Dialogue: 0,1:31:02.96,1:31:06.28,Default,,0,0,0,,we demonstrated\Nthe issue with this example.
+Dialogue: 0,1:31:00.56,1:31:02.96,Default,,0,0,0,,in real world programming languages,
+Dialogue: 0,1:31:02.96,1:31:06.28,Default,,0,0,0,,we demonstrate\Nthe issue with this example.
 Dialogue: 0,1:31:06.28,1:31:10.40,Default,,0,0,0,,This code has three handlers,\Nfollowed by an expression,
 Dialogue: 0,1:31:10.40,1:31:14.40,Default,,0,0,0,,which simply could ask twice\Nas we have seen before.
 Dialogue: 0,1:31:14.40,1:31:18.36,Default,,0,0,0,,The three handlers are a reader\Nhandler, an Incr handler,
@@ -1432,9 +1432,9 @@ Dialogue: 0,1:31:25.40,1:31:27.52,Default,,0,0,0,,if the computation fails.
 Dialogue: 0,1:31:27.52,1:31:31.00,Default,,0,0,0,,As before, since the reader\Nalways returns one,
 Dialogue: 0,1:31:31.00,1:31:33.72,Default,,0,0,0,,we expect the answer to be two.
 Dialogue: 0,1:31:33.72,1:31:38.72,Default,,0,0,0,,Now let's take a closer look at\Nhow this expression evaluates.
-Dialogue: 0,1:31:39.40,1:31:42.24,Default,,0,0,0,,We first evaluate to\Nthe reader handler.
+Dialogue: 0,1:31:39.40,1:31:42.24,Default,,0,0,0,,We first evaluate\Nthe reader handler.
 Dialogue: 0,1:31:42.24,1:31:44.20,Default,,0,0,0,,Now we need to remember that
-Dialogue: 0,1:31:44.20,1:31:46.00,Default,,0,0,0,,we have a reader handler\Navailable in the event
+Dialogue: 0,1:31:44.20,1:31:46.00,Default,,0,0,0,,we have a reader handler\Navailable in the
 Dialogue: 0,1:31:47.28,1:31:50.56,Default,,0,0,0,,evaluation context,\Nsince there, we may need to use
 Dialogue: 0,1:31:50.56,1:31:53.08,Default,,0,0,0,,the handler to handle\Ncertain operations.
 Dialogue: 0,1:31:53.08,1:31:56.84,Default,,0,0,0,,In a similar way, we\Nevaluate the incr handler,
@@ -1457,7 +1457,7 @@ Dialogue: 0,1:32:52.72,1:32:55.40,Default,,0,0,0,,requires special runtime\Nsupp
 Dialogue: 0,1:32:55.40,1:32:59.24,Default,,0,0,0,,to capture the resumption\Nand to resume.
 Dialogue: 0,1:32:59.24,1:33:03.24,Default,,0,0,0,,This is very difficult to add to\Nexisting programming languages,
 Dialogue: 0,1:33:03.24,1:33:07.28,Default,,0,0,0,,moreover, it is very inefficient.
-Dialogue: 0,1:33:07.28,1:33:12.00,Default,,0,0,0,,To support to asks, we have\Nyield up, and resumed twice,
+Dialogue: 0,1:33:07.28,1:33:12.00,Default,,0,0,0,,To support two asks, we have\Nyield up, and resumed twice,
 Dialogue: 0,1:33:12.00,1:33:15.40,Default,,0,0,0,,and it can be more time\Nconsuming if the handler stack
 Dialogue: 0,1:33:15.40,1:33:17.92,Default,,0,0,0,,is even larger.
 Dialogue: 0,1:33:17.92,1:33:21.76,Default,,0,0,0,,Hence, the goal of our work\Nis to have composable,
@@ -1475,21 +1475,21 @@ Dialogue: 0,1:34:03.20,1:34:08.08,Default,,0,0,0,,for the evidence calculus to\N
 Dialogue: 0,1:34:08.08,1:34:12.52,Default,,0,0,0,,Combining these two translations,\Nwe get an implementation
 Dialogue: 0,1:34:12.52,1:34:15.88,Default,,0,0,0,,of algebraic effects upon\Npolymorphic lambda calculus,
 Dialogue: 0,1:34:15.88,1:34:19.08,Default,,0,0,0,,and that requires no\Nspecial runtime support.
-Dialogue: 0,1:34:19.08,1:34:23.52,Default,,0,0,0,,We have proved awesomenesss\Nand coherence of the translation.
+Dialogue: 0,1:34:19.08,1:34:23.52,Default,,0,0,0,,We have proved soundness\Nand completeness of the translation.
 Dialogue: 0,1:34:23.52,1:34:27.28,Default,,0,0,0,,They also turn out that\Ndoing this translation
 Dialogue: 0,1:34:27.28,1:34:30.72,Default,,0,0,0,,does not only get rid of\Nspecial runtime system,
 Dialogue: 0,1:34:30.72,1:34:35.48,Default,,0,0,0,,but also allows us to implement\Nalgebraic effects more efficiently,
-Dialogue: 0,1:34:35.48,1:34:39.20,Default,,0,0,0,,especially for\Npresumptive operations.
+Dialogue: 0,1:34:35.48,1:34:39.20,Default,,0,0,0,,especially for\Nresumptive operations.
 Dialogue: 0,1:34:39.20,1:34:41.96,Default,,0,0,0,,In the rest of the talk, we\Nfirst go through the meaning
-Dialogue: 0,1:34:41.96,1:34:46.96,Default,,0,0,0,,of the scope resumptions, and then\Ndiscuss these two translations.
+Dialogue: 0,1:34:41.96,1:34:46.96,Default,,0,0,0,,of the scoped resumptions, and then\Ndiscuss these two translations.
 Dialogue: 0,1:34:48.08,1:34:52.12,Default,,0,0,0,,To understand the restriction\Nof scoped resumptions,
 Dialogue: 0,1:34:52.12,1:34:54.08,Default,,0,0,0,,let's consider this example.
 Dialogue: 0,1:34:54.08,1:34:57.44,Default,,0,0,0,,Here, we have two\Nhandlers, h1 and hevil,
-Dialogue: 0,1:34:57.44,1:35:00.48,Default,,0,0,0,,that (INAUDIBLE) the expression E.
+Dialogue: 0,1:34:57.44,1:35:00.48,Default,,0,0,0,,that bracket the expression E.
 Dialogue: 0,1:35:00.48,1:35:04.04,Default,,0,0,0,,The whole result is then given to F.
 Dialogue: 0,1:35:04.04,1:35:08.84,Default,,0,0,0,,The definition of E performs three\Noperations, ask, evil, and ask.
 Dialogue: 0,1:35:08.84,1:35:13.20,Default,,0,0,0,,The handler h1 is a reader\Nhandler which handles ask
-Dialogue: 0,1:35:13.20,1:35:15.52,Default,,0,0,0,,by always resuming this one.
+Dialogue: 0,1:35:13.20,1:35:15.52,Default,,0,0,0,,by always resuming with one.
 Dialogue: 0,1:35:15.52,1:35:20.16,Default,,0,0,0,,A real expectation now in\Nthat these two asks in e
 Dialogue: 0,1:35:20.16,1:35:22.24,Default,,0,0,0,,with the return one.
 Dialogue: 0,1:35:22.24,1:35:27.52,Default,,0,0,0,,However, we show that while\Nthe first ask as expected
@@ -1501,7 +1501,7 @@ Dialogue: 0,1:35:42.36,1:35:46.76,Default,,0,0,0,,F then gets the resumption,\Na
 Dialogue: 0,1:35:46.76,1:35:49.68,Default,,0,0,0,,under a different handler\Nh2, which handles ask
 Dialogue: 0,1:35:49.68,1:35:52.48,Default,,0,0,0,,by returning two instead.
 Dialogue: 0,1:35:52.48,1:35:56.72,Default,,0,0,0,,Note in this example, K is\Ncaptured under a handler
-Dialogue: 0,1:35:56.72,1:36:01.72,Default,,0,0,0,,contacts with h1, and is resumed\Nunder a different handler with h2,
+Dialogue: 0,1:35:56.72,1:36:01.72,Default,,0,0,0,,context with h1, and is resumed\Nunder a different handler with h2,
 Dialogue: 0,1:36:01.72,1:36:04.96,Default,,0,0,0,,this is very powerful,\Nperhaps too powerful
 Dialogue: 0,1:36:04.96,1:36:09.80,Default,,0,0,0,,that it can interfere with ability\Nto reason about the program.
 Dialogue: 0,1:36:09.80,1:36:15.24,Default,,0,0,0,,We define the notion of scoped\Nresumptions as a restriction
@@ -1510,27 +1510,27 @@ Dialogue: 0,1:36:18.52,1:36:22.20,Default,,0,0,0,,in the very scope of their\Nor
 Dialogue: 0,1:36:22.20,1:36:25.60,Default,,0,0,0,,Thus, the previous example is\Nrejected under scoped assumptions.
 Dialogue: 0,1:36:25.60,1:36:29.12,Default,,0,0,0,,We believe that all\Nimportant effected handlers
 Dialogue: 0,1:36:29.12,1:36:31.44,Default,,0,0,0,,can be written with\Nscoped assumptions
-Dialogue: 0,1:36:31.44,1:36:34.84,Default,,0,0,0,,including complicated\Nexamples like (INAUDIBLE)
+Dialogue: 0,1:36:31.44,1:36:34.84,Default,,0,0,0,,including complicated\Nexamples like async
 Dialogue: 0,1:36:34.84,1:36:36.80,Default,,0,0,0,,or concurrent scheduling.
 Dialogue: 0,1:36:36.80,1:36:40.56,Default,,0,0,0,,The previous example can also be\Nre-written to pass the restriction.
-Dialogue: 0,1:36:40.56,1:36:43.36,Default,,0,0,0,,In this work, we focus all\Nthe evidence translation
-Dialogue: 0,1:36:43.36,1:36:46.04,Default,,0,0,0,,and use a dynamic check\Nin our (INAUDIBLE).
+Dialogue: 0,1:36:40.56,1:36:43.36,Default,,0,0,0,,In this work, we focus on\Nthe evidence translation
+Dialogue: 0,1:36:43.36,1:36:46.04,Default,,0,0,0,,and use a dynamic check\Nin our formalism.
 Dialogue: 0,1:36:46.04,1:36:48.60,Default,,0,0,0,,In the paper, we also\Nshow several designs
 Dialogue: 0,1:36:48.60,1:36:52.76,Default,,0,0,0,,on how to check this properly.
-Dialogue: 0,1:36:52.76,1:36:56.64,Default,,0,0,0,,You scoped resumptions, we define\Nthe evidence passing translation.
+Dialogue: 0,1:36:52.76,1:36:56.64,Default,,0,0,0,,Using scoped resumptions, we define\Nthe evidence passing translation.
 Dialogue: 0,1:36:56.64,1:37:01.64,Default,,0,0,0,,The key idea of evidence\Npassing is that,
 Dialogue: 0,1:37:01.64,1:37:05.16,Default,,0,0,0,,a vector of handlers is passed\Ndown as an implicit parameter
 Dialogue: 0,1:37:05.16,1:37:08.60,Default,,0,0,0,,similar to\Nthe dictionary translation,
-Dialogue: 0,1:37:08.60,1:37:11.80,Default,,0,0,0,,it has (INAUDIBLE) protect classes.
+Dialogue: 0,1:37:08.60,1:37:11.80,Default,,0,0,0,,in Haskell for type classes.
 Dialogue: 0,1:37:11.80,1:37:14.36,Default,,0,0,0,,To understand how\Nevidence passing works,
 Dialogue: 0,1:37:14.36,1:37:17.16,Default,,0,0,0,,we re-evaluate the previous example
 Dialogue: 0,1:37:17.16,1:37:20.04,Default,,0,0,0,,using the evidence\Npassing semantics.
 Dialogue: 0,1:37:20.04,1:37:23.84,Default,,0,0,0,,As before, we first evaluate\Nthe reader handler.
 Dialogue: 0,1:37:23.84,1:37:27.52,Default,,0,0,0,,This time, we create\Na fresh unique marker
 Dialogue: 0,1:37:27.52,1:37:32.36,Default,,0,0,0,,represented as m1 to denote this\Nparticular reader handler,
-Dialogue: 0,1:37:32.36,1:37:35.56,Default,,0,0,0,,because the (INAUDIBLE) of\Nthe marker and the handler
+Dialogue: 0,1:37:32.36,1:37:35.56,Default,,0,0,0,,we code the pair of\Nthe marker and the handler
 Dialogue: 0,1:37:35.56,1:37:40.40,Default,,0,0,0,,and evidence, and we pass\Nthe evidence down as we evaluate.
-Dialogue: 0,1:37:40.40,1:37:45.60,Default,,0,0,0,,We then evaluate the incr handler\Nby creating an (INAUDIBLE)
+Dialogue: 0,1:37:40.40,1:37:45.60,Default,,0,0,0,,We then evaluate the incr handler\Nby creating another fresh
 Dialogue: 0,1:37:45.60,1:37:48.12,Default,,0,0,0,,unique marker m2\Nand pass the new evidence
 Dialogue: 0,1:37:48.12,1:37:51.24,Default,,0,0,0,,along with the existing\Nreader evidence, that is,
 Dialogue: 0,1:37:51.24,1:37:54.16,Default,,0,0,0,,we now have an evidence vector.
@@ -1567,8 +1567,8 @@ Dialogue: 0,1:39:36.80,1:39:41.44,Default,,0,0,0,,for that operation in the dyna
 Dialogue: 0,1:39:41.44,1:39:45.60,Default,,0,0,0,,Thus, with evidence processing,\Nwe significantly improve
 Dialogue: 0,1:39:45.60,1:39:48.72,Default,,0,0,0,,the efficiency of algebraic effects.
 Dialogue: 0,1:39:48.72,1:39:52.92,Default,,0,0,0,,In particular, tail resumption\Noperations can evaluate in place.
-Dialogue: 0,1:39:52.92,1:39:56.44,Default,,0,0,0,,This (INAUDIBLE) is truly\Nefficient effect operations
-Dialogue: 0,1:39:56.44,1:40:01.08,Default,,0,0,0,,at a cost similar to\Na virtual method.
+Dialogue: 0,1:39:52.92,1:39:56.44,Default,,0,0,0,,This optimization enables\Nefficient effect operations
+Dialogue: 0,1:39:56.44,1:40:01.08,Default,,0,0,0,,at a cost similar to\Na virtual method call.
 Dialogue: 0,1:40:01.08,1:40:04.80,Default,,0,0,0,,Non tail-resumptive operations\Nstill needed to yield up,
 Dialogue: 0,1:40:04.80,1:40:07.44,Default,,0,0,0,,but from the evidence vector,\Nwe can locally decide
 Dialogue: 0,1:40:07.44,1:40:10.44,Default,,0,0,0,,which marker to yield to,\Nwhich is still more efficient
@@ -1582,19 +1582,19 @@ Dialogue: 0,1:40:31.92,1:40:35.28,Default,,0,0,0,,the handler implementation\Ndi
 Dialogue: 0,1:40:35.28,1:40:36.84,Default,,0,0,0,,in the context.
 Dialogue: 0,1:40:36.84,1:40:41.44,Default,,0,0,0,,Such translation is very important\Nand it provides the missing link
 Dialogue: 0,1:40:41.44,1:40:44.80,Default,,0,0,0,,between traditional implementation\Nbased on dynamic search
-Dialogue: 0,1:40:44.80,1:40:48.48,Default,,0,0,0,,for the handlers,\Nand implementations of effect handlers
+Dialogue: 0,1:40:44.80,1:40:48.48,Default,,0,0,0,,for the handlers,\Nand implementations of lexical effect handlers
 Dialogue: 0,1:40:48.48,1:40:52.24,Default,,0,0,0,,using multi prompt\Ndelimited control.
 Dialogue: 0,1:40:52.24,1:40:55.44,Default,,0,0,0,,Specifically, we define\Na multi prompt translation
 Dialogue: 0,1:40:55.44,1:40:59.96,Default,,0,0,0,,from the evidence language into\Nstandard polymorphic lambda calculus
 Dialogue: 0,1:40:59.96,1:41:04.12,Default,,0,0,0,,where the monad implements\Nthe multi prompt semantics.
 Dialogue: 0,1:41:04.12,1:41:07.52,Default,,0,0,0,,Now, no special runtime\Nsystem is needed anymore,
-Dialogue: 0,1:41:07.52,1:41:10.64,Default,,0,0,0,,and we can generate a code\Ndirectly for languages
-Dialogue: 0,1:41:10.64,1:41:12.76,Default,,0,0,0,,for that assembly.
+Dialogue: 0,1:41:07.52,1:41:10.64,Default,,0,0,0,,and we can generate code\Ndirectly for languages
+Dialogue: 0,1:41:10.64,1:41:12.76,Default,,0,0,0,,like C or Web Assembly.
 Dialogue: 0,1:41:12.76,1:41:15.52,Default,,0,0,0,,Moreover, with our\Nstandard back end,
 Dialogue: 0,1:41:15.52,1:41:19.16,Default,,0,0,0,,advanced compilation structures\Ncan be used for example,
 Dialogue: 0,1:41:19.16,1:41:21.40,Default,,0,0,0,,compilation guided,\Nreference counting.
 Dialogue: 0,1:41:21.40,1:41:23.76,Default,,0,0,0,,Hello everyone.
-Dialogue: 0,1:41:23.76,1:41:30.28,Default,,0,0,0,,We summarize (INAUDIBLE) in\Nour paper using this figure.
+Dialogue: 0,1:41:23.76,1:41:30.28,Default,,0,0,0,,We summarize all calculi in\Nour paper using this figure.
 Dialogue: 0,1:41:30.28,1:41:34.64,Default,,0,0,0,,We have a polymorphic algebraic\Neffect calculus system at e,
 Dialogue: 0,1:41:34.64,1:41:37.08,Default,,0,0,0,,we can erase the types\Nin system at e,
 Dialogue: 0,1:41:37.08,1:41:41.80,Default,,0,0,0,,and gets to an untyped algebraic\Neffect calculus, system lambda e.
@@ -1619,7 +1619,7 @@ Dialogue: 0,1:42:30.96,1:42:33.00,Default,,0,0,0,,or watch the talk for more det
 Dialogue: 0,1:42:33.00,1:42:35.12,Default,,0,0,0,,That's all, thank you for listening.
 Dialogue: 0,1:42:35.12,1:42:44.28,Default,,0,0,0,,(CROWD APPLAUDS)
 Dialogue: 0,1:42:44.28,1:42:46.44,Default,,0,0,0,,ADAM: Thanks, Ningning.
-Dialogue: 0,1:42:46.44,1:42:48.36,Default,,0,0,0,,On either time bound, you\Nshould see a Q&A link
+Dialogue: 0,1:42:46.44,1:42:48.36,Default,,0,0,0,,In either time band, you\Nshould see a Q&A link
 Dialogue: 0,1:42:48.36,1:42:49.92,Default,,0,0,0,,appear in Clowdr which you\Ncan click the video chat
 Dialogue: 0,1:42:49.92,1:42:51.68,Default,,0,0,0,,with at least one of\Nthe authors of this paper,
 Dialogue: 0,1:42:51.68,1:42:53.48,Default,,0,0,0,,and that's it for this session.
@@ -1627,7 +1627,7 @@ Dialogue: 0,1:42:53.48,1:42:55.64,Default,,0,0,0,,Before, or after chatting with
 Dialogue: 0,1:42:55.64,1:42:57.76,Default,,0,0,0,,please take advantage\Nof our coffee break
 Dialogue: 0,1:42:57.76,1:43:00.80,Default,,0,0,0,,to for instance create your\Nown ad hoc video chat room,
 Dialogue: 0,1:43:00.80,1:43:02.88,Default,,0,0,0,,or join one that you\Nalready see there.
-Dialogue: 0,1:43:02.88,1:43:05.40,Default,,0,0,0,,We really want to simulate what's\Ncreated by the (INAUDIBLE)
+Dialogue: 0,1:43:02.88,1:43:05.40,Default,,0,0,0,,We really want to simulate what's\Ncreated by the ICFP
 Dialogue: 0,1:43:05.40,1:43:08.24,Default,,0,0,0,,social experience so don't be shy.
 Dialogue: 0,1:43:08.24,1:43:10.96,Default,,0,0,0,,We'll also have some more\Nstructured social activities
 Dialogue: 0,1:43:10.96,1:43:13.28,Default,,0,0,0,,right after the coffee\Nbreak as well as throughout
