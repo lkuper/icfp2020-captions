@@ -26,13 +26,13 @@ Dialogue: 0,0:13:12.96,0:13:15.28,Default,,0,0,0,,on the Clowdr system.
 Dialogue: 0,0:13:15.32,0:13:19.16,Default,,0,0,0,,And also, if they want\Nto join a live Q&A,
 Dialogue: 0,0:13:19.16,0:13:21.52,Default,,0,0,0,,with the authors, after the talk.
 Dialogue: 0,0:13:21.56,0:13:23.60,Default,,0,0,0,,And so the first talk\Nfor the session,
-Dialogue: 0,0:13:23.68,0:13:27.36,Default,,0,0,0,,is going to be achieving high\Nperformance thre fuctional way,
+Dialogue: 0,0:13:23.68,0:13:27.36,Default,,0,0,0,,is going to be achieving high\Nperformance the functional way,
 Dialogue: 0,0:13:27.40,0:13:28.92,Default,,0,0,0,,and it'll be presented by,
 Dialogue: 0,0:13:28.92,0:13:30.16,Default,,0,0,0,,Bastian Hagedorn.
 Dialogue: 0,0:13:31.76,0:13:33.56,Default,,0,0,0,,BASTIAN: Hi, this Bastian Hagedorn,
 Dialogue: 0,0:13:33.56,0:13:35.32,Default,,0,0,0,,from the university of Münster,
 Dialogue: 0,0:13:35.36,0:13:37.40,Default,,0,0,0,,and I'll be presenting\Na functional pearl,
-Dialogue: 0,0:13:37.48,0:13:38.88,Default,,0,0,0,,on achieving high-perfomance,
+Dialogue: 0,0:13:37.48,0:13:38.88,Default,,0,0,0,,on achieving high-performance,
 Dialogue: 0,0:13:38.96,0:13:40.64,Default,,0,0,0,,the functional way.
 Dialogue: 0,0:13:40.68,0:13:42.40,Default,,0,0,0,,This one's about expressing\Nhigh-performance
 Dialogue: 0,0:13:42.48,0:13:45.72,Default,,0,0,0,,program optimizations,\Nas rewrite strategies.
@@ -62,7 +62,7 @@ Dialogue: 0,0:14:40.72,0:14:43.56,Default,,0,0,0,,and optimizing a program, to\N
 Dialogue: 0,0:14:43.56,0:14:47.32,Default,,0,0,0,,Might allow us to significantly\Nreduce the time required to,
 Dialogue: 0,0:14:47.32,0:14:48.32,Default,,0,0,0,,to, for example,
 Dialogue: 0,0:14:48.32,0:14:49.64,Default,,0,0,0,,train neural networks.
-Dialogue: 0,0:14:51.24,0:14:54.32,Default,,0,0,0,,So, how do we achieve\Nhigh perfomance?
+Dialogue: 0,0:14:51.24,0:14:54.32,Default,,0,0,0,,So, how do we achieve\Nhigh performance?
 Dialogue: 0,0:14:54.32,0:14:55.52,Default,,0,0,0,,Here's a naive implementation
 Dialogue: 0,0:14:55.52,0:14:58.60,Default,,0,0,0,,of a matrix multiplication\Nand computation in CUDA,
 Dialogue: 0,0:14:58.60,0:15:00.64,Default,,0,0,0,,which targets GPU's.
@@ -97,7 +97,7 @@ Dialogue: 0,0:16:11.52,0:16:13.16,Default,,0,0,0,,by a performance engineer,
 Dialogue: 0,0:16:13.16,0:16:15.20,Default,,0,0,0,,with the so called schedule.
 Dialogue: 0,0:16:15.20,0:16:16.96,Default,,0,0,0,,And this way of achieving\Nhigh performance,
 Dialogue: 0,0:16:16.96,0:16:18.44,Default,,0,0,0,,is currently very popular,
-Dialogue: 0,0:16:18.44,0:16:20.84,Default,,0,0,0,,there're many compilers\Nfollowing this approach.
+Dialogue: 0,0:16:18.44,0:16:20.84,Default,,0,0,0,,there are many compilers\Nfollowing this approach.
 Dialogue: 0,0:16:20.84,0:16:23.32,Default,,0,0,0,,So, this particular example here,
 Dialogue: 0,0:16:23.32,0:16:27.04,Default,,0,0,0,,is taken from the TVM\Nmachine learning compiler,
 Dialogue: 0,0:16:27.04,0:16:28.68,Default,,0,0,0,,which is currently\Nthe state of the art,
@@ -127,7 +127,7 @@ Dialogue: 0,0:17:27.12,0:17:28.92,Default,,0,0,0,,have to live in the same scope
 Dialogue: 0,0:17:28.92,0:17:31.40,Default,,0,0,0,,and that hinders\Nthe re-use of the schedule,
 Dialogue: 0,0:17:31.40,0:17:34.88,Default,,0,0,0,,for optimizing\Na different computation.
 Dialogue: 0,0:17:34.88,0:17:37.68,Default,,0,0,0,,The next problem is that there's\Nno well-defined semantics,
-Dialogue: 0,0:17:37.68,0:17:39.64,Default,,0,0,0,,for the scheduling preemptives.
+Dialogue: 0,0:17:37.68,0:17:39.64,Default,,0,0,0,,for the scheduling primitives.
 Dialogue: 0,0:17:39.64,0:17:41.48,Default,,0,0,0,,So there's only\Na documentation online,
 Dialogue: 0,0:17:41.48,0:17:42.92,Default,,0,0,0,,And for some primitives,
 Dialogue: 0,0:17:42.92,0:17:45.96,Default,,0,0,0,,this is quite cryptic\Nand basically requires,
@@ -214,7 +214,7 @@ Dialogue: 0,0:21:54.52,0:21:57.88,Default,,0,0,0,,So we can either use the first
 Dialogue: 0,0:21:58.24,0:22:01.12,Default,,0,0,0,,And with elevate, you can\Nprecisely define locations in
 Dialogue: 0,0:22:01.12,0:22:03.92,Default,,0,0,0,,the AST using so-called traverses.
 Dialogue: 0,0:22:04.08,0:22:07.32,Default,,0,0,0,,So for example, the body traversal\Napplies a given strategy at
-Dialogue: 0,0:22:07.32,0:22:09.44,Default,,0,0,0,,the body of a function\Nabstruction mode.
+Dialogue: 0,0:22:07.32,0:22:09.44,Default,,0,0,0,,the body of a function\Nabstraction mode.
 Dialogue: 0,0:22:09.44,0:22:13.76,Default,,0,0,0,,And in this example, body\Nmapfusion would then fuse the
 Dialogue: 0,0:22:13.76,0:22:16.16,Default,,0,0,0,,first two maps as we've seen here.
 Dialogue: 0,0:22:16.52,0:22:19.48,Default,,0,0,0,,Similarly, we define traversals\Nfor the other nodes and
@@ -274,7 +274,7 @@ Dialogue: 0,0:25:05.40,0:25:07.32,Default,,0,0,0,,in both TVM and our approach.
 Dialogue: 0,0:25:07.32,0:25:10.32,Default,,0,0,0,,And here you can see that\Nwe are able to reuse and
 Dialogue: 0,0:25:10.32,0:25:12.44,Default,,0,0,0,,to build upon\Nthe loop perm strategy,
 Dialogue: 0,0:25:12.44,0:25:15.92,Default,,0,0,0,,whereas in TVM we always have to\Ndescribe the whole optimization
-Dialogue: 0,0:25:15.92,0:25:19.88,Default,,0,0,0,,from scratch because we cannot\Neasily define our own abstruction.
+Dialogue: 0,0:25:15.92,0:25:19.88,Default,,0,0,0,,from scratch because we cannot\Neasily define our own abstraction.
 Dialogue: 0,0:25:19.88,0:25:23.68,Default,,0,0,0,,One crucial problem is also that\Nthe TVM algorithm has to be
 Dialogue: 0,0:25:23.68,0:25:27.20,Default,,0,0,0,,changed a few times during\Nthe tutorial because the scheduling
 Dialogue: 0,0:25:27.20,0:25:28.92,Default,,0,0,0,,language is not powerful enough
@@ -344,7 +344,7 @@ Dialogue: 0,0:29:31.60,0:29:35.56,Default,,0,0,0,,The alphas parser returns a li
 Dialogue: 0,0:29:35.56,0:29:37.40,Default,,0,0,0,,and then appending it to the results
 Dialogue: 0,0:29:37.40,0:29:39.76,Default,,0,0,0,,of more alphas\Nor just the empty list.
 Dialogue: 0,0:29:39.76,0:29:43.32,Default,,0,0,0,,JAMIE: Right. So how does that\Nstrange cons thing work?
-Dialogue: 0,0:29:43.32,0:29:47.80,Default,,0,0,0,,NICK: Okay. So parsers are afflictive\Nso we can lift normal functions
+Dialogue: 0,0:29:43.32,0:29:47.80,Default,,0,0,0,,NICK: Okay. So parsers are applictive\Nso we can lift normal functions
 Dialogue: 0,0:29:47.80,0:29:51.16,Default,,0,0,0,,and constructors like cons\Nso that they can work on parsers.
 Dialogue: 0,0:29:51.16,0:29:54.28,Default,,0,0,0,,So here the pure cons\Njust makes the function
 Dialogue: 0,0:29:54.28,0:29:58.36,Default,,0,0,0,,work at the parser level. And then\Nthe app, which is the star will
@@ -384,7 +384,7 @@ Dialogue: 0,0:31:39.60,0:31:42.72,Default,,0,0,0,,if you represent these\Ncombin
 Dialogue: 0,0:31:42.72,0:31:44.96,Default,,0,0,0,,where the Combinators are\Nall data constructors,
 Dialogue: 0,0:31:44.96,0:31:46.56,Default,,0,0,0,,then you can do things\Nlike grammar analysis,
 Dialogue: 0,0:31:46.56,0:31:48.56,Default,,0,0,0,,which is driven by various laws,
-Dialogue: 0,0:31:48.56,0:31:51.08,Default,,0,0,0,,such as the applicative\Nand alternative laws.
+Dialogue: 0,0:31:48.56,0:31:51.08,Default,,0,0,0,,such as the applictive\Nand alternative laws.
 Dialogue: 0,0:31:51.08,0:31:53.00,Default,,0,0,0,,JAMIE: I guess you could\Noptimize it that way.
 Dialogue: 0,0:31:53.00,0:31:55.04,Default,,0,0,0,,I think it's easier to\Nunderstand performance by
 Dialogue: 0,0:31:55.04,0:31:56.76,Default,,0,0,0,,thinking of an underlying\Nstate machine.
@@ -404,7 +404,7 @@ Dialogue: 0,0:32:30.52,0:32:33.32,Default,,0,0,0,,NICK: Well, I you'll have to g
 Dialogue: 0,0:32:33.32,0:32:37.72,Default,,0,0,0,,JAMIE: Right? Sure. So just read\Nthose dollars as semi-colons and
 Dialogue: 0,0:32:37.72,0:32:40.36,Default,,0,0,0,,your favorite imperative language.\NThen alpha is similar to yours.
 Dialogue: 0,0:32:40.36,0:32:42.00,Default,,0,0,0,,It's just an instruction\Nthat verifies a
-Dialogue: 0,0:32:42.00,0:32:43.68,Default,,0,0,0,,prediacate on the next input token,
+Dialogue: 0,0:32:42.00,0:32:43.68,Default,,0,0,0,,predicate on the next input token,
 Dialogue: 0,0:32:43.68,0:32:47.76,Default,,0,0,0,,and then continues with another\Ninstruction K and alphas performs,
 Dialogue: 0,0:32:47.76,0:32:49.88,Default,,0,0,0,,alpha and then leaves the\Nresult on the stack.
 Dialogue: 0,0:32:49.88,0:32:52.48,Default,,0,0,0,,It then does a catch block\Nto handle any failure.
@@ -431,7 +431,7 @@ Dialogue: 0,0:33:43.44,0:33:45.28,Default,,0,0,0,,That's what makes\Nthe control
 Dialogue: 0,0:33:45.28,0:33:47.92,Default,,0,0,0,,Basically each instruction\Ntakes us an argument,
 Dialogue: 0,0:33:47.92,0:33:49.60,Default,,0,0,0,,the next instruction executes.
 Dialogue: 0,0:33:49.60,0:33:52.24,Default,,0,0,0,,And this is interpreted\Nby passing around two
-Dialogue: 0,0:33:52.24,0:33:54.88,Default,,0,0,0,,continuations at runtime. The\Ngood continuation and the bad one.
+Dialogue: 0,0:33:52.24,0:33:54.88,Default,,0,0,0,,continuations at run time. The\Ngood continuation and the bad one.
 Dialogue: 0,0:33:54.88,0:33:57.88,Default,,0,0,0,,NICK: Of course. So if you\Ncan convert between the
 Dialogue: 0,0:33:57.88,0:34:00.24,Default,,0,0,0,,two representations, then you'll be\Nable to get both the high level
 Dialogue: 0,0:34:00.24,0:34:03.56,Default,,0,0,0,,optimizations and grammar\Nanalysis of my approach and
@@ -471,7 +471,7 @@ Dialogue: 0,0:35:35.76,0:35:39.00,Default,,0,0,0,,then a machine that accepts\Nt
 Dialogue: 0,0:35:39.00,0:35:40.40,Default,,0,0,0,,then we can build\Na machine that requires
 Dialogue: 0,0:35:40.40,0:35:41.84,Default,,0,0,0,,just that Xs in\Norder to continue.
 Dialogue: 0,0:35:41.84,0:35:44.20,Default,,0,0,0,,And the final continuation\Nis going to be Halt.
-Dialogue: 0,0:35:44.20,0:35:46.72,Default,,0,0,0,,It takes the one lement on\Nthe stack and gives it back.
+Dialogue: 0,0:35:44.20,0:35:46.72,Default,,0,0,0,,It takes the one element on\Nthe stack and gives it back.
 Dialogue: 0,0:35:46.72,0:35:50.44,Default,,0,0,0,,NICK: Right. So how would\Nyou translate combinators?
 Dialogue: 0,0:35:50.44,0:35:54.08,Default,,0,0,0,,So for example, the pure, which\Nhas type A to parser A and app,
 Dialogue: 0,0:35:54.08,0:35:57.00,Default,,0,0,0,,which has type parser A to B\Nto parser A to parser B.
@@ -497,7 +497,7 @@ Dialogue: 0,0:36:46.80,0:36:48.92,Default,,0,0,0,,JAMIE: So what staging exactly
 Dialogue: 0,0:36:48.92,0:36:51.64,Default,,0,0,0,,NICK: Alright. Well, so staging\Nas a form of meta programming,
 Dialogue: 0,0:36:51.64,0:36:55.76,Default,,0,0,0,,where you can perform work on\Nstatically known results ahead of
 Dialogue: 0,0:36:55.76,0:36:57.84,Default,,0,0,0,,time leaving only\Ndynamic information
-Dialogue: 0,0:36:57.84,0:37:00.00,Default,,0,0,0,,that runtime it's\Nbasically giving you...
+Dialogue: 0,0:36:57.84,0:37:00.00,Default,,0,0,0,,that run time it's\Nbasically giving you...
 Dialogue: 0,0:37:00.00,0:37:02.16,Default,,0,0,0,,fine grained control over evaluation\Nin your compiler.
 Dialogue: 0,0:37:02.20,0:37:03.88,Default,,0,0,0,,In our case the shape of the machine
 Dialogue: 0,0:37:03.96,0:37:06.24,Default,,0,0,0,,for Parser and its\Ncombinators is static.
@@ -524,7 +524,7 @@ Dialogue: 0,0:37:45.48,0:37:47.68,Default,,0,0,0,,you simply use the anti\Nquote
 Dialogue: 0,0:37:47.76,0:37:50.32,Default,,0,0,0,,to the front so for some\Ncode C of type code A
 Dialogue: 0,0:37:50.40,0:37:53.16,Default,,0,0,0,,Splice C gives back\Na value of type A.
 Dialogue: 0,0:37:53.76,0:37:56.16,Default,,0,0,0,,JAMIE: Oh, so what I have to do,\Nis code to the parts
-Dialogue: 0,0:37:56.16,0:37:57.64,Default,,0,0,0,,that are gonna happen at runtime.
+Dialogue: 0,0:37:56.16,0:37:57.64,Default,,0,0,0,,that are gonna happen at run time.
 Dialogue: 0,0:37:57.64,0:37:58.84,Default,,0,0,0,,NICOLAS: Yep.
 Dialogue: 0,0:37:58.88,0:38:00.40,Default,,0,0,0,,JAMIE: OK, so let's have a look
 Dialogue: 0,0:38:00.44,0:38:01.88,Default,,0,0,0,,at the machine state the where it's interpreted
@@ -555,7 +555,7 @@ Dialogue: 0,0:38:51.88,0:38:54.40,Default,,0,0,0,,So the machines take gammas\Na
 Dialogue: 0,0:38:54.56,0:38:57.12,Default,,0,0,0,,so we should be able to get rid\Nof that at compile time too.
 Dialogue: 0,0:38:57.84,0:39:00.60,Default,,0,0,0,,So if I push the code\Ninto the gamma,
 Dialogue: 0,0:39:01.12,0:39:03.28,Default,,0,0,0,,then we can ensure it\Nonly exist at a compile time.
-Dialogue: 0,0:39:03.80,0:39:06.80,Default,,0,0,0,,Yeah so runtime will produce\Na function with four arguments,
+Dialogue: 0,0:39:03.80,0:39:06.80,Default,,0,0,0,,Yeah so run time will produce\Na function with four arguments,
 Dialogue: 0,0:39:06.84,0:39:09.56,Default,,0,0,0,,one for each component,\Nbut the actual records gone.
 Dialogue: 0,0:39:10.80,0:39:12.96,Default,,0,0,0,,There's sort of this, gonna\Nbe more we can do now.
 Dialogue: 0,0:39:13.76,0:39:15.24,Default,,0,0,0,,NICOLAS: Well,\Nthe fact that, H list.
@@ -567,7 +567,7 @@ Dialogue: 0,0:39:25.28,0:39:28.00,Default,,0,0,0,,So you could push the code\Nin
 Dialogue: 0,0:39:28.60,0:39:31.28,Default,,0,0,0,,JAMIE: I see, so, if I map
 Dialogue: 0,0:39:31.56,0:39:33.72,Default,,0,0,0,,the code over the values in the H list,
 Dialogue: 0,0:39:34.48,0:39:37.80,Default,,0,0,0,,then the H list itself is only\Ngoing to exist at compile time,
-Dialogue: 0,0:39:38.12,0:39:39.84,Default,,0,0,0,,and the values exist at runtime.
+Dialogue: 0,0:39:38.12,0:39:39.84,Default,,0,0,0,,and the values exist at run time.
 Dialogue: 0,0:39:40.60,0:39:43.16,Default,,0,0,0,,And I guess the structure,\Nthe handle stack is
 Dialogue: 0,0:39:43.20,0:39:45.48,Default,,0,0,0,,the same it's determined by\Nthe instructions as well.
 Dialogue: 0,0:39:46.04,0:39:49.48,Default,,0,0,0,,So I guess we can operate that\Nlist at compile time too.
@@ -616,7 +616,7 @@ Dialogue: 0,0:41:17.80,0:41:19.60,Default,,0,0,0,,the part of the grammar\Nthat'
 Dialogue: 0,0:41:20.40,0:41:22.40,Default,,0,0,0,,JAMIE: Oh, well we've already\Nseen an operation
 Dialogue: 0,0:41:22.48,0:41:24.00,Default,,0,0,0,,like that right?\N it was it was case.
 Dialogue: 0,0:41:24.08,0:41:26.00,Default,,0,0,0,,So both of the outcomes\Nare known statically,
-Dialogue: 0,0:41:26.32,0:41:29.00,Default,,0,0,0,,but you don't know which path\Nis taken until runtime.
+Dialogue: 0,0:41:26.32,0:41:29.00,Default,,0,0,0,,but you don't know which path\Nis taken until run time.
 Dialogue: 0,0:41:29.36,0:41:30.40,Default,,0,0,0,,NICOLAS: Interesting.
 Dialogue: 0,0:41:30.48,0:41:33.32,Default,,0,0,0,,I wonder if this corresponds\Nto Marco's work on selected functors,
 Dialogue: 0,0:41:33.40,0:41:35.68,Default,,0,0,0,,it seems to behave similarly\Nto his branch operation
@@ -845,9 +845,9 @@ Dialogue: 0,0:54:07.92,0:54:10.56,Default,,0,0,0,,and so on and so forth,\Nand u
 Dialogue: 0,0:54:10.72,0:54:14.08,Default,,0,0,0,,as we would want to\Nin a functional language
 Dialogue: 0,0:54:20.40,0:54:23.44,Default,,0,0,0,,The type checker will\Nannotate the region
 Dialogue: 0,0:54:23.72,0:54:26.68,Default,,0,0,0,,as we would expect, here we are
-Dialogue: 0,0:54:26.84,0:54:29.64,Default,,0,0,0,,the disjoined region\Nfor the shared borrow
+Dialogue: 0,0:54:26.84,0:54:29.64,Default,,0,0,0,,the disjoint region\Nfor the shared borrow
 Dialogue: 0,0:54:29.68,0:54:33.00,Default,,0,0,0,,and the exclusive borrow
-Dialogue: 0,0:54:33.08,0:54:35.60,Default,,0,0,0,,and they are perfectly disjoined.
+Dialogue: 0,0:54:33.08,0:54:35.60,Default,,0,0,0,,and they are perfectly disjointed.
 Dialogue: 0,0:54:35.84,0:54:37.32,Default,,0,0,0,,Finally, as we said before,
 Dialogue: 0,0:54:37.32,0:54:38.92,Default,,0,0,0,,we have no type annotations,
 Dialogue: 0,0:54:38.96,0:54:42.00,Default,,0,0,0,,so even if I used the average.
@@ -927,7 +927,7 @@ Dialogue: 0,0:59:05.96,0:59:09.92,Default,,0,0,0,,try tactic one in that\Nworld 
 Dialogue: 0,0:59:09.92,0:59:12.92,Default,,0,0,0,,in constant time and no\Nextra programming effort,
 Dialogue: 0,0:59:12.92,0:59:16.84,Default,,0,0,0,,we can just roll back\Nthe world to the snapshot
 Dialogue: 0,0:59:16.84,0:59:21.12,Default,,0,0,0,,before we started tac1 and then\Ntry the second tactic in it.
-Dialogue: 0,0:59:21.12,0:59:24.04,Default,,0,0,0,,And as we would expect, most\Ninteractive thorem provers
+Dialogue: 0,0:59:21.12,0:59:24.04,Default,,0,0,0,,And as we would expect, most\Ninteractive theorem provers
 Dialogue: 0,0:59:24.04,0:59:26.92,Default,,0,0,0,,are written in functional\Nprogramming languages.
 Dialogue: 0,0:59:26.92,0:59:31.36,Default,,0,0,0,,So, Isabelle/HOL is written in\NPoly/ML, Coq is written in OCaml,
 Dialogue: 0,0:59:31.36,0:59:33.76,Default,,0,0,0,,Agda and Idris are\Nwritten in Haskell
@@ -1070,7 +1070,7 @@ Dialogue: 0,1:07:15.36,1:07:19.24,Default,,0,0,0,,and get the desired expected\N
 Dialogue: 0,1:07:19.24,1:07:21.84,Default,,0,0,0,,But, if your language does\Nnot have this feature,
 Dialogue: 0,1:07:21.84,1:07:25.52,Default,,0,0,0,,then you can still use functional\Nor persistent hash tables,
 Dialogue: 0,1:07:25.52,1:07:29.40,Default,,0,0,0,,and then all of the same\Nconstructions applied,
-Dialogue: 0,1:07:29.40,1:07:34.40,Default,,0,0,0,,but everytime we say linear really\Nmeans quasi-linear for you.
+Dialogue: 0,1:07:29.40,1:07:34.40,Default,,0,0,0,,but every time we say linear really\Nmeans quasi-linear for you.
 Dialogue: 0,1:07:34.92,1:07:42.52,Default,,0,0,0,,Now, the semi-naive traversal,\Nwe call evalFastEqFastHash.
 Dialogue: 0,1:07:42.52,1:07:47.92,Default,,0,0,0,,Which is to use the recursive\NwithPtrEq test for the equality,
 Dialogue: 0,1:07:47.96,1:07:51.84,Default,,0,0,0,,and to also cache using\Nthe constant-time
@@ -1352,7 +1352,7 @@ Dialogue: 0,1:21:07.08,1:21:09.28,Default,,0,0,0,,At this stage, the handler\Nis
 Dialogue: 0,1:21:09.28,1:21:10.72,Default,,0,0,0,,to the most recent query
 Dialogue: 0,1:21:10.72,1:21:14.04,Default,,0,0,0,,and apply the continuation to false,
 Dialogue: 0,1:21:14.04,1:21:17.12,Default,,0,0,0,,taking us down the right\Nbranch in the tree.
-Dialogue: 0,1:21:17.12,1:21:19.24,Default,,0,0,0,,Now we find ourself\Nagain at the leaf node,
+Dialogue: 0,1:21:17.12,1:21:19.24,Default,,0,0,0,,Now we find ourselves\Nagain at the leaf node,
 Dialogue: 0,1:21:19.24,1:21:20.84,Default,,0,0,0,,so we're going to invoke\Nthe value clause,
 Dialogue: 0,1:21:20.84,1:21:22.88,Default,,0,0,0,,but this time with the answer true,
 Dialogue: 0,1:21:22.88,1:21:26.48,Default,,0,0,0,,meaning that will return a one.
@@ -1368,7 +1368,7 @@ Dialogue: 0,1:21:49.48,1:21:53.36,Default,,0,0,0,,computation tree model it's\Nb
 Dialogue: 0,1:21:53.36,1:21:54.56,Default,,0,0,0,,So if we generalize a bit.
 Dialogue: 0,1:21:54.56,1:21:56.88,Default,,0,0,0,,This means that computation involves
 Dialogue: 0,1:21:57.24,1:22:02.24,Default,,0,0,0,,Big O two to the N steps.
-Dialogue: 0,1:22:03.00,1:22:05.16,Default,,0,0,0,,Now, in PCF, we dont have effect handles.
+Dialogue: 0,1:22:03.00,1:22:05.16,Default,,0,0,0,,Now, in PCF, we don't have effect handles.
 Dialogue: 0,1:22:05.16,1:22:06.64,Default,,0,0,0,,There's no mechanism\Nfor backtracking
 Dialogue: 0,1:22:06.64,1:22:08.56,Default,,0,0,0,,for sharing computation.
 Dialogue: 0,1:22:08.56,1:22:10.92,Default,,0,0,0,,Therefore, every generic\Ncounter function must restart
@@ -1746,7 +1746,7 @@ Dialogue: 0,1:40:06.16,1:40:08.16,Default,,0,0,0,,to prove various\Nprogram equi
 Dialogue: 0,1:40:08.16,1:40:10.48,Default,,0,0,0,,like the one we saw today.
 Dialogue: 0,1:40:10.48,1:40:12.68,Default,,0,0,0,,Finally, we showed that\Nfocusing can be used
 Dialogue: 0,1:40:12.68,1:40:15.76,Default,,0,0,0,,to prove compositional compiler\Ncorrectness properties,
-Dialogue: 0,1:40:15.76,1:40:17.28,Default,,0,0,0,,like full abstruction.
+Dialogue: 0,1:40:15.76,1:40:17.28,Default,,0,0,0,,like full abstraction.
 Dialogue: 0,1:40:17.28,1:40:19.32,Default,,0,0,0,,And when we do this\Nfor a simple compiler
 Dialogue: 0,1:40:19.32,1:40:22.48,Default,,0,0,0,,from a language that's\Npure into a language
 Dialogue: 0,1:40:22.48,1:40:24.20,Default,,0,0,0,,with a simple divergence effect,
@@ -1887,7 +1887,7 @@ Dialogue: 0,1:48:49.56,1:48:52.60,Default,,0,0,0,,between multiple\Ndomains may 
 Dialogue: 0,1:48:52.60,1:48:55.36,Default,,0,0,0,,One of the major contributions\Nin this paper is
 Dialogue: 0,1:48:55.36,1:48:57.56,Default,,0,0,0,,extending this design\Nto support a variety
 Dialogue: 0,1:48:57.56,1:49:02.40,Default,,0,0,0,,of additional features such as\Nweak references, ephemerons,
-Dialogue: 0,1:49:03.44,1:49:06.60,Default,,0,0,0,,two different kinds of\Nfinalisers, fibers, lazy values
+Dialogue: 0,1:49:03.44,1:49:06.60,Default,,0,0,0,,two different kinds of\Nfinalizers, fibers, lazy values
 Dialogue: 0,1:49:06.60,1:49:08.84,Default,,0,0,0,,and so on.
 Dialogue: 0,1:49:08.84,1:49:12.00,Default,,0,0,0,,Ephemerons are particularly\Ntricky to get efficiently
 Dialogue: 0,1:49:12.00,1:49:14.80,Default,,0,0,0,,implemented in\Nthe concurrent multi-core GC.
@@ -1901,7 +1901,7 @@ Dialogue: 0,1:49:33.76,1:49:36.60,Default,,0,0,0,,And in this work,\Nwhat we've 
 Dialogue: 0,1:49:36.60,1:49:41.36,Default,,0,0,0,,we can implement a cycle\Ndelimited handshaking algorithm
 Dialogue: 0,1:49:41.36,1:49:44.16,Default,,0,0,0,,in order to perform\Nthe ephemeron marking,
 Dialogue: 0,1:49:44.16,1:49:48.56,Default,,0,0,0,,without requiring a global barrier.
-Dialogue: 0,1:49:48.56,1:49:50.44,Default,,0,0,0,,The two different kinds\Nof finalisers in Ocaml
+Dialogue: 0,1:49:48.56,1:49:50.44,Default,,0,0,0,,The two different kinds\Nof finalizers in Ocaml
 Dialogue: 0,1:49:50.44,1:49:54.84,Default,,0,0,0,,also need two barriers,\None barrier each.
 Dialogue: 0,1:49:54.84,1:49:57.72,Default,,0,0,0,,And in the worst case, we need\Nthree barriers per cycle,
 Dialogue: 0,1:49:57.72,1:49:59.96,Default,,0,0,0,,a major cycle.
@@ -1924,7 +1924,7 @@ Dialogue: 0,1:50:55.92,1:50:58.28,Default,,0,0,0,,So early promotion is\Na probl
 Dialogue: 0,1:50:58.28,1:51:00.00,Default,,0,0,0,,to an object, which is promoted,
 Dialogue: 0,1:51:00.40,1:51:02.76,Default,,0,0,0,,which would\Notherwise have not been.
 Dialogue: 0,1:51:03.44,1:51:05.84,Default,,0,0,0,,If you hadn't\Nestablished this pointer
-Dialogue: 0,1:51:05.84,1:51:08.32,Default,,0,0,0,,and this also mirrors\Nsequential behaviour
+Dialogue: 0,1:51:05.84,1:51:08.32,Default,,0,0,0,,and this also mirrors\Nsequential behavior
 Dialogue: 0,1:51:09.08,1:51:11.84,Default,,0,0,0,,and unfortunately, what this does is
 Dialogue: 0,1:51:12.32,1:51:14.80,Default,,0,0,0,,a particular domain\Nmay follow a pointer
 Dialogue: 0,1:51:14.80,1:51:16.52,Default,,0,0,0,,from the major to the minor heap
@@ -1934,7 +1934,7 @@ Dialogue: 0,1:51:22.00,1:51:24.60,Default,,0,0,0,,So, what we need to do is\Nins
 Dialogue: 0,1:51:24.60,1:51:27.28,Default,,0,0,0,,on reading OCaml object fields
 Dialogue: 0,1:51:27.32,1:51:31.00,Default,,0,0,0,,which detects whether the result\Nof the read is going to be
 Dialogue: 0,1:51:31.00,1:51:32.92,Default,,0,0,0,,a value and a remote minor heap
-Dialogue: 0,1:51:33.28,1:51:36.76,Default,,0,0,0,,in which case, the domain\Nsensor interdomain interrupt
+Dialogue: 0,1:51:33.28,1:51:36.76,Default,,0,0,0,,in which case, the domain\Nsensor inter-domain interrupt
 Dialogue: 0,1:51:36.76,1:51:39.52,Default,,0,0,0,,requesting the target domain\Nto promote the object
 Dialogue: 0,1:51:40.00,1:51:41.88,Default,,0,0,0,,which in turn might perform
 Dialogue: 0,1:51:42.24,1:51:44.24,Default,,0,0,0,,a local minor garbage collection.
@@ -1952,7 +1952,7 @@ Dialogue: 0,1:52:16.72,1:52:19.84,Default,,0,0,0,,And the proof of correctness o
 Dialogue: 0,1:52:20.64,1:52:21.64,Default,,0,0,0,,And the...
 Dialogue: 0,1:52:22.32,1:52:23.84,Default,,0,0,0,,Because these
 Dialogue: 0,1:52:24.44,1:52:26.20,Default,,0,0,0,,read faults are going to be so rare
-Dialogue: 0,1:52:26.20,1:52:28.52,Default,,0,0,0,,the branch prefictor correctly\Npredicts the branch
+Dialogue: 0,1:52:26.20,1:52:28.52,Default,,0,0,0,,the branch predictor correctly\Npredicts the branch
 Dialogue: 0,1:52:28.52,1:52:30.60,Default,,0,0,0,,almost every read.
 Dialogue: 0,1:52:30.88,1:52:32.88,Default,,0,0,0,,So, the performance impact of
 Dialogue: 0,1:52:32.88,1:52:35.52,Default,,0,0,0,,these additional instructions is\Nminimal on sequential code.
@@ -1972,7 +1972,7 @@ Dialogue: 0,1:53:11.44,1:53:15.24,Default,,0,0,0,,So, the issue is that because\
 Dialogue: 0,1:53:15.96,1:53:18.48,Default,,0,0,0,,a minor collection,
 Dialogue: 0,1:53:19.16,1:53:23.08,Default,,0,0,0,,a mutable read is in fact a GC\Nsafe point where GC may happen.
 Dialogue: 0,1:53:25.08,1:53:26.44,Default,,0,0,0,,But this
-Dialogue: 0,1:53:27.56,1:53:29.36,Default,,0,0,0,,breaks the ivariant that
+Dialogue: 0,1:53:27.56,1:53:29.36,Default,,0,0,0,,breaks the invariant that
 Dialogue: 0,1:53:29.36,1:53:31.44,Default,,0,0,0,,we have in stock OCaml where
 Dialogue: 0,1:53:31.44,1:53:33.16,Default,,0,0,0,,we don't have any\Nread barriers at all
 Dialogue: 0,1:53:33.48,1:53:36.48,Default,,0,0,0,,and in particular, the C API\Nis often explicitly written
@@ -2095,11 +2095,11 @@ Dialogue: 0,1:59:28.56,1:59:31.76,Default,,0,0,0,,declaratively and separately\N
 Dialogue: 0,1:59:32.08,1:59:35.44,Default,,0,0,0,,And then, let an information\Nflow control framework
 Dialogue: 0,1:59:35.44,1:59:39.00,Default,,0,0,0,,ensure that the code\Nsatisfies these policies.
 Dialogue: 0,1:59:39.48,1:59:43.44,Default,,0,0,0,,IFC frameworks come in two\Nflavors - static and dynamic
-Dialogue: 0,1:59:43.44,1:59:46.52,Default,,0,0,0,,which have complementary\Nstrengths and weakenesses.
+Dialogue: 0,1:59:43.44,1:59:46.52,Default,,0,0,0,,which have complementary\Nstrengths and weaknesses.
 Dialogue: 0,1:59:46.92,1:59:49.84,Default,,0,0,0,,In this work, we will\Nfocus on static techniques
 Dialogue: 0,1:59:49.84,1:59:54.48,Default,,0,0,0,,which ensure absence of leaks\Nonce and for all at compile time,
 Dialogue: 0,1:59:54.56,2:00:00.64,Default,,0,0,0,,hence avoiding surprise failures\Nand performance overhead at runtime.
-Dialogue: 0,2:00:00.64,2:00:05.64,Default,,0,0,0,,On the flipside, existing static\Ntechniques are unable to handle
+Dialogue: 0,2:00:00.64,2:00:05.64,Default,,0,0,0,,On the flip side, existing static\Ntechniques are unable to handle
 Dialogue: 0,2:00:05.64,2:00:09.44,Default,,0,0,0,,rich policies that modern\Napplications need
 Dialogue: 0,2:00:09.44,2:00:14.20,Default,,0,0,0,,or if they can, they require\Nprogrammers to provide proof hints
 Dialogue: 0,2:00:14.20,2:00:16.80,Default,,0,0,0,,to verify absence of leaks.
@@ -2213,7 +2213,7 @@ Dialogue: 0,2:06:12.84,2:06:16.56,Default,,0,0,0,,to implement some simple funct
 Dialogue: 0,2:06:17.28,2:06:20.36,Default,,0,0,0,,Say I'm on the program\Ncommittee of IFCP 20
 Dialogue: 0,2:06:20.36,2:06:22.84,Default,,0,0,0,,and I'm viewing the list\Nof all submissions,
 Dialogue: 0,2:06:22.84,2:06:27.20,Default,,0,0,0,,but I'm also an author of one of\Nthe submissions highlighted in grey.
-Dialogue: 0,2:06:27.88,2:06:30.96,Default,,0,0,0,,As an author, I have a conflict\Nwith this submsision.
+Dialogue: 0,2:06:27.88,2:06:30.96,Default,,0,0,0,,As an author, I have a conflict\Nwith this submission.
 Dialogue: 0,2:06:31.24,2:06:35.52,Default,,0,0,0,,The conference manager has\Na policy that a conflicted reviewer
 Dialogue: 0,2:06:35.52,2:06:39.76,Default,,0,0,0,,is not supposed to learn\Nthe score or the decision for a paper
 Dialogue: 0,2:06:39.76,2:06:41.92,Default,,0,0,0,,until the notifications are out.
@@ -2258,7 +2258,7 @@ Dialogue: 0,2:08:35.36,2:08:39.16,Default,,0,0,0,,To this end, I will write\Na f
 Dialogue: 0,2:08:39.16,2:08:41.56,Default,,0,0,0,,that takes an input\Nat data store, ds
 Dialogue: 0,2:08:41.56,2:08:43.52,Default,,0,0,0,,and the current user, client.
 Dialogue: 0,2:08:44.04,2:08:46.48,Default,,0,0,0,,Lifty supports\Na Haskell-like do notation
-Dialogue: 0,2:08:46.48,2:08:50.60,Default,,0,0,0,,that desugars into invocatoins\Nof bind in a standard way.
+Dialogue: 0,2:08:46.48,2:08:50.60,Default,,0,0,0,,that desugars into invocations\Nof bind in a standard way.
 Dialogue: 0,2:08:51.08,2:08:53.56,Default,,0,0,0,,Here, I first retrieved\Nthe list of all submissions,
 Dialogue: 0,2:08:53.56,2:08:56.00,Default,,0,0,0,,then sort them using\Na custom comparator
 Dialogue: 0,2:08:56.00,2:08:57.52,Default,,0,0,0,,that I will implement shortly
@@ -2277,26 +2277,26 @@ Dialogue: 0,2:09:23.36,2:09:25.72,Default,,0,0,0,,for the two calls to getPaperS
 Dialogue: 0,2:09:25.72,2:09:30.00,Default,,0,0,0,,Lifty is complaining that\Nthey're not visible to client.
 Dialogue: 0,2:09:30.00,2:09:32.36,Default,,0,0,0,,Instead of trying to\Ndecipher that error message
 Dialogue: 0,2:09:32.36,2:09:33.84,Default,,0,0,0,,and fix the leak myself
-Dialogue: 0,2:09:33.84,2:09:36.20,Default,,0,0,0,,I can ask lifty to do it for me.
-Dialogue: 0,2:09:36.20,2:09:39.44,Default,,0,0,0,,In this case, lifty\Nreturns a modified program
+Dialogue: 0,2:09:33.84,2:09:36.20,Default,,0,0,0,,I can ask Lifty to do it for me.
+Dialogue: 0,2:09:36.20,2:09:39.44,Default,,0,0,0,,In this case, Lifty\Nreturns a modified program
 Dialogue: 0,2:09:39.44,2:09:43.76,Default,,0,0,0,,where I call to get paper score\Nis wrapper in a policy check.
 Dialogue: 0,2:09:43.76,2:09:47.28,Default,,0,0,0,,The check retrieves\Nthe conflict list for this paper
 Dialogue: 0,2:09:47.28,2:09:50.44,Default,,0,0,0,,and checks whether\Nthe client is on that list.
 Dialogue: 0,2:09:50.44,2:09:52.44,Default,,0,0,0,,If client is in fact conflicted
 Dialogue: 0,2:09:52.44,2:09:57.24,Default,,0,0,0,,our generated patch returns\Na default score of zero.
 Dialogue: 0,2:09:57.24,2:09:58.72,Default,,0,0,0,,In the final part of the talk
-Dialogue: 0,2:09:58.72,2:10:03.12,Default,,0,0,0,,let's see how lifty's leak\Nrepair works under the hood.
-Dialogue: 0,2:10:03.12,2:10:06.96,Default,,0,0,0,,Consider a stripdown version of\Nthe leak I just showed you.
+Dialogue: 0,2:09:58.72,2:10:03.12,Default,,0,0,0,,let's see how Lifty's leak\Nrepair works under the hood.
+Dialogue: 0,2:10:03.12,2:10:06.96,Default,,0,0,0,,Consider a stripped down version of\Nthe leak I just showed you.
 Dialogue: 0,2:10:06.96,2:10:10.44,Default,,0,0,0,,In this version we simply\Nread the paper score
 Dialogue: 0,2:10:10.44,2:10:12.76,Default,,0,0,0,,and directly show it to the user
 Dialogue: 0,2:10:12.76,2:10:15.60,Default,,0,0,0,,who of course might be conflicted.
-Dialogue: 0,2:10:15.60,2:10:18.04,Default,,0,0,0,,How does lifty repair this leak?
+Dialogue: 0,2:10:15.60,2:10:18.04,Default,,0,0,0,,How does Lifty repair this leak?
 Dialogue: 0,2:10:18.04,2:10:20.80,Default,,0,0,0,,The key insight is to\Nuse the information
 Dialogue: 0,2:10:20.80,2:10:23.12,Default,,0,0,0,,from the failed type\Nchecking attempt
 Dialogue: 0,2:10:23.12,2:10:29.20,Default,,0,0,0,,to localize the leak and infer\Na local specification for the patch.
 Dialogue: 0,2:10:29.24,2:10:34.24,Default,,0,0,0,,First, let's desugar the denotation\Ninto invocations of bind.
 Dialogue: 0,2:10:34.24,2:10:35.88,Default,,0,0,0,,While type checking the program
-Dialogue: 0,2:10:35.88,2:10:39.40,Default,,0,0,0,,lifty infers the following\Ntypes for the two computations
+Dialogue: 0,2:10:35.88,2:10:39.40,Default,,0,0,0,,Lifty infers the following\Ntypes for the two computations
 Dialogue: 0,2:10:39.40,2:10:41.40,Default,,0,0,0,,sequenced by bind.
 Dialogue: 0,2:10:41.40,2:10:44.52,Default,,0,0,0,,Now recall that our type\Nsignature for bind
 Dialogue: 0,2:10:44.52,2:10:47.80,Default,,0,0,0,,enforces that the output label\Nof the second computation
@@ -2311,11 +2311,11 @@ Dialogue: 0,2:11:10.04,2:11:13.40,Default,,0,0,0,,generated the right-hand side\
 Dialogue: 0,2:11:13.40,2:11:17.04,Default,,0,0,0,,So it knows exactly\Nwhere the leak occurred.
 Dialogue: 0,2:11:17.04,2:11:20.56,Default,,0,0,0,,In this case, the problem is\Nthe call to get paper score
 Dialogue: 0,2:11:20.56,2:11:24.64,Default,,0,0,0,,whose result is too\Nsensitive for its context.
-Dialogue: 0,2:11:24.64,2:11:28.40,Default,,0,0,0,,To fix the leak lifty replaces\Nthe offending input action
+Dialogue: 0,2:11:24.64,2:11:28.40,Default,,0,0,0,,To fix the leak Lifty replaces\Nthe offending input action
 Dialogue: 0,2:11:28.40,2:11:29.88,Default,,0,0,0,,with a patch template
 Dialogue: 0,2:11:29.88,2:11:33.80,Default,,0,0,0,,whose intention is to return\Nthe original value whenever it's safe
 Dialogue: 0,2:11:33.80,2:11:39.28,Default,,0,0,0,,and otherwise return a less\Nsensitive default or redacted value.
-Dialogue: 0,2:11:39.36,2:11:41.36,Default,,0,0,0,,Crucially the lifty type checker
+Dialogue: 0,2:11:39.36,2:11:41.36,Default,,0,0,0,,Crucially the Lifty type checker
 Dialogue: 0,2:11:41.36,2:11:44.92,Default,,0,0,0,,not only pinpoints the input\Naction that needs to be replaced
 Dialogue: 0,2:11:44.92,2:11:49.60,Default,,0,0,0,,but also infers a local specification\Nthat the patch needs to satisfy
 Dialogue: 0,2:11:49.60,2:11:52.16,Default,,0,0,0,,in order for\Nthe program to be secure.
@@ -2331,17 +2331,17 @@ Dialogue: 0,2:12:19.00,2:12:23.56,Default,,0,0,0,,synthesis is performed complet
 Dialogue: 0,2:12:23.64,2:12:28.60,Default,,0,0,0,,So leak repair scales reasonably well\Nto programs with multiple leaks
 Dialogue: 0,2:12:28.60,2:12:30.48,Default,,0,0,0,,as we have seen in the demo.
 Dialogue: 0,2:12:30.48,2:12:31.48,Default,,0,0,0,,In conclusion,
-Dialogue: 0,2:12:31.48,2:12:35.68,Default,,0,0,0,,we have presented a new static\NIFC framework called lifty.
+Dialogue: 0,2:12:31.48,2:12:35.68,Default,,0,0,0,,we have presented a new static\NIFC framework called Lifty.
 Dialogue: 0,2:12:35.68,2:12:39.92,Default,,0,0,0,,Lifty is able to statically\Nand automatically verify applications
 Dialogue: 0,2:12:39.92,2:12:42.76,Default,,0,0,0,,against rich security policies
 Dialogue: 0,2:12:42.76,2:12:44.68,Default,,0,0,0,,and suggest leak patches
 Dialogue: 0,2:12:44.68,2:12:48.00,Default,,0,0,0,,when the application does\Nnot satisfy the policies.
-Dialogue: 0,2:12:48.00,2:12:50.40,Default,,0,0,0,,You can play with lifty\Nthrough our web interface
+Dialogue: 0,2:12:48.00,2:12:50.40,Default,,0,0,0,,You can play with Lifty\Nthrough our web interface
 Dialogue: 0,2:12:50.40,2:12:55.40,Default,,0,0,0,,available at this link.
 Dialogue: 0,2:13:01.36,2:13:04.44,Default,,0,0,0,,ALAN JEFFREY: Thank you Jean and Nadia.
-Dialogue: 0,2:13:04.44,2:13:09.24,Default,,0,0,0,,So there's going to be\Nlive Q&A for this talk
+Dialogue: 0,2:13:04.44,2:13:09.24,Default,,0,0,0,,So there's going to be a\Nlive Q&A for this talk
 Dialogue: 0,2:13:09.32,2:13:12.52,Default,,0,0,0,,if you are in the New York timezone
-Dialogue: 0,2:13:12.52,2:13:17.08,Default,,0,0,0,,and you can get to it as\Nusual by going to the link.
+Dialogue: 0,2:13:12.52,2:13:17.08,Default,,0,0,0,,and you can get to it as\Nusual by going to the link in Clowdr.
 Dialogue: 0,2:13:17.08,2:13:19.32,Default,,0,0,0,,So now if you would like to join us
 Dialogue: 0,2:13:19.32,2:13:24.20,Default,,0,0,0,,for the virtual milling outside\Nthe conference hall
 Dialogue: 0,2:13:24.24,2:13:26.68,Default,,0,0,0,,chatting and drinking coffee
