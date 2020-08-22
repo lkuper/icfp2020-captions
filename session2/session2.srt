@@ -5480,12 +5480,12 @@ the authors for a live Q&A,
 
 1157
 01:12:59,920 --> 01:13:01,720
-and during the New York time zone,
+and you're in the New York time zone,
 
 1158
 01:13:01,720 --> 01:13:06,720
-and then click on the link in
-the slider page for this paper.
+then click on the link in
+the Clowdr page for this paper.
 
 1159
 01:13:12,280 --> 01:13:15,640
@@ -5560,12 +5560,12 @@ like first class control,
 1174
 01:13:50,760 --> 01:13:53,600
 it is customary to consider
-language with the set feature,
+language with the said feature,
 
 1175
 01:13:53,600 --> 01:13:56,120
 and then the fragment
-module of that feature.
+modulo that feature.
 
 1176
 01:13:56,120 --> 01:13:58,920
@@ -5602,13 +5602,13 @@ reasonable languages,
 
 1183
 01:14:11,640 --> 01:14:15,000
-but first all the types
-as being ECR expressive.
+with first-order types
+as being equally expressive.
 
 1184
 01:14:15,000 --> 01:14:17,560
 So in this work, we are in
-the realm of fire types,
+the realm of higher types,
 
 1185
 01:14:17,560 --> 01:14:18,720
@@ -5616,23 +5616,23 @@ and we show that in this realm,
 
 1186
 01:14:18,720 --> 01:14:20,760
-the presence of a first
+the presence of first
 class control can improve
 
 1187
 01:14:20,760 --> 01:14:23,880
-DSM static run time
+the asymptotic run time
 of some programs.
 
 1188
 01:14:23,880 --> 01:14:26,160
 To show this, we consider
-this a generic count problem
+this generic count problem
 
 1189
 01:14:26,160 --> 01:14:27,760
-with an asterisk to implement
-the fertile of functions
+which is asked to implement
+the third-order function
 
 1190
 01:14:27,760 --> 01:14:29,800
@@ -5653,7 +5653,7 @@ It is a functional representation
 
 1194
 01:14:36,560 --> 01:14:39,360
-of a bullion value vector of size N.
+of a boolean value vector of size N.
 
 1195
 01:14:39,360 --> 01:14:41,840
@@ -5677,7 +5677,7 @@ or false depending on
 1199
 01:14:47,760 --> 01:14:50,840
 where it is satisfied
-by its provider point.
+by its provided point.
 
 1200
 01:14:50,840 --> 01:14:54,480
@@ -5696,13 +5696,13 @@ or in other words,
 
 1203
 01:15:00,080 --> 01:15:03,760
-it comes to number of times
+it counts to number of times
 a given predicate returns true.
 
 1204
 01:15:03,760 --> 01:15:06,760
-We fixed our base language
-to be simple type PCF
+We fix our base language
+to be simple typed PCF
 
 1205
 01:15:06,800 --> 01:15:09,080
@@ -5735,12 +5735,12 @@ for the purpose of this work.
 
 1211
 01:15:22,720 --> 01:15:24,680
-Then we first show that they
-exist in implementation
+Then we first show that there
+exists an implementation
 
 1212
 01:15:24,680 --> 01:15:27,000
-that generic count in PCF
+of that generic count in PCF
 for the effect handlers,
 
 1213
@@ -5808,8 +5808,8 @@ on the methodology.
 
 1227
 01:16:00,920 --> 01:16:03,480
-One important rule, namely
-that the type signature
+We impose one important rule,
+namely that the type signature
 
 1228
 01:16:03,480 --> 01:16:05,600
@@ -5823,7 +5823,7 @@ PCF or PCF with effect handlers
 1230
 01:16:08,920 --> 01:16:12,880
 is allowed to change the type
-to get you off generic count.
+signature of generic count.
 
 1231
 01:16:12,880 --> 01:16:15,320
@@ -5848,11 +5848,11 @@ study the essence of the power
 1235
 01:16:24,920 --> 01:16:27,680
 provided by effect
-handlers. (INAUDIBLE)
+handlers. Moreover
 
 1236
 01:16:27,680 --> 01:16:30,080
-This rule is also reminiscence
+this rule is also reminiscent
 of the restriction
 
 1237
@@ -5862,7 +5862,7 @@ faced by every day,
 
 1238
 01:16:32,200 --> 01:16:33,920
-when the program
+when programming
 against an interface.
 
 1239
@@ -5877,7 +5877,7 @@ at the following example predicate
 
 1241
 01:16:39,440 --> 01:16:42,520
-called EEX and its
+called EX and its
 induced computation tree model.
 
 1242
@@ -5890,8 +5890,8 @@ and applies this point to zero,
 
 1244
 01:16:47,160 --> 01:16:50,160
-or queries to C of
-component of the point.
+or queries to see if
+component has the point.
 
 1245
 01:16:50,160 --> 01:16:51,960
@@ -5899,7 +5899,7 @@ This is reflected in the tree model,
 
 1246
 01:16:51,960 --> 01:16:55,880
-by the first anterior node,
+by the first interior node,
 which reads question mark zero.
 
 1247
@@ -5909,7 +5909,7 @@ mark prefix here
 
 1248
 01:16:58,200 --> 01:17:02,000
-to denote vocations
+to denote invocations
 or queries of points.
 
 1249
@@ -5944,7 +5944,7 @@ evaluation of this predicate.
 1255
 01:17:22,360 --> 01:17:26,600
 Supposed we apply to a point
-whose C of component is true.
+whose zeroth component is true.
 
 1256
 01:17:26,880 --> 01:17:31,840
@@ -5957,8 +5957,8 @@ Evaluation begins in the predicate,
 
 1258
 01:17:34,040 --> 01:17:37,080
-and eventually queries to C
-of component of the point,
+and eventually queries the
+zeroth component of the point,
 
 1259
 01:17:37,080 --> 01:17:38,520
@@ -5972,7 +5972,7 @@ the left branch down the tree
 1261
 01:17:41,840 --> 01:17:44,000
 this corresponds to
-continuative evaluation
+continuing evaluation
 
 1262
 01:17:44,000 --> 01:17:47,040
@@ -5981,7 +5981,7 @@ of the then branch in the predicate.
 1263
 01:17:47,040 --> 01:17:50,240
 Eventually, the predicate will
-grow the first component
+query the first component
 
 1264
 01:17:50,240 --> 01:17:51,880
@@ -5999,7 +5999,7 @@ point, the predicate
 
 1267
 01:17:56,440 --> 01:17:59,240
-will create a second
+will query the second
 component, which is true,
 
 1268
@@ -6029,22 +6029,22 @@ belongs to a certain class
 
 1273
 01:18:11,280 --> 01:18:14,080
-of predicates that are
-midconical models.
+of predicates that admit
+canonical models.
 
 1274
 01:18:14,080 --> 01:18:17,880
-We call such predicates in standard.
+We call such predicates N-standard.
 
 1275
 01:18:17,880 --> 01:18:20,960
-A tree model is in standard
+A tree model is N-standard
 if it is a perfect binary tree
 
 1276
 01:18:20,960 --> 01:18:23,760
-of height N, yet we
-should also require that
+of height N, in addition
+we also require that
 
 1277
 01:18:23,760 --> 01:18:25,400
@@ -6058,11 +6058,11 @@ repeats any query.
 1279
 01:18:28,200 --> 01:18:29,840
 We say that a predicate
-is in standard
+is N standard
 
 1280
 01:18:29,840 --> 01:18:31,760
-if its model is in standard.
+if its model is N standard.
 
 1281
 01:18:31,760 --> 01:18:35,960
@@ -6076,7 +6076,7 @@ we restrict our attention
 
 1283
 01:18:38,000 --> 01:18:39,600
-to in standard predicates.
+to N standard predicates.
 
 1284
 01:18:39,600 --> 01:18:42,120
@@ -6140,7 +6140,7 @@ as the invocation
 
 1297
 01:19:09,440 --> 01:19:12,320
-of an abject operation
+of an abstract operation
 called branch.
 
 1298
@@ -6169,7 +6169,7 @@ A handler consists of two parts,
 1303
 01:19:24,800 --> 01:19:27,360
 a value clause that
-tells us what to do
+tells it what to do
 
 1304
 01:19:27,360 --> 01:19:30,800
@@ -6218,7 +6218,7 @@ This is a first class entity,
 1313
 01:19:52,120 --> 01:19:56,600
 and what we do is we invoke
-the continuation of true first,
+the continuation with true first,
 
 1314
 01:19:56,600 --> 01:19:59,000
@@ -6233,7 +6233,7 @@ of those two invocations.
 1316
 01:20:03,240 --> 01:20:07,360
 Now, let's consider concrete
-evaluation of if count
+evaluation of effcount
 
 1317
 01:20:07,360 --> 01:20:10,320
@@ -6246,7 +6246,7 @@ happens is the predicate
 
 1319
 01:20:12,400 --> 01:20:14,920
-queries the (INAUDIBLE)
+queries the zeroth
 component of the point.
 
 1320
@@ -6415,7 +6415,7 @@ been visited exactly once.
 
 1355
 01:21:53,360 --> 01:21:54,560
-So we should generalize a bit.
+So if we generalize a bit.
 
 1356
 01:21:54,560 --> 01:21:56,880
@@ -6423,11 +6423,11 @@ This means that computation involves
 
 1357
 01:21:57,240 --> 01:22:02,240
-P go with two to the N steps.
+Big O two to the N steps.
 
 1358
 01:22:03,000 --> 01:22:05,160
-Now, in PCF, we only affect handles.
+Now, in PCF, we dont have effect handles.
 
 1359
 01:22:05,160 --> 01:22:06,640
@@ -6436,7 +6436,7 @@ for backtracking
 
 1360
 01:22:06,640 --> 01:22:08,560
-of a Shang computation.
+for sharing computation.
 
 1361
 01:22:08,560 --> 01:22:10,920
@@ -6445,7 +6445,7 @@ counter function must restart
 
 1362
 01:22:10,920 --> 01:22:13,120
-computation for reporting.
+computation for every point.
 
 1363
 01:22:13,120 --> 01:22:15,560
@@ -6468,7 +6468,7 @@ and let's for simplicity,
 1367
 01:22:21,320 --> 01:22:23,480
 assume that this
-generic comm function
+generic cunt function
 
 1368
 01:22:23,480 --> 01:22:25,720
@@ -6485,12 +6485,12 @@ The first thing that happens is that
 
 1371
 01:22:30,080 --> 01:22:32,600
-the predicate queries the C
-of component of the point,
+the predicate queries the zeroth
+component of the point,
 
 1372
 01:22:32,600 --> 01:22:34,560
-which between two,
+which returns true,
 
 1373
 01:22:34,560 --> 01:22:38,320
@@ -6523,11 +6523,11 @@ there is no backtracking
 
 1379
 01:22:51,360 --> 01:22:54,400
-on any means for Shang computation.
+on any means for sharing computation.
 
 1380
 01:22:54,400 --> 01:22:57,160
-So the generic comm function
+So the generic count function
 has to go all the way back up
 
 1381
@@ -6579,11 +6579,11 @@ at the third leaf.
 1391
 01:23:24,280 --> 01:23:26,400
 In general,
-the generic comm function
+the generic count function
 
 1392
 01:23:26,400 --> 01:23:28,160
-will have to construct endpoints
+will have to construct points
 
 1393
 01:23:28,160 --> 01:23:30,480
@@ -6596,16 +6596,16 @@ involves, at least,
 
 1395
 01:23:33,440 --> 01:23:36,520
-n two to the n steps.
+two to the n steps.
 
 1396
 01:23:36,520 --> 01:23:40,080
 Some might object to PCF as
-a trust based language,
+a choice of base language,
 
 1397
 01:23:40,080 --> 01:23:41,640
-because it likes characteristic
+because it lack characteristic
 features found,
 
 1398
@@ -6644,7 +6644,7 @@ we've put them together
 1405
 01:23:58,920 --> 01:24:01,400
 our base language forms
-a prototypical call,
+a prototypical core,
 
 1406
 01:24:01,400 --> 01:24:02,880
@@ -6695,12 +6695,12 @@ the problem to search,
 1416
 01:24:23,600 --> 01:24:26,840
 that is, instead of returning
-to number of times,
+the number of times,
 
 1417
 01:24:26,840 --> 01:24:28,880
 this predicate will
-certify return to points
+satisfy return to points
 
 1418
 01:24:28,880 --> 01:24:31,840
@@ -6727,7 +6727,7 @@ that control operators admit,
 
 1423
 01:24:44,680 --> 01:24:46,560
-as I'm talking a little more
+asymptotically more
 efficient implementations
 
 1424
@@ -6839,7 +6839,7 @@ click on the link,
 
 1447
 01:26:00,560 --> 01:26:17,600
-and there, you find a room.
+in the Clowdr room.
 
 1448
 01:26:17,600 --> 01:26:20,520

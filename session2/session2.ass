@@ -1167,8 +1167,8 @@ Dialogue: 0,1:12:41.12,1:12:44.84,Default,,0,0,0,,And thank you, that's all\Nwe 
 Dialogue: 0,1:12:44.84,1:12:49.84,Default,,0,0,0,,(AUDIENCE APPLAUSE)
 Dialogue: 0,1:12:52.16,1:12:53.92,Default,,0,0,0,,ALAN JEFFREY: Alright,\Nthank you, Daniel.
 Dialogue: 0,1:12:53.92,1:12:59.84,Default,,0,0,0,,So, if you're interested in joining\Nthe authors for a live Q&A,
-Dialogue: 0,1:12:59.92,1:13:01.72,Default,,0,0,0,,and during the New York time zone,
-Dialogue: 0,1:13:01.72,1:13:06.72,Default,,0,0,0,,and then click on the link in\Nthe slider page for this paper.
+Dialogue: 0,1:12:59.92,1:13:01.72,Default,,0,0,0,,and you're in the New York time zone,
+Dialogue: 0,1:13:01.72,1:13:06.72,Default,,0,0,0,,then click on the link in\Nthe Clowdr page for this paper.
 Dialogue: 0,1:13:12.28,1:13:15.64,Default,,0,0,0,,Welcome back to ICFP 2020,
 Dialogue: 0,1:13:15.64,1:13:19.56,Default,,0,0,0,,where the next paper is going to\Nbe, "Effects for Efficiency:
 Dialogue: 0,1:13:19.56,1:13:22.40,Default,,0,0,0,,Asymptotic Speedup with\NFirst-Class Control,"
@@ -1184,8 +1184,8 @@ Dialogue: 0,1:13:43.08,1:13:44.20,Default,,0,0,0,,The space I have in mind here
 Dialogue: 0,1:13:44.20,1:13:46.60,Default,,0,0,0,,is the design space of\Nprogramming languages.
 Dialogue: 0,1:13:46.60,1:13:49.36,Default,,0,0,0,,When studying the expressiveness\Nof some language feature,
 Dialogue: 0,1:13:49.36,1:13:50.76,Default,,0,0,0,,like first class control,
-Dialogue: 0,1:13:50.76,1:13:53.60,Default,,0,0,0,,it is customary to consider\Nlanguage with the set feature,
-Dialogue: 0,1:13:53.60,1:13:56.12,Default,,0,0,0,,and then the fragment\Nmodule of that feature.
+Dialogue: 0,1:13:50.76,1:13:53.60,Default,,0,0,0,,it is customary to consider\Nlanguage with the said feature,
+Dialogue: 0,1:13:53.60,1:13:56.12,Default,,0,0,0,,and then the fragment\Nmodulo that feature.
 Dialogue: 0,1:13:56.12,1:13:58.92,Default,,0,0,0,,Then we could pose questions along\Ndifferent dimensions success,
 Dialogue: 0,1:13:59.00,1:14:00.00,Default,,0,0,0,,computability...
 Dialogue: 0,1:14:00.48,1:14:02.32,Default,,0,0,0,, complexity\Nand programmability.
@@ -1193,36 +1193,36 @@ Dialogue: 0,1:14:02.32,1:14:05.24,Default,,0,0,0,,However, any type of question\
 Dialogue: 0,1:14:05.24,1:14:07.64,Default,,0,0,0,,if the setting involves\Nhigher types,
 Dialogue: 0,1:14:07.64,1:14:09.48,Default,,0,0,0,,because to a fair approximation,
 Dialogue: 0,1:14:09.48,1:14:11.64,Default,,0,0,0,,we can regard all\Nreasonable languages,
-Dialogue: 0,1:14:11.64,1:14:15.00,Default,,0,0,0,,but first all the types\Nas being ECR expressive.
-Dialogue: 0,1:14:15.00,1:14:17.56,Default,,0,0,0,,So in this work, we are in\Nthe realm of fire types,
+Dialogue: 0,1:14:11.64,1:14:15.00,Default,,0,0,0,,with first-order types\Nas being equally expressive.
+Dialogue: 0,1:14:15.00,1:14:17.56,Default,,0,0,0,,So in this work, we are in\Nthe realm of higher types,
 Dialogue: 0,1:14:17.56,1:14:18.72,Default,,0,0,0,,and we show that in this realm,
-Dialogue: 0,1:14:18.72,1:14:20.76,Default,,0,0,0,,the presence of a first\Nclass control can improve
-Dialogue: 0,1:14:20.76,1:14:23.88,Default,,0,0,0,,DSM static run time\Nof some programs.
-Dialogue: 0,1:14:23.88,1:14:26.16,Default,,0,0,0,,To show this, we consider\Nthis a generic count problem
-Dialogue: 0,1:14:26.16,1:14:27.76,Default,,0,0,0,,with an asterisk to implement\Nthe fertile of functions
+Dialogue: 0,1:14:18.72,1:14:20.76,Default,,0,0,0,,the presence of first\Nclass control can improve
+Dialogue: 0,1:14:20.76,1:14:23.88,Default,,0,0,0,,the asymptotic run time\Nof some programs.
+Dialogue: 0,1:14:23.88,1:14:26.16,Default,,0,0,0,,To show this, we consider\Nthis generic count problem
+Dialogue: 0,1:14:26.16,1:14:27.76,Default,,0,0,0,,which is asked to implement\Nthe third-order function
 Dialogue: 0,1:14:27.76,1:14:29.80,Default,,0,0,0,,satisfying this type signature.
 Dialogue: 0,1:14:29.80,1:14:32.04,Default,,0,0,0,,Let's unpack the type.
 Dialogue: 0,1:14:32.04,1:14:35.24,Default,,0,0,0,,The first order function\Nparameter is called a point.
 Dialogue: 0,1:14:35.24,1:14:36.56,Default,,0,0,0,,It is a functional representation
-Dialogue: 0,1:14:36.56,1:14:39.36,Default,,0,0,0,,of a bullion value vector of size N.
+Dialogue: 0,1:14:36.56,1:14:39.36,Default,,0,0,0,,of a boolean value vector of size N.
 Dialogue: 0,1:14:39.36,1:14:41.84,Default,,0,0,0,,The second order parameter\Nis a predicate function,
 Dialogue: 0,1:14:41.84,1:14:43.52,Default,,0,0,0,,which operates on points.
 Dialogue: 0,1:14:43.52,1:14:45.64,Default,,0,0,0,,It is an encoding of\Nsome search problem,
 Dialogue: 0,1:14:45.64,1:14:47.76,Default,,0,0,0,,and it yields true\Nor false depending on
-Dialogue: 0,1:14:47.76,1:14:50.84,Default,,0,0,0,,where it is satisfied\Nby its provider point.
+Dialogue: 0,1:14:47.76,1:14:50.84,Default,,0,0,0,,where it is satisfied\Nby its provided point.
 Dialogue: 0,1:14:50.84,1:14:54.48,Default,,0,0,0,,Finally, any faithful implementation\Nof this type signature
 Dialogue: 0,1:14:54.48,1:14:56.72,Default,,0,0,0,,ultimately returns\Nthe number of points
 Dialogue: 0,1:14:56.72,1:15:00.08,Default,,0,0,0,,satisfying a given predicate,\Nor in other words,
-Dialogue: 0,1:15:00.08,1:15:03.76,Default,,0,0,0,,it comes to number of times\Na given predicate returns true.
-Dialogue: 0,1:15:03.76,1:15:06.76,Default,,0,0,0,,We fixed our base language\Nto be simple type PCF
+Dialogue: 0,1:15:00.08,1:15:03.76,Default,,0,0,0,,it counts to number of times\Na given predicate returns true.
+Dialogue: 0,1:15:03.76,1:15:06.76,Default,,0,0,0,,We fix our base language\Nto be simple typed PCF
 Dialogue: 0,1:15:06.80,1:15:09.08,Default,,0,0,0,,and extended with effect handlers.
 Dialogue: 0,1:15:09.08,1:15:12.76,Default,,0,0,0,,Our concrete choice of control\Noperator is not essential.
 Dialogue: 0,1:15:12.76,1:15:14.92,Default,,0,0,0,,Any first class control\Noperator will do,
 Dialogue: 0,1:15:14.92,1:15:17.08,Default,,0,0,0,,however effect handlers\Nstill provide a particular
 Dialogue: 0,1:15:17.08,1:15:18.96,Default,,0,0,0,,structure form of\Nthe limited control,
 Dialogue: 0,1:15:18.96,1:15:22.72,Default,,0,0,0,,which makes them convenient\Nfor the purpose of this work.
-Dialogue: 0,1:15:22.72,1:15:24.68,Default,,0,0,0,,Then we first show that they\Nexist in implementation
-Dialogue: 0,1:15:24.68,1:15:27.00,Default,,0,0,0,,that generic count in PCF\Nfor the effect handlers,
+Dialogue: 0,1:15:22.72,1:15:24.68,Default,,0,0,0,,Then we first show that there\Nexists an implementation
+Dialogue: 0,1:15:24.68,1:15:27.00,Default,,0,0,0,,of that generic count in PCF\Nfor the effect handlers,
 Dialogue: 0,1:15:27.00,1:15:29.76,Default,,0,0,0,,whose asymptotic worst\Ncase runtime behavior
 Dialogue: 0,1:15:29.76,1:15:32.44,Default,,0,0,0,,is two to the N.
 Dialogue: 0,1:15:32.44,1:15:35.00,Default,,0,0,0,,Then we show that every\Nimplementation of generic count
@@ -1237,63 +1237,63 @@ Dialogue: 0,1:15:50.72,1:15:53.00,Default,,0,0,0,,with the actual proof of this.
 Dialogue: 0,1:15:53.00,1:15:54.92,Default,,0,0,0,,Instead, I'll aim to\Ngive you the intuition
 Dialogue: 0,1:15:54.92,1:15:57.36,Default,,0,0,0,,for why this result is true.
 Dialogue: 0,1:15:57.36,1:16:00.92,Default,,0,0,0,,I will elaborate a bit\Non the methodology.
-Dialogue: 0,1:16:00.92,1:16:03.48,Default,,0,0,0,,One important rule, namely\Nthat the type signature
+Dialogue: 0,1:16:00.92,1:16:03.48,Default,,0,0,0,,We impose one important rule,\Nnamely that the type signature
 Dialogue: 0,1:16:03.48,1:16:05.60,Default,,0,0,0,,of generic count is fixed.
 Dialogue: 0,1:16:05.60,1:16:08.92,Default,,0,0,0,,That is no implementation in\NPCF or PCF with effect handlers
-Dialogue: 0,1:16:08.92,1:16:12.88,Default,,0,0,0,,is allowed to change the type\Nto get you off generic count.
+Dialogue: 0,1:16:08.92,1:16:12.88,Default,,0,0,0,,is allowed to change the type\Nsignature of generic count.
 Dialogue: 0,1:16:12.88,1:16:15.32,Default,,0,0,0,,A consequence of this rule,\Nis that it's not possible
 Dialogue: 0,1:16:15.32,1:16:18.68,Default,,0,0,0,,to translate PCF with effect\Nhandlers into PCF,
 Dialogue: 0,1:16:18.68,1:16:22.20,Default,,0,0,0,,say by way of an interpreter\Nor CPS translation.
 Dialogue: 0,1:16:22.20,1:16:24.92,Default,,0,0,0,,This way we really get to\Nstudy the essence of the power
-Dialogue: 0,1:16:24.92,1:16:27.68,Default,,0,0,0,,provided by effect\Nhandlers. (INAUDIBLE)
-Dialogue: 0,1:16:27.68,1:16:30.08,Default,,0,0,0,,This rule is also reminiscence\Nof the restriction
+Dialogue: 0,1:16:24.92,1:16:27.68,Default,,0,0,0,,provided by effect\Nhandlers. Moreover
+Dialogue: 0,1:16:27.68,1:16:30.08,Default,,0,0,0,,this rule is also reminiscent\Nof the restriction
 Dialogue: 0,1:16:30.08,1:16:32.20,Default,,0,0,0,,that programs are\Nfaced by every day,
-Dialogue: 0,1:16:32.20,1:16:33.92,Default,,0,0,0,,when the program\Nagainst an interface.
+Dialogue: 0,1:16:32.20,1:16:33.92,Default,,0,0,0,,when programming\Nagainst an interface.
 Dialogue: 0,1:16:33.92,1:16:36.72,Default,,0,0,0,,So we do consider this to\Nbe a reasonable rule.
 Dialogue: 0,1:16:36.72,1:16:39.44,Default,,0,0,0,,With this in mind, let's look\Nat the following example predicate
-Dialogue: 0,1:16:39.44,1:16:42.52,Default,,0,0,0,,called EEX and its\Ninduced computation tree model.
+Dialogue: 0,1:16:39.44,1:16:42.52,Default,,0,0,0,,called EX and its\Ninduced computation tree model.
 Dialogue: 0,1:16:42.52,1:16:45.04,Default,,0,0,0,,The predicate takes a point as input
 Dialogue: 0,1:16:45.04,1:16:47.16,Default,,0,0,0,,and applies this point to zero,
-Dialogue: 0,1:16:47.16,1:16:50.16,Default,,0,0,0,,or queries to C of\Ncomponent of the point.
+Dialogue: 0,1:16:47.16,1:16:50.16,Default,,0,0,0,,or queries to see if\Ncomponent has the point.
 Dialogue: 0,1:16:50.16,1:16:51.96,Default,,0,0,0,,This is reflected in the tree model,
-Dialogue: 0,1:16:51.96,1:16:55.88,Default,,0,0,0,,by the first anterior node,\Nwhich reads question mark zero.
+Dialogue: 0,1:16:51.96,1:16:55.88,Default,,0,0,0,,by the first interior node,\Nwhich reads question mark zero.
 Dialogue: 0,1:16:55.88,1:16:58.20,Default,,0,0,0,,I'm using the question\Nmark prefix here
-Dialogue: 0,1:16:58.20,1:17:02.00,Default,,0,0,0,,to denote vocations\Nor queries of points.
+Dialogue: 0,1:16:58.20,1:17:02.00,Default,,0,0,0,,to denote invocations\Nor queries of points.
 Dialogue: 0,1:17:02.00,1:17:04.52,Default,,0,0,0,,And I'm using\Nexclamation mark prefix
 Dialogue: 0,1:17:04.52,1:17:08.84,Default,,0,0,0,,to denote answers or return\Nvalues of predicates.
 Dialogue: 0,1:17:08.84,1:17:13.36,Default,,0,0,0,,Now note how the structure\Nof the computation tree
 Dialogue: 0,1:17:13.36,1:17:16.32,Default,,0,0,0,,coincides with all\Nthe possible control flows
 Dialogue: 0,1:17:16.32,1:17:17.76,Default,,0,0,0,,of the predicate.
 Dialogue: 0,1:17:17.76,1:17:22.36,Default,,0,0,0,,Let's consider a concrete\Nevaluation of this predicate.
-Dialogue: 0,1:17:22.36,1:17:26.60,Default,,0,0,0,,Supposed we apply to a point\Nwhose C of component is true.
+Dialogue: 0,1:17:22.36,1:17:26.60,Default,,0,0,0,,Supposed we apply to a point\Nwhose zeroth component is true.
 Dialogue: 0,1:17:26.88,1:17:31.84,Default,,0,0,0,,First component is false,\Nand second component is true.
 Dialogue: 0,1:17:32.20,1:17:34.04,Default,,0,0,0,,Evaluation begins in the predicate,
-Dialogue: 0,1:17:34.04,1:17:37.08,Default,,0,0,0,,and eventually queries to C\Nof component of the point,
+Dialogue: 0,1:17:34.04,1:17:37.08,Default,,0,0,0,,and eventually queries the\Nzeroth component of the point,
 Dialogue: 0,1:17:37.08,1:17:38.52,Default,,0,0,0,,which is true,
 Dialogue: 0,1:17:38.52,1:17:41.84,Default,,0,0,0,,meaning that we'll take\Nthe left branch down the tree
-Dialogue: 0,1:17:41.84,1:17:44.00,Default,,0,0,0,,this corresponds to\Ncontinuative evaluation
+Dialogue: 0,1:17:41.84,1:17:44.00,Default,,0,0,0,,this corresponds to\Ncontinuing evaluation
 Dialogue: 0,1:17:44.00,1:17:47.04,Default,,0,0,0,,of the then branch in the predicate.
-Dialogue: 0,1:17:47.04,1:17:50.24,Default,,0,0,0,,Eventually, the predicate will\Ngrow the first component
+Dialogue: 0,1:17:47.04,1:17:50.24,Default,,0,0,0,,Eventually, the predicate will\Nquery the first component
 Dialogue: 0,1:17:50.24,1:17:51.88,Default,,0,0,0,,of the point, which is false,
 Dialogue: 0,1:17:51.88,1:17:54.60,Default,,0,0,0,,meaning we will take\Nthe right branch down the tree,
 Dialogue: 0,1:17:54.60,1:17:56.44,Default,,0,0,0,,and then, at some\Npoint, the predicate
-Dialogue: 0,1:17:56.44,1:17:59.24,Default,,0,0,0,,will create a second\Ncomponent, which is true,
+Dialogue: 0,1:17:56.44,1:17:59.24,Default,,0,0,0,,will query the second\Ncomponent, which is true,
 Dialogue: 0,1:17:59.24,1:18:01.52,Default,,0,0,0,,meaning we take the left\Nbranch down at the tree,
 Dialogue: 0,1:18:01.52,1:18:04.32,Default,,0,0,0,,and we now hit a leaf node\Nwith the answer true,
 Dialogue: 0,1:18:04.32,1:18:06.40,Default,,0,0,0,,meaning that for this\Nparticular point,
 Dialogue: 0,1:18:06.40,1:18:08.52,Default,,0,0,0,,the predicate will\Nyield the answer true.
 Dialogue: 0,1:18:08.52,1:18:11.28,Default,,0,0,0,,Now, this particular predicate\Nbelongs to a certain class
-Dialogue: 0,1:18:11.28,1:18:14.08,Default,,0,0,0,,of predicates that are\Nmidconical models.
-Dialogue: 0,1:18:14.08,1:18:17.88,Default,,0,0,0,,We call such predicates in standard.
-Dialogue: 0,1:18:17.88,1:18:20.96,Default,,0,0,0,,A tree model is in standard\Nif it is a perfect binary tree
-Dialogue: 0,1:18:20.96,1:18:23.76,Default,,0,0,0,,of height N, yet we\Nshould also require that
+Dialogue: 0,1:18:11.28,1:18:14.08,Default,,0,0,0,,of predicates that admit\Ncanonical models.
+Dialogue: 0,1:18:14.08,1:18:17.88,Default,,0,0,0,,We call such predicates N-standard.
+Dialogue: 0,1:18:17.88,1:18:20.96,Default,,0,0,0,,A tree model is N-standard\Nif it is a perfect binary tree
+Dialogue: 0,1:18:20.96,1:18:23.76,Default,,0,0,0,,of height N, in addition\Nwe also require that
 Dialogue: 0,1:18:23.76,1:18:25.40,Default,,0,0,0,,the tree contains a query,
 Dialogue: 0,1:18:25.40,1:18:28.20,Default,,0,0,0,,and that no sub tree\Nrepeats any query.
-Dialogue: 0,1:18:28.20,1:18:29.84,Default,,0,0,0,,We say that a predicate\Nis in standard
-Dialogue: 0,1:18:29.84,1:18:31.76,Default,,0,0,0,,if its model is in standard.
+Dialogue: 0,1:18:28.20,1:18:29.84,Default,,0,0,0,,We say that a predicate\Nis N standard
+Dialogue: 0,1:18:29.84,1:18:31.76,Default,,0,0,0,,if its model is N standard.
 Dialogue: 0,1:18:31.76,1:18:35.96,Default,,0,0,0,,For example, the predicate\NEX is three standard.
 Dialogue: 0,1:18:35.96,1:18:38.00,Default,,0,0,0,,For the initial analysis,\Nwe restrict our attention
-Dialogue: 0,1:18:38.00,1:18:39.60,Default,,0,0,0,,to in standard predicates.
+Dialogue: 0,1:18:38.00,1:18:39.60,Default,,0,0,0,,to N standard predicates.
 Dialogue: 0,1:18:39.60,1:18:42.12,Default,,0,0,0,,This restriction serves to\Nsimplify the analysis,
 Dialogue: 0,1:18:42.12,1:18:43.68,Default,,0,0,0,,but it also provides us an instance
 Dialogue: 0,1:18:43.68,1:18:44.68,Default,,0,0,0,,where the efficiency gap
@@ -1307,13 +1307,13 @@ Dialogue: 0,1:18:57.72,1:19:01.28,Default,,0,0,0,,and implement generic\Ncount w
 Dialogue: 0,1:19:01.28,1:19:03.64,Default,,0,0,0,,First, we need to take\Nthe predicate as input.
 Dialogue: 0,1:19:03.64,1:19:06.92,Default,,0,0,0,,And we have to apply this\Npredicate to a point.
 Dialogue: 0,1:19:06.92,1:19:09.44,Default,,0,0,0,,We represent this point\Nas the invocation
-Dialogue: 0,1:19:09.44,1:19:12.32,Default,,0,0,0,,of an abject operation\Ncalled branch.
+Dialogue: 0,1:19:09.44,1:19:12.32,Default,,0,0,0,,of an abstract operation\Ncalled branch.
 Dialogue: 0,1:19:12.32,1:19:14.12,Default,,0,0,0,,The only thing we know about branch
 Dialogue: 0,1:19:14.12,1:19:17.72,Default,,0,0,0,,is that it's going to ultimately\Nreturn a Boolean value.
 Dialogue: 0,1:19:17.72,1:19:19.80,Default,,0,0,0,,And also, given\Nthe interpretation of branch,
 Dialogue: 0,1:19:19.80,1:19:23.00,Default,,0,0,0,,we must wrap the entire\Ncomputation in a handler.
 Dialogue: 0,1:19:23.00,1:19:24.80,Default,,0,0,0,,A handler consists of two parts,
-Dialogue: 0,1:19:24.80,1:19:27.36,Default,,0,0,0,,a value clause that\Ntells us what to do
+Dialogue: 0,1:19:24.80,1:19:27.36,Default,,0,0,0,,a value clause that\Ntells it what to do
 Dialogue: 0,1:19:27.36,1:19:30.80,Default,,0,0,0,,with the return value\Nor the answer of a predicate.
 Dialogue: 0,1:19:30.80,1:19:33.68,Default,,0,0,0,,So if the answer is true, then\Nwe're going to return one,
 Dialogue: 0,1:19:33.68,1:19:37.16,Default,,0,0,0,,and if the answer is false,\Nwe're going to return zero.
@@ -1323,13 +1323,13 @@ Dialogue: 0,1:19:42.20,1:19:44.12,Default,,0,0,0,,which in addition to giving\Na
 Dialogue: 0,1:19:44.12,1:19:46.04,Default,,0,0,0,,also gives access to\Nthe continuation
 Dialogue: 0,1:19:46.04,1:19:49.52,Default,,0,0,0,,of the branch operation inside\Nthe predicate computation.
 Dialogue: 0,1:19:49.52,1:19:52.12,Default,,0,0,0,,This is a first class entity,
-Dialogue: 0,1:19:52.12,1:19:56.60,Default,,0,0,0,,and what we do is we invoke\Nthe continuation of true first,
+Dialogue: 0,1:19:52.12,1:19:56.60,Default,,0,0,0,,and what we do is we invoke\Nthe continuation with true first,
 Dialogue: 0,1:19:56.60,1:19:59.00,Default,,0,0,0,,and then we invoke it\Nwith false subsequently,
 Dialogue: 0,1:19:59.00,1:20:03.24,Default,,0,0,0,,and we sum up the result\Nof those two invocations.
-Dialogue: 0,1:20:03.24,1:20:07.36,Default,,0,0,0,,Now, let's consider concrete\Nevaluation of if count
+Dialogue: 0,1:20:03.24,1:20:07.36,Default,,0,0,0,,Now, let's consider concrete\Nevaluation of effcount
 Dialogue: 0,1:20:07.36,1:20:10.32,Default,,0,0,0,,applied to our example predicate.
 Dialogue: 0,1:20:10.32,1:20:12.40,Default,,0,0,0,,The first thing that\Nhappens is the predicate
-Dialogue: 0,1:20:12.40,1:20:14.92,Default,,0,0,0,,queries the (INAUDIBLE)\Ncomponent of the point.
+Dialogue: 0,1:20:12.40,1:20:14.92,Default,,0,0,0,,queries the zeroth\Ncomponent of the point.
 Dialogue: 0,1:20:14.92,1:20:18.48,Default,,0,0,0,,This query causes an invocation\Nof the branch operation.
 Dialogue: 0,1:20:18.48,1:20:20.72,Default,,0,0,0,,This invocation causes\Ncontrol to transfer
 Dialogue: 0,1:20:20.72,1:20:23.12,Default,,0,0,0,,into the branch clause\Nin the handler
@@ -1365,32 +1365,32 @@ Dialogue: 0,1:21:40.64,1:21:44.48,Default,,0,0,0,,and then subsequently with tru
 Dialogue: 0,1:21:44.48,1:21:46.92,Default,,0,0,0,,So, backtracking here
 Dialogue: 0,1:21:46.92,1:21:49.48,Default,,0,0,0,,ensures that every edge in the
 Dialogue: 0,1:21:49.48,1:21:53.36,Default,,0,0,0,,computation tree model it's\Nbeen visited exactly once.
-Dialogue: 0,1:21:53.36,1:21:54.56,Default,,0,0,0,,So we should generalize a bit.
+Dialogue: 0,1:21:53.36,1:21:54.56,Default,,0,0,0,,So if we generalize a bit.
 Dialogue: 0,1:21:54.56,1:21:56.88,Default,,0,0,0,,This means that computation involves
-Dialogue: 0,1:21:57.24,1:22:02.24,Default,,0,0,0,,P go with two to the N steps.
-Dialogue: 0,1:22:03.00,1:22:05.16,Default,,0,0,0,,Now, in PCF, we only affect handles.
+Dialogue: 0,1:21:57.24,1:22:02.24,Default,,0,0,0,,Big O two to the N steps.
+Dialogue: 0,1:22:03.00,1:22:05.16,Default,,0,0,0,,Now, in PCF, we dont have effect handles.
 Dialogue: 0,1:22:05.16,1:22:06.64,Default,,0,0,0,,There's no mechanism\Nfor backtracking
-Dialogue: 0,1:22:06.64,1:22:08.56,Default,,0,0,0,,of a Shang computation.
+Dialogue: 0,1:22:06.64,1:22:08.56,Default,,0,0,0,,for sharing computation.
 Dialogue: 0,1:22:08.56,1:22:10.92,Default,,0,0,0,,Therefore, every generic\Ncounter function must restart
-Dialogue: 0,1:22:10.92,1:22:13.12,Default,,0,0,0,,computation for reporting.
+Dialogue: 0,1:22:10.92,1:22:13.12,Default,,0,0,0,,computation for every point.
 Dialogue: 0,1:22:13.12,1:22:15.56,Default,,0,0,0,,Let me try to illustrate\Nwhat this means.
 Dialogue: 0,1:22:15.56,1:22:17.48,Default,,0,0,0,,Let's consider some generic\Ncomm function
 Dialogue: 0,1:22:17.48,1:22:19.84,Default,,0,0,0,,applied to our example predicate,
 Dialogue: 0,1:22:19.84,1:22:21.32,Default,,0,0,0,,and let's for simplicity,
-Dialogue: 0,1:22:21.32,1:22:23.48,Default,,0,0,0,,assume that this\Ngeneric comm function
+Dialogue: 0,1:22:21.32,1:22:23.48,Default,,0,0,0,,assume that this\Ngeneric cunt function
 Dialogue: 0,1:22:23.48,1:22:25.72,Default,,0,0,0,,visits the notes in\Nthe computation tree
 Dialogue: 0,1:22:25.72,1:22:28.80,Default,,0,0,0,,in depth first order.
 Dialogue: 0,1:22:28.80,1:22:30.08,Default,,0,0,0,,The first thing that happens is that
-Dialogue: 0,1:22:30.08,1:22:32.60,Default,,0,0,0,,the predicate queries the C\Nof component of the point,
-Dialogue: 0,1:22:32.60,1:22:34.56,Default,,0,0,0,,which between two,
+Dialogue: 0,1:22:30.08,1:22:32.60,Default,,0,0,0,,the predicate queries the zeroth\Ncomponent of the point,
+Dialogue: 0,1:22:32.60,1:22:34.56,Default,,0,0,0,,which returns true,
 Dialogue: 0,1:22:34.56,1:22:38.32,Default,,0,0,0,,meaning that'd be the sent down\Nthe left branch in the tree.
 Dialogue: 0,1:22:38.32,1:22:40.68,Default,,0,0,0,,The same thing happens\Nfor the first component
 Dialogue: 0,1:22:40.68,1:22:42.68,Default,,0,0,0,,and the second component.
 Dialogue: 0,1:22:42.68,1:22:45.72,Default,,0,0,0,,And so we find ourselves\Nat the first leaf.
 Dialogue: 0,1:22:45.72,1:22:48.12,Default,,0,0,0,,From here there is no\Nquick way to get to
 Dialogue: 0,1:22:48.12,1:22:51.36,Default,,0,0,0,,the second leaf, because\Nthere is no backtracking
-Dialogue: 0,1:22:51.36,1:22:54.40,Default,,0,0,0,,on any means for Shang computation.
-Dialogue: 0,1:22:54.40,1:22:57.16,Default,,0,0,0,,So the generic comm function\Nhas to go all the way back up
+Dialogue: 0,1:22:51.36,1:22:54.40,Default,,0,0,0,,on any means for sharing computation.
+Dialogue: 0,1:22:54.40,1:22:57.16,Default,,0,0,0,,So the generic count function\Nhas to go all the way back up
 Dialogue: 0,1:22:57.16,1:23:00.68,Default,,0,0,0,,and construct a second point,\Nthat represents the path
 Dialogue: 0,1:23:00.68,1:23:03.72,Default,,0,0,0,,to the second leaf, meaning\Nthat we will have to repeat
 Dialogue: 0,1:23:03.72,1:23:05.44,Default,,0,0,0,,some work along the way,
@@ -1401,13 +1401,13 @@ Dialogue: 0,1:23:12.08,1:23:13.76,Default,,0,0,0,,we must go all the way back up
 Dialogue: 0,1:23:13.76,1:23:16.04,Default,,0,0,0,,construct the third point\Nthat represents the path
 Dialogue: 0,1:23:16.04,1:23:19.76,Default,,0,0,0,,to the third leaf, repeating\Nwork along the way
 Dialogue: 0,1:23:19.76,1:23:24.28,Default,,0,0,0,,in order to finally arrive\Nat the third leaf.
-Dialogue: 0,1:23:24.28,1:23:26.40,Default,,0,0,0,,In general,\Nthe generic comm function
-Dialogue: 0,1:23:26.40,1:23:28.16,Default,,0,0,0,,will have to construct endpoints
+Dialogue: 0,1:23:24.28,1:23:26.40,Default,,0,0,0,,In general,\Nthe generic count function
+Dialogue: 0,1:23:26.40,1:23:28.16,Default,,0,0,0,,will have to construct points
 Dialogue: 0,1:23:28.16,1:23:30.48,Default,,0,0,0,,in order to visit each of the leafs.
 Dialogue: 0,1:23:30.48,1:23:33.44,Default,,0,0,0,,This means that computation\Ninvolves, at least,
-Dialogue: 0,1:23:33.44,1:23:36.52,Default,,0,0,0,,n two to the n steps.
-Dialogue: 0,1:23:36.52,1:23:40.08,Default,,0,0,0,,Some might object to PCF as\Na trust based language,
-Dialogue: 0,1:23:40.08,1:23:41.64,Default,,0,0,0,,because it likes characteristic\Nfeatures found,
+Dialogue: 0,1:23:33.44,1:23:36.52,Default,,0,0,0,,two to the n steps.
+Dialogue: 0,1:23:36.52,1:23:40.08,Default,,0,0,0,,Some might object to PCF as\Na choice of base language,
+Dialogue: 0,1:23:40.08,1:23:41.64,Default,,0,0,0,,because it lack characteristic\Nfeatures found,
 Dialogue: 0,1:23:41.64,1:23:44.48,Default,,0,0,0,,in say, industrial\Nstrength languages.
 Dialogue: 0,1:23:44.48,1:23:46.92,Default,,0,0,0,,However, as shown in the paper,
 Dialogue: 0,1:23:46.96,1:23:50.20,Default,,0,0,0,,the efficiency gap remains\Neven under extensions to PCF.
@@ -1415,7 +1415,7 @@ Dialogue: 0,1:23:50.20,1:23:52.52,Default,,0,0,0,,Specifically, we consider\Nadd
 Dialogue: 0,1:23:52.52,1:23:54.48,Default,,0,0,0,,and exceptions into the picture,
 Dialogue: 0,1:23:54.48,1:23:56.92,Default,,0,0,0,,we consider them\Nseparately and together,
 Dialogue: 0,1:23:56.92,1:23:58.92,Default,,0,0,0,,and I will claim that once\Nwe've put them together
-Dialogue: 0,1:23:58.92,1:24:01.40,Default,,0,0,0,,our base language forms\Na prototypical call,
+Dialogue: 0,1:23:58.92,1:24:01.40,Default,,0,0,0,,our base language forms\Na prototypical core,
 Dialogue: 0,1:24:01.40,1:24:02.88,Default,,0,0,0,,of an industrial strength language,
 Dialogue: 0,1:24:02.88,1:24:05.08,Default,,0,0,0,,like OCaml or Java.
 Dialogue: 0,1:24:05.08,1:24:07.04,Default,,0,0,0,,Furthermore, in\Nthe paper we also discuss
@@ -1426,14 +1426,14 @@ Dialogue: 0,1:24:14.00,1:24:15.88,Default,,0,0,0,,and we can account\Nfor repeat
 Dialogue: 0,1:24:15.88,1:24:17.92,Default,,0,0,0,,and we don't even need to\Nquery all the components
 Dialogue: 0,1:24:17.92,1:24:20.00,Default,,0,0,0,,of a point.
 Dialogue: 0,1:24:20.00,1:24:23.60,Default,,0,0,0,,We also consider how to extend\Nthe problem to search,
-Dialogue: 0,1:24:23.60,1:24:26.84,Default,,0,0,0,,that is, instead of returning\Nto number of times,
-Dialogue: 0,1:24:26.84,1:24:28.88,Default,,0,0,0,,this predicate will\Ncertify return to points
+Dialogue: 0,1:24:23.60,1:24:26.84,Default,,0,0,0,,that is, instead of returning\Nthe number of times,
+Dialogue: 0,1:24:26.84,1:24:28.88,Default,,0,0,0,,this predicate will\Nsatisfy return to points
 Dialogue: 0,1:24:28.88,1:24:31.84,Default,,0,0,0,,that satisfy the predicate.
 Dialogue: 0,1:24:31.84,1:24:33.88,Default,,0,0,0,,We showed that the same\N asymptotic bound applies
 Dialogue: 0,1:24:33.88,1:24:35.60,Default,,0,0,0,,to the search problem.
 Dialogue: 0,1:24:35.60,1:24:37.96,Default,,0,0,0,,We also conducted\Nempirical evaluation.
 Dialogue: 0,1:24:40.32,1:24:44.68,Default,,0,0,0,,In summary, the takeaway is\Nthat control operators admit,
-Dialogue: 0,1:24:44.68,1:24:46.56,Default,,0,0,0,,as I'm talking a little more\Nefficient implementations
+Dialogue: 0,1:24:44.68,1:24:46.56,Default,,0,0,0,,asymptotically more\Nefficient implementations
 Dialogue: 0,1:24:46.56,1:24:48.56,Default,,0,0,0,,of some programs,
 Dialogue: 0,1:24:48.56,1:24:50.08,Default,,0,0,0,,and the intuition\Nfor why that is true
 Dialogue: 0,1:24:50.08,1:24:52.72,Default,,0,0,0,,is because control operators\Nenable computation
@@ -1457,7 +1457,7 @@ Dialogue: 0,1:25:43.96,1:25:51.04,Default,,0,0,0,,(AUDIENCE APPLAUDS)
 Dialogue: 0,1:25:51.04,1:25:53.40,Default,,0,0,0,,ALAN JEFFREY: All right, so,\Nthank you, Daniel.
 Dialogue: 0,1:25:53.40,1:25:58.92,Default,,0,0,0,,So, if you want to join\Nthe authors for a live Q&A,
 Dialogue: 0,1:25:58.92,1:26:00.56,Default,,0,0,0,,again, you can just\Nclick on the link,
-Dialogue: 0,1:26:00.56,1:26:17.60,Default,,0,0,0,,and there, you find a room.
+Dialogue: 0,1:26:00.56,1:26:17.60,Default,,0,0,0,,in the Clowdr room.
 Dialogue: 0,1:26:17.60,1:26:20.52,Default,,0,0,0,,All right, and now, there is\Ngoing to be a short pause,
 Dialogue: 0,1:26:20.52,1:26:22.60,Default,,0,0,0,,and when we come back,\Nwe'll have the next paper,
 Dialogue: 0,1:26:22.60,1:26:30.32,Default,,0,0,0,,in Session 2 of ICFP 2020.
