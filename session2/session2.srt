@@ -1478,7 +1478,7 @@ interesting this year.
 312
 00:28:39,080 --> 00:28:42,440
 I wonder if anyone's made the most
-of it. That presentation somehow.
+of it in their presentation somehow.
 
 313
 00:28:42,440 --> 00:28:45,040
@@ -1488,12 +1488,12 @@ are you working on?
 314
 00:28:45,040 --> 00:28:46,760
 JAMIE: I've been
-working with parses.
+working with parsers.
 
 315
 00:28:46,760 --> 00:28:49,200
 NICK: Oh, nice. I'm a big
-fan of parse combinators.
+fan of parser combinators.
 
 316
 00:28:49,200 --> 00:28:51,840
@@ -1503,7 +1503,7 @@ NICK: Oh, well, they're a way of building
 317
 00:28:51,840 --> 00:28:54,320
 a parse that follows
-the structure of a grabber closely
+the structure of a grammar closely
 
 318
 00:28:54,320 --> 00:28:57,160
@@ -1512,7 +1512,7 @@ class values and building
 
 319
 00:28:57,160 --> 00:28:59,360
-larger parses for smaller ones.
+larger parsers from smaller ones.
 
 320
 00:28:59,360 --> 00:29:01,280
@@ -1526,7 +1526,7 @@ a language that recognizes
 322
 00:29:04,120 --> 00:29:06,880
 strings of characters. Let's
-suppose that they're not empty.
+suppose that they're non-empty.
 
 323
 00:29:06,880 --> 00:29:12,240
@@ -1541,32 +1541,32 @@ consists of what of those followed
 325
 00:29:16,120 --> 00:29:19,440
 either by more alphas or by
-absent on the empty circle.
+absent on the empty token.
 
 326
 00:29:19,440 --> 00:29:21,720
 JAMIE: Okay. So how'd you
-actually fight the parses then.
+actually write the parsers then.
 
 327
 00:29:21,720 --> 00:29:24,720
-NICK: Right? And so in high
-school alpha is a value
+NICK: Right? And so in Haskell
+alpha is a value
 
 328
 00:29:24,720 --> 00:29:27,560
-of type parser cher since
+of type parser char since
 it pauses a character.
 
 329
 00:29:27,560 --> 00:29:31,600
 And here we simply give
-the alternative between each of the chers.
+the alternative between each of the chars.
 
 330
 00:29:31,600 --> 00:29:35,560
 The alphas parser returns a list of
-chers by first parsing an alpha,
+chars by first parsing an alpha,
 
 331
 00:29:35,560 --> 00:29:37,400
@@ -1584,17 +1584,17 @@ strange cons thing work?
 
 334
 00:29:43,320 --> 00:29:47,800
-NICK: Okay. So parses are afflictive
+NICK: Okay. So parsers are afflictive
 so we can lift normal functions
 
 335
 00:29:47,800 --> 00:29:51,160
 and constructors like cons
-so that they can work on parses.
+so that they can work on parsers.
 
 336
 00:29:51,160 --> 00:29:54,280
-So here the pure cottons
+So here the pure cons
 just makes the function
 
 337
@@ -1604,8 +1604,8 @@ the app, which is the star will
 
 338
 00:29:58,360 --> 00:30:02,200
-ensure that PX is parsed
-first followed by P axes.
+ensure that Px is parsed
+first followed by Pxs.
 
 339
 00:30:02,200 --> 00:30:04,640
@@ -1620,7 +1620,7 @@ something you can execute.
 341
 00:30:06,720 --> 00:30:09,800
 NICK: Well, if you want to
-actually run one of these parses
+actually run one of these parsers
 
 342
 00:30:09,800 --> 00:30:14,120
@@ -1630,12 +1630,12 @@ use the run parser function that
 343
 00:30:14,120 --> 00:30:17,480
 will take the string and return
-the past result if it can.
+the parse result if it can.
 
 344
 00:30:17,480 --> 00:30:20,240
-JAMIE: Right. So those common
-seem really (INAUDIBLE)
+JAMIE: Right. So those combinators
+seem really verbose
 
 345
 00:30:20,240 --> 00:30:24,320
@@ -1644,7 +1644,7 @@ where you'd use a character class
 
 346
 00:30:24,320 --> 00:30:26,680
-and an A plus, and it gets
+and a plus, and it gets
 rid of a lot of the bloat.
 
 347
@@ -1659,7 +1659,7 @@ Here's what you do with alphas.
 
 349
 00:30:33,760 --> 00:30:37,400
-We're using one of which we'll
+We're using one of which will
 take one of the A to Z in
 
 350
@@ -1674,12 +1674,12 @@ want some of those.
 352
 00:30:41,440 --> 00:30:44,920
 JAMIE: Ah, that's neat. Okay. So
-how one of them some implemented.
+how are oneOf and some implemented?
 
 353
 00:30:44,920 --> 00:30:48,440
 NICK: Well, there also in terms of
-simple Combinators one of his,
+simple Combinators oneOf is,
 
 354
 00:30:48,440 --> 00:30:52,600
@@ -1693,8 +1693,8 @@ an input character that satisfies it.
 
 356
 00:30:56,120 --> 00:31:00,040
-For one off we simply want it to be
-an element of a given list C's.
+For oneOf we simply want it to be
+an element of a given list Cs.
 
 357
 00:31:00,040 --> 00:31:02,040
@@ -1713,7 +1713,7 @@ if I took the alphas example,
 
 360
 00:31:08,440 --> 00:31:12,760
-I could reverse in generic. So
+I could reverse engineer it. So
 I guess if I factor this alpha out
 
 361
@@ -1728,7 +1728,7 @@ and then alphas with some PX.
 363
 00:31:18,800 --> 00:31:21,560
 NICK: Yeah, that's right. And
-you could furthermore fact track
+you could furthermore factor out
 
 364
 00:31:21,560 --> 00:31:23,920
@@ -1741,8 +1741,8 @@ implementation of some and many.
 
 366
 00:31:26,680 --> 00:31:30,400
-JAMIE: Right. So some of
-the VNF plus then many is the star
+JAMIE: Right. So some is
+the BNF plus then many is the star
 
 367
 00:31:32,080 --> 00:31:35,160
@@ -1796,7 +1796,7 @@ understand performance by
 377
 00:31:55,040 --> 00:31:56,760
 thinking of an underlying
-fact machine.
+state machine.
 
 378
 00:31:56,760 --> 00:31:58,040
@@ -1819,13 +1819,13 @@ instructions that interact
 
 382
 00:32:06,080 --> 00:32:08,800
-with these facts when they're
+with these stacks when they're
 given some input stream.
 
 383
 00:32:08,800 --> 00:32:12,400
 So I guess we would take your
-previous parse as an example.
+previous parser as an example.
 
 384
 00:32:12,400 --> 00:32:18,280
@@ -1844,7 +1844,7 @@ setting up failure handlers
 
 387
 00:32:24,280 --> 00:32:26,200
-before we're cursing again
+before recursing again
 and combining elements of the stack.
 
 388
@@ -1854,7 +1854,7 @@ What's there not to understand?
 389
 00:32:27,600 --> 00:32:30,520
 Isn't this how you were
-taught to use high school?
+taught to use Haskell?
 
 390
 00:32:30,520 --> 00:32:33,320
@@ -1869,7 +1869,7 @@ those dollars as semi-colons and
 392
 00:32:37,720 --> 00:32:40,360
 your favorite imperative language.
-Then alpha similar to yours.
+Then alpha is similar to yours.
 
 393
 00:32:40,360 --> 00:32:42,000
@@ -1878,7 +1878,7 @@ that verifies a
 
 394
 00:32:42,000 --> 00:32:43,680
-protocol and the next input token,
+prediacate on the next input token,
 
 395
 00:32:43,680 --> 00:32:47,760
@@ -1887,12 +1887,12 @@ instruction K and alphas performs,
 
 396
 00:32:47,760 --> 00:32:49,880
-alpha and then leases
-result in the stack.
+alpha and then leaves the
+result on the stack.
 
 397
 00:32:49,880 --> 00:32:52,480
-You don't as a catch block
+It then does a catch block
 to handle any failure.
 
 398
@@ -1903,7 +1903,7 @@ alphas is run again,
 399
 00:32:55,120 --> 00:32:57,000
 which leaves its result
-in the stack two.
+on the stack too.
 
 400
 00:32:57,000 --> 00:32:59,560
@@ -1923,11 +1923,11 @@ the first instructions about
 403
 00:33:05,840 --> 00:33:08,440
 second block before the case
-check that the imperative
+check that the input
 
 404
 00:33:08,440 --> 00:33:10,320
-hasn't changed it's
+hasn't changed since
 starting to catch.
 
 405
@@ -1937,7 +1937,7 @@ uses that information to either
 
 406
 00:33:14,120 --> 00:33:17,400
-fail or combine out for the MTLS
+fail or combine out for the empty list
 before continuing with that same K.
 
 407
@@ -2005,12 +2005,12 @@ the next instruction executes.
 420
 00:33:49,600 --> 00:33:52,240
 And this is interpreted
-by parsing around two
+by passing around two
 
 421
 00:33:52,240 --> 00:33:54,880
 continuations at runtime. The
-good continuation, the battle.
+good continuation and the bad one.
 
 422
 00:33:54,880 --> 00:33:57,880
@@ -2135,7 +2135,7 @@ so push take some X and
 446
 00:35:02,720 --> 00:35:05,480
 the machine that expects X
-indexes and produces a machine
+and Xs and produces a machine
 
 447
 00:35:05,480 --> 00:35:09,880
@@ -2149,7 +2149,7 @@ and produces a machine
 
 449
 00:35:12,440 --> 00:35:14,840
-that expects it backs on
+that expects an X on
 top of the stack Xs.
 
 450
@@ -2165,12 +2165,12 @@ and then the instruction
 452
 00:35:20,880 --> 00:35:24,600
 will adapt that stack to fit.
-I guess the company accommodates
+I guess that compiling combinators
 
 453
 00:35:24,600 --> 00:35:27,240
 to a machine means taking
-a machine and accept the result and
+a machine that accepts the result and
 
 454
 00:35:27,240 --> 00:35:29,200
@@ -2183,7 +2183,7 @@ So that's something like this then.
 
 456
 00:35:31,760 --> 00:35:35,760
-Compile stuff will take a parse
+CompileSub will take a parser
 containing returning an A and
 
 457
@@ -2198,33 +2198,33 @@ a machine that requires
 
 459
 00:35:40,400 --> 00:35:41,840
-just that access in
+just that Xs in
 order to continue.
 
 460
 00:35:41,840 --> 00:35:44,200
 And the final continuation
-is going to be helped.
+is going to be Halt.
 
 461
 00:35:44,200 --> 00:35:46,720
-It takes the one on one on
+It takes the one lement on
 the stack and gives it back.
 
 462
 00:35:46,720 --> 00:35:50,440
 NICK: Right. So how would
-you translate a Combinators?
+you translate combinators?
 
 463
 00:35:50,440 --> 00:35:54,080
 So for example, the pure, which
-has type a to parse array and app,
+has type A to parser A and app,
 
 464
 00:35:54,080 --> 00:35:57,000
-which has type parse rate B
-to parse rate to parse B.
+which has type parser A to B
+to parser A to parser B.
 
 465
 00:35:57,000 --> 00:35:59,360
@@ -2233,12 +2233,12 @@ something like this.
 
 466
 00:35:59,360 --> 00:36:01,200
-So for just the push
+So for pure that's just the push
 instruction, right.
 
 467
 00:36:01,200 --> 00:36:03,680
-With some and that will
+With some N that will
 continue on afterwards.
 
 468
@@ -2254,12 +2254,12 @@ that, we combine the two results
 470
 00:36:10,680 --> 00:36:14,000
 that are on the stack with function
-application using Left two.
+application using lift two.
 
 471
 00:36:14,440 --> 00:36:18,880
 NICK: Oh, neat. So what about
-the and then Verint app where
+the and then variant of app where
 
 472
 00:36:18,880 --> 00:36:21,480
@@ -2268,8 +2268,8 @@ rather than applying a function,
 
 473
 00:36:21,480 --> 00:36:23,920
-something like parse A
-to parse B to parse B?
+something like parser A
+to parser B to parser B?
 
 474
 00:36:23,920 --> 00:36:26,800
@@ -2278,13 +2278,13 @@ to do is pop up to pass in the
 
 475
 00:36:26,800 --> 00:36:30,280
-past result so you can pile P
+first result so you compile P
 then you pop that was off and
 
 476
 00:36:30,280 --> 00:36:32,320
 then you compile Q
-and then carry on with them.
+and then carry on with M.
 
 477
 00:36:32,320 --> 00:36:34,440
@@ -2401,16 +2401,16 @@ NICOLAS: Yeah, indeed and I guess
 
 501
 00:37:24,240 --> 00:37:26,320
-you haven't heard of type template Haskell.
+you haven't heard of typed template Haskell.
 
 502
 00:37:26,520 --> 00:37:30,400
 Unlike template Haskell
-where you build ST's with
+where you build AST's with
 
 503
 00:37:30,480 --> 00:37:32,440
-type template Haskell
+typed template Haskell
 you can only work with
 
 504
@@ -2430,22 +2430,22 @@ to get the code
 
 507
 00:37:39,360 --> 00:37:41,600
-that represents yet
+that represents E at
 run time,
 
 508
 00:37:41,680 --> 00:37:43,480
-quoting, which is of type code
+quoting, which is of type code A.
 
 509
 00:37:43,600 --> 00:37:45,400
-A. you want to splice
+If you want to splice
 or run some code
 
 510
 00:37:45,480 --> 00:37:47,680
 you simply use the anti
-quotes by adding $1
+quotes by adding a dollar
 
 511
 00:37:47,760 --> 00:37:50,320
@@ -2455,7 +2455,7 @@ code C of type code A
 512
 00:37:50,400 --> 00:37:53,160
 Splice C gives back
-above your type A.
+a value of type A.
 
 513
 00:37:53,760 --> 00:37:56,160
@@ -2521,13 +2521,13 @@ stack along with a return
 
 527
 00:38:20,480 --> 00:38:22,960
-and the continuation,
-the recursion a stack
+continuation
+for recursion a stack
 
 528
 00:38:23,000 --> 00:38:25,440
 for failure handlers
-and the input x is itself.
+and the input xs itself.
 
 529
 00:38:25,840 --> 00:38:27,200
@@ -2544,7 +2544,7 @@ because it's the machine
 
 532
 00:38:30,880 --> 00:38:32,600
-that's going to compile time, right.
+that's done at compile time, right.
 
 533
 00:38:33,000 --> 00:38:35,840
@@ -2561,7 +2561,7 @@ state to final value code
 
 536
 00:38:40,840 --> 00:38:42,840
-and that, that'll be the runtime.
+and that, that'll be done at run time.
 
 537
 00:38:43,240 --> 00:38:45,320
@@ -2623,7 +2623,7 @@ the fact that, H list.
 
 549
 00:39:16,120 --> 00:39:18,720
-In ops has the type, X is implies,
+In ops has the type Xs implies,
 
 550
 00:39:19,000 --> 00:39:21,880
@@ -2632,7 +2632,7 @@ we can do at compile time.
 
 551
 00:39:22,200 --> 00:39:23,920
-And that's the term, by instructions
+And that's determined by instructions
 
 552
 00:39:23,920 --> 00:39:25,240
@@ -2653,8 +2653,8 @@ the code over the values in the H list,
 
 556
 00:39:34,480 --> 00:39:37,800
-then the H list itself
-(INAUDIBLE) to compile time,
+then the H list itself is only
+going to exist at compile time,
 
 557
 00:39:38,120 --> 00:39:39,840
@@ -2704,26 +2704,26 @@ NICOLAS: Exactly and that's why we
 
 567
 00:40:01,920 --> 00:40:03,360
-like (INAUDIBLE) so much.
+like staging so much.
 
 568
 00:40:03,480 --> 00:40:06,000
 JAMIE: Awesome, so here's what
-the stage evaluation
+the staged evaluation
 
 569
 00:40:06,240 --> 00:40:07,880
-for pushing home by,
+for push and halt
 look like then.
 
 570
 00:40:08,040 --> 00:40:10,840
-So, hope will take
-the oprints stack out gamma
+So, halt will take
+the operand stack out of gamma
 
 571
 00:40:10,840 --> 00:40:12,240
-and extract that top element
+and extract the top element
 
 572
 00:40:13,280 --> 00:40:15,080
@@ -2731,8 +2731,8 @@ and splice it into some code
 
 573
 00:40:15,080 --> 00:40:17,520
-that builds adjust for
-that value of runtime,
+that builds it just for
+that value at run time,
 
 574
 00:40:18,280 --> 00:40:20,080
@@ -2750,8 +2750,8 @@ That's really cool.
 
 577
 00:40:24,560 --> 00:40:27,040
-So, I guess there's
-pressure exertion
+So, I guess let's
+push
 
 578
 00:40:27,080 --> 00:40:28,160
@@ -2772,7 +2772,7 @@ none of the abstractions
 
 582
 00:40:34,960 --> 00:40:36,880
-from the communates in
+from the combinators in
 the machine are here at all.
 
 583
@@ -2783,12 +2783,12 @@ functions, taking this argument,
 584
 00:40:40,560 --> 00:40:42,480
 this good continuation
-the back continuation.
+the bad continuation.
 
 585
 00:40:42,800 --> 00:40:45,920
 And some input and it'll
-all threaded around together,
+all thread around together,
 
 586
 00:40:45,960 --> 00:40:47,160
@@ -2806,11 +2806,11 @@ But there is a small problem.
 589
 00:40:50,800 --> 00:40:53,400
 Most parser combinators
-such as parser cap
+such as parsec
 
 590
 00:40:53,400 --> 00:40:56,320
-this combinator combined,
+this combinator called bind,
 which is usually used
 
 591
@@ -2842,15 +2842,15 @@ JAMIE: That's a pain,
 597
 00:41:08,800 --> 00:41:11,040
 I mean do you really need
-to create a whole new parse
+to create a whole new parser
 
 598
 00:41:11,040 --> 00:41:12,160
-so that we can inspect,
+so that we can't inspect,
 
 599
 00:41:12,160 --> 00:41:13,960
-what sort of things you
+what sort of things do you
 actually use it for.
 
 600
@@ -2860,7 +2860,7 @@ the grammar is static,
 
 601
 00:41:16,520 --> 00:41:17,800
-combined is used to select
+and bind is used to select
 
 602
 00:41:17,800 --> 00:41:19,600
@@ -2875,7 +2875,7 @@ seen an operation
 604
 00:41:22,480 --> 00:41:24,000
 like that right?
- it was it was (INAUDIBLE).
+ it was it was case.
 
 605
 00:41:24,080 --> 00:41:26,000
@@ -2884,7 +2884,7 @@ are known statically,
 
 606
 00:41:26,320 --> 00:41:29,000
-but you don't know which part
+but you don't know which path
 is taken until runtime.
 
 607
@@ -2904,7 +2904,7 @@ to his branch operation
 610
 00:41:35,880 --> 00:41:39,120
 which arbitrates between two
-branches depending on a co product.
+branches depending on a coproduct.
 
 611
 00:41:40,200 --> 00:41:41,680
@@ -2933,7 +2933,7 @@ on some benchmarks, I made earlier.
 
 616
 00:41:56,400 --> 00:41:59,000
-NICOLAS: Wow. Kids these days really
+NICOLAS: Wow. Kids these days are really
 fast at programming things.
 
 617
@@ -3006,7 +3006,7 @@ BACKGROUND CLAPPING
 
 632
 00:42:39,600 --> 00:42:41,640
-ALAN JEFFREY: OK, thank you. Jamie and Nic.
+ALAN JEFFREY: OK, thank you, Jamie and Nic.
 
 633
 00:42:42,240 --> 00:42:45,360
