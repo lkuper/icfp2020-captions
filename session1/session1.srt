@@ -3067,7 +3067,7 @@ partially-invertible functions
 
 643
 00:45:42,680 --> 00:45:45,560
-are more natural and more explicit.
+are more natural and more expressive.
 
 644
 00:45:45,560 --> 00:45:47,280
@@ -3181,7 +3181,7 @@ list, it returns an empty list.
 667
 00:47:08,200 --> 00:47:13,400
 If you apply go into x
-cos xs, it outputs x-n
+cons xs, it outputs x-n
 
 668
 00:47:13,400 --> 00:47:17,160
@@ -3256,7 +3256,7 @@ in programming go.
 
 683
 00:48:17,880 --> 00:48:20,640
-This example also illustrate
+This example also illustrates
 
 684
 00:48:20,640 --> 00:48:24,240
@@ -3350,8 +3350,8 @@ Because subs is invertible function.
 
 703
 00:49:47,960 --> 00:49:54,160
-In SPARCL subs take list of int
-and it has an invertible list of int.
+In SPARCL subs take invertabe list of int
+and it returns an invertible list of int.
 
 704
 00:49:54,920 --> 00:49:57,840
@@ -3426,8 +3426,8 @@ basics in SPARCL.
 
 719
 00:50:47,560 --> 00:50:51,280
-SPARCL is a linear type, type of
-a function for given language,
+SPARCL is a linear typed, higher-order
+functional programming language,
 
 720
 00:50:51,280 --> 00:50:55,640
@@ -3497,7 +3497,7 @@ defined in SPARCL.
 
 734
 00:51:50,760 --> 00:51:55,640
-Multiplication is the similarity
+Multiplication is similar
 to the sub add function,
 
 735
@@ -3560,7 +3560,7 @@ we program subs in SPARCL.
 747
 00:52:51,800 --> 00:52:55,160
 Because subs is a function
-set computes the (INAUDIBLE)
+that computes the values
 
 748
 00:52:55,160 --> 00:52:57,320
@@ -3582,12 +3582,13 @@ programs look very similar
 
 752
 00:53:10,080 --> 00:53:15,760
-except the use of (INAUDIBLE).
+except the use of constructs
+that care about invertability.
 
 753
 00:53:18,480 --> 00:53:22,520
 Subs in SPARCL take
-an invertible list of the INT
+an invertible list of INT
 
 754
 00:53:22,520 --> 00:53:24,760
@@ -3596,12 +3597,12 @@ and return invertible list of INT.
 755
 00:53:25,960 --> 00:53:29,600
 Surprisingly the right hand side
-of the SPARCL (INAUDIBLE) sub
+of the SPARCL function sub
 
 756
 00:53:29,600 --> 00:53:32,280
 is identical to
-unidirectional (INAUDIBLE).
+unidirectional version.
 
 757
 00:53:34,480 --> 00:53:37,400
@@ -3609,7 +3610,7 @@ The go in SPARCL takes ordinary INT
 
 758
 00:53:37,920 --> 00:53:42,120
-and invertible list INT
+and invertible list of INT
 and returns invertible list of INT.
 
 759
@@ -3619,7 +3620,7 @@ list INT, the go function
 
 760
 00:53:50,360 --> 00:53:55,120
-uses lifted Cons structures
+uses lifted constructors
 and invertible branching.
 
 761
@@ -3648,7 +3649,7 @@ can call go for z and xs.
 766
 00:54:19,480 --> 00:54:22,960
 Because that's
-the (INAUDIBLE) argument of go,
+the first argument of go,
 
 767
 00:54:22,960 --> 00:54:26,600
@@ -3663,11 +3664,11 @@ programs look very similar.
 769
 00:54:34,360 --> 00:54:37,240
 In this, they have
-the same recorded structure.
+the same recursive structure.
 
 770
 00:54:37,760 --> 00:54:40,880
-This is a (INAUDIBLE)
+This is a strength of
 SPARCL compared with
 
 771
@@ -3681,7 +3682,7 @@ invertible function,
 
 773
 00:54:48,000 --> 00:54:52,640
-we can use INT by using
+we can use it by using
 the forward and backward functions.
 
 774
@@ -3690,7 +3691,7 @@ Here fwd is a function
 
 775
 00:54:55,280 --> 00:54:59,440
-that lands an invertible function
+that runs an invertible function
 in the forward direction.
 
 776
@@ -3723,7 +3724,7 @@ and bwd subs forms a bijection.
 
 782
 00:55:21,880 --> 00:55:24,640
-This is for SPARCL (INAUDIBLE).
+This is what SPARCL guarantees.
 
 783
 00:55:26,480 --> 00:55:28,960
@@ -3745,22 +3746,22 @@ the class system
 
 787
 00:55:36,960 --> 00:55:39,680
-of the PI (INAUDIBLE) of SPARCL.
+lambda PI arrow of SPARCL.
 
 788
 00:55:40,320 --> 00:55:43,160
-Now the PI(INAUDIBLE) is
+Now lambda PI arrow is
 based on linear calculus,
 
 789
 00:55:43,160 --> 00:55:47,760
-and the q(INAUDIBLE) features
+and lambda q arrow features
 a class system of linear Haskell.
 
 790
 00:55:47,760 --> 00:55:50,160
-So design around
-the PI(INAUDIBLE) is also
+So the design of lambda
+PI arrow is also
 
 791
 00:55:50,160 --> 00:55:53,160
@@ -3769,7 +3770,7 @@ inspired by two-staged languages.
 792
 00:55:53,160 --> 00:55:56,440
 We shall see some formal properties
-about the PI(INAUDIBLE)
+about lambda PI arrow
 
 793
 00:55:56,440 --> 00:55:59,120
@@ -3788,8 +3789,8 @@ native tree rebuilding
 
 796
 00:56:07,120 --> 00:56:09,720
-from in order and through
-other (INAUDIBLE).
+from in order and
+preorder traversal.
 
 797
 00:56:11,240 --> 00:56:14,040
@@ -3820,7 +3821,7 @@ programming languages
 
 803
 00:56:28,400 --> 00:56:31,680
-about a limited form of
+that support a limited form of
 partial invertibility.
 
 804

@@ -653,7 +653,7 @@ Dialogue: 0,0:45:30.96,0:45:32.68,Default,,0,0,0,,With designer SPARCL,
 Dialogue: 0,0:45:32.68,0:45:36.12,Default,,0,0,0,,which is a programming language\Nfor writing invertible functions
 Dialogue: 0,0:45:36.12,0:45:39.84,Default,,0,0,0,,through composing\Npartially-invertible function.
 Dialogue: 0,0:45:39.84,0:45:42.68,Default,,0,0,0,,This is because\Npartially-invertible functions
-Dialogue: 0,0:45:42.68,0:45:45.56,Default,,0,0,0,,are more natural and more explicit.
+Dialogue: 0,0:45:42.68,0:45:45.56,Default,,0,0,0,,are more natural and more expressive.
 Dialogue: 0,0:45:45.56,0:45:47.28,Default,,0,0,0,,SPARCL uses linear types,
 Dialogue: 0,0:45:47.28,0:45:50.60,Default,,0,0,0,,which is a key to\Ncorrectness by construction.
 Dialogue: 0,0:45:51.92,0:45:54.76,Default,,0,0,0,,Let us start with an example\Nto explain the problem
@@ -677,7 +677,7 @@ Dialogue: 0,0:46:49.32,0:46:53.28,Default,,0,0,0,,This function calls go with\Na
 Dialogue: 0,0:46:53.28,0:46:58.04,Default,,0,0,0,,which intuitively represent\Na previous element.
 Dialogue: 0,0:46:58.68,0:47:03.44,Default,,0,0,0,,Go takes int and a list of int\Nand returns a list of int.
 Dialogue: 0,0:47:04.04,0:47:08.20,Default,,0,0,0,,If you apply go into the empty\Nlist, it returns an empty list.
-Dialogue: 0,0:47:08.20,0:47:13.40,Default,,0,0,0,,If you apply go into x\Ncos xs, it outputs x-n
+Dialogue: 0,0:47:08.20,0:47:13.40,Default,,0,0,0,,If you apply go into x\Ncons xs, it outputs x-n
 Dialogue: 0,0:47:13.40,0:47:17.16,Default,,0,0,0,,and recurs it over x and xs.
 Dialogue: 0,0:47:19.48,0:47:24.00,Default,,0,0,0,,Here, we have some observation\Nabout invertibility of subs.
 Dialogue: 0,0:47:24.00,0:47:27.60,Default,,0,0,0,,First of all, subs\Nitself is invertible.
@@ -693,7 +693,7 @@ Dialogue: 0,0:47:56.32,0:48:01.08,Default,,0,0,0,,In fact, go is not invertible\
 Dialogue: 0,0:48:01.88,0:48:07.68,Default,,0,0,0,,Specifically go n becomes invertible\Nfor any fixed or a static n.
 Dialogue: 0,0:48:10.68,0:48:13.28,Default,,0,0,0,,This means that we\Nneed to care about
 Dialogue: 0,0:48:13.28,0:48:16.76,Default,,0,0,0,,partial invertibility\Nin programming go.
-Dialogue: 0,0:48:17.88,0:48:20.64,Default,,0,0,0,,This example also illustrate
+Dialogue: 0,0:48:17.88,0:48:20.64,Default,,0,0,0,,This example also illustrates
 Dialogue: 0,0:48:20.64,0:48:24.24,Default,,0,0,0,,a challenge in partial\Ninvertible programming,
 Dialogue: 0,0:48:24.24,0:48:28.32,Default,,0,0,0,,that is, dynamic data flow\Ninto a static position.
 Dialogue: 0,0:48:30.88,0:48:36.24,Default,,0,0,0,,Here, we highlight\Nthe dynamic part with blue.
@@ -713,7 +713,7 @@ Dialogue: 0,0:49:29.12,0:49:32.64,Default,,0,0,0,,This representation provide\Na
 Dialogue: 0,0:49:32.64,0:49:37.00,Default,,0,0,0,,for describing invertible\Nand partial invertible function.
 Dialogue: 0,0:49:37.00,0:49:42.56,Default,,0,0,0,,For example, here we showed\Nthe types of subs and go in SPARCL.
 Dialogue: 0,0:49:42.56,0:49:47.36,Default,,0,0,0,,Because subs is invertible function.
-Dialogue: 0,0:49:47.96,0:49:54.16,Default,,0,0,0,,In SPARCL subs take list of int\Nand it has an invertible list of int.
+Dialogue: 0,0:49:47.96,0:49:54.16,Default,,0,0,0,,In SPARCL subs take invertabe list of int\Nand it returns an invertible list of int.
 Dialogue: 0,0:49:54.92,0:49:57.84,Default,,0,0,0,,Because that go is\Na partially-invertible function,
 Dialogue: 0,0:49:57.84,0:50:01.56,Default,,0,0,0,,which becomes invertible after\Nfixing its first argument.
 Dialogue: 0,0:50:01.56,0:50:06.44,Default,,0,0,0,,Int SPARCL go takes\Nordinary int and a list,
@@ -729,7 +729,7 @@ Dialogue: 0,0:50:32.04,0:50:36.12,Default,,0,0,0,,which is a challenge in\Nparti
 Dialogue: 0,0:50:36.12,0:50:39.72,Default,,0,0,0,,This pin operator is\Na remedy for this situation.
 Dialogue: 0,0:50:42.44,0:50:44.64,Default,,0,0,0,,Let us start with\Nvery simple example
 Dialogue: 0,0:50:44.64,0:50:47.56,Default,,0,0,0,,to explain programming\Nbasics in SPARCL.
-Dialogue: 0,0:50:47.56,0:50:51.28,Default,,0,0,0,,SPARCL is a linear type, type of\Na function for given language,
+Dialogue: 0,0:50:47.56,0:50:51.28,Default,,0,0,0,,SPARCL is a linear typed, higher-order\Nfunctional programming language,
 Dialogue: 0,0:50:51.28,0:50:55.64,Default,,0,0,0,,only the special thing is\Nthat it has invertible types.
 Dialogue: 0,0:50:55.64,0:51:00.04,Default,,0,0,0,,Here we explain how we handle\Nvalues of invertible types.
 Dialogue: 0,0:51:03.20,0:51:07.36,Default,,0,0,0,,Here is a partial invertible\Naddition written in SPARCL.
@@ -744,7 +744,7 @@ Dialogue: 0,0:51:32.40,0:51:35.68,Default,,0,0,0,,instead of using\Nordinary con
 Dialogue: 0,0:51:35.68,0:51:41.24,Default,,0,0,0,,we use lifted constructors,\Nsuch as S superscript R.
 Dialogue: 0,0:51:43.24,0:51:48.60,Default,,0,0,0,,Here, which shows\Nthe partially-invertible multiplication
 Dialogue: 0,0:51:48.60,0:51:50.76,Default,,0,0,0,,defined in SPARCL.
-Dialogue: 0,0:51:50.76,0:51:55.64,Default,,0,0,0,,Multiplication is the similarity\Nto the sub add function,
+Dialogue: 0,0:51:50.76,0:51:55.64,Default,,0,0,0,,Multiplication is similar\Nto the sub add function,
 Dialogue: 0,0:51:55.64,0:52:00.52,Default,,0,0,0,,takes natural numbers,\Nand invertible natural numbers
 Dialogue: 0,0:52:00.52,0:52:04.04,Default,,0,0,0,,and return invertible\Nnatural number.
 Dialogue: 0,0:52:05.04,0:52:07.44,Default,,0,0,0,,Unlike the add function,
@@ -757,63 +757,63 @@ Dialogue: 0,0:52:29.96,0:52:34.12,Default,,0,0,0,,is a branch comes with conditi
 Dialogue: 0,0:52:36.44,0:52:41.36,Default,,0,0,0,,This with conditions are using SPARCL\Ndirection to determine branches
 Dialogue: 0,0:52:41.36,0:52:44.64,Default,,0,0,0,,but we do not describe\Nthe details in this talk.
 Dialogue: 0,0:52:47.92,0:52:51.16,Default,,0,0,0,,Now we are ready to show how\Nwe program subs in SPARCL.
-Dialogue: 0,0:52:51.80,0:52:55.16,Default,,0,0,0,,Because subs is a function\Nset computes the (INAUDIBLE)
+Dialogue: 0,0:52:51.80,0:52:55.16,Default,,0,0,0,,Because subs is a function\Nthat computes the values
 Dialogue: 0,0:52:55.16,0:52:57.32,Default,,0,0,0,,of adjacent element in a list.
 Dialogue: 0,0:52:59.40,0:53:01.68,Default,,0,0,0,,For comparison, we'll also show
 Dialogue: 0,0:53:01.68,0:53:05.64,Default,,0,0,0,,the standard unidirectional\Ndefinition of subs in Haskell.
 Dialogue: 0,0:53:06.96,0:53:10.08,Default,,0,0,0,,So definition of the two\Nprograms look very similar
-Dialogue: 0,0:53:10.08,0:53:15.76,Default,,0,0,0,,except the use of (INAUDIBLE).
-Dialogue: 0,0:53:18.48,0:53:22.52,Default,,0,0,0,,Subs in SPARCL take\Nan invertible list of the INT
+Dialogue: 0,0:53:10.08,0:53:15.76,Default,,0,0,0,,except the use of constructs\Nthat care about invertability.
+Dialogue: 0,0:53:18.48,0:53:22.52,Default,,0,0,0,,Subs in SPARCL take\Nan invertible list of INT
 Dialogue: 0,0:53:22.52,0:53:24.76,Default,,0,0,0,,and return invertible list of INT.
-Dialogue: 0,0:53:25.96,0:53:29.60,Default,,0,0,0,,Surprisingly the right hand side\Nof the SPARCL (INAUDIBLE) sub
-Dialogue: 0,0:53:29.60,0:53:32.28,Default,,0,0,0,,is identical to\Nunidirectional (INAUDIBLE).
+Dialogue: 0,0:53:25.96,0:53:29.60,Default,,0,0,0,,Surprisingly the right hand side\Nof the SPARCL function sub
+Dialogue: 0,0:53:29.60,0:53:32.28,Default,,0,0,0,,is identical to\Nunidirectional version.
 Dialogue: 0,0:53:34.48,0:53:37.40,Default,,0,0,0,,The go in SPARCL takes ordinary INT
-Dialogue: 0,0:53:37.92,0:53:42.12,Default,,0,0,0,,and invertible list INT\Nand returns invertible list of INT.
+Dialogue: 0,0:53:37.92,0:53:42.12,Default,,0,0,0,,and invertible list of INT\Nand returns invertible list of INT.
 Dialogue: 0,0:53:45.88,0:53:50.36,Default,,0,0,0,,To manipulate invertible\Nlist INT, the go function
-Dialogue: 0,0:53:50.36,0:53:55.12,Default,,0,0,0,,uses lifted Cons structures\Nand invertible branching.
+Dialogue: 0,0:53:50.36,0:53:55.12,Default,,0,0,0,,uses lifted constructors\Nand invertible branching.
 Dialogue: 0,0:53:56.60,0:53:59.52,Default,,0,0,0,,The most important part\Nin the definition is
 Dialogue: 0,0:53:59.52,0:54:02.52,Default,,0,0,0,,that it uses the pin operator.
 Dialogue: 0,0:54:03.68,0:54:08.68,Default,,0,0,0,,By using the pin operator, we\Nconvert x of type invertible INT
 Dialogue: 0,0:54:08.68,0:54:12.64,Default,,0,0,0,,into z of type ordinary INT.
 Dialogue: 0,0:54:13.48,0:54:18.40,Default,,0,0,0,,Thanks to this conversion, we\Ncan call go for z and xs.
-Dialogue: 0,0:54:19.48,0:54:22.96,Default,,0,0,0,,Because that's\Nthe (INAUDIBLE) argument of go,
+Dialogue: 0,0:54:19.48,0:54:22.96,Default,,0,0,0,,Because that's\Nthe first argument of go,
 Dialogue: 0,0:54:22.96,0:54:26.60,Default,,0,0,0,,expect INT instead\Nof invertible INT.
 Dialogue: 0,0:54:29.72,0:54:33.24,Default,,0,0,0,,We say again that two\Nprograms look very similar.
-Dialogue: 0,0:54:34.36,0:54:37.24,Default,,0,0,0,,In this, they have\Nthe same recorded structure.
-Dialogue: 0,0:54:37.76,0:54:40.88,Default,,0,0,0,,This is a (INAUDIBLE)\NSPARCL compared with
+Dialogue: 0,0:54:34.36,0:54:37.24,Default,,0,0,0,,In this, they have\Nthe same recursive structure.
+Dialogue: 0,0:54:37.76,0:54:40.88,Default,,0,0,0,,This is a strength of\NSPARCL compared with
 Dialogue: 0,0:54:40.88,0:54:43.16,Default,,0,0,0,,existing reversible languages.
 Dialogue: 0,0:54:45.44,0:54:48.00,Default,,0,0,0,,Once we have defined\Ninvertible function,
-Dialogue: 0,0:54:48.00,0:54:52.64,Default,,0,0,0,,we can use INT by using\Nthe forward and backward functions.
+Dialogue: 0,0:54:48.00,0:54:52.64,Default,,0,0,0,,we can use it by using\Nthe forward and backward functions.
 Dialogue: 0,0:54:53.24,0:54:55.28,Default,,0,0,0,,Here fwd is a function
-Dialogue: 0,0:54:55.28,0:54:59.44,Default,,0,0,0,,that lands an invertible function\Nin the forward direction.
+Dialogue: 0,0:54:55.28,0:54:59.44,Default,,0,0,0,,that runs an invertible function\Nin the forward direction.
 Dialogue: 0,0:54:59.44,0:55:01.92,Default,,0,0,0,,And bwd that the opposite.
 Dialogue: 0,0:55:03.52,0:55:07.00,Default,,0,0,0,,For example, if we apply\Nfwd subs to this list,
 Dialogue: 0,0:55:07.00,0:55:09.04,Default,,0,0,0,,we will obtain this result.
 Dialogue: 0,0:55:09.04,0:55:12.72,Default,,0,0,0,,And if we apply, bwd\Nsubs to this list,
 Dialogue: 0,0:55:12.72,0:55:15.16,Default,,0,0,0,,we will obtain\Nthe original list again.
 Dialogue: 0,0:55:16.08,0:55:21.08,Default,,0,0,0,,Indeed, our pair of fwd subs\Nand bwd subs forms a bijection.
-Dialogue: 0,0:55:21.88,0:55:24.64,Default,,0,0,0,,This is for SPARCL (INAUDIBLE).
+Dialogue: 0,0:55:21.88,0:55:24.64,Default,,0,0,0,,This is what SPARCL guarantees.
 Dialogue: 0,0:55:26.48,0:55:28.96,Default,,0,0,0,,This is a brief\Nintroduction to SPARCL.
 Dialogue: 0,0:55:29.52,0:55:31.36,Default,,0,0,0,,But in our paper, we...
 Dialogue: 0,0:55:33.08,0:55:34.84,Default,,0,0,0,,we discussed more things.
 Dialogue: 0,0:55:34.84,0:55:36.96,Default,,0,0,0,,For example, we defined\Nthe class system
-Dialogue: 0,0:55:36.96,0:55:39.68,Default,,0,0,0,,of the PI (INAUDIBLE) of SPARCL.
-Dialogue: 0,0:55:40.32,0:55:43.16,Default,,0,0,0,,Now the PI(INAUDIBLE) is\Nbased on linear calculus,
-Dialogue: 0,0:55:43.16,0:55:47.76,Default,,0,0,0,,and the q(INAUDIBLE) features\Na class system of linear Haskell.
-Dialogue: 0,0:55:47.76,0:55:50.16,Default,,0,0,0,,So design around\Nthe PI(INAUDIBLE) is also
+Dialogue: 0,0:55:36.96,0:55:39.68,Default,,0,0,0,,lambda PI arrow of SPARCL.
+Dialogue: 0,0:55:40.32,0:55:43.16,Default,,0,0,0,,Now lambda PI arrow is\Nbased on linear calculus,
+Dialogue: 0,0:55:43.16,0:55:47.76,Default,,0,0,0,,and lambda q arrow features\Na class system of linear Haskell.
+Dialogue: 0,0:55:47.76,0:55:50.16,Default,,0,0,0,,So the design of lambda\NPI arrow is also
 Dialogue: 0,0:55:50.16,0:55:53.16,Default,,0,0,0,,inspired by two-staged languages.
-Dialogue: 0,0:55:53.16,0:55:56.44,Default,,0,0,0,,We shall see some formal properties\Nabout the PI(INAUDIBLE)
+Dialogue: 0,0:55:53.16,0:55:56.44,Default,,0,0,0,,We shall see some formal properties\Nabout lambda PI arrow
 Dialogue: 0,0:55:56.44,0:55:59.12,Default,,0,0,0,,including type\Nsafety and bijectivity.
 Dialogue: 0,0:56:00.04,0:56:03.84,Default,,0,0,0,,We'll also discuss larger\Nexamples including Huffman encoding
 Dialogue: 0,0:56:03.84,0:56:07.12,Default,,0,0,0,,and calculation of developed\Nnative tree rebuilding
-Dialogue: 0,0:56:07.12,0:56:09.72,Default,,0,0,0,,from in order and through\Nother (INAUDIBLE).
+Dialogue: 0,0:56:07.12,0:56:09.72,Default,,0,0,0,,from in order and\Npreorder traversal.
 Dialogue: 0,0:56:11.24,0:56:14.04,Default,,0,0,0,,Let us discuss some of related work.
 Dialogue: 0,0:56:14.04,0:56:15.56,Default,,0,0,0,,These are some existing research
 Dialogue: 0,0:56:15.56,0:56:18.00,Default,,0,0,0,,concerning partial invertibility.
 Dialogue: 0,0:56:18.00,0:56:21.16,Default,,0,0,0,,In program transformation,\Nthere's an inversion method
 Dialogue: 0,0:56:21.16,0:56:24.16,Default,,0,0,0,,called partial, impartial\Nand semi-inversion.
 Dialogue: 0,0:56:25.48,0:56:28.40,Default,,0,0,0,,Also there are some reverse\Nprogramming languages
-Dialogue: 0,0:56:28.40,0:56:31.68,Default,,0,0,0,,about a limited form of\Npartial invertibility.
+Dialogue: 0,0:56:28.40,0:56:31.68,Default,,0,0,0,,that support a limited form of\Npartial invertibility.
 Dialogue: 0,0:56:35.56,0:56:40.00,Default,,0,0,0,,The design of SPARCL is inspired\Nby our previous work HOBiT.
 Dialogue: 0,0:56:40.00,0:56:42.92,Default,,0,0,0,,HOBiT is a higher-order\Nbidirectional programming language
 Dialogue: 0,0:56:42.92,0:56:46.72,Default,,0,0,0,,in which lenses are already\Npresented as ordinary function.
