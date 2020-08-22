@@ -2069,7 +2069,7 @@ Dialogue: 0,1:57:58.24,1:58:00.36,Default,,0,0,0,,for a live Q&A,
 Dialogue: 0,1:58:00.36,1:58:02.56,Default,,0,0,0,,click on the link in Clowdr.
 Dialogue: 0,1:58:08.60,1:58:13.48,Default,,0,0,0,,Hello and welcome back to\Nthe second session for ICFP 2020.
 Dialogue: 0,1:58:13.48,1:58:17.16,Default,,0,0,0,,And the last paper in this\Nsession is going to be
-Dialogue: 0,1:58:17.16,1:58:18.92,Default,,0,0,0,,liquid information flow control
+Dialogue: 0,1:58:17.16,1:58:18.92,Default,,0,0,0,,Liquid information flow control
 Dialogue: 0,1:58:18.92,1:58:23.92,Default,,0,0,0,,and it's gonna be presented  by\NJean Yang and Nadia Polikarpova.
 Dialogue: 0,1:58:29.32,1:58:31.68,Default,,0,0,0,,JEAN YANG: If you're\Nthe director of the FBI,
 Dialogue: 0,1:58:31.68,1:58:35.08,Default,,0,0,0,,you should be able to keep your\Nsocial media accounts on lockdown,
@@ -2077,7 +2077,7 @@ Dialogue: 0,1:58:35.08,1:58:37.28,Default,,0,0,0,,but this turned out\Nnot to be
 Dialogue: 0,1:58:37.28,1:58:40.44,Default,,0,0,0,,for former FBI Director James Comey.
 Dialogue: 0,1:58:40.80,1:58:43.00,Default,,0,0,0,,Journalist Ashley\NFeinberg discovered
 Dialogue: 0,1:58:43.00,1:58:45.88,Default,,0,0,0,,Comey's secret Instagram and Twitter
-Dialogue: 0,1:58:45.88,1:58:50.52,Default,,0,0,0,,simply by sending a follow request\Nto Comey's sons private Instagram.
+Dialogue: 0,1:58:45.88,1:58:50.52,Default,,0,0,0,,simply by sending a follow request\Nto Comey's son's private Instagram.
 Dialogue: 0,1:58:50.52,1:58:51.76,Default,,0,0,0,,The culprit,
 Dialogue: 0,1:58:51.76,1:58:55.08,Default,,0,0,0,,a leak in Instagram's\Nsuggestions algorithm.
 Dialogue: 0,1:58:55.40,1:58:58.52,Default,,0,0,0,,This kind of thing affects many\Nmore of us than just the Comeys
@@ -2088,7 +2088,7 @@ Dialogue: 0,1:59:05.92,1:59:08.64,Default,,0,0,0,,subject to complex\Nsecurity p
 Dialogue: 0,1:59:09.08,1:59:11.60,Default,,0,0,0,,Traditionally, programmers\Nenforce these policies
 Dialogue: 0,1:59:11.60,1:59:15.48,Default,,0,0,0,,by string policy enforcing\Ncode or policy checks
 Dialogue: 0,1:59:15.48,1:59:17.28,Default,,0,0,0,,throughout the application.
-Dialogue: 0,1:59:18.00,1:59:21.04,Default,,0,0,0,,It is all too easy to\Nmiss a chat by mistake
+Dialogue: 0,1:59:18.00,1:59:21.04,Default,,0,0,0,,It is all too easy to\Nmiss a check by mistake
 Dialogue: 0,1:59:21.04,1:59:23.72,Default,,0,0,0,,causing a potential\Ninformation leak.
 Dialogue: 0,1:59:24.28,1:59:28.56,Default,,0,0,0,,A much better approach is to let\Nprogrammers specify policies
 Dialogue: 0,1:59:28.56,1:59:31.76,Default,,0,0,0,,declaratively and separately\Nfrom the application code.
@@ -2097,9 +2097,9 @@ Dialogue: 0,1:59:35.44,1:59:39.00,Default,,0,0,0,,ensure that the code\Nsatisfie
 Dialogue: 0,1:59:39.48,1:59:43.44,Default,,0,0,0,,IFC frameworks come in two\Nflavors - static and dynamic
 Dialogue: 0,1:59:43.44,1:59:46.52,Default,,0,0,0,,which have complementary\Nstrengths and weakenesses.
 Dialogue: 0,1:59:46.92,1:59:49.84,Default,,0,0,0,,In this work, we will\Nfocus on static techniques
-Dialogue: 0,1:59:49.84,1:59:54.48,Default,,0,0,0,,which ensure absence of leaks\Nonce and for all a compile time,
+Dialogue: 0,1:59:49.84,1:59:54.48,Default,,0,0,0,,which ensure absence of leaks\Nonce and for all at compile time,
 Dialogue: 0,1:59:54.56,2:00:00.64,Default,,0,0,0,,hence avoiding surprise failures\Nand performance overhead at runtime.
-Dialogue: 0,2:00:00.64,2:00:05.64,Default,,0,0,0,,On the flipside, existing static\Ntechniques are enabled to handle
+Dialogue: 0,2:00:00.64,2:00:05.64,Default,,0,0,0,,On the flipside, existing static\Ntechniques are unable to handle
 Dialogue: 0,2:00:05.64,2:00:09.44,Default,,0,0,0,,rich policies that modern\Napplications need
 Dialogue: 0,2:00:09.44,2:00:14.20,Default,,0,0,0,,or if they can, they require\Nprogrammers to provide proof hints
 Dialogue: 0,2:00:14.20,2:00:16.80,Default,,0,0,0,,to verify absence of leaks.
@@ -2197,7 +2197,7 @@ Dialogue: 0,2:05:22.44,2:05:25.76,Default,,0,0,0,,Finally, the input label of\Nt
 Dialogue: 0,2:05:25.76,2:05:28.12,Default,,0,0,0,,is the conjunction of\Ntheir input labels
 Dialogue: 0,2:05:28.12,2:05:31.96,Default,,0,0,0,,and the output label is\Nthe disjunction of their output labels.
 Dialogue: 0,2:05:33.08,2:05:36.52,Default,,0,0,0,,The TIO API has a third\Nprimitive operation
-Dialogue: 0,2:05:36.52,2:05:40.40,Default,,0,0,0,,(INAUDIBLE) free downgrade\Nwhich plays an important role
+Dialogue: 0,2:05:36.52,2:05:40.40,Default,,0,0,0,,for leak-free downgrade\Nwhich plays an important role
 Dialogue: 0,2:05:40.40,2:05:42.52,Default,,0,0,0,,in applications with rich policies
 Dialogue: 0,2:05:42.52,2:05:45.76,Default,,0,0,0,,but I will skip this description\Nin the interest of time.
 Dialogue: 0,2:05:47.12,2:05:49.28,Default,,0,0,0,,The TIO library also provides
@@ -2207,7 +2207,7 @@ Dialogue: 0,2:05:57.28,2:05:59.92,Default,,0,0,0,,Note that while\Nthe primitive
 Dialogue: 0,2:05:59.92,2:06:02.24,Default,,0,0,0,,are part of the trusted\Ncomputing base,
 Dialogue: 0,2:06:02.24,2:06:04.56,Default,,0,0,0,,the derived operations are not.
 Dialogue: 0,2:06:05.00,2:06:07.84,Default,,0,0,0,,They're implemented in terms\Nof the primitive operations
-Dialogue: 0,2:06:07.84,2:06:10.80,Default,,0,0,0,,and the type check\Nusing Lifty itself.
+Dialogue: 0,2:06:07.84,2:06:10.80,Default,,0,0,0,,and are type checked\Nusing Lifty itself.
 Dialogue: 0,2:06:11.20,2:06:12.84,Default,,0,0,0,,Now, let's see how I can use Lifty
 Dialogue: 0,2:06:12.84,2:06:16.56,Default,,0,0,0,,to implement some simple functionality\Nof a conference manager.
 Dialogue: 0,2:06:17.28,2:06:20.36,Default,,0,0,0,,Say I'm on the program\Ncommittee of IFCP 20
@@ -2279,7 +2279,7 @@ Dialogue: 0,2:09:30.00,2:09:32.36,Default,,0,0,0,,Instead of trying to\Ndecipher
 Dialogue: 0,2:09:32.36,2:09:33.84,Default,,0,0,0,,and fix the leak myself
 Dialogue: 0,2:09:33.84,2:09:36.20,Default,,0,0,0,,I can ask lifty to do it for me.
 Dialogue: 0,2:09:36.20,2:09:39.44,Default,,0,0,0,,In this case, lifty\Nreturns a modified program
-Dialogue: 0,2:09:39.44,2:09:43.76,Default,,0,0,0,,where I call to get paper score\Nis wrapper in a power seacheck.
+Dialogue: 0,2:09:39.44,2:09:43.76,Default,,0,0,0,,where I call to get paper score\Nis wrapper in a policy check.
 Dialogue: 0,2:09:43.76,2:09:47.28,Default,,0,0,0,,The check retrieves\Nthe conflict list for this paper
 Dialogue: 0,2:09:47.28,2:09:50.44,Default,,0,0,0,,and checks whether\Nthe client is on that list.
 Dialogue: 0,2:09:50.44,2:09:52.44,Default,,0,0,0,,If client is in fact conflicted
@@ -2296,14 +2296,14 @@ Dialogue: 0,2:10:20.80,2:10:23.12,Default,,0,0,0,,from the failed type\Nchecking
 Dialogue: 0,2:10:23.12,2:10:29.20,Default,,0,0,0,,to localize the leak and infer\Na local specification for the patch.
 Dialogue: 0,2:10:29.24,2:10:34.24,Default,,0,0,0,,First, let's desugar the denotation\Ninto invocations of bind.
 Dialogue: 0,2:10:34.24,2:10:35.88,Default,,0,0,0,,While type checking the program
-Dialogue: 0,2:10:35.88,2:10:39.40,Default,,0,0,0,,lifty infer the following\Ntypes for the two computations
+Dialogue: 0,2:10:35.88,2:10:39.40,Default,,0,0,0,,lifty infers the following\Ntypes for the two computations
 Dialogue: 0,2:10:39.40,2:10:41.40,Default,,0,0,0,,sequenced by bind.
 Dialogue: 0,2:10:41.40,2:10:44.52,Default,,0,0,0,,Now recall that our type\Nsignature for bind
 Dialogue: 0,2:10:44.52,2:10:47.80,Default,,0,0,0,,enforces that the output label\Nof the second computation
 Dialogue: 0,2:10:47.80,2:10:51.64,Default,,0,0,0,,be more restrictive than\Nthe input label of the first one
 Dialogue: 0,2:10:51.64,2:10:53.48,Default,,0,0,0,,hence type checking in this case
 Dialogue: 0,2:10:53.48,2:10:57.64,Default,,0,0,0,,reduces to the following\Nimplication between the labels.
-Dialogue: 0,2:10:57.64,2:11:01.76,Default,,0,0,0,,Lifty uses SMT software to\Nvalidate this implication.
+Dialogue: 0,2:10:57.64,2:11:01.76,Default,,0,0,0,,Lifty uses an SMT solver to\Nvalidate this implication.
 Dialogue: 0,2:11:01.76,2:11:03.76,Default,,0,0,0,,In this case the check fails
 Dialogue: 0,2:11:03.76,2:11:06.96,Default,,0,0,0,,and the program is deemed ill-typed.
 Dialogue: 0,2:11:06.96,2:11:10.04,Default,,0,0,0,,Lifty keeps track of\Nwhich input action
@@ -2314,7 +2314,7 @@ Dialogue: 0,2:11:20.56,2:11:24.64,Default,,0,0,0,,whose result is too\Nsensitive
 Dialogue: 0,2:11:24.64,2:11:28.40,Default,,0,0,0,,To fix the leak lifty replaces\Nthe offending input action
 Dialogue: 0,2:11:28.40,2:11:29.88,Default,,0,0,0,,with a patch template
 Dialogue: 0,2:11:29.88,2:11:33.80,Default,,0,0,0,,whose intention is to return\Nthe original value whenever it's safe
-Dialogue: 0,2:11:33.80,2:11:39.28,Default,,0,0,0,,and otherwise return a less\Nsensitive default or deducted value.
+Dialogue: 0,2:11:33.80,2:11:39.28,Default,,0,0,0,,and otherwise return a less\Nsensitive default or redacted value.
 Dialogue: 0,2:11:39.36,2:11:41.36,Default,,0,0,0,,Crucially the lifty type checker
 Dialogue: 0,2:11:41.36,2:11:44.92,Default,,0,0,0,,not only pinpoints the input\Naction that needs to be replaced
 Dialogue: 0,2:11:44.92,2:11:49.60,Default,,0,0,0,,but also infers a local specification\Nthat the patch needs to satisfy
@@ -2338,11 +2338,11 @@ Dialogue: 0,2:12:42.76,2:12:44.68,Default,,0,0,0,,and suggest leak patches
 Dialogue: 0,2:12:44.68,2:12:48.00,Default,,0,0,0,,when the application does\Nnot satisfy the policies.
 Dialogue: 0,2:12:48.00,2:12:50.40,Default,,0,0,0,,You can play with lifty\Nthrough our web interface
 Dialogue: 0,2:12:50.40,2:12:55.40,Default,,0,0,0,,available at this link.
-Dialogue: 0,2:13:01.36,2:13:04.44,Default,,0,0,0,,ALAN JEFFREY: Thank you June and Nadia.
+Dialogue: 0,2:13:01.36,2:13:04.44,Default,,0,0,0,,ALAN JEFFREY: Thank you Jean and Nadia.
 Dialogue: 0,2:13:04.44,2:13:09.24,Default,,0,0,0,,So there's going to be\Nlive Q&A for this talk
-Dialogue: 0,2:13:09.32,2:13:12.52,Default,,0,0,0,,as you are in the New York timezone
+Dialogue: 0,2:13:09.32,2:13:12.52,Default,,0,0,0,,if you are in the New York timezone
 Dialogue: 0,2:13:12.52,2:13:17.08,Default,,0,0,0,,and you can get to it as\Nusual by going to the link.
 Dialogue: 0,2:13:17.08,2:13:19.32,Default,,0,0,0,,So now if you would like to join us
-Dialogue: 0,2:13:19.32,2:13:24.20,Default,,0,0,0,,for the virtual (INAUDIBLE) inside\Nthe conference hall
-Dialogue: 0,2:13:24.24,2:13:26.68,Default,,0,0,0,,chatting and drinking coffee.
-Dialogue: 0,2:13:26.68,2:13:31.68,Default,,0,0,0,,That would be great.
+Dialogue: 0,2:13:19.32,2:13:24.20,Default,,0,0,0,,for the virtual milling outside\Nthe conference hall
+Dialogue: 0,2:13:24.24,2:13:26.68,Default,,0,0,0,,chatting and drinking coffee
+Dialogue: 0,2:13:26.68,2:13:31.68,Default,,0,0,0,,that would be great.

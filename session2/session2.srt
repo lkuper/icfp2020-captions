@@ -9659,7 +9659,7 @@ session is going to be
 
 2059
 01:58:17,160 --> 01:58:18,920
-liquid information flow control
+Liquid information flow control
 
 2060
 01:58:18,920 --> 01:58:23,920
@@ -9697,7 +9697,7 @@ Comey's secret Instagram and Twitter
 2067
 01:58:45,880 --> 01:58:50,520
 simply by sending a follow request
-to Comey's sons private Instagram.
+to Comey's son's private Instagram.
 
 2068
 01:58:50,520 --> 01:58:51,760
@@ -9748,7 +9748,7 @@ throughout the application.
 2078
 01:59:18,000 --> 01:59:21,040
 It is all too easy to
-miss a chat by mistake
+miss a check by mistake
 
 2079
 01:59:21,040 --> 01:59:23,720
@@ -9793,7 +9793,7 @@ focus on static techniques
 2087
 01:59:49,840 --> 01:59:54,480
 which ensure absence of leaks
-once and for all a compile time,
+once and for all at compile time,
 
 2088
 01:59:54,560 --> 02:00:00,640
@@ -9803,7 +9803,7 @@ and performance overhead at runtime.
 2089
 02:00:00,640 --> 02:00:05,640
 On the flipside, existing static
-techniques are enabled to handle
+techniques are unable to handle
 
 2090
 02:00:05,640 --> 02:00:09,440
@@ -10266,7 +10266,7 @@ primitive operation
 
 2187
 02:05:36,520 --> 02:05:40,400
-(INAUDIBLE) free downgrade
+for leak-free downgrade
 which plays an important role
 
 2188
@@ -10313,7 +10313,7 @@ of the primitive operations
 
 2197
 02:06:07,840 --> 02:06:10,800
-and the type check
+and are type checked
 using Lifty itself.
 
 2198
@@ -10650,7 +10650,7 @@ returns a modified program
 2269
 02:09:39,440 --> 02:09:43,760
 where I call to get paper score
-is wrapper in a power seacheck.
+is wrapper in a policy check.
 
 2270
 02:09:43,760 --> 02:09:47,280
@@ -10728,7 +10728,7 @@ While type checking the program
 
 2286
 02:10:35,880 --> 02:10:39,400
-lifty infer the following
+lifty infers the following
 types for the two computations
 
 2287
@@ -10761,7 +10761,7 @@ implication between the labels.
 
 2293
 02:10:57,640 --> 02:11:01,760
-Lifty uses SMT software to
+Lifty uses an SMT solver to
 validate this implication.
 
 2294
@@ -10814,7 +10814,7 @@ the original value whenever it's safe
 2304
 02:11:33,800 --> 02:11:39,280
 and otherwise return a less
-sensitive default or deducted value.
+sensitive default or redacted value.
 
 2305
 02:11:39,360 --> 02:11:41,360
@@ -10924,7 +10924,7 @@ available at this link.
 
 2328
 02:13:01,360 --> 02:13:04,440
-ALAN JEFFREY: Thank you June and Nadia.
+ALAN JEFFREY: Thank you Jean and Nadia.
 
 2329
 02:13:04,440 --> 02:13:09,240
@@ -10933,7 +10933,7 @@ live Q&A for this talk
 
 2330
 02:13:09,320 --> 02:13:12,520
-as you are in the New York timezone
+if you are in the New York timezone
 
 2331
 02:13:12,520 --> 02:13:17,080
@@ -10946,14 +10946,14 @@ So now if you would like to join us
 
 2333
 02:13:19,320 --> 02:13:24,200
-for the virtual (INAUDIBLE) inside
+for the virtual milling outside
 the conference hall
 
 2334
 02:13:24,240 --> 02:13:26,680
-chatting and drinking coffee.
+chatting and drinking coffee
 
 2335
 02:13:26,680 --> 02:13:31,680
-That would be great.
+that would be great.
 
