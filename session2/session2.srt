@@ -3080,7 +3080,7 @@ are memory related,
 648
 00:43:34,520 --> 00:43:38,160
 and one third of the bugs, are simple
-use after three errows.
+use after free errors.
 
 649
 00:43:38,760 --> 00:43:39,840
@@ -3088,8 +3088,8 @@ So you could say OK.
 
 650
 00:43:39,840 --> 00:43:43,200
-Chromium is writte in
-the mix of C and c++
+Chromium is written in
+a mix of C and C++
 
 651
 00:43:43,240 --> 00:43:44,880
@@ -3097,7 +3097,7 @@ and surely these don't happen
 
 652
 00:43:44,880 --> 00:43:47,360
-in high level type languages. Right.
+in high level typed languages. Right.
 
 653
 00:43:49,120 --> 00:43:50,680
@@ -3110,12 +3110,12 @@ where we open a database,
 
 655
 00:43:57,360 --> 00:44:01,200
-we write a great database of grades,
+we write a grade database of grades,
 
 656
 00:44:01,480 --> 00:44:05,000
 we write some grade into
-the database to masquerade,
+the database so that's great,
 
 657
 00:44:05,200 --> 00:44:07,040
@@ -3142,7 +3142,7 @@ runtime error. So,
 
 662
 00:44:24,840 --> 00:44:29,360
-Java use ways to, deal with
+there are various ways to, deal with
 this kind of errors,
 
 663
@@ -3165,16 +3165,16 @@ written in Affe.
 
 667
 00:44:41,560 --> 00:44:44,040
-It looks very much like DMN programs
+It looks very much like the ML program
 
 668
 00:44:44,040 --> 00:44:45,760
-you (INAUDIBLE) program from before,
+the program from before,
 
 669
 00:44:46,040 --> 00:44:48,160
 except this time when we
-reach the last lines
+reach the last line
 
 670
 00:44:48,240 --> 00:44:53,040
@@ -3193,7 +3193,7 @@ kinds, to determine usage.
 
 673
 00:45:02,760 --> 00:45:07,000
-So, here is a great database
+So, here is a grade database
 is of type database,
 
 674
@@ -3203,7 +3203,7 @@ and the database is kind of linear.
 675
 00:45:10,040 --> 00:45:13,360
 And so this resource
-must be use linear,
+must be use linearly,
 
 676
 00:45:13,520 --> 00:45:15,960
@@ -3269,12 +3269,12 @@ it easier to read.
 689
 00:45:56,360 --> 00:46:01,320
 But I don't need to. Here
-type is completely inferred by (INAUDIBLE).
+type is completely inferred.
 
 690
 00:46:03,200 --> 00:46:06,520
 So, to present Affe, I'm going to
-go through values of its features,
+go through various of its features,
 
 691
 00:46:06,600 --> 00:46:08,840
@@ -3287,7 +3287,7 @@ kinds determine usage.
 
 693
 00:46:12,440 --> 00:46:17,040
-We have frequence linear, results
+We have three kinds linear, resource
 must be used exactly once.
 
 694
@@ -3298,7 +3298,7 @@ exactly at most one zero ones.
 695
 00:46:23,200 --> 00:46:26,440
 And unrestricted
-the Z object can use
+the object can use
 
 696
 00:46:26,440 --> 00:46:29,480
@@ -3371,7 +3371,7 @@ time to create a list.
 
 712
 00:47:13,240 --> 00:47:15,480
-Since your limit is
+Since the element is
 going to be replicated.
 
 713
@@ -3416,11 +3416,11 @@ can be used in unrestricted fashion,
 722
 00:47:41,960 --> 00:47:44,320
 in particular, it can
-be used in (INAUDIBLE)
+be used linearly
 
 723
 00:47:46,760 --> 00:47:48,760
-This is a base of our language,
+This is the base of our language,
 
 724
 00:47:48,840 --> 00:47:51,960
@@ -3435,7 +3435,7 @@ functions and captures.
 726
 00:47:56,680 --> 00:48:01,400
 So here's a piece of code where
-we open the great database.
+we open the grade database.
 
 727
 00:48:01,440 --> 00:48:05,640
@@ -3458,8 +3458,8 @@ function captures
 
 731
 00:48:13,200 --> 00:48:17,960
-a great database and great,
-a great database is linear,
+a grade database and grade,
+a grade database is linear,
 
 732
 00:48:18,040 --> 00:48:19,800
@@ -3472,7 +3472,7 @@ also be called exactly once.
 
 734
 00:48:25,520 --> 00:48:28,400
-If we ask the Z (INAUDIBLE)
+If we ask the Affe checker
 
 735
 00:48:28,440 --> 00:48:32,720
@@ -3485,7 +3485,7 @@ Annotated by Lin, and unit,
 
 737
 00:48:35,680 --> 00:48:38,760
-and z annotation on
+and the annotation on
 the arrow indicates
 
 738
@@ -3515,7 +3515,7 @@ about the argument.
 743
 00:48:55,400 --> 00:48:58,640
 Here the argument is of type
-string so it's intercepted,
+string so it's unrestricted,
 
 744
 00:48:58,720 --> 00:49:00,560
@@ -3561,12 +3561,12 @@ borrows and regions
 
 753
 00:49:26,640 --> 00:49:28,640
-as an (INAUDIBLE) and a zoologist,
+as in Rust and other languages,
 
 754
 00:49:28,640 --> 00:49:33,040
 a borrow is a temporary
-loan offer resource, A.
+loan of a resource, A.
 
 755
 00:49:33,280 --> 00:49:35,760
@@ -3581,7 +3581,7 @@ observing the resource
 757
 00:49:39,160 --> 00:49:42,920
 and Exclusive burrows are
-for modifying the results.
+for modifying the resource.
 
 758
 00:49:44,920 --> 00:49:47,680
@@ -3595,7 +3595,7 @@ two grades concurrently
 
 760
 00:49:53,080 --> 00:49:55,560
-so this is a reduction so we use
+so this is a read action so we use
 
 761
 00:49:55,600 --> 00:49:58,600
@@ -3612,7 +3612,7 @@ the same time concurrently,
 
 764
 00:50:06,080 --> 00:50:09,280
-and in particular also kind
+and in particular the kind
 of this is unrestricted.
 
 765
@@ -3636,8 +3636,8 @@ I said, exclusive
 
 769
 00:50:25,040 --> 00:50:28,120
-and (INAUDIBLE), in particular
-was kind of fine.
+and they are, in particular,
+of kind affine.
 
 770
 00:50:28,560 --> 00:50:31,720
@@ -3651,7 +3651,7 @@ we, you cannot use
 
 772
 00:50:35,080 --> 00:50:39,120
-a borrow and the results,
+a borrow and the resource,
 itself, at the same time.
 
 773
@@ -3684,7 +3684,7 @@ borrow and another borrow,
 
 779
 00:51:00,520 --> 00:51:03,480
-and the time checker
+and the type checker
 will again reject this.
 
 780
@@ -3698,7 +3698,7 @@ a declaration of database
 
 782
 00:51:13,080 --> 00:51:17,240
-and Zen pair on (INAUDIBLE)
+and then pair composed
 which contains a borrow.
 
 783
@@ -3717,12 +3717,12 @@ because the borrow
 
 786
 00:51:25,600 --> 00:51:28,000
-is escaping it's each region.
+is escaping it's region.
 
 787
 00:51:28,640 --> 00:51:32,680
 And here is the region,
-delimiting, things a borrow.
+delimiting a borrow.
 
 788
 00:51:33,080 --> 00:51:36,040
@@ -3742,7 +3742,7 @@ by using the indexed kinds
 791
 00:51:43,480 --> 00:51:47,160
 so before I said the kinds were
-unrestricted I'll find a linear.
+unrestricted affine and linear.
 
 792
 00:51:47,480 --> 00:51:48,680
@@ -3781,8 +3781,8 @@ so the borrow cannot escape.
 
 800
 00:52:14,680 --> 00:52:17,120
-And the time checker will
-again, rejects us.
+And the type checker will
+again, rejects this.
 
 801
 00:52:18,400 --> 00:52:21,000
@@ -3830,7 +3830,7 @@ and returns units.
 810
 00:52:50,920 --> 00:52:53,720
 And since the functions
-are curified,
+are currified,
 
 811
 00:52:53,760 --> 00:52:57,280
@@ -3844,7 +3844,7 @@ and so the functions
 813
 00:52:59,200 --> 00:53:03,200
 are annotated with
-the kinds that is capture here.
+the kind that is capture here.
 
 814
 00:53:06,240 --> 00:53:09,640
@@ -3879,7 +3879,7 @@ lookup aspect
 
 821
 00:53:29,320 --> 00:53:33,920
-by creating a great function
+by creating a grade function
 that captures a database,
 
 822
@@ -3908,7 +3908,7 @@ And finally we can even go further
 
 827
 00:53:53,560 --> 00:53:58,000
-and the Houston functional
+and use a function
 attraction to pull
 
 828
@@ -4004,7 +4004,7 @@ By using the information provided
 848
 00:55:03,440 --> 00:55:06,840
 by the position of the borrow,
-the scoops of the borrow
+the scopes of the borrow
 
 849
 00:55:07,000 --> 00:55:08,920
@@ -4041,7 +4041,7 @@ nothing escapes that shouldn't.
 856
 00:55:26,840 --> 00:55:30,000
 This constraint system
-is (INAUDIBLE) to encode.
+is custom to encode.
 
 857
 00:55:30,000 --> 00:55:34,400
@@ -4060,7 +4060,7 @@ that we provide,
 860
 00:55:39,960 --> 00:55:47,120
 and we obtain principal type schemes
-for old functions in our program.
+for all the functions in our program.
 
 861
 00:55:47,120 --> 00:55:50,800
@@ -4073,7 +4073,7 @@ be a little bit complicated,
 
 863
 00:55:52,320 --> 00:55:58,240
-and so we use some kind of rules
+and so we use subkinding rules
 with positive and negative position
 
 864
@@ -4082,7 +4082,7 @@ to simplify the type further down.
 
 865
 00:56:03,400 --> 00:56:10,240
-Alright, until we obtain, finally,
+Alright, and so we obtain, finally,
 the simple type schemes.
 
 866
@@ -4130,7 +4130,7 @@ not support real flow sensitivity,
 
 875
 00:56:40,640 --> 00:56:45,760
-we can emulate guys a bit,
+we can emulate this a bit,
 but it has no proper support,
 
 876
