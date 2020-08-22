@@ -70,7 +70,7 @@ you should see stable relations
 16
 00:13:26,960 --> 00:13:29,440
 and abstract interpretation
-for higher order programmes
+for higher order programs
 
 17
 00:13:29,440 --> 00:13:32,960
@@ -100,7 +100,7 @@ authors participating alongside you
 22
 00:13:42,800 --> 00:13:45,640
 in both of those because they
-pre recorded their talk videos,
+prerecorded their talk videos,
 
 23
 00:13:45,640 --> 00:13:48,160
@@ -150,7 +150,7 @@ Benoit Montagu telling us
 32
 00:14:12,120 --> 00:14:16,360
 about abstract interpretation
-for higher order programmes.
+for higher order programs.
 
 33
 00:14:16,360 --> 00:14:18,280
@@ -165,7 +165,7 @@ joint work with Thomas Jensen
 35
 00:14:21,200 --> 00:14:25,400
 about the abstract interpretation
-of high order programmes.
+of high order programs.
 
 36
 00:14:25,400 --> 00:14:29,880
@@ -209,7 +209,7 @@ can be used for example,
 
 44
 00:14:51,360 --> 00:14:54,160
-in optimising compilers
+in optimizing compilers
 to perform common
 
 45
@@ -254,7 +254,7 @@ It's a static analysis
 53
 00:15:18,680 --> 00:15:21,360
 that infers frames for,
-for first order programmes.
+for first order programs.
 
 54
 00:15:21,360 --> 00:15:24,280
@@ -299,7 +299,7 @@ proof assistant
 62
 00:15:47,400 --> 00:15:51,360
 to make the verification
-of large programmes easier.
+of large programs easier.
 
 63
 00:15:51,360 --> 00:15:53,400
@@ -353,7 +353,7 @@ your property evolves
 
 73
 00:16:18,560 --> 00:16:21,360
-when your programme
+when your program
 gets evaluated.
 
 74
@@ -379,7 +379,7 @@ you will find in the paper
 78
 00:16:37,080 --> 00:16:41,240
 an equivalent definition
-in the form of a programme logic.
+in the form of a program logic.
 
 79
 00:16:41,240 --> 00:16:43,520
@@ -479,7 +479,7 @@ higher order language,
 98
 00:17:45,240 --> 00:17:48,640
 we want to infer relations
-between the inputs of programmes
+between the inputs of programs
 
 99
 00:17:48,640 --> 00:17:52,440
@@ -489,7 +489,7 @@ But what are the inputs?
 100
 00:17:52,440 --> 00:17:54,800
 We consider the inputs
-of a programme
+of a program
 
 101
 00:17:54,800 --> 00:17:57,480
@@ -503,7 +503,7 @@ the free variables
 
 103
 00:17:59,920 --> 00:18:03,200
-of that programme.
+of that program.
 Then the input output relation
 
 104
@@ -564,7 +564,7 @@ Now, we remark that if sigma
 115
 00:18:42,120 --> 00:18:45,640
 might define all the inputs
-of a programme t,
+of a program t,
 
 116
 00:18:45,640 --> 00:18:48,760
@@ -583,7 +583,7 @@ without changing the meaning
 
 119
 00:18:54,800 --> 00:18:57,800
-of the programme t.
+of the program t.
 In such a case, we say
 
 120
@@ -599,7 +599,7 @@ values for more inputs
 122
 00:19:04,000 --> 00:19:06,960
 than necessary does not change
-the meaning of a programme
+the meaning of a program
 
 123
 00:19:06,960 --> 00:19:09,880
@@ -733,17 +733,17 @@ by induction over
 
 149
 00:20:32,080 --> 00:20:37,200
-the syntax of the programme.
+the syntax of the program.
 For example, the denotation
 
 150
 00:20:37,200 --> 00:20:39,360
-of a programme that builds
+of a program that builds
 a pair out of
 
 151
 00:20:39,360 --> 00:20:44,240
-two sub programmes t1 and t2
+two sub programs t1 and t2
 is the pairing of their denotations.
 
 152
@@ -804,7 +804,7 @@ described by the environment,
 163
 00:21:18,880 --> 00:21:22,200
 and if the evaluation
-of the programme t
+of the program t
 
 164
 00:21:22,200 --> 00:21:26,520
@@ -814,12 +814,12 @@ gives you an output value v,
 165
 00:21:26,520 --> 00:21:29,920
 then the input-output pair
-(sigma, v) is predictively
+(sigma, v) is predicatively
 
 166
 00:21:29,920 --> 00:21:32,880
 in the denotation
-of the programme.
+of the program.
 
 167
 00:21:33,840 --> 00:21:37,920
@@ -1138,7 +1138,7 @@ that describes exactly
 230
 00:25:08,880 --> 00:25:11,800
 the input output
-behaviour of programmes.
+behavior of programs.
 
 231
 00:25:11,800 --> 00:25:16,200
@@ -1163,7 +1163,7 @@ tells us how the inputs
 235
 00:25:26,200 --> 00:25:31,720
 are related to the outputs globally.
-We first apply a ivvariant
+We first apply a invariant
 
 236
 00:25:31,720 --> 00:25:34,720
@@ -1241,7 +1241,7 @@ analysis in OCaml.
 
 251
 00:26:18,560 --> 00:26:20,680
-This is a bottom-up modular analyser
+This is a bottom-up modular analyzer
 
 252
 00:26:20,680 --> 00:26:23,480
@@ -1255,7 +1255,7 @@ computes a function summary
 254
 00:26:27,040 --> 00:26:30,600
 that approximates the extensional
-behaviour of that function.
+behavior of that function.
 
 255
 00:26:30,600 --> 00:26:33,280
@@ -1304,7 +1304,7 @@ achieve good precision.
 
 264
 00:27:02,640 --> 00:27:07,000
-The analyser first computes
+The analyzer first computes
 a summary for the identity function.
 
 265
@@ -1392,8 +1392,8 @@ to design an effective analysis
 
 282
 00:28:03,280 --> 00:28:09,240
-and we provide an artefact
-for the Coq formulization
+and we provide an artifact
+for the Coq formalization
 
 283
 00:28:09,240 --> 00:28:11,400
@@ -3350,7 +3350,7 @@ Because subs is invertible function.
 
 703
 00:49:47,960 --> 00:49:54,160
-In SPARCL subs take invertabe list of int
+In SPARCL subs take invertible list of int
 and it returns an invertible list of int.
 
 704
@@ -3398,7 +3398,7 @@ locally in this continuation.
 713
 00:50:27,080 --> 00:50:30,560
 Recall that it sometimes
-happens that dynamic dataflow
+happens that dynamic data flow
 
 714
 00:50:30,560 --> 00:50:32,040
@@ -3583,7 +3583,7 @@ programs look very similar
 752
 00:53:10,080 --> 00:53:15,760
 except the use of constructs
-that care about invertability.
+that care about Invertibility.
 
 753
 00:53:18,480 --> 00:53:22,520
@@ -4121,7 +4121,7 @@ a framework called Steel,
 
 867
 00:59:35,680 --> 00:59:38,480
-which is a concurreny
+which is a concurrency
 version, which is DSL for F*,
 
 868
@@ -4434,7 +4434,7 @@ the preconditions p and p prime,
 932
 01:02:48,120 --> 01:02:51,560
 offered to computations
-are disjoined,
+are disjoint,
 
 933
 01:02:51,560 --> 01:02:55,120
@@ -4448,7 +4448,7 @@ the first conditions q and q prime.
 
 935
 01:03:00,040 --> 01:03:01,800
-Buildding upon these action trees,
+Building upon these action trees,
 
 936
 01:03:01,800 --> 01:03:05,680
@@ -4695,7 +4695,7 @@ type Steel,
 988
 01:05:34,680 --> 01:05:38,520
 which reflects the computation
-that we uncoded as action trees.
+that we encoded as action trees.
 
 989
 01:05:38,520 --> 01:05:42,040
@@ -5088,7 +5088,7 @@ we can indeed send this message.
 1069
 01:09:52,840 --> 01:09:56,760
 And we then get a send
-permision on this channel,
+permission on this channel,
 
 1070
 01:09:56,760 --> 01:10:01,600
@@ -5296,7 +5296,7 @@ an embedded way in F*.
 
 1113
 01:12:00,720 --> 01:12:04,480
-During this talk, the're many details
+During this talk, there are many details
 of our work I didn't mention.
 
 1114
@@ -5311,7 +5311,7 @@ to enable support for also reasoning
 1116
 01:12:10,040 --> 01:12:12,440
 in a style akin to
-Implic Dynamic Frames
+Implicit Dynamic Frames
 
 1117
 01:12:12,440 --> 01:12:14,720
@@ -6540,7 +6540,7 @@ with evidence passing
 
 1373
 01:28:43,400 --> 01:28:46,520
-such implimentations
+such implementations
 can be quite efficient.
 
 1374

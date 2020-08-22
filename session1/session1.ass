@@ -26,13 +26,13 @@ Dialogue: 0,0:13:17.08,0:13:19.36,Default,,0,0,0,,So, if you're registering,\Nbu
 Dialogue: 0,0:13:19.36,0:13:21.92,Default,,0,0,0,,please head over there\Nand look for current
 Dialogue: 0,0:13:21.92,0:13:24.80,Default,,0,0,0,,and upcoming talk titles\Nhighlighted on the screen.
 Dialogue: 0,0:13:24.80,0:13:26.96,Default,,0,0,0,,For instance, right now,\Nyou should see stable relations
-Dialogue: 0,0:13:26.96,0:13:29.44,Default,,0,0,0,,and abstract interpretation\Nfor higher order programmes
+Dialogue: 0,0:13:26.96,0:13:29.44,Default,,0,0,0,,and abstract interpretation\Nfor higher order programs
 Dialogue: 0,0:13:29.44,0:13:32.96,Default,,0,0,0,,the very next talk. So, you can\Nclick a talk title like that one,
 Dialogue: 0,0:13:32.96,0:13:35.28,Default,,0,0,0,,and get the full\Ninteractive experience,
 Dialogue: 0,0:13:35.28,0:13:36.88,Default,,0,0,0,,including text chat\Nduring the talk,
 Dialogue: 0,0:13:36.88,0:13:40.12,Default,,0,0,0,,and a video Q&A with\Nthe authors afterward.
 Dialogue: 0,0:13:40.12,0:13:42.80,Default,,0,0,0,,Actually, you might find the\Nauthors participating alongside you
-Dialogue: 0,0:13:42.80,0:13:45.64,Default,,0,0,0,,in both of those because they\Npre recorded their talk videos,
+Dialogue: 0,0:13:42.80,0:13:45.64,Default,,0,0,0,,in both of those because they\Nprerecorded their talk videos,
 Dialogue: 0,0:13:45.64,0:13:48.16,Default,,0,0,0,,So, they can join\Nthe text chat.
 Dialogue: 0,0:13:48.16,0:13:51.04,Default,,0,0,0,,Not all authors are\Njoining the video Q&A
 Dialogue: 0,0:13:51.04,0:13:54.44,Default,,0,0,0,,in both the New York and Asia\Ntime bands that we're offering.
@@ -42,10 +42,10 @@ Dialogue: 0,0:14:00.16,0:14:02.60,Default,,0,0,0,,in for a talk that's playing\N
 Dialogue: 0,0:14:02.60,0:14:06.56,Default,,0,0,0,,are on the other time band instead.\NAlright, so, I'll remind you of some
 Dialogue: 0,0:14:06.56,0:14:09.76,Default,,0,0,0,,of these details as we\Nprogress through the session.
 Dialogue: 0,0:14:09.76,0:14:12.12,Default,,0,0,0,,First up, we're going to have\NBenoit Montagu telling us
-Dialogue: 0,0:14:12.12,0:14:16.36,Default,,0,0,0,,about abstract interpretation\Nfor higher order programmes.
+Dialogue: 0,0:14:12.12,0:14:16.36,Default,,0,0,0,,about abstract interpretation\Nfor higher order programs.
 Dialogue: 0,0:14:16.36,0:14:18.28,Default,,0,0,0,,BENOIT MONTAGU: Hello, my name\Nis Benoit Montagu,
 Dialogue: 0,0:14:18.28,0:14:21.20,Default,,0,0,0,,and I'm going to tell you about\Njoint work with Thomas Jensen
-Dialogue: 0,0:14:21.20,0:14:25.40,Default,,0,0,0,,about the abstract interpretation\Nof high order programmes.
+Dialogue: 0,0:14:21.20,0:14:25.40,Default,,0,0,0,,about the abstract interpretation\Nof high order programs.
 Dialogue: 0,0:14:25.40,0:14:29.88,Default,,0,0,0,,The problem we're interested in is\Nthe inference of program frames.
 Dialogue: 0,0:14:29.88,0:14:31.12,Default,,0,0,0,,This means that\Nwe want to detect
 Dialogue: 0,0:14:31.12,0:14:33.44,Default,,0,0,0,,when a function call\Ndoes not change.
@@ -54,7 +54,7 @@ Dialogue: 0,0:14:36.52,0:14:40.40,Default,,0,0,0,,which parts of the global stat
 Dialogue: 0,0:14:40.40,0:14:43.56,Default,,0,0,0,,For functional programs,\Nit amounts to finding
 Dialogue: 0,0:14:43.56,0:14:48.40,Default,,0,0,0,,which parts of the inputs\Nand the outputs are the same.
 Dialogue: 0,0:14:49.36,0:14:51.36,Default,,0,0,0,,This frame information\Ncan be used for example,
-Dialogue: 0,0:14:51.36,0:14:54.16,Default,,0,0,0,,in optimising compilers\Nto perform common
+Dialogue: 0,0:14:51.36,0:14:54.16,Default,,0,0,0,,in optimizing compilers\Nto perform common
 Dialogue: 0,0:14:54.16,0:14:56.76,Default,,0,0,0,,sub expression elimination\Nand across function calls.
 Dialogue: 0,0:14:56.76,0:14:58.52,Default,,0,0,0,,The same information can also
 Dialogue: 0,0:14:58.52,0:15:00.72,Default,,0,0,0,,be exploited in\Nprogram verification.
@@ -63,7 +63,7 @@ Dialogue: 0,0:15:04.76,0:15:07.08,Default,,0,0,0,,of the parts\Nof the Other sta
 Dialogue: 0,0:15:07.08,0:15:11.52,Default,,0,0,0,,that have not changed\Nor indeed automatically preserved.
 Dialogue: 0,0:15:12.48,0:15:15.36,Default,,0,0,0,,Last year, we published\Na paper on what we call
 Dialogue: 0,0:15:15.36,0:15:18.68,Default,,0,0,0,,correlation analysis.\NIt's a static analysis
-Dialogue: 0,0:15:18.68,0:15:21.36,Default,,0,0,0,,that infers frames for,\Nfor first order programmes.
+Dialogue: 0,0:15:18.68,0:15:21.36,Default,,0,0,0,,that infers frames for,\Nfor first order programs.
 Dialogue: 0,0:15:21.36,0:15:24.28,Default,,0,0,0,,We applied it to the verification\Nof an OS micro-kernel.
 Dialogue: 0,0:15:24.28,0:15:27.80,Default,,0,0,0,,And it was able\Nto prove automatically 68%
 Dialogue: 0,0:15:27.80,0:15:30.24,Default,,0,0,0,,of the invariant\Npreservation lemmas.
@@ -72,7 +72,7 @@ Dialogue: 0,0:15:35.68,0:15:38.60,Default,,0,0,0,,In this work, we want\Nto exte
 Dialogue: 0,0:15:38.60,0:15:41.28,Default,,0,0,0,,to infer frames for\Na higher order language.
 Dialogue: 0,0:15:41.28,0:15:45.24,Default,,0,0,0,,Our long term goal is to\Nintegrate such an analysis
 Dialogue: 0,0:15:45.24,0:15:47.40,Default,,0,0,0,,in a general purpose\Nproof assistant
-Dialogue: 0,0:15:47.40,0:15:51.36,Default,,0,0,0,,to make the verification\Nof large programmes easier.
+Dialogue: 0,0:15:47.40,0:15:51.36,Default,,0,0,0,,to make the verification\Nof large programs easier.
 Dialogue: 0,0:15:51.36,0:15:53.40,Default,,0,0,0,,To infer frames\Nfor the lambda calculus,
 Dialogue: 0,0:15:53.40,0:15:56.04,Default,,0,0,0,,we follow the methodology\Nthat is offered
 Dialogue: 0,0:15:56.04,0:15:58.68,Default,,0,0,0,,by the abstract\Ninterpretation framework.
@@ -83,12 +83,12 @@ Dialogue: 0,0:16:05.32,0:16:09.76,Default,,0,0,0,,between the inputs\Nand the ou
 Dialogue: 0,0:16:09.76,0:16:11.60,Default,,0,0,0,,The second step\Nof the methodology
 Dialogue: 0,0:16:11.60,0:16:15.84,Default,,0,0,0,,is to define the collecting\Nsemantics for your property.
 Dialogue: 0,0:16:15.84,0:16:18.56,Default,,0,0,0,,It describes how\Nyour property evolves
-Dialogue: 0,0:16:18.56,0:16:21.36,Default,,0,0,0,,when your programme\Ngets evaluated.
+Dialogue: 0,0:16:18.56,0:16:21.36,Default,,0,0,0,,when your program\Ngets evaluated.
 Dialogue: 0,0:16:21.36,0:16:24.12,Default,,0,0,0,,In this work, the collecting\Nsemantics takes the form of
 Dialogue: 0,0:16:24.12,0:16:30.04,Default,,0,0,0,,a denotation of a lambda term\Ninto input-output relations.
 Dialogue: 0,0:16:30.04,0:16:33.00,Default,,0,0,0,,We have proved that this\Ndenotation is sound and complete,
 Dialogue: 0,0:16:33.00,0:16:37.08,Default,,0,0,0,,and as a bonus,\Nyou will find in the paper
-Dialogue: 0,0:16:37.08,0:16:41.24,Default,,0,0,0,,an equivalent definition\Nin the form of a programme logic.
+Dialogue: 0,0:16:37.08,0:16:41.24,Default,,0,0,0,,an equivalent definition\Nin the form of a program logic.
 Dialogue: 0,0:16:41.24,0:16:43.52,Default,,0,0,0,,The third and final step\Nof the abstract
 Dialogue: 0,0:16:43.52,0:16:47.80,Default,,0,0,0,,interpretation methodology\Nis to apply successive abstractions
 Dialogue: 0,0:16:47.80,0:16:52.08,Default,,0,0,0,,on the collecting semantics.\NBy doing so you obtain an analysis
@@ -108,12 +108,12 @@ Dialogue: 0,0:17:32.52,0:17:35.24,Default,,0,0,0,,is the standard one\Nand we us
 Dialogue: 0,0:17:35.24,0:17:37.28,Default,,0,0,0,,small step semantics\Nfor call by value
 Dialogue: 0,0:17:37.28,0:17:42.04,Default,,0,0,0,,that perform a substitution t,\Nto reduce a beta redex.
 Dialogue: 0,0:17:42.60,0:17:45.24,Default,,0,0,0,,For this for this\Nhigher order language,
-Dialogue: 0,0:17:45.24,0:17:48.64,Default,,0,0,0,,we want to infer relations\Nbetween the inputs of programmes
+Dialogue: 0,0:17:45.24,0:17:48.64,Default,,0,0,0,,we want to infer relations\Nbetween the inputs of programs
 Dialogue: 0,0:17:48.64,0:17:52.44,Default,,0,0,0,,and the outputs.\NBut what are the inputs?
-Dialogue: 0,0:17:52.44,0:17:54.80,Default,,0,0,0,,We consider the inputs\Nof a programme
+Dialogue: 0,0:17:52.44,0:17:54.80,Default,,0,0,0,,We consider the inputs\Nof a program
 Dialogue: 0,0:17:54.80,0:17:57.48,Default,,0,0,0,,are the possible\Nsubstitutions sigma
 Dialogue: 0,0:17:57.48,0:17:59.92,Default,,0,0,0,,that assign values to\Nthe free variables
-Dialogue: 0,0:17:59.92,0:18:03.20,Default,,0,0,0,,of that programme.\NThen the input output relation
+Dialogue: 0,0:17:59.92,0:18:03.20,Default,,0,0,0,,of that program.\NThen the input output relation
 Dialogue: 0,0:18:03.20,0:18:06.40,Default,,0,0,0,,of a term t\Nfor a set of inputs I
 Dialogue: 0,0:18:06.40,0:18:09.28,Default,,0,0,0,,is the set of pairs\Nmade from substitutions drawn
 Dialogue: 0,0:18:09.28,0:18:12.80,Default,,0,0,0,,from the set of inputs\Nand the values that are obtained
@@ -125,14 +125,14 @@ Dialogue: 0,0:18:25.36,0:18:29.88,Default,,0,0,0,,we can for instance state\Ntha
 Dialogue: 0,0:18:29.88,0:18:33.08,Default,,0,0,0,,when the input x\Nis assigned to a negative value
 Dialogue: 0,0:18:33.08,0:18:36.80,Default,,0,0,0,,or that t returns a value\Nthat remains above
 Dialogue: 0,0:18:36.80,0:18:42.12,Default,,0,0,0,,the value of the input x.\NNow, we remark that if sigma
-Dialogue: 0,0:18:42.12,0:18:45.64,Default,,0,0,0,,might define all the inputs\Nof a programme t,
+Dialogue: 0,0:18:42.12,0:18:45.64,Default,,0,0,0,,might define all the inputs\Nof a program t,
 Dialogue: 0,0:18:45.64,0:18:48.76,Default,,0,0,0,,then you can use\Nany substitution sigma prime
 Dialogue: 0,0:18:48.76,0:18:51.64,Default,,0,0,0,,that defines more inputs,\Neven some inputs that are
 Dialogue: 0,0:18:51.64,0:18:54.80,Default,,0,0,0,,not necessary to t\Nwithout changing the meaning
-Dialogue: 0,0:18:54.80,0:18:57.80,Default,,0,0,0,,of the programme t.\NIn such a case, we say
+Dialogue: 0,0:18:54.80,0:18:57.80,Default,,0,0,0,,of the program t.\NIn such a case, we say
 Dialogue: 0,0:18:57.80,0:19:00.92,Default,,0,0,0,,that sigma prime\Nextends sigma.
 Dialogue: 0,0:19:00.92,0:19:04.00,Default,,0,0,0,,And because specifying\Nvalues for more inputs
-Dialogue: 0,0:19:04.00,0:19:06.96,Default,,0,0,0,,than necessary does not change\Nthe meaning of a programme
+Dialogue: 0,0:19:04.00,0:19:06.96,Default,,0,0,0,,than necessary does not change\Nthe meaning of a program
 Dialogue: 0,0:19:06.96,0:19:09.88,Default,,0,0,0,,We can actually close\Nthe set of inputs I
 Dialogue: 0,0:19:09.88,0:19:13.64,Default,,0,0,0,,under the extension\Nordering of substitutions
 Dialogue: 0,0:19:13.64,0:19:16.04,Default,,0,0,0,,and by doing so,\Nthe input-output relation
@@ -159,9 +159,9 @@ Dialogue: 0,0:20:18.96,0:20:21.88,Default,,0,0,0,,and the outputs of t,\Nthe env
 Dialogue: 0,0:20:21.88,0:20:25.48,Default,,0,0,0,,a set of admissible inputs.\NAnd as expected
 Dialogue: 0,0:20:25.48,0:20:28.04,Default,,0,0,0,,in denotational semantics\Nthe denotation function
 Dialogue: 0,0:20:28.04,0:20:32.08,Default,,0,0,0,,is defined in a compositional way\Nby induction over
-Dialogue: 0,0:20:32.08,0:20:37.20,Default,,0,0,0,,the syntax of the programme.\NFor example, the denotation
-Dialogue: 0,0:20:37.20,0:20:39.36,Default,,0,0,0,,of a programme that builds\Na pair out of
-Dialogue: 0,0:20:39.36,0:20:44.24,Default,,0,0,0,,two sub programmes t1 and t2\Nis the pairing of their denotations.
+Dialogue: 0,0:20:32.08,0:20:37.20,Default,,0,0,0,,the syntax of the program.\NFor example, the denotation
+Dialogue: 0,0:20:37.20,0:20:39.36,Default,,0,0,0,,of a program that builds\Na pair out of
+Dialogue: 0,0:20:39.36,0:20:44.24,Default,,0,0,0,,two sub programs t1 and t2\Nis the pairing of their denotations.
 Dialogue: 0,0:20:44.24,0:20:46.56,Default,,0,0,0,,Here the pairing\Nof relations relates
 Dialogue: 0,0:20:46.56,0:20:49.20,Default,,0,0,0,,an input sigma\Nto a pair of values,
 Dialogue: 0,0:20:49.20,0:20:51.92,Default,,0,0,0,,where the first component\Nof that value is related
@@ -173,10 +173,10 @@ Dialogue: 0,0:21:05.08,0:21:07.56,Default,,0,0,0,,with respect to\Nthe input-out
 Dialogue: 0,0:21:07.56,0:21:12.20,Default,,0,0,0,,that it is an overall approximation\Nof the input-output relation
 Dialogue: 0,0:21:12.20,0:21:15.68,Default,,0,0,0,,This means that if you take\Nan input substitution sigma
 Dialogue: 0,0:21:15.68,0:21:18.88,Default,,0,0,0,,in the set of valid inputs\Ndescribed by the environment,
-Dialogue: 0,0:21:18.88,0:21:22.20,Default,,0,0,0,,and if the evaluation\Nof the programme t
+Dialogue: 0,0:21:18.88,0:21:22.20,Default,,0,0,0,,and if the evaluation\Nof the program t
 Dialogue: 0,0:21:22.20,0:21:26.52,Default,,0,0,0,,with these inputs\Ngives you an output value v,
-Dialogue: 0,0:21:26.52,0:21:29.92,Default,,0,0,0,,then the input-output pair\N(sigma, v) is predictively
-Dialogue: 0,0:21:29.92,0:21:32.88,Default,,0,0,0,,in the denotation\Nof the programme.
+Dialogue: 0,0:21:26.52,0:21:29.92,Default,,0,0,0,,then the input-output pair\N(sigma, v) is predicatively
+Dialogue: 0,0:21:29.92,0:21:32.88,Default,,0,0,0,,in the denotation\Nof the program.
 Dialogue: 0,0:21:33.84,0:21:37.92,Default,,0,0,0,,Interestingly, the denotation\Nwe have defined is also complete.
 Dialogue: 0,0:21:37.92,0:21:39.88,Default,,0,0,0,,This means that\Nthe denotation
 Dialogue: 0,0:21:39.88,0:21:44.00,Default,,0,0,0,,of the input-output relation\Nare the same.
@@ -240,12 +240,12 @@ Dialogue: 0,0:24:57.04,0:25:00.36,Default,,0,0,0,,denotation rule for functions\
 Dialogue: 0,0:25:00.36,0:25:03.60,Default,,0,0,0,,as a basis for\Nthe modular analysis of functions.
 Dialogue: 0,0:25:04.84,0:25:06.52,Default,,0,0,0,,So we have\Ndefined this denotation
 Dialogue: 0,0:25:06.52,0:25:08.88,Default,,0,0,0,,is collecting semantics\Nthat describes exactly
-Dialogue: 0,0:25:08.88,0:25:11.80,Default,,0,0,0,,the input output\Nbehaviour of programmes.
+Dialogue: 0,0:25:08.88,0:25:11.80,Default,,0,0,0,,the input output\Nbehavior of programs.
 Dialogue: 0,0:25:11.80,0:25:16.20,Default,,0,0,0,,And we use it as a starting point\Nto build a static analysis.
 Dialogue: 0,0:25:16.20,0:25:20.00,Default,,0,0,0,,So following the abstract\Ninterpretation methodology,
 Dialogue: 0,0:25:20.00,0:25:23.04,Default,,0,0,0,,we applied successive\Nabstraction steps.
 Dialogue: 0,0:25:23.04,0:25:26.20,Default,,0,0,0,,So far our denotation\Ntells us how the inputs
-Dialogue: 0,0:25:26.20,0:25:31.72,Default,,0,0,0,,are related to the outputs globally.\NWe first apply a ivvariant
+Dialogue: 0,0:25:26.20,0:25:31.72,Default,,0,0,0,,are related to the outputs globally.\NWe first apply a invariant
 Dialogue: 0,0:25:31.72,0:25:34.72,Default,,0,0,0,,of the independent\Nattribute abstraction,
 Dialogue: 0,0:25:34.72,0:25:37.56,Default,,0,0,0,,working at this point\Nwhat we call point-wise relations,
 Dialogue: 0,0:25:37.56,0:25:41.32,Default,,0,0,0,,that, that tell us how each input\Nis independently related
@@ -261,10 +261,10 @@ Dialogue: 0,0:26:07.72,0:26:10.64,Default,,0,0,0,,that we extended\Nwith first c
 Dialogue: 0,0:26:10.64,0:26:12.64,Default,,0,0,0,,You will find plenty of details\Non how we did this in the...
 Dialogue: 0,0:26:13.32,0:26:14.32,Default,,0,0,0,,...paper.
 Dialogue: 0,0:26:15.20,0:26:18.56,Default,,0,0,0,,We implemented the resulting\Nanalysis in OCaml.
-Dialogue: 0,0:26:18.56,0:26:20.68,Default,,0,0,0,,This is a bottom-up modular analyser
+Dialogue: 0,0:26:18.56,0:26:20.68,Default,,0,0,0,,This is a bottom-up modular analyzer
 Dialogue: 0,0:26:20.68,0:26:23.48,Default,,0,0,0,,that analyses functions only once.
 Dialogue: 0,0:26:23.48,0:26:27.04,Default,,0,0,0,,For every function, it\Ncomputes a function summary
-Dialogue: 0,0:26:27.04,0:26:30.60,Default,,0,0,0,,that approximates the extensional\Nbehaviour of that function.
+Dialogue: 0,0:26:27.04,0:26:30.60,Default,,0,0,0,,that approximates the extensional\Nbehavior of that function.
 Dialogue: 0,0:26:30.60,0:26:33.28,Default,,0,0,0,,The analysis was really not\Ndesigned to compete with
 Dialogue: 0,0:26:33.28,0:26:39.12,Default,,0,0,0,,existing control flow analysis\Nand it does not compete.
 Dialogue: 0,0:26:39.12,0:26:41.96,Default,,0,0,0,,Still, it can give\Nvery precise results
@@ -274,7 +274,7 @@ Dialogue: 0,0:26:48.52,0:26:50.76,Default,,0,0,0,,This program calls\Nthe identi
 Dialogue: 0,0:26:50.76,0:26:54.56,Default,,0,0,0,,on two different arguments and returns\Nthe result of one of the calls.
 Dialogue: 0,0:26:54.56,0:26:58.32,Default,,0,0,0,,It's an example where 0-CFA\Nis not precise enough
 Dialogue: 0,0:26:58.32,0:27:01.92,Default,,0,0,0,,and 1-CFA is required to\Nachieve good precision.
-Dialogue: 0,0:27:02.64,0:27:07.00,Default,,0,0,0,,The analyser first computes\Na summary for the identity function.
+Dialogue: 0,0:27:02.64,0:27:07.00,Default,,0,0,0,,The analyzer first computes\Na summary for the identity function.
 Dialogue: 0,0:27:07.00,0:27:09.96,Default,,0,0,0,,The summary tells us\Nthat this is a function
 Dialogue: 0,0:27:09.96,0:27:14.00,Default,,0,0,0,,whose result is equal to its argument\Nwhatever is the calling context.
 Dialogue: 0,0:27:14.80,0:27:18.32,Default,,0,0,0,,This summary is instantiated\Nonce for the first application.
@@ -292,7 +292,7 @@ Dialogue: 0,0:27:52.48,0:27:54.72,Default,,0,0,0,,relational analysis of\Nhigher
 Dialogue: 0,0:27:54.72,0:27:57.84,Default,,0,0,0,,by means of a sound\Nand complete relational semantics
 Dialogue: 0,0:27:57.84,0:27:59.44,Default,,0,0,0,,for the lambda calculus.
 Dialogue: 0,0:27:59.44,0:28:03.28,Default,,0,0,0,,We exploited this collecting semantics\Nto design an effective analysis
-Dialogue: 0,0:28:03.28,0:28:09.24,Default,,0,0,0,,and we provide an artefact\Nfor the Coq formulization
+Dialogue: 0,0:28:03.28,0:28:09.24,Default,,0,0,0,,and we provide an artifact\Nfor the Coq formalization
 Dialogue: 0,0:28:09.24,0:28:11.40,Default,,0,0,0,,of the theoretical development.
 Dialogue: 0,0:28:13.00,0:28:16.48,Default,,0,0,0,,As a long-term goal, we would\Nlike to integrate such analysis
 Dialogue: 0,0:28:16.48,0:28:19.12,Default,,0,0,0,,with a proof assistant to\Nreduce the proof efforts
@@ -713,7 +713,7 @@ Dialogue: 0,0:49:29.12,0:49:32.64,Default,,0,0,0,,This representation provide\Na
 Dialogue: 0,0:49:32.64,0:49:37.00,Default,,0,0,0,,for describing invertible\Nand partial invertible function.
 Dialogue: 0,0:49:37.00,0:49:42.56,Default,,0,0,0,,For example, here we showed\Nthe types of subs and go in SPARCL.
 Dialogue: 0,0:49:42.56,0:49:47.36,Default,,0,0,0,,Because subs is invertible function.
-Dialogue: 0,0:49:47.96,0:49:54.16,Default,,0,0,0,,In SPARCL subs take invertabe list of int\Nand it returns an invertible list of int.
+Dialogue: 0,0:49:47.96,0:49:54.16,Default,,0,0,0,,In SPARCL subs take invertible list of int\Nand it returns an invertible list of int.
 Dialogue: 0,0:49:54.92,0:49:57.84,Default,,0,0,0,,Because that go is\Na partially-invertible function,
 Dialogue: 0,0:49:57.84,0:50:01.56,Default,,0,0,0,,which becomes invertible after\Nfixing its first argument.
 Dialogue: 0,0:50:01.56,0:50:06.44,Default,,0,0,0,,Int SPARCL go takes\Nordinary int and a list,
@@ -723,7 +723,7 @@ Dialogue: 0,0:50:14.48,0:50:17.52,Default,,0,0,0,,to bridge invertible\Nand ordi
 Dialogue: 0,0:50:17.52,0:50:19.20,Default,,0,0,0,,By using pin operator,
 Dialogue: 0,0:50:19.20,0:50:23.80,Default,,0,0,0,,we can convert invertible\Nvalues into ordinary values
 Dialogue: 0,0:50:23.80,0:50:26.36,Default,,0,0,0,,locally in this continuation.
-Dialogue: 0,0:50:27.08,0:50:30.56,Default,,0,0,0,,Recall that it sometimes\Nhappens that dynamic dataflow
+Dialogue: 0,0:50:27.08,0:50:30.56,Default,,0,0,0,,Recall that it sometimes\Nhappens that dynamic data flow
 Dialogue: 0,0:50:30.56,0:50:32.04,Default,,0,0,0,,into static position,
 Dialogue: 0,0:50:32.04,0:50:36.12,Default,,0,0,0,,which is a challenge in\Npartially-invertible programming.
 Dialogue: 0,0:50:36.12,0:50:39.72,Default,,0,0,0,,This pin operator is\Na remedy for this situation.
@@ -762,7 +762,7 @@ Dialogue: 0,0:52:55.16,0:52:57.32,Default,,0,0,0,,of adjacent element in a list.
 Dialogue: 0,0:52:59.40,0:53:01.68,Default,,0,0,0,,For comparison, we'll also show
 Dialogue: 0,0:53:01.68,0:53:05.64,Default,,0,0,0,,the standard unidirectional\Ndefinition of subs in Haskell.
 Dialogue: 0,0:53:06.96,0:53:10.08,Default,,0,0,0,,So definition of the two\Nprograms look very similar
-Dialogue: 0,0:53:10.08,0:53:15.76,Default,,0,0,0,,except the use of constructs\Nthat care about invertability.
+Dialogue: 0,0:53:10.08,0:53:15.76,Default,,0,0,0,,except the use of constructs\Nthat care about Invertibility.
 Dialogue: 0,0:53:18.48,0:53:22.52,Default,,0,0,0,,Subs in SPARCL take\Nan invertible list of INT
 Dialogue: 0,0:53:22.52,0:53:24.76,Default,,0,0,0,,and return invertible list of INT.
 Dialogue: 0,0:53:25.96,0:53:29.60,Default,,0,0,0,,Surprisingly the right hand side\Nof the SPARCL function sub
@@ -877,7 +877,7 @@ Dialogue: 0,0:59:26.64,0:59:27.88,Default,,0,0,0,,in a dependently-typed languag
 Dialogue: 0,0:59:27.88,0:59:29.68,Default,,0,0,0,,And I'll come back to\Nthat a bit later.
 Dialogue: 0,0:59:31.80,0:59:34.64,Default,,0,0,0,,To verify concurrent programs, we've\Nbeen developing
 Dialogue: 0,0:59:34.64,0:59:35.68,Default,,0,0,0,,a framework called Steel,
-Dialogue: 0,0:59:35.68,0:59:38.48,Default,,0,0,0,,which is a concurreny\Nversion, which is DSL for F*,
+Dialogue: 0,0:59:35.68,0:59:38.48,Default,,0,0,0,,which is a concurrency\Nversion, which is DSL for F*,
 Dialogue: 0,0:59:38.48,0:59:41.52,Default,,0,0,0,,an effectful dependently-typed\Nlanguage designed for verification.
 Dialogue: 0,0:59:41.52,0:59:44.44,Default,,0,0,0,,And in this talk, I'm going to\Ntalk especially about Steel core,
 Dialogue: 0,0:59:44.44,0:59:47.08,Default,,0,0,0,,which consists of the core\Nsemantics and program logic
@@ -942,10 +942,10 @@ Dialogue: 0,1:02:36.36,1:02:39.44,Default,,0,0,0,,The Par role is stand out in\N
 Dialogue: 0,1:02:39.44,1:02:43.04,Default,,0,0,0,,And observe again, how\Nthe indices of our computations
 Dialogue: 0,1:02:43.04,1:02:45.12,Default,,0,0,0,,capture this classic role.
 Dialogue: 0,1:02:45.96,1:02:48.12,Default,,0,0,0,,Assuming that\Nthe preconditions p and p prime,
-Dialogue: 0,1:02:48.12,1:02:51.56,Default,,0,0,0,,offered to computations\Nare disjoined,
+Dialogue: 0,1:02:48.12,1:02:51.56,Default,,0,0,0,,offered to computations\Nare disjoint,
 Dialogue: 0,1:02:51.56,1:02:55.12,Default,,0,0,0,,then it can safely execute with\Ncomputations in parallel.
 Dialogue: 0,1:02:55.12,1:02:59.12,Default,,0,0,0,,Finally, returning the star of\Nthe first conditions q and q prime.
-Dialogue: 0,1:03:00.04,1:03:01.80,Default,,0,0,0,,Buildding upon these action trees,
+Dialogue: 0,1:03:00.04,1:03:01.80,Default,,0,0,0,,Building upon these action trees,
 Dialogue: 0,1:03:01.80,1:03:05.68,Default,,0,0,0,,we implement an intrinsically-typed\Ndefinitional interpreter
 Dialogue: 0,1:03:05.68,1:03:08.60,Default,,0,0,0,,that non-deterministically\Ninterleaves atomic actions.
 Dialogue: 0,1:03:09.36,1:03:13.52,Default,,0,0,0,,This interpreter run has\Nthe computation type NST.
@@ -998,7 +998,7 @@ Dialogue: 0,1:05:23.16,1:05:26.56,Default,,0,0,0,,Now to dynamically allocate\Ni
 Dialogue: 0,1:05:26.56,1:05:28.76,Default,,0,0,0,,we provide this function\Nnew invariant,
 Dialogue: 0,1:05:28.76,1:05:31.60,Default,,0,0,0,,which takes as an invariant\Nseparation logic assertion p.
 Dialogue: 0,1:05:33.32,1:05:34.68,Default,,0,0,0,,This function has the computational\Ntype Steel,
-Dialogue: 0,1:05:34.68,1:05:38.52,Default,,0,0,0,,which reflects the computation\Nthat we uncoded as action trees.
+Dialogue: 0,1:05:34.68,1:05:38.52,Default,,0,0,0,,which reflects the computation\Nthat we encoded as action trees.
 Dialogue: 0,1:05:38.52,1:05:42.04,Default,,0,0,0,,You can see here that\Nthe indices of the Steel effect
 Dialogue: 0,1:05:42.04,1:05:45.24,Default,,0,0,0,,corresponds to the indices\Nof all action trees.
 Dialogue: 0,1:05:45.24,1:05:48.68,Default,,0,0,0,,First index is the type\Nreturned by the computation,
@@ -1079,7 +1079,7 @@ Dialogue: 0,1:09:38.48,1:09:42.20,Default,,0,0,0,,And so what the signature of\N
 Dialogue: 0,1:09:42.20,1:09:46.32,Default,,0,0,0,,if we initially have send\Npermission on this channel C,
 Dialogue: 0,1:09:46.32,1:09:48.56,Default,,0,0,0,,and the channel is\Ncurrently as a stage where
 Dialogue: 0,1:09:48.56,1:09:52.84,Default,,0,0,0,,it currently needs to be executed, then\Nwe can indeed send this message.
-Dialogue: 0,1:09:52.84,1:09:56.76,Default,,0,0,0,,And we then get a send\Npermision on this channel,
+Dialogue: 0,1:09:52.84,1:09:56.76,Default,,0,0,0,,And we then get a send\Npermission on this channel,
 Dialogue: 0,1:09:56.76,1:10:01.60,Default,,0,0,0,,where the protocol advanced\None step after executing x.
 Dialogue: 0,1:10:01.60,1:10:04.52,Default,,0,0,0,,And so we can define\Nthe dual version of this,
 Dialogue: 0,1:10:04.52,1:10:07.60,Default,,0,0,0,,which would be a receive function.
@@ -1123,10 +1123,10 @@ Dialogue: 0,1:11:50.40,1:11:52.24,Default,,0,0,0,,concurrent\Nand distributed pr
 Dialogue: 0,1:11:52.24,1:11:55.04,Default,,0,0,0,,All of this being built on\Ntop of a lower memory model.
 Dialogue: 0,1:11:55.04,1:11:58.28,Default,,0,0,0,,And with an extensible program\Nlogic which is expressed in
 Dialogue: 0,1:11:58.28,1:12:00.72,Default,,0,0,0,,an embedded way in F*.
-Dialogue: 0,1:12:00.72,1:12:04.48,Default,,0,0,0,,During this talk, the're many details\Nof our work I didn't mention.
+Dialogue: 0,1:12:00.72,1:12:04.48,Default,,0,0,0,,During this talk, there are many details\Nof our work I didn't mention.
 Dialogue: 0,1:12:04.48,1:12:07.20,Default,,0,0,0,,First of all our semantics\Nactually much more complicated
 Dialogue: 0,1:12:07.20,1:12:10.04,Default,,0,0,0,,to enable support for also reasoning
-Dialogue: 0,1:12:10.04,1:12:12.44,Default,,0,0,0,,in a style akin to\NImplic Dynamic Frames
+Dialogue: 0,1:12:10.04,1:12:12.44,Default,,0,0,0,,in a style akin to\NImplicit Dynamic Frames
 Dialogue: 0,1:12:12.44,1:12:14.72,Default,,0,0,0,,on top of separation logic.
 Dialogue: 0,1:12:14.72,1:12:17.76,Default,,0,0,0,,Second, we also allow\Nreasoning on references,
 Dialogue: 0,1:12:17.76,1:12:19.92,Default,,0,0,0,,using monotonicity and preorders.
@@ -1383,7 +1383,7 @@ Dialogue: 0,1:28:28.20,1:28:32.00,Default,,0,0,0,,In particular, there is no nee
 Dialogue: 0,1:28:32.00,1:28:35.84,Default,,0,0,0,,for implementations. This\Ncan be extremely useful
 Dialogue: 0,1:28:35.84,1:28:40.52,Default,,0,0,0,,if you want to compile algebraic\Neffects to languages like C.
 Dialogue: 0,1:28:40.52,1:28:43.40,Default,,0,0,0,,Moreover, we show that\Nwith evidence passing
-Dialogue: 0,1:28:43.40,1:28:46.52,Default,,0,0,0,,such implimentations\Ncan be quite efficient.
+Dialogue: 0,1:28:43.40,1:28:46.52,Default,,0,0,0,,such implementations\Ncan be quite efficient.
 Dialogue: 0,1:28:46.52,1:28:48.56,Default,,0,0,0,,Before we go to\Nthe technical details
 Dialogue: 0,1:28:48.56,1:28:53.36,Default,,0,0,0,,let's start with an overview\Nof algebraic effects.
 Dialogue: 0,1:28:53.36,1:28:56.72,Default,,0,0,0,,Algebraic effects and an\Nextension with handlers
