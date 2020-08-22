@@ -6898,7 +6898,7 @@ at the University of Pennsylvania.
 1460
 01:28:24,680 --> 01:28:27,120
 Our paper is all about
-proving program equivalents.
+proving program equivalence.
 
 1461
 01:28:27,120 --> 01:28:30,200
@@ -7120,7 +7120,7 @@ existential into a function Y
 
 1509
 01:30:27,760 --> 01:30:29,280
-and this Y is a high order function.
+and this Y is a higher order function.
 
 1510
 01:30:29,280 --> 01:30:32,320
@@ -7339,7 +7339,7 @@ making things easier
 1556
 01:32:27,560 --> 01:32:30,000
 when you're trying to synthesize
-a program of a given.
+a program of a given type.
 
 1557
 01:32:30,760 --> 01:32:32,520
@@ -7400,7 +7400,7 @@ language of function type
 1569
 01:33:04,400 --> 01:33:06,680
 is going to be equivalent
-to sum lambda.
+to some lambda.
 
 1570
 01:33:06,680 --> 01:33:09,440
@@ -7713,7 +7713,7 @@ through focused contexts.
 1637
 01:35:46,200 --> 01:35:48,280
 So that leads us to
-a context dilemma
+a context lemma
 
 1638
 01:35:48,280 --> 01:35:49,360
@@ -7739,7 +7739,7 @@ by a term, an f,
 
 1643
 01:35:58,280 --> 01:36:01,800
-with a whole x represented
+with a hole x represented
 as a variable here.
 
 1644
@@ -7771,11 +7771,11 @@ that we wanted to prove earlier.
 1650
 01:36:16,080 --> 01:36:18,720
 And now we'll apply
-our focusing loma.
+our focusing lemma.
 
 1651
 01:36:18,720 --> 01:36:21,960
-And this context loma says,
+And this context lemma says,
 since these values are closed,
 
 1652
@@ -7799,7 +7799,7 @@ NF is focused tell us?
 
 1656
 01:36:36,360 --> 01:36:41,680
-Well the whole in NF X
+Well the hole in NF X
 has existential type,
 
 1657
@@ -7846,7 +7846,7 @@ don't, and if we don't,
 1666
 01:37:02,880 --> 01:37:07,360
 then we can only return
-a constant bullion value.
+a constant boolean value.
 
 1667
 01:37:07,360 --> 01:37:09,120
@@ -7868,7 +7868,7 @@ behave the same in each of them.
 1671
 01:37:15,560 --> 01:37:18,680
 This is easy in the case
-of the constant bullion
+of the constant boolean
 
 1672
 01:37:18,680 --> 01:37:23,480
@@ -8140,7 +8140,7 @@ And we provide a proof
 1729
 01:39:58,520 --> 01:40:01,360
 of the computational
-completeness there.
+completeness theorem.
 
 1730
 01:40:01,360 --> 01:40:03,960
@@ -8153,7 +8153,7 @@ and show that that's useful in turn
 1732
 01:40:06,160 --> 01:40:08,160
 to prove various
-programming equivalencies
+program equivalencies
 
 1733
 01:40:08,160 --> 01:40:10,480
@@ -8171,7 +8171,7 @@ correctness properties,
 
 1736
 01:40:15,760 --> 01:40:17,280
-like full obstruction.
+like full abstruction.
 
 1737
 01:40:17,280 --> 01:40:19,320

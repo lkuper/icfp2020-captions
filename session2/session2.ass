@@ -1470,7 +1470,7 @@ Dialogue: 0,1:28:16.00,1:28:17.84,Default,,0,0,0,,and this talk is for the paper
 Dialogue: 0,1:28:17.84,1:28:19.20,Default,,0,0,0,,called "Computation Focusing,"
 Dialogue: 0,1:28:19.20,1:28:21.72,Default,,0,0,0,,by myself, and my advisor,\NSteve Zdancewic,
 Dialogue: 0,1:28:21.72,1:28:24.68,Default,,0,0,0,,at the University of Pennsylvania.
-Dialogue: 0,1:28:24.68,1:28:27.12,Default,,0,0,0,,Our paper is all about\Nproving program equivalents.
+Dialogue: 0,1:28:24.68,1:28:27.12,Default,,0,0,0,,Our paper is all about\Nproving program equivalence.
 Dialogue: 0,1:28:27.12,1:28:30.20,Default,,0,0,0,,This is an important way\Nof reasoning about them.
 Dialogue: 0,1:28:30.20,1:28:31.72,Default,,0,0,0,,So, whether you have a compiler
 Dialogue: 0,1:28:31.72,1:28:33.44,Default,,0,0,0,,that performs CPS translations,
@@ -1519,7 +1519,7 @@ Dialogue: 0,1:30:16.92,1:30:20.28,Default,,0,0,0,,And let's look at how these\Nv
 Dialogue: 0,1:30:20.28,1:30:22.72,Default,,0,0,0,,Well, we used existential types\Nby pattern matching on them
 Dialogue: 0,1:30:22.72,1:30:23.72,Default,,0,0,0,,to unpack them.
 Dialogue: 0,1:30:23.72,1:30:27.76,Default,,0,0,0,,And here we unpack this\Nexistential into a function Y
-Dialogue: 0,1:30:27.76,1:30:29.28,Default,,0,0,0,,and this Y is a high order function.
+Dialogue: 0,1:30:27.76,1:30:29.28,Default,,0,0,0,,and this Y is a higher order function.
 Dialogue: 0,1:30:29.28,1:30:32.32,Default,,0,0,0,,So we pass another function\NF as input into it.
 Dialogue: 0,1:30:32.32,1:30:35.56,Default,,0,0,0,,And F has the type X arrow X,
 Dialogue: 0,1:30:35.56,1:30:39.24,Default,,0,0,0,,but this X type is an abstract type.
@@ -1566,7 +1566,7 @@ Dialogue: 0,1:32:19.32,1:32:21.40,Default,,0,0,0,,that narrows down the search s
 Dialogue: 0,1:32:21.40,1:32:24.00,Default,,0,0,0,,when you're trying to find\Na proof of a certain proposition.
 Dialogue: 0,1:32:24.00,1:32:25.64,Default,,0,0,0,,And viewed through\Nthe lens of Curry Howard,
 Dialogue: 0,1:32:25.64,1:32:27.56,Default,,0,0,0,,you can think of it as\Nmaking things easier
-Dialogue: 0,1:32:27.56,1:32:30.00,Default,,0,0,0,,when you're trying to synthesize\Na program of a given.
+Dialogue: 0,1:32:27.56,1:32:30.00,Default,,0,0,0,,when you're trying to synthesize\Na program of a given type.
 Dialogue: 0,1:32:30.76,1:32:32.52,Default,,0,0,0,,So how does focusing\Nnarrow down the search space?
 Dialogue: 0,1:32:32.52,1:32:35.88,Default,,0,0,0,,Well, it does that by visiting\Nfewer redundant terms
 Dialogue: 0,1:32:35.88,1:32:40.80,Default,,0,0,0,,that are just equivalent to each\Nother via beta or eta laws.
@@ -1579,7 +1579,7 @@ Dialogue: 0,1:32:53.96,1:32:56.16,Default,,0,0,0,,The first thing that\Nfocusing
 Dialogue: 0,1:32:56.16,1:32:58.60,Default,,0,0,0,,is apply the lambda type constructor
 Dialogue: 0,1:32:58.60,1:33:01.24,Default,,0,0,0,,anytime we have a function\Non the right hand side.
 Dialogue: 0,1:33:01.24,1:33:04.40,Default,,0,0,0,,So that just any term in our\Nlanguage of function type
-Dialogue: 0,1:33:04.40,1:33:06.68,Default,,0,0,0,,is going to be equivalent\Nto sum lambda.
+Dialogue: 0,1:33:04.40,1:33:06.68,Default,,0,0,0,,is going to be equivalent\Nto some lambda.
 Dialogue: 0,1:33:06.68,1:33:09.44,Default,,0,0,0,,And that's true by\Neta in call by name
 Dialogue: 0,1:33:09.44,1:33:11.92,Default,,0,0,0,,and in call by value we're\Nalso using normalization.
 Dialogue: 0,1:33:11.92,1:33:13.96,Default,,0,0,0,,But if you didn't have normalization
@@ -1647,26 +1647,26 @@ Dialogue: 0,1:35:35.68,1:35:37.64,Default,,0,0,0,,and you apply\Nthe completenes
 Dialogue: 0,1:35:37.64,1:35:40.28,Default,,0,0,0,,then you can see that\Nthere's no need
 Dialogue: 0,1:35:40.28,1:35:42.08,Default,,0,0,0,,to search through all\Npossible contexts,
 Dialogue: 0,1:35:42.40,1:35:46.20,Default,,0,0,0,,you only need to search\Nthrough focused contexts.
-Dialogue: 0,1:35:46.20,1:35:48.28,Default,,0,0,0,,So that leads us to\Na context dilemma
+Dialogue: 0,1:35:46.20,1:35:48.28,Default,,0,0,0,,So that leads us to\Na context lemma
 Dialogue: 0,1:35:48.28,1:35:49.36,Default,,0,0,0,,which looks a little hairy
 Dialogue: 0,1:35:49.36,1:35:50.92,Default,,0,0,0,,but all this is saying is that
 Dialogue: 0,1:35:50.92,1:35:52.92,Default,,0,0,0,,to prove two values equivalent
 Dialogue: 0,1:35:52.92,1:35:55.76,Default,,0,0,0,,you only need to consider\Nfocused contexts
 Dialogue: 0,1:35:55.76,1:35:58.28,Default,,0,0,0,,which are represented\Nby a term, an f,
-Dialogue: 0,1:35:58.28,1:36:01.80,Default,,0,0,0,,with a whole x represented\Nas a variable here.
+Dialogue: 0,1:35:58.28,1:36:01.80,Default,,0,0,0,,with a hole x represented\Nas a variable here.
 Dialogue: 0,1:36:01.80,1:36:05.40,Default,,0,0,0,,And if v1 and v2 are open then\Nyou need to close them off
 Dialogue: 0,1:36:05.40,1:36:07.16,Default,,0,0,0,,with some closing substitutions
 Dialogue: 0,1:36:07.16,1:36:09.08,Default,,0,0,0,,but you can assume\Nthat all the values
 Dialogue: 0,1:36:09.08,1:36:13.04,Default,,0,0,0,,in those substitutions are focused.
 Dialogue: 0,1:36:13.04,1:36:14.40,Default,,0,0,0,,So let's return to the equivalence
 Dialogue: 0,1:36:14.40,1:36:16.08,Default,,0,0,0,,that we wanted to prove earlier.
-Dialogue: 0,1:36:16.08,1:36:18.72,Default,,0,0,0,,And now we'll apply\Nour focusing loma.
-Dialogue: 0,1:36:18.72,1:36:21.96,Default,,0,0,0,,And this context loma says,\Nsince these values are closed,
+Dialogue: 0,1:36:16.08,1:36:18.72,Default,,0,0,0,,And now we'll apply\Nour focusing lemma.
+Dialogue: 0,1:36:18.72,1:36:21.96,Default,,0,0,0,,And this context lemma says,\Nsince these values are closed,
 Dialogue: 0,1:36:21.96,1:36:23.92,Default,,0,0,0,,we just need to consider\Nsome context NF
 Dialogue: 0,1:36:23.92,1:36:26.12,Default,,0,0,0,,and show that they\Nboth behave the same
 Dialogue: 0,1:36:26.12,1:36:31.52,Default,,0,0,0,,when the values are filled in for X.
 Dialogue: 0,1:36:31.52,1:36:36.36,Default,,0,0,0,,So what does the fact that\NNF is focused tell us?
-Dialogue: 0,1:36:36.36,1:36:41.68,Default,,0,0,0,,Well the whole in NF X\Nhas existential type,
+Dialogue: 0,1:36:36.36,1:36:41.68,Default,,0,0,0,,Well the hole in NF X\Nhas existential type,
 Dialogue: 0,1:36:41.68,1:36:42.88,Default,,0,0,0,,and we know that existential types
 Dialogue: 0,1:36:42.88,1:36:44.28,Default,,0,0,0,,can be pattern matched on.
 Dialogue: 0,1:36:44.28,1:36:47.92,Default,,0,0,0,,So focusing says let's\Ndo that right away.
@@ -1676,12 +1676,12 @@ Dialogue: 0,1:36:52.20,1:36:55.28,Default,,0,0,0,,and the rest of the body\Nof t
 Dialogue: 0,1:36:55.28,1:36:58.28,Default,,0,0,0,,after each statement gets to\Ncall Y potentially.
 Dialogue: 0,1:36:58.28,1:36:59.96,Default,,0,0,0,,So there's really only two\Nthings that we can do here,
 Dialogue: 0,1:36:59.96,1:37:02.88,Default,,0,0,0,,either we call Y or we\Ndon't, and if we don't,
-Dialogue: 0,1:37:02.88,1:37:07.36,Default,,0,0,0,,then we can only return\Na constant bullion value.
+Dialogue: 0,1:37:02.88,1:37:07.36,Default,,0,0,0,,then we can only return\Na constant boolean value.
 Dialogue: 0,1:37:07.36,1:37:09.12,Default,,0,0,0,,So there are three possible shapes
 Dialogue: 0,1:37:09.12,1:37:12.56,Default,,0,0,0,,of programs here that\Nthis context may take.
 Dialogue: 0,1:37:12.56,1:37:14.48,Default,,0,0,0,,We need to show that the two values
 Dialogue: 0,1:37:14.48,1:37:15.56,Default,,0,0,0,,behave the same in each of them.
-Dialogue: 0,1:37:15.56,1:37:18.68,Default,,0,0,0,,This is easy in the case\Nof the constant bullion
+Dialogue: 0,1:37:15.56,1:37:18.68,Default,,0,0,0,,This is easy in the case\Nof the constant boolean
 Dialogue: 0,1:37:18.68,1:37:23.48,Default,,0,0,0,,because the context just\Nignores its input.
 Dialogue: 0,1:37:23.48,1:37:25.88,Default,,0,0,0,,The interesting case\Nis when we call Y.
 Dialogue: 0,1:37:25.88,1:37:28.36,Default,,0,0,0,,And what happens here\Nis that V1
@@ -1739,14 +1739,14 @@ Dialogue: 0,1:39:48.60,1:39:52.16,Default,,0,0,0,,To recap, our paper\Ncontribut
 Dialogue: 0,1:39:52.16,1:39:54.08,Default,,0,0,0,,First, we formulate focusing
 Dialogue: 0,1:39:54.08,1:39:57.48,Default,,0,0,0,,in a call by value language\Nwith predicative polymorphism.
 Dialogue: 0,1:39:57.48,1:39:58.52,Default,,0,0,0,,And we provide a proof
-Dialogue: 0,1:39:58.52,1:40:01.36,Default,,0,0,0,,of the computational\Ncompleteness there.
+Dialogue: 0,1:39:58.52,1:40:01.36,Default,,0,0,0,,of the computational\Ncompleteness theorem.
 Dialogue: 0,1:40:01.36,1:40:03.96,Default,,0,0,0,,Then we prove a context lemma
 Dialogue: 0,1:40:03.96,1:40:06.16,Default,,0,0,0,,and show that that's useful in turn
-Dialogue: 0,1:40:06.16,1:40:08.16,Default,,0,0,0,,to prove various\Nprogramming equivalencies
+Dialogue: 0,1:40:06.16,1:40:08.16,Default,,0,0,0,,to prove various\Nprogram equivalencies
 Dialogue: 0,1:40:08.16,1:40:10.48,Default,,0,0,0,,like the one we saw today.
 Dialogue: 0,1:40:10.48,1:40:12.68,Default,,0,0,0,,Finally, we showed that\Nfocusing can be used
 Dialogue: 0,1:40:12.68,1:40:15.76,Default,,0,0,0,,to prove compositional compiler\Ncorrectness properties,
-Dialogue: 0,1:40:15.76,1:40:17.28,Default,,0,0,0,,like full obstruction.
+Dialogue: 0,1:40:15.76,1:40:17.28,Default,,0,0,0,,like full abstruction.
 Dialogue: 0,1:40:17.28,1:40:19.32,Default,,0,0,0,,And when we do this\Nfor a simple compiler
 Dialogue: 0,1:40:19.32,1:40:22.48,Default,,0,0,0,,from a language that's\Npure into a language
 Dialogue: 0,1:40:22.48,1:40:24.20,Default,,0,0,0,,with a simple divergence effect,
