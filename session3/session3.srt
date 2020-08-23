@@ -206,7 +206,7 @@ For example, consider a web system.
 46
 00:13:23,960 --> 00:13:27,680
 You have to develop two
-programmes, one for client
+programs, one for client
 
 47
 00:13:27,680 --> 00:13:29,360
@@ -219,7 +219,7 @@ different programming languages.
 
 49
 00:13:33,160 --> 00:13:37,200
-Also, the two programmes
+Also, the two programs
 need to be put together
 
 50
@@ -242,7 +242,7 @@ can address this problem.
 54
 00:13:48,400 --> 00:13:52,840
 You have only to develop
-a single tierless programme.
+a single tierless program.
 
 55
 00:13:52,840 --> 00:13:55,080
@@ -251,16 +251,16 @@ Assuming a client-server model,
 56
 00:13:55,080 --> 00:14:01,480
 a slicing compiler will automatically
-slice it into a client programme
+slice it into a client program
 
 57
 00:14:01,480 --> 00:14:03,600
-and a server programme.
+and a server program.
 
 58
 00:14:03,600 --> 00:14:07,520
 The communication between
-the two sliced programmes
+the two sliced programs
 
 59
 00:14:07,520 --> 00:14:11,520
@@ -304,7 +304,7 @@ and fully transparent.
 67
 00:14:43,040 --> 00:14:47,800
 Links is a real-world seamlessly
-tierless programme language
+tierless programming language
 
 68
 00:14:47,800 --> 00:14:50,840
@@ -318,21 +318,21 @@ tierless programming language is this.
 70
 00:14:56,360 --> 00:15:00,600
 If you look at this example
-programme written in links,
+program written in links,
 
 71
 00:15:00,600 --> 00:15:07,600
-you know that tierless programme can
+you know that tierless program can
 be written exactly in the same way
 
 72
 00:15:07,600 --> 00:15:10,440
-as writing single computer programmes.
+as writing single computer programs.
 
 73
 00:15:10,440 --> 00:15:14,880
 The only difference is specifying
-the locational function.
+the location function.
 
 74
 00:15:14,880 --> 00:15:19,480
@@ -520,7 +520,7 @@ if it is RPC or not.
 113
 00:18:13,160 --> 00:18:17,520
 This happens even in the sliced
-client and server programmes
+client and server programs
 
 114
 00:18:17,520 --> 00:18:19,360
@@ -553,7 +553,7 @@ the advantage of the seamless RPC
 
 120
 00:18:46,720 --> 00:18:48,000
-in the tierless programmes
+in the tierless programs
 
 121
 00:18:48,760 --> 00:18:52,280
@@ -563,7 +563,7 @@ checking is required
 122
 00:18:52,760 --> 00:18:55,880
 in the sliced client
-and server programmes.
+and server programs.
 
 123
 00:18:58,880 --> 00:19:02,400
@@ -668,7 +668,7 @@ and a function location B.
 
 145
 00:20:29,160 --> 00:20:33,200
-Once your tierless programme
+Once your tierless program
 is successfully type checked
 
 146
@@ -682,7 +682,7 @@ and the function location B
 
 148
 00:20:40,240 --> 00:20:44,600
-are fully analysed
+are fully analyzed
 and known in compile time.
 
 149
@@ -720,7 +720,7 @@ By the type soundness property
 156
 00:21:14,920 --> 00:21:18,920
 every remote procedure call
-does analyse statically
+does analyze statically
 
 157
 00:21:19,680 --> 00:21:22,840
@@ -738,7 +738,7 @@ directed slicing compilation
 
 160
 00:21:33,560 --> 00:21:36,360
-whose sliced clients and server programmes
+whose sliced clients and server programs
 
 161
 00:21:36,360 --> 00:21:41,360
@@ -757,7 +757,7 @@ that always does location checking
 164
 00:21:48,920 --> 00:21:51,880
 in the sliced client
-and server programmes.
+and server programs.
 
 165
 00:21:55,400 --> 00:21:58,360
@@ -897,7 +897,7 @@ application of location types
 194
 00:23:34,000 --> 00:23:37,480
 to other areas such as securities
-and communication optimisation.
+and communication optimization.
 
 195
 00:23:38,200 --> 00:23:41,120
@@ -991,7 +991,7 @@ of the lambda calculus.
 214
 00:24:39,280 --> 00:24:42,240
 We prove this result by
-introducing a semantic artefact
+introducing a semantic artifact
 
 215
 00:24:42,240 --> 00:24:44,080
@@ -1004,7 +1004,7 @@ the proof of the property.
 
 217
 00:24:47,440 --> 00:24:50,520
-The corresponding artefact is
+The corresponding artifact is
 a reduction strategy in a calculus
 
 218
@@ -1018,7 +1018,7 @@ As this quote by Cregut shows,
 220
 00:24:54,560 --> 00:24:58,080
 the importance of full reduction
-is widely recognised
+is widely recognized
 
 221
 00:24:58,080 --> 00:25:01,280
@@ -1209,7 +1209,7 @@ proofs by structural induction.
 260
 00:26:54,560 --> 00:26:58,680
 And later to prove that the said
-calculus realises the normal order
+calculus realizes the normal order
 
 261
 00:26:58,680 --> 00:27:00,640
@@ -1312,7 +1312,7 @@ to a weak head normal form.
 282
 00:27:59,520 --> 00:28:02,760
 This poses some problems when
-definding a reduction relation
+defining a reduction relation
 
 283
 00:28:02,760 --> 00:28:04,200
@@ -1459,7 +1459,7 @@ the relative distance
 313
 00:29:35,280 --> 00:29:37,760
 between the applied
-occurance of the variable
+occurrence of the variable
 
 314
 00:29:37,760 --> 00:29:41,200
@@ -1809,7 +1809,7 @@ on the derivation trees
 
 387
 00:33:29,840 --> 00:33:31,200
-of reduction judgements
+of reduction judgments
 
 388
 00:33:31,200 --> 00:33:32,640
@@ -1823,7 +1823,7 @@ our calculus of closures.
 390
 00:33:36,480 --> 00:33:40,400
 In a previous work, we used
-programme transformation techniques
+program transformation techniques
 
 391
 00:33:40,400 --> 00:33:42,840
@@ -1889,7 +1889,7 @@ knowledge of full reduction.
 404
 00:34:19,640 --> 00:34:21,840
 We conjecture that
-varianys of our calculus
+variants of our calculus
 
 405
 00:34:21,840 --> 00:34:23,720
@@ -1948,7 +1948,7 @@ the effects are required to satisfy
 
 417
 00:35:20,320 --> 00:35:23,080
-in which sub-parts of a programme.
+in which sub-parts of a program.
 
 418
 00:35:23,080 --> 00:35:26,240
@@ -1980,7 +1980,7 @@ languages with effect handlers.
 
 424
 00:35:42,840 --> 00:35:46,600
-In reasoning about programmes, we
+In reasoning about programs, we
 often rely on certain equivalences
 
 425
@@ -1999,7 +1999,7 @@ since x+x = 2*x.
 
 428
 00:35:57,880 --> 00:36:00,280
-Programme equivalents gets much harder
+Program equivalents gets much harder
 
 429
 00:36:00,280 --> 00:36:03,040
@@ -2049,7 +2049,7 @@ more difficult it becomes
 
 439
 00:36:26,680 --> 00:36:30,120
-if effect behaviour is user defined.
+if effect behavior is user defined.
 
 440
 00:36:30,120 --> 00:36:31,800
@@ -2063,7 +2063,7 @@ algebraic effect handlers.
 442
 00:36:35,080 --> 00:36:38,640
 In such a language, effects
-are modelled by operations
+are modeled by operations
 
 443
 00:36:38,640 --> 00:36:43,000
@@ -2090,7 +2090,7 @@ The operation itself is only a construct,
 
 448
 00:36:54,880 --> 00:36:57,000
-and its behaviour is specified
+and its behavior is specified
 
 449
 00:36:57,000 --> 00:37:00,520
@@ -2109,7 +2109,7 @@ argument of the operation call,
 
 452
 00:37:09,280 --> 00:37:11,760
-and the programme continuation k,
+and the program continuation k,
 
 453
 00:37:11,760 --> 00:37:17,200
@@ -2664,7 +2664,7 @@ the usefulness of the language.
 
 567
 00:44:18,040 --> 00:44:22,480
-All of this has been formalised
+All of this has been formalized
 in the Coq proof assistant,
 
 568
@@ -2720,7 +2720,7 @@ or they can also be constructed
 
 579
 00:44:56,120 --> 00:44:59,600
-in the Coq formalisation
+in the Coq formalization
 of the language.
 
 580
@@ -2919,7 +2919,7 @@ choose to go into industry,
 
 621
 00:47:15,960 --> 00:47:17,800
-they quickly realise that
+they quickly realize that
 if they need to store
 
 622
@@ -3031,7 +3031,7 @@ that they were taking,
 
 644
 00:48:22,760 --> 00:48:26,840
-in favour of data dot map
+in favor of data dot map
 and an unsafe course.
 
 645
@@ -3845,7 +3845,7 @@ So to wrap up a little bit,
 818
 00:56:23,880 --> 00:56:25,920
 we can extend this to
-the heterogenous case
+the heterogeneous case
 
 819
 00:56:25,920 --> 00:56:28,920
@@ -4003,7 +4003,7 @@ the presentation of the paper
 
 852
 00:58:05,600 --> 00:58:09,040
-POPLMark reloaded; Mechanising
+POPLMark reloaded; Mechanizing
 proofs by logical relations
 
 853
@@ -4013,7 +4013,7 @@ of benchmark problems
 
 854
 00:58:12,160 --> 00:58:14,600
-in mechanising the metatheory
+in mechanizing the metatheory
 of programming languages.
 
 855
@@ -4041,12 +4041,12 @@ and welcome, thanks for coming.
 
 860
 00:58:33,200 --> 00:58:36,920
-This talk is going to summarise
+This talk is going to summarize
 our JFP paper POPLMark reloaded
 
 861
 00:58:36,920 --> 00:58:38,920
-mechanising proofs by
+mechanizing proofs by
 logical relations.
 
 862
@@ -4065,7 +4065,7 @@ Steven Schafer and Katherine Stark.
 
 865
 00:58:49,920 --> 00:58:53,080
-So today mechanisations are
+So today mechanizations are
 commonplace in programming languages.
 
 866
@@ -4088,7 +4088,7 @@ are tricky to write.
 870
 00:59:02,880 --> 00:59:06,040
 Both on paper as well as
-in proof assistancts.
+in proof assistants.
 
 871
 00:59:06,040 --> 00:59:08,600
@@ -4122,7 +4122,7 @@ we have to deal with.
 877
 00:59:22,880 --> 00:59:27,200
 We have to build up the infrastructure
-for modelling for example
+for modeling for example
 
 878
 00:59:27,200 --> 00:59:29,160
@@ -4146,7 +4146,7 @@ how different features interact,
 882
 00:59:37,480 --> 00:59:40,720
 difficulties increase with
-the size of the mechanisation
+the size of the mechanization
 
 883
 00:59:41,200 --> 00:59:43,160
@@ -4161,7 +4161,7 @@ a whole team of students
 885
 00:59:46,080 --> 00:59:49,000
 is actually tacking some of
-this mechanisation efforts.
+this mechanization efforts.
 
 886
 00:59:49,520 --> 00:59:51,520
@@ -4179,7 +4179,7 @@ understanding of the similarities
 
 889
 01:00:01,760 --> 01:00:05,840
-and differences in how we mechanise
+and differences in how we mechanize
 problems in programming languages
 
 890
@@ -4214,7 +4214,7 @@ a look back at POPLMark in 2005.
 896
 01:00:25,520 --> 01:00:30,120
 Back in 2005 POPLMark challenge
-was to mechanise system Fsub
+was to mechanize system Fsub
 
 897
 01:00:30,640 --> 01:00:33,440
@@ -4228,7 +4228,7 @@ programming languages,
 
 899
 01:00:36,680 --> 01:00:38,800
-it can be mechanised in
+it can be mechanized in
 a couple of hours.
 
 900
@@ -4277,7 +4277,7 @@ really identify any bugs or flaws
 
 909
 01:01:07,200 --> 01:01:08,400
-in existing sytems.
+in existing systems.
 
 910
 01:01:08,400 --> 01:01:11,320
@@ -4326,7 +4326,7 @@ paper is to describe a tutorial
 
 919
 01:01:37,600 --> 01:01:40,680
-for strong normalisation
+for strong normalization
 proofs for well-typed terms
 
 920
@@ -4342,7 +4342,7 @@ textbook chapters out there
 922
 01:01:46,640 --> 01:01:48,920
 that focus on strong
-normalisation proofs.
+formalization proofs.
 
 923
 01:01:49,920 --> 01:01:54,920
@@ -4352,7 +4352,7 @@ a gold standard in some sense
 924
 01:01:55,520 --> 01:01:59,680
 to evaluate proof assistants
-using a strong normalisation proof
+using a strong normalization proof
 
 925
 01:01:59,680 --> 01:02:00,880
@@ -4365,12 +4365,12 @@ Altenkirch's work in 1993
 
 927
 01:02:05,800 --> 01:02:08,280
-where he used lego to
-give a mechanisation
+where he used Lego to
+give a mechanization
 
 928
 01:02:08,280 --> 01:02:11,640
-of a strong normalisation proof
+of a strong formalization proof
 for simply-typed lambda calculus.
 
 929
@@ -4390,7 +4390,7 @@ a Kripke-style logical relation
 
 932
 01:02:23,400 --> 01:02:26,600
-where we talk about extentions
+where we talk about extensions
 of typing contexts.
 
 933
@@ -4474,7 +4474,7 @@ very popular for reasoning
 949
 01:03:15,640 --> 01:03:18,000
 about concurrent
-and imperative programmes
+and imperative programs
 
 950
 01:03:18,000 --> 01:03:21,040
@@ -4572,12 +4572,12 @@ after reading the tutorial.
 970
 01:04:14,440 --> 01:04:16,640
 So how do we define
-strong normalisation.
+strong normalization.
 
 971
 01:04:16,640 --> 01:04:20,720
 So traditionally, we define it by
-saying M is strongly normalising
+saying M is strongly normalizing
 
 972
 01:04:20,720 --> 01:04:25,080
@@ -4586,7 +4586,7 @@ in M end in a normal form.
 
 973
 01:04:25,080 --> 01:04:27,200
-And this often characterised using
+And this often characterized using
 
 974
 01:04:27,200 --> 01:04:29,320
@@ -4605,7 +4605,7 @@ these different rewrite sequences
 
 977
 01:04:36,320 --> 01:04:38,440
-and analyse different reducts.
+and analyze different reducts.
 
 978
 01:04:40,160 --> 01:04:43,400
@@ -4615,17 +4615,17 @@ proposed by a F van Raamsdonk
 979
 01:04:43,400 --> 01:04:46,440
 and Paula Severi going
-back also to (IANUDIBLE)
+back also to (INAUDIBLE)
 
 980
 01:04:46,440 --> 01:04:49,040
 this kind of modular approach
-for strongly normalising
+for strongly normalizing
 
 981
 01:04:49,800 --> 01:04:52,880
 where we have inductive
-characterisations in normal forms.
+characterizations in normal forms.
 
 982
 01:04:53,360 --> 01:04:55,200
@@ -4634,7 +4634,7 @@ And this leads to modular proofs
 983
 01:04:55,200 --> 01:04:57,160
 both on paper
-and mechanisations and the proofs
+and mechanizations and the proofs
 
 984
 01:04:57,160 --> 01:04:58,760
@@ -4652,12 +4652,12 @@ and inductive definition
 
 987
 01:05:06,320 --> 01:05:07,840
-of strong normalising terms.
+of strong normalizing terms.
 
 988
 01:05:08,360 --> 01:05:11,400
 And the second one is actually
-proving strong normalisation
+proving strong normalization
 
 989
 01:05:11,400 --> 01:05:14,800
@@ -4770,7 +4770,7 @@ Now Coq on the other hand we used
 1012
 01:06:16,280 --> 01:06:18,840
 de Bruijn encodings
-for modelling bindings.
+for modeling bindings.
 
 1013
 01:06:19,840 --> 01:06:21,680
@@ -4913,7 +4913,7 @@ renaming and substitution
 
 1042
 01:07:39,560 --> 01:07:44,320
-is however not internalised
+is however not internalized
 and there is no automation.
 
 1043
@@ -5251,7 +5251,7 @@ the derivative of f at a point x
 
 1114
 01:11:06,400 --> 01:11:14,120
-by fiting x plus epsilon into f
+by fitting x plus epsilon into f
 extracting the tangent of the output.
 
 1115
@@ -5587,7 +5587,7 @@ or quite amazing,
 1185
 01:14:51,840 --> 01:14:54,280
 depending on whether you like to
-build large correct artefacts
+build large correct artifacts
 
 1186
 01:14:54,280 --> 01:14:57,520
@@ -5744,7 +5744,7 @@ about engineers and accountants
 
 1219
 01:16:35,080 --> 01:16:37,440
-travelling with fewer tickets
+traveling with fewer tickets
 then people are hiding in the loo
 
 1220
@@ -6036,7 +6036,7 @@ been of interest.
 
 1282
 01:19:41,000 --> 01:19:42,560
-And I'd like to thank the organisers
+And I'd like to thank the organizers
 
 1283
 01:19:42,560 --> 01:19:44,880
@@ -6085,7 +6085,7 @@ elastic sheet defined functions,
 
 1293
 01:20:17,600 --> 01:20:21,400
-generalising spreadsheet functions
+generalizing spreadsheet functions
 to variable size input arrays,
 
 1294
@@ -6128,7 +6128,7 @@ about a method of
 
 1302
 01:20:41,680 --> 01:20:43,800
-automatically generalising
+automatically generalizing
 spreadsheet functions
 
 1303
@@ -6327,7 +6327,7 @@ and returns to new output.
 1343
 01:22:28,240 --> 01:22:30,800
 But of course the tool can
-optimise this process.
+optimize this process.
 
 1344
 01:22:30,800 --> 01:22:33,560
@@ -6621,7 +6621,7 @@ to resize an SDF at the cell level,
 
 1405
 01:24:49,160 --> 01:24:51,320
-effectively generalising
+effectively generalizing
 it to handle inputs
 
 1406
@@ -6663,7 +6663,7 @@ That's the topic of our paper.
 1414
 01:25:09,040 --> 01:25:11,400
 Let's see how
-the generalisation process works
+the generalization process works
 
 1415
 01:25:11,400 --> 01:25:13,000
@@ -6782,12 +6782,12 @@ we can evaluate as before.
 1439
 01:26:11,080 --> 01:26:13,680
 Now if the tiles may
-colllide when they expand,
+collide when they expand,
 
 1440
 01:26:13,680 --> 01:26:15,680
 we address this by
-labelling each reference
+labeling each reference
 
 1441
 01:26:15,680 --> 01:26:17,840
@@ -6831,13 +6831,13 @@ The question immediately comes up
 
 1450
 01:26:35,880 --> 01:26:38,880
-Is the best generalisation of
+Is the best generalization of
 the given SDF always clear?
 
 1451
 01:26:38,880 --> 01:26:41,760
 for one thing we want
-a generalisation that's well defined,
+a generalization that's well defined,
 
 1452
 01:26:41,760 --> 01:26:43,520
@@ -6872,13 +6872,13 @@ cells below the G tile
 
 1459
 01:26:56,160 --> 01:26:58,520
-so this generalisation
+so this generalization
 is not well defined.
 
 1460
 01:26:58,520 --> 01:27:01,520
 From now on we'll consider only
-well defined generalisations.
+well defined generalizations.
 
 1461
 01:27:02,800 --> 01:27:04,040
@@ -6896,7 +6896,7 @@ and adds the totals.
 1464
 01:27:08,600 --> 01:27:10,840
 Here are two well
-defined generalisations
+defined generalizations
 
 1465
 01:27:10,840 --> 01:27:13,880
@@ -6929,7 +6929,7 @@ we prefer sum 2 D to make sure
 
 1471
 01:27:26,080 --> 01:27:27,840
-we generalise as many
+we generalize as many
 degrees of freedom
 
 1472
@@ -6943,7 +6943,7 @@ So given an SDF like shop.
 1474
 01:27:33,120 --> 01:27:34,640
 If there's a well
-defined generalisation
+defined generalization
 
 1475
 01:27:34,640 --> 01:27:36,480
@@ -6966,7 +6966,7 @@ are several problems
 1479
 01:27:40,680 --> 01:27:42,920
 that can cause them to be no
-principle generalisation,
+principle generalization,
 
 1480
 01:27:42,920 --> 01:27:44,680
@@ -6983,7 +6983,7 @@ has two other contrived,
 
 1483
 01:27:48,720 --> 01:27:50,520
-but well defined generalisations
+but well defined generalizations
 
 1484
 01:27:50,520 --> 01:27:52,280
@@ -6997,7 +6997,7 @@ is the last three.
 
 1486
 01:27:54,960 --> 01:27:57,080
-None of these generalisations
+None of these generalizations
 can be converted
 
 1487
@@ -7020,7 +7020,7 @@ it should be intuitively clear
 1491
 01:28:03,560 --> 01:28:05,240
 there isn't a principle
-generalisation
+generalization
 
 1492
 01:28:05,240 --> 01:28:07,120
@@ -7033,12 +7033,12 @@ The user probably want shop1,
 1494
 01:28:08,600 --> 01:28:10,760
 But we have to
-formalise that somehow.
+formalize that somehow.
 
 1495
 01:28:10,760 --> 01:28:13,560
 So we introduced the concept
-of regular generalisation
+of regular generalization
 
 1496
 01:28:13,560 --> 01:28:16,800
@@ -7062,17 +7062,17 @@ so shop1 is regular
 1500
 01:28:21,680 --> 01:28:23,680
 and the other two
-generalisations are not.
+generalizations are not.
 
 1501
 01:28:25,320 --> 01:28:27,400
 Now out of all the well
-defined generalisations
+defined generalizations
 
 1502
 01:28:27,400 --> 01:28:30,960
 of an SDF, if we keep only
-the regular generalisations,
+the regular generalizations,
 
 1503
 01:28:30,960 --> 01:28:32,160
@@ -7081,7 +7081,7 @@ we can prove that there's
 1504
 01:28:32,160 --> 01:28:34,480
 always a principle
-regular generalisation.
+regular generalization.
 
 1505
 01:28:34,480 --> 01:28:37,360
@@ -7102,7 +7102,7 @@ Our algorithm to find the principle
 
 1509
 01:28:45,640 --> 01:28:48,160
-regular generalisation
+regular generalization
 introduces all the variables
 
 1510
@@ -7153,7 +7153,7 @@ programming language.
 1520
 01:29:10,240 --> 01:29:12,840
 We've seen that in order to have
-a principle generalisation
+a principle generalization
 
 1521
 01:29:12,840 --> 01:29:15,040
@@ -7163,7 +7163,7 @@ a concept of regularity
 1522
 01:29:15,040 --> 01:29:17,720
 that excludes some well
-defined generalisations.
+defined generalizations.
 
 1523
 01:29:17,720 --> 01:29:19,520
@@ -7173,12 +7173,12 @@ it capture user intent,
 1524
 01:29:19,520 --> 01:29:22,600
 which inevitably involves
-judgement calls. Our goals,
+judgment calls. Our goals,
 
 1525
 01:29:22,600 --> 01:29:25,120
 aside from having a principle
-of regular generalisation,
+of regular generalization,
 
 1526
 01:29:25,120 --> 01:29:29,000
@@ -7307,7 +7307,7 @@ really promising them,
 1552
 01:30:27,520 --> 01:30:30,480
 more work is needed to further
-optimise the user experience.
+optimize the user experience.
 
 1553
 01:30:32,240 --> 01:30:34,680
@@ -7610,7 +7610,7 @@ course deezer durata,
 1616
 01:34:03,560 --> 01:34:07,600
 scope for an instructor
-customisation, alignment
+customization, alignment
 
 1617
 01:34:07,600 --> 01:34:11,040
@@ -7643,7 +7643,7 @@ is based on some simple ideas.
 
 1623
 01:34:35,560 --> 01:34:38,920
-First, let's recognise that
+First, let's recognize that
 
 1624
 01:34:38,920 --> 01:34:43,040
@@ -7734,7 +7734,7 @@ think languages, not concepts.
 
 1642
 01:35:38,320 --> 01:35:40,600
-Let's further recognise,
+Let's further recognize,
 that students are motivated
 
 1643
@@ -7858,7 +7858,7 @@ I mean, ultimately, nobody cares
 
 1668
 01:37:01,680 --> 01:37:03,040
-if a student can programme less
+if a student can program less
 
 1669
 01:37:03,040 --> 01:37:05,440
@@ -7867,7 +7867,7 @@ if a student can think
 
 1670
 01:37:05,440 --> 01:37:08,440
-like a Lisp programmemer in
+like a Lisp programmer in
 higher order abstractions.
 
 1671
@@ -7901,11 +7901,11 @@ languages as a method
 
 1677
 01:37:28,880 --> 01:37:31,240
-or conduit by which to distil
+or conduit by which to distill
 
 1678
 01:37:31,240 --> 01:37:34,320
-distil concepts of
+distill concepts of
 languages to students.
 
 1679
@@ -7935,7 +7935,7 @@ or to
 
 1684
 01:37:52,120 --> 01:37:54,000
-operationalise that approach.
+operationalize that approach.
 
 1685
 01:37:54,000 --> 01:37:58,440
@@ -8161,7 +8161,7 @@ This is a subset of them.
 1732
 01:40:29,880 --> 01:40:33,320
 And this is are
-the student artefacts
+the student artifacts
 
 1733
 01:40:33,320 --> 01:40:35,040
@@ -8418,7 +8418,7 @@ and excess of work on the
 1785
 01:43:19,920 --> 01:43:23,480
 instructors part because the students
-are producing the artefacts.
+are producing the artifacts.
 
 1786
 01:43:23,480 --> 01:43:25,320
@@ -8540,7 +8540,7 @@ back to their institutions.
 1810
 01:44:37,720 --> 01:44:44,680
 I encourage you to explore our
-webpages, especially our github site,
+webpages, especially our GitHub site,
 
 1811
 01:44:44,680 --> 01:44:50,320
