@@ -647,16 +647,16 @@ Dialogue: 0,0:47:51.28,0:47:52.60,Default,,0,0,0,,Can we define a data structure
 Dialogue: 0,0:47:52.60,0:47:55.84,Default,,0,0,0,,that's both heterogeneous\Nand efficient?
 Dialogue: 0,0:47:55.84,0:47:58.56,Default,,0,0,0,,And this isn't just\Na theoretical probe.
 Dialogue: 0,0:47:58.56,0:48:02.12,Default,,0,0,0,,So people who work in\Nindustry and academia,
-Dialogue: 0,0:48:02.12,0:48:05.20,Default,,0,0,0,,such as David Christian, who\Nhas co-authored (INAUDIBLE),
+Dialogue: 0,0:48:02.12,0:48:05.20,Default,,0,0,0,,such as David Christian, and\Nhis co-authors at Galois,
 Dialogue: 0,0:48:05.20,0:48:06.68,Default,,0,0,0,,they wrote an experience report
 Dialogue: 0,0:48:06.68,0:48:09.56,Default,,0,0,0,,on Dependently Typed Haskell\Nin Industry last year,
 Dialogue: 0,0:48:09.56,0:48:13.04,Default,,0,0,0,,that they have this experience of\Nprofiling crucible that showed
-Dialogue: 0,0:48:13.04,0:48:17.92,Default,,0,0,0,,that linear axis imposed an unacceptable\Noverhead on the simulator.
+Dialogue: 0,0:48:13.04,0:48:17.92,Default,,0,0,0,,that linear access imposed an unacceptable\Noverhead on the simulator.
 Dialogue: 0,0:48:17.92,0:48:20.04,Default,,0,0,0,,As a result, they actually\Nabandoned the typesafe
 Dialogue: 0,0:48:20.04,0:48:22.76,Default,,0,0,0,,dependently typed approach\Nthat they were taking,
 Dialogue: 0,0:48:22.76,0:48:26.84,Default,,0,0,0,,in favour of data dot map\Nand an unsafe course.
 Dialogue: 0,0:48:26.84,0:48:29.84,Default,,0,0,0,,So what's in the paper? So\NI show how to implement
-Dialogue: 0,0:48:29.84,0:48:33.12,Default,,0,0,0,,an heterogeneous binary\Nrandom access list and act.
+Dialogue: 0,0:48:29.84,0:48:33.12,Default,,0,0,0,,an heterogeneous binary\Nrandom access list in Agda.
 Dialogue: 0,0:48:33.12,0:48:36.80,Default,,0,0,0,,And this has the same API as just\Nregular heterogeneous list.
 Dialogue: 0,0:48:36.80,0:48:39.68,Default,,0,0,0,,So there's an empty structure, nil,
 Dialogue: 0,0:48:39.68,0:48:41.48,Default,,0,0,0,,and there's an operation\Nto add new elements
@@ -689,10 +689,10 @@ Dialogue: 0,0:49:55.68,0:49:59.40,Default,,0,0,0,,indexed by natural number corr
 Dialogue: 0,0:49:59.40,0:50:03.20,Default,,0,0,0,,So I can have a leaf which\Nstores an element of type a
 Dialogue: 0,0:50:03.20,0:50:04.36,Default,,0,0,0,,and has depth zero,
 Dialogue: 0,0:50:04.36,0:50:08.36,Default,,0,0,0,,or I can have a node which has\Ntwo sub trees of equal length,
-Dialogue: 0,0:50:08.36,0:50:12.88,Default,,0,0,0,,and then return to tree\Nwhich is one deeper.
+Dialogue: 0,0:50:08.36,0:50:12.88,Default,,0,0,0,,and then return a tree\Nwhich is one deeper.
 Dialogue: 0,0:50:12.88,0:50:15.96,Default,,0,0,0,,Now if I want to kind of denote any\Nparticular value in such a tree,
 Dialogue: 0,0:50:15.96,0:50:19.04,Default,,0,0,0,,I typically use a path\Nthrough that tree.
-Dialogue: 0,0:50:19.04,0:50:23.24,Default,,0,0,0,,The data type path here is just\Nisomorphic to a vector of (INAUDIBLE)
+Dialogue: 0,0:50:19.04,0:50:23.24,Default,,0,0,0,,The data type path here is just\Nisomorphic to a vector of booleans
 Dialogue: 0,0:50:23.24,0:50:25.80,Default,,0,0,0,,but it's nice to have\Nthis separate data type.
 Dialogue: 0,0:50:25.80,0:50:28.08,Default,,0,0,0,,The idea is that this path\Ntells me for every node
 Dialogue: 0,0:50:28.08,0:50:30.04,Default,,0,0,0,,whether I should go left or right.
@@ -704,9 +704,9 @@ Dialogue: 0,0:50:38.00,0:50:40.24,Default,,0,0,0,,and the right subtree if it st
 Dialogue: 0,0:50:40.76,0:50:42.24,Default,,0,0,0,,At the end of the path I know
 Dialogue: 0,0:50:42.24,0:50:45.16,Default,,0,0,0,,that I've hit a leaf and turn\Nthe value stored there.
 Dialogue: 0,0:50:45.68,0:50:47.60,Default,,0,0,0,,The important thing to notice here
-Dialogue: 0,0:50:48.12,0:50:51.08,Default,,0,0,0,,is that the type in the C ensure\Nthat the depth of the tree
+Dialogue: 0,0:50:48.12,0:50:51.08,Default,,0,0,0,,is that the type indices ensure\Nthat the depth of the tree
 Dialogue: 0,0:50:51.08,0:50:52.68,Default,,0,0,0,,and the length of the path coincide.
-Dialogue: 0,0:50:53.20,0:50:56.48,Default,,0,0,0,,So I can always return\Nthe value of type (INAUDIBLE)
+Dialogue: 0,0:50:53.20,0:50:56.48,Default,,0,0,0,,So I can always return\Na value of type a.
 Dialogue: 0,0:50:57.24,0:51:01.24,Default,,0,0,0,,Now if I only have to store\N2 to the power of n elements
 Dialogue: 0,0:51:01.24,0:51:02.56,Default,,0,0,0,,this would be the end of the talk.
 Dialogue: 0,0:51:03.04,0:51:05.32,Default,,0,0,0,,But you'd be very\Nright to complain that
@@ -731,20 +731,20 @@ Dialogue: 0,0:51:56.40,0:51:58.24,Default,,0,0,0,,I have no tree in position two
 Dialogue: 0,0:51:58.24,0:52:02.04,Default,,0,0,0,,and I have a tree of depth two in\Nthe second position in the list.
 Dialogue: 0,0:52:03.28,0:52:05.88,Default,,0,0,0,,I guess if you are familiar\Nwith binary numbers
 Dialogue: 0,0:52:05.88,0:52:07.08,Default,,0,0,0,,you can see how this one works.
-Dialogue: 0,0:52:09.08,0:52:13.08,Default,,0,0,0,,So the numbers\Nrepresentation in binary
+Dialogue: 0,0:52:09.08,0:52:13.08,Default,,0,0,0,,So the number's\Nrepresentation in binary
 Dialogue: 0,0:52:13.08,0:52:15.80,Default,,0,0,0,,determines the shape of\Nthe binary random access list
 Dialogue: 0,0:52:15.80,0:52:17.12,Default,,0,0,0,,storing that many elements.
 Dialogue: 0,0:52:17.12,0:52:18.32,Default,,0,0,0,,So it'll need some binary numbers.
-Dialogue: 0,0:52:18.32,0:52:19.80,Default,,0,0,0,,Let's right that anecdote.
+Dialogue: 0,0:52:18.32,0:52:19.80,Default,,0,0,0,,Let's right that in Agda.
 Dialogue: 0,0:52:19.80,0:52:22.08,Default,,0,0,0,,So we can have a simple\Ntype for binary numbers,
-Dialogue: 0,0:52:22.80,0:52:25.00,Default,,0,0,0,,0s and 1s are the end of the binary.
-Dialogue: 0,0:52:26.24,0:52:28.40,Default,,0,0,0,,We can define a successful operation
+Dialogue: 0,0:52:22.80,0:52:25.00,Default,,0,0,0,,0s and 1s and the end of the binary.
+Dialogue: 0,0:52:26.24,0:52:28.40,Default,,0,0,0,,We can define a successor operation
 Dialogue: 0,0:52:28.40,0:52:29.80,Default,,0,0,0,,which increments the binary number.
 Dialogue: 0,0:52:30.28,0:52:33.56,Default,,0,0,0,,The important thing here is that\Nwe have the least significant bit
 Dialogue: 0,0:52:34.32,0:52:35.80,Default,,0,0,0,,at the beginning of\Nthe binary number.
 Dialogue: 0,0:52:35.80,0:52:37.68,Default,,0,0,0,,So if we see a 0
 Dialogue: 0,0:52:37.68,0:52:38.72,Default,,0,0,0,,we can flip it to one,
-Dialogue: 0,0:52:38.72,0:52:41.64,Default,,0,0,0,,if we see a one we flip\Nit to a 0 of course.
+Dialogue: 0,0:52:38.72,0:52:41.64,Default,,0,0,0,,if we see a one we flip\Nit to a 0 and recurse.
 Dialogue: 0,0:52:42.88,0:52:46.16,Default,,0,0,0,,So now we can finally define\Nour random access list.
 Dialogue: 0,0:52:46.16,0:52:48.76,Default,,0,0,0,,There are three type arguments\Nthat you can see here.
 Dialogue: 0,0:52:49.52,0:52:52.88,Default,,0,0,0,,The type A corresponding\Nto the type of the values
@@ -814,40 +814,40 @@ Dialogue: 0,0:55:27.24,0:55:30.96,Default,,0,0,0,,So we kind of implemented\Nthe
 Dialogue: 0,0:55:30.96,0:55:33.32,Default,,0,0,0,,which is represented by\Nthe binary number B.
 Dialogue: 0,0:55:34.52,0:55:36.76,Default,,0,0,0,,But if we try this we\Nget stuck quite quickly.
 Dialogue: 0,0:55:37.76,0:55:40.20,Default,,0,0,0,,As we kind of need to\Nmake a recursive call,
-Dialogue: 0,0:55:40.68,0:55:42.68,Default,,0,0,0,,the tail of the binary random\Naccess list actually list
-Dialogue: 0,0:55:42.68,0:55:45.36,Default,,0,0,0,,actually has larger access tree in\Nwhich we are trying to add an A
+Dialogue: 0,0:55:40.68,0:55:42.68,Default,,0,0,0,,the tail of the binary random\Naccess list
+Dialogue: 0,0:55:42.68,0:55:45.36,Default,,0,0,0,,actually has larger access trees in\Nwhich we are trying to add an A
 Dialogue: 0,0:55:45.36,0:55:47.80,Default,,0,0,0,,which kind of no longer\Nlines up some how.
 Dialogue: 0,0:55:48.80,0:55:52.56,Default,,0,0,0,,So the solution is to define kind\Nof a more general operation,
-Dialogue: 0,0:55:52.56,0:55:55.36,Default,,0,0,0,,a cons tree operations\Nwhich adds a tree of depths
-Dialogue: 0,0:55:55.36,0:55:57.52,Default,,0,0,0,,and to a random access list
+Dialogue: 0,0:55:52.56,0:55:55.36,Default,,0,0,0,,a cons tree operations\Nwhich adds a tree of depth n
+Dialogue: 0,0:55:55.36,0:55:57.52,Default,,0,0,0,,to a random access list
 Dialogue: 0,0:55:58.80,0:56:02.76,Default,,0,0,0,,starting with n and then increments\Nthe number of elements stored.
 Dialogue: 0,0:56:03.52,0:56:06.12,Default,,0,0,0,,And then we have the degenerate case
 Dialogue: 0,0:56:07.60,0:56:11.00,Default,,0,0,0,,where n equals 0 then it\Ncorresponds to the cons operation
 Dialogue: 0,0:56:11.00,0:56:12.00,Default,,0,0,0,,that we have there.
 Dialogue: 0,0:56:12.76,0:56:15.88,Default,,0,0,0,,If you want to know a little bit more\Nabout, the details are in the paper
 Dialogue: 0,0:56:15.88,0:56:18.44,Default,,0,0,0,,but the cons tree\Noperation closely mimics
-Dialogue: 0,0:56:18.44,0:56:21.12,Default,,0,0,0,,the kind of successful\Noperations on binary numbers.
+Dialogue: 0,0:56:18.44,0:56:21.12,Default,,0,0,0,,the kind of successor\Noperation on binary numbers.
 Dialogue: 0,0:56:22.60,0:56:23.88,Default,,0,0,0,,So to wrap up a little bit,
 Dialogue: 0,0:56:23.88,0:56:25.92,Default,,0,0,0,,we can extend this to\Nthe heterogenous case
 Dialogue: 0,0:56:25.92,0:56:28.92,Default,,0,0,0,,by writing a heterogeneous\Nbinary random access list
-Dialogue: 0,0:56:28.92,0:56:31.08,Default,,0,0,0,,index by a random access list
-Dialogue: 0,0:56:31.08,0:56:34.00,Default,,0,0,0,,which stores some type information\Nfirst time universe u.
+Dialogue: 0,0:56:28.92,0:56:31.08,Default,,0,0,0,,indexed by a random access list
+Dialogue: 0,0:56:31.08,0:56:34.00,Default,,0,0,0,,which stores some type information\Nfor some universe u.
 Dialogue: 0,0:56:35.00,0:56:37.32,Default,,0,0,0,,And despite like\Nthe apparent complexity,
 Dialogue: 0,0:56:37.80,0:56:39.20,Default,,0,0,0,,there is an example in the paper
 Dialogue: 0,0:56:39.20,0:56:41.68,Default,,0,0,0,,where I write an efficient\Nlambda calculus evaluator
 Dialogue: 0,0:56:41.68,0:56:44.40,Default,,0,0,0,,using heterogeneous binary\Nrandom access lists.
 Dialogue: 0,0:56:44.92,0:56:47.04,Default,,0,0,0,,And this turns out to be\Nno harder than just using
 Dialogue: 0,0:56:47.04,0:56:48.56,Default,,0,0,0,,kind of heterogeneous list
-Dialogue: 0,0:56:48.56,0:56:50.56,Default,,0,0,0,,that you would use in the situation.
+Dialogue: 0,0:56:48.56,0:56:50.56,Default,,0,0,0,,that you would use in the usual situation.
 Dialogue: 0,0:56:51.32,0:56:54.24,Default,,0,0,0,,Furthermore it's fairly easy\Nto port this code to Haskell.
 Dialogue: 0,0:56:54.24,0:56:57.12,Default,,0,0,0,,It turns out that you only\Nneed about 130 lines
-Dialogue: 0,0:56:57.12,0:57:00.20,Default,,0,0,0,,to define the data\Nstructure of the nill,
+Dialogue: 0,0:56:57.12,0:57:00.20,Default,,0,0,0,,to define the data\Nstructure of the nil,
 Dialogue: 0,0:57:00.20,0:57:02.00,Default,,0,0,0,,the cons and the look up operations
 Dialogue: 0,0:57:03.52,0:57:05.68,Default,,0,0,0,,of which I should point\Nout that maybe ten percent
 Dialogue: 0,0:57:05.68,0:57:07.40,Default,,0,0,0,,is language extension pragmas
 Dialogue: 0,0:57:07.40,0:57:10.64,Default,,0,0,0,,but there is nothing too\Nfancy going on there.
 Dialogue: 0,0:57:11.64,0:57:14.72,Default,,0,0,0,,So in conclusion if you can\Nchoose the right data structure,
-Dialogue: 0,0:57:14.72,0:57:17.96,Default,,0,0,0,,one very nice things about\Nthese binary random access list
+Dialogue: 0,0:57:14.72,0:57:17.96,Default,,0,0,0,,one very nice thing about\Nthese binary random access lists
 Dialogue: 0,0:57:17.96,0:57:20.08,Default,,0,0,0,,is that there is no\Nrotation involved.
 Dialogue: 0,0:57:20.08,0:57:22.20,Default,,0,0,0,,Everything kind of\Nstays in the same order
 Dialogue: 0,0:57:23.44,0:57:27.68,Default,,0,0,0,,regardless of when we add things\Nthat kind of stays well formed.
@@ -860,7 +860,7 @@ Dialogue: 0,0:57:42.20,0:57:47.16,Default,,0,0,0,,(APPLAUSE)
 Dialogue: 0,0:57:49.72,0:57:50.92,Default,,0,0,0,,JEREMY: Thanks, Wouter.
 Dialogue: 0,0:57:51.40,0:57:53.40,Default,,0,0,0,,If you are watching the New\NYork streaming Clowdr,
 Dialogue: 0,0:57:53.40,0:57:54.72,Default,,0,0,0,,you should now see a Q&A link
-Dialogue: 0,0:57:54.72,0:57:57.04,Default,,0,0,0,,where you can ask Walter\Nquestions by video chat.
+Dialogue: 0,0:57:54.72,0:57:57.04,Default,,0,0,0,,where you can ask Wouter\Nquestions by video chat.
 Dialogue: 0,0:58:03.52,0:58:05.60,Default,,0,0,0,,The next talk is\Nthe presentation of the paper
 Dialogue: 0,0:58:05.60,0:58:09.04,Default,,0,0,0,,POPLMark reloaded; Mechanising\Nproofs by logical relations
 Dialogue: 0,0:58:10.04,0:58:12.16,Default,,0,0,0,,which presents a new collection\Nof benchmark problems

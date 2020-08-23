@@ -2997,8 +2997,8 @@ industry and academia,
 
 637
 00:48:02,120 --> 00:48:05,200
-such as David Christian, who
-has co-authored (INAUDIBLE),
+such as David Christian, and
+his co-authors at Galois,
 
 638
 00:48:05,200 --> 00:48:06,680
@@ -3016,7 +3016,7 @@ profiling crucible that showed
 
 641
 00:48:13,040 --> 00:48:17,920
-that linear axis imposed an unacceptable
+that linear access imposed an unacceptable
 overhead on the simulator.
 
 642
@@ -3042,7 +3042,7 @@ I show how to implement
 646
 00:48:29,840 --> 00:48:33,120
 an heterogeneous binary
-random access list and act.
+random access list in Agda.
 
 647
 00:48:33,120 --> 00:48:36,800
@@ -3201,7 +3201,7 @@ two sub trees of equal length,
 
 679
 00:50:08,360 --> 00:50:12,880
-and then return to tree
+and then return a tree
 which is one deeper.
 
 680
@@ -3217,7 +3217,7 @@ through that tree.
 682
 00:50:19,040 --> 00:50:23,240
 The data type path here is just
-isomorphic to a vector of (INAUDIBLE)
+isomorphic to a vector of booleans
 
 683
 00:50:23,240 --> 00:50:25,800
@@ -3272,7 +3272,7 @@ The important thing to notice here
 
 694
 00:50:48,120 --> 00:50:51,080
-is that the type in the C ensure
+is that the type indices ensure
 that the depth of the tree
 
 695
@@ -3282,7 +3282,7 @@ and the length of the path coincide.
 696
 00:50:53,200 --> 00:50:56,480
 So I can always return
-the value of type (INAUDIBLE)
+a value of type a.
 
 697
 00:50:57,240 --> 00:51:01,240
@@ -3397,7 +3397,7 @@ you can see how this one works.
 
 721
 00:52:09,080 --> 00:52:13,080
-So the numbers
+So the number's
 representation in binary
 
 722
@@ -3415,7 +3415,7 @@ So it'll need some binary numbers.
 
 725
 00:52:18,320 --> 00:52:19,800
-Let's right that anecdote.
+Let's right that in Agda.
 
 726
 00:52:19,800 --> 00:52:22,080
@@ -3424,11 +3424,11 @@ type for binary numbers,
 
 727
 00:52:22,800 --> 00:52:25,000
-0s and 1s are the end of the binary.
+0s and 1s and the end of the binary.
 
 728
 00:52:26,240 --> 00:52:28,400
-We can define a successful operation
+We can define a successor operation
 
 729
 00:52:28,400 --> 00:52:29,800
@@ -3455,7 +3455,7 @@ we can flip it to one,
 734
 00:52:38,720 --> 00:52:41,640
 if we see a one we flip
-it to a 0 of course.
+it to a 0 and recurse.
 
 735
 00:52:42,880 --> 00:52:46,160
@@ -3779,11 +3779,11 @@ make a recursive call,
 804
 00:55:40,680 --> 00:55:42,680
 the tail of the binary random
-access list actually list
+access list
 
 805
 00:55:42,680 --> 00:55:45,360
-actually has larger access tree in
+actually has larger access trees in
 which we are trying to add an A
 
 806
@@ -3799,11 +3799,11 @@ of a more general operation,
 808
 00:55:52,560 --> 00:55:55,360
 a cons tree operations
-which adds a tree of depths
+which adds a tree of depth n
 
 809
 00:55:55,360 --> 00:55:57,520
-and to a random access list
+to a random access list
 
 810
 00:55:58,800 --> 00:56:02,760
@@ -3835,8 +3835,8 @@ operation closely mimics
 
 816
 00:56:18,440 --> 00:56:21,120
-the kind of successful
-operations on binary numbers.
+the kind of successor
+operation on binary numbers.
 
 817
 00:56:22,600 --> 00:56:23,880
@@ -3854,12 +3854,12 @@ binary random access list
 
 820
 00:56:28,920 --> 00:56:31,080
-index by a random access list
+indexed by a random access list
 
 821
 00:56:31,080 --> 00:56:34,000
 which stores some type information
-first time universe u.
+for some universe u.
 
 822
 00:56:35,000 --> 00:56:37,320
@@ -3891,7 +3891,7 @@ kind of heterogeneous list
 
 828
 00:56:48,560 --> 00:56:50,560
-that you would use in the situation.
+that you would use in the usual situation.
 
 829
 00:56:51,320 --> 00:56:54,240
@@ -3906,7 +3906,7 @@ need about 130 lines
 831
 00:56:57,120 --> 00:57:00,200
 to define the data
-structure of the nill,
+structure of the nil,
 
 832
 00:57:00,200 --> 00:57:02,000
@@ -3933,8 +3933,8 @@ choose the right data structure,
 
 837
 00:57:14,720 --> 00:57:17,960
-one very nice things about
-these binary random access list
+one very nice thing about
+these binary random access lists
 
 838
 00:57:17,960 --> 00:57:20,080
@@ -3993,7 +3993,7 @@ you should now see a Q&A link
 
 850
 00:57:54,720 --> 00:57:57,040
-where you can ask Walter
+where you can ask Wouter
 questions by video chat.
 
 851
