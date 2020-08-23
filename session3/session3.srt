@@ -5033,7 +5033,7 @@ which describes a longstanding bug
 
 1068
 01:08:59,000 --> 01:09:02,320
-and the implementations of these
+in the implementations of these
 and two potential solutions.
 
 1069
@@ -5044,7 +5044,7 @@ Oleksandr Manzyuk, Barak Pearlmutter,
 1070
 01:09:06,480 --> 01:09:09,760
 Alexey Radul, David Rush,
-and Jeﬀrey Mark Siskind.
+and Jeﬀrey Mark Siskind.
 
 1071
 01:09:09,760 --> 01:09:13,520
@@ -5076,7 +5076,7 @@ to make automatic differentiation
 
 1077
 01:09:27,280 --> 01:09:30,520
-robust, performance general,
+robust, performant, general,
 and ultimately ubiquitous,
 
 1078
@@ -5085,7 +5085,7 @@ and of course, correct.
 
 1079
 01:09:32,080 --> 01:09:33,960
-It should be easy to
+It should be as easy to
 take a derivative
 
 1080
@@ -5095,12 +5095,12 @@ root or write a loop.
 
 1081
 01:09:36,680 --> 01:09:38,600
-That means programmemers should
+That means programmers should
 be able to take derivatives
 
 1082
 01:09:38,600 --> 01:09:41,000
-of anything who's
+of anything whose
 derivative make sense.
 
 1083
@@ -5309,7 +5309,7 @@ that don't support it
 
 1126
 01:11:47,960 --> 01:11:51,000
-programmeers end up going through
+programmers end up going through
 all kinds of crazy hoops
 
 1127
@@ -5318,7 +5318,7 @@ to get nesting working.
 
 1128
 01:11:52,080 --> 01:11:53,520
-Said scripts depatch source code
+Sed scripts to patch source code
 
 1129
 01:11:53,520 --> 01:11:55,680
@@ -5353,7 +5353,7 @@ mathematical notation
 
 1136
 01:12:12,320 --> 01:12:13,480
-for nesting derivative.
+for nested derivative.
 
 1137
 01:12:13,480 --> 01:12:16,680
@@ -5819,7 +5819,7 @@ except it's manual and horrible.
 
 1235
 01:17:22,720 --> 01:17:25,160
-We want programmeists to just take
+We want programmers to just take
 derivatives and get the right answer
 
 1236
@@ -5897,7 +5897,7 @@ in play in that function.
 
 1252
 01:18:10,640 --> 01:18:16,320
-So we could augment it with a rapper
+So we could augment it with a wrapper
 to guard the tag in the function
 
 1253
@@ -5915,7 +5915,7 @@ after being passed through.
 
 1256
 01:18:24,400 --> 01:18:26,240
-OK, take home message.
+OK, take-home message.
 
 1257
 01:18:26,240 --> 01:18:28,240

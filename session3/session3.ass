@@ -1078,21 +1078,21 @@ Dialogue: 0,1:08:50.08,1:08:52.64,Default,,0,0,0,,The next talk is\Na presentati
 Dialogue: 0,1:08:52.64,1:08:55.64,Default,,0,0,0,,perturbation confusion in forward\Nautomatic differentiation
 Dialogue: 0,1:08:55.64,1:08:57.44,Default,,0,0,0,,of higher-order functions,
 Dialogue: 0,1:08:57.44,1:08:59.00,Default,,0,0,0,,which describes a longstanding bug
-Dialogue: 0,1:08:59.00,1:09:02.32,Default,,0,0,0,,and the implementations of these\Nand two potential solutions.
+Dialogue: 0,1:08:59.00,1:09:02.32,Default,,0,0,0,,in the implementations of these\Nand two potential solutions.
 Dialogue: 0,1:09:02.32,1:09:06.48,Default,,0,0,0,,The authors of the paper are\NOleksandr Manzyuk, Barak Pearlmutter,
-Dialogue: 0,1:09:06.48,1:09:09.76,Default,,0,0,0,,Alexey Radul, David Rush,\Nand Jeﬀrey Mark Siskind.
+Dialogue: 0,1:09:06.48,1:09:09.76,Default,,0,0,0,,Alexey Radul, David Rush,\Nand Jeﬀrey Mark Siskind.
 Dialogue: 0,1:09:09.76,1:09:13.52,Default,,0,0,0,,And Barak will be presenting.
 Dialogue: 0,1:09:14.12,1:09:15.92,Default,,0,0,0,,BARAK PEARLMUTTER: My name\Nis Barak Pearlmutter,
 Dialogue: 0,1:09:15.92,1:09:19.60,Default,,0,0,0,,and I'd like to tell you about\Na bug that we encountered
 Dialogue: 0,1:09:19.60,1:09:24.12,Default,,0,0,0,,in allowing derivatives of\Nhigher-order functions.
 Dialogue: 0,1:09:24.12,1:09:25.80,Default,,0,0,0,,This work is part of\Na sustained effort
 Dialogue: 0,1:09:25.80,1:09:27.28,Default,,0,0,0,,to make automatic differentiation
-Dialogue: 0,1:09:27.28,1:09:30.52,Default,,0,0,0,,robust, performance general,\Nand ultimately ubiquitous,
+Dialogue: 0,1:09:27.28,1:09:30.52,Default,,0,0,0,,robust, performant, general,\Nand ultimately ubiquitous,
 Dialogue: 0,1:09:30.52,1:09:32.08,Default,,0,0,0,,and of course, correct.
-Dialogue: 0,1:09:32.08,1:09:33.96,Default,,0,0,0,,It should be easy to\Ntake a derivative
+Dialogue: 0,1:09:32.08,1:09:33.96,Default,,0,0,0,,It should be as easy to\Ntake a derivative
 Dialogue: 0,1:09:33.96,1:09:36.68,Default,,0,0,0,,as it is to take a square\Nroot or write a loop.
-Dialogue: 0,1:09:36.68,1:09:38.60,Default,,0,0,0,,That means programmemers should\Nbe able to take derivatives
-Dialogue: 0,1:09:38.60,1:09:41.00,Default,,0,0,0,,of anything who's\Nderivative make sense.
+Dialogue: 0,1:09:36.68,1:09:38.60,Default,,0,0,0,,That means programmers should\Nbe able to take derivatives
+Dialogue: 0,1:09:38.60,1:09:41.00,Default,,0,0,0,,of anything whose\Nderivative make sense.
 Dialogue: 0,1:09:41.00,1:09:43.20,Default,,0,0,0,,So derivatives of functions,
 Dialogue: 0,1:09:43.20,1:09:47.56,Default,,0,0,0,,which themselves take\Nor return functions,
 Dialogue: 0,1:09:47.56,1:09:51.32,Default,,0,0,0,,like solving an ODE\Nor the derivative of map.
@@ -1136,9 +1136,9 @@ Dialogue: 0,1:11:37.20,1:11:41.80,Default,,0,0,0,,So did you really think you co
 Dialogue: 0,1:11:41.80,1:11:43.88,Default,,0,0,0,,It used to be that\Nnesting was initial idea,
 Dialogue: 0,1:11:43.88,1:11:46.36,Default,,0,0,0,,but many applications\Ndemand nesting.
 Dialogue: 0,1:11:46.36,1:11:47.96,Default,,0,0,0,,When done in frameworks\Nthat don't support it
-Dialogue: 0,1:11:47.96,1:11:51.00,Default,,0,0,0,,programmeers end up going through\Nall kinds of crazy hoops
+Dialogue: 0,1:11:47.96,1:11:51.00,Default,,0,0,0,,programmers end up going through\Nall kinds of crazy hoops
 Dialogue: 0,1:11:51.00,1:11:52.08,Default,,0,0,0,,to get nesting working.
-Dialogue: 0,1:11:52.08,1:11:53.52,Default,,0,0,0,,Said scripts depatch source code
+Dialogue: 0,1:11:52.08,1:11:53.52,Default,,0,0,0,,Sed scripts to patch source code
 Dialogue: 0,1:11:53.52,1:11:55.68,Default,,0,0,0,,between multiple passes\Nthrough preprocessors,
 Dialogue: 0,1:11:55.68,1:11:57.16,Default,,0,0,0,,manual closure conversion,
 Dialogue: 0,1:11:57.16,1:11:59.88,Default,,0,0,0,,all kinds of heroic technical\Ndebt creating shenanigans.
@@ -1146,7 +1146,7 @@ Dialogue: 0,1:11:59.88,1:12:02.28,Default,,0,0,0,,We want it to be natural.
 Dialogue: 0,1:12:02.92,1:12:04.56,Default,,0,0,0,,Here's some simple nesting.
 Dialogue: 0,1:12:04.56,1:12:08.08,Default,,0,0,0,,D takes a derivative at a point.
 Dialogue: 0,1:12:09.24,1:12:12.32,Default,,0,0,0,,On the left here is conventional\Nmathematical notation
-Dialogue: 0,1:12:12.32,1:12:13.48,Default,,0,0,0,,for nesting derivative.
+Dialogue: 0,1:12:12.32,1:12:13.48,Default,,0,0,0,,for nested derivative.
 Dialogue: 0,1:12:13.48,1:12:16.68,Default,,0,0,0,,Notice how much nicer the functional\Nnotation on the right is.
 Dialogue: 0,1:12:16.68,1:12:20.76,Default,,0,0,0,,Regular calculus is better\Nwith lambda calculus, right?
 Dialogue: 0,1:12:20.76,1:12:23.12,Default,,0,0,0,,Look at the definition of D.
@@ -1245,7 +1245,7 @@ Dialogue: 0,1:17:12.16,1:17:14.52,Default,,0,0,0,,So, instead of writing that\Ne
 Dialogue: 0,1:17:14.52,1:17:16.16,Default,,0,0,0,,where we use D hat twice,
 Dialogue: 0,1:17:16.16,1:17:19.88,Default,,0,0,0,,we could define D hat twice\Nand use the two different definitions.
 Dialogue: 0,1:17:19.88,1:17:22.72,Default,,0,0,0,,That would be OK,\Nexcept it's manual and horrible.
-Dialogue: 0,1:17:22.72,1:17:25.16,Default,,0,0,0,,We want programmeists to just take\Nderivatives and get the right answer
+Dialogue: 0,1:17:22.72,1:17:25.16,Default,,0,0,0,,We want programmers to just take\Nderivatives and get the right answer
 Dialogue: 0,1:17:25.16,1:17:27.96,Default,,0,0,0,,and not have to worry about\Nwhat's under the hood.
 Dialogue: 0,1:17:27.96,1:17:30.76,Default,,0,0,0,,So here's an idea for accomplishing\Nthis more transparently.
 Dialogue: 0,1:17:30.76,1:17:32.36,Default,,0,0,0,,We could use eta expansion.
@@ -1262,11 +1262,11 @@ Dialogue: 0,1:17:58.36,1:18:00.48,Default,,0,0,0,,Here's another idea.
 Dialogue: 0,1:18:00.48,1:18:04.08,Default,,0,0,0,,What's going wrong is that\Nthe value passed into the function
 Dialogue: 0,1:18:04.08,1:18:05.88,Default,,0,0,0,,whose tangent is being taken,
 Dialogue: 0,1:18:05.88,1:18:10.64,Default,,0,0,0,,might have the same tag that's\Nin play in that function.
-Dialogue: 0,1:18:10.64,1:18:16.32,Default,,0,0,0,,So we could augment it with a rapper\Nto guard the tag in the function
+Dialogue: 0,1:18:10.64,1:18:16.32,Default,,0,0,0,,So we could augment it with a wrapper\Nto guard the tag in the function
 Dialogue: 0,1:18:16.32,1:18:18.08,Default,,0,0,0,,so that if it occurs externally,
 Dialogue: 0,1:18:18.08,1:18:20.96,Default,,0,0,0,,the external one gets renamed\Naway and then renamed back
 Dialogue: 0,1:18:20.96,1:18:24.40,Default,,0,0,0,,after being passed through.
-Dialogue: 0,1:18:24.40,1:18:26.24,Default,,0,0,0,,OK, take home message.
+Dialogue: 0,1:18:24.40,1:18:26.24,Default,,0,0,0,,OK, take-home message.
 Dialogue: 0,1:18:26.24,1:18:28.24,Default,,0,0,0,,We can import\Nthe standard definitions
 Dialogue: 0,1:18:28.24,1:18:30.04,Default,,0,0,0,,of derivatives of\Nhigher-order functions
 Dialogue: 0,1:18:30.04,1:18:31.84,Default,,0,0,0,,into automatic differentiation,
