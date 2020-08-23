@@ -460,7 +460,7 @@ Dialogue: 0,0:36:48.00,0:36:52.72,Default,,0,0,0,,It accepts a unit argument\Nan
 Dialogue: 0,0:36:52.72,0:36:54.88,Default,,0,0,0,,The operation itself is only a construct,
 Dialogue: 0,0:36:54.88,0:36:57.00,Default,,0,0,0,,and its behaviour is specified
 Dialogue: 0,0:36:57.00,0:37:00.52,Default,,0,0,0,,by the handler that intercepts\Nthe operation call.
-Dialogue: 0,0:37:00.52,0:37:05.76,Default,,0,0,0,,The true handler has\Nan effect case for Choose,
+Dialogue: 0,0:37:00.52,0:37:05.76,Default,,0,0,0,,The choose_true handler has\Nan effect case for Choose,
 Dialogue: 0,0:37:05.76,0:37:09.28,Default,,0,0,0,,and here we have the unit\Nargument of the operation call,
 Dialogue: 0,0:37:09.28,0:37:11.76,Default,,0,0,0,,and the programme continuation k,
 Dialogue: 0,0:37:11.76,0:37:17.20,Default,,0,0,0,,which is captured at\Nthe time of the operation call.
@@ -503,7 +503,7 @@ Dialogue: 0,0:39:30.48,0:39:35.88,Default,,0,0,0,,by fixing the global theory,\N
 Dialogue: 0,0:39:35.88,0:39:38.52,Default,,0,0,0,,This is where our work comes in.
 Dialogue: 0,0:39:38.52,0:39:41.28,Default,,0,0,0,,We transition to local theories
 Dialogue: 0,0:39:41.28,0:39:46.28,Default,,0,0,0,,by packing equations into\Ncomputation types instead.
-Dialogue: 0,0:39:47.08,0:39:51.96,Default,,0,0,0,,A computation type now state\Nthe type of return values,
+Dialogue: 0,0:39:47.08,0:39:51.96,Default,,0,0,0,,A computation type now states\Nthe type of return values,
 Dialogue: 0,0:39:51.96,0:39:55.12,Default,,0,0,0,,the names and types of\Noperations that may be called,
 Dialogue: 0,0:39:55.12,0:39:58.04,Default,,0,0,0,,and the equational theory.
 Dialogue: 0,0:39:58.04,0:40:01.84,Default,,0,0,0,,Of this type, all computations\Nare considered equivalent,
@@ -540,18 +540,18 @@ Dialogue: 0,0:41:41.60,0:41:44.16,Default,,0,0,0,,for handling f1,\Nand in the s
 Dialogue: 0,0:41:44.16,0:41:51.64,Default,,0,0,0,,we can't use the equation as\Na reasoning tool in the body of the f2.
 Dialogue: 0,0:41:51.64,0:41:55.32,Default,,0,0,0,,And when implementing effective\Nbehaviour with handlers,
 Dialogue: 0,0:41:55.32,0:41:57.00,Default,,0,0,0,,we of course need to be mindful of
-Dialogue: 0,0:41:57.00,0:41:59.40,Default,,0,0,0,,the fact theory that\Nwe're working in.
+Dialogue: 0,0:41:57.00,0:41:59.40,Default,,0,0,0,,the effect theory that\Nwe're working in.
 Dialogue: 0,0:41:59.40,0:42:02.80,Default,,0,0,0,,Handler type informs us about\Nthe kind of computations
 Dialogue: 0,0:42:02.80,0:42:05.04,Default,,0,0,0,,that the handler is used for,
 Dialogue: 0,0:42:05.04,0:42:08.08,Default,,0,0,0,,and what the resulting\Ncomputation type is.
 Dialogue: 0,0:42:08.08,0:42:11.88,Default,,0,0,0,,Since two computation\Ntypes are involved,
 Dialogue: 0,0:42:11.88,0:42:14.64,Default,,0,0,0,,equations occur in two spots.
 Dialogue: 0,0:42:14.64,0:42:18.36,Default,,0,0,0,,The ε on the left sets\Nthe requirements for the implementation,
-Dialogue: 0,0:42:18.36,0:42:22.96,Default,,0,0,0,,and ε′ on the right states\Nthe theory of the (INAUDIBLE)
+Dialogue: 0,0:42:18.36,0:42:22.96,Default,,0,0,0,,and ε′ on the right states\Nthe theory of the outgoing type.
 Dialogue: 0,0:42:23.68,0:42:27.12,Default,,0,0,0,,We have to check that\Nfor every equation in ε,
 Dialogue: 0,0:42:27.12,0:42:32.24,Default,,0,0,0,,if we handle both sides, we end\Nup with equivalent computations.
 Dialogue: 0,0:42:32.24,0:42:36.28,Default,,0,0,0,,The equivalence is considered\Nin the theory of ε′,
-Dialogue: 0,0:42:36.28,0:42:42.56,Default,,0,0,0,,so we may be aided by\Nthe equations that are acting ε′.
+Dialogue: 0,0:42:36.28,0:42:42.56,Default,,0,0,0,,so we may be aided by\Nthe equations that are act in ε′.
 Dialogue: 0,0:42:42.56,0:42:45.16,Default,,0,0,0,,Handler correctness is undecidable.
 Dialogue: 0,0:42:45.16,0:42:48.40,Default,,0,0,0,,So the proofs are\Nconstructed in a logic
 Dialogue: 0,0:42:48.40,0:42:52.20,Default,,0,0,0,,that is coupled with\Nthe type system.
@@ -563,7 +563,7 @@ Dialogue: 0,0:43:08.52,0:43:14.00,Default,,0,0,0,,and we consider them an all ar
 Dialogue: 0,0:43:14.00,0:43:17.60,Default,,0,0,0,,Equations are vital for\Nreasoning about effect behaviour.
 Dialogue: 0,0:43:17.60,0:43:21.32,Default,,0,0,0,,And the type system can also be\Ncoupled with different kinds of logic.
 Dialogue: 0,0:43:21.32,0:43:26.32,Default,,0,0,0,,So we can use a system that\Nfits the problem at hand.
-Dialogue: 0,0:43:27.88,0:43:30.64,Default,,0,0,0,,Or if we use local effect theories,
+Dialogue: 0,0:43:27.88,0:43:30.64,Default,,0,0,0,,Or If we use local effect theories,
 Dialogue: 0,0:43:30.64,0:43:33.36,Default,,0,0,0,,the changes to the language\Nare rather minor,
 Dialogue: 0,0:43:33.36,0:43:36.92,Default,,0,0,0,,and the resulting system\Nis also easy to use.
 Dialogue: 0,0:43:36.92,0:43:40.08,Default,,0,0,0,,We do not need to switch to\Ndenotational semantics,
@@ -580,8 +580,8 @@ Dialogue: 0,0:44:14.16,0:44:18.04,Default,,0,0,0,,which greatly improves\Nthe us
 Dialogue: 0,0:44:18.04,0:44:22.48,Default,,0,0,0,,All of this has been formalised\Nin the Coq proof assistant,
 Dialogue: 0,0:44:22.48,0:44:25.12,Default,,0,0,0,,alongside some smaller examples.
 Dialogue: 0,0:44:25.12,0:44:26.76,Default,,0,0,0,,And we also constructed a
-Dialogue: 0,0:44:26.76,0:44:29.24,Default,,0,0,0,,sound and eloquent\Ndenotational semantics,
-Dialogue: 0,0:44:29.24,0:44:33.92,Default,,0,0,0,,which takes into account all\Nthe formation (INAUDIBLE).
+Dialogue: 0,0:44:26.76,0:44:29.24,Default,,0,0,0,,sound and adequate\Ndenotational semantics,
+Dialogue: 0,0:44:29.24,0:44:33.92,Default,,0,0,0,,which takes into account all\Nthe aforementioned extensions.
 Dialogue: 0,0:44:33.92,0:44:38.64,Default,,0,0,0,,The approach was also implemented\Non top of the f framework.
 Dialogue: 0,0:44:38.64,0:44:42.12,Default,,0,0,0,,We decided to use\Na bi-directional type inference
 Dialogue: 0,0:44:42.12,0:44:46.28,Default,,0,0,0,,as it's more suited for\Nworking with effect theories.
@@ -592,7 +592,7 @@ Dialogue: 0,0:44:54.32,0:44:56.12,Default,,0,0,0,,or they can also be constructe
 Dialogue: 0,0:44:56.12,0:44:59.60,Default,,0,0,0,,in the Coq formalisation\Nof the language.
 Dialogue: 0,0:45:00.44,0:45:03.12,Default,,0,0,0,,We also considered\Na few future goals.
 Dialogue: 0,0:45:03.12,0:45:08.80,Default,,0,0,0,,The important extension that has\Nnot yet been done is polymorphism.
-Dialogue: 0,0:45:08.80,0:45:12.32,Default,,0,0,0,,We wish to have times that are\Npolymorphic in the value component,
+Dialogue: 0,0:45:08.80,0:45:12.32,Default,,0,0,0,,We wish to have types that are\Npolymorphic in the value component,
 Dialogue: 0,0:45:12.32,0:45:16.84,Default,,0,0,0,,as well as polymorphic in\Nthe signature and equations.
 Dialogue: 0,0:45:16.84,0:45:18.52,Default,,0,0,0,,The extension could\Nbe far from trivial
 Dialogue: 0,0:45:18.52,0:45:21.96,Default,,0,0,0,,but it's ultimately important\Nif you want the language,

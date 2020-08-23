@@ -2099,7 +2099,7 @@ the operation call.
 
 450
 00:37:00,520 --> 00:37:05,760
-The true handler has
+The choose_true handler has
 an effect case for Choose,
 
 451
@@ -2307,7 +2307,7 @@ computation types instead.
 
 493
 00:39:47,080 --> 00:39:51,960
-A computation type now state
+A computation type now states
 the type of return values,
 
 494
@@ -2484,7 +2484,7 @@ we of course need to be mindful of
 
 530
 00:41:57,000 --> 00:41:59,400
-the fact theory that
+the effect theory that
 we're working in.
 
 531
@@ -2518,7 +2518,7 @@ the requirements for the implementation,
 537
 00:42:18,360 --> 00:42:22,960
 and ε′ on the right states
-the theory of the (INAUDIBLE)
+the theory of the outgoing type.
 
 538
 00:42:23,680 --> 00:42:27,120
@@ -2538,7 +2538,7 @@ in the theory of ε′,
 541
 00:42:36,280 --> 00:42:42,560
 so we may be aided by
-the equations that are acting ε′.
+the equations that are act in ε′.
 
 542
 00:42:42,560 --> 00:42:45,160
@@ -2596,7 +2596,7 @@ fits the problem at hand.
 
 553
 00:43:27,880 --> 00:43:30,640
-Or if we use local effect theories,
+Or If we use local effect theories,
 
 554
 00:43:30,640 --> 00:43:33,360
@@ -2677,13 +2677,13 @@ And we also constructed a
 
 570
 00:44:26,760 --> 00:44:29,240
-sound and eloquent
+sound and adequate
 denotational semantics,
 
 571
 00:44:29,240 --> 00:44:33,920
 which takes into account all
-the formation (INAUDIBLE).
+the aforementioned extensions.
 
 572
 00:44:33,920 --> 00:44:38,640
@@ -2735,7 +2735,7 @@ not yet been done is polymorphism.
 
 582
 00:45:08,800 --> 00:45:12,320
-We wish to have times that are
+We wish to have types that are
 polymorphic in the value component,
 
 583
