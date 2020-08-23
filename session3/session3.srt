@@ -919,7 +919,7 @@ Thank you for your attention.
 
 199
 00:23:53,320 --> 00:23:54,760
-JEREMY GIBBONS: Thanks Kwanghoon.
+JEREMY: Thanks Kwanghoon.
 
 200
 00:23:56,040 --> 00:23:57,760
@@ -7379,7 +7379,7 @@ the paper,
 1567
 01:31:17,400 --> 01:31:21,480
 Emerging Languages and Alternative
-Approach to Teaching Programme
+Approach to Teaching Programming Languages
 
 1568
 01:31:21,480 --> 01:31:24,960
@@ -7388,7 +7388,7 @@ course on
 
 1569
 01:31:24,960 --> 01:31:27,680
-The principles of programming
+the principles of programming
 languages should not be structured
 
 1570
@@ -7412,11 +7412,11 @@ And today I'm going to be presenting
 1574
 01:31:40,880 --> 01:31:44,240
 our journal of functional programming
-paper emerging languages.
+paper emerging languages
 
 1575
 01:31:44,240 --> 01:31:47,600
-An alternative approach to
+an alternative approach to
 teaching programming languages.
 
 1576
@@ -7475,8 +7475,8 @@ Each involve challenges
 
 1588
 01:32:22,360 --> 01:32:27,320
-In this work we challenged the idea
-that of course intended
+In this work we challenge the idea
+that a course intended
 
 1589
 01:32:27,320 --> 01:32:29,960
@@ -7489,7 +7489,7 @@ according to those concepts.
 
 1591
 01:32:36,000 --> 01:32:38,800
-We saw that each programming languages
+We saught to teach programming languages
 from a different perspective,
 
 1592
@@ -7519,11 +7519,11 @@ of those options on programming,
 1597
 01:32:56,240 --> 01:32:59,680
 which are the student learning
-outcomes the SLO's,
+outcomes the SLOs,
 
 1598
 01:32:59,680 --> 01:33:01,360
-of course in programming languages.
+of a course in programming languages.
 
 1599
 01:33:01,840 --> 01:33:05,520
@@ -7560,12 +7560,12 @@ to teach students,
 1606
 01:33:23,520 --> 01:33:27,800
 emerging languages, and thus
-the course must not involve,
+the course must not evolve,
 
 1607
 01:33:28,480 --> 01:33:32,360
 or perhaps I should say
-devolved into an isolated row
+devolve, into an isolated rote
 
 1608
 01:33:32,360 --> 01:33:35,480
@@ -7584,8 +7584,8 @@ of languages.
 
 1611
 01:33:40,320 --> 01:33:44,440
-As an intended, though, on
-advertised side effect
+As an intended, though
+unadvertised, side effect
 
 1612
 01:33:44,440 --> 01:33:46,240
@@ -7595,7 +7595,7 @@ emerging languages,
 1613
 01:33:46,240 --> 01:33:51,640
 under the guise of a survey course
-on a variety of ha new languages.
+on a variety of hot new languages.
 
 1614
 01:33:53,480 --> 01:33:56,920
@@ -7605,17 +7605,17 @@ that this alternative approach,
 1615
 01:33:57,840 --> 01:34:02,760
 results in a variety of
-course deezer durata
+course deezer durata,
 
 1616
 01:34:03,560 --> 01:34:07,600
 scope for an instructor
-customisation alignment
+customisation, alignment
 
 1617
 01:34:07,600 --> 01:34:11,040
-with current trends and language
-evolution practice and research,
+with current trends in language
+evolution, practice and research,
 
 1618
 01:34:11,600 --> 01:34:16,200
@@ -7629,12 +7629,12 @@ here is the rationale for.
 
 1620
 01:34:23,080 --> 01:34:27,640
-the course mechanics supporting
+the course mechanics supporting,
 and the consequences of this approach.
 
 1621
 01:34:29,640 --> 01:34:32,960
-So, the rational for
+So, the rationale for
 the emerging languages approach
 
 1622
@@ -7653,7 +7653,7 @@ languages, not concepts.
 1625
 01:34:43,040 --> 01:34:46,800
 I call that the the students
-language centric perspective,
+language-centric perspective,
 
 1626
 01:34:46,800 --> 01:34:49,200
@@ -7690,7 +7690,7 @@ web frameworks, sounds like fun.
 1633
 01:35:02,440 --> 01:35:06,600
 So why not take advantage of
-the junxtaposition of the circumstances.
+the juxtaposition of the circumstances.
 
 1634
 01:35:06,600 --> 01:35:09,880
@@ -7725,12 +7725,12 @@ implementation options,
 1640
 01:35:28,560 --> 01:35:31,200
 and then the implications of
-those options on programme.
+those options on programming.
 
 1641
 01:35:32,680 --> 01:35:37,680
-So, step one, student thing concepts,
-stinks languages is not concepts.
+So, step one, students and concepts:
+think languages, not concepts.
 
 1642
 01:35:38,320 --> 01:35:40,600
@@ -7901,11 +7901,11 @@ languages as a method
 
 1677
 01:37:28,880 --> 01:37:31,240
-or conduit by which to dispel
+or conduit by which to distil
 
 1678
 01:37:31,240 --> 01:37:34,320
-Distil concepts of
+distil concepts of
 languages to students.
 
 1679
@@ -7926,12 +7926,12 @@ their own, to teach them concepts.
 1682
 01:37:47,720 --> 01:37:50,040
 So that's what we did. We
-designed a course framer
+designed a course framework
 
 1683
 01:37:50,040 --> 01:37:52,120
 to support that approach
-or to order operate
+or to
 
 1684
 01:37:52,120 --> 01:37:54,000
@@ -8024,12 +8024,12 @@ Concepts
 
 1703
 01:38:50,000 --> 01:38:53,520
-in Module three Reconstruct,
+and Module three Reconstruct,
 Reconstruct, Synthesise,
 
 1704
 01:38:53,520 --> 01:38:56,760
-Apply those Concepts in,
+apply those Concepts in,
 in, in Projects.
 
 1705
@@ -8080,7 +8080,7 @@ learn languages on their own
 1714
 01:39:33,640 --> 01:39:37,040
 through those those online
-for I was discussing earlier.
+fora I was discussing earlier.
 
 1715
 01:39:37,040 --> 01:39:39,240
@@ -8098,7 +8098,7 @@ quick reference sheets.
 1718
 01:39:50,280 --> 01:39:55,600
 We did online style, blog webpages,
-we did language Synopsys.
+we did language Synopses.
 
 1719
 01:39:56,320 --> 01:39:58,040
@@ -8193,7 +8193,7 @@ given the opportunity
 1739
 01:40:51,320 --> 01:40:54,040
 to demonstrate a mastery of
-those concepts distil
+those concepts distilled
 
 1740
 01:40:54,040 --> 01:40:57,120
@@ -8237,7 +8237,7 @@ system, a formal term paper
 1748
 01:41:21,080 --> 01:41:24,560
 using the ACM conference
-style and law tech and
+style and LaTeX and
 
 1749
 01:41:24,560 --> 01:41:26,840
@@ -8295,7 +8295,7 @@ concepts in the final and
 
 1760
 01:41:59,920 --> 01:42:03,960
-the final projects can on its
+the final projects cannot on its
 own serve as formal evidence
 
 1761
@@ -8378,7 +8378,7 @@ period of time,
 1777
 01:42:45,800 --> 01:42:51,160
 which really radically shatters
-students, Java-centric, a worldview,
+students' Java-centric worldview,
 
 1778
 01:42:51,160 --> 01:42:54,760
@@ -8397,13 +8397,13 @@ concurrency models.
 
 1781
 01:43:02,760 --> 01:43:07,440
-CSP actor Julia scientific
-computing law game
+CSP, actor, Julia, scientific
+computing, game
 
 1782
 01:43:07,440 --> 01:43:12,320
-programming MapReduce. So on
-promotes academic integrity.
+programming, MapReduce and so on.
+Promotes academic integrity.
 
 1783
 01:43:12,320 --> 01:43:15,920
@@ -8413,7 +8413,7 @@ out every semester.
 1784
 01:43:15,920 --> 01:43:19,920
 Doesn't require a big inordinate,
-an excess of work on the
+and excess of work on the
 
 1785
 01:43:19,920 --> 01:43:23,480
@@ -8540,12 +8540,12 @@ back to their institutions.
 1810
 01:44:37,720 --> 01:44:44,680
 I encourage you to explore our
-webpages, especially our get hub site,
+webpages, especially our github site,
 
 1811
 01:44:44,680 --> 01:44:50,320
 which involves all the the language
-Synopsys, YouTube videos,
+Synopses, YouTube videos,
 
 1812
 01:44:50,320 --> 01:44:52,880
@@ -8573,7 +8573,7 @@ and comments. Thank you.
 
 1817
 01:45:09,280 --> 01:45:13,280
-RICHARD: Thanks. I'm afraid that
+JEREMY: Thanks. I'm afraid that
 Saverio is not available for
 
 1818
