@@ -864,18 +864,18 @@ Dialogue: 0,0:57:54.72,0:57:57.04,Default,,0,0,0,,where you can ask Wouter\Nques
 Dialogue: 0,0:58:03.52,0:58:05.60,Default,,0,0,0,,The next talk is\Nthe presentation of the paper
 Dialogue: 0,0:58:05.60,0:58:09.04,Default,,0,0,0,,POPLMark reloaded; Mechanising\Nproofs by logical relations
 Dialogue: 0,0:58:10.04,0:58:12.16,Default,,0,0,0,,which presents a new collection\Nof benchmark problems
-Dialogue: 0,0:58:12.16,0:58:14.60,Default,,0,0,0,,in mechanising the matters area\Nof programming languages.
+Dialogue: 0,0:58:12.16,0:58:14.60,Default,,0,0,0,,in mechanising the metatheory\Nof programming languages.
 Dialogue: 0,0:58:15.12,0:58:17.80,Default,,0,0,0,,The authors of\Nthe papers are Andres Abel,
 Dialogue: 0,0:58:17.80,0:58:22.96,Default,,0,0,0,,Gias Allais, Alia Hameer, Brigitte\NPientka, Alberto Moenigliano
 Dialogue: 0,0:58:22.96,0:58:25.12,Default,,0,0,0,,Steven Schafer and Kathrine Stark.
 Dialogue: 0,0:58:25.12,0:58:26.84,Default,,0,0,0,,And Brigitte will be presenting.
 Dialogue: 0,0:58:30.84,0:58:33.20,Default,,0,0,0,,BRIGITTE PIENTKA: Hello\Nand welcome, thanks for coming.
-Dialogue: 0,0:58:33.20,0:58:36.92,Default,,0,0,0,,This talk is going to summarise\Nour POPLMark reloaded
+Dialogue: 0,0:58:33.20,0:58:36.92,Default,,0,0,0,,This talk is going to summarise\Nour JFP paper POPLMark reloaded
 Dialogue: 0,0:58:36.92,0:58:38.92,Default,,0,0,0,,mechanising proofs by\Nlogical relations.
 Dialogue: 0,0:58:39.40,0:58:40.72,Default,,0,0,0,,My name is Brigitte Pientka
 Dialogue: 0,0:58:40.72,0:58:44.24,Default,,0,0,0,,and this is joined work by\NAndreas Andreas Abel, G. Allais,
 Dialogue: 0,0:58:44.24,0:58:48.16,Default,,0,0,0,,Alia Hameer, Alberto Moenigiliano,\NSteven Schafer and Katherine Stark.
-Dialogue: 0,0:58:49.92,0:58:53.08,Default,,0,0,0,,So today mechanisation are common\Nplace in programming languages.
+Dialogue: 0,0:58:49.92,0:58:53.08,Default,,0,0,0,,So today mechanisations are\Ncommonplace in programming languages.
 Dialogue: 0,0:58:53.60,0:58:55.72,Default,,0,0,0,,However they are also time consuming
 Dialogue: 0,0:58:55.72,0:58:57.76,Default,,0,0,0,,and there are few design guidelines.
 Dialogue: 0,0:58:59.00,0:59:00.32,Default,,0,0,0,,So what's the problem?
@@ -884,7 +884,7 @@ Dialogue: 0,0:59:02.88,0:59:06.04,Default,,0,0,0,,Both on paper as well as\Nin p
 Dialogue: 0,0:59:06.04,0:59:08.60,Default,,0,0,0,,There are a lot of challenging\Ndetails to keep track of.
 Dialogue: 0,0:59:08.60,0:59:11.88,Default,,0,0,0,,On paper it's hard to keep\Ntrack of dependencies
 Dialogue: 0,0:59:11.88,0:59:14.40,Default,,0,0,0,,among different theorems\Nand the definitions
-Dialogue: 0,0:59:14.40,0:59:18.40,Default,,0,0,0,,and you might think that proof\Nis in a sense are the answer.
+Dialogue: 0,0:59:14.40,0:59:18.40,Default,,0,0,0,,and you might think that proof\Nassistants are the answer.
 Dialogue: 0,0:59:18.92,0:59:21.68,Default,,0,0,0,,But in proof assistants there\Nis sort of another overhead
 Dialogue: 0,0:59:21.68,0:59:22.88,Default,,0,0,0,,we have to deal with.
 Dialogue: 0,0:59:22.88,0:59:27.20,Default,,0,0,0,,We have to build up the infrastructure\Nfor modelling for example
@@ -894,60 +894,60 @@ Dialogue: 0,0:59:32.32,0:59:34.12,Default,,0,0,0,,into the building this\Npartic
 Dialogue: 0,0:59:34.64,0:59:37.48,Default,,0,0,0,,It's often hard to understand\Nhow different features interact,
 Dialogue: 0,0:59:37.48,0:59:40.72,Default,,0,0,0,,difficulties increase with\Nthe size of the mechanisation
 Dialogue: 0,0:59:41.20,0:59:43.16,Default,,0,0,0,,and it can be really\Nquite time consuming.
-Dialogue: 0,0:59:43.16,0:59:46.08,Default,,0,0,0,,It's through this that often\Na whole team of students
+Dialogue: 0,0:59:43.16,0:59:46.08,Default,,0,0,0,,You see that often\Na whole team of students
 Dialogue: 0,0:59:46.08,0:59:49.00,Default,,0,0,0,,is actually tacking some of\Nthis mechanisation efforts.
-Dialogue: 0,0:59:49.52,0:59:51.52,Default,,0,0,0,,Now experience very much matters.
+Dialogue: 0,0:59:49.52,0:59:51.52,Default,,0,0,0,,And experience very much matters.
 Dialogue: 0,0:59:54.00,0:59:57.96,Default,,0,0,0,,Now the goal of this paper was\Nto develop a benchmark problem
 Dialogue: 0,0:59:57.96,1:00:01.76,Default,,0,0,0,,that would allow us to gain a deeper\Nunderstanding of the similarities
 Dialogue: 0,1:00:01.76,1:00:05.84,Default,,0,0,0,,and differences in how we mechanise\Nproblems in programming languages
-Dialogue: 0,1:00:06.36,1:00:10.48,Default,,0,0,0,,Now we as developers of proof\Nassistance and libraries
+Dialogue: 0,1:00:06.36,1:00:10.48,Default,,0,0,0,,Now we as developers of proof\Nassistants and libraries
 Dialogue: 0,1:00:10.48,1:00:13.00,Default,,0,0,0,,wanted to make our\Napproaches more robust
-Dialogue: 0,1:00:13.00,1:00:15.08,Default,,0,0,0,,and identify parameters\Nand abstractions
+Dialogue: 0,1:00:13.00,1:00:15.08,Default,,0,0,0,,and identify primitives\Nand abstractions
 Dialogue: 0,1:00:15.08,1:00:17.40,Default,,0,0,0,,to better structure\Nproofs and bring down
 Dialogue: 0,1:00:17.40,1:00:19.08,Default,,0,0,0,,the cost of verification overall.
 Dialogue: 0,1:00:21.08,1:00:24.52,Default,,0,0,0,,So it's worthwhile to take\Na look back at POPLMark in 2005.
-Dialogue: 0,1:00:25.52,1:00:30.12,Default,,0,0,0,,Back in 2005 POPLMark challenge\Nwas to mechanise system FSAP
+Dialogue: 0,1:00:25.52,1:00:30.12,Default,,0,0,0,,Back in 2005 POPLMark challenge\Nwas to mechanise system Fsub
 Dialogue: 0,1:00:30.64,1:00:33.44,Default,,0,0,0,,And that is a problem that can\Nbe fairly easily understood.
-Dialogue: 0,1:00:33.44,1:00:35.92,Default,,0,0,0,,It's described in types of\Nprogramming languages,
+Dialogue: 0,1:00:33.44,1:00:35.92,Default,,0,0,0,,It's described in types and\Nprogramming languages,
 Dialogue: 0,1:00:36.68,1:00:38.80,Default,,0,0,0,,it can be mechanised in\Na couple of hours.
 Dialogue: 0,1:00:38.80,1:00:41.48,Default,,0,0,0,,It focuses really on\Nrepresenting and reasoning
-Dialogue: 0,1:00:41.48,1:00:44.04,Default,,0,0,0,,about structures with binders\Nin particular RV model
-Dialogue: 0,1:00:44.52,1:00:45.80,Default,,0,0,0,,of the polymorphic functions base.
-Dialogue: 0,1:00:46.56,1:00:49.32,Default,,0,0,0,,All proofs for syntactic\Nstructural induction.
+Dialogue: 0,1:00:41.48,1:00:44.04,Default,,0,0,0,,about structures with binders\Nin particular the model
+Dialogue: 0,1:00:44.52,1:00:45.80,Default,,0,0,0,,of the polymorphic functions space.
+Dialogue: 0,1:00:46.56,1:00:49.32,Default,,0,0,0,,All proofs are by syntactic\Nstructural induction.
 Dialogue: 0,1:00:49.32,1:00:52.32,Default,,0,0,0,,And it was a great way of\Nexploring different encoding
 Dialogue: 0,1:00:52.32,1:00:54.04,Default,,0,0,0,,techniques for\Nrepresenting bindings.
 Dialogue: 0,1:00:54.04,1:00:57.60,Default,,0,0,0,,In fact people used strings,\NDe Bruijn, nominal encodings,
-Dialogue: 0,1:00:57.60,1:01:01.96,Default,,0,0,0,,(INAUDIBLE) as well\Nas high (INAUDIBLE)
+Dialogue: 0,1:00:57.60,1:01:01.96,Default,,0,0,0,,locally nameless as well\Nas higher order syntax.
 Dialogue: 0,1:01:03.24,1:01:07.20,Default,,0,0,0,,But on the flip side it did not\Nreally identify any bugs or flaws
 Dialogue: 0,1:01:07.20,1:01:08.40,Default,,0,0,0,,in existing sytems.
 Dialogue: 0,1:01:08.40,1:01:11.32,Default,,0,0,0,,It did not inspire the development\Nof new theoretical foundations
 Dialogue: 0,1:01:12.04,1:01:14.60,Default,,0,0,0,,nor did it push any existing\Nsystems to their limit.
 Dialogue: 0,1:01:14.60,1:01:17.68,Default,,0,0,0,,All systems were in some\Nsense, equally suitable.
-Dialogue: 0,1:01:19.44,1:01:21.96,Default,,0,0,0,,So we want to go beyond\Nthe POPLMark challenge.
+Dialogue: 0,1:01:19.44,1:01:21.96,Default,,0,0,0,,So we wanted to go beyond\Nthe POPLMark challenge.
 Dialogue: 0,1:01:21.96,1:01:23.76,Default,,0,0,0,,And in fact one doesn't\Nneed to go very far,
 Dialogue: 0,1:01:23.76,1:01:26.20,Default,,0,0,0,,one just needs to look in\Nthe conclusion of this paper
 Dialogue: 0,1:01:26.20,1:01:28.64,Default,,0,0,0,,and one sees that\None of the problems
-Dialogue: 0,1:01:28.64,1:01:32.36,Default,,0,0,0,,one challenges in (INAUDIBLE)\Nis Proof by Logical Relations.
+Dialogue: 0,1:01:28.64,1:01:32.36,Default,,0,0,0,,one challenges the authors mention\Nis Proof by Logical Relations.
 Dialogue: 0,1:01:33.60,1:01:37.60,Default,,0,0,0,,So our contribution here in this\Npaper is to describe a tutorial
-Dialogue: 0,1:01:37.60,1:01:40.68,Default,,0,0,0,,for a stronger normalisation\Nproofs for a valid type terms
+Dialogue: 0,1:01:37.60,1:01:40.68,Default,,0,0,0,,for strong normalisation\Nproofs for well-typed terms
 Dialogue: 0,1:01:40.68,1:01:42.68,Default,,0,0,0,,using Kripke-style\Nlogical relations.
 Dialogue: 0,1:01:43.20,1:01:46.64,Default,,0,0,0,,The really few standard\Ntextbook chapters out there
 Dialogue: 0,1:01:46.64,1:01:48.92,Default,,0,0,0,,that focus on strong\Nnormalisation proofs.
-Dialogue: 0,1:01:49.92,1:01:54.92,Default,,0,0,0,,And although it has been really\Na good standard in some sense
-Dialogue: 0,1:01:55.52,1:01:59.68,Default,,0,0,0,,to evaluate proof assistance\Nusing a strong normalisation proof
-Dialogue: 0,1:01:59.68,1:02:00.88,Default,,0,0,0,,by logical operations.
-Dialogue: 0,1:02:01.40,1:02:04.28,Default,,0,0,0,,See for example there is\NAltenkirch work in 1993
-Dialogue: 0,1:02:05.80,1:02:08.28,Default,,0,0,0,,where he used lego to\Ngive mechanisation
-Dialogue: 0,1:02:08.28,1:02:11.64,Default,,0,0,0,,of a strong normalisation proof\Nfor (INAUDIBLE) calculus.
+Dialogue: 0,1:01:49.92,1:01:54.92,Default,,0,0,0,,And although it has been really\Na gold standard in some sense
+Dialogue: 0,1:01:55.52,1:01:59.68,Default,,0,0,0,,to evaluate proof assistants\Nusing a strong normalisation proof
+Dialogue: 0,1:01:59.68,1:02:00.88,Default,,0,0,0,,by logical relations.
+Dialogue: 0,1:02:01.40,1:02:04.28,Default,,0,0,0,,See for example there is\NAltenkirch's work in 1993
+Dialogue: 0,1:02:05.80,1:02:08.28,Default,,0,0,0,,where he used lego to\Ngive a mechanisation
+Dialogue: 0,1:02:08.28,1:02:11.64,Default,,0,0,0,,of a strong normalisation proof\Nfor simply-typed lambda calculus.
 Dialogue: 0,1:02:12.12,1:02:16.92,Default,,0,0,0,,Now one difference between\Nall this work and ours is that
-Dialogue: 0,1:02:16.92,1:02:20.12,Default,,0,0,0,,we are really focusing on\Nwell-typed term represantations
-Dialogue: 0,1:02:20.12,1:02:23.40,Default,,0,0,0,,and that leads us to\Na Kripke-style of logical relation
-Dialogue: 0,1:02:23.40,1:02:26.60,Default,,0,0,0,,where we talk about extentions\Nof typing context.
+Dialogue: 0,1:02:16.92,1:02:20.12,Default,,0,0,0,,we are really focusing on\Nwell-typed term representations
+Dialogue: 0,1:02:20.12,1:02:23.40,Default,,0,0,0,,and that leads us to\Na Kripke-style logical relation
+Dialogue: 0,1:02:23.40,1:02:26.60,Default,,0,0,0,,where we talk about extentions\Nof typing contexts.
 Dialogue: 0,1:02:27.84,1:02:30.68,Default,,0,0,0,,And this also brings\Nme to the challenges
 Dialogue: 0,1:02:30.68,1:02:34.20,Default,,0,0,0,,which really go beyond\Nthe original POPLMark challenge
 Dialogue: 0,1:02:34.20,1:02:36.84,Default,,0,0,0,,because we need to model\Nthe simultaneous substitutions
-Dialogue: 0,1:02:36.84,1:02:40.56,Default,,0,0,0,,and renamings, context extensions,\Nobstruction properties
-Dialogue: 0,1:02:40.56,1:02:43.48,Default,,0,0,0,,such as weakening and extension\Nstrengthening play much more,
+Dialogue: 0,1:02:36.84,1:02:40.56,Default,,0,0,0,,and renamings, context extensions,\Nstructural properties
+Dialogue: 0,1:02:40.56,1:02:43.48,Default,,0,0,0,,such as weakening and exchange,\Nand strengthening play much more,
 Dialogue: 0,1:02:43.48,1:02:47.88,Default,,0,0,0,,central role and in order to\Ndescribe the reducibility definition
 Dialogue: 0,1:02:47.88,1:02:50.52,Default,,0,0,0,,we need to have a way\Nof distinguishing
 Dialogue: 0,1:02:50.52,1:02:52.52,Default,,0,0,0,,between inductive\Nand stratified definitions.
@@ -955,29 +955,29 @@ Dialogue: 0,1:02:53.76,1:02:56.28,Default,,0,0,0,,And last we implemented\Nour s
 Dialogue: 0,1:02:56.28,1:02:57.80,Default,,0,0,0,,in three different proof assistance.
 Dialogue: 0,1:02:57.80,1:02:59.16,Default,,0,0,0,,Beluga, Coq and Agda.
 Dialogue: 0,1:03:01.44,1:03:03.68,Default,,0,0,0,,Now I also want to mention\Nsome considerations
-Dialogue: 0,1:03:03.68,1:03:06.36,Default,,0,0,0,,that went into choosing this\Nparticular bench marks
+Dialogue: 0,1:03:03.68,1:03:06.36,Default,,0,0,0,,that went into choosing this\Nparticular bench mark
 Dialogue: 0,1:03:06.36,1:03:08.32,Default,,0,0,0,,because there are of course\Nmany different kinds
-Dialogue: 0,1:03:08.32,1:03:12.12,Default,,0,0,0,,of logic relations proofs\Nand Kripke-style logical relational proof.
-Dialogue: 0,1:03:12.64,1:03:15.64,Default,,0,0,0,,In particular, there have been\Nvery proper for reasoning
+Dialogue: 0,1:03:08.32,1:03:12.12,Default,,0,0,0,,of logical relation proofs\Nand Kripke-style logical relational proof.
+Dialogue: 0,1:03:12.64,1:03:15.64,Default,,0,0,0,,In particular, there have been\Nvery popular for reasoning
 Dialogue: 0,1:03:15.64,1:03:18.00,Default,,0,0,0,,about concurrent\Nand imperative programmes
-Dialogue: 0,1:03:18.00,1:03:21.04,Default,,0,0,0,,where we reasoned about\Nmemory extension
+Dialogue: 0,1:03:18.00,1:03:21.04,Default,,0,0,0,,where we reason about\Nmemory extension
 Dialogue: 0,1:03:21.04,1:03:22.96,Default,,0,0,0,,rather than typing\Ncontext extensions.
 Dialogue: 0,1:03:23.68,1:03:26.88,Default,,0,0,0,,Nevertheless we focus here\Non logical relations proofs
 Dialogue: 0,1:03:26.88,1:03:27.96,Default,,0,0,0,,for typed terms.
-Dialogue: 0,1:03:28.44,1:03:31.24,Default,,0,0,0,,(INAUDIBLE) no state.
+Dialogue: 0,1:03:28.44,1:03:31.24,Default,,0,0,0,,in the simply-typed lambda calculus, no state.
 Dialogue: 0,1:03:31.24,1:03:33.88,Default,,0,0,0,,But we believe that this\Nis a good spring board
 Dialogue: 0,1:03:33.88,1:03:35.48,Default,,0,0,0,,for richer theories in particular
 Dialogue: 0,1:03:35.48,1:03:36.60,Default,,0,0,0,,dependent type theories.
 Dialogue: 0,1:03:36.60,1:03:39.60,Default,,0,0,0,,One problem in particular\Nthat often comes up
-Dialogue: 0,1:03:39.60,1:03:41.32,Default,,0,0,0,,when you think about\Ndependant theories is
+Dialogue: 0,1:03:39.60,1:03:41.32,Default,,0,0,0,,when you think about\Ndependant type theories is
 Dialogue: 0,1:03:42.08,1:03:44.12,Default,,0,0,0,,the notion of equality.
-Dialogue: 0,1:03:44.12,1:03:47.16,Default,,0,0,0,,And we need to sort of reason\Nabout some as in completeness
+Dialogue: 0,1:03:44.12,1:03:47.16,Default,,0,0,0,,And we need to sort of reason\Nabout soundness and completeness
 Dialogue: 0,1:03:47.16,1:03:49.48,Default,,0,0,0,,of algorithmic type\Ndirected equality.
-Dialogue: 0,1:03:49.48,1:03:53.72,Default,,0,0,0,,And the proof of soundness completeness\Nof typed directed equality
+Dialogue: 0,1:03:49.48,1:03:53.72,Default,,0,0,0,,And the proof of soundness and completeness\Nof type directed equality
 Dialogue: 0,1:03:53.72,1:03:57.40,Default,,0,0,0,,exhibits many of the same\Nideas and challenges
-Dialogue: 0,1:03:57.40,1:04:00.48,Default,,0,0,0,,that we have in the proof\Nof strong analyzations
-Dialogue: 0,1:04:00.48,1:04:02.04,Default,,0,0,0,,towards simple lambda calculus.
-Dialogue: 0,1:04:03.28,1:04:06.96,Default,,0,0,0,,And last our guiding principle\Nwas really to design a benchmark
+Dialogue: 0,1:03:57.40,1:04:00.48,Default,,0,0,0,,that we have in the proof\Nof strong normalization
+Dialogue: 0,1:04:00.48,1:04:02.04,Default,,0,0,0,,of simply-typed lambda calculus.
+Dialogue: 0,1:04:03.28,1:04:06.96,Default,,0,0,0,,And last our guiding principle\Nwas we need to design a benchmark
 Dialogue: 0,1:04:06.96,1:04:10.32,Default,,0,0,0,,that is reasonable so grad\Nstudents would be able to do it
 Dialogue: 0,1:04:10.32,1:04:11.68,Default,,0,0,0,,after reading the tutorial.
 Dialogue: 0,1:04:14.44,1:04:16.64,Default,,0,0,0,,So how do we define\Nstrong normalisation.
@@ -989,40 +989,40 @@ Dialogue: 0,1:04:29.80,1:04:33.28,Default,,0,0,0,,But in fact the proof become\N
 Dialogue: 0,1:04:33.28,1:04:36.32,Default,,0,0,0,,when we need to reason about all\Nthese different rewrite sequences
 Dialogue: 0,1:04:36.32,1:04:38.44,Default,,0,0,0,,and analyse different reducts.
 Dialogue: 0,1:04:40.16,1:04:43.40,Default,,0,0,0,,So the alternative was\Nproposed by a F van Raamsdonk
-Dialogue: 0,1:04:43.40,1:04:46.44,Default,,0,0,0,,and Paula Severi going\Nback also (IANUDIBLE)
+Dialogue: 0,1:04:43.40,1:04:46.44,Default,,0,0,0,,and Paula Severi going\Nback also to (IANUDIBLE)
 Dialogue: 0,1:04:46.44,1:04:49.04,Default,,0,0,0,,this kind of modular approach\Nfor strongly normalising
 Dialogue: 0,1:04:49.80,1:04:52.88,Default,,0,0,0,,where we have inductive\Ncharacterisations in normal forms.
 Dialogue: 0,1:04:53.36,1:04:55.20,Default,,0,0,0,,And this leads to modular proofs
 Dialogue: 0,1:04:55.20,1:04:57.16,Default,,0,0,0,,both on paper\Nand mechanisations and the proofs
 Dialogue: 0,1:04:57.16,1:04:58.76,Default,,0,0,0,,essentially becomes much similar.
-Dialogue: 0,1:04:59.76,1:05:02.72,Default,,0,0,0,,So the first child problem\Nis to prove the equivalence
+Dialogue: 0,1:04:59.76,1:05:02.72,Default,,0,0,0,,So the first challenge problem\Nis to prove the equivalence
 Dialogue: 0,1:05:02.72,1:05:06.32,Default,,0,0,0,,between the accessibility relation\Nand inductive definition
 Dialogue: 0,1:05:06.32,1:05:07.84,Default,,0,0,0,,of strong normalising terms.
 Dialogue: 0,1:05:08.36,1:05:11.40,Default,,0,0,0,,And the second one is actually\Nproving strong normalisation
 Dialogue: 0,1:05:11.40,1:05:14.80,Default,,0,0,0,,for simply typed lambda calculus\Nusing the inductive definition.
-Dialogue: 0,1:05:15.56,1:05:17.64,Default,,0,0,0,,And that will have\Ncertain set problems
+Dialogue: 0,1:05:15.56,1:05:17.64,Default,,0,0,0,,And that will have\Ncertain subproblems
 Dialogue: 0,1:05:17.64,1:05:19.88,Default,,0,0,0,,that will also be\Ndescribed in the paper
 Dialogue: 0,1:05:19.88,1:05:20.88,Default,,0,0,0,,and outlined the proofs.
 Dialogue: 0,1:05:22.40,1:05:26.44,Default,,0,0,0,,So in the remaining few minutes\NI want to talk about our solutions
-Dialogue: 0,1:05:26.44,1:05:29.52,Default,,0,0,0,,of one Beluga which is this\Ncontextual High order of syntax
-Dialogue: 0,1:05:29.52,1:05:33.08,Default,,0,0,0,,and then Adga and Coq where we\Nuse the De Bruijn codings.
+Dialogue: 0,1:05:26.44,1:05:29.52,Default,,0,0,0,,of one Beluga which uses\Ncontextual higher order syntax
+Dialogue: 0,1:05:29.52,1:05:33.08,Default,,0,0,0,,and then Adga and Coq where we\Nuse De Bruijn encodings.
 Dialogue: 0,1:05:35.08,1:05:37.28,Default,,0,0,0,,So Beluga is probably\Nthe youngest system
-Dialogue: 0,1:05:37.28,1:05:38.96,Default,,0,0,0,,on this three proof assistance.
-Dialogue: 0,1:05:38.96,1:05:42.44,Default,,0,0,0,,The proof tiered syntax based on\Nthe logic of (INAUDIBLE)
-Dialogue: 0,1:05:42.44,1:05:46.04,Default,,0,0,0,,and therefore is of course\Ngreat to model by instructors.
+Dialogue: 0,1:05:37.28,1:05:38.96,Default,,0,0,0,,of these three proof assistance.
+Dialogue: 0,1:05:38.96,1:05:42.44,Default,,0,0,0,,It supports higher-order syntax based on\Nthe logic of framework LF
+Dialogue: 0,1:05:42.44,1:05:46.04,Default,,0,0,0,,and therefore is of course\Ngreat to model binding structures.
 Dialogue: 0,1:05:46.52,1:05:48.96,Default,,0,0,0,,Beluga also has build in\Nsupport for substitutions
 Dialogue: 0,1:05:48.96,1:05:50.56,Default,,0,0,0,,and renamings and in that sense
 Dialogue: 0,1:05:50.56,1:05:53.12,Default,,0,0,0,,it's kind of ideally suited\Nfor that particular problem.
 Dialogue: 0,1:05:53.88,1:05:56.56,Default,,0,0,0,,But it was also a great case\Nstudy for finding bugs
 Dialogue: 0,1:05:56.56,1:05:57.92,Default,,0,0,0,,and making the system more robust.
 Dialogue: 0,1:05:57.92,1:06:00.60,Default,,0,0,0,,In particular it allowed us to\Nfind bugs in coverage checking
-Dialogue: 0,1:06:00.60,1:06:02.96,Default,,0,0,0,,and in extend termination checking.
-Dialogue: 0,1:06:02.96,1:06:05.24,Default,,0,0,0,,In over the last year,\Nwe also implemented
+Dialogue: 0,1:06:00.60,1:06:02.96,Default,,0,0,0,,and extend termination checking.
+Dialogue: 0,1:06:02.96,1:06:05.24,Default,,0,0,0,,And over the last year,\Nwe also implemented
 Dialogue: 0,1:06:05.24,1:06:07.76,Default,,0,0,0,,an interactive proof\Ndevelopment mode Harpoon
 Dialogue: 0,1:06:07.76,1:06:10.48,Default,,0,0,0,,to make it easier to develop\Nsuch proofs in general.
 Dialogue: 0,1:06:10.96,1:06:12.80,Default,,0,0,0,,But there is no proof automation.
 Dialogue: 0,1:06:13.56,1:06:16.28,Default,,0,0,0,,Now Coq on the other hand we used
-Dialogue: 0,1:06:16.28,1:06:18.84,Default,,0,0,0,,de Bruijn encodings\Nfor modelling findings.
+Dialogue: 0,1:06:16.28,1:06:18.84,Default,,0,0,0,,de Bruijn encodings\Nfor modelling bindings.
 Dialogue: 0,1:06:19.84,1:06:21.68,Default,,0,0,0,,We have in fact two solutions
 Dialogue: 0,1:06:21.68,1:06:23.72,Default,,0,0,0,,developed by Katherine\NStark and Stephen Schafer.
 Dialogue: 0,1:06:24.72,1:06:26.88,Default,,0,0,0,,The first one was on\Nwell-scoped syntax
@@ -1030,21 +1030,21 @@ Dialogue: 0,1:06:26.88,1:06:29.52,Default,,0,0,0,,and the boilerplate was\Ngener
 Dialogue: 0,1:06:30.00,1:06:33.72,Default,,0,0,0,,And the second solution focus on\Nwell-typed de Bruijn encodings
 Dialogue: 0,1:06:33.72,1:06:36.20,Default,,0,0,0,,and the boilerplate sort\Nof proven manually.
 Dialogue: 0,1:06:37.44,1:06:40.12,Default,,0,0,0,,Both proofs were a sort\Nof very much developed
-Dialogue: 0,1:06:40.12,1:06:43.40,Default,,0,0,0,,and close collaboration with\Nour proofs and Beluga.
+Dialogue: 0,1:06:40.12,1:06:43.40,Default,,0,0,0,,in close collaboration with\Nour proofs in Beluga.
 Dialogue: 0,1:06:43.40,1:06:45.20,Default,,0,0,0,,So they have a very\Nsimilar structure.
 Dialogue: 0,1:06:45.72,1:06:47.68,Default,,0,0,0,,So everything can be\Nproven as expected.
-Dialogue: 0,1:06:48.44,1:06:50.64,Default,,0,0,0,,It's very worthwhile nothing that\Nsubstitutions and beginnings
+Dialogue: 0,1:06:48.44,1:06:50.64,Default,,0,0,0,,It's very worthwhile nothing that\Nsubstitutions and weakenings
 Dialogue: 0,1:06:50.64,1:06:54.00,Default,,0,0,0,,are functions mapping\Nfrom positions to terms
 Dialogue: 0,1:06:54.00,1:06:55.88,Default,,0,0,0,,or positions to other positions.
 Dialogue: 0,1:06:55.88,1:06:58.56,Default,,0,0,0,,And repetitive proofs\Nare kind of factored out
-Dialogue: 0,1:06:58.56,1:07:01.48,Default,,0,0,0,,using proofs, scripts\Nand Coq tactics.
+Dialogue: 0,1:06:58.56,1:07:01.48,Default,,0,0,0,,using proof scripts\Nand Coq tactics.
 Dialogue: 0,1:07:02.72,1:07:06.20,Default,,0,0,0,,It also led to a way of\Nmaybe rethinking Autosubst.
 Dialogue: 0,1:07:06.20,1:07:08.40,Default,,0,0,0,,Maybe one should have an Autosubst 3
-Dialogue: 0,1:07:08.40,1:07:11.60,Default,,0,0,0,,where we actually can\Ngenerate boilerplate codes
-Dialogue: 0,1:07:11.60,1:07:13.44,Default,,0,0,0,,for valid types\Nand tax automatically.
-Dialogue: 0,1:07:14.68,1:07:17.96,Default,,0,0,0,,And last Agda, we used to\Ngenerate syntax library
+Dialogue: 0,1:07:08.40,1:07:11.60,Default,,0,0,0,,where we actually can\Ngenerate boilerplate code
+Dialogue: 0,1:07:11.60,1:07:13.44,Default,,0,0,0,,for well-typed\Nsyntax automatically.
+Dialogue: 0,1:07:14.68,1:07:17.96,Default,,0,0,0,,And last Agda, we used the\Ngeneric syntax library
 Dialogue: 0,1:07:17.96,1:07:19.24,Default,,0,0,0,,from (INAUDIBLE)
-Dialogue: 0,1:07:19.24,1:07:22.96,Default,,0,0,0,,It worked very well as\Nan expert user to test
+Dialogue: 0,1:07:19.24,1:07:22.96,Default,,0,0,0,,It worked very well for him as\Nan expert user to test
 Dialogue: 0,1:07:22.96,1:07:24.56,Default,,0,0,0,,and stress test his
 Dialogue: 0,1:07:25.72,1:07:27.52,Default,,0,0,0,,library,\Nit led for example
 Dialogue: 0,1:07:27.52,1:07:29.44,Default,,0,0,0,,to implementing additional\Ngeneric results
@@ -1057,7 +1057,7 @@ Dialogue: 0,1:07:44.32,1:07:48.32,Default,,0,0,0,,So overall, I think all of us\
 Dialogue: 0,1:07:48.32,1:07:51.16,Default,,0,0,0,,These benchmarks did expose\Nbugs and shortcomings
 Dialogue: 0,1:07:51.16,1:07:52.52,Default,,0,0,0,,in existing systems.
 Dialogue: 0,1:07:52.52,1:07:54.80,Default,,0,0,0,,It made libraries\Nand systems more robust.
-Dialogue: 0,1:07:54.80,1:07:57.20,Default,,0,0,0,,It helped us restructure\Nour approves,
+Dialogue: 0,1:07:54.80,1:07:57.20,Default,,0,0,0,,It helped us restructure\Nour proofs,
 Dialogue: 0,1:07:57.20,1:07:59.92,Default,,0,0,0,,and it helped us to gain a deeper\Nunderstanding of each approach
 Dialogue: 0,1:07:59.92,1:08:02.48,Default,,0,0,0,,and how they're actually related.
 Dialogue: 0,1:08:02.48,1:08:04.08,Default,,0,0,0,,So benchmarks can be great.

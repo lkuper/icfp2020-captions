@@ -4013,7 +4013,7 @@ of benchmark problems
 
 854
 00:58:12,160 --> 00:58:14,600
-in mechanising the matters area
+in mechanising the metatheory
 of programming languages.
 
 855
@@ -4042,7 +4042,7 @@ and welcome, thanks for coming.
 860
 00:58:33,200 --> 00:58:36,920
 This talk is going to summarise
-our POPLMark reloaded
+our JFP paper POPLMark reloaded
 
 861
 00:58:36,920 --> 00:58:38,920
@@ -4065,8 +4065,8 @@ Steven Schafer and Katherine Stark.
 
 865
 00:58:49,920 --> 00:58:53,080
-So today mechanisation are common
-place in programming languages.
+So today mechanisations are
+commonplace in programming languages.
 
 866
 00:58:53,600 --> 00:58:55,720
@@ -4108,7 +4108,7 @@ and the definitions
 874
 00:59:14,400 --> 00:59:18,400
 and you might think that proof
-is in a sense are the answer.
+assistants are the answer.
 
 875
 00:59:18,920 --> 00:59:21,680
@@ -4155,7 +4155,7 @@ quite time consuming.
 
 884
 00:59:43,160 --> 00:59:46,080
-It's through this that often
+You see that often
 a whole team of students
 
 885
@@ -4165,7 +4165,7 @@ this mechanisation efforts.
 
 886
 00:59:49,520 --> 00:59:51,520
-Now experience very much matters.
+And experience very much matters.
 
 887
 00:59:54,000 --> 00:59:57,960
@@ -4185,7 +4185,7 @@ problems in programming languages
 890
 01:00:06,360 --> 01:00:10,480
 Now we as developers of proof
-assistance and libraries
+assistants and libraries
 
 891
 01:00:10,480 --> 01:00:13,000
@@ -4194,7 +4194,7 @@ approaches more robust
 
 892
 01:00:13,000 --> 01:00:15,080
-and identify parameters
+and identify primitives
 and abstractions
 
 893
@@ -4214,7 +4214,7 @@ a look back at POPLMark in 2005.
 896
 01:00:25,520 --> 01:00:30,120
 Back in 2005 POPLMark challenge
-was to mechanise system FSAP
+was to mechanise system Fsub
 
 897
 01:00:30,640 --> 01:00:33,440
@@ -4223,7 +4223,7 @@ be fairly easily understood.
 
 898
 01:00:33,440 --> 01:00:35,920
-It's described in types of
+It's described in types and
 programming languages,
 
 899
@@ -4239,15 +4239,15 @@ representing and reasoning
 901
 01:00:41,480 --> 01:00:44,040
 about structures with binders
-in particular RV model
+in particular the model
 
 902
 01:00:44,520 --> 01:00:45,800
-of the polymorphic functions base.
+of the polymorphic functions space.
 
 903
 01:00:46,560 --> 01:00:49,320
-All proofs for syntactic
+All proofs are by syntactic
 structural induction.
 
 904
@@ -4267,8 +4267,8 @@ De Bruijn, nominal encodings,
 
 907
 01:00:57,600 --> 01:01:01,960
-(INAUDIBLE) as well
-as high (INAUDIBLE)
+locally nameless as well
+as higher order syntax.
 
 908
 01:01:03,240 --> 01:01:07,200
@@ -4296,7 +4296,7 @@ sense, equally suitable.
 
 913
 01:01:19,440 --> 01:01:21,960
-So we want to go beyond
+So we wanted to go beyond
 the POPLMark challenge.
 
 914
@@ -4316,7 +4316,7 @@ one of the problems
 
 917
 01:01:28,640 --> 01:01:32,360
-one challenges in (INAUDIBLE)
+one challenges the authors mention
 is Proof by Logical Relations.
 
 918
@@ -4326,8 +4326,8 @@ paper is to describe a tutorial
 
 919
 01:01:37,600 --> 01:01:40,680
-for a stronger normalisation
-proofs for a valid type terms
+for strong normalisation
+proofs for well-typed terms
 
 920
 01:01:40,680 --> 01:01:42,680
@@ -4347,31 +4347,31 @@ normalisation proofs.
 923
 01:01:49,920 --> 01:01:54,920
 And although it has been really
-a good standard in some sense
+a gold standard in some sense
 
 924
 01:01:55,520 --> 01:01:59,680
-to evaluate proof assistance
+to evaluate proof assistants
 using a strong normalisation proof
 
 925
 01:01:59,680 --> 01:02:00,880
-by logical operations.
+by logical relations.
 
 926
 01:02:01,400 --> 01:02:04,280
 See for example there is
-Altenkirch work in 1993
+Altenkirch's work in 1993
 
 927
 01:02:05,800 --> 01:02:08,280
 where he used lego to
-give mechanisation
+give a mechanisation
 
 928
 01:02:08,280 --> 01:02:11,640
 of a strong normalisation proof
-for (INAUDIBLE) calculus.
+for simply-typed lambda calculus.
 
 929
 01:02:12,120 --> 01:02:16,920
@@ -4381,17 +4381,17 @@ all this work and ours is that
 930
 01:02:16,920 --> 01:02:20,120
 we are really focusing on
-well-typed term represantations
+well-typed term representations
 
 931
 01:02:20,120 --> 01:02:23,400
 and that leads us to
-a Kripke-style of logical relation
+a Kripke-style logical relation
 
 932
 01:02:23,400 --> 01:02:26,600
 where we talk about extentions
-of typing context.
+of typing contexts.
 
 933
 01:02:27,840 --> 01:02:30,680
@@ -4411,12 +4411,12 @@ the simultaneous substitutions
 936
 01:02:36,840 --> 01:02:40,560
 and renamings, context extensions,
-obstruction properties
+structural properties
 
 937
 01:02:40,560 --> 01:02:43,480
-such as weakening and extension
-strengthening play much more,
+such as weakening and exchange,
+and strengthening play much more,
 
 938
 01:02:43,480 --> 01:02:47,880
@@ -4454,7 +4454,7 @@ some considerations
 945
 01:03:03,680 --> 01:03:06,360
 that went into choosing this
-particular bench marks
+particular bench mark
 
 946
 01:03:06,360 --> 01:03:08,320
@@ -4463,13 +4463,13 @@ many different kinds
 
 947
 01:03:08,320 --> 01:03:12,120
-of logic relations proofs
+of logical relation proofs
 and Kripke-style logical relational proof.
 
 948
 01:03:12,640 --> 01:03:15,640
 In particular, there have been
-very proper for reasoning
+very popular for reasoning
 
 949
 01:03:15,640 --> 01:03:18,000
@@ -4478,7 +4478,7 @@ and imperative programmes
 
 950
 01:03:18,000 --> 01:03:21,040
-where we reasoned about
+where we reason about
 memory extension
 
 951
@@ -4497,7 +4497,7 @@ for typed terms.
 
 954
 01:03:28,440 --> 01:03:31,240
-(INAUDIBLE) no state.
+in the simply-typed lambda calculus, no state.
 
 955
 01:03:31,240 --> 01:03:33,880
@@ -4520,7 +4520,7 @@ that often comes up
 959
 01:03:39,600 --> 01:03:41,320
 when you think about
-dependant theories is
+dependant type theories is
 
 960
 01:03:42,080 --> 01:03:44,120
@@ -4529,7 +4529,7 @@ the notion of equality.
 961
 01:03:44,120 --> 01:03:47,160
 And we need to sort of reason
-about some as in completeness
+about soundness and completeness
 
 962
 01:03:47,160 --> 01:03:49,480
@@ -4538,8 +4538,8 @@ directed equality.
 
 963
 01:03:49,480 --> 01:03:53,720
-And the proof of soundness completeness
-of typed directed equality
+And the proof of soundness and completeness
+of type directed equality
 
 964
 01:03:53,720 --> 01:03:57,400
@@ -4549,16 +4549,16 @@ ideas and challenges
 965
 01:03:57,400 --> 01:04:00,480
 that we have in the proof
-of strong analyzations
+of strong normalization
 
 966
 01:04:00,480 --> 01:04:02,040
-towards simple lambda calculus.
+of simply-typed lambda calculus.
 
 967
 01:04:03,280 --> 01:04:06,960
 And last our guiding principle
-was really to design a benchmark
+was we need to design a benchmark
 
 968
 01:04:06,960 --> 01:04:10,320
@@ -4615,7 +4615,7 @@ proposed by a F van Raamsdonk
 979
 01:04:43,400 --> 01:04:46,440
 and Paula Severi going
-back also (IANUDIBLE)
+back also to (IANUDIBLE)
 
 980
 01:04:46,440 --> 01:04:49,040
@@ -4642,7 +4642,7 @@ essentially becomes much similar.
 
 985
 01:04:59,760 --> 01:05:02,720
-So the first child problem
+So the first challenge problem
 is to prove the equivalence
 
 986
@@ -4667,7 +4667,7 @@ using the inductive definition.
 990
 01:05:15,560 --> 01:05:17,640
 And that will have
-certain set problems
+certain subproblems
 
 991
 01:05:17,640 --> 01:05:19,880
@@ -4685,13 +4685,13 @@ I want to talk about our solutions
 
 994
 01:05:26,440 --> 01:05:29,520
-of one Beluga which is this
-contextual High order of syntax
+of one Beluga which uses
+contextual higher order syntax
 
 995
 01:05:29,520 --> 01:05:33,080
 and then Adga and Coq where we
-use the De Bruijn codings.
+use De Bruijn encodings.
 
 996
 01:05:35,080 --> 01:05:37,280
@@ -4700,17 +4700,17 @@ the youngest system
 
 997
 01:05:37,280 --> 01:05:38,960
-on this three proof assistance.
+of these three proof assistance.
 
 998
 01:05:38,960 --> 01:05:42,440
-The proof tiered syntax based on
-the logic of (INAUDIBLE)
+It supports higher-order syntax based on
+the logic of framework LF
 
 999
 01:05:42,440 --> 01:05:46,040
 and therefore is of course
-great to model by instructors.
+great to model binding structures.
 
 1000
 01:05:46,520 --> 01:05:48,960
@@ -4742,11 +4742,11 @@ find bugs in coverage checking
 
 1006
 01:06:00,600 --> 01:06:02,960
-and in extend termination checking.
+and extend termination checking.
 
 1007
 01:06:02,960 --> 01:06:05,240
-In over the last year,
+And over the last year,
 we also implemented
 
 1008
@@ -4770,7 +4770,7 @@ Now Coq on the other hand we used
 1012
 01:06:16,280 --> 01:06:18,840
 de Bruijn encodings
-for modelling findings.
+for modelling bindings.
 
 1013
 01:06:19,840 --> 01:06:21,680
@@ -4808,8 +4808,8 @@ of very much developed
 
 1020
 01:06:40,120 --> 01:06:43,400
-and close collaboration with
-our proofs and Beluga.
+in close collaboration with
+our proofs in Beluga.
 
 1021
 01:06:43,400 --> 01:06:45,200
@@ -4824,7 +4824,7 @@ proven as expected.
 1023
 01:06:48,440 --> 01:06:50,640
 It's very worthwhile nothing that
-substitutions and beginnings
+substitutions and weakenings
 
 1024
 01:06:50,640 --> 01:06:54,000
@@ -4842,7 +4842,7 @@ are kind of factored out
 
 1027
 01:06:58,560 --> 01:07:01,480
-using proofs, scripts
+using proof scripts
 and Coq tactics.
 
 1028
@@ -4857,17 +4857,17 @@ Maybe one should have an Autosubst 3
 1030
 01:07:08,400 --> 01:07:11,600
 where we actually can
-generate boilerplate codes
+generate boilerplate code
 
 1031
 01:07:11,600 --> 01:07:13,440
-for valid types
-and tax automatically.
+for well-typed
+syntax automatically.
 
 1032
 01:07:14,680 --> 01:07:17,960
-And last Agda, we used to
-generate syntax library
+And last Agda, we used the
+generic syntax library
 
 1033
 01:07:17,960 --> 01:07:19,240
@@ -4875,7 +4875,7 @@ from (INAUDIBLE)
 
 1034
 01:07:19,240 --> 01:07:22,960
-It worked very well as
+It worked very well for him as
 an expert user to test
 
 1035
@@ -4938,7 +4938,7 @@ and systems more robust.
 1047
 01:07:54,800 --> 01:07:57,200
 It helped us restructure
-our approves,
+our proofs,
 
 1048
 01:07:57,200 --> 01:07:59,920
