@@ -351,9 +351,9 @@ Dialogue: 0,0:29:03.76,0:29:06.68,Default,,0,0,0,,For this reason, I've been wor
 Dialogue: 0,0:29:08.16,0:29:10.68,Default,,0,0,0,,The course focuses on\Nsequential programs.
 Dialogue: 0,0:29:10.68,0:29:12.48,Default,,0,0,0,,Concurrency is interesting\Nbut it's much harder.
 Dialogue: 0,0:29:13.52,0:29:17.52,Default,,0,0,0,,Course is written in the style of\Nthe Software Foundations series,
-Dialogue: 0,0:29:17.52,0:29:19.76,Default,,0,0,0,,where every definition\Nevery (INAUDIBLE),
-Dialogue: 0,0:29:19.76,0:29:23.20,Default,,0,0,0,,and every exercise is formalised\Nusing the Coq preferred system.
-Dialogue: 0,0:29:24.80,0:29:27.72,Default,,0,0,0,,The course covers modern\Nfeatures Separation logic.
+Dialogue: 0,0:29:17.52,0:29:19.76,Default,,0,0,0,,where every definition\Nevery lemma,
+Dialogue: 0,0:29:19.76,0:29:23.20,Default,,0,0,0,,and every exercise is formalised\Nusing the Coq proof assistant.
+Dialogue: 0,0:29:24.80,0:29:27.72,Default,,0,0,0,,The course covers modern\Nfeatures of Separation logic.
 Dialogue: 0,0:29:27.72,0:29:30.60,Default,,0,0,0,,These are features that will not\Npresent in the original papers
 Dialogue: 0,0:29:30.60,0:29:34.00,Default,,0,0,0,,in separation logic, but have\Nsince then proved very useful
 Dialogue: 0,0:29:34.00,0:29:38.40,Default,,0,0,0,,for developing practical tools.\NThe third contribution of this paper
@@ -368,7 +368,7 @@ Dialogue: 0,0:30:00.16,0:30:03.32,Default,,0,0,0,,such as heap predicates,\Ntrip
 Dialogue: 0,0:30:04.72,0:30:05.84,Default,,0,0,0,,The next few chapters focus
 Dialogue: 0,0:30:05.84,0:30:07.88,Default,,0,0,0,,on the presentation\Nof reasoning rules,
 Dialogue: 0,0:30:07.88,0:30:11.04,Default,,0,0,0,,either in the form of triples in the\Nform of weakest preconditions,
-Dialogue: 0,0:30:11.04,0:30:13.40,Default,,0,0,0,,or in the form of\Ncharacteristic formally,
+Dialogue: 0,0:30:11.04,0:30:13.40,Default,,0,0,0,,or in the form of\Ncharacteristic formulae,
 Dialogue: 0,0:30:13.40,0:30:15.80,Default,,0,0,0,,which are a form of weakest\Nprecondition generator.
 Dialogue: 0,0:30:16.76,0:30:19.68,Default,,0,0,0,,The remaining chapters focus\Non more advanced features
 Dialogue: 0,0:30:19.68,0:30:22.84,Default,,0,0,0,,such as a magic wand,\Nthe treatment of affine predicates,
@@ -397,10 +397,10 @@ Dialogue: 0,0:31:31.72,0:31:37.08,Default,,0,0,0,,The semantics is described in 
 Dialogue: 0,0:31:37.08,0:31:39.68,Default,,0,0,0,,substitution based,\Nbig step style semantics.
 Dialogue: 0,0:31:40.60,0:31:43.08,Default,,0,0,0,,The choice of a big step semantics\Nis well suited for reasoning
 Dialogue: 0,0:31:43.08,0:31:45.68,Default,,0,0,0,,about total correctness\Nof sequential programs.
-Dialogue: 0,0:31:45.68,0:31:47.04,Default,,0,0,0,,It makes it proof simpler.
+Dialogue: 0,0:31:45.68,0:31:47.04,Default,,0,0,0,,It makes the proof simpler.
 Dialogue: 0,0:31:47.84,0:31:50.36,Default,,0,0,0,,Both the syntax and\Nthe semantics are described
 Dialogue: 0,0:31:50.36,0:31:53.24,Default,,0,0,0,,in standard ways following\Nthe style of the presentation
-Dialogue: 0,0:31:53.24,0:31:55.40,Default,,0,0,0,,of the prior 'Software\NFoundation volumes',
+Dialogue: 0,0:31:53.24,0:31:55.40,Default,,0,0,0,,of the prior Software\NFoundation volumes,
 Dialogue: 0,0:31:55.40,0:31:57.44,Default,,0,0,0,,which will make it easy\Nfor students to follow.
 Dialogue: 0,0:32:00.04,0:32:02.24,Default,,0,0,0,,Separation logic is presented\Nin a shallow embedding.
 Dialogue: 0,0:32:03.48,0:32:06.76,Default,,0,0,0,,This means that the core heap\Npredicates of separation logic
@@ -408,7 +408,7 @@ Dialogue: 0,0:32:06.76,0:32:11.32,Default,,0,0,0,,are defined as Coq functions\N
 Dialogue: 0,0:32:13.16,0:32:15.24,Default,,0,0,0,,Entailment is defined\Nin the standard way
 Dialogue: 0,0:32:15.24,0:32:18.40,Default,,0,0,0,,as simplest possible way\Nas pointwise entailment.
 Dialogue: 0,0:32:19.52,0:32:23.04,Default,,0,0,0,,The remaining operators\Nare encoded in terms of
-Dialogue: 0,0:32:23.04,0:32:26.36,Default,,0,0,0,,these core operators.\NWhile the details are
+Dialogue: 0,0:32:23.04,0:32:26.36,Default,,0,0,0,,these core operators.\NFor the details
 Dialogue: 0,0:32:26.36,0:32:27.84,Default,,0,0,0,,I'll just refer\Nto the course.
 Dialogue: 0,0:32:30.64,0:32:35.76,Default,,0,0,0,,Triples are defined in two stage.\NFirst, the hoarse Triple H t Q
 Dialogue: 0,0:32:35.76,0:32:39.40,Default,,0,0,0,,asserts that for any state as\Nsatisfying the precondition,
@@ -425,7 +425,7 @@ Dialogue: 0,0:33:10.04,0:33:15.48,Default,,0,0,0,,such as a frame rule\Nor the c
 Dialogue: 0,0:33:15.48,0:33:16.76,Default,,0,0,0,,I'd like to take\Nthe rest of the talk
 Dialogue: 0,0:33:16.76,0:33:21.40,Default,,0,0,0,,to present four features of\Nmodern separation logic,
 Dialogue: 0,0:33:21.40,0:33:24.24,Default,,0,0,0,,which I believe should\Nbe to interest
-Dialogue: 0,0:33:24.24,0:33:28.00,Default,,0,0,0,,to every ICFP research.
+Dialogue: 0,0:33:24.24,0:33:28.00,Default,,0,0,0,,to every ICFP researcher.
 Dialogue: 0,0:33:28.00,0:33:30.84,Default,,0,0,0,,Let me begin with\Na ramified frame rule.
 Dialogue: 0,0:33:30.84,0:33:33.24,Default,,0,0,0,,The frame rule in its\Nmost standard statement
 Dialogue: 0,0:33:33.24,0:33:34.92,Default,,0,0,0,,is almost never applicable.
@@ -433,13 +433,13 @@ Dialogue: 0,0:33:34.92,0:33:37.20,Default,,0,0,0,,Indeed, you need both\Nthe pre
 Dialogue: 0,0:33:37.20,0:33:44.28,Default,,0,0,0,,and the post-condition to\Nsyntactically feature a star H2.
 Dialogue: 0,0:33:44.28,0:33:48.24,Default,,0,0,0,,But in practice, one would\Ntypically use a combined rule
 Dialogue: 0,0:33:48.24,0:33:51.24,Default,,0,0,0,,that integrates\Nthe rule of consequence,
-Dialogue: 0,0:33:51.24,0:33:55.48,Default,,0,0,0,,and is stated as follows;\Nto prove this triple HDQ
-Dialogue: 0,0:33:55.48,0:33:58.40,Default,,0,0,0,,derivable from a triple HTQ.
+Dialogue: 0,0:33:51.24,0:33:55.48,Default,,0,0,0,,and is stated as follows;\Nto prove this triple H T Q
+Dialogue: 0,0:33:55.48,0:33:58.40,Default,,0,0,0,,derivable from a triple H1 T Q1.
 Dialogue: 0,0:33:58.40,0:34:01.64,Default,,0,0,0,,One has to show that\Nthe precondition H
-Dialogue: 0,0:34:01.64,0:34:06.48,Default,,0,0,0,,decomposesas H1 star H2 two,
+Dialogue: 0,0:34:01.64,0:34:06.48,Default,,0,0,0,,decomposes as H1 star H2,
 Dialogue: 0,0:34:06.48,0:34:08.48,Default,,0,0,0,,and then show that\Nthe post-condition Q1
 Dialogue: 0,0:34:08.48,0:34:13.48,Default,,0,0,0,,when extended with H2 recovers\Nthe post-condition Q.
-Dialogue: 0,0:34:13.48,0:34:18.48,Default,,0,0,0,,HQ can be computed as\Na difference between H and H1.
+Dialogue: 0,0:34:13.48,0:34:18.48,Default,,0,0,0,,H2 can be computed as\Na difference between H and H1.
 Dialogue: 0,0:34:18.48,0:34:21.04,Default,,0,0,0,,Computing this difference\Ncan be well automated
 Dialogue: 0,0:34:21.04,0:34:24.72,Default,,0,0,0,,in a simple case, but\Nif H contains existentially
 Dialogue: 0,0:34:24.72,0:34:27.08,Default,,0,0,0,,quantified variables,\Nit can be quite tricky
@@ -465,8 +465,8 @@ Dialogue: 0,0:35:20.08,0:35:21.16,Default,,0,0,0,,in separation logic?
 Dialogue: 0,0:35:21.16,0:35:22.72,Default,,0,0,0,,And what is a statement\Nof a frame rule
 Dialogue: 0,0:35:22.72,0:35:26.00,Default,,0,0,0,,in weakest precondition style?
 Dialogue: 0,0:35:26.00,0:35:28.76,Default,,0,0,0,,So WP, just like in our\Nlogic, can be defined
-Dialogue: 0,0:35:28.76,0:35:32.28,Default,,0,0,0,,as an equivalence\Nbetween a triple HDQ
-Dialogue: 0,0:35:32.28,0:35:37.04,Default,,0,0,0,,and the entailment from HWPTQ.
+Dialogue: 0,0:35:28.76,0:35:32.28,Default,,0,0,0,,as an equivalence\Nbetween a triple H D Q
+Dialogue: 0,0:35:32.28,0:35:37.04,Default,,0,0,0,,and the entailment from H to WP T Q.
 Dialogue: 0,0:35:37.04,0:35:39.76,Default,,0,0,0,,This equivalence is not\Nquite a definition.
 Dialogue: 0,0:35:39.76,0:35:44.68,Default,,0,0,0,,The two definitions that\Ncan be considered;
 Dialogue: 0,0:35:44.68,0:35:48.56,Default,,0,0,0,,one is a low level definition\Nworking in terms of heaps.
@@ -474,18 +474,18 @@ Dialogue: 0,0:35:48.56,0:35:51.84,Default,,0,0,0,,Another one is based on an enc
 Dialogue: 0,0:35:51.84,0:35:57.40,Default,,0,0,0,,using the operators\Nof separation logic.
 Dialogue: 0,0:35:57.40,0:36:01.92,Default,,0,0,0,,The weakest precondition frame\Nrule can be read as follows;
 Dialogue: 0,0:36:01.92,0:36:05.64,Default,,0,0,0,,if I own a resource state\Nin which I can execute
-Dialogue: 0,0:36:05.64,0:36:10.28,Default,,0,0,0,,the term T and obtain\Nthe post-consumed Q
+Dialogue: 0,0:36:05.64,0:36:10.28,Default,,0,0,0,,the term T and obtain\Nthe post-condition Q
 Dialogue: 0,0:36:10.28,0:36:14.20,Default,,0,0,0,,and separately, I own a piece\Nof state described by H.
 Dialogue: 0,0:36:14.20,0:36:17.68,Default,,0,0,0,,Then altogether,\NI own a piece of state
-Dialogue: 0,0:36:17.68,0:36:19.40,Default,,0,0,0,,in which the ediction\Nof T terminates
+Dialogue: 0,0:36:17.68,0:36:19.40,Default,,0,0,0,,in which the execution\Nof T terminates
 Dialogue: 0,0:36:19.40,0:36:21.96,Default,,0,0,0,,and produces\Na post-condition described
 Dialogue: 0,0:36:21.96,0:36:26.04,Default,,0,0,0,,by Q extended with H.
-Dialogue: 0,0:36:26.04,0:36:28.88,Default,,0,0,0,,Interestingly, the weakest\Nprecondition framework
-Dialogue: 0,0:36:28.88,0:36:32.28,Default,,0,0,0,,can be combined with the ideas\Nof the ramified framework,
+Dialogue: 0,0:36:26.04,0:36:28.88,Default,,0,0,0,,Interestingly, the weakest\Nprecondition frame rule
+Dialogue: 0,0:36:28.88,0:36:32.28,Default,,0,0,0,,can be combined with the ideas\Nof the ramified frame rule,
 Dialogue: 0,0:36:32.28,0:36:35.44,Default,,0,0,0,,leading to the rule shown at\Nthe bottom of the slide here.
 Dialogue: 0,0:36:35.44,0:36:38.32,Default,,0,0,0,,This rule subsumes all\Nthe structural rules
 Dialogue: 0,0:36:38.32,0:36:43.12,Default,,0,0,0,,of separation logic.
-Dialogue: 0,0:36:43.12,0:36:44.80,Default,,0,0,0,,The third feature is\Nthe mixing of the fine
+Dialogue: 0,0:36:43.12,0:36:44.80,Default,,0,0,0,,The third feature is\Nthe mixing of affine
 Dialogue: 0,0:36:44.80,0:36:46.72,Default,,0,0,0,,and linear predicates.
 Dialogue: 0,0:36:46.72,0:36:50.08,Default,,0,0,0,,A linear predicate describes\Na resource that must remain
 Dialogue: 0,0:36:50.08,0:36:53.04,Default,,0,0,0,,accounted for throughout\Nthe reasoning.
@@ -496,77 +496,77 @@ Dialogue: 0,0:36:59.44,0:37:02.36,Default,,0,0,0,,eventually gets closed.
 Dialogue: 0,0:37:02.36,0:37:04.40,Default,,0,0,0,,And the affine heap predicate\Non the contrary,
 Dialogue: 0,0:37:04.40,0:37:07.04,Default,,0,0,0,,describes a resource that\Nmay be freely discarded
 Dialogue: 0,0:37:07.04,0:37:09.16,Default,,0,0,0,,in the reasoning.
-Dialogue: 0,0:37:09.16,0:37:14.80,Default,,0,0,0,,Typically,this notion of fine E predicate
+Dialogue: 0,0:37:09.16,0:37:14.80,Default,,0,0,0,,Typically,this notion of affine predicate
 Dialogue: 0,0:37:14.80,0:37:17.72,Default,,0,0,0,,is a must have for garbage\Ncollected languages,
 Dialogue: 0,0:37:17.72,0:37:21.36,Default,,0,0,0,,which do not feature\Nexplicit free operations.
 Dialogue: 0,0:37:21.36,0:37:23.36,Default,,0,0,0,,So it is straightforward to set up
 Dialogue: 0,0:37:23.36,0:37:26.00,Default,,0,0,0,,a linear separation logic,\Nand it is not much harder
-Dialogue: 0,0:37:26.00,0:37:28.56,Default,,0,0,0,,to set up on a fine\Nseparation logic,
+Dialogue: 0,0:37:26.00,0:37:28.56,Default,,0,0,0,,to set up an affine\Nseparation logic,
 Dialogue: 0,0:37:28.56,0:37:31.28,Default,,0,0,0,,but what is a simple way to\Nset up a separation logic,
-Dialogue: 0,0:37:31.28,0:37:36.88,Default,,0,0,0,,where both linear and the fine\NE predicates can coexist?
-Dialogue: 0,0:37:36.88,0:37:38.76,Default,,0,0,0,,By describing\Nthe course of construction
+Dialogue: 0,0:37:31.28,0:37:36.88,Default,,0,0,0,,where both linear and affine\Npredicates can coexist?
+Dialogue: 0,0:37:36.88,0:37:38.76,Default,,0,0,0,,By describing\Nthe (INAUDIBLE) construction
 Dialogue: 0,0:37:38.76,0:37:40.92,Default,,0,0,0,,that is relatively simple,
 Dialogue: 0,0:37:40.92,0:37:44.40,Default,,0,0,0,,which relies on\Nthe introduction of a predicate
-Dialogue: 0,0:37:44.40,0:37:46.96,Default,,0,0,0,,H of fine, that can be\Ncustomized to define
-Dialogue: 0,0:37:46.96,0:37:52.32,Default,,0,0,0,,which heaps should be considered\Nfine as opposed to linear.
-Dialogue: 0,0:37:52.32,0:37:55.84,Default,,0,0,0,,Top of that can define\Nthe notion of fine E predicates
-Dialogue: 0,0:37:55.84,0:37:59.40,Default,,0,0,0,,that characterize only\Nheaps that are fine.
-Dialogue: 0,0:37:59.40,0:38:03.04,Default,,0,0,0,,And the notion of\Na fine top predicate
-Dialogue: 0,0:38:03.04,0:38:08.20,Default,,0,0,0,,which characterizes any fine heap.
-Dialogue: 0,0:38:08.20,0:38:10.32,Default,,0,0,0,,The definition of\Nsuppression logic triples
+Dialogue: 0,0:37:44.40,0:37:46.96,Default,,0,0,0,,H affine, that can be\Ncustomized to define
+Dialogue: 0,0:37:46.96,0:37:52.32,Default,,0,0,0,,which heaps should be considered\Naffine as opposed to linear.
+Dialogue: 0,0:37:52.32,0:37:55.84,Default,,0,0,0,,Top of that can define\Nthe notion of affine predicates
+Dialogue: 0,0:37:55.84,0:37:59.40,Default,,0,0,0,,that characterize only\Nheaps that are affine.
+Dialogue: 0,0:37:59.40,0:38:03.04,Default,,0,0,0,,And the notion of\Naffine top predicate
+Dialogue: 0,0:38:03.04,0:38:08.20,Default,,0,0,0,,which characterizes any affine heap.
+Dialogue: 0,0:38:08.20,0:38:10.32,Default,,0,0,0,,The definition of\Nseparation logic triples
 Dialogue: 0,0:38:10.32,0:38:14.00,Default,,0,0,0,,can be generalized by\Nintroducing the top,
-Dialogue: 0,0:38:14.00,0:38:17.68,Default,,0,0,0,,the fine top predicate\Nin the post-condition.
+Dialogue: 0,0:38:14.00,0:38:17.68,Default,,0,0,0,,the affine top predicate\Nin the post-condition.
 Dialogue: 0,0:38:17.68,0:38:20.80,Default,,0,0,0,,Doing so preserved\Nthe validity of all the prior
 Dialogue: 0,0:38:20.80,0:38:26.24,Default,,0,0,0,,rules of separation logic\Nand adds two additional rules.
-Dialogue: 0,0:38:26.24,0:38:28.16,Default,,0,0,0,,The first one assert that any piece
-Dialogue: 0,0:38:28.16,0:38:31.08,Default,,0,0,0,,of precondition H\Nprime may be discarded
-Dialogue: 0,0:38:31.08,0:38:36.08,Default,,0,0,0,,from the precondition\Nprovided that it's a fine.
+Dialogue: 0,0:38:26.24,0:38:28.16,Default,,0,0,0,,The first one asserts that any piece
+Dialogue: 0,0:38:28.16,0:38:31.08,Default,,0,0,0,,of precondition H prime\Nmay be discarded
+Dialogue: 0,0:38:31.08,0:38:36.08,Default,,0,0,0,,from the precondition\Nprovided that it's affine.
 Dialogue: 0,0:38:36.08,0:38:38.24,Default,,0,0,0,,The second rule allows to\Nextend the post-condition
-Dialogue: 0,0:38:38.24,0:38:41.40,Default,,0,0,0,,within the fine top predicate\Nreflecting on the fact
+Dialogue: 0,0:38:38.24,0:38:41.40,Default,,0,0,0,,within the affine top predicate\Nreflecting on the fact
 Dialogue: 0,0:38:41.40,0:38:45.04,Default,,0,0,0,,that it is fine to\Nproduce a post-condition
 Dialogue: 0,0:38:45.04,0:38:51.76,Default,,0,0,0,,that is bigger than the desired one.
-Dialogue: 0,0:38:51.76,0:38:54.44,Default,,0,0,0,,First and last feature\NI'd like to describe
+Dialogue: 0,0:38:51.76,0:38:54.44,Default,,0,0,0,,Fourth and last feature\NI'd like to describe
 Dialogue: 0,0:38:54.44,0:38:58.80,Default,,0,0,0,,is a frame friendly rule\Nfor reasoning about loops.
-Dialogue: 0,0:38:58.80,0:39:00.40,Default,,0,0,0,,So consider for\Nexample, an apparition
-Dialogue: 0,0:39:00.40,0:39:02.48,Default,,0,0,0,,that traverses a link list,
-Dialogue: 0,0:39:02.48,0:39:06.12,Default,,0,0,0,,or traverses a tree data\Nstructure recursive.
+Dialogue: 0,0:38:58.80,0:39:00.40,Default,,0,0,0,,So consider for\Nexample, an operation
+Dialogue: 0,0:39:00.40,0:39:02.48,Default,,0,0,0,,that traverses a linked list,
+Dialogue: 0,0:39:02.48,0:39:06.12,Default,,0,0,0,,or traverses a tree data\Nstructure recursively.
 Dialogue: 0,0:39:06.12,0:39:10.20,Default,,0,0,0,,If the separation is implemented\Nas a recursive function,
-Dialogue: 0,0:39:10.20,0:39:14.00,Default,,0,0,0,,one can invoke the framework\Naround the recursive calls
+Dialogue: 0,0:39:10.20,0:39:14.00,Default,,0,0,0,,one can invoke the frame rule\Naround the recursive calls
 Dialogue: 0,0:39:14.00,0:39:18.24,Default,,0,0,0,,to forget about the cells\Nor the parts of the trees
 Dialogue: 0,0:39:18.24,0:39:21.08,Default,,0,0,0,,that are passed by.
 Dialogue: 0,0:39:21.08,0:39:23.68,Default,,0,0,0,,On the contrary, if\Nthe operation is implemented
-Dialogue: 0,0:39:23.68,0:39:27.12,Default,,0,0,0,,as a loop and specified using\Na loop environment,
-Dialogue: 0,0:39:27.12,0:39:31.96,Default,,0,0,0,,the loop environment must describe\Nthe list segment
+Dialogue: 0,0:39:23.68,0:39:27.12,Default,,0,0,0,,as a loop and specified using\Na loop invariant,
+Dialogue: 0,0:39:27.12,0:39:31.96,Default,,0,0,0,,the loop invariant must describe\Nthe list segment
 Dialogue: 0,0:39:31.96,0:39:35.36,Default,,0,0,0,,of cells that have already\Nbeen passed by or worse,
 Dialogue: 0,0:39:35.36,0:39:38.68,Default,,0,0,0,,in the case of a tree, must\Ndescribe the tree context
 Dialogue: 0,0:39:38.68,0:39:43.04,Default,,0,0,0,,associated with the past that\Nhas already been traversed.
 Dialogue: 0,0:39:43.04,0:39:45.88,Default,,0,0,0,,The question here is how can\Nwe reason about syntactic
 Dialogue: 0,0:39:45.88,0:39:48.64,Default,,0,0,0,,loop construct as easily
 Dialogue: 0,0:39:48.64,0:39:52.04,Default,,0,0,0,,as recursive function
-Dialogue: 0,0:39:52.04,0:39:56.44,Default,,0,0,0,,that will allow us to\Nexploit the framework?
+Dialogue: 0,0:39:52.04,0:39:56.44,Default,,0,0,0,,that will allow us to\Nexploit the frame rule?
 Dialogue: 0,0:39:56.44,0:39:58.56,Default,,0,0,0,,So what we're trying to achieve here
-Dialogue: 0,0:39:58.56,0:40:02.68,Default,,0,0,0,,is essentially simulate\Nan encoding of a Y loop
+Dialogue: 0,0:39:58.56,0:40:02.68,Default,,0,0,0,,is essentially simulate\Nan encoding of a while loop
 Dialogue: 0,0:40:02.68,0:40:05.68,Default,,0,0,0,,as a recursive function,\Nbut without introducing
 Dialogue: 0,0:40:05.68,0:40:11.52,Default,,0,0,0,,the overheads of an actual\Nexplicit encoding.
-Dialogue: 0,0:40:11.52,0:40:14.04,Default,,0,0,0,,The idea is to specify the Y loop
-Dialogue: 0,0:40:14.04,0:40:19.20,Default,,0,0,0,,by relating the behavior,\Nthe state at the given iteration
+Dialogue: 0,0:40:11.52,0:40:14.04,Default,,0,0,0,,The idea is to specify the while loop
+Dialogue: 0,0:40:14.04,0:40:19.20,Default,,0,0,0,,by relating the behavior of\Nthe state at the given iteration
 Dialogue: 0,0:40:19.20,0:40:23.88,Default,,0,0,0,,with the state at\Nthe last iteration.
 Dialogue: 0,0:40:23.88,0:40:27.28,Default,,0,0,0,,And such a specification\Ncan be established
-Dialogue: 0,0:40:27.28,0:40:32.32,Default,,0,0,0,,by induction using Cox\Ninduction mechanism
-Dialogue: 0,0:40:32.32,0:40:34.76,Default,,0,0,0,,by applying the following\Nenrolling rule,
-Dialogue: 0,0:40:34.76,0:40:39.84,Default,,0,0,0,,which essentially enfolds\Nthe Y loop one iteration.
+Dialogue: 0,0:40:27.28,0:40:32.32,Default,,0,0,0,,by induction using Coq's\Ninduction mechanism
+Dialogue: 0,0:40:32.32,0:40:34.76,Default,,0,0,0,,by applying the following\Nunrolling rule,
+Dialogue: 0,0:40:34.76,0:40:39.84,Default,,0,0,0,,which essentially unfolds\Nthe whie loop one iteration.
 Dialogue: 0,0:40:39.84,0:40:42.60,Default,,0,0,0,,This rule introduces\Na conditional sequence
-Dialogue: 0,0:40:42.60,0:40:47.04,Default,,0,0,0,,and a recursive occurrence\Nof the Y loop.
+Dialogue: 0,0:40:42.60,0:40:47.04,Default,,0,0,0,,and a recursive occurrence\Nof the while loop.
 Dialogue: 0,0:40:47.04,0:40:48.88,Default,,0,0,0,,When reasoning about this\Nrecursive occurrence
-Dialogue: 0,0:40:48.88,0:40:51.68,Default,,0,0,0,,of the Y loop, one may\Napply the framework
+Dialogue: 0,0:40:48.88,0:40:51.68,Default,,0,0,0,,of the while loop, one may\Napply the frame rule
 Dialogue: 0,0:40:51.68,0:40:56.00,Default,,0,0,0,,to frame the parts of\Nthe list or of the tree
 Dialogue: 0,0:40:56.00,0:41:01.00,Default,,0,0,0,,that we are stepping over.
 Dialogue: 0,0:41:01.00,0:41:03.08,Default,,0,0,0,,So in the course,\NI described an example
 Dialogue: 0,0:41:03.08,0:41:06.40,Default,,0,0,0,,illustrating this proof technique
-Dialogue: 0,0:41:06.40,0:41:12.00,Default,,0,0,0,,and compare it with the proof\Nbase on the loop environment.
+Dialogue: 0,0:41:06.40,0:41:12.00,Default,,0,0,0,,and compare it with the proof\Nbased on the loop environment.
 Dialogue: 0,0:41:12.00,0:41:15.12,Default,,0,0,0,,In conclusion, you can\Nfind on my webpage
 Dialogue: 0,0:41:15.12,0:41:18.44,Default,,0,0,0,,the paper, including\Nits eight page appendix
-Dialogue: 0,0:41:18.44,0:41:21.68,Default,,0,0,0,,on all the course material,\Nboth in cog format
+Dialogue: 0,0:41:18.44,0:41:21.68,Default,,0,0,0,,on all the course material,\Nboth in Coq format
 Dialogue: 0,0:41:21.68,0:41:24.64,Default,,0,0,0,,and HTML format.
 Dialogue: 0,0:41:24.64,0:41:26.60,Default,,0,0,0,,This course is meant\Nto be released soon
 Dialogue: 0,0:41:26.60,0:41:30.40,Default,,0,0,0,,as a volume of the software\Nfoundation series.

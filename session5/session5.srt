@@ -1657,17 +1657,17 @@ the Software Foundations series,
 341
 00:29:17,520 --> 00:29:19,760
 where every definition
-every (INAUDIBLE),
+every lemma,
 
 342
 00:29:19,760 --> 00:29:23,200
 and every exercise is formalised
-using the Coq preferred system.
+using the Coq proof assistant.
 
 343
 00:29:24,800 --> 00:29:27,720
 The course covers modern
-features Separation logic.
+features of Separation logic.
 
 344
 00:29:27,720 --> 00:29:30,600
@@ -1741,7 +1741,7 @@ form of weakest preconditions,
 358
 00:30:11,040 --> 00:30:13,400
 or in the form of
-characteristic formally,
+characteristic formulae,
 
 359
 00:30:13,400 --> 00:30:15,800
@@ -1883,7 +1883,7 @@ of sequential programs.
 
 387
 00:31:45,680 --> 00:31:47,040
-It makes it proof simpler.
+It makes the proof simpler.
 
 388
 00:31:47,840 --> 00:31:50,360
@@ -1897,8 +1897,8 @@ the style of the presentation
 
 390
 00:31:53,240 --> 00:31:55,400
-of the prior 'Software
-Foundation volumes',
+of the prior Software
+Foundation volumes,
 
 391
 00:31:55,400 --> 00:31:57,440
@@ -1938,7 +1938,7 @@ are encoded in terms of
 398
 00:32:23,040 --> 00:32:26,360
 these core operators.
-While the details are
+For the details
 
 399
 00:32:26,360 --> 00:32:27,840
@@ -2022,7 +2022,7 @@ be to interest
 
 415
 00:33:24,240 --> 00:33:28,000
-to every ICFP research.
+to every ICFP researcher.
 
 416
 00:33:28,000 --> 00:33:30,840
@@ -2061,11 +2061,11 @@ the rule of consequence,
 423
 00:33:51,240 --> 00:33:55,480
 and is stated as follows;
-to prove this triple HDQ
+to prove this triple H T Q
 
 424
 00:33:55,480 --> 00:33:58,400
-derivable from a triple HTQ.
+derivable from a triple H1 T Q1.
 
 425
 00:33:58,400 --> 00:34:01,640
@@ -2074,7 +2074,7 @@ the precondition H
 
 426
 00:34:01,640 --> 00:34:06,480
-decomposesas H1 star H2 two,
+decomposes as H1 star H2,
 
 427
 00:34:06,480 --> 00:34:08,480
@@ -2088,7 +2088,7 @@ the post-condition Q.
 
 429
 00:34:13,480 --> 00:34:18,480
-HQ can be computed as
+H2 can be computed as
 a difference between H and H1.
 
 430
@@ -2212,11 +2212,11 @@ logic, can be defined
 455
 00:35:28,760 --> 00:35:32,280
 as an equivalence
-between a triple HDQ
+between a triple H D Q
 
 456
 00:35:32,280 --> 00:35:37,040
-and the entailment from HWPTQ.
+and the entailment from H to WP T Q.
 
 457
 00:35:37,040 --> 00:35:39,760
@@ -2255,7 +2255,7 @@ in which I can execute
 464
 00:36:05,640 --> 00:36:10,280
 the term T and obtain
-the post-consumed Q
+the post-condition Q
 
 465
 00:36:10,280 --> 00:36:14,200
@@ -2269,7 +2269,7 @@ I own a piece of state
 
 467
 00:36:17,680 --> 00:36:19,400
-in which the ediction
+in which the execution
 of T terminates
 
 468
@@ -2284,12 +2284,12 @@ by Q extended with H.
 470
 00:36:26,040 --> 00:36:28,880
 Interestingly, the weakest
-precondition framework
+precondition frame rule
 
 471
 00:36:28,880 --> 00:36:32,280
 can be combined with the ideas
-of the ramified framework,
+of the ramified frame rule,
 
 472
 00:36:32,280 --> 00:36:35,440
@@ -2308,7 +2308,7 @@ of separation logic.
 475
 00:36:43,120 --> 00:36:44,800
 The third feature is
-the mixing of the fine
+the mixing of affine
 
 476
 00:36:44,800 --> 00:36:46,720
@@ -2357,7 +2357,7 @@ in the reasoning.
 
 486
 00:37:09,160 --> 00:37:14,800
-Typically,this notion of fine E predicate
+Typically,this notion of affine predicate
 
 487
 00:37:14,800 --> 00:37:17,720
@@ -2380,7 +2380,7 @@ and it is not much harder
 
 491
 00:37:26,000 --> 00:37:28,560
-to set up on a fine
+to set up an affine
 separation logic,
 
 492
@@ -2390,13 +2390,13 @@ set up a separation logic,
 
 493
 00:37:31,280 --> 00:37:36,880
-where both linear and the fine
-E predicates can coexist?
+where both linear and affine
+predicates can coexist?
 
 494
 00:37:36,880 --> 00:37:38,760
 By describing
-the course of construction
+the (INAUDIBLE) construction
 
 495
 00:37:38,760 --> 00:37:40,920
@@ -2409,37 +2409,37 @@ the introduction of a predicate
 
 497
 00:37:44,400 --> 00:37:46,960
-H of fine, that can be
+H affine, that can be
 customized to define
 
 498
 00:37:46,960 --> 00:37:52,320
 which heaps should be considered
-fine as opposed to linear.
+affine as opposed to linear.
 
 499
 00:37:52,320 --> 00:37:55,840
 Top of that can define
-the notion of fine E predicates
+the notion of affine predicates
 
 500
 00:37:55,840 --> 00:37:59,400
 that characterize only
-heaps that are fine.
+heaps that are affine.
 
 501
 00:37:59,400 --> 00:38:03,040
 And the notion of
-a fine top predicate
+affine top predicate
 
 502
 00:38:03,040 --> 00:38:08,200
-which characterizes any fine heap.
+which characterizes any affine heap.
 
 503
 00:38:08,200 --> 00:38:10,320
 The definition of
-suppression logic triples
+separation logic triples
 
 504
 00:38:10,320 --> 00:38:14,000
@@ -2448,7 +2448,7 @@ introducing the top,
 
 505
 00:38:14,000 --> 00:38:17,680
-the fine top predicate
+the affine top predicate
 in the post-condition.
 
 506
@@ -2463,17 +2463,17 @@ and adds two additional rules.
 
 508
 00:38:26,240 --> 00:38:28,160
-The first one assert that any piece
+The first one asserts that any piece
 
 509
 00:38:28,160 --> 00:38:31,080
-of precondition H
-prime may be discarded
+of precondition H prime
+may be discarded
 
 510
 00:38:31,080 --> 00:38:36,080
 from the precondition
-provided that it's a fine.
+provided that it's affine.
 
 511
 00:38:36,080 --> 00:38:38,240
@@ -2482,7 +2482,7 @@ extend the post-condition
 
 512
 00:38:38,240 --> 00:38:41,400
-within the fine top predicate
+within the affine top predicate
 reflecting on the fact
 
 513
@@ -2496,7 +2496,7 @@ that is bigger than the desired one.
 
 515
 00:38:51,760 --> 00:38:54,440
-First and last feature
+Fourth and last feature
 I'd like to describe
 
 516
@@ -2507,16 +2507,16 @@ for reasoning about loops.
 517
 00:38:58,800 --> 00:39:00,400
 So consider for
-example, an apparition
+example, an operation
 
 518
 00:39:00,400 --> 00:39:02,480
-that traverses a link list,
+that traverses a linked list,
 
 519
 00:39:02,480 --> 00:39:06,120
 or traverses a tree data
-structure recursive.
+structure recursively.
 
 520
 00:39:06,120 --> 00:39:10,200
@@ -2525,7 +2525,7 @@ as a recursive function,
 
 521
 00:39:10,200 --> 00:39:14,000
-one can invoke the framework
+one can invoke the frame rule
 around the recursive calls
 
 522
@@ -2545,11 +2545,11 @@ the operation is implemented
 525
 00:39:23,680 --> 00:39:27,120
 as a loop and specified using
-a loop environment,
+a loop invariant,
 
 526
 00:39:27,120 --> 00:39:31,960
-the loop environment must describe
+the loop invariant must describe
 the list segment
 
 527
@@ -2583,7 +2583,7 @@ as recursive function
 533
 00:39:52,040 --> 00:39:56,440
 that will allow us to
-exploit the framework?
+exploit the frame rule?
 
 534
 00:39:56,440 --> 00:39:58,560
@@ -2592,7 +2592,7 @@ So what we're trying to achieve here
 535
 00:39:58,560 --> 00:40:02,680
 is essentially simulate
-an encoding of a Y loop
+an encoding of a while loop
 
 536
 00:40:02,680 --> 00:40:05,680
@@ -2606,11 +2606,11 @@ explicit encoding.
 
 538
 00:40:11,520 --> 00:40:14,040
-The idea is to specify the Y loop
+The idea is to specify the while loop
 
 539
 00:40:14,040 --> 00:40:19,200
-by relating the behavior,
+by relating the behavior of
 the state at the given iteration
 
 540
@@ -2625,18 +2625,18 @@ can be established
 
 542
 00:40:27,280 --> 00:40:32,320
-by induction using Cox
+by induction using Coq's
 induction mechanism
 
 543
 00:40:32,320 --> 00:40:34,760
 by applying the following
-enrolling rule,
+unrolling rule,
 
 544
 00:40:34,760 --> 00:40:39,840
-which essentially enfolds
-the Y loop one iteration.
+which essentially unfolds
+the whie loop one iteration.
 
 545
 00:40:39,840 --> 00:40:42,600
@@ -2646,7 +2646,7 @@ a conditional sequence
 546
 00:40:42,600 --> 00:40:47,040
 and a recursive occurrence
-of the Y loop.
+of the while loop.
 
 547
 00:40:47,040 --> 00:40:48,880
@@ -2655,8 +2655,8 @@ recursive occurrence
 
 548
 00:40:48,880 --> 00:40:51,680
-of the Y loop, one may
-apply the framework
+of the while loop, one may
+apply the frame rule
 
 549
 00:40:51,680 --> 00:40:56,000
@@ -2679,7 +2679,7 @@ illustrating this proof technique
 553
 00:41:06,400 --> 00:41:12,000
 and compare it with the proof
-base on the loop environment.
+based on the loop environment.
 
 554
 00:41:12,000 --> 00:41:15,120
@@ -2694,7 +2694,7 @@ its eight page appendix
 556
 00:41:18,440 --> 00:41:21,680
 on all the course material,
-both in cog format
+both in Coq format
 
 557
 00:41:21,680 --> 00:41:24,640
