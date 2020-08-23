@@ -4470,7 +4470,7 @@ who will present Duplo,
 931
 00:58:05,880 --> 00:58:10,040
 a framework for
-Ocaml post link optimization.
+Ocaml post-link optimization.
 
 932
 00:58:10,680 --> 00:58:12,560
@@ -4513,7 +4513,7 @@ specific low-level constructs
 940
 00:58:31,800 --> 00:58:34,400
 as an example,
-because they're a simple type
+we consider a simple type
 
 941
 00:58:34,400 --> 00:58:36,840
@@ -4522,7 +4522,7 @@ composed of an imaginary
 
 942
 00:58:36,840 --> 00:58:39,160
-and aerial component.
+and a real component.
 If we declare
 
 943
@@ -4558,7 +4558,7 @@ on the heap.
 949
 00:58:54,840 --> 00:58:57,320
 Ideally, we'd like
-a single block with Heather
+a single block with a header
 
 950
 00:58:57,320 --> 00:59:00,760
@@ -4568,17 +4568,17 @@ So how do we get there?
 951
 00:59:00,760 --> 00:59:03,240
 We can write a lot of code,
-possibly filling with bets
+possibly fiddling with bits
 
 952
 00:59:03,240 --> 00:59:04,920
-and express the type,
-you know, Ocaml.
+and express the type
+in Ocaml.
 
 953
 00:59:04,920 --> 00:59:08,160
 However, the solution
-is unlikely to be arrogant.
+is unlikely to be elegent.
 
 954
 00:59:08,160 --> 00:59:11,040
@@ -4628,7 +4628,7 @@ is particularly powerful.
 963
 00:59:33,040 --> 00:59:37,000
 Thanks to its minimal runtime
-and simple objects representation.
+and simple object representation.
 
 964
 00:59:37,000 --> 00:59:39,200
@@ -4663,31 +4663,31 @@ does not come for free.
 970
 00:59:53,640 --> 00:59:56,720
 Besides the implicit trampolines
-that he proved management code
+that heap management code
 
 971
 00:59:56,720 --> 00:59:59,000
-required to invoke
+requires to invoke
 C from Ocaml,
 
 972
 00:59:59,000 --> 01:00:02,480
-we paid the cost of missed
+we pay the cost of missed
 optimization opportunities.
 
 973
 01:00:02,480 --> 01:00:05,600
-In the typical built Ocaml,
-and see me in a 74
+In the typical build, Ocaml
+and C meet in assembly
 
 974
 01:00:05,600 --> 01:00:08,640
-in the linker unfortunately
+and the linker unfortunately
 high level transformations
 
 975
 01:00:08,640 --> 01:00:11,000
-and machine code
+in machine code
 are far from trivial.
 
 976
@@ -4702,7 +4702,7 @@ that has not yet gone
 
 978
 01:00:17,200 --> 01:00:21,080
-through register location
+through register allocation
 nor instruction selection.
 
 979
@@ -4712,7 +4712,7 @@ ameliorate this FFI overhead
 
 980
 01:00:25,400 --> 01:00:27,760
-and to use the overhead,
+and to lose the overhead,
 we want to optimize
 
 981
@@ -4752,12 +4752,12 @@ C and Ocaml.
 
 988
 01:00:46,480 --> 01:00:48,440
-Duplo cheese this
+Duplo achieves this
 with representation,
 
 989
 01:00:48,440 --> 01:00:52,200
-recall LIR, low level
+we call LLIR, low level
 intermediate representation.
 
 990
@@ -4767,28 +4767,28 @@ a custom version
 
 991
 01:00:54,400 --> 01:00:57,520
-of client to oversee,
-do allow a custom version
+of (INAUDIBLE) to LLIR
+a custom version
 
 992
 01:00:57,520 --> 01:01:00,640
 of the Ocaml compiler
-to lower a camera to LIR
+to lower Ocaml to LLIR
 
 993
 01:01:00,640 --> 01:01:03,160
 and an entire tool chain
-turning LIR modules
+turning LLIR modules
 
 994
 01:01:03,160 --> 01:01:06,560
-into single module containing
+into a single module containing
 whole program information.
 
 995
 01:01:06,560 --> 01:01:09,520
-And finally on optimizer,
-which we call a LIO
+And finally an optimizer,
+which we call LLIR opt
 
 996
 01:01:09,520 --> 01:01:11,680
@@ -4802,7 +4802,7 @@ to executable machine code.
 
 998
 01:01:15,960 --> 01:01:19,000
-LLR is the central
+LLIR is the central
 component of our project.
 
 999
@@ -4818,17 +4818,17 @@ simple instructions
 1001
 01:01:24,400 --> 01:01:27,400
 and primitive types
-with direct hardware equivalence,
+with direct hardware equivalents,
 
 1002
 01:01:27,400 --> 01:01:30,680
-even though it is not LLVMIR
+even though it is not LLVM IR
 it's in their representation
 
 1003
 01:01:30,680 --> 01:01:34,520
 in C++ is almost
-identical to LLVMIR.
+identical to LLVM IR.
 
 1004
 01:01:34,520 --> 01:01:37,640
@@ -4837,13 +4837,13 @@ and we're using support libraries,
 
 1005
 01:01:37,640 --> 01:01:39,760
-including variable functions,
+including valuable functions
 and iterators
 
 1006
 01:01:39,760 --> 01:01:43,160
-such as dominatrices reconstruction.
-And post-surgery Russell's.
+such as dominator reconstruction.
+And (INAUDIBLE) traversals.
 
 1007
 01:01:43,160 --> 01:01:45,480
@@ -4863,7 +4863,7 @@ is highly valuable.
 1010
 01:01:50,680 --> 01:01:54,840
 Despite some similarities LLVM
-is definitely not LLVMIR.
+is definitely not LLVM IR.
 
 1011
 01:01:54,840 --> 01:01:58,520
@@ -4886,7 +4886,7 @@ and the intermediate
 
 1015
 01:02:06,240 --> 01:02:09,360
-representations found in CoLAG,
+representations found in clang.
 Ocaml first compiles
 
 1016
@@ -4901,7 +4901,7 @@ equivalent in LLVM.
 
 1018
 01:02:13,320 --> 01:02:16,920
-Require to step one level down
+Requires to step one level down
 in the Ocaml compiler.
 
 1019
@@ -4930,13 +4930,13 @@ equivalent to machine code,
 
 1024
 01:02:28,320 --> 01:02:31,120
-LLVMIR is more
+LLVM IR is more
 abstract than that.
 
 1025
 01:02:31,120 --> 01:02:33,520
 We need to lower it
-a bit in LVM.
+a bit in LLVM.
 
 1026
 01:02:33,520 --> 01:02:38,520
@@ -4945,7 +4945,7 @@ to be almost like machine code.
 
 1027
 01:02:38,520 --> 01:02:41,640
-We lower LLVMIR
+We lower LLVM IR
 to LLIR to the target
 
 1028
@@ -4955,7 +4955,7 @@ passing through
 
 1029
 01:02:44,040 --> 01:02:47,560
-selectionDAG at LLIR
+selection DAG and LLIR
 specific machine IR.
 
 1030
@@ -5001,7 +5001,7 @@ pieces of code
 1038
 01:03:09,240 --> 01:03:11,640
 and Ocaml has run time
-and the garbage collector
+and a garbage collector
 
 1039
 01:03:11,640 --> 01:03:13,760
@@ -5015,7 +5015,7 @@ Since our tool chain
 
 1041
 01:03:16,440 --> 01:03:18,520
-already includes Cong
+already includes clang
 We decided to use
 
 1042
@@ -5030,7 +5030,7 @@ presentation onwards.
 1044
 01:03:22,520 --> 01:03:24,360
 We have added
-a customer instructions
+custom instructions
 
 1045
 01:03:24,360 --> 01:03:27,320
@@ -5040,7 +5040,7 @@ we're using the entirety
 1046
 01:03:27,320 --> 01:03:30,520
 of the target-specific
-machine IO pipeline.
+machine IR pipeline.
 
 1047
 01:03:31,080 --> 01:03:34,160
@@ -5049,22 +5049,22 @@ we have a mapping
 
 1048
 01:03:34,160 --> 01:03:37,360
-from a selectionDAG to LLIR,
+from a selection DAG to LLIR,
 in our backend,
 
 1049
 01:03:37,360 --> 01:03:41,960
-we map LLIR to selection dag
+we map LLIR to selection DAG
 due to the circular dependency.
 
 1050
 01:03:41,960 --> 01:03:44,720
-Most of the LLRI instructions
+Most of the LLIR instructions
 have a direct correspondent
 
 1051
 01:03:44,720 --> 01:03:46,760
-in selectionDAG
+in selection DAG
 with the exception
 
 1052
@@ -5075,7 +5075,7 @@ complex constructs,
 1053
 01:03:48,480 --> 01:03:51,240
 such as function calls
-and 80 bits flows.
+and 80 bits floats.
 
 1054
 01:03:51,240 --> 01:03:56,200
@@ -5089,23 +5089,23 @@ a custom mapping
 
 1056
 01:03:57,880 --> 01:04:00,120
-from selectionDAG
+from selection DAG
 to LLIR, nor from
 
 1057
 01:04:00,120 --> 01:04:04,760
-LILR to selectionDAG.
-So, we simply map selectionDAG,
+LILR to selection DAG.
+So, we simply map selection DAG,
 
 1058
 01:04:04,760 --> 01:04:07,800
-(INAUDIBLE) instruction,
-and (INAUDIBLE) DDLR instruction
+to LLIR instruction,
+and LLIR instruction
 
 1059
 01:04:07,800 --> 01:04:10,520
-back to selectionDAG
-but function cause
+back to selection DAG
+but function calls
 
 1060
 01:04:10,520 --> 01:04:16,200
@@ -5115,7 +5115,7 @@ And even in all of LLVMs backends,
 1061
 01:04:16,200 --> 01:04:20,440
 they require a custom mapping
-from our LLVMR to selectionDAG,
+from LLVM IR to selection DAG,
 
 1062
 01:04:20,440 --> 01:04:23,440
@@ -5144,23 +5144,23 @@ pressing question
 
 1067
 01:04:33,840 --> 01:04:37,920
-is why not lower to LLVMIR.
+is why not lower to LLVM IR.
 Previous attempts
 
 1068
 01:04:37,920 --> 01:04:39,840
 made some progress
-a little bit with
+albeit with
 
 1069
 01:04:39,840 --> 01:04:41,880
-the run time cost,
+a run time cost,
 Ocaml is not
 
 1070
 01:04:41,880 --> 01:04:44,080
 an easy language
-to map two LLVM
+to map to LLVM
 
 1071
 01:04:44,080 --> 01:04:46,240
@@ -5170,7 +5170,7 @@ requires explicit
 1072
 01:04:46,240 --> 01:04:48,920
 stack manipulation
-Ocaml also selects
+Ocaml also has
 
 1073
 01:04:48,920 --> 01:04:50,560
@@ -5190,12 +5190,12 @@ for garbage collectors.
 1076
 01:04:55,720 --> 01:04:58,080
 It does not get
-a specifically to the needs
+a specific to the needs
 
 1077
 01:04:58,080 --> 01:05:01,160
-of Ocaml, through Duplo.
-We made significant progress though.
+of Ocaml. Through Duplo
+we made significant progress though.
 
 1078
 01:05:01,160 --> 01:05:03,160
@@ -5204,7 +5204,7 @@ the required instruction
 
 1079
 01:05:03,160 --> 01:05:06,680
-to a similar portion
+to a single portion
 of the target specific pipeline
 
 1080
@@ -5220,7 +5220,7 @@ garbage collector and run time.
 1082
 01:05:13,280 --> 01:05:16,480
 However, to achieve
-the same LDL LLVMIR level,
+the same ideal at the LLVM IR level,
 
 1083
 01:05:16,480 --> 01:05:19,720
@@ -5245,7 +5245,7 @@ on your Ocaml heap.
 1087
 01:05:30,240 --> 01:05:32,640
 It reads an argument,
-a pointer to appear
+a pointer to a pair
 
 1088
 01:05:32,640 --> 01:05:34,920
@@ -5255,17 +5255,17 @@ Individual elements
 1089
 01:05:34,920 --> 01:05:37,520
 are loaded using LD
-from offset computers
+from offsets computed
 
 1090
 01:05:37,520 --> 01:05:40,920
-using basic point arithmetic,
+using basic pointer arithmetic,
 the elements of squared
 
 1091
 01:05:40,920 --> 01:05:44,320
 using the multiply instruction,
-10 passed on to the skirted function
+are passed on to the sqrt function
 
 1092
 01:05:44,320 --> 01:05:46,000
@@ -5274,12 +5274,12 @@ into a heap allocated.
 
 1093
 01:05:46,640 --> 01:05:49,000
-Look, we can
+block, we can
 notice the annotations,
 
 1094
 01:05:49,000 --> 01:05:50,960
-the on Carmel runtime requires us
+the Ocaml runtime requires us
 
 1095
 01:05:50,960 --> 01:05:53,120
@@ -5287,20 +5287,20 @@ to identify all heap pointers,
 
 1096
 01:05:53,120 --> 01:05:54,760
-which we do using capital value.
+which we do using @camel_value.
 
 1097
 01:05:54,760 --> 01:05:57,200
-And let me frame tables
+And emit frame tables
 describing those which are live
 
 1098
 01:05:57,200 --> 01:05:59,280
-across all size that can allocate,
+across call sites that can allocate,
 
 1099
 01:05:59,280 --> 01:06:03,160
-all marked through Carmel frame.
+all marked through @caml_frame.
 
 1100
 01:06:03,160 --> 01:06:04,840
@@ -5322,7 +5322,7 @@ optimizations should be scarce
 
 1104
 01:06:13,160 --> 01:06:15,520
-or cameras should have
+Ocaml should have
 already optimized everything
 
 1105
@@ -5342,7 +5342,7 @@ opportunities
 
 1108
 01:06:22,600 --> 01:06:24,600
-that are exposed only on both Carmel
+that are exposed only when both Ocaml
 
 1109
 01:06:24,600 --> 01:06:27,160
@@ -5359,26 +5359,26 @@ opportunities for other steps.
 
 1112
 01:06:32,000 --> 01:06:33,600
-In-lining to achieves this,
+Inlining achieves this,
 
 1113
 01:06:33,600 --> 01:06:35,440
-unfortunately, in-lining
+unfortunately, inlining
 in this context
 
 1114
 01:06:35,440 --> 01:06:39,040
 is not as simple as copying
-a body into a quality.
+a body into a callee.
 
 1115
 01:06:39,040 --> 01:06:42,040
 The world is split into two
-realms of Carmel and C,
+realms: Ocaml and C,
 
 1116
 01:06:42,040 --> 01:06:43,840
-the two communicate to a trampoline
+the two communicate through a trampoline
 
 1117
 01:06:43,840 --> 01:06:47,480
@@ -5387,20 +5387,20 @@ for the runtime.
 
 1118
 01:06:47,480 --> 01:06:49,480
-When we inline C to Carmel,
+When we inline C into Ocaml,
 
 1119
 01:06:49,480 --> 01:06:51,480
 we actually create
-a bigger of Carmel function
+a bigger Ocaml function
 
 1120
 01:06:51,480 --> 01:06:53,280
-and push the trombolines down.
+and push the trampolines down.
 
 1121
 01:06:53,280 --> 01:06:56,080
-Even the G initially called
+Even though G initially called
 F without a trampoline,
 
 1122
@@ -5443,7 +5443,7 @@ This is a great improvement
 1130
 01:07:18,440 --> 01:07:21,560
 since it eliminates the upfront
-cost of route management,
+cost of root management,
 
 1131
 01:07:21,560 --> 01:07:24,400
@@ -5462,21 +5462,21 @@ move C functions,
 1134
 01:07:28,000 --> 01:07:30,280
 which allocate over
-to the Carmel realm.
+to the Ocaml realm.
 
 1135
 01:07:30,280 --> 01:07:32,600
 First simplify manual
-route management,
+root management,
 
 1136
 01:07:32,600 --> 01:07:36,080
 and possibly ending up on
-using Carmel value annotations
+using Ocaml value annotations
 
 1137
 01:07:36,080 --> 01:07:38,680
-to identify routes.
+to identify roots.
 
 1138
 01:07:38,680 --> 01:07:40,920
@@ -5490,7 +5490,7 @@ about whether our function
 
 1140
 01:07:43,120 --> 01:07:46,280
-is a Carmel specific or C
+is Ocaml specific or C
 specific erasing the boundary
 
 1141
@@ -5508,7 +5508,7 @@ increments of double,
 
 1144
 01:07:52,600 --> 01:07:56,080
-on boxing a value, adding one
+unboxing a value, adding one
 to it and boxing it back,
 
 1145
@@ -5522,7 +5522,7 @@ After in-lining,
 1147
 01:07:59,760 --> 01:08:02,640
 we see that the boxing
-Carmel copy double cole
+Ocaml copy double call
 
 1148
 01:08:02,640 --> 01:08:06,440
@@ -5537,7 +5537,7 @@ two consecutive invocations?
 1150
 01:08:10,080 --> 01:08:14,120
 Unfortunately, we get the chain
-of boxing on boxing steps.
+of boxing unboxing steps.
 
 1151
 01:08:14,120 --> 01:08:16,520
@@ -5552,7 +5552,7 @@ the nontrivial task
 1153
 01:08:19,080 --> 01:08:22,920
 of understanding pointers
-and blocks under heap
+and blocks on the heap
 
 1154
 01:08:22,920 --> 01:08:25,160
@@ -5561,7 +5561,7 @@ a simple transformation,
 
 1155
 01:08:25,160 --> 01:08:29,120
-such as cost and propagation.
+such as constant propagation.
 
 1156
 01:08:29,120 --> 01:08:31,680
@@ -5600,8 +5600,8 @@ type of information.
 
 1164
 01:08:45,480 --> 01:08:48,320
-And if, even if we are
-typing information,
+And if, even if we have
+type information,
 
 1165
 01:08:48,320 --> 01:08:50,800
@@ -5609,7 +5609,7 @@ due to the fact that C has unions,
 
 1166
 01:08:50,800 --> 01:08:53,400
-the type of ratio you could
+the type information you could
 possibly keep would be minimal,
 
 1167
@@ -5633,7 +5633,7 @@ aligned as specific addresses.
 
 1171
 01:09:08,960 --> 01:09:11,800
-As a proof of concept, we are
+As a proof of concept, we have
 built two transformations
 
 1172
@@ -5642,7 +5642,7 @@ working with pointers.
 
 1173
 01:09:13,080 --> 01:09:17,200
-A local analyst to propagate
+A local analisys to propagate
 value store to memory
 
 1174
@@ -5652,11 +5652,11 @@ to loads reading them
 1175
 01:09:18,680 --> 01:09:21,640
 and a global analysis to
-identify in your quote targets
+identify indirect call targets
 
 1176
 01:09:21,640 --> 01:09:25,200
-essential for that code elimination.
+essential for dead code elimination.
 
 1177
 01:09:25,200 --> 01:09:27,440
@@ -5666,7 +5666,7 @@ implements a number
 1178
 01:09:27,440 --> 01:09:29,400
 of classic transformations
-which are acquired
+which are recquired
 
 1179
 01:09:29,400 --> 01:09:31,680
@@ -5674,7 +5674,7 @@ mostly to eliminate inefficiencies
 
 1180
 01:09:31,680 --> 01:09:35,520
-in the C, OCaml, LRI lowering.
+in the C, OCaml, LLIR lowering.
 
 1181
 01:09:35,520 --> 01:09:38,000
@@ -5711,17 +5711,17 @@ include sparse condition
 
 1188
 01:09:55,320 --> 01:09:56,480
-of concept propagation,
+and constant propagation,
 
 1189
 01:09:56,480 --> 01:09:59,760
-RH able code elimination
-control show simplification
+unreachable code elimination
+control flow simplification
 
 1190
 01:09:59,760 --> 01:10:01,400
 and these are schedules
-of free lining
+after inlining
 
 1191
 01:10:01,400 --> 01:10:04,160
@@ -5730,15 +5730,15 @@ the program quite a bit.
 
 1192
 01:10:04,160 --> 01:10:05,720
-Dairy curd elimination is vital.
+Tail recursion elimination is vital.
 
 1193
 01:10:05,720 --> 01:10:08,200
-LOVM cannot lower directory curse
+LLVM cannot lower direct tail recursion
 
 1194
 01:10:08,200 --> 01:10:09,960
-as effectively as O Camel,
+as effectively as OCaml,
 
 1195
 01:10:09,960 --> 01:10:12,760
@@ -5756,7 +5756,7 @@ specific to this context
 
 1198
 01:10:19,200 --> 01:10:20,760
-is Trump elimination.
+is trampoline elimination.
 
 1199
 01:10:20,760 --> 01:10:22,960
@@ -5765,11 +5765,11 @@ OCaml requires a trampoline
 1200
 01:10:22,960 --> 01:10:24,840
 to switch from
-the OCaml colony convention
+the OCaml calling convention
 
 1201
 01:10:24,840 --> 01:10:26,840
-to the seed quality
+to the C calling
 convention when invoking
 
 1202
@@ -5783,7 +5783,7 @@ Since you have global information,
 1204
 01:10:30,760 --> 01:10:32,720
 we can change the calling
-convention of C matter
+convention of C method
 
 1205
 01:10:32,720 --> 01:10:34,320
@@ -5800,18 +5800,18 @@ These transformations,
 
 1208
 01:10:38,840 --> 01:10:42,600
-along with the LOVM culture
+along with the LLVM cde generator
 provide some benefit.
 
 1209
 01:10:42,600 --> 01:10:44,760
-With benchmark our optimizer
-and our subset of benchmarks
+We benchmarked our optimizer
+on a subset of benchmarks
 
 1210
 01:10:44,760 --> 01:10:47,160
-from Opera of Mackerel
-and Opera free crawl.
+from operf-macro
+and operf-micro.
 
 1211
 01:10:47,160 --> 01:10:49,720
@@ -5834,7 +5834,7 @@ globals in registers
 
 1215
 01:10:56,960 --> 01:10:59,960
-and we do not align allocations.
+and we do not inline allocations.
 
 1216
 01:10:59,960 --> 01:11:01,960
@@ -5842,17 +5842,17 @@ Despite these mitigations,
 
 1217
 01:11:01,960 --> 01:11:05,560
-the active results should
+the relative results should
 still be relevant.
 
 1218
 01:11:05,560 --> 01:11:07,640
-All links did reverse
+Our linker delivers
 a significant reduction
 
 1219
 01:11:07,640 --> 01:11:09,480
-in coat size while LOVM manages
+in code size while LLVM manages
 
 1220
 01:11:09,480 --> 01:11:12,600
@@ -5892,8 +5892,8 @@ for cross-language optimization
 
 1228
 01:11:26,880 --> 01:11:29,000
-as our in-line curistics
-and poised analysis
+as our in-line heuristics
+and (INAUDIBLE) analysis
 
 1229
 01:11:29,000 --> 01:11:30,440
@@ -5906,7 +5906,7 @@ inline aggressively functions
 
 1231
 01:11:33,360 --> 01:11:35,040
-which box would
+which box or
 deconstruct arguments
 
 1232
@@ -5943,12 +5943,12 @@ We do gain in performance a bit
 1239
 01:11:51,680 --> 01:11:53,800
 by mitigating inefficiencies
-in both back hands
+in both back ends
 
 1240
 01:11:53,800 --> 01:11:56,280
 and inlining some small
-matter through the
+methods through the
 
 1241
 01:11:56,280 --> 01:12:00,360
@@ -5958,11 +5958,11 @@ we have presented earlier.
 1242
 01:12:00,360 --> 01:12:02,440
 To sum up, we have presented
-a double of framework
+a Duplo framework
 
 1243
 01:12:02,440 --> 01:12:03,840
-to inline C intoOCaml,
+to inline C into OCaml,
 
 1244
 01:12:03,840 --> 01:12:06,880
@@ -5976,19 +5976,19 @@ to capture both
 
 1246
 01:12:09,120 --> 01:12:12,280
-OCaml and C which we call LIR.
+OCaml and C which we call LLIR.
 
 1247
 01:12:12,280 --> 01:12:14,160
-Finally, as our culture nature,
+Finally, as our code generator,
 
 1248
 01:12:14,160 --> 01:12:16,960
-we assume how OCaml can be lower
+we assure how OCaml can be lowered
 
 1249
 01:12:16,960 --> 01:12:18,520
-to part of the LOVM pipeline,
+to part of the LLVM pipeline,
 
 1250
 01:12:18,520 --> 01:12:21,760
