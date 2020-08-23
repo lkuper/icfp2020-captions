@@ -1,11 +1,14 @@
 1
 00:00:49,080 --> 00:00:54,080
 
+
 2
 00:04:20,920 --> 00:04:25,920
 
+
 3
 00:08:00,520 --> 00:08:05,520
+
 
 4
 00:13:01,920 --> 00:13:04,560
@@ -109,11 +112,11 @@ and Norman Danner.
 26
 00:14:03,920 --> 00:14:06,200
 So, if I handed you this
-code from mergeSort
+code for mergeSort
 
 27
 00:14:06,200 --> 00:14:07,840
-and then ask you to
+and then asked you to
 write down a recurrence
 
 28
@@ -140,13 +143,13 @@ is actually pretty subtle.
 
 33
 00:14:18,400 --> 00:14:21,760
-It required known things about
+It required knowing things about
 the sizes of the results of functions.
 
 34
 00:14:21,760 --> 00:14:24,600
 Like the fact that
-split splits lists n/2
+split splits lists in half
 
 35
 00:14:24,600 --> 00:14:27,480
@@ -156,7 +159,7 @@ down to just a length.
 36
 00:14:27,480 --> 00:14:30,040
 And even more importantly
-as a PO person,
+as a PL person,
 
 37
 00:14:30,040 --> 00:14:32,640
@@ -175,7 +178,7 @@ the cost of program execution
 
 40
 00:14:38,000 --> 00:14:42,280
-in terms of beta redex
+in terms of beta redexes
 or some other cost metrics.
 
 41
@@ -203,7 +206,7 @@ and ensure that it's correct?
 
 46
 00:14:56,280 --> 00:14:59,200
-Well, at ICSP five years ago,
+Well, at ICFP five years ago,
 
 47
 00:14:59,200 --> 00:15:02,120
@@ -236,7 +239,7 @@ a language-to-language translation.
 
 53
 00:15:14,960 --> 00:15:17,040
-So, given the term of
+So, given the term in
 some source language
 
 54
@@ -326,11 +329,11 @@ is defined compositionally
 
 72
 00:16:05,800 --> 00:16:08,120
-by recursion of a row syntax.
+by recursion over raw syntax.
 
 73
 00:16:08,120 --> 00:16:09,640
-So, given a term and a source,
+So, given a term in the source,
 
 74
 00:16:09,640 --> 00:16:12,600
@@ -363,8 +366,8 @@ of a size translation.
 
 80
 00:16:23,480 --> 00:16:26,000
-Errors in the source become
-clearly errors in lambda C.
+Arrows in the source become
+Kleisli arrows in lambda C.
 
 81
 00:16:27,360 --> 00:16:29,040
@@ -437,7 +440,7 @@ to the extracted recurrences.
 
 95
 00:17:14,880 --> 00:17:17,520
-One important piece of the,
+One important piece of the
 informal analysis
 
 96
@@ -478,7 +481,7 @@ recognise as recurrences.
 103
 00:17:38,040 --> 00:17:41,400
 You can compute closed forms and
-(INAUDIBLE) and stuff like that.
+asymptotics and stuff like that.
 
 104
 00:17:42,160 --> 00:17:45,120
@@ -512,7 +515,7 @@ types all the way up to PCF
 
 110
 00:17:59,600 --> 00:18:03,760
-and ml style let polymorphism.
+and ML-style let polymorphism.
 But all this prior work
 
 111
@@ -567,7 +570,7 @@ is a simple binary counter
 121
 00:18:34,920 --> 00:18:37,880
 and the second is splay trees
-as presented in (INAUDIBLE).
+as presented in Okasaki.
 
 122
 00:18:38,640 --> 00:18:41,760
@@ -581,7 +584,7 @@ analysis techniques
 
 124
 00:18:44,040 --> 00:18:45,760
-such as resource aware ml.
+such as resource aware ML.
 
 125
 00:18:45,760 --> 00:18:50,040
@@ -596,7 +599,7 @@ I only have like
 127
 00:18:52,280 --> 00:18:55,200
 I'll use the binary counter as
-one example to motivate the way
+a running example to motivate the way
 
 128
 00:18:55,200 --> 00:18:57,680
@@ -711,7 +714,7 @@ whole list every single time.
 150
 00:19:56,240 --> 00:19:59,000
 And unfortunately, this is exactly
-what the prior working
+what the prior work in
 
 151
 00:19:59,000 --> 00:20:01,720
@@ -796,7 +799,7 @@ as a map between Posets.
 167
 00:20:39,840 --> 00:20:43,080
 Most importantly, we interpret the
-bitless type as the natural numbers
+bit list type as the natural numbers
 
 168
 00:20:43,080 --> 00:20:46,240
@@ -820,7 +823,7 @@ that we talked about before .
 172
 00:20:54,240 --> 00:20:56,800
 If you carry it all through
-poset you still get on login.
+for set you still get O(n log n).
 
 173
 00:20:57,400 --> 00:21:00,400
@@ -933,7 +936,7 @@ the binary counter is that
 195
 00:21:57,720 --> 00:22:01,760
 we keep one credit on each
-console, which holds a one bit.
+cons cell, which holds a one bit.
 
 196
 00:22:02,240 --> 00:22:04,400
@@ -988,7 +991,7 @@ spending the credit which used
 206
 00:22:29,040 --> 00:22:32,440
 to be on the least significant bit.
-Again total to amortized costs.
+Again total two amortized costs.
 
 207
 00:22:33,480 --> 00:22:36,200
@@ -1093,7 +1096,7 @@ modality to the language.
 227
 00:23:31,200 --> 00:23:35,480
 The terms of type bang, cA,
-are modality terms of Type A
+are morally terms of Type A
 
 228
 00:23:35,480 --> 00:23:37,760
@@ -1101,7 +1104,7 @@ that carry c extra credits.
 
 229
 00:23:37,760 --> 00:23:40,440
-And the intro (INAUDIBLE) rules
+And the intro/elim rules
 for this modality
 
 230
@@ -1130,7 +1133,7 @@ and get a term type bang cA.
 
 235
 00:23:54,320 --> 00:23:57,600
-And the (INAUDIBLE) rule says that if
+And the elim rule says that if
 we have a term of type bang cA,
 
 236
@@ -1215,12 +1218,12 @@ bit type to be unit plus bang one
 
 252
 00:24:46,600 --> 00:24:50,040
-unit, a bit is either in left of
+unit, a bit is either in-left of
 a unit which represents a zero,
 
 253
 00:24:50,040 --> 00:24:52,560
-or in a right of a unit
+or in-right of a unit
 with one credit attached,
 
 254
@@ -1305,12 +1308,12 @@ the term along with its size.
 270
 00:25:36,640 --> 00:25:40,160
 So, since creating A credits
-incurs a cost of m
+incurs a cost of A
 
 271
 00:25:40,160 --> 00:25:44,000
 just add A to the extracted cost
-and duly we subtract A
+and dually we subtract A
 
 272
 00:25:44,000 --> 00:25:45,720
@@ -1384,13 +1387,13 @@ significant bit,
 
 286
 00:26:22,800 --> 00:26:26,240
-increment cost two, one from
+increment costs two, one from
 the cons one from creating credit
 
 287
 00:26:26,240 --> 00:26:29,680
 When is the least significant bit
-one, the cost we attract is simply
+one, the cost we extract is simply
 
 288
 00:26:29,680 --> 00:26:31,760

@@ -36,34 +36,34 @@ Dialogue: 0,0:13:55.88,0:13:57.52,Default,,0,0,0,,JOE CUTLER: Hi, I'm Joe Cutler
 Dialogue: 0,0:13:57.52,0:13:59.72,Default,,0,0,0,,I'm an undergraduate at Wesleyan\NUniversity in Connecticut.
 Dialogue: 0,0:13:59.72,0:14:01.88,Default,,0,0,0,,And this is work with\Nmy advisor Dan Licata
 Dialogue: 0,0:14:01.88,0:14:03.92,Default,,0,0,0,,and Norman Danner.
-Dialogue: 0,0:14:03.92,0:14:06.20,Default,,0,0,0,,So, if I handed you this\Ncode from mergeSort
-Dialogue: 0,0:14:06.20,0:14:07.84,Default,,0,0,0,,and then ask you to\Nwrite down a recurrence
+Dialogue: 0,0:14:03.92,0:14:06.20,Default,,0,0,0,,So, if I handed you this\Ncode for mergeSort
+Dialogue: 0,0:14:06.20,0:14:07.84,Default,,0,0,0,,and then asked you to\Nwrite down a recurrence
 Dialogue: 0,0:14:07.84,0:14:09.88,Default,,0,0,0,,for its worst-case execution cost,
 Dialogue: 0,0:14:09.88,0:14:11.40,Default,,0,0,0,,you'll probably end up writing down
 Dialogue: 0,0:14:11.40,0:14:14.16,Default,,0,0,0,,pretty much exactly this\Nexpression right here.
 Dialogue: 0,0:14:14.16,0:14:15.88,Default,,0,0,0,,But the thing you did in\Nyour head to get there
 Dialogue: 0,0:14:15.88,0:14:18.40,Default,,0,0,0,,is actually pretty subtle.
-Dialogue: 0,0:14:18.40,0:14:21.76,Default,,0,0,0,,It required known things about\Nthe sizes of the results of functions.
-Dialogue: 0,0:14:21.76,0:14:24.60,Default,,0,0,0,,Like the fact that\Nsplit splits lists n/2
+Dialogue: 0,0:14:18.40,0:14:21.76,Default,,0,0,0,,It required knowing things about\Nthe sizes of the results of functions.
+Dialogue: 0,0:14:21.76,0:14:24.60,Default,,0,0,0,,Like the fact that\Nsplit splits lists in half
 Dialogue: 0,0:14:24.60,0:14:27.48,Default,,0,0,0,,and abstracting list\Ndown to just a length.
-Dialogue: 0,0:14:27.48,0:14:30.04,Default,,0,0,0,,And even more importantly\Nas a PO person,
+Dialogue: 0,0:14:27.48,0:14:30.04,Default,,0,0,0,,And even more importantly\Nas a PL person,
 Dialogue: 0,0:14:30.04,0:14:32.64,Default,,0,0,0,,you might even have\Nan operational semantics
 Dialogue: 0,0:14:32.64,0:14:34.60,Default,,0,0,0,,for a language that this\Nfunction is written in,
 Dialogue: 0,0:14:34.60,0:14:38.00,Default,,0,0,0,,that precisely defines\Nthe cost of program execution
-Dialogue: 0,0:14:38.00,0:14:42.28,Default,,0,0,0,,in terms of beta redex\Nor some other cost metrics.
+Dialogue: 0,0:14:38.00,0:14:42.28,Default,,0,0,0,,in terms of beta redexes\Nor some other cost metrics.
 Dialogue: 0,0:14:42.28,0:14:44.52,Default,,0,0,0,,And how do you know this\Nrecurrence you wrote down
 Dialogue: 0,0:14:44.52,0:14:48.20,Default,,0,0,0,,has anything to do whatsoever\Nwith those formal costs?
 Dialogue: 0,0:14:48.20,0:14:49.76,Default,,0,0,0,,So, in other words,
 Dialogue: 0,0:14:49.76,0:14:54.28,Default,,0,0,0,,how do we make this informal process\Nof recurrence extraction formal
 Dialogue: 0,0:14:54.28,0:14:56.28,Default,,0,0,0,,and ensure that it's correct?
-Dialogue: 0,0:14:56.28,0:14:59.20,Default,,0,0,0,,Well, at ICSP five years ago,
+Dialogue: 0,0:14:56.28,0:14:59.20,Default,,0,0,0,,Well, at ICFP five years ago,
 Dialogue: 0,0:14:59.20,0:15:02.12,Default,,0,0,0,,the other two authors of this\Npaper and their co-author
 Dialogue: 0,0:15:02.12,0:15:05.08,Default,,0,0,0,,presented an answer to\Nexactly that question.
 Dialogue: 0,0:15:05.08,0:15:07.28,Default,,0,0,0,,And I guess rather than\Nkeep you on suspense,
 Dialogue: 0,0:15:07.28,0:15:10.16,Default,,0,0,0,,I just show you what\Nthey came up with.
 Dialogue: 0,0:15:10.16,0:15:12.72,Default,,0,0,0,,So, recurrence extraction\Nis formalized as
 Dialogue: 0,0:15:12.72,0:15:14.96,Default,,0,0,0,,a language-to-language translation.
-Dialogue: 0,0:15:14.96,0:15:17.04,Default,,0,0,0,,So, given the term of\Nsome source language
+Dialogue: 0,0:15:14.96,0:15:17.04,Default,,0,0,0,,So, given the term in\Nsome source language
 Dialogue: 0,0:15:17.04,0:15:20.00,Default,,0,0,0,,we can translate it into\Na language that we call lambda C
 Dialogue: 0,0:15:20.00,0:15:21.92,Default,,0,0,0,,which is a language whose terms are
 Dialogue: 0,0:15:21.92,0:15:24.48,Default,,0,0,0,,syntactic recurrence relations.
@@ -82,15 +82,15 @@ Dialogue: 0,0:15:53.24,0:15:56.92,Default,,0,0,0,,where the size of a function i
 Dialogue: 0,0:15:56.92,0:16:00.44,Default,,0,0,0,,So, it's a function from\Nsizes to cost and sizes.
 Dialogue: 0,0:16:00.44,0:16:02.60,Default,,0,0,0,,Now, the real meat of this\Nrecurrence extraction
 Dialogue: 0,0:16:02.60,0:16:05.80,Default,,0,0,0,,is the term translation which\Nis defined compositionally
-Dialogue: 0,0:16:05.80,0:16:08.12,Default,,0,0,0,,by recursion of a row syntax.
-Dialogue: 0,0:16:08.12,0:16:09.64,Default,,0,0,0,,So, given a term and a source,
+Dialogue: 0,0:16:05.80,0:16:08.12,Default,,0,0,0,,by recursion over raw syntax.
+Dialogue: 0,0:16:08.12,0:16:09.64,Default,,0,0,0,,So, given a term in the source,
 Dialogue: 0,0:16:09.64,0:16:12.60,Default,,0,0,0,,we can just translate it\Nto a term in lambda C.
 Dialogue: 0,0:16:12.60,0:16:15.24,Default,,0,0,0,,Now, if you're\Na monadically minded person,
 Dialogue: 0,0:16:15.24,0:16:17.60,Default,,0,0,0,,you might recognize\Nall of this as being
 Dialogue: 0,0:16:17.60,0:16:20.04,Default,,0,0,0,,a monadic translation\Ninto the writer monad.
 Dialogue: 0,0:16:20.04,0:16:22.04,Default,,0,0,0,,And all of this helps\Nmotivate the definition
 Dialogue: 0,0:16:22.04,0:16:23.48,Default,,0,0,0,,of a size translation.
-Dialogue: 0,0:16:23.48,0:16:26.00,Default,,0,0,0,,Errors in the source become\Nclearly errors in lambda C.
+Dialogue: 0,0:16:23.48,0:16:26.00,Default,,0,0,0,,Arrows in the source become\NKleisli arrows in lambda C.
 Dialogue: 0,0:16:27.36,0:16:29.04,Default,,0,0,0,,So we've extracted\Nrecurrences
 Dialogue: 0,0:16:29.04,0:16:30.80,Default,,0,0,0,,from the source language\Ninto lambda C.
 Dialogue: 0,0:16:30.80,0:16:34.28,Default,,0,0,0,,And now we need to prove that\Nthis extraction procedure is correct.
@@ -105,7 +105,7 @@ Dialogue: 0,0:16:59.00,0:17:03.28,Default,,0,0,0,,then the extracted cost of run
 Dialogue: 0,0:17:03.28,0:17:06.88,Default,,0,0,0,,and also the usual logical relations\Nvalue relation nonsense.
 Dialogue: 0,0:17:06.88,0:17:10.28,Default,,0,0,0,,But anyway, this theorem is the\Ncrucial step, it formally connects
 Dialogue: 0,0:17:10.28,0:17:13.64,Default,,0,0,0,,the operational cost model\Nto the extracted recurrences.
-Dialogue: 0,0:17:14.88,0:17:17.52,Default,,0,0,0,,One important piece of the,\Ninformal analysis
+Dialogue: 0,0:17:14.88,0:17:17.52,Default,,0,0,0,,One important piece of the\Ninformal analysis
 Dialogue: 0,0:17:17.52,0:17:20.80,Default,,0,0,0,,that this translation doesn't take\Ninto account is size abstraction,
 Dialogue: 0,0:17:20.80,0:17:24.00,Default,,0,0,0,,like say, analysing a function\Nwhich takes a list in terms
 Dialogue: 0,0:17:24.00,0:17:27.12,Default,,0,0,0,,of its length or a tree function\Nby depth or something like that.
@@ -113,14 +113,14 @@ Dialogue: 0,0:17:27.12,0:17:30.44,Default,,0,0,0,,Now, we do this abstraction\Nu
 Dialogue: 0,0:17:30.44,0:17:32.52,Default,,0,0,0,,from lambda c into\Npartially ordered sets.
 Dialogue: 0,0:17:32.52,0:17:35.00,Default,,0,0,0,,And this means that the\Nobjects that we get out
 Dialogue: 0,0:17:35.00,0:17:38.04,Default,,0,0,0,,are the standard objects you'd\Nrecognise as recurrences.
-Dialogue: 0,0:17:38.04,0:17:41.40,Default,,0,0,0,,You can compute closed forms and\N(INAUDIBLE) and stuff like that.
+Dialogue: 0,0:17:38.04,0:17:41.40,Default,,0,0,0,,You can compute closed forms and\Nasymptotics and stuff like that.
 Dialogue: 0,0:17:42.16,0:17:45.12,Default,,0,0,0,,OK, that was a lot of technical\Ndetail, I acknowledge that
 Dialogue: 0,0:17:45.12,0:17:48.04,Default,,0,0,0,,but luckily all this has all\Nbeen done before.
 Dialogue: 0,0:17:48.04,0:17:50.24,Default,,0,0,0,,And in the year since this\Ntechnique was developed,
 Dialogue: 0,0:17:50.24,0:17:53.08,Default,,0,0,0,,it's been employed to formalise\Nrecurrence extraction
 Dialogue: 0,0:17:53.08,0:17:55.88,Default,,0,0,0,,for increasingly realistic languages\Nfrom the simply typed
 Dialogue: 0,0:17:55.88,0:17:59.60,Default,,0,0,0,,lambda calculus to inductive\Ntypes all the way up to PCF
-Dialogue: 0,0:17:59.60,0:18:03.76,Default,,0,0,0,,and ml style let polymorphism.\NBut all this prior work
+Dialogue: 0,0:17:59.60,0:18:03.76,Default,,0,0,0,,and ML-style let polymorphism.\NBut all this prior work
 Dialogue: 0,0:18:03.76,0:18:06.76,Default,,0,0,0,,is limited in the kinds of analyses\Nthey can handle.
 Dialogue: 0,0:18:06.76,0:18:10.28,Default,,0,0,0,,Only ever worst case cost\Nanalysis and in many cases,
 Dialogue: 0,0:18:10.28,0:18:12.76,Default,,0,0,0,,worst case cost analysis\Nsimply isn't enough
@@ -131,13 +131,13 @@ Dialogue: 0,0:18:22.36,0:18:24.52,Default,,0,0,0,,to handle amortized analysis.
 Dialogue: 0,0:18:25.56,0:18:28.88,Default,,0,0,0,,So, in the paper we go over\Ntwo standard examples
 Dialogue: 0,0:18:28.88,0:18:32.08,Default,,0,0,0,,of amortized analysis to\Ndemonstrate the effectiveness
 Dialogue: 0,0:18:32.08,0:18:34.92,Default,,0,0,0,,of our technique. And the first\Nis a simple binary counter
-Dialogue: 0,0:18:34.92,0:18:37.88,Default,,0,0,0,,and the second is splay trees\Nas presented in (INAUDIBLE).
+Dialogue: 0,0:18:34.92,0:18:37.88,Default,,0,0,0,,and the second is splay trees\Nas presented in Okasaki.
 Dialogue: 0,0:18:38.64,0:18:41.76,Default,,0,0,0,,The splay trees are notable because\Nthey aren't really well handled
 Dialogue: 0,0:18:41.76,0:18:44.04,Default,,0,0,0,,by automated amortized\Nanalysis techniques
-Dialogue: 0,0:18:44.04,0:18:45.76,Default,,0,0,0,,such as resource aware ml.
+Dialogue: 0,0:18:44.04,0:18:45.76,Default,,0,0,0,,such as resource aware ML.
 Dialogue: 0,0:18:45.76,0:18:50.04,Default,,0,0,0,,And since the analysis of splay trees\Nis really complicated,
 Dialogue: 0,0:18:50.04,0:18:51.64,Default,,0,0,0,,I only have like\N10 more minutes.
-Dialogue: 0,0:18:52.28,0:18:55.20,Default,,0,0,0,,I'll use the binary counter as\None example to motivate the way
+Dialogue: 0,0:18:52.28,0:18:55.20,Default,,0,0,0,,I'll use the binary counter as\Na running example to motivate the way
 Dialogue: 0,0:18:55.20,0:18:57.68,Default,,0,0,0,,that we made our papers\Nmain contribution.
 Dialogue: 0,0:18:57.68,0:19:01.00,Default,,0,0,0,,So, consider a binary number\Nrepresented as a list of bits
 Dialogue: 0,0:19:01.00,0:19:03.36,Default,,0,0,0,,with the least significant\Nbit at the head,
@@ -160,7 +160,7 @@ Dialogue: 0,0:19:44.60,0:19:47.68,Default,,0,0,0,,of the increment happens way\N
 Dialogue: 0,0:19:47.68,0:19:50.44,Default,,0,0,0,,But you have to take the max between\Nthe two non empty branches
 Dialogue: 0,0:19:50.44,0:19:53.24,Default,,0,0,0,,when you extract the recurrence,\Nwhich makes it look like
 Dialogue: 0,0:19:53.24,0:19:56.24,Default,,0,0,0,,increment traverses the\Nwhole list every single time.
-Dialogue: 0,0:19:56.24,0:19:59.00,Default,,0,0,0,,And unfortunately, this is exactly\Nwhat the prior working
+Dialogue: 0,0:19:56.24,0:19:59.00,Default,,0,0,0,,And unfortunately, this is exactly\Nwhat the prior work in
 Dialogue: 0,0:19:59.00,0:20:01.72,Default,,0,0,0,,formal recurrence extraction\Nwould do to this example.
 Dialogue: 0,0:20:01.72,0:20:03.24,Default,,0,0,0,,So, motivate some\Nstuff down the line,
 Dialogue: 0,0:20:03.24,0:20:04.92,Default,,0,0,0,,let's take a look at\Nhow that would go.
@@ -177,12 +177,12 @@ Dialogue: 0,0:20:28.60,0:20:31.40,Default,,0,0,0,,when the least significant bit
 Dialogue: 0,0:20:31.40,0:20:33.24,Default,,0,0,0,,plus the cost of\Nrecursing down the tail.
 Dialogue: 0,0:20:33.96,0:20:36.68,Default,,0,0,0,,Now, after this, we use\Nthe denotational semantics
 Dialogue: 0,0:20:36.68,0:20:39.84,Default,,0,0,0,,to interpret this recurrence\Nas a map between Posets.
-Dialogue: 0,0:20:39.84,0:20:43.08,Default,,0,0,0,,Most importantly, we interpret the\Nbitless type as the natural numbers
+Dialogue: 0,0:20:39.84,0:20:43.08,Default,,0,0,0,,Most importantly, we interpret the\Nbit list type as the natural numbers
 Dialogue: 0,0:20:43.08,0:20:46.24,Default,,0,0,0,,which abstracts a list to its\Nlength in the traditional way.
 Dialogue: 0,0:20:46.76,0:20:50.12,Default,,0,0,0,,Now the monotone maps of\Nposets we get in the semantics
 Dialogue: 0,0:20:50.12,0:20:52.20,Default,,0,0,0,,represent the exact\Nsame loose bounds
 Dialogue: 0,0:20:52.20,0:20:53.48,Default,,0,0,0,,that we talked about before .
-Dialogue: 0,0:20:54.24,0:20:56.80,Default,,0,0,0,,If you carry it all through\Nposet you still get on login.
+Dialogue: 0,0:20:54.24,0:20:56.80,Default,,0,0,0,,If you carry it all through\Nfor set you still get O(n log n).
 Dialogue: 0,0:20:57.40,0:21:00.40,Default,,0,0,0,,So, we've seen how the\Nprevious work comes up short.
 Dialogue: 0,0:21:00.40,0:21:02.52,Default,,0,0,0,,Now let's take a look at how\Nthe amortized analysis
 Dialogue: 0,0:21:02.52,0:21:06.16,Default,,0,0,0,,of the binary counter actually\Nshould work to help inform
@@ -205,7 +205,7 @@ Dialogue: 0,0:21:48.24,0:21:50.84,Default,,0,0,0,,but then you can spend\Nthem t
 Dialogue: 0,0:21:50.84,0:21:53.04,Default,,0,0,0,,And by passing these credits\Naround the program,
 Dialogue: 0,0:21:53.04,0:21:54.68,Default,,0,0,0,,you can rearrange costs.
 Dialogue: 0,0:21:55.32,0:21:57.72,Default,,0,0,0,,The credit invariant for\Nthe binary counter is that
-Dialogue: 0,0:21:57.72,0:22:01.76,Default,,0,0,0,,we keep one credit on each\Nconsole, which holds a one bit.
+Dialogue: 0,0:21:57.72,0:22:01.76,Default,,0,0,0,,we keep one credit on each\Ncons cell, which holds a one bit.
 Dialogue: 0,0:22:02.24,0:22:04.40,Default,,0,0,0,,So, here's an example to\Nillustrate how this works.
 Dialogue: 0,0:22:04.40,0:22:06.48,Default,,0,0,0,,We start with an empty count\Nwith no credits.
 Dialogue: 0,0:22:06.48,0:22:08.80,Default,,0,0,0,,And then the first increment\Nflips the first bit
@@ -216,7 +216,7 @@ Dialogue: 0,0:22:18.88,0:22:21.12,Default,,0,0,0,,from one to zero and the\Nseco
 Dialogue: 0,0:22:21.12,0:22:23.68,Default,,0,0,0,,And then to reestablish the credit\Ninvariant we spawn a credit
 Dialogue: 0,0:22:23.68,0:22:26.08,Default,,0,0,0,,to put on the new one bit,\Nwhich incurs a cost of one
 Dialogue: 0,0:22:26.08,0:22:29.04,Default,,0,0,0,,but then that's cancelled out by\Nspending the credit which used
-Dialogue: 0,0:22:29.04,0:22:32.44,Default,,0,0,0,,to be on the least significant bit.\NAgain total to amortized costs.
+Dialogue: 0,0:22:29.04,0:22:32.44,Default,,0,0,0,,to be on the least significant bit.\NAgain total two amortized costs.
 Dialogue: 0,0:22:33.48,0:22:36.20,Default,,0,0,0,,This is the essence of the analysis\Nand you can convince yourself
 Dialogue: 0,0:22:36.20,0:22:40.00,Default,,0,0,0,,that in every case, the amortised\Ncost of increment is two.
 Dialogue: 0,0:22:40.00,0:22:43.92,Default,,0,0,0,,So, in order to do this kind of\Nanalysis by recurrence extraction,
@@ -237,15 +237,15 @@ Dialogue: 0,0:23:18.52,0:23:22.28,Default,,0,0,0,,is Affine which means that var
 Dialogue: 0,0:23:22.28,0:23:25.68,Default,,0,0,0,,So, next we need to be able\Nto attach these credits
 Dialogue: 0,0:23:25.68,0:23:28.04,Default,,0,0,0,,to terms like say\Nthe elements of a list.
 Dialogue: 0,0:23:28.04,0:23:31.20,Default,,0,0,0,,And to do this we add a\Nmodality to the language.
-Dialogue: 0,0:23:31.20,0:23:35.48,Default,,0,0,0,,The terms of type bang, cA,\Nare modality terms of Type A
+Dialogue: 0,0:23:31.20,0:23:35.48,Default,,0,0,0,,The terms of type bang, cA,\Nare morally terms of Type A
 Dialogue: 0,0:23:35.48,0:23:37.76,Default,,0,0,0,,that carry c extra credits.
-Dialogue: 0,0:23:37.76,0:23:40.44,Default,,0,0,0,,And the intro (INAUDIBLE) rules\Nfor this modality
+Dialogue: 0,0:23:37.76,0:23:40.44,Default,,0,0,0,,And the intro/elim rules\Nfor this modality
 Dialogue: 0,0:23:40.44,0:23:41.72,Default,,0,0,0,,are actually pretty intuitive.
 Dialogue: 0,0:23:41.72,0:23:44.64,Default,,0,0,0,,The intro rule says that\Nwe have a term m of Type A
 Dialogue: 0,0:23:44.64,0:23:46.80,Default,,0,0,0,,and we have C Extra\NCredits lying around,
 Dialogue: 0,0:23:46.80,0:23:50.44,Default,,0,0,0,,and we don't need to construct,\Nthat we don't need to construct m,
 Dialogue: 0,0:23:50.44,0:23:54.32,Default,,0,0,0,,we can just attach them to M\Nand get a term type bang cA.
-Dialogue: 0,0:23:54.32,0:23:57.60,Default,,0,0,0,,And the (INAUDIBLE) rule says that if\Nwe have a term of type bang cA,
+Dialogue: 0,0:23:54.32,0:23:57.60,Default,,0,0,0,,And the elim rule says that if\Nwe have a term of type bang cA,
 Dialogue: 0,0:23:57.60,0:24:00.24,Default,,0,0,0,,we can peel the credits off\Nthe term and allow them
 Dialogue: 0,0:24:00.24,0:24:04.32,Default,,0,0,0,,and the value to be used in\Na continuation to make more stuff.
 Dialogue: 0,0:24:04.32,0:24:07.24,Default,,0,0,0,,So, finally, we need the ability\Nto create and spend credits,
@@ -262,8 +262,8 @@ Dialogue: 0,0:24:33.40,0:24:36.88,Default,,0,0,0,,that let us formally specify t
 Dialogue: 0,0:24:36.88,0:24:39.12,Default,,0,0,0,,Now let's take a look at how\Nthe binary counter example
 Dialogue: 0,0:24:39.12,0:24:41.24,Default,,0,0,0,,would actually get\Nencoded into this language.
 Dialogue: 0,0:24:42.00,0:24:46.60,Default,,0,0,0,,So, in lambda a, we redefine the\Nbit type to be unit plus bang one
-Dialogue: 0,0:24:46.60,0:24:50.04,Default,,0,0,0,,unit, a bit is either in left of\Na unit which represents a zero,
-Dialogue: 0,0:24:50.04,0:24:52.56,Default,,0,0,0,,or in a right of a unit\Nwith one credit attached,
+Dialogue: 0,0:24:46.60,0:24:50.04,Default,,0,0,0,,unit, a bit is either in-left of\Na unit which represents a zero,
+Dialogue: 0,0:24:50.04,0:24:52.56,Default,,0,0,0,,or in-right of a unit\Nwith one credit attached,
 Dialogue: 0,0:24:52.56,0:24:55.44,Default,,0,0,0,,which represents one. And\Nthen the code for increment
 Dialogue: 0,0:24:55.44,0:24:57.20,Default,,0,0,0,,is the exact same\Nbehaviour as before,
 Dialogue: 0,0:24:57.20,0:25:01.04,Default,,0,0,0,,it just maintains the credit policy.\NIf the list is empty or has zeros,
@@ -280,8 +280,8 @@ Dialogue: 0,0:25:26.04,0:25:28.80,Default,,0,0,0,,But the recurrence extraction 
 Dialogue: 0,0:25:28.80,0:25:31.40,Default,,0,0,0,,So, let's briefly recall that\Nthe recurrence extraction
 Dialogue: 0,0:25:31.40,0:25:35.00,Default,,0,0,0,,from a term consists of a pair\Nof the cost to compute
 Dialogue: 0,0:25:35.00,0:25:36.64,Default,,0,0,0,,the term along with its size.
-Dialogue: 0,0:25:36.64,0:25:40.16,Default,,0,0,0,,So, since creating A credits\Nincurs a cost of m
-Dialogue: 0,0:25:40.16,0:25:44.00,Default,,0,0,0,,just add A to the extracted cost\Nand duly we subtract A
+Dialogue: 0,0:25:36.64,0:25:40.16,Default,,0,0,0,,So, since creating A credits\Nincurs a cost of A
+Dialogue: 0,0:25:40.16,0:25:44.00,Default,,0,0,0,,just add A to the extracted cost\Nand dually we subtract A
 Dialogue: 0,0:25:44.00,0:25:45.72,Default,,0,0,0,,from the cost\Ncomponent when we spent.
 Dialogue: 0,0:25:46.24,0:25:49.96,Default,,0,0,0,,Now, since the credits as\NI mentioned earlier aren't present
 Dialogue: 0,0:25:49.96,0:25:52.68,Default,,0,0,0,,in the recurrence language,\Nthe extraction has to erase
@@ -296,8 +296,8 @@ Dialogue: 0,0:26:13.40,0:26:15.96,Default,,0,0,0,,and below I've written the cos
 Dialogue: 0,0:26:15.96,0:26:18.40,Default,,0,0,0,,you get in lambda C\Nfor this term.
 Dialogue: 0,0:26:18.40,0:26:20.76,Default,,0,0,0,,So, when the argument to\Nthis recurrence is empty,
 Dialogue: 0,0:26:20.76,0:26:22.80,Default,,0,0,0,,or has zero is the least\Nsignificant bit,
-Dialogue: 0,0:26:22.80,0:26:26.24,Default,,0,0,0,,increment cost two, one from\Nthe cons one from creating credit
-Dialogue: 0,0:26:26.24,0:26:29.68,Default,,0,0,0,,When is the least significant bit\None, the cost we attract is simply
+Dialogue: 0,0:26:22.80,0:26:26.24,Default,,0,0,0,,increment costs two, one from\Nthe cons one from creating credit
+Dialogue: 0,0:26:26.24,0:26:29.68,Default,,0,0,0,,When is the least significant bit\None, the cost we extract is simply
 Dialogue: 0,0:26:29.68,0:26:31.76,Default,,0,0,0,,the cost of the\Nrecursive call.
 Dialogue: 0,0:26:31.76,0:26:34.60,Default,,0,0,0,,Now, why is this?\NWell, we do one cons operation
 Dialogue: 0,0:26:34.60,0:26:37.00,Default,,0,0,0,,which costs one and\Nthen we spend a credit
