@@ -21,7 +21,7 @@ Dialogue: 0,0:08:15.84,0:08:20.84,Default,,0,0,0,,
 Dialogue: 0,0:09:30.00,0:09:33.00,Default,,0,0,0,,
 Dialogue: 0,0:11:40.52,0:11:43.24,Default,,0,0,0,,JEREMY GIBBONS: Hello, my\Nname is Jeremy Gibbons,
 Dialogue: 0,0:11:43.24,0:11:44.80,Default,,0,0,0,,together with Shriram Krishnamurthi,
-Dialogue: 0,0:11:44.80,0:11:48.32,Default,,0,0,0,,I'm editor and chief of\NThe Journal of Functional Programming.
+Dialogue: 0,0:11:44.80,0:11:48.32,Default,,0,0,0,,I'm editor in chief of\NThe Journal of Functional Programming.
 Dialogue: 0,0:11:48.32,0:11:52.72,Default,,0,0,0,,This year, we are trying out a new\Ninteraction between JFP and ICFP.
 Dialogue: 0,0:11:52.72,0:11:55.04,Default,,0,0,0,,Authors of JFP papers\Npublished in the previous year
 Dialogue: 0,0:11:55.04,0:11:57.16,Default,,0,0,0,,are offered the opportunity\Nto present their work
@@ -53,33 +53,33 @@ Dialogue: 0,0:13:02.72,0:13:04.40,Default,,0,0,0,,I'd like to give a talk about
 Dialogue: 0,0:13:04.40,0:13:06.96,Default,,0,0,0,,A Theory of RPC\NCalculi for Client-Server Model.
 Dialogue: 0,0:13:08.00,0:13:09.96,Default,,0,0,0,,My name is Kwanghoon Choi,
 Dialogue: 0,0:13:09.96,0:13:13.52,Default,,0,0,0,,this is a joint work\Nwith Byeong-Mo Chan.
-Dialogue: 0,0:13:13.52,0:13:15.80,Default,,0,0,0,,Let me start with a background.
+Dialogue: 0,0:13:13.52,0:13:15.80,Default,,0,0,0,,Let me start with the background.
 Dialogue: 0,0:13:15.80,0:13:20.80,Default,,0,0,0,,Developing distributed systems is\Nknown as complex and error-prone.
 Dialogue: 0,0:13:21.36,0:13:23.96,Default,,0,0,0,,For example, consider a web system.
 Dialogue: 0,0:13:23.96,0:13:27.68,Default,,0,0,0,,You have to develop two\Nprogrammes, one for client
-Dialogue: 0,0:13:27.68,0:13:29.36,Default,,0,0,0,,and the other for server in-
-Dialogue: 0,0:13:29.36,0:13:33.16,Default,,0,0,0,,generally, in two\Ndifferent form languages.
+Dialogue: 0,0:13:27.68,0:13:29.36,Default,,0,0,0,,and the other for server in
+Dialogue: 0,0:13:29.36,0:13:33.16,Default,,0,0,0,,generally, in two\Ndifferent programming languages.
 Dialogue: 0,0:13:33.16,0:13:37.20,Default,,0,0,0,,Also, the two programmes\Nneed to be put together
 Dialogue: 0,0:13:37.20,0:13:41.04,Default,,0,0,0,,for testing and maintenance.
-Dialogue: 0,0:13:41.04,0:13:42.80,Default,,0,0,0,,tierless programme languages
-Dialogue: 0,0:13:42.80,0:13:45.76,Default,,0,0,0,,also known also called\Nmultitier programme languages
+Dialogue: 0,0:13:41.04,0:13:42.80,Default,,0,0,0,,Tierless programming languages
+Dialogue: 0,0:13:42.80,0:13:45.76,Default,,0,0,0,,also known also called\Nmultitier programming languages
 Dialogue: 0,0:13:45.76,0:13:48.40,Default,,0,0,0,,can address this problem.
 Dialogue: 0,0:13:48.40,0:13:52.84,Default,,0,0,0,,You have only to develop\Na single tierless programme.
 Dialogue: 0,0:13:52.84,0:13:55.08,Default,,0,0,0,,Assuming a client-server model,
 Dialogue: 0,0:13:55.08,0:14:01.48,Default,,0,0,0,,a slicing compiler will automatically\Nslice it into a client programme
 Dialogue: 0,0:14:01.48,0:14:03.60,Default,,0,0,0,,and a server programme.
 Dialogue: 0,0:14:03.60,0:14:07.52,Default,,0,0,0,,The communication between\Nthe two sliced programmes
-Dialogue: 0,0:14:07.52,0:14:11.52,Default,,0,0,0,,will be automatically supportive.
+Dialogue: 0,0:14:07.52,0:14:11.52,Default,,0,0,0,,will be automatically supported.
 Dialogue: 0,0:14:11.52,0:14:15.56,Default,,0,0,0,,Particularly, we are\Ninterested in a seamlessly
-Dialogue: 0,0:14:15.56,0:14:19.64,Default,,0,0,0,,tierless programme language\Nfor client-server model.
-Dialogue: 0,0:14:19.64,0:14:24.16,Default,,0,0,0,,It is basically a programme language\Ndesigned for a single computer
+Dialogue: 0,0:14:15.56,0:14:19.64,Default,,0,0,0,,tierless programming language\Nfor client-server model.
+Dialogue: 0,0:14:19.64,0:14:24.16,Default,,0,0,0,,It is basically a programming language\Ndesigned for a single computer
 Dialogue: 0,0:14:24.16,0:14:29.56,Default,,0,0,0,,but naturally extended\Nwith a seamless RPC.
 Dialogue: 0,0:14:29.56,0:14:33.04,Default,,0,0,0,,By the seamless remote\Nprocedure call, RPC,
 Dialogue: 0,0:14:33.04,0:14:37.72,Default,,0,0,0,,I mean the remote procedure\Ncalls are language supported,
 Dialogue: 0,0:14:37.72,0:14:43.04,Default,,0,0,0,,bi-directional\Nand fully transparent.
-Dialogue: 0,0:14:43.04,0:14:47.80,Default,,0,0,0,,Links is a real world seamlessly\Ntierless programme language
+Dialogue: 0,0:14:43.04,0:14:47.80,Default,,0,0,0,,Links is a real-world seamlessly\Ntierless programme language
 Dialogue: 0,0:14:47.80,0:14:50.84,Default,,0,0,0,,for a client-server model.
-Dialogue: 0,0:14:50.84,0:14:55.84,Default,,0,0,0,,One advantage of the seamlessly\Ntierless programme language is this.
+Dialogue: 0,0:14:50.84,0:14:55.84,Default,,0,0,0,,One advantage of a seamlessly\Ntierless programming language is this.
 Dialogue: 0,0:14:56.36,0:15:00.60,Default,,0,0,0,,If you look at this example\Nprogramme written in links,
 Dialogue: 0,0:15:00.60,0:15:07.60,Default,,0,0,0,,you know that tierless programme can\Nbe written exactly in the same way
 Dialogue: 0,0:15:07.60,0:15:10.44,Default,,0,0,0,,as writing single computer programmes.
@@ -93,9 +93,9 @@ Dialogue: 0,0:15:37.36,0:15:42.28,Default,,0,0,0,,Second, you can call a server\
 Dialogue: 0,0:15:42.28,0:15:46.76,Default,,0,0,0,,and also you can call a client\Nfunction from the server,
 Dialogue: 0,0:15:46.76,0:15:49.48,Default,,0,0,0,,so, it is bi-directional.
 Dialogue: 0,0:15:49.48,0:15:54.88,Default,,0,0,0,,Third, the same syntax of\Nlambda application is used,
-Dialogue: 0,0:15:54.88,0:15:58.96,Default,,0,0,0,,first, for local procedure call\Nand remote procedure call.
+Dialogue: 0,0:15:54.88,0:15:58.96,Default,,0,0,0,,both for local procedure call\Nand remote procedure call.
 Dialogue: 0,0:15:58.96,0:16:03.88,Default,,0,0,0,,No extra RPC keyword is\Nused in the syntax.
-Dialogue: 0,0:16:03.88,0:16:08.04,Default,,0,0,0,,So, links is the seamlessly\Ntierless programming language
+Dialogue: 0,0:16:03.88,0:16:08.04,Default,,0,0,0,,So, links is a seamlessly\Ntierless programming language
 Dialogue: 0,0:16:08.04,0:16:11.68,Default,,0,0,0,,for client-server model.
 Dialogue: 0,0:16:11.68,0:16:16.12,Default,,0,0,0,,The RPC calculus is\Na seamlessly tierless calculus
 Dialogue: 0,0:16:16.12,0:16:21.12,Default,,0,0,0,,that extends the lambda\Ncalculus with an RPC feature.
@@ -109,7 +109,7 @@ Dialogue: 0,0:16:51.40,0:16:52.92,Default,,0,0,0,,by the big steps semantics.
 Dialogue: 0,0:16:54.16,0:16:58.00,Default,,0,0,0,,When you evaluate a lambda\Napplication at location a,
 Dialogue: 0,0:16:59.00,0:17:01.24,Default,,0,0,0,,you evaluate the functional term L
 Dialogue: 0,0:17:01.96,0:17:03.28,Default,,0,0,0,,at the same location a
-Dialogue: 0,0:17:04.52,0:17:08.24,Default,,0,0,0,,into a lambda abstraction with\Nlocation and notation b.
+Dialogue: 0,0:17:04.52,0:17:08.24,Default,,0,0,0,,into a lambda abstraction with\Nlocation annotation b.
 Dialogue: 0,0:17:09.48,0:17:12.68,Default,,0,0,0,,You also evaluate an argument M
 Dialogue: 0,0:17:14.16,0:17:16.44,Default,,0,0,0,,to our value W at the same location.
 Dialogue: 0,0:17:17.92,0:17:24.24,Default,,0,0,0,,And then finally you do beta\Nreduction at the location b not a.
@@ -126,27 +126,27 @@ Dialogue: 0,0:18:08.40,0:18:12.40,Default,,0,0,0,,in runtime to decide\Nif it is
 Dialogue: 0,0:18:13.16,0:18:17.52,Default,,0,0,0,,This happens even in the sliced\Nclient and server programmes
 Dialogue: 0,0:18:17.52,0:18:19.36,Default,,0,0,0,,after the slicing compilation.
 Dialogue: 0,0:18:21.60,0:18:25.00,Default,,0,0,0,,Our solution is to have\Nlocated function types
-Dialogue: 0,0:18:25.72,0:18:28.64,Default,,0,0,0,,to trap function\Nlocation statically.
+Dialogue: 0,0:18:25.72,0:18:28.64,Default,,0,0,0,,to track function\Nlocation statically.
 Dialogue: 0,0:18:29.40,0:18:35.48,Default,,0,0,0,,Then we can statically decide\Nif given lambda application
 Dialogue: 0,0:18:35.96,0:18:38.88,Default,,0,0,0,,is local procedure call\Nor remote procedure call.
-Dialogue: 0,0:18:39.88,0:18:45.96,Default,,0,0,0,,As a result, programmemers can enjoy\Nthe advantage of the seamless RPC
+Dialogue: 0,0:18:39.88,0:18:45.96,Default,,0,0,0,,As a result, programmers can enjoy\Nthe advantage of the seamless RPC
 Dialogue: 0,0:18:46.72,0:18:48.00,Default,,0,0,0,,in the tierless programmes
 Dialogue: 0,0:18:48.76,0:18:52.28,Default,,0,0,0,,but no more runtime location\Nchecking is required
 Dialogue: 0,0:18:52.76,0:18:55.88,Default,,0,0,0,,in the sliced client\Nand server programmes.
 Dialogue: 0,0:18:58.88,0:19:02.40,Default,,0,0,0,,A key idea behind our\Ntyped RPC calculus
 Dialogue: 0,0:19:03.92,0:19:07.24,Default,,0,0,0,,is a location annotation\Non a function type.
-Dialogue: 0,0:19:08.52,0:19:12.72,Default,,0,0,0,,It is a reminiscent of a location\Nannotation on a lambda extraction.
+Dialogue: 0,0:19:08.52,0:19:12.72,Default,,0,0,0,,It is a reminiscent of a location\Nannotation on a lambda abstraction.
 Dialogue: 0,0:19:14.00,0:19:16.28,Default,,0,0,0,,The located function type means that
-Dialogue: 0,0:19:16.80,0:19:18.96,Default,,0,0,0,,every lambda extraction\Nof these type
+Dialogue: 0,0:19:16.80,0:19:18.96,Default,,0,0,0,,every lambda abstraction\Nof this type
 Dialogue: 0,0:19:19.48,0:19:24.56,Default,,0,0,0,,must run, is guaranteed to run\Nat a specified location a.
 Dialogue: 0,0:19:25.56,0:19:28.04,Default,,0,0,0,,For example the argument f
 Dialogue: 0,0:19:28.76,0:19:30.16,Default,,0,0,0,,has a client function type
 Dialogue: 0,0:19:30.92,0:19:35.16,Default,,0,0,0,,because a client function is\Ngoing to be bounded to f.
 Dialogue: 0,0:19:36.16,0:19:40.92,Default,,0,0,0,,In the second example, f has\Nneither a client function type
 Dialogue: 0,0:19:40.92,0:19:42.36,Default,,0,0,0,,nor a server function type.
-Dialogue: 0,0:19:43.60,0:19:47.08,Default,,0,0,0,,Because depending on\Nthe value of if conditioner
+Dialogue: 0,0:19:43.60,0:19:47.08,Default,,0,0,0,,Because depending on\Nthe value of if conditional
 Dialogue: 0,0:19:48.08,0:19:51.76,Default,,0,0,0,,was client function and server function\Ncan be bounded to f.
-Dialogue: 0,0:19:53.00,0:19:54.80,Default,,0,0,0,,In the typed RPC characters
+Dialogue: 0,0:19:53.00,0:19:54.80,Default,,0,0,0,,In the typed RPC calculus
 Dialogue: 0,0:19:55.32,0:19:57.88,Default,,0,0,0,,only monomorphic\Nlocations are allowed
 Dialogue: 0,0:19:57.88,0:19:59.52,Default,,0,0,0,,so it is not well typed.
 Dialogue: 0,0:20:01.76,0:20:06.76,Default,,0,0,0,,The other key idea is that\Nin the typed RPC calculus
@@ -154,11 +154,11 @@ Dialogue: 0,0:20:06.76,0:20:12.88,Default,,0,0,0,,you can identify all remote pr
 Dialogue: 0,0:20:14.16,0:20:16.16,Default,,0,0,0,,Let us see, it is typing rule.
 Dialogue: 0,0:20:17.44,0:20:22.44,Default,,0,0,0,,This is a refinement of the conventional\Nlambda application typing rule
 Dialogue: 0,0:20:22.44,0:20:25.44,Default,,0,0,0,,with respect to a caller location A
-Dialogue: 0,0:20:25.96,0:20:28.16,Default,,0,0,0,,and a functional location B.
+Dialogue: 0,0:20:25.96,0:20:28.16,Default,,0,0,0,,and a function location B.
 Dialogue: 0,0:20:29.16,0:20:33.20,Default,,0,0,0,,Once your tierless programme\Nis successfully type checked
 Dialogue: 0,0:20:33.92,0:20:35.84,Default,,0,0,0,,in every lambda application LM
 Dialogue: 0,0:20:36.60,0:20:39.76,Default,,0,0,0,,the caller location A\Nand the function location B
-Dialogue: 0,0:20:40.24,0:20:44.60,Default,,0,0,0,,are fully analysed\Nand known in compared time.
+Dialogue: 0,0:20:40.24,0:20:44.60,Default,,0,0,0,,are fully analysed\Nand known in compile time.
 Dialogue: 0,0:20:45.84,0:20:51.44,Default,,0,0,0,,Then caller location a is equal\Nto the function location b
 Dialogue: 0,0:20:51.44,0:20:55.64,Default,,0,0,0,,then that lambda application\Nis local procedure call.
 Dialogue: 0,0:20:56.92,0:21:00.04,Default,,0,0,0,,Otherwise a is different from b
@@ -170,16 +170,16 @@ Dialogue: 0,0:21:14.92,0:21:18.92,Default,,0,0,0,,every remote procedure call\Nd
 Dialogue: 0,0:21:19.68,0:21:22.84,Default,,0,0,0,,will never be dynamically\Nchanged into any local one.
 Dialogue: 0,0:21:25.60,0:21:27.12,Default,,0,0,0,,Thanks to this property,
 Dialogue: 0,0:21:27.12,0:21:32.12,Default,,0,0,0,,we can design a location information\Ndirected slicing compilation
-Dialogue: 0,0:21:33.56,0:21:36.36,Default,,0,0,0,,whose sliced clients and subprogrammes
+Dialogue: 0,0:21:33.56,0:21:36.36,Default,,0,0,0,,whose sliced clients and server programmes
 Dialogue: 0,0:21:36.36,0:21:41.36,Default,,0,0,0,,will never do location checking,\Ndynamically in a long time.
 Dialogue: 0,0:21:42.56,0:21:46.12,Default,,0,0,0,,This is an advantage over\Nthe untyped RPC calculus
 Dialogue: 0,0:21:46.12,0:21:48.40,Default,,0,0,0,,that always does location checking
-Dialogue: 0,0:21:48.92,0:21:51.88,Default,,0,0,0,,in the sliced client\Nand several programmes.
+Dialogue: 0,0:21:48.92,0:21:51.88,Default,,0,0,0,,in the sliced client\Nand server programmes.
 Dialogue: 0,0:21:55.40,0:21:58.36,Default,,0,0,0,,The typed RPC calculus\Nis good so far
 Dialogue: 0,0:21:58.84,0:22:00.80,Default,,0,0,0,,but it has a problem
 Dialogue: 0,0:22:01.32,0:22:04.52,Default,,0,0,0,,because of using only\Nmonomorphic locations
 Dialogue: 0,0:22:04.52,0:22:06.28,Default,,0,0,0,,such as client and server
-Dialogue: 0,0:22:06.80,0:22:09.24,Default,,0,0,0,,not something to report both.
+Dialogue: 0,0:22:06.80,0:22:09.24,Default,,0,0,0,,not something to record both.
 Dialogue: 0,0:22:10.24,0:22:12.84,Default,,0,0,0,,For example you cannot write
 Dialogue: 0,0:22:12.84,0:22:16.24,Default,,0,0,0,,a single polymorphically\Nlocated map function.
 Dialogue: 0,0:22:16.96,0:22:19.52,Default,,0,0,0,,Instead you have to write\Na client map function
@@ -191,10 +191,10 @@ Dialogue: 0,0:22:36.04,0:22:38.60,Default,,0,0,0,,about a polymorphic RPC calcul
 Dialogue: 0,0:22:38.60,0:22:43.28,Default,,0,0,0,,This is joint work with James Cheney,\NSimon Fowler and Sam Lindley.
 Dialogue: 0,0:22:44.80,0:22:46.84,Default,,0,0,0,,In the polymorphic RPC calculus,
 Dialogue: 0,0:22:46.84,0:22:49.44,Default,,0,0,0,,you can write a polymorphically\Nlocated function
-Dialogue: 0,0:22:49.44,0:22:52.44,Default,,0,0,0,,with the location f traction\Nover location variable
+Dialogue: 0,0:22:49.44,0:22:52.44,Default,,0,0,0,,with the location abstraction\Nover location variable
 Dialogue: 0,0:22:53.16,0:22:56.16,Default,,0,0,0,,and location application\Nas you see in the slide.
 Dialogue: 0,0:22:56.16,0:22:59.20,Default,,0,0,0,,Then you have only to apply\Nto the client location
-Dialogue: 0,0:22:59.20,0:23:00.80,Default,,0,0,0,,to get a client map function.
+Dialogue: 0,0:22:59.20,0:23:00.80,Default,,0,0,0,,to get a client map function. 
 Dialogue: 0,0:23:02.04,0:23:05.12,Default,,0,0,0,,You can also apply to\Nthe server location
 Dialogue: 0,0:23:06.12,0:23:07.56,Default,,0,0,0,,to get a server map function.
 Dialogue: 0,0:23:09.04,0:23:12.16,Default,,0,0,0,,This slide shows the comparison\Namong the RPC calculi
@@ -227,28 +227,28 @@ Dialogue: 0,0:24:35.92,0:24:38.28,Default,,0,0,0,,than the normal other strategy
 Dialogue: 0,0:24:39.28,0:24:42.24,Default,,0,0,0,,We prove this result by\Nintroducing a semantic artefact
 Dialogue: 0,0:24:42.24,0:24:44.08,Default,,0,0,0,,that corresponds to the machine
 Dialogue: 0,0:24:44.08,0:24:46.44,Default,,0,0,0,,and it is retrofitted for\Nthe proof of the property.
-Dialogue: 0,0:24:47.44,0:24:50.52,Default,,0,0,0,,The corresponding artefact is\Na reduction of strategy in a calculus
+Dialogue: 0,0:24:47.44,0:24:50.52,Default,,0,0,0,,The corresponding artefact is\Na reduction strategy in a calculus
 Dialogue: 0,0:24:50.52,0:24:51.52,Default,,0,0,0,,of closures.
 Dialogue: 0,0:24:52.52,0:24:54.56,Default,,0,0,0,,As this quote by Cregut shows,
 Dialogue: 0,0:24:54.56,0:24:58.08,Default,,0,0,0,,the importance of full reduction\Nis widely recognised
 Dialogue: 0,0:24:58.08,0:25:01.28,Default,,0,0,0,,in the full implementation of programming\Nlanguages and (INAUDIBLE).
 Dialogue: 0,0:25:02.04,0:25:06.16,Default,,0,0,0,,Full reduction refers to reducing\Nthe term up to a normal form.
-Dialogue: 0,0:25:06.16,0:25:08.80,Default,,0,0,0,,That is a term without (INAUDIBLE)
+Dialogue: 0,0:25:06.16,0:25:08.80,Default,,0,0,0,,That is a term without redexes
 Dialogue: 0,0:25:09.80,0:25:12.76,Default,,0,0,0,,For instance, this is especially\Nimportant with nowadays
-Dialogue: 0,0:25:12.76,0:25:14.52,Default,,0,0,0,,proven systems with\Nthe (INAUDIBLE) types
+Dialogue: 0,0:25:12.76,0:25:14.52,Default,,0,0,0,,proof assistants with\Ndependent types
 Dialogue: 0,0:25:14.52,0:25:17.56,Default,,0,0,0,,which needs to reach\Nthe normal form of a type
 Dialogue: 0,0:25:17.56,0:25:20.04,Default,,0,0,0,,in order to implement\Ntype conversion rules.
 Dialogue: 0,0:25:20.80,0:25:24.40,Default,,0,0,0,,The machine we study is Cregut's\Nfull reducing version of
 Dialogue: 0,0:25:24.40,0:25:25.68,Default,,0,0,0,,the Krivine abstract machine
 Dialogue: 0,0:25:26.20,0:25:27.52,Default,,0,0,0,,which we abbreviate to KN.
 Dialogue: 0,0:25:28.52,0:25:31.52,Default,,0,0,0,,In a nutshell, KN takes\Nas input a lambda term
-Dialogue: 0,0:25:31.52,0:25:34.88,Default,,0,0,0,,that it embeds in closure in\Nan environment that disturbs bindings
-Dialogue: 0,0:25:35.40,0:25:37.24,Default,,0,0,0,,and uses a continuation of stack
+Dialogue: 0,0:25:31.52,0:25:34.88,Default,,0,0,0,,that it embeds in closure in\Nan environment that preserves bindings
+Dialogue: 0,0:25:35.40,0:25:37.24,Default,,0,0,0,,and uses a continuation stack
 Dialogue: 0,0:25:37.24,0:25:41.08,Default,,0,0,0,,and tracks the lambda nesting\Nlevel of the term being evaluated.
 Dialogue: 0,0:25:42.32,0:25:44.12,Default,,0,0,0,,The machine looks up in environment
 Dialogue: 0,0:25:44.12,0:25:47.00,Default,,0,0,0,,the binding of a variable\Nrepresented by a De Bruijn index
-Dialogue: 0,0:25:47.52,0:25:50.16,Default,,0,0,0,,pushes the operant of\Nan application onto the stack
-Dialogue: 0,0:25:51.16,0:25:54.16,Default,,0,0,0,,retrieves such an operant when\Nthe operator is an abstraction
+Dialogue: 0,0:25:47.52,0:25:50.16,Default,,0,0,0,,pushes the operand of\Nan application onto the stack
+Dialogue: 0,0:25:51.16,0:25:54.16,Default,,0,0,0,,retrieves such an operand when\Nthe operator is an abstraction
 Dialogue: 0,0:25:54.16,0:25:56.24,Default,,0,0,0,,and place it as a binding\Nin the environment.
 Dialogue: 0,0:25:57.48,0:25:59.64,Default,,0,0,0,,Reduces the body of\Nan applied abstraction
 Dialogue: 0,0:25:59.64,0:26:01.60,Default,,0,0,0,,by pushing a special\Nsymbol on the stack
@@ -256,22 +256,22 @@ Dialogue: 0,0:26:02.08,0:26:04.96,Default,,0,0,0,,and placing in the environment
 Dialogue: 0,0:26:04.96,0:26:06.48,Default,,0,0,0,,of the formal parameter\Nof the abstraction.
 Dialogue: 0,0:26:07.48,0:26:11.08,Default,,0,0,0,,Calculates the De Bruijn index\Nof such a formal parameter
 Dialogue: 0,0:26:11.08,0:26:12.44,Default,,0,0,0,,retrieved from the environment,
-Dialogue: 0,0:26:13.20,0:26:15.52,Default,,0,0,0,,reduces the operant\Nof a normal form
+Dialogue: 0,0:26:13.20,0:26:15.52,Default,,0,0,0,,reduces the operand\Nof a normal form
 Dialogue: 0,0:26:15.52,0:26:17.56,Default,,0,0,0,,which is embedded in\Na special kind of closure
-Dialogue: 0,0:26:17.56,0:26:19.08,Default,,0,0,0,,that disturbs (INAUDIBLE) theorems.
+Dialogue: 0,0:26:17.56,0:26:19.08,Default,,0,0,0,,that preserves (INAUDIBLE) terms.
 Dialogue: 0,0:26:19.56,0:26:23.00,Default,,0,0,0,,And finally flattens\Nthe stack into a normal form
 Dialogue: 0,0:26:23.00,0:26:26.60,Default,,0,0,0,,that is returned when all\Nthe symbols in the stack are consumed.
 Dialogue: 0,0:26:27.84,0:26:30.96,Default,,0,0,0,,KN has been proven to find\Nthe normal form of a term
 Dialogue: 0,0:26:30.96,0:26:32.00,Default,,0,0,0,,when it has some.
-Dialogue: 0,0:26:32.52,0:26:35.40,Default,,0,0,0,,However the machine is\Nthe first order transition system
-Dialogue: 0,0:26:35.40,0:26:38.36,Default,,0,0,0,,that manipulates environments\Nand (INAUDIBLE) stacks at the low level.
+Dialogue: 0,0:26:32.52,0:26:35.40,Default,,0,0,0,,However the machine is\Na first order transition system
+Dialogue: 0,0:26:35.40,0:26:38.36,Default,,0,0,0,,that manipulates environments\Nand continuation stacks at the low level.
 Dialogue: 0,0:26:39.36,0:26:41.60,Default,,0,0,0,,And this format is not ready\Nto the deploy proofs by
 Dialogue: 0,0:26:41.60,0:26:42.68,Default,,0,0,0,,structural induction.
 Dialogue: 0,0:26:44.40,0:26:47.88,Default,,0,0,0,,Our approach is to introduce a\Nhigher order calculus of closures
 Dialogue: 0,0:26:47.88,0:26:50.44,Default,,0,0,0,,with a reduction strategy\Nthat mimics the machine
-Dialogue: 0,0:26:50.96,0:26:53.80,Default,,0,0,0,,and that is suited for deployment\Nproofs by structural induction.
-Dialogue: 0,0:26:54.56,0:26:58.68,Default,,0,0,0,,And later to prove that the set\Ncalculus realises the normal order
-Dialogue: 0,0:26:58.68,0:27:00.64,Default,,0,0,0,,of the strategy of\Nthe pure lambda calculus.
+Dialogue: 0,0:26:50.96,0:26:53.80,Default,,0,0,0,,and that is suited for\Nproofs by structural induction.
+Dialogue: 0,0:26:54.56,0:26:58.68,Default,,0,0,0,,And later to prove that the said\Ncalculus realises the normal order
+Dialogue: 0,0:26:58.68,0:27:00.64,Default,,0,0,0,,strategy of\Nthe pure lambda calculus.
 Dialogue: 0,0:27:01.88,0:27:04.24,Default,,0,0,0,,We arrived at such\Ncalculus of closures
 Dialogue: 0,0:27:04.24,0:27:07.68,Default,,0,0,0,,from the ones in the tradition of\NCurien's calculus of closures
 Dialogue: 0,0:27:07.68,0:27:08.68,Default,,0,0,0,,lambda rho.
@@ -284,30 +284,30 @@ Dialogue: 0,0:27:24.52,0:27:27.24,Default,,0,0,0,,where positions in\Nthe enviro
 Dialogue: 0,0:27:28.00,0:27:31.48,Default,,0,0,0,,In the example here,\Nreduction starts with a closure
 Dialogue: 0,0:27:31.48,0:27:32.80,Default,,0,0,0,,with empty environment.
 Dialogue: 0,0:27:33.80,0:27:35.64,Default,,0,0,0,,When an application is reached
-Dialogue: 0,0:27:36.12,0:27:38.24,Default,,0,0,0,,it's operant is embedded\Ninto a closure
+Dialogue: 0,0:27:36.12,0:27:38.24,Default,,0,0,0,,it's operand is embedded\Ninto a closure
 Dialogue: 0,0:27:38.24,0:27:40.36,Default,,0,0,0,,and prepended to\Nthe current environment.
 Dialogue: 0,0:27:41.36,0:27:45.52,Default,,0,0,0,,Then the binding at position\N0 is looked up and retrieved
 Dialogue: 0,0:27:45.52,0:27:46.80,Default,,0,0,0,,from the environment.
 Dialogue: 0,0:27:47.56,0:27:50.24,Default,,0,0,0,,And then reduction\Nresumes on such bindings.
-Dialogue: 0,0:27:51.00,0:27:53.16,Default,,0,0,0,,In the better rule of this calculus
+Dialogue: 0,0:27:51.00,0:27:53.16,Default,,0,0,0,,In the beta rule of this calculus
 Dialogue: 0,0:27:53.16,0:27:54.72,Default,,0,0,0,,the operator in an application
-Dialogue: 0,0:27:54.72,0:27:58.28,Default,,0,0,0,,is reduced multiple step fashion\Nto a weakened normal form.
+Dialogue: 0,0:27:54.72,0:27:58.28,Default,,0,0,0,,is reduced in multiple step fashion\Nto a weak head normal form.
 Dialogue: 0,0:27:59.52,0:28:02.76,Default,,0,0,0,,This poses some problems when\Ndefinding a reduction relation
 Dialogue: 0,0:28:02.76,0:28:04.20,Default,,0,0,0,,which is purely single step.
 Dialogue: 0,0:28:05.44,0:28:07.68,Default,,0,0,0,,This issue whilst\Nobserved and fixed
 Dialogue: 0,0:28:07.68,0:28:11.08,Default,,0,0,0,,in the Biernacka and Danvy's\NLambda hat Rho calculus.
 Dialogue: 0,0:28:12.32,0:28:16.12,Default,,0,0,0,,This variant of Curien's\Ncalculus considers a constructor
 Dialogue: 0,0:28:16.12,0:28:17.68,Default,,0,0,0,,for closure application
-Dialogue: 0,0:28:17.68,0:28:20.80,Default,,0,0,0,,that enables the reduction\Nrelations to be lift
+Dialogue: 0,0:28:17.68,0:28:20.80,Default,,0,0,0,,that enables the reduction\Nrelations to be lifted
 Dialogue: 0,0:28:20.80,0:28:22.32,Default,,0,0,0,,to the scope of the operator.
 Dialogue: 0,0:28:23.84,0:28:26.48,Default,,0,0,0,,The calculus also includes\Nan expansion rule
 Dialogue: 0,0:28:26.48,0:28:29.24,Default,,0,0,0,,that expands applications\Nto closure applications.
-Dialogue: 0,0:28:30.48,0:28:33.80,Default,,0,0,0,,This mechanism is reminiscent\Nof the applied stage
-Dialogue: 0,0:28:33.80,0:28:36.96,Default,,0,0,0,,in the (INAUDIBLE) evaluators\Nin the classical literature
+Dialogue: 0,0:28:30.48,0:28:33.80,Default,,0,0,0,,This mechanism is reminiscent\Nof the apply stage
+Dialogue: 0,0:28:33.80,0:28:36.96,Default,,0,0,0,,in the eval-apply evaluators\Nin the classical literature
 Dialogue: 0,0:28:36.96,0:28:38.64,Default,,0,0,0,,in higher order\Nfunctional programming.
-Dialogue: 0,0:28:40.16,0:28:42.40,Default,,0,0,0,,Now reduction expanse applications.
+Dialogue: 0,0:28:40.16,0:28:42.40,Default,,0,0,0,,Now reduction expands applications.
 Dialogue: 0,0:28:43.12,0:28:44.92,Default,,0,0,0,,Reduces the operator if needed,
-Dialogue: 0,0:28:44.92,0:28:46.76,Default,,0,0,0,,performs better with action
+Dialogue: 0,0:28:44.92,0:28:46.76,Default,,0,0,0,,performs beta reduction
 Dialogue: 0,0:28:47.24,0:28:50.28,Default,,0,0,0,,and then continues to\Nreduce as before.
 Dialogue: 0,0:28:51.04,0:28:54.00,Default,,0,0,0,,The Biernacka and Danvy's\Nlambda hat rho
 Dialogue: 0,0:28:54.00,0:28:55.64,Default,,0,0,0,,is enough for weak reduction.
@@ -315,7 +315,7 @@ Dialogue: 0,0:28:56.36,0:28:59.44,Default,,0,0,0,,They give account of\Nboth cal
 Dialogue: 0,0:28:59.44,0:29:01.40,Default,,0,0,0,,weak reducing strategies\Nin this calculus.
 Dialogue: 0,0:29:02.16,0:29:05.40,Default,,0,0,0,,However it cannot accommodate\Nfull reducing strategies.
 Dialogue: 0,0:29:06.64,0:29:09.92,Default,,0,0,0,,We remedy this by further\Nextending the calculus
-Dialogue: 0,0:29:09.92,0:29:12.76,Default,,0,0,0,,with a constructure for\Nclosure abstraction.
+Dialogue: 0,0:29:09.92,0:29:12.76,Default,,0,0,0,,with a construction for\Nclosure abstraction.
 Dialogue: 0,0:29:13.76,0:29:16.08,Default,,0,0,0,,We also provide a new expansion rule
 Dialogue: 0,0:29:16.84,0:29:19.32,Default,,0,0,0,,that expands abstractions\Ninto closure abstractions.
 Dialogue: 0,0:29:20.60,0:29:22.56,Default,,0,0,0,,But before presenting\Nthis rule in detail
@@ -324,7 +324,7 @@ Dialogue: 0,0:29:25.96,0:29:27.52,Default,,0,0,0,,of the abstraction\Nin the env
 Dialogue: 0,0:29:28.80,0:29:32.60,Default,,0,0,0,,In calculus, a variable is\Nrepresented by a De Bruijn index
 Dialogue: 0,0:29:33.32,0:29:35.28,Default,,0,0,0,,which stands for\Nthe relative distance
 Dialogue: 0,0:29:35.28,0:29:37.76,Default,,0,0,0,,between the applied\Noccurance of the variable
-Dialogue: 0,0:29:37.76,0:29:41.20,Default,,0,0,0,,and it's binding occurrence\Nin the abstracts index tree.
+Dialogue: 0,0:29:37.76,0:29:41.20,Default,,0,0,0,,and it's binding occurrence\Nin the abstract syntax tree.
 Dialogue: 0,0:29:42.72,0:29:46.08,Default,,0,0,0,,If the binding lambda is\Nimmediately above the variable,
 Dialogue: 0,0:29:46.84,0:29:47.96,Default,,0,0,0,,then the index is 0.
 Dialogue: 0,0:29:48.48,0:29:52.08,Default,,0,0,0,,Otherwise the index gets\Nincremented as the distance
@@ -367,28 +367,28 @@ Dialogue: 0,0:31:41.88,0:31:44.32,Default,,0,0,0,,and expands the application\Ni
 Dialogue: 0,0:31:45.32,0:31:48.80,Default,,0,0,0,,But now it also expands\Nthe operator to a closure abstraction
 Dialogue: 0,0:31:48.80,0:31:50.48,Default,,0,0,0,,before performing the beta step
 Dialogue: 0,0:31:50.96,0:31:53.64,Default,,0,0,0,,which replaces the formal\Nparameter by the operand
-Dialogue: 0,0:31:54.12,0:31:56.64,Default,,0,0,0,,then the sequel goes on as before.
+Dialogue: 0,0:31:54.12,0:31:56.64,Default,,0,0,0,,then the sequence goes on as before.
 Dialogue: 0,0:31:57.88,0:31:59.84,Default,,0,0,0,,We also show how reduction acts
 Dialogue: 0,0:31:59.84,0:32:01.68,Default,,0,0,0,,on any applied abstraction.
 Dialogue: 0,0:32:02.16,0:32:04.56,Default,,0,0,0,,The abstraction is expanded\Nto a closure abstraction
 Dialogue: 0,0:32:04.56,0:32:07.32,Default,,0,0,0,,and later the level of\Nthe formal parameter
 Dialogue: 0,0:32:07.32,0:32:09.04,Default,,0,0,0,,is retrieved from the environment.
-Dialogue: 0,0:32:10.04,0:32:13.36,Default,,0,0,0,,No reduction moves the scope to\Nthe body of the closure abstraction
+Dialogue: 0,0:32:10.04,0:32:13.36,Default,,0,0,0,,Now reduction moves the scope to\Nthe body of the closure abstraction
 Dialogue: 0,0:32:13.36,0:32:15.96,Default,,0,0,0,,by the means of a compatibility rule
 Dialogue: 0,0:32:16.48,0:32:19.32,Default,,0,0,0,,that increments the level decoration\Nof the reduction relation.
-Dialogue: 0,0:32:20.32,0:32:22.68,Default,,0,0,0,,Combine with the rule\Nfor index calculation
+Dialogue: 0,0:32:20.32,0:32:22.68,Default,,0,0,0,,Combined with the rule\Nfor index calculation
 Dialogue: 0,0:32:23.40,0:32:26.60,Default,,0,0,0,,this results in the level\None of the formal parameter
 Dialogue: 0,0:32:26.60,0:32:29.68,Default,,0,0,0,,being subtracted from\Nthe current lambda nesting level.
 Dialogue: 0,0:32:30.20,0:32:33.24,Default,,0,0,0,,Which is embedded as\Nthe absolute index 0.
 Dialogue: 0,0:32:35.00,0:32:37.40,Default,,0,0,0,,Notice that the input term\Nwas already a normal form
 Dialogue: 0,0:32:37.92,0:32:41.44,Default,,0,0,0,,and that reduction has only\Nperformed administrative steps
-Dialogue: 0,0:32:41.44,0:32:44.52,Default,,0,0,0,,which amount to flattening\Nthe (INAUDIBLE) substitution in the closure
+Dialogue: 0,0:32:41.44,0:32:44.52,Default,,0,0,0,,which amount to flattening\Nthe explicit substitution in the closure
 Dialogue: 0,0:32:44.52,0:32:45.68,Default,,0,0,0,,into a term.
 Dialogue: 0,0:32:47.20,0:32:50.20,Default,,0,0,0,,Our main result is a one\Nto one correspondence
 Dialogue: 0,0:32:50.20,0:32:53.92,Default,,0,0,0,,between the non-administrative\Nsteps in our calculus
 Dialogue: 0,0:32:53.92,0:32:56.48,Default,,0,0,0,,and the steps of normal\Norder in lambda.
 Dialogue: 0,0:32:58.24,0:33:01.40,Default,,0,0,0,,This correspondence is captured\Nby the commuting diagram here.
-Dialogue: 0,0:33:02.16,0:33:05.36,Default,,0,0,0,,On the top, C or more\Nadministrative steps
+Dialogue: 0,0:33:02.16,0:33:05.36,Default,,0,0,0,,On the top, 0 or more\Nadministrative steps
 Dialogue: 0,0:33:05.36,0:33:07.08,Default,,0,0,0,,followed by one beta step
 Dialogue: 0,0:33:07.60,0:33:10.20,Default,,0,0,0,,correspond to the one\Nbeta step on the bottom.
 Dialogue: 0,0:33:11.48,0:33:15.48,Default,,0,0,0,,A substitution function sigma\Nmediates between the closures above
@@ -396,7 +396,7 @@ Dialogue: 0,0:33:15.48,0:33:16.84,Default,,0,0,0,,and the terms below.
 Dialogue: 0,0:33:17.84,0:33:20.68,Default,,0,0,0,,The substitution function\Nflattens the closure
 Dialogue: 0,0:33:20.68,0:33:23.20,Default,,0,0,0,,by performing only\Nadministrative reduction.
 Dialogue: 0,0:33:24.72,0:33:27.16,Default,,0,0,0,,The main technique used in\Nthe proof of this result
-Dialogue: 0,0:33:27.16,0:33:29.84,Default,,0,0,0,,is a structural induction\Non the derivation (INAUDIBLE)
+Dialogue: 0,0:33:27.16,0:33:29.84,Default,,0,0,0,,is a structural induction\Non the derivation trees
 Dialogue: 0,0:33:29.84,0:33:31.20,Default,,0,0,0,,of reduction judgements
 Dialogue: 0,0:33:31.20,0:33:32.64,Default,,0,0,0,,which has been possible
 Dialogue: 0,0:33:32.64,0:33:35.48,Default,,0,0,0,,thanks to the features of\Nour calculus of closures.
@@ -414,7 +414,7 @@ Dialogue: 0,0:34:06.00,0:34:09.28,Default,,0,0,0,,We have proven our result, whi
 Dialogue: 0,0:34:09.28,0:34:14.40,Default,,0,0,0,,that KN finds the normal form\Nof a term, if it exists.
 Dialogue: 0,0:34:14.40,0:34:15.80,Default,,0,0,0,,Our contribution adds
 Dialogue: 0,0:34:15.80,0:34:19.64,Default,,0,0,0,,to the increasing corpus of\Nknowledge of full reduction.
-Dialogue: 0,0:34:19.64,0:34:21.84,Default,,0,0,0,,We conjecture that\Nvariance of our calculus
+Dialogue: 0,0:34:19.64,0:34:21.84,Default,,0,0,0,,We conjecture that\Nvarianys of our calculus
 Dialogue: 0,0:34:21.84,0:34:23.72,Default,,0,0,0,,could be used to\Nprove similar results
 Dialogue: 0,0:34:23.72,0:34:26.12,Default,,0,0,0,,for other full reducing strategies.
 Dialogue: 0,0:34:26.12,0:34:31.12,Default,,0,0,0,,In particular for the eager strategies\Nin the call by value family.

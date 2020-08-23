@@ -1,26 +1,34 @@
 1
 00:00:56,480 --> 00:01:01,480
 
+
 2
 00:02:07,440 --> 00:02:12,440
+
 
 3
 00:03:17,520 --> 00:03:22,520
 
+
 4
 00:04:21,000 --> 00:04:26,000
+
 
 5
 00:05:15,000 --> 00:05:20,000
 
+
 6
 00:06:18,720 --> 00:06:23,720
+
 
 7
 00:08:15,840 --> 00:08:20,840
 
+
 8
 00:09:30,000 --> 00:09:33,000
+
 
 9
 00:11:40,520 --> 00:11:43,240
@@ -33,7 +41,7 @@ together with Shriram Krishnamurthi,
 
 11
 00:11:44,800 --> 00:11:48,320
-I'm editor and chief of
+I'm editor in chief of
 The Journal of Functional Programming.
 
 12
@@ -184,7 +192,7 @@ with Byeong-Mo Chan.
 
 43
 00:13:13,520 --> 00:13:15,800
-Let me start with a background.
+Let me start with the background.
 
 44
 00:13:15,800 --> 00:13:20,800
@@ -202,12 +210,12 @@ programmes, one for client
 
 47
 00:13:27,680 --> 00:13:29,360
-and the other for server in-
+and the other for server in
 
 48
 00:13:29,360 --> 00:13:33,160
 generally, in two
-different form languages.
+different programming languages.
 
 49
 00:13:33,160 --> 00:13:37,200
@@ -220,12 +228,12 @@ for testing and maintenance.
 
 51
 00:13:41,040 --> 00:13:42,800
-tierless programme languages
+Tierless programming languages
 
 52
 00:13:42,800 --> 00:13:45,760
 also known also called
-multitier programme languages
+multitier programming languages
 
 53
 00:13:45,760 --> 00:13:48,400
@@ -256,7 +264,7 @@ the two sliced programmes
 
 59
 00:14:07,520 --> 00:14:11,520
-will be automatically supportive.
+will be automatically supported.
 
 60
 00:14:11,520 --> 00:14:15,560
@@ -265,12 +273,12 @@ interested in a seamlessly
 
 61
 00:14:15,560 --> 00:14:19,640
-tierless programme language
+tierless programming language
 for client-server model.
 
 62
 00:14:19,640 --> 00:14:24,160
-It is basically a programme language
+It is basically a programming language
 designed for a single computer
 
 63
@@ -295,7 +303,7 @@ and fully transparent.
 
 67
 00:14:43,040 --> 00:14:47,800
-Links is a real world seamlessly
+Links is a real-world seamlessly
 tierless programme language
 
 68
@@ -304,8 +312,8 @@ for a client-server model.
 
 69
 00:14:50,840 --> 00:14:55,840
-One advantage of the seamlessly
-tierless programme language is this.
+One advantage of a seamlessly
+tierless programming language is this.
 
 70
 00:14:56,360 --> 00:15:00,600
@@ -370,7 +378,7 @@ lambda application is used,
 
 83
 00:15:54,880 --> 00:15:58,960
-first, for local procedure call
+both for local procedure call
 and remote procedure call.
 
 84
@@ -380,7 +388,7 @@ used in the syntax.
 
 85
 00:16:03,880 --> 00:16:08,040
-So, links is the seamlessly
+So, links is a seamlessly
 tierless programming language
 
 86
@@ -445,7 +453,7 @@ at the same location a
 99
 00:17:04,520 --> 00:17:08,240
 into a lambda abstraction with
-location and notation b.
+location annotation b.
 
 100
 00:17:09,480 --> 00:17:12,680
@@ -525,7 +533,7 @@ located function types
 
 116
 00:18:25,720 --> 00:18:28,640
-to trap function
+to track function
 location statically.
 
 117
@@ -540,7 +548,7 @@ or remote procedure call.
 
 119
 00:18:39,880 --> 00:18:45,960
-As a result, programmemers can enjoy
+As a result, programmers can enjoy
 the advantage of the seamless RPC
 
 120
@@ -570,7 +578,7 @@ on a function type.
 125
 00:19:08,520 --> 00:19:12,720
 It is a reminiscent of a location
-annotation on a lambda extraction.
+annotation on a lambda abstraction.
 
 126
 00:19:14,000 --> 00:19:16,280
@@ -578,8 +586,8 @@ The located function type means that
 
 127
 00:19:16,800 --> 00:19:18,960
-every lambda extraction
-of these type
+every lambda abstraction
+of this type
 
 128
 00:19:19,480 --> 00:19:24,560
@@ -611,7 +619,7 @@ nor a server function type.
 134
 00:19:43,600 --> 00:19:47,080
 Because depending on
-the value of if conditioner
+the value of if conditional
 
 135
 00:19:48,080 --> 00:19:51,760
@@ -620,7 +628,7 @@ can be bounded to f.
 
 136
 00:19:53,000 --> 00:19:54,800
-In the typed RPC characters
+In the typed RPC calculus
 
 137
 00:19:55,320 --> 00:19:57,880
@@ -656,7 +664,7 @@ with respect to a caller location A
 
 144
 00:20:25,960 --> 00:20:28,160
-and a functional location B.
+and a function location B.
 
 145
 00:20:29,160 --> 00:20:33,200
@@ -675,7 +683,7 @@ and the function location B
 148
 00:20:40,240 --> 00:20:44,600
 are fully analysed
-and known in compared time.
+and known in compile time.
 
 149
 00:20:45,840 --> 00:20:51,440
@@ -730,7 +738,7 @@ directed slicing compilation
 
 160
 00:21:33,560 --> 00:21:36,360
-whose sliced clients and subprogrammes
+whose sliced clients and server programmes
 
 161
 00:21:36,360 --> 00:21:41,360
@@ -749,7 +757,7 @@ that always does location checking
 164
 00:21:48,920 --> 00:21:51,880
 in the sliced client
-and several programmes.
+and server programmes.
 
 165
 00:21:55,400 --> 00:21:58,360
@@ -771,7 +779,7 @@ such as client and server
 
 169
 00:22:06,800 --> 00:22:09,240
-not something to report both.
+not something to record both.
 
 170
 00:22:10,240 --> 00:22:12,840
@@ -826,7 +834,7 @@ located function
 
 181
 00:22:49,440 --> 00:22:52,440
-with the location f traction
+with the location abstraction
 over location variable
 
 182
@@ -841,7 +849,7 @@ to the client location
 
 184
 00:22:59,200 --> 00:23:00,800
-to get a client map function.
+to get a client map function. 
 
 185
 00:23:02,040 --> 00:23:05,120
@@ -997,7 +1005,7 @@ the proof of the property.
 217
 00:24:47,440 --> 00:24:50,520
 The corresponding artefact is
-a reduction of strategy in a calculus
+a reduction strategy in a calculus
 
 218
 00:24:50,520 --> 00:24:51,520
@@ -1024,7 +1032,7 @@ the term up to a normal form.
 
 223
 00:25:06,160 --> 00:25:08,800
-That is a term without (INAUDIBLE)
+That is a term without redexes
 
 224
 00:25:09,800 --> 00:25:12,760
@@ -1033,8 +1041,8 @@ important with nowadays
 
 225
 00:25:12,760 --> 00:25:14,520
-proven systems with
-the (INAUDIBLE) types
+proof assistants with
+dependent types
 
 226
 00:25:14,520 --> 00:25:17,560
@@ -1067,11 +1075,11 @@ as input a lambda term
 232
 00:25:31,520 --> 00:25:34,880
 that it embeds in closure in
-an environment that disturbs bindings
+an environment that preserves bindings
 
 233
 00:25:35,400 --> 00:25:37,240
-and uses a continuation of stack
+and uses a continuation stack
 
 234
 00:25:37,240 --> 00:25:41,080
@@ -1089,12 +1097,12 @@ represented by a De Bruijn index
 
 237
 00:25:47,520 --> 00:25:50,160
-pushes the operant of
+pushes the operand of
 an application onto the stack
 
 238
 00:25:51,160 --> 00:25:54,160
-retrieves such an operant when
+retrieves such an operand when
 the operator is an abstraction
 
 239
@@ -1133,7 +1141,7 @@ retrieved from the environment,
 
 246
 00:26:13,200 --> 00:26:15,520
-reduces the operant
+reduces the operand
 of a normal form
 
 247
@@ -1143,7 +1151,7 @@ a special kind of closure
 
 248
 00:26:17,560 --> 00:26:19,080
-that disturbs (INAUDIBLE) theorems.
+that preserves (INAUDIBLE) terms.
 
 249
 00:26:19,560 --> 00:26:23,000
@@ -1167,12 +1175,12 @@ when it has some.
 253
 00:26:32,520 --> 00:26:35,400
 However the machine is
-the first order transition system
+a first order transition system
 
 254
 00:26:35,400 --> 00:26:38,360
 that manipulates environments
-and (INAUDIBLE) stacks at the low level.
+and continuation stacks at the low level.
 
 255
 00:26:39,360 --> 00:26:41,600
@@ -1195,17 +1203,17 @@ that mimics the machine
 
 259
 00:26:50,960 --> 00:26:53,800
-and that is suited for deployment
+and that is suited for
 proofs by structural induction.
 
 260
 00:26:54,560 --> 00:26:58,680
-And later to prove that the set
+And later to prove that the said
 calculus realises the normal order
 
 261
 00:26:58,680 --> 00:27:00,640
-of the strategy of
+strategy of
 the pure lambda calculus.
 
 262
@@ -1266,7 +1274,7 @@ When an application is reached
 
 274
 00:27:36,120 --> 00:27:38,240
-it's operant is embedded
+it's operand is embedded
 into a closure
 
 275
@@ -1290,7 +1298,7 @@ resumes on such bindings.
 
 279
 00:27:51,000 --> 00:27:53,160
-In the better rule of this calculus
+In the beta rule of this calculus
 
 280
 00:27:53,160 --> 00:27:54,720
@@ -1298,8 +1306,8 @@ the operator in an application
 
 281
 00:27:54,720 --> 00:27:58,280
-is reduced multiple step fashion
-to a weakened normal form.
+is reduced in multiple step fashion
+to a weak head normal form.
 
 282
 00:27:59,520 --> 00:28:02,760
@@ -1332,7 +1340,7 @@ for closure application
 288
 00:28:17,680 --> 00:28:20,800
 that enables the reduction
-relations to be lift
+relations to be lifted
 
 289
 00:28:20,800 --> 00:28:22,320
@@ -1351,11 +1359,11 @@ to closure applications.
 292
 00:28:30,480 --> 00:28:33,800
 This mechanism is reminiscent
-of the applied stage
+of the apply stage
 
 293
 00:28:33,800 --> 00:28:36,960
-in the (INAUDIBLE) evaluators
+in the eval-apply evaluators
 in the classical literature
 
 294
@@ -1365,7 +1373,7 @@ functional programming.
 
 295
 00:28:40,160 --> 00:28:42,400
-Now reduction expanse applications.
+Now reduction expands applications.
 
 296
 00:28:43,120 --> 00:28:44,920
@@ -1373,7 +1381,7 @@ Reduces the operator if needed,
 
 297
 00:28:44,920 --> 00:28:46,760
-performs better with action
+performs beta reduction
 
 298
 00:28:47,240 --> 00:28:50,280
@@ -1411,7 +1419,7 @@ extending the calculus
 
 305
 00:29:09,920 --> 00:29:12,760
-with a constructure for
+with a construction for
 closure abstraction.
 
 306
@@ -1456,7 +1464,7 @@ occurance of the variable
 314
 00:29:37,760 --> 00:29:41,200
 and it's binding occurrence
-in the abstracts index tree.
+in the abstract syntax tree.
 
 315
 00:29:42,720 --> 00:29:46,080
@@ -1659,7 +1667,7 @@ parameter by the operand
 
 357
 00:31:54,120 --> 00:31:56,640
-then the sequel goes on as before.
+then the sequence goes on as before.
 
 358
 00:31:57,880 --> 00:31:59,840
@@ -1685,7 +1693,7 @@ is retrieved from the environment.
 
 363
 00:32:10,040 --> 00:32:13,360
-No reduction moves the scope to
+Now reduction moves the scope to
 the body of the closure abstraction
 
 364
@@ -1699,7 +1707,7 @@ of the reduction relation.
 
 366
 00:32:20,320 --> 00:32:22,680
-Combine with the rule
+Combined with the rule
 for index calculation
 
 367
@@ -1730,7 +1738,7 @@ performed administrative steps
 372
 00:32:41,440 --> 00:32:44,520
 which amount to flattening
-the (INAUDIBLE) substitution in the closure
+the explicit substitution in the closure
 
 373
 00:32:44,520 --> 00:32:45,680
@@ -1758,7 +1766,7 @@ by the commuting diagram here.
 
 378
 00:33:02,160 --> 00:33:05,360
-On the top, C or more
+On the top, 0 or more
 administrative steps
 
 379
@@ -1797,7 +1805,7 @@ the proof of this result
 386
 00:33:27,160 --> 00:33:29,840
 is a structural induction
-on the derivation (INAUDIBLE)
+on the derivation trees
 
 387
 00:33:29,840 --> 00:33:31,200
@@ -1881,7 +1889,7 @@ knowledge of full reduction.
 404
 00:34:19,640 --> 00:34:21,840
 We conjecture that
-variance of our calculus
+varianys of our calculus
 
 405
 00:34:21,840 --> 00:34:23,720
