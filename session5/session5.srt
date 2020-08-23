@@ -2934,7 +2934,7 @@ the implementation in Haskell.
 
 610
 00:44:19,040 --> 00:44:20,720
-We're gonna move to
+We're going to move to
 the implementation in Cedille,
 
 611
@@ -3199,7 +3199,7 @@ a termination situation.
 
 668
 00:46:23,440 --> 00:46:24,680
-And then, concoct,
+And then, concat,
 
 669
 00:46:24,680 --> 00:46:28,920
@@ -3232,7 +3232,7 @@ that I pulled out
 
 675
 00:46:39,400 --> 00:46:41,520
-from the cover you're
+from the code we were
 just looking at.
 
 676
@@ -3293,7 +3293,7 @@ or something like this.
 688
 00:47:05,800 --> 00:47:08,920
 And, in fact, previous works
-the tackled determination
+the tackled termination
 
 689
 00:47:08,920 --> 00:47:10,720
@@ -3306,7 +3306,7 @@ some of them anyway,
 
 691
 00:47:11,840 --> 00:47:14,520
-use the penalty type continuations.
+used dependantly typed continuations.
 
 692
 00:47:14,520 --> 00:47:16,880
@@ -3391,7 +3391,7 @@ You can't use sized types.
 711
 00:47:53,280 --> 00:47:55,080
 You're not allowed to use
-determination proofs,
+tetermination proofs,
 
 712
 00:47:55,080 --> 00:47:57,120
@@ -3423,7 +3423,7 @@ You can just use the tool box
 
 718
 00:48:12,560 --> 00:48:16,600
-of swell, advanced, strong
+of well, advanced, strong
 functional program.
 
 719
@@ -3548,22 +3548,22 @@ And the language, though, provides-
 
 746
 00:49:15,600 --> 00:49:17,280
-Seville provides special syntax
+Cedille provides special syntax
 
 747
 00:49:17,280 --> 00:49:19,320
 for these recursion universes,
-that pretty much hide.
+that pretty much hide
 
 748
 00:49:20,000 --> 00:49:22,000
-Aaron: That hide
+that hide
 a lot of the machinery
 
 749
 00:49:22,000 --> 00:49:24,320
 and make it feel
-quite idiomatic,
+a quite idiomatic,
 
 750
 00:49:24,320 --> 00:49:26,400
@@ -3573,7 +3573,7 @@ recursive functions.
 751
 00:49:26,400 --> 00:49:29,000
 So, I want to emphasize
-even this, the deal
+even though Cedille
 
 752
 00:49:29,000 --> 00:49:31,040
@@ -3583,7 +3583,7 @@ that lets you do proofs
 753
 00:49:31,040 --> 00:49:34,000
 and things like that,
-depending on the type programs
+dependently typed programs
 
 754
 00:49:34,000 --> 00:49:35,680
@@ -3598,7 +3598,7 @@ kind of machinery,
 756
 00:49:36,960 --> 00:49:40,080
 we're just using
-strong functional program.
+strong functional programming.
 
 757
 00:49:40,080 --> 00:49:41,640
@@ -3612,8 +3612,8 @@ So first, the first point,
 
 759
 00:49:44,560 --> 00:49:47,040
-we're going to see the surface
-of deals for cruising universes.
+we're going to see
+Cedille's recursion universes.
 
 760
 00:49:47,040 --> 00:49:48,720
@@ -3632,7 +3632,7 @@ of like the underlying interface.
 
 763
 00:49:54,240 --> 00:49:55,520
-And again, this deal
+And again, Cedille
 provides sort of a little
 
 764
@@ -3702,7 +3702,7 @@ The first thing it gives you
 
 777
 00:50:30,600 --> 00:50:34,000
-is an invalid function
+is an eval function
 R to X, OK.
 
 778
@@ -3717,7 +3717,7 @@ a recursive call,
 
 780
 00:50:37,680 --> 00:50:39,480
-you gotta call it Val,
+you gotta call eval,
 but you can only call it
 
 781
@@ -3767,8 +3767,8 @@ of Mendler style recursion
 
 790
 00:51:07,280 --> 00:51:10,760
-is that you can only call it
-Val on sub data,
+is that you can only call
+eval on sub data,
 
 791
 00:51:10,760 --> 00:51:12,360
@@ -3793,7 +3793,7 @@ you can call it eval on.
 795
 00:51:19,840 --> 00:51:21,640
 So that ensures your,
-you aren't doing
+you are doing
 
 796
 00:51:21,640 --> 00:51:24,040
@@ -3808,7 +3808,7 @@ you know, is this variable,
 798
 00:51:27,160 --> 00:51:30,320
 I'm making a quick call
-on some house structurally
+on somehow structurally
 
 799
 00:51:30,320 --> 00:51:32,240
@@ -3823,7 +3823,7 @@ through the typing.
 801
 00:51:34,160 --> 00:51:37,040
 OK. So that's Mendler-Style.
-Mendler-Style paramorphic
+Now Mendler-Style paramorphic
 
 802
 00:51:37,040 --> 00:51:40,160
@@ -3837,8 +3837,8 @@ sort of a conceptual development
 
 804
 00:51:44,080 --> 00:51:47,000
-of this idea of studios
-are cruising universe.
+of this idea of Cedille's
+recursion universe.
 
 805
 00:51:47,000 --> 00:51:49,280
@@ -3853,7 +3853,7 @@ the universe gives you
 807
 00:51:52,200 --> 00:51:54,800
 the same stuff you had
-before the recurring universe
+before the recursion universe
 
 808
 00:51:54,800 --> 00:51:56,880
@@ -3862,7 +3862,7 @@ but it also comes
 
 809
 00:51:56,880 --> 00:52:00,560
-as a (INAUDIBLE) in black
+as, highlighted in black,
 with a reveal function,
 
 810
@@ -3918,11 +3918,11 @@ and this is really important.
 820
 00:52:27,480 --> 00:52:28,800
 If you wanna write
-efficient access
+efficient accessor
 
 821
 00:52:28,800 --> 00:52:31,480
-or functions like predecessor
+functions like predecessor
 or tail or something.
 
 822
@@ -3972,8 +3972,8 @@ my bullet points there
 
 831
 00:52:57,480 --> 00:53:00,720
-from X of kind of stars,
-X kind star to star,
+from X of kind star,
+to X of kind star to star,
 
 832
 00:53:00,720 --> 00:53:03,960
@@ -4028,26 +4028,26 @@ OK. So let's take
 842
 00:53:28,520 --> 00:53:30,120
 a look at how we do
-this since deal
+this in Cedille
 
 843
 00:53:30,120 --> 00:53:35,680
-Harper's mattress deal.
+Harper's match in Cedille.
 So, the critical part
 
 844
 00:53:35,680 --> 00:53:38,800
-about the nest
-of recursion is here.
+about the nested
+recursion is here.
 
 845
 00:53:38,800 --> 00:53:44,680
-So in Yeah,
+So in,
 In blue, I've had,
 
 846
 00:53:44,680 --> 00:53:48,480
-it's a deal syntax
+it's Cedille syntax
 for indicating the abstract type R,
 
 847
@@ -4057,7 +4057,7 @@ a recursion here,
 
 848
 00:53:49,880 --> 00:53:52,640
-mew match, then mew
+mu match, then mu
 is for the sort of
 
 849
@@ -4072,17 +4072,17 @@ of the recursion universe.
 
 851
 00:53:58,680 --> 00:54:01,000
-And the acts, the type
-of computing here
+And the X, the type
+we're computing here
 
 852
 00:54:01,000 --> 00:54:03,080
 has to be given explicitly
-to deal with camp
+Cedille can't
 
 853
 00:54:03,080 --> 00:54:07,120
-as your furthest for you.
+infer this for you.
 And it can mention this R,
 
 854
@@ -4127,17 +4127,16 @@ to do in other type theories
 
 862
 00:54:30,520 --> 00:54:32,760
-where passing the recurs...
-At the end of the
+where passing the recursive
 
 863
 00:54:32,760 --> 00:54:36,320
-recursive function match
-there to the Harper's
+the recursive function match
+there to the helper
 
 864
 00:54:36,320 --> 00:54:38,200
-functioning match I,
+function matchi,
 but anyway,
 
 865
@@ -4161,13 +4160,13 @@ of the setup for the recursion,
 
 869
 00:54:49,000 --> 00:54:51,600
-introducing, the cruising
+introducing, the recursion
 universe pieces
 
 870
 00:54:51,600 --> 00:54:55,360
 that we then need
-to write this Harper function
+to write this helper function
 
 871
 00:54:55,360 --> 00:54:58,400
@@ -4177,12 +4176,12 @@ one nasty recursive call.
 872
 00:54:58,400 --> 00:55:00,720
 So you can see
-a (INAUDIBLE) here,
+highlighted here,
 
 873
 00:55:00,720 --> 00:55:02,560
 it's transliterated
-into steel Cove.
+into Cedille.
 
 874
 00:55:02,560 --> 00:55:04,640
@@ -4212,7 +4211,7 @@ when we make
 879
 00:55:16,800 --> 00:55:19,760
 the recursive call
-require and match sees prime,
+we're calling and match cs prime,
 
 880
 00:55:19,760 --> 00:55:22,080
@@ -4237,7 +4236,7 @@ coming into matchi
 884
 00:55:28,800 --> 00:55:31,080
 and it's expecting type T
-for T is actually
+where T is actually
 
 885
 00:55:31,080 --> 00:55:32,280
@@ -4252,12 +4251,12 @@ except we can recurse on it.
 887
 00:55:35,360 --> 00:55:36,920
 If you're looking
-at the types of your picture
+at the type signature
 
 888
 00:55:36,920 --> 00:55:39,120
-of mass by at the top,
-we can recruits on it.
+of matchi at the top,
+we can recurse on it.
 
 889
 00:55:39,120 --> 00:55:42,400
@@ -4267,12 +4266,12 @@ in at that time.
 890
 00:55:42,400 --> 00:55:46,080
 And so when we call
-match of CS prime match
+match of CS prime, match
 
 891
 00:55:46,080 --> 00:55:49,040
 is expecting input of type
-T and CS is prime has type T
+T and CS prime has type T
 
 892
 00:55:49,040 --> 00:55:51,960
@@ -4282,12 +4281,12 @@ is the input to the continuation.
 893
 00:55:51,960 --> 00:55:53,800
 And the continuation
-is they noted there
+is denoted there
 
 894
 00:55:53,800 --> 00:55:58,960
 in blue has type KT,
-which is T to bull.
+which is T to bool.
 
 895
 00:55:58,960 --> 00:56:00,880
@@ -4316,7 +4315,7 @@ strong functional programming
 
 900
 00:56:11,960 --> 00:56:13,720
-and its a deal,
+in Cedille,
 it's type based.
 
 901
@@ -4336,7 +4335,7 @@ nothing like that,
 
 904
 00:56:20,080 --> 00:56:22,920
-even though this deal
+even though Cedille
 does support those separately.
 
 905
@@ -4376,7 +4375,7 @@ a direct port of the
 
 912
 00:56:40,920 --> 00:56:42,920
-high school code
+Haskell code
 because of the way
 
 913
@@ -4401,7 +4400,7 @@ the very dedicated
 
 917
 00:56:54,000 --> 00:56:55,880
-anonymous ICO peer viewers
+anonymous ICFP reviewers
 who gave us
 
 918
@@ -4451,12 +4450,12 @@ for question and answer.
 927
 00:57:22,360 --> 00:57:24,000
 So please follow
-the links via cloud,
+the links via Clowdr,
 
 928
 00:57:24,000 --> 00:57:26,040
-or if you wish to join that,
-we'll take a brief pause
+if you wish to join them.
+We'll take a brief pause
 
 929
 00:57:26,040 --> 00:57:29,880

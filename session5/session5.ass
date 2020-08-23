@@ -620,7 +620,7 @@ Dialogue: 0,0:44:07.88,0:44:11.20,Default,,0,0,0,,using a typed StdReg, for\Nsta
 Dialogue: 0,0:44:11.20,0:44:12.84,Default,,0,0,0,,And this is an idea\Nwe got from a paper,
 Dialogue: 0,0:44:12.84,0:44:15.76,Default,,0,0,0,,from Dan Licata and his students.
 Dialogue: 0,0:44:15.76,0:44:19.04,Default,,0,0,0,,So, here's a look at\Nthe implementation in Haskell.
-Dialogue: 0,0:44:19.04,0:44:20.72,Default,,0,0,0,,We're gonna move to\Nthe implementation in Cedille,
+Dialogue: 0,0:44:19.04,0:44:20.72,Default,,0,0,0,,We're going to move to\Nthe implementation in Cedille,
 Dialogue: 0,0:44:20.72,0:44:22.72,Default,,0,0,0,,in a little bit, but to\Nstart off in Haskell,
 Dialogue: 0,0:44:22.72,0:44:24.80,Default,,0,0,0,,so, it's a continuation-based\Nalgorithm.
 Dialogue: 0,0:44:24.80,0:44:27.16,Default,,0,0,0,,So, we have a type K\Nfor continuations.
@@ -678,14 +678,14 @@ Dialogue: 0,0:46:13.36,0:46:15.52,Default,,0,0,0,,is exactly the same\Nas we sta
 Dialogue: 0,0:46:15.52,0:46:17.72,Default,,0,0,0,,Plus r, we just make\Nour criss-cross plus r.
 Dialogue: 0,0:46:17.72,0:46:19.36,Default,,0,0,0,,So, there's been no\Nstructural decrease here,
 Dialogue: 0,0:46:19.36,0:46:23.44,Default,,0,0,0,,which is quite worrisome for\Na termination situation.
-Dialogue: 0,0:46:23.44,0:46:24.68,Default,,0,0,0,,And then, concoct,
+Dialogue: 0,0:46:23.44,0:46:24.68,Default,,0,0,0,,And then, concat,
 Dialogue: 0,0:46:24.68,0:46:28.92,Default,,0,0,0,,similarly decomposes\Nand updates the continuation.
 Dialogue: 0,0:46:28.92,0:46:32.56,Default,,0,0,0,,So, the problem of termination\Nfor this algorithm
 Dialogue: 0,0:46:32.56,0:46:33.60,Default,,0,0,0,,has been actually studied,
 Dialogue: 0,0:46:33.60,0:46:35.96,Default,,0,0,0,,by a number of different\Nprevious works.
 Dialogue: 0,0:46:35.96,0:46:37.96,Default,,0,0,0,,You can sort of see\Nthe main problem right here,
 Dialogue: 0,0:46:37.96,0:46:39.40,Default,,0,0,0,,in this little part\Nthat I pulled out
-Dialogue: 0,0:46:39.40,0:46:41.52,Default,,0,0,0,,from the cover you're\Njust looking at.
+Dialogue: 0,0:46:39.40,0:46:41.52,Default,,0,0,0,,from the code we were\Njust looking at.
 Dialogue: 0,0:46:41.52,0:46:44.16,Default,,0,0,0,,And so, we have a matchh,\Nthat calls matchi,
 Dialogue: 0,0:46:44.16,0:46:46.00,Default,,0,0,0,,and matchi wants to\Ncall back to matchh,
 Dialogue: 0,0:46:46.00,0:46:48.92,Default,,0,0,0,,in this red highlighted\Ncall site there,
@@ -698,10 +698,10 @@ Dialogue: 0,0:47:00.20,0:47:01.92,Default,,0,0,0,,So, it seems that you need\Nso
 Dialogue: 0,0:47:01.92,0:47:03.36,Default,,0,0,0,,that the length of cs prime
 Dialogue: 0,0:47:03.36,0:47:04.60,Default,,0,0,0,,is less than the length of cs,
 Dialogue: 0,0:47:04.60,0:47:05.80,Default,,0,0,0,,or something like this.
-Dialogue: 0,0:47:05.80,0:47:08.92,Default,,0,0,0,,And, in fact, previous works\Nthe tackled determination
+Dialogue: 0,0:47:05.80,0:47:08.92,Default,,0,0,0,,And, in fact, previous works\Nthe tackled termination
 Dialogue: 0,0:47:08.92,0:47:10.72,Default,,0,0,0,,of Harper's\Nregular-expression matcher,
 Dialogue: 0,0:47:10.72,0:47:11.84,Default,,0,0,0,,some of them anyway,
-Dialogue: 0,0:47:11.84,0:47:14.52,Default,,0,0,0,,use the penalty type continuations.
+Dialogue: 0,0:47:11.84,0:47:14.52,Default,,0,0,0,,used dependantly typed continuations.
 Dialogue: 0,0:47:14.52,0:47:16.88,Default,,0,0,0,,And, in fact, one of these papers,
 Dialogue: 0,0:47:16.88,0:47:18.56,Default,,0,0,0,,a very nice paper\NI highly recommend,
 Dialogue: 0,0:47:18.56,0:47:20.40,Default,,0,0,0,,by Bove, Krauss, and Sozeau,
@@ -721,14 +721,14 @@ Dialogue: 0,0:47:44.88,0:47:47.80,Default,,0,0,0,,the types of regular old\Nfunc
 Dialogue: 0,0:47:47.80,0:47:50.64,Default,,0,0,0,,Just polymorphic types.
 Dialogue: 0,0:47:50.64,0:47:52.12,Default,,0,0,0,,You can't use dependent types.
 Dialogue: 0,0:47:52.12,0:47:53.28,Default,,0,0,0,,You can't use sized types.
-Dialogue: 0,0:47:53.28,0:47:55.08,Default,,0,0,0,,You're not allowed to use\Ndetermination proofs,
+Dialogue: 0,0:47:53.28,0:47:55.08,Default,,0,0,0,,You're not allowed to use\Ntetermination proofs,
 Dialogue: 0,0:47:55.08,0:47:57.12,Default,,0,0,0,,or variants, or metrics,\Nor well-founded orders.
 Dialogue: 0,0:47:57.12,0:48:01.44,Default,,0,0,0,,All that heavy duty machinery\Nof termination is not allowed,
 Dialogue: 0,0:48:01.44,0:48:04.24,Default,,0,0,0,,in the regime of strong\Nfunctional programming.
 Dialogue: 0,0:48:04.24,0:48:07.12,Default,,0,0,0,,And so, we are happy to report that,
 Dialogue: 0,0:48:07.12,0:48:10.84,Default,,0,0,0,,in fact, you can do this example\Nwithout dependent types.
 Dialogue: 0,0:48:10.84,0:48:12.56,Default,,0,0,0,,You can just use the tool box
-Dialogue: 0,0:48:12.56,0:48:16.60,Default,,0,0,0,,of swell, advanced, strong\Nfunctional program.
+Dialogue: 0,0:48:12.56,0:48:16.60,Default,,0,0,0,,of well, advanced, strong\Nfunctional program.
 Dialogue: 0,0:48:16.60,0:48:17.80,Default,,0,0,0,,How so, how can you do that?
 Dialogue: 0,0:48:17.80,0:48:18.88,Default,,0,0,0,,That's what we're going to talk about,
 Dialogue: 0,0:48:18.88,0:48:21.28,Default,,0,0,0,,for the time we have here.
@@ -756,24 +756,24 @@ Dialogue: 0,0:49:07.36,0:49:10.48,Default,,0,0,0,,You're not allowed to make\Ndi
 Dialogue: 0,0:49:10.48,0:49:11.48,Default,,0,0,0,,in your code.
 Dialogue: 0,0:49:11.48,0:49:14.12,Default,,0,0,0,,You have to kinda go\Nthrough this interface.
 Dialogue: 0,0:49:14.12,0:49:15.60,Default,,0,0,0,,And the language, though, provides-
-Dialogue: 0,0:49:15.60,0:49:17.28,Default,,0,0,0,,Seville provides special syntax
-Dialogue: 0,0:49:17.28,0:49:19.32,Default,,0,0,0,,for these recursion universes,\Nthat pretty much hide.
-Dialogue: 0,0:49:20.00,0:49:22.00,Default,,0,0,0,,Aaron: That hide\Na lot of the machinery
-Dialogue: 0,0:49:22.00,0:49:24.32,Default,,0,0,0,,and make it feel\Nquite idiomatic,
+Dialogue: 0,0:49:15.60,0:49:17.28,Default,,0,0,0,,Cedille provides special syntax
+Dialogue: 0,0:49:17.28,0:49:19.32,Default,,0,0,0,,for these recursion universes,\Nthat pretty much hide
+Dialogue: 0,0:49:20.00,0:49:22.00,Default,,0,0,0,,that hide\Na lot of the machinery
+Dialogue: 0,0:49:22.00,0:49:24.32,Default,,0,0,0,,and make it feel\Na quite idiomatic,
 Dialogue: 0,0:49:24.32,0:49:26.40,Default,,0,0,0,,way of writing\Nrecursive functions.
-Dialogue: 0,0:49:26.40,0:49:29.00,Default,,0,0,0,,So, I want to emphasize\Neven this, the deal
+Dialogue: 0,0:49:26.40,0:49:29.00,Default,,0,0,0,,So, I want to emphasize\Neven though Cedille
 Dialogue: 0,0:49:29.00,0:49:31.04,Default,,0,0,0,,is this type threory\Nthat lets you do proofs
-Dialogue: 0,0:49:31.04,0:49:34.00,Default,,0,0,0,,and things like that,\Ndepending on the type programs
+Dialogue: 0,0:49:31.04,0:49:34.00,Default,,0,0,0,,and things like that,\Ndependently typed programs
 Dialogue: 0,0:49:34.00,0:49:35.68,Default,,0,0,0,,here we're not using\Nany dependent types
 Dialogue: 0,0:49:35.68,0:49:36.96,Default,,0,0,0,,or any of that\Nkind of machinery,
-Dialogue: 0,0:49:36.96,0:49:40.08,Default,,0,0,0,,we're just using\Nstrong functional program.
+Dialogue: 0,0:49:36.96,0:49:40.08,Default,,0,0,0,,we're just using\Nstrong functional programming.
 Dialogue: 0,0:49:40.08,0:49:41.64,Default,,0,0,0,,OK. So let's see\Nhow this works
 Dialogue: 0,0:49:41.64,0:49:44.56,Default,,0,0,0,,in several steps.\NSo first, the first point,
-Dialogue: 0,0:49:44.56,0:49:47.04,Default,,0,0,0,,we're going to see the surface\Nof deals for cruising universes.
+Dialogue: 0,0:49:44.56,0:49:47.04,Default,,0,0,0,,we're going to see\NCedille's recursion universes.
 Dialogue: 0,0:49:47.04,0:49:48.72,Default,,0,0,0,,So we start off\Nwith something called
 Dialogue: 0,0:49:48.72,0:49:51.16,Default,,0,0,0,,a Mendler style\Nrecursion universe.
 Dialogue: 0,0:49:51.16,0:49:54.24,Default,,0,0,0,,OK. And so this is kind\Nof like the underlying interface.
-Dialogue: 0,0:49:54.24,0:49:55.52,Default,,0,0,0,,And again, this deal\Nprovides sort of a little
+Dialogue: 0,0:49:54.24,0:49:55.52,Default,,0,0,0,,And again, Cedille\Nprovides sort of a little
 Dialogue: 0,0:49:55.52,0:49:58.12,Default,,0,0,0,,bit nicer surface language\Naccess to this interface,
 Dialogue: 0,0:49:58.12,0:50:00.72,Default,,0,0,0,,but this is the basic interface\Nthat we're relying on.
 Dialogue: 0,0:50:00.72,0:50:04.12,Default,,0,0,0,,So let's let F be a signature\Nfunction for a data type.
@@ -787,10 +787,10 @@ Dialogue: 0,0:50:22.56,0:50:24.56,Default,,0,0,0,,this abstract type R\Nis menti
 Dialogue: 0,0:50:24.56,0:50:25.96,Default,,0,0,0,,It's just some type.\NYou have no idea,
 Dialogue: 0,0:50:25.96,0:50:28.08,Default,,0,0,0,,anything about the type,\Nexcept what the interface
 Dialogue: 0,0:50:28.08,0:50:30.60,Default,,0,0,0,,gives you about it.\NThe first thing it gives you
-Dialogue: 0,0:50:30.60,0:50:34.00,Default,,0,0,0,,is an invalid function\NR to X, OK.
+Dialogue: 0,0:50:30.60,0:50:34.00,Default,,0,0,0,,is an eval function\NR to X, OK.
 Dialogue: 0,0:50:34.00,0:50:35.64,Default,,0,0,0,,And this is the function\Nyou have to invoke.
 Dialogue: 0,0:50:35.64,0:50:37.68,Default,,0,0,0,,If you want to make\Na recursive call,
-Dialogue: 0,0:50:37.68,0:50:39.48,Default,,0,0,0,,you gotta call it Val,\Nbut you can only call it
+Dialogue: 0,0:50:37.68,0:50:39.48,Default,,0,0,0,,you gotta call eval,\Nbut you can only call it
 Dialogue: 0,0:50:39.48,0:50:40.92,Default,,0,0,0,,on an R thing.\NYou can't call it
 Dialogue: 0,0:50:40.92,0:50:43.44,Default,,0,0,0,,on just some random\Nother D thing.
 Dialogue: 0,0:50:43.44,0:50:45.88,Default,,0,0,0,,And you're also given\Na substructure, sub data structure
@@ -800,26 +800,26 @@ Dialogue: 0,0:50:53.40,0:50:57.84,Default,,0,0,0,,except at the sort\Nof factori
 Dialogue: 0,0:50:57.84,0:51:01.84,Default,,0,0,0,,The abstract type R.\NAnd so the key thing
 Dialogue: 0,0:51:01.84,0:51:03.56,Default,,0,0,0,,about this is that,\Nand this is, this goes
 Dialogue: 0,0:51:03.56,0:51:07.28,Default,,0,0,0,,back to this idea\Nof Mendler style recursion
-Dialogue: 0,0:51:07.28,0:51:10.76,Default,,0,0,0,,is that you can only call it\NVal on sub data,
+Dialogue: 0,0:51:07.28,0:51:10.76,Default,,0,0,0,,is that you can only call\Neval on sub data,
 Dialogue: 0,0:51:10.76,0:51:12.36,Default,,0,0,0,,because the only things\Nyou have lying around
 Dialogue: 0,0:51:12.36,0:51:14.52,Default,,0,0,0,,of type R, are the things\Nthat are hidden,
 Dialogue: 0,0:51:14.52,0:51:16.68,Default,,0,0,0,,you know, presented to you\Nin this sub data structure.
 Dialogue: 0,0:51:16.68,0:51:19.84,Default,,0,0,0,,And so that's the only stuff\Nyou can call it eval on.
-Dialogue: 0,0:51:19.84,0:51:21.64,Default,,0,0,0,,So that ensures your,\Nyou aren't doing
+Dialogue: 0,0:51:19.84,0:51:21.64,Default,,0,0,0,,So that ensures your,\Nyou are doing
 Dialogue: 0,0:51:21.64,0:51:24.04,Default,,0,0,0,,a structural termination,\Neven though there's no
 Dialogue: 0,0:51:24.04,0:51:27.16,Default,,0,0,0,,sort of check about,\Nyou know, is this variable,
-Dialogue: 0,0:51:27.16,0:51:30.32,Default,,0,0,0,,I'm making a quick call\Non some house structurally
+Dialogue: 0,0:51:27.16,0:51:30.32,Default,,0,0,0,,I'm making a quick call\Non somehow structurally
 Dialogue: 0,0:51:30.32,0:51:32.24,Default,,0,0,0,,derived from my input\Nor anything like that.
 Dialogue: 0,0:51:32.24,0:51:34.16,Default,,0,0,0,,It's all done\Nthrough the typing.
-Dialogue: 0,0:51:34.16,0:51:37.04,Default,,0,0,0,,OK. So that's Mendler-Style.\NMendler-Style paramorphic
+Dialogue: 0,0:51:34.16,0:51:37.04,Default,,0,0,0,,OK. So that's Mendler-Style.\NNow Mendler-Style paramorphic
 Dialogue: 0,0:51:37.04,0:51:40.16,Default,,0,0,0,,recursion universe.\NSo this is the next sort
 Dialogue: 0,0:51:40.16,0:51:44.08,Default,,0,0,0,,of step that presenting\Nsort of a conceptual development
-Dialogue: 0,0:51:44.08,0:51:47.00,Default,,0,0,0,,of this idea of studios\Nare cruising universe.
+Dialogue: 0,0:51:44.08,0:51:47.00,Default,,0,0,0,,of this idea of Cedille's\Nrecursion universe.
 Dialogue: 0,0:51:47.00,0:51:49.28,Default,,0,0,0,,So for computing X,\Nfrom data type D
 Dialogue: 0,0:51:49.28,0:51:52.20,Default,,0,0,0,,now for paramorphic recursion,\Nthe universe gives you
-Dialogue: 0,0:51:52.20,0:51:54.80,Default,,0,0,0,,the same stuff you had\Nbefore the recurring universe
+Dialogue: 0,0:51:52.20,0:51:54.80,Default,,0,0,0,,the same stuff you had\Nbefore the recursion universe
 Dialogue: 0,0:51:54.80,0:51:56.88,Default,,0,0,0,,has all these same pieces,\Nbut it also comes
-Dialogue: 0,0:51:56.88,0:52:00.56,Default,,0,0,0,,as a (INAUDIBLE) in black\Nwith a reveal function,
+Dialogue: 0,0:51:56.88,0:52:00.56,Default,,0,0,0,,as, highlighted in black,\Nwith a reveal function,
 Dialogue: 0,0:52:00.56,0:52:06.52,Default,,0,0,0,,R to D, so this unmasks R\Nas really being D, OK.
 Dialogue: 0,0:52:06.52,0:52:09.08,Default,,0,0,0,,So, but notice you can't\Ngo the other way around.
 Dialogue: 0,0:52:09.08,0:52:11.52,Default,,0,0,0,,You cannot inject D into R\Nthat would be totally
@@ -830,8 +830,8 @@ Dialogue: 0,0:52:18.16,0:52:20.64,Default,,0,0,0,,you are allowed to sort of\Nle
 Dialogue: 0,0:52:20.64,0:52:22.88,Default,,0,0,0,,You can sort of, you know,\NI don't know wormhole
 Dialogue: 0,0:52:22.88,0:52:24.08,Default,,0,0,0,,out of there\Nif you want to,
 Dialogue: 0,0:52:24.08,0:52:27.48,Default,,0,0,0,,to have some data D,\Nand this is really important.
-Dialogue: 0,0:52:27.48,0:52:28.80,Default,,0,0,0,,If you wanna write\Nefficient access
-Dialogue: 0,0:52:28.80,0:52:31.48,Default,,0,0,0,,or functions like predecessor\Nor tail or something.
+Dialogue: 0,0:52:27.48,0:52:28.80,Default,,0,0,0,,If you wanna write\Nefficient accessor
+Dialogue: 0,0:52:28.80,0:52:31.48,Default,,0,0,0,,functions like predecessor\Nor tail or something.
 Dialogue: 0,0:52:32.04,0:52:34.40,Default,,0,0,0,,Now finally, what we need\Nfor the Harper's
 Dialogue: 0,0:52:34.40,0:52:36.68,Default,,0,0,0,,regular expression matcher\Nis we need support
 Dialogue: 0,0:52:36.68,0:52:39.44,Default,,0,0,0,,for nested recursion.\NSo you have all the same stuff
@@ -841,7 +841,7 @@ Dialogue: 0,0:52:44.20,0:52:49.16,Default,,0,0,0,,Now couldn't is now\Ncould dep
 Dialogue: 0,0:52:49.16,0:52:52.56,Default,,0,0,0,,So you compute X of D\Nfrom a data type D
 Dialogue: 0,0:52:52.56,0:52:55.20,Default,,0,0,0,,and the, the reason\Nthat's really important to shift,
 Dialogue: 0,0:52:55.20,0:52:57.48,Default,,0,0,0,,as I see it say below\Nmy bullet points there
-Dialogue: 0,0:52:57.48,0:53:00.72,Default,,0,0,0,,from X of kind of stars,\NX kind star to star,
+Dialogue: 0,0:52:57.48,0:53:00.72,Default,,0,0,0,,from X of kind star,\Nto X of kind star to star,
 Dialogue: 0,0:53:00.72,0:53:03.96,Default,,0,0,0,,is it now the eval function,\Nyou can write eval function
 Dialogue: 0,0:53:03.96,0:53:06.96,Default,,0,0,0,,that goes from R to X of R.\NAnd that gives you
 Dialogue: 0,0:53:06.96,0:53:09.36,Default,,0,0,0,,the possibility of seeing\Nwhen you return something
@@ -852,18 +852,18 @@ Dialogue: 0,0:53:18.64,0:53:21.00,Default,,0,0,0,,on values that\NVal has return
 Dialogue: 0,0:53:21.00,0:53:22.72,Default,,0,0,0,,So that enables a form\Nof nested recursion,
 Dialogue: 0,0:53:22.72,0:53:25.36,Default,,0,0,0,,and the continuations\Nare basically hiding
 Dialogue: 0,0:53:25.36,0:53:28.52,Default,,0,0,0,,a form of nested recursion.\NOK. So let's take
-Dialogue: 0,0:53:28.52,0:53:30.12,Default,,0,0,0,,a look at how we do\Nthis since deal
-Dialogue: 0,0:53:30.12,0:53:35.68,Default,,0,0,0,,Harper's mattress deal.\NSo, the critical part
-Dialogue: 0,0:53:35.68,0:53:38.80,Default,,0,0,0,,about the nest\Nof recursion is here.
-Dialogue: 0,0:53:38.80,0:53:44.68,Default,,0,0,0,,So in Yeah,\NIn blue, I've had,
-Dialogue: 0,0:53:44.68,0:53:48.48,Default,,0,0,0,,it's a deal syntax\Nfor indicating the abstract type R,
+Dialogue: 0,0:53:28.52,0:53:30.12,Default,,0,0,0,,a look at how we do\Nthis in Cedille
+Dialogue: 0,0:53:30.12,0:53:35.68,Default,,0,0,0,,Harper's match in Cedille.\NSo, the critical part
+Dialogue: 0,0:53:35.68,0:53:38.80,Default,,0,0,0,,about the nested\Nrecursion is here.
+Dialogue: 0,0:53:38.80,0:53:44.68,Default,,0,0,0,,So in,\NIn blue, I've had,
+Dialogue: 0,0:53:44.68,0:53:48.48,Default,,0,0,0,,it's Cedille syntax\Nfor indicating the abstract type R,
 Dialogue: 0,0:53:48.48,0:53:49.88,Default,,0,0,0,,if we're doing\Na recursion here,
-Dialogue: 0,0:53:49.88,0:53:52.64,Default,,0,0,0,,mew match, then mew\Nis for the sort of
+Dialogue: 0,0:53:49.88,0:53:52.64,Default,,0,0,0,,mu match, then mu\Nis for the sort of
 Dialogue: 0,0:53:52.64,0:53:56.36,Default,,0,0,0,,kicking off recursion\Nthen type/match is R
 Dialogue: 0,0:53:56.36,0:53:58.68,Default,,0,0,0,,That's the abstract type\Nof the recursion universe.
-Dialogue: 0,0:53:58.68,0:54:01.00,Default,,0,0,0,,And the acts, the type\Nof computing here
-Dialogue: 0,0:54:01.00,0:54:03.08,Default,,0,0,0,,has to be given explicitly\Nto deal with camp
-Dialogue: 0,0:54:03.08,0:54:07.12,Default,,0,0,0,,as your furthest for you.\NAnd it can mention this R,
+Dialogue: 0,0:53:58.68,0:54:01.00,Default,,0,0,0,,And the X, the type\Nwe're computing here
+Dialogue: 0,0:54:01.00,0:54:03.08,Default,,0,0,0,,has to be given explicitly\NCedille can't
+Dialogue: 0,0:54:03.08,0:54:07.12,Default,,0,0,0,,infer this for you.\NAnd it can mention this R,
 Dialogue: 0,0:54:07.12,0:54:10.40,Default,,0,0,0,,and that's just like XR, XD.\NNow we have
 Dialogue: 0,0:54:10.40,0:54:13.56,Default,,0,0,0,,a way of mentioning\Nwe're indicating
 Dialogue: 0,0:54:13.56,0:54:17.60,Default,,0,0,0,,the functionality of X\Nand X does have to be
@@ -872,49 +872,49 @@ Dialogue: 0,0:54:21.76,0:54:24.80,Default,,0,0,0,,the eval function\Nis convenie
 Dialogue: 0,0:54:24.80,0:54:26.28,Default,,0,0,0,,And so it looks,\Nthis looks very much like
 Dialogue: 0,0:54:26.28,0:54:27.68,Default,,0,0,0,,an idiomatic recursion.\NNow, here, we're doing
 Dialogue: 0,0:54:27.68,0:54:30.52,Default,,0,0,0,,something it'd be tough\Nto do in other type theories
-Dialogue: 0,0:54:30.52,0:54:32.76,Default,,0,0,0,,where passing the recurs...\NAt the end of the
-Dialogue: 0,0:54:32.76,0:54:36.32,Default,,0,0,0,,recursive function match\Nthere to the Harper's
-Dialogue: 0,0:54:36.32,0:54:38.20,Default,,0,0,0,,functioning match I,\Nbut anyway,
+Dialogue: 0,0:54:30.52,0:54:32.76,Default,,0,0,0,,where passing the recursive
+Dialogue: 0,0:54:32.76,0:54:36.32,Default,,0,0,0,,the recursive function match\Nthere to the helper
+Dialogue: 0,0:54:36.32,0:54:38.20,Default,,0,0,0,,function matchi,\Nbut anyway,
 Dialogue: 0,0:54:38.20,0:54:40.88,Default,,0,0,0,,that match is the eval\Nand it has the type below
 Dialogue: 0,0:54:40.88,0:54:42.84,Default,,0,0,0,,it takes in the abstract type R\Nwhich here is denoted
 Dialogue: 0,0:54:42.84,0:54:45.92,Default,,0,0,0,,type/match and proceeds.
 Dialogue: 0,0:54:45.92,0:54:49.00,Default,,0,0,0,,OK. So that's sort\Nof the setup for the recursion,
-Dialogue: 0,0:54:49.00,0:54:51.60,Default,,0,0,0,,introducing, the cruising\Nuniverse pieces
-Dialogue: 0,0:54:51.60,0:54:55.36,Default,,0,0,0,,that we then need\Nto write this Harper function
+Dialogue: 0,0:54:49.00,0:54:51.60,Default,,0,0,0,,introducing, the recursion\Nuniverse pieces
+Dialogue: 0,0:54:51.60,0:54:55.36,Default,,0,0,0,,that we then need\Nto write this helper function
 Dialogue: 0,0:54:55.36,0:54:58.40,Default,,0,0,0,,and make that deal with that\None nasty recursive call.
-Dialogue: 0,0:54:58.40,0:55:00.72,Default,,0,0,0,,So you can see\Na (INAUDIBLE) here,
-Dialogue: 0,0:55:00.72,0:55:02.56,Default,,0,0,0,,it's transliterated\Ninto steel Cove.
+Dialogue: 0,0:54:58.40,0:55:00.72,Default,,0,0,0,,So you can see\Nhighlighted here,
+Dialogue: 0,0:55:00.72,0:55:02.56,Default,,0,0,0,,it's transliterated\Ninto Cedille.
 Dialogue: 0,0:55:02.56,0:55:04.64,Default,,0,0,0,,I hope you can sort of\Nstill make out the structure.
 Dialogue: 0,0:55:04.64,0:55:07.96,Default,,0,0,0,,We have a plus R case\Nand that I pulled out here
 Dialogue: 0,0:55:07.96,0:55:09.92,Default,,0,0,0,,and we were gonna\Nmake this recursive call
 Dialogue: 0,0:55:09.92,0:55:14.92,Default,,0,0,0,,to check one\Noccurrence of R,
 Dialogue: 0,0:55:14.92,0:55:16.80,Default,,0,0,0,,and, then in the end,\Nwhen we make
-Dialogue: 0,0:55:16.80,0:55:19.76,Default,,0,0,0,,the recursive call\Nrequire and match sees prime,
+Dialogue: 0,0:55:16.80,0:55:19.76,Default,,0,0,0,,the recursive call\Nwe're calling and match cs prime,
 Dialogue: 0,0:55:19.76,0:55:22.08,Default,,0,0,0,,and that's great,\Nthis match function is,
 Dialogue: 0,0:55:22.08,0:55:24.84,Default,,0,0,0,,is actually coming in to matchi\NAs you saw it,
 Dialogue: 0,0:55:24.84,0:55:27.00,Default,,0,0,0,,where matchi was invoked\Nin my previous slide,
 Dialogue: 0,0:55:27.00,0:55:28.80,Default,,0,0,0,,this match functions\Ncoming into matchi
-Dialogue: 0,0:55:28.80,0:55:31.08,Default,,0,0,0,,and it's expecting type T\Nfor T is actually
+Dialogue: 0,0:55:28.80,0:55:31.08,Default,,0,0,0,,and it's expecting type T\Nwhere T is actually
 Dialogue: 0,0:55:31.08,0:55:32.28,Default,,0,0,0,,just some abstract type.\NYou really don't need
 Dialogue: 0,0:55:32.28,0:55:35.36,Default,,0,0,0,,to know much about it,\Nexcept we can recurse on it.
-Dialogue: 0,0:55:35.36,0:55:36.92,Default,,0,0,0,,If you're looking\Nat the types of your picture
-Dialogue: 0,0:55:36.92,0:55:39.12,Default,,0,0,0,,of mass by at the top,\Nwe can recruits on it.
+Dialogue: 0,0:55:35.36,0:55:36.92,Default,,0,0,0,,If you're looking\Nat the type signature
+Dialogue: 0,0:55:36.92,0:55:39.12,Default,,0,0,0,,of matchi at the top,\Nwe can recurse on it.
 Dialogue: 0,0:55:39.12,0:55:42.40,Default,,0,0,0,,And the suffix comes\Nin at that time.
-Dialogue: 0,0:55:42.40,0:55:46.08,Default,,0,0,0,,And so when we call\Nmatch of CS prime match
-Dialogue: 0,0:55:46.08,0:55:49.04,Default,,0,0,0,,is expecting input of type\NT and CS is prime has type T
+Dialogue: 0,0:55:42.40,0:55:46.08,Default,,0,0,0,,And so when we call\Nmatch of CS prime, match
+Dialogue: 0,0:55:46.08,0:55:49.04,Default,,0,0,0,,is expecting input of type\NT and CS prime has type T
 Dialogue: 0,0:55:49.04,0:55:51.96,Default,,0,0,0,,because CS prime\Nis the input to the continuation.
-Dialogue: 0,0:55:51.96,0:55:53.80,Default,,0,0,0,,And the continuation\Nis they noted there
-Dialogue: 0,0:55:53.80,0:55:58.96,Default,,0,0,0,,in blue has type KT,\Nwhich is T to bull.
+Dialogue: 0,0:55:51.96,0:55:53.80,Default,,0,0,0,,And the continuation\Nis denoted there
+Dialogue: 0,0:55:53.80,0:55:58.96,Default,,0,0,0,,in blue has type KT,\Nwhich is T to bool.
 Dialogue: 0,0:55:58.96,0:56:00.88,Default,,0,0,0,,OK. So to conclude,\Nwe've talked about
 Dialogue: 0,0:56:00.88,0:56:02.84,Default,,0,0,0,,Harper's regular\Nexpression matcher,
 Dialogue: 0,0:56:02.84,0:56:05.88,Default,,0,0,0,,which uses continuations\Nfor very elegant control flow
 Dialogue: 0,0:56:05.88,0:56:08.72,Default,,0,0,0,,that leads to complications\Nfor termination reasoning.
 Dialogue: 0,0:56:08.72,0:56:11.96,Default,,0,0,0,,And we saw a solution now using\Nstrong functional programming
-Dialogue: 0,0:56:11.96,0:56:13.72,Default,,0,0,0,,and its a deal,\Nit's type based.
+Dialogue: 0,0:56:11.96,0:56:13.72,Default,,0,0,0,,in Cedille,\Nit's type based.
 Dialogue: 0,0:56:13.72,0:56:15.64,Default,,0,0,0,,There's no fancy,\Nextra additions
 Dialogue: 0,0:56:15.64,0:56:18.64,Default,,0,0,0,,beyond regular types\Nof functional programming,
 Dialogue: 0,0:56:18.64,0:56:20.08,Default,,0,0,0,,no dependent types,\Nnothing like that,
-Dialogue: 0,0:56:20.08,0:56:22.92,Default,,0,0,0,,even though this deal\Ndoes support those separately.
+Dialogue: 0,0:56:20.08,0:56:22.92,Default,,0,0,0,,even though Cedille\Ndoes support those separately.
 Dialogue: 0,0:56:22.92,0:56:26.36,Default,,0,0,0,,So we use this idea\Nof a recursion universe that,
 Dialogue: 0,0:56:26.36,0:56:29.92,Default,,0,0,0,,that gives you a form\Nof type based nested
 Dialogue: 0,0:56:29.92,0:56:32.28,Default,,0,0,0,,paramorphic recursion.\NAnd it turns out that
@@ -922,12 +922,12 @@ Dialogue: 0,0:56:32.28,0:56:34.76,Default,,0,0,0,,Harper's matcher is just\Na pe
 Dialogue: 0,0:56:34.76,0:56:36.16,Default,,0,0,0,,It's very easy.\NWe don't have time
 Dialogue: 0,0:56:36.16,0:56:37.72,Default,,0,0,0,,to wade through\Nall the code,
 Dialogue: 0,0:56:37.72,0:56:40.92,Default,,0,0,0,,but it's really pretty much\Na direct port of the
-Dialogue: 0,0:56:40.92,0:56:42.92,Default,,0,0,0,,high school code\Nbecause of the way
+Dialogue: 0,0:56:40.92,0:56:42.92,Default,,0,0,0,,Haskell code\Nbecause of the way
 Dialogue: 0,0:56:42.92,0:56:45.60,Default,,0,0,0,,that the abstract type\Nfor the eval function
 Dialogue: 0,0:56:45.60,0:56:47.64,Default,,0,0,0,,matches up perfectly\Nwith the inputs
 Dialogue: 0,0:56:47.64,0:56:51.52,Default,,0,0,0,,for the continuation.\NSo thanks very much to funders,
 Dialogue: 0,0:56:51.52,0:56:54.00,Default,,0,0,0,,and I'd really like to thank\Nthe very dedicated
-Dialogue: 0,0:56:54.00,0:56:55.88,Default,,0,0,0,,anonymous ICO peer viewers\Nwho gave us
+Dialogue: 0,0:56:54.00,0:56:55.88,Default,,0,0,0,,anonymous ICFP reviewers\Nwho gave us
 Dialogue: 0,0:56:55.88,0:56:58.36,Default,,0,0,0,,outstanding really\Nabove and beyond
 Dialogue: 0,0:56:58.36,0:57:00.76,Default,,0,0,0,,kind of criticism\Nand help getting this
 Dialogue: 0,0:57:00.76,0:57:04.28,Default,,0,0,0,,into good shape\Nand shepherd Richard Eisenberg
@@ -937,8 +937,8 @@ Dialogue: 0,0:57:08.44,0:57:15.76,Default,,0,0,0,,(APPLAUSE)
 Dialogue: 0,0:57:16.44,0:57:17.52,Default,,0,0,0,,RICHARD: Great,\Nthanks, Aaron.
 Dialogue: 0,0:57:17.52,0:57:20.12,Default,,0,0,0,,And now in the New York\Nand Asia time band,
 Dialogue: 0,0:57:20.12,0:57:22.36,Default,,0,0,0,,we have authors available\Nfor question and answer.
-Dialogue: 0,0:57:22.36,0:57:24.00,Default,,0,0,0,,So please follow\Nthe links via cloud,
-Dialogue: 0,0:57:24.00,0:57:26.04,Default,,0,0,0,,or if you wish to join that,\Nwe'll take a brief pause
+Dialogue: 0,0:57:22.36,0:57:24.00,Default,,0,0,0,,So please follow\Nthe links via Clowdr,
+Dialogue: 0,0:57:24.00,0:57:26.04,Default,,0,0,0,,if you wish to join them.\NWe'll take a brief pause
 Dialogue: 0,0:57:26.04,0:57:29.88,Default,,0,0,0,,until the next talk at 11:45\Nin the New York time band.
 Dialogue: 0,0:58:01.96,0:58:05.88,Default,,0,0,0,,Next up we have Nandor Licker\Nwho will present Duplo,
 Dialogue: 0,0:58:05.88,0:58:10.04,Default,,0,0,0,,a framework for\NOcaml post link optimization.
