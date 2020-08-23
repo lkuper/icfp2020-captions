@@ -6077,7 +6077,7 @@ and Jeffrey questions by video chat.
 1291
 01:20:13,080 --> 01:20:15,520
 The next talk is
-a presentation in the paper
+a presentation of the paper
 
 1292
 01:20:15,520 --> 01:20:17,600
@@ -6090,8 +6090,8 @@ to variable size input arrays,
 
 1294
 01:20:21,400 --> 01:20:24,120
-which is about helping end users
-spreadsheet programmemers
+which is about helping end-user
+spreadsheet programmers
 
 1295
 01:20:24,120 --> 01:20:25,840
@@ -6109,8 +6109,8 @@ Matt McCutchen, Judith Borghouts,
 
 1298
 01:20:32,600 --> 01:20:36,280
-Andy Gordon, Simon Peyton Jones
-and Advait Sarkar.
+Andy Gordon, Simon Peyton Jones
+and Advait Sarkar.
 
 1299
 01:20:36,280 --> 01:20:38,960
@@ -6375,7 +6375,7 @@ and we'll get the wrong answer.
 
 1353
 01:22:53,040 --> 01:22:55,120
-The result we like is
+The result we'd like is
 if the body of shop
 
 1354
@@ -6556,7 +6556,7 @@ with a naive model
 1391
 01:24:18,160 --> 01:24:20,360
 of cascading delays in
-the bus transit system.
+a bus transit system.
 
 1392
 01:24:20,880 --> 01:24:22,640
@@ -6584,17 +6584,17 @@ steps in the simulation
 
 1397
 01:24:31,360 --> 01:24:33,720
-and the vertical direction,
+in the vertical direction,
 and the numbers of stations
 
 1398
 01:24:33,720 --> 01:24:35,880
 and routes both in
-the horizontal direction,
+the horizontal direction.
 
 1399
 01:24:36,400 --> 01:24:39,200
-this mutual recursion
+There's mutual recursion
 among four of the arrays.
 
 1400
@@ -6622,12 +6622,12 @@ to resize an SDF at the cell level,
 1405
 01:24:49,160 --> 01:24:51,320
 effectively generalising
-it to handle input
+it to handle inputs
 
 1406
 01:24:51,320 --> 01:24:54,800
 of variable size,
-we call the result in elastic SDF.
+we call the result an elastic SDF.
 
 1407
 01:24:54,800 --> 01:24:56,280
@@ -6640,7 +6640,7 @@ the resizing should work.
 
 1409
 01:24:58,120 --> 01:25:00,000
-But it turns out that for many SPF's
+But it turns out that for many SDF's
 
 1410
 01:25:00,000 --> 01:25:01,760
@@ -6743,13 +6743,13 @@ negative integer value.
 
 1431
 01:25:48,200 --> 01:25:51,680
-Of course, if we set off in three
-we get the original shot back,
+Of course, if we set alpha to three
+we get the original shop back,
 
 1432
 01:25:51,680 --> 01:25:54,680
-we'll call this elastic SDF shop
-one for reference in this talk,
+we'll call this elastic SDF shop1
+for reference in this talk,
 
 1433
 01:25:54,680 --> 01:25:57,320
@@ -6767,7 +6767,7 @@ to match the argument sizes
 
 1436
 01:26:03,760 --> 01:26:05,800
-in this case setting off with a six
+in this case setting alpha to six
 
 1437
 01:26:05,800 --> 01:26:07,560
@@ -6806,12 +6806,12 @@ even if others overlap them.
 1444
 01:26:21,760 --> 01:26:24,880
 Here the reference, in the sum
-reached the age seven of tile four,
+reached H7 of tile four,
 
 1445
 01:26:24,880 --> 01:26:28,160
 while the output reference reached
-the age seven and tile five.
+H7 of tile five.
 
 1446
 01:26:28,160 --> 01:26:29,480
@@ -6905,18 +6905,18 @@ different lengths alpha and beta,
 
 1466
 01:27:13,880 --> 01:27:17,160
-while some to S requires them
+while sum 2 S requires them
 to be the same length alpha.
 
 1467
 01:27:17,160 --> 01:27:20,040
-We say that sum two D is more
-general than a sum two S
+We say that sum 2 D is more
+general than sum 2 S
 
 1468
 01:27:20,040 --> 01:27:21,880
 since it can be
-converted to sum two S
+converted to sum 2 S
 
 1469
 01:27:21,880 --> 01:27:24,080
@@ -6925,7 +6925,7 @@ the length variables,
 
 1470
 01:27:24,080 --> 01:27:26,080
-we prefer sum two D to make sure
+we prefer sum 2 D to make sure
 
 1471
 01:27:26,080 --> 01:27:27,840
@@ -6974,7 +6974,7 @@ we'll look at one of them.
 
 1481
 01:27:44,680 --> 01:27:46,000
-In addition to shop one
+In addition to shop1
 
 1482
 01:27:46,000 --> 01:27:48,720
@@ -7028,7 +7028,7 @@ that's more general than all three.
 
 1493
 01:28:07,120 --> 01:28:08,600
-The user probably want shop one,
+The user probably want shop1,
 
 1494
 01:28:08,600 --> 01:28:10,760
@@ -7038,12 +7038,12 @@ formalise that somehow.
 1495
 01:28:10,760 --> 01:28:13,560
 So we introduced the concept
-of irregular generalisation
+of regular generalisation
 
 1496
 01:28:13,560 --> 01:28:16,800
 which satisfies several conditions
-on top as well defined S,
+on top as well-definedness,
 
 1497
 01:28:16,800 --> 01:28:18,200
@@ -7052,12 +7052,12 @@ a cell reference
 
 1498
 01:28:18,200 --> 01:28:20,560
-can pick three elements
+can't pick three elements
 out of a larger tile,
 
 1499
 01:28:20,560 --> 01:28:21,680
-so sharp one is regular
+so shop1 is regular
 
 1500
 01:28:21,680 --> 01:28:23,680
@@ -7093,12 +7093,12 @@ This can be seen as the analogue
 
 1507
 01:28:38,920 --> 01:28:42,240
-of the principal type of terminal
-functional programming language
+of the principal type of a term in a
+functional programming language.
 
 1508
 01:28:44,120 --> 01:28:45,640
-or algorithm defined the principle
+Our algorithm to find the principle
 
 1509
 01:28:45,640 --> 01:28:48,160
@@ -7129,7 +7129,7 @@ the relative reference
 
 1515
 01:28:57,960 --> 01:29:00,440
-between the files in
+between the tiles in
 columns G and H,
 
 1516
@@ -7168,12 +7168,12 @@ defined generalisations.
 1523
 01:29:17,720 --> 01:29:19,520
 We try to make
-and capture user intent,
+it capture user intent,
 
 1524
 01:29:19,520 --> 01:29:22,600
 which inevitably involves
-judgement calls or goals,
+judgement calls. Our goals,
 
 1525
 01:29:22,600 --> 01:29:25,120
@@ -7183,7 +7183,7 @@ of regular generalisation,
 1526
 01:29:25,120 --> 01:29:29,000
 or to support as many realistic
-STF design patterns as we can,
+SDF design patterns as we can,
 
 1527
 01:29:29,000 --> 01:29:31,160
@@ -7220,7 +7220,7 @@ making things easier for users.
 1534
 01:29:44,800 --> 01:29:47,400
 So we did a user's study
-to compare elastic SDF
+to compare elastic SDFs
 
 1535
 01:29:47,400 --> 01:29:48,840
@@ -7248,7 +7248,7 @@ lower cognitive
 
 1540
 01:29:59,880 --> 01:30:03,360
-workload using elastic SDF
+workload using elastic SDFs
 compared to array programming,
 
 1541
@@ -7271,7 +7271,7 @@ faster on average
 
 1545
 01:30:10,920 --> 01:30:13,400
-using elastic SDF compared
+using elastic SDFs compared
 to array programming.
 
 1546
@@ -7286,7 +7286,7 @@ for simple tasks
 
 1548
 01:30:17,920 --> 01:30:21,000
-they preferred elastic SDF
+they preferred elastic SDFs
 for more complex tasks.
 
 1549
@@ -7337,7 +7337,7 @@ this functionality
 1558
 01:30:46,160 --> 01:30:48,640
 widely available to improve
-these to productivity.
+user productivity.
 
 1559
 01:30:48,640 --> 01:30:49,800

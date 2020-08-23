@@ -1301,14 +1301,14 @@ Dialogue: 0,1:19:58.04,1:19:59.64,Default,,0,0,0,,JEREMY: Thanks Barak.
 Dialogue: 0,1:19:59.64,1:20:01.92,Default,,0,0,0,,If you're watching the\NNew York streaming Clowdr,
 Dialogue: 0,1:20:01.92,1:20:03.32,Default,,0,0,0,,you can now see a Q&A link
 Dialogue: 0,1:20:03.32,1:20:07.28,Default,,0,0,0,,where you can ask Barak\Nand Jeffrey questions by video chat.
-Dialogue: 0,1:20:13.08,1:20:15.52,Default,,0,0,0,,The next talk is\Na presentation in the paper
+Dialogue: 0,1:20:13.08,1:20:15.52,Default,,0,0,0,,The next talk is\Na presentation of the paper
 Dialogue: 0,1:20:15.52,1:20:17.60,Default,,0,0,0,,elastic sheet defined functions,
 Dialogue: 0,1:20:17.60,1:20:21.40,Default,,0,0,0,,generalising spreadsheet functions\Nto variable size input arrays,
-Dialogue: 0,1:20:21.40,1:20:24.12,Default,,0,0,0,,which is about helping end users\Nspreadsheet programmemers
+Dialogue: 0,1:20:21.40,1:20:24.12,Default,,0,0,0,,which is about helping end-user\Nspreadsheet programmers
 Dialogue: 0,1:20:24.12,1:20:25.84,Default,,0,0,0,,to write more flexible functions
 Dialogue: 0,1:20:25.84,1:20:29.00,Default,,0,0,0,,that work over inputs\Nof arbitrary size.
 Dialogue: 0,1:20:29.00,1:20:32.60,Default,,0,0,0,,The authors of the paper are\NMatt McCutchen, Judith Borghouts,
-Dialogue: 0,1:20:32.60,1:20:36.28,Default,,0,0,0,,Andy Gordon, Simon Peyton Jones\Nand Advait Sarkar.
+Dialogue: 0,1:20:32.60,1:20:36.28,Default,,0,0,0,,Andy Gordon, Simon Peyton Jones\Nand Advait Sarkar.
 Dialogue: 0,1:20:36.28,1:20:38.96,Default,,0,0,0,,And Matt will be presenting.
 Dialogue: 0,1:20:38.96,1:20:40.04,Default,,0,0,0,,MATT MCCUTCHEN:\NHi, I'm Matt McCutchen
 Dialogue: 0,1:20:40.04,1:20:41.68,Default,,0,0,0,,and I'm going to talk\Nabout a method of
@@ -1363,7 +1363,7 @@ Dialogue: 0,1:22:43.72,1:22:46.12,Default,,0,0,0,,if we call shop on a shopping 
 Dialogue: 0,1:22:46.12,1:22:47.36,Default,,0,0,0,,than the original,
 Dialogue: 0,1:22:47.36,1:22:49.84,Default,,0,0,0,,when we try to put the pretax\Nprices in the input range
 Dialogue: 0,1:22:49.84,1:22:53.04,Default,,0,0,0,,they'll get cut off\Nand we'll get the wrong answer.
-Dialogue: 0,1:22:53.04,1:22:55.12,Default,,0,0,0,,The result we like is\Nif the body of shop
+Dialogue: 0,1:22:53.04,1:22:55.12,Default,,0,0,0,,The result we'd like is\Nif the body of shop
 Dialogue: 0,1:22:55.12,1:22:57.00,Default,,0,0,0,,are resized to fit the input,
 Dialogue: 0,1:22:57.00,1:23:00.04,Default,,0,0,0,,how can we make shop\Nbehave this way?
 Dialogue: 0,1:23:00.04,1:23:02.48,Default,,0,0,0,,One approach is to let\Nthe entire array of prices
@@ -1401,25 +1401,25 @@ Dialogue: 0,1:24:09.16,1:24:11.48,Default,,0,0,0,,unless they find an example on
 Dialogue: 0,1:24:11.48,1:24:14.88,Default,,0,0,0,,that they can adapt\Nto their problem.
 Dialogue: 0,1:24:14.88,1:24:17.16,Default,,0,0,0,,If that isn't bad enough,\Nhere's another SDF
 Dialogue: 0,1:24:17.16,1:24:18.16,Default,,0,0,0,,with a naive model
-Dialogue: 0,1:24:18.16,1:24:20.36,Default,,0,0,0,,of cascading delays in\Nthe bus transit system.
+Dialogue: 0,1:24:18.16,1:24:20.36,Default,,0,0,0,,of cascading delays in\Na bus transit system.
 Dialogue: 0,1:24:20.88,1:24:22.64,Default,,0,0,0,,The idea is that\Na departure from a station
 Dialogue: 0,1:24:22.64,1:24:24.32,Default,,0,0,0,,will be delayed if\Nthe bus that was supposed
 Dialogue: 0,1:24:24.32,1:24:26.56,Default,,0,0,0,,to make the trip hasn't arrived yet.
 Dialogue: 0,1:24:26.56,1:24:29.48,Default,,0,0,0,,We want this SDF to re\Nsize in three different
 Dialogue: 0,1:24:29.48,1:24:31.36,Default,,0,0,0,,ways, the of time\Nsteps in the simulation
-Dialogue: 0,1:24:31.36,1:24:33.72,Default,,0,0,0,,and the vertical direction,\Nand the numbers of stations
-Dialogue: 0,1:24:33.72,1:24:35.88,Default,,0,0,0,,and routes both in\Nthe horizontal direction,
-Dialogue: 0,1:24:36.40,1:24:39.20,Default,,0,0,0,,this mutual recursion\Namong four of the arrays.
+Dialogue: 0,1:24:31.36,1:24:33.72,Default,,0,0,0,,in the vertical direction,\Nand the numbers of stations
+Dialogue: 0,1:24:33.72,1:24:35.88,Default,,0,0,0,,and routes both in\Nthe horizontal direction.
+Dialogue: 0,1:24:36.40,1:24:39.20,Default,,0,0,0,,There's mutual recursion\Namong four of the arrays.
 Dialogue: 0,1:24:39.20,1:24:40.72,Default,,0,0,0,,While we think this\Nis possible to write
 Dialogue: 0,1:24:40.72,1:24:41.72,Default,,0,0,0,,using array programming
 Dialogue: 0,1:24:41.72,1:24:43.80,Default,,0,0,0,,it's going to be such a mess\Nthat I won't even try.
 Dialogue: 0,1:24:45.84,1:24:47.12,Default,,0,0,0,,So it seems we really do want
 Dialogue: 0,1:24:47.12,1:24:49.16,Default,,0,0,0,,to resize an SDF at the cell level,
-Dialogue: 0,1:24:49.16,1:24:51.32,Default,,0,0,0,,effectively generalising\Nit to handle input
-Dialogue: 0,1:24:51.32,1:24:54.80,Default,,0,0,0,,of variable size,\Nwe call the result in elastic SDF.
+Dialogue: 0,1:24:49.16,1:24:51.32,Default,,0,0,0,,effectively generalising\Nit to handle inputs
+Dialogue: 0,1:24:51.32,1:24:54.80,Default,,0,0,0,,of variable size,\Nwe call the result an elastic SDF.
 Dialogue: 0,1:24:54.80,1:24:56.28,Default,,0,0,0,,Maybe the user can somehow
 Dialogue: 0,1:24:56.28,1:24:58.12,Default,,0,0,0,,specify how\Nthe resizing should work.
-Dialogue: 0,1:24:58.12,1:25:00.00,Default,,0,0,0,,But it turns out that for many SPF's
+Dialogue: 0,1:24:58.12,1:25:00.00,Default,,0,0,0,,But it turns out that for many SDF's
 Dialogue: 0,1:25:00.00,1:25:01.76,Default,,0,0,0,,including all three\Nwe've seen so far,
 Dialogue: 0,1:25:01.76,1:25:03.32,Default,,0,0,0,,the user doesn't need to do anything
 Dialogue: 0,1:25:03.32,1:25:05.88,Default,,0,0,0,,because we can figure out\Nthe resizing automatically.
@@ -1441,12 +1441,12 @@ Dialogue: 0,1:25:40.48,1:25:42.36,Default,,0,0,0,,We can now write the elastic S
 Dialogue: 0,1:25:42.36,1:25:43.72,Default,,0,0,0,,that we want in this notation
 Dialogue: 0,1:25:43.72,1:25:45.60,Default,,0,0,0,,by introducing a length\Nvariable alpha,
 Dialogue: 0,1:25:45.60,1:25:47.64,Default,,0,0,0,,that can take any non\Nnegative integer value.
-Dialogue: 0,1:25:48.20,1:25:51.68,Default,,0,0,0,,Of course, if we set off in three\Nwe get the original shot back,
-Dialogue: 0,1:25:51.68,1:25:54.68,Default,,0,0,0,,we'll call this elastic SDF shop\None for reference in this talk,
+Dialogue: 0,1:25:48.20,1:25:51.68,Default,,0,0,0,,Of course, if we set alpha to three\Nwe get the original shop back,
+Dialogue: 0,1:25:51.68,1:25:54.68,Default,,0,0,0,,we'll call this elastic SDF shop1\Nfor reference in this talk,
 Dialogue: 0,1:25:54.68,1:25:57.32,Default,,0,0,0,,Though the user would invoke it\Nusing the original name shop.
 Dialogue: 0,1:25:58.72,1:26:00.80,Default,,0,0,0,,When an elastic SDF is called,
 Dialogue: 0,1:26:00.80,1:26:03.76,Default,,0,0,0,,We set the length variables\Nto match the argument sizes
-Dialogue: 0,1:26:03.76,1:26:05.80,Default,,0,0,0,,in this case setting off with a six
+Dialogue: 0,1:26:03.76,1:26:05.80,Default,,0,0,0,,in this case setting alpha to six
 Dialogue: 0,1:26:05.80,1:26:07.56,Default,,0,0,0,,and substitute them\Ninto the definition
 Dialogue: 0,1:26:07.56,1:26:10.44,Default,,0,0,0,,giving an ordinary SDF that\Nwe can evaluate as before.
 Dialogue: 0,1:26:11.08,1:26:13.68,Default,,0,0,0,,Now if the tiles may\Ncolllide when they expand,
@@ -1454,8 +1454,8 @@ Dialogue: 0,1:26:13.68,1:26:15.68,Default,,0,0,0,,we address this by\Nlabelling 
 Dialogue: 0,1:26:15.68,1:26:17.84,Default,,0,0,0,,with the tile or tiles that\Noriginally pointed to
 Dialogue: 0,1:26:17.84,1:26:19.68,Default,,0,0,0,,and having it read only\Nfrom those tiles,
 Dialogue: 0,1:26:19.68,1:26:21.76,Default,,0,0,0,,even if others overlap them.
-Dialogue: 0,1:26:21.76,1:26:24.88,Default,,0,0,0,,Here the reference, in the sum\Nreached the age seven of tile four,
-Dialogue: 0,1:26:24.88,1:26:28.16,Default,,0,0,0,,while the output reference reached\Nthe age seven and tile five.
+Dialogue: 0,1:26:21.76,1:26:24.88,Default,,0,0,0,,Here the reference, in the sum\Nreached H7 of tile four,
+Dialogue: 0,1:26:24.88,1:26:28.16,Default,,0,0,0,,while the output reference reached\NH7 of tile five.
 Dialogue: 0,1:26:28.16,1:26:29.48,Default,,0,0,0,,We do this for all SDF's but
 Dialogue: 0,1:26:29.48,1:26:30.96,Default,,0,0,0,,to reduce clutter we won't show
 Dialogue: 0,1:26:30.96,1:26:32.52,Default,,0,0,0,,the labels for the rest of the talk.
@@ -1476,11 +1476,11 @@ Dialogue: 0,1:27:04.04,1:27:06.24,Default,,0,0,0,,consider this contrived sum tw
 Dialogue: 0,1:27:06.24,1:27:08.60,Default,,0,0,0,,that sums two arrays\Nand adds the totals.
 Dialogue: 0,1:27:08.60,1:27:10.84,Default,,0,0,0,,Here are two well\Ndefined generalisations
 Dialogue: 0,1:27:10.84,1:27:13.88,Default,,0,0,0,,sum 2 D allows the arrays to be\Ndifferent lengths alpha and beta,
-Dialogue: 0,1:27:13.88,1:27:17.16,Default,,0,0,0,,while some to S requires them\Nto be the same length alpha.
-Dialogue: 0,1:27:17.16,1:27:20.04,Default,,0,0,0,,We say that sum two D is more\Ngeneral than a sum two S
-Dialogue: 0,1:27:20.04,1:27:21.88,Default,,0,0,0,,since it can be\Nconverted to sum two S
+Dialogue: 0,1:27:13.88,1:27:17.16,Default,,0,0,0,,while sum 2 S requires them\Nto be the same length alpha.
+Dialogue: 0,1:27:17.16,1:27:20.04,Default,,0,0,0,,We say that sum 2 D is more\Ngeneral than sum 2 S
+Dialogue: 0,1:27:20.04,1:27:21.88,Default,,0,0,0,,since it can be\Nconverted to sum 2 S
 Dialogue: 0,1:27:21.88,1:27:24.08,Default,,0,0,0,,by substituting for\Nthe length variables,
-Dialogue: 0,1:27:24.08,1:27:26.08,Default,,0,0,0,,we prefer sum two D to make sure
+Dialogue: 0,1:27:24.08,1:27:26.08,Default,,0,0,0,,we prefer sum 2 D to make sure
 Dialogue: 0,1:27:26.08,1:27:27.84,Default,,0,0,0,,we generalise as many\Ndegrees of freedom
 Dialogue: 0,1:27:27.84,1:27:29.84,Default,,0,0,0,,in the original SDF as possible.
 Dialogue: 0,1:27:31.08,1:27:33.12,Default,,0,0,0,,So given an SDF like shop.
@@ -1491,7 +1491,7 @@ Dialogue: 0,1:27:37.68,1:27:38.96,Default,,0,0,0,,That's the one we want.
 Dialogue: 0,1:27:38.96,1:27:40.68,Default,,0,0,0,,Unfortunately there\Nare several problems
 Dialogue: 0,1:27:40.68,1:27:42.92,Default,,0,0,0,,that can cause them to be no\Nprinciple generalisation,
 Dialogue: 0,1:27:42.92,1:27:44.68,Default,,0,0,0,,we'll look at one of them.
-Dialogue: 0,1:27:44.68,1:27:46.00,Default,,0,0,0,,In addition to shop one
+Dialogue: 0,1:27:44.68,1:27:46.00,Default,,0,0,0,,In addition to shop1
 Dialogue: 0,1:27:46.00,1:27:48.72,Default,,0,0,0,,that we saw earlier shop\Nhas two other contrived,
 Dialogue: 0,1:27:48.72,1:27:50.52,Default,,0,0,0,,but well defined generalisations
 Dialogue: 0,1:27:50.52,1:27:52.28,Default,,0,0,0,,one that uses only\Nthe first three items
@@ -1503,13 +1503,13 @@ Dialogue: 0,1:28:00.60,1:28:02.24,Default,,0,0,0,,different answers on the same 
 Dialogue: 0,1:28:02.24,1:28:03.56,Default,,0,0,0,,it should be intuitively clear
 Dialogue: 0,1:28:03.56,1:28:05.24,Default,,0,0,0,,there isn't a principle\Ngeneralisation
 Dialogue: 0,1:28:05.24,1:28:07.12,Default,,0,0,0,,that's more general than all three.
-Dialogue: 0,1:28:07.12,1:28:08.60,Default,,0,0,0,,The user probably want shop one,
+Dialogue: 0,1:28:07.12,1:28:08.60,Default,,0,0,0,,The user probably want shop1,
 Dialogue: 0,1:28:08.60,1:28:10.76,Default,,0,0,0,,But we have to\Nformalise that somehow.
-Dialogue: 0,1:28:10.76,1:28:13.56,Default,,0,0,0,,So we introduced the concept\Nof irregular generalisation
-Dialogue: 0,1:28:13.56,1:28:16.80,Default,,0,0,0,,which satisfies several conditions\Non top as well defined S,
+Dialogue: 0,1:28:10.76,1:28:13.56,Default,,0,0,0,,So we introduced the concept\Nof regular generalisation
+Dialogue: 0,1:28:13.56,1:28:16.80,Default,,0,0,0,,which satisfies several conditions\Non top as well-definedness,
 Dialogue: 0,1:28:16.80,1:28:18.20,Default,,0,0,0,,one of which is that\Na cell reference
-Dialogue: 0,1:28:18.20,1:28:20.56,Default,,0,0,0,,can pick three elements\Nout of a larger tile,
-Dialogue: 0,1:28:20.56,1:28:21.68,Default,,0,0,0,,so sharp one is regular
+Dialogue: 0,1:28:18.20,1:28:20.56,Default,,0,0,0,,can't pick three elements\Nout of a larger tile,
+Dialogue: 0,1:28:20.56,1:28:21.68,Default,,0,0,0,,so shop1 is regular
 Dialogue: 0,1:28:21.68,1:28:23.68,Default,,0,0,0,,and the other two\Ngeneralisations are not.
 Dialogue: 0,1:28:25.32,1:28:27.40,Default,,0,0,0,,Now out of all the well\Ndefined generalisations
 Dialogue: 0,1:28:27.40,1:28:30.96,Default,,0,0,0,,of an SDF, if we keep only\Nthe regular generalisations,
@@ -1517,15 +1517,15 @@ Dialogue: 0,1:28:30.96,1:28:32.16,Default,,0,0,0,,we can prove that there's
 Dialogue: 0,1:28:32.16,1:28:34.48,Default,,0,0,0,,always a principle\Nregular generalisation.
 Dialogue: 0,1:28:34.48,1:28:37.36,Default,,0,0,0,,And that's the elastic SDF we use.
 Dialogue: 0,1:28:37.36,1:28:38.92,Default,,0,0,0,,This can be seen as the analogue
-Dialogue: 0,1:28:38.92,1:28:42.24,Default,,0,0,0,,of the principal type of terminal\Nfunctional programming language
-Dialogue: 0,1:28:44.12,1:28:45.64,Default,,0,0,0,,or algorithm defined the principle
+Dialogue: 0,1:28:38.92,1:28:42.24,Default,,0,0,0,,of the principal type of a term in a\Nfunctional programming language.
+Dialogue: 0,1:28:44.12,1:28:45.64,Default,,0,0,0,,Our algorithm to find the principle
 Dialogue: 0,1:28:45.64,1:28:48.16,Default,,0,0,0,,regular generalisation\Nintroduces all the variables
 Dialogue: 0,1:28:48.16,1:28:49.92,Default,,0,0,0,,that could possibly need
 Dialogue: 0,1:28:49.92,1:28:51.52,Default,,0,0,0,,generate constraints on them
 Dialogue: 0,1:28:51.52,1:28:53.44,Default,,0,0,0,,based on the definition\Nof regularity.
 Dialogue: 0,1:28:53.96,1:28:55.92,Default,,0,0,0,,And then solves the constraints.
 Dialogue: 0,1:28:55.92,1:28:57.96,Default,,0,0,0,,For example, because of\Nthe relative reference
-Dialogue: 0,1:28:57.96,1:29:00.44,Default,,0,0,0,,between the files in\Ncolumns G and H,
+Dialogue: 0,1:28:57.96,1:29:00.44,Default,,0,0,0,,between the tiles in\Ncolumns G and H,
 Dialogue: 0,1:29:00.44,1:29:01.96,Default,,0,0,0,,we generate a constraint that
 Dialogue: 0,1:29:01.96,1:29:03.72,Default,,0,0,0,,the heights of those tiles are equal.
 Dialogue: 0,1:29:03.72,1:29:06.16,Default,,0,0,0,,Again this is analogous to\Nthe type inference algorithm
@@ -1533,10 +1533,10 @@ Dialogue: 0,1:29:06.16,1:29:07.88,Default,,0,0,0,,in a functional\Nprogramming l
 Dialogue: 0,1:29:10.24,1:29:12.84,Default,,0,0,0,,We've seen that in order to have\Na principle generalisation
 Dialogue: 0,1:29:12.84,1:29:15.04,Default,,0,0,0,,we needed to introduce\Na concept of regularity
 Dialogue: 0,1:29:15.04,1:29:17.72,Default,,0,0,0,,that excludes some well\Ndefined generalisations.
-Dialogue: 0,1:29:17.72,1:29:19.52,Default,,0,0,0,,We try to make\Nand capture user intent,
-Dialogue: 0,1:29:19.52,1:29:22.60,Default,,0,0,0,,which inevitably involves\Njudgement calls or goals,
+Dialogue: 0,1:29:17.72,1:29:19.52,Default,,0,0,0,,We try to make\Nit capture user intent,
+Dialogue: 0,1:29:19.52,1:29:22.60,Default,,0,0,0,,which inevitably involves\Njudgement calls. Our goals,
 Dialogue: 0,1:29:22.60,1:29:25.12,Default,,0,0,0,,aside from having a principle\Nof regular generalisation,
-Dialogue: 0,1:29:25.12,1:29:29.00,Default,,0,0,0,,or to support as many realistic\NSTF design patterns as we can,
+Dialogue: 0,1:29:25.12,1:29:29.00,Default,,0,0,0,,or to support as many realistic\NSDF design patterns as we can,
 Dialogue: 0,1:29:29.00,1:29:31.16,Default,,0,0,0,,and keep the process\Npredictable for users,
 Dialogue: 0,1:29:31.16,1:29:33.48,Default,,0,0,0,,even if they don't know\Nthe detailed rules.
 Dialogue: 0,1:29:33.48,1:29:35.00,Default,,0,0,0,,Our work represents the first draft
@@ -1544,21 +1544,21 @@ Dialogue: 0,1:29:35.00,1:29:38.00,Default,,0,0,0,,of the definition,\Nwe expect 
 Dialogue: 0,1:29:39.48,1:29:40.92,Default,,0,0,0,,This is all technically elegant
 Dialogue: 0,1:29:40.92,1:29:42.68,Default,,0,0,0,,but we need to make\Nsure we're actually
 Dialogue: 0,1:29:42.68,1:29:44.80,Default,,0,0,0,,making things easier for users.
-Dialogue: 0,1:29:44.80,1:29:47.40,Default,,0,0,0,,So we did a user's study\Nto compare elastic SDF
+Dialogue: 0,1:29:44.80,1:29:47.40,Default,,0,0,0,,So we did a user's study\Nto compare elastic SDFs
 Dialogue: 0,1:29:47.40,1:29:48.84,Default,,0,0,0,,to the best existing alternative,
 Dialogue: 0,1:29:48.84,1:29:51.44,Default,,0,0,0,,namely array programming\Non a set of tasks
 Dialogue: 0,1:29:51.44,1:29:54.28,Default,,0,0,0,,based on real world spreadsheets\Nwe previously collected.
 Dialogue: 0,1:29:55.76,1:29:58.04,Default,,0,0,0,,I'd like to highlight\Na few findings.
 Dialogue: 0,1:29:58.04,1:29:59.88,Default,,0,0,0,,First users experience\Nlower cognitive
-Dialogue: 0,1:29:59.88,1:30:03.36,Default,,0,0,0,,workload using elastic SDF\Ncompared to array programming,
+Dialogue: 0,1:29:59.88,1:30:03.36,Default,,0,0,0,,workload using elastic SDFs\Ncompared to array programming,
 Dialogue: 0,1:30:03.36,1:30:04.68,Default,,0,0,0,,based on the standard survey
 Dialogue: 0,1:30:04.68,1:30:07.00,Default,,0,0,0,,called the NASA task load index.
 Dialogue: 0,1:30:07.00,1:30:08.84,Default,,0,0,0,,Second, we have partial\Ndata suggesting
 Dialogue: 0,1:30:08.84,1:30:10.92,Default,,0,0,0,,that users solve tasks\Nfaster on average
-Dialogue: 0,1:30:10.92,1:30:13.40,Default,,0,0,0,,using elastic SDF compared\Nto array programming.
+Dialogue: 0,1:30:10.92,1:30:13.40,Default,,0,0,0,,using elastic SDFs compared\Nto array programming.
 Dialogue: 0,1:30:14.08,1:30:16.00,Default,,0,0,0,,And finally, while users\Nstated a preference
 Dialogue: 0,1:30:16.00,1:30:17.92,Default,,0,0,0,,for array programming\Nfor simple tasks
-Dialogue: 0,1:30:17.92,1:30:21.00,Default,,0,0,0,,they preferred elastic SDF\Nfor more complex tasks.
+Dialogue: 0,1:30:17.92,1:30:21.00,Default,,0,0,0,,they preferred elastic SDFs\Nfor more complex tasks.
 Dialogue: 0,1:30:21.00,1:30:23.20,Default,,0,0,0,,This is no surprise\Ngiven the complex tasks
 Dialogue: 0,1:30:23.20,1:30:25.64,Default,,0,0,0,,are much harder to solve\Nwith array programming.
 Dialogue: 0,1:30:25.64,1:30:27.52,Default,,0,0,0,,These results are\Nreally promising them,
@@ -1568,7 +1568,7 @@ Dialogue: 0,1:30:34.68,1:30:36.96,Default,,0,0,0,,from programming language\Nthe
 Dialogue: 0,1:30:36.96,1:30:40.80,Default,,0,0,0,,uses an easier way to reuse logic\Non inputs of different sizes.
 Dialogue: 0,1:30:40.80,1:30:43.84,Default,,0,0,0,,You can find the full definitions\Nalgorithms and proofs in the paper.
 Dialogue: 0,1:30:44.48,1:30:46.16,Default,,0,0,0,,We look forward to making\Nthis functionality
-Dialogue: 0,1:30:46.16,1:30:48.64,Default,,0,0,0,,widely available to improve\Nthese to productivity.
+Dialogue: 0,1:30:46.16,1:30:48.64,Default,,0,0,0,,widely available to improve\Nuser productivity.
 Dialogue: 0,1:30:48.64,1:30:49.80,Default,,0,0,0,,Thanks for listening,
 Dialogue: 0,1:30:49.80,1:30:52.16,Default,,0,0,0,,and we look forward to your\Nquestions and feedback.
 Dialogue: 0,1:30:52.76,1:30:58.64,Default,,0,0,0,,(CLAPPING BACKGROUND)
