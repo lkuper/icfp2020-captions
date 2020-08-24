@@ -8545,7 +8545,7 @@ parsing with derivatives
 1804
 01:43:54,120 --> 01:43:55,800
 was the generalized
-Brzozowski's derivative
+Brzozowski's derivatives
 
 1805
 01:43:55,800 --> 01:43:58,440
@@ -8559,7 +8559,7 @@ This is not trivial.
 1807
 01:44:00,080 --> 01:44:02,720
 The Brzozowski derivative
-uses two algorithms
+uses two eager algorithms
 
 1808
 01:44:02,720 --> 01:44:05,840
@@ -8577,7 +8577,7 @@ of for one of those algorithms
 
 1811
 01:44:11,120 --> 01:44:14,400
-and the memoization
+and memoization
 and fixed points for the other.
 
 1812
@@ -8669,7 +8669,7 @@ of each concatenation node
 1830
 01:45:00,000 --> 01:45:01,760
 as it attempts to find
-its hooking node.
+a token node.
 
 1831
 01:45:01,760 --> 01:45:04,840
@@ -8749,7 +8749,7 @@ and the found token node matched
 
 1847
 01:45:42,320 --> 01:45:46,120
-we replace the node with a land
+we replace the node with a lambda
 node and return a new grammar.
 
 1848
@@ -8866,12 +8866,12 @@ is really the zipper itself.
 1872
 01:46:40,760 --> 01:46:43,360
 This is a pair of a path
-with the focus on subtree
+with the focused-on subtree
 
 1873
 01:46:43,360 --> 01:46:46,520
 which is generally referred to
-as the focus on the zipper.
+as the focus of the zipper.
 
 1874
 01:46:46,520 --> 01:46:50,480
@@ -9044,8 +9044,8 @@ almost all of the retraversals
 
 1910
 01:48:21,080 --> 01:48:24,200
-in the original parts of
-the derivatives algorithm.
+in the original parsing
+with derivatives algorithm.
 
 1911
 01:48:24,200 --> 01:48:27,680
@@ -9055,7 +9055,7 @@ definition compared to the original.
 1912
 01:48:27,680 --> 01:48:29,880
 For one, we actually call
-it a zipper in the coding
+it a zipper in the code
 
 1913
 01:48:29,880 --> 01:48:31,240
@@ -9073,7 +9073,7 @@ and path to cxt meaning contexts.
 1916
 01:48:37,680 --> 01:48:39,920
 All context constructors
-and with a capital C
+end with a capital C
 
 1917
 01:48:39,920 --> 01:48:43,080
@@ -9082,7 +9082,7 @@ to indicate their status.
 1918
 01:48:43,080 --> 01:48:46,400
 Now there is a problem with our
-zipper concatenation which is this.
+zipper implementation which is this.
 
 1919
 01:48:46,400 --> 01:48:49,000
@@ -9238,7 +9238,7 @@ and the child expression t2.
 1951
 01:50:09,960 --> 01:50:13,080
 Parsing with the second zipper
-creates an identical context in zipper
+creates an identical context and zipper
 
 1952
 01:50:13,080 --> 01:50:14,840
@@ -9258,7 +9258,7 @@ contexts all labelled c4
 1955
 01:50:20,880 --> 01:50:23,640
 and three identical
-ziplines all labelled z4.
+zippers all labelled z4.
 
 1956
 01:50:23,640 --> 01:50:25,280
@@ -9289,8 +9289,8 @@ We can't have that.
 
 1962
 01:50:35,600 --> 01:50:37,240
-Here of course is what's
-currently happening
+Here is the code as
+we currently have it
 
 1963
 01:50:37,240 --> 01:50:40,320
@@ -9313,8 +9313,8 @@ table shown on the left.
 
 1967
 01:50:50,680 --> 01:50:53,440
-Although the zipper is actually
-going upwards to memoization entries
+Although the zipper is now actually
+pointing upwards to memoization entries
 
 1968
 01:50:53,440 --> 01:50:55,520
@@ -9358,7 +9358,7 @@ through the expression t1
 1976
 01:51:14,320 --> 01:51:16,560
 a new entry is added to
-the memoization table index
+the memoization table indexed
 
 1977
 01:51:16,560 --> 01:51:19,360
@@ -9545,7 +9545,7 @@ have been created
 
 2016
 01:52:56,960 --> 01:52:59,160
-and each responder zipper
+and each has spawned a zipper
 that will navigate up
 
 2017
@@ -9565,7 +9565,7 @@ an exponential blow-up
 
 2020
 01:53:06,880 --> 01:53:08,520
-in the number of zipper respond
+in the number of zippers spawned
 
 2021
 01:53:08,520 --> 01:53:11,320
@@ -9692,17 +9692,17 @@ handled already.
 
 2047
 01:54:14,080 --> 01:54:15,760
-Where recursive descend
-parsing faces a dilemma
+Where recursive descent
+parsers face a dilemma
 
 2048
 01:54:15,760 --> 01:54:18,960
 in choosing how times to
-descend into a lap recursion
+descend into a left recursion
 
 2049
 01:54:18,960 --> 01:54:21,120
-we size up the issue entirely.
+we side step the issue entirely.
 
 2050
 01:54:21,120 --> 01:54:24,360
@@ -9800,11 +9800,12 @@ corresponding to a successful parse.
 
 2070
 01:55:06,680 --> 01:55:08,440
-is now indexed only by an expression
+However, since this table is now
+indexed only by an expression
 
 2071
 01:55:08,440 --> 01:55:10,400
-We can actually
+we can actually
 eliminate it entirely
 
 2072
@@ -9814,8 +9815,8 @@ inside each expression automatically
 
 2073
 01:55:14,880 --> 01:55:16,920
-Here is the code that existed
-with the memoization tape.
+Here is the code as it existed
+with the memoization table.
 
 2074
 01:55:18,160 --> 01:55:20,840
@@ -9870,16 +9871,16 @@ the Python 3.4.3 standard library
 2085
 01:55:47,320 --> 01:55:49,160
 and compared the results
-to a few other parses.
+to a few other parsers.
 
 2086
 01:55:49,880 --> 01:55:52,240
-Parsing (INAUDIBLE)
+Parse derivatives
 from Mike et al, 2011.
 
 2087
 01:55:53,000 --> 01:55:56,000
-Optimized parsing (INAUDIBLE)
+Optimized parse derivatives
 from Adams et al, 2016.
 
 2088
@@ -9894,7 +9895,7 @@ generator for Ocaml.
 
 2090
 01:56:03,680 --> 01:56:05,200
-The pricing with
+The parsing with
 derivatives implementation
 
 2091
@@ -9904,7 +9905,7 @@ Racket to OCaml
 
 2092
 01:56:06,800 --> 01:56:09,760
-and Menhir LRK limitations
+and Menhir's LRK limitations
 require that we reformulate
 
 2093
@@ -9936,7 +9937,7 @@ due to other tasks.
 
 2099
 01:56:22,560 --> 01:56:25,440
-The results show that processing with
+The results show that parsing with
 zippers significantly outperform
 
 2100
@@ -10035,7 +10036,7 @@ the Bruzewski derivative
 
 2120
 01:57:04,920 --> 01:57:07,040
-from real expressions to
+from regular expressions to
 context free grammars.
 
 2121
@@ -10050,11 +10051,11 @@ to context free grammars.
 2123
 01:57:11,760 --> 01:57:13,880
 We also consider
-(INAUDIBLE) complexity,
+asymptotic complexity,
 
 2124
 01:57:13,880 --> 01:57:15,280
-other divergence from PwD
+other divergences from PwD
 
 2125
 01:57:15,760 --> 01:57:17,080
@@ -10077,7 +10078,7 @@ that I did not address.
 2129
 01:57:22,600 --> 01:57:24,840
 I hope you have enjoyed this
-presentation of pricing with Zippers,
+presentation of parsing with Zippers,
 
 2130
 01:57:24,840 --> 01:57:27,360

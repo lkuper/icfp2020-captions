@@ -1814,14 +1814,14 @@ Dialogue: 0,1:43:42.48,1:43:45.08,Default,,0,0,0,,measurably faster than\Nthe op
 Dialogue: 0,1:43:45.08,1:43:46.92,Default,,0,0,0,,of Adams et al in 2015
 Dialogue: 0,1:43:46.92,1:43:51.72,Default,,0,0,0,,and it is only around 100 lines of\NOCami cord when fully implemented.
 Dialogue: 0,1:43:51.72,1:43:54.12,Default,,0,0,0,,The primary contribution of\Nparsing with derivatives
-Dialogue: 0,1:43:54.12,1:43:55.80,Default,,0,0,0,,was the generalized\NBrzozowski's derivative
+Dialogue: 0,1:43:54.12,1:43:55.80,Default,,0,0,0,,was the generalized\NBrzozowski's derivatives
 Dialogue: 0,1:43:55.80,1:43:58.44,Default,,0,0,0,,from regular expressions\Nto context free grammars.
 Dialogue: 0,1:43:58.44,1:44:00.08,Default,,0,0,0,,This is not trivial.
-Dialogue: 0,1:44:00.08,1:44:02.72,Default,,0,0,0,,The Brzozowski derivative\Nuses two algorithms
+Dialogue: 0,1:44:00.08,1:44:02.72,Default,,0,0,0,,The Brzozowski derivative\Nuses two eager algorithms
 Dialogue: 0,1:44:02.72,1:44:05.84,Default,,0,0,0,,perfectly fine for regular\Nlanguages but not so with CFGs
 Dialogue: 0,1:44:05.84,1:44:07.52,Default,,0,0,0,,which have recursion.
 Dialogue: 0,1:44:07.52,1:44:11.12,Default,,0,0,0,,PwD introduced laziness to fix most\Nof for one of those algorithms
-Dialogue: 0,1:44:11.12,1:44:14.40,Default,,0,0,0,,and the memoization\Nand fixed points for the other.
+Dialogue: 0,1:44:11.12,1:44:14.40,Default,,0,0,0,,and memoization\Nand fixed points for the other.
 Dialogue: 0,1:44:14.40,1:44:16.44,Default,,0,0,0,,The result is\Nan algorithm that is elegant
 Dialogue: 0,1:44:16.44,1:44:17.96,Default,,0,0,0,,in its theoretical simplicity
 Dialogue: 0,1:44:17.96,1:44:19.72,Default,,0,0,0,,and which can also\Nproduce full parse trees
@@ -1840,7 +1840,7 @@ Dialogue: 0,1:44:52.80,1:44:54.64,Default,,0,0,0,,At each step a pattern match i
 Dialogue: 0,1:44:54.64,1:44:56.92,Default,,0,0,0,,to determine what to do\Nwith the current node.
 Dialogue: 0,1:44:56.92,1:44:58.72,Default,,0,0,0,,The derivative proceeds\Ndown the left side
 Dialogue: 0,1:44:58.72,1:45:00.00,Default,,0,0,0,,of each concatenation node
-Dialogue: 0,1:45:00.00,1:45:01.76,Default,,0,0,0,,as it attempts to find\Nits hooking node.
+Dialogue: 0,1:45:00.00,1:45:01.76,Default,,0,0,0,,as it attempts to find\Na token node.
 Dialogue: 0,1:45:01.76,1:45:04.84,Default,,0,0,0,,Eventually it finds\Nthe first token node, a.
 Dialogue: 0,1:45:04.84,1:45:06.28,Default,,0,0,0,,When the algorithm\Ncomes to a token node
 Dialogue: 0,1:45:06.28,1:45:08.68,Default,,0,0,0,,it attempts to match that\Ntoken to the current token
@@ -1857,7 +1857,7 @@ Dialogue: 0,1:45:31.36,1:45:33.84,Default,,0,0,0,,until we find\Nan unmatched to
 Dialogue: 0,1:45:33.84,1:45:36.60,Default,,0,0,0,,In this case, the traversal down to\Nthe lambda will be thrown away
 Dialogue: 0,1:45:36.60,1:45:39.40,Default,,0,0,0,,so I am only showing the traversal\Ndown towards the b node.
 Dialogue: 0,1:45:39.40,1:45:42.32,Default,,0,0,0,,Because the current token\Nand the found token node matched
-Dialogue: 0,1:45:42.32,1:45:46.12,Default,,0,0,0,,we replace the node with a land\Nnode and return a new grammar.
+Dialogue: 0,1:45:42.32,1:45:46.12,Default,,0,0,0,,we replace the node with a lambda\Nnode and return a new grammar.
 Dialogue: 0,1:45:46.12,1:45:48.36,Default,,0,0,0,,We'll stop the parsing\Nexample at this point.
 Dialogue: 0,1:45:48.36,1:45:50.08,Default,,0,0,0,,The take away is that\Neach derivative
 Dialogue: 0,1:45:50.08,1:45:52.96,Default,,0,0,0,,will start at the root of\Nthe previous derivative result grammar.
@@ -1882,8 +1882,8 @@ Dialogue: 0,1:46:31.52,1:46:32.96,Default,,0,0,0,,which has essentially been tra
 Dialogue: 0,1:46:32.96,1:46:34.76,Default,,0,0,0,,and also keeps track of\Nsiblings of the subtree
 Dialogue: 0,1:46:34.76,1:46:37.32,Default,,0,0,0,,currently being focused on.
 Dialogue: 0,1:46:37.32,1:46:40.76,Default,,0,0,0,,Last we have the location which\Nis really the zipper itself.
-Dialogue: 0,1:46:40.76,1:46:43.36,Default,,0,0,0,,This is a pair of a path\Nwith the focus on subtree
-Dialogue: 0,1:46:43.36,1:46:46.52,Default,,0,0,0,,which is generally referred to\Nas the focus on the zipper.
+Dialogue: 0,1:46:40.76,1:46:43.36,Default,,0,0,0,,This is a pair of a path\Nwith the focused-on subtree
+Dialogue: 0,1:46:43.36,1:46:46.52,Default,,0,0,0,,which is generally referred to\Nas the focus of the zipper.
 Dialogue: 0,1:46:46.52,1:46:50.48,Default,,0,0,0,,To solidify this concept let\Nus look at the visualization.
 Dialogue: 0,1:46:50.48,1:46:53.24,Default,,0,0,0,,In this diagram blue\Nsquares represent paths,
 Dialogue: 0,1:46:53.24,1:46:55.08,Default,,0,0,0,,yellow triangles\Nrepresent tree nodes
@@ -1920,15 +1920,15 @@ Dialogue: 0,1:48:10.24,1:48:14.44,Default,,0,0,0,,This brings us to parsing with
 Dialogue: 0,1:48:14.44,1:48:16.16,Default,,0,0,0,,We use zippers to save the location
 Dialogue: 0,1:48:16.16,1:48:18.32,Default,,0,0,0,,where the derivative\Nwas successfully taken.
 Dialogue: 0,1:48:18.32,1:48:21.08,Default,,0,0,0,,By doing this we eliminate\Nalmost all of the retraversals
-Dialogue: 0,1:48:21.08,1:48:24.20,Default,,0,0,0,,in the original parts of\Nthe derivatives algorithm.
+Dialogue: 0,1:48:21.08,1:48:24.20,Default,,0,0,0,,in the original parsing\Nwith derivatives algorithm.
 Dialogue: 0,1:48:24.20,1:48:27.68,Default,,0,0,0,,We use a slightly modified zipper\Ndefinition compared to the original.
-Dialogue: 0,1:48:27.68,1:48:29.88,Default,,0,0,0,,For one, we actually call\Nit a zipper in the coding
+Dialogue: 0,1:48:27.68,1:48:29.88,Default,,0,0,0,,For one, we actually call\Nit a zipper in the code
 Dialogue: 0,1:48:29.88,1:48:31.24,Default,,0,0,0,,instead of location.
 Dialogue: 0,1:48:31.24,1:48:34.72,Default,,0,0,0,,We also rename tree to exp,\Nmeaning grammar expansions
 Dialogue: 0,1:48:34.72,1:48:37.68,Default,,0,0,0,,and path to cxt meaning contexts.
-Dialogue: 0,1:48:37.68,1:48:39.92,Default,,0,0,0,,All context constructors\Nand with a capital C
+Dialogue: 0,1:48:37.68,1:48:39.92,Default,,0,0,0,,All context constructors\Nend with a capital C
 Dialogue: 0,1:48:39.92,1:48:43.08,Default,,0,0,0,,to indicate their status.
-Dialogue: 0,1:48:43.08,1:48:46.40,Default,,0,0,0,,Now there is a problem with our\Nzipper concatenation which is this.
+Dialogue: 0,1:48:43.08,1:48:46.40,Default,,0,0,0,,Now there is a problem with our\Nzipper implementation which is this.
 Dialogue: 0,1:48:46.40,1:48:49.00,Default,,0,0,0,,It can't yet handle all\Ncontext-free grammars.
 Dialogue: 0,1:48:49.00,1:48:52.20,Default,,0,0,0,,It can work fine for concatenation\Ntokens but that's it.
 Dialogue: 0,1:48:52.20,1:48:54.20,Default,,0,0,0,,Many CFGs have alternates and cycles
@@ -1961,23 +1961,23 @@ Dialogue: 0,1:49:58.04,1:50:00.84,Default,,0,0,0,,and this t1 expression.
 Dialogue: 0,1:50:00.84,1:50:03.72,Default,,0,0,0,,Parsing with the first zipper\Ncreates a new context c4
 Dialogue: 0,1:50:03.72,1:50:07.04,Default,,0,0,0,,and a new zipper z4 which\Nsits between the new context
 Dialogue: 0,1:50:07.04,1:50:09.96,Default,,0,0,0,,and the child expression t2.
-Dialogue: 0,1:50:09.96,1:50:13.08,Default,,0,0,0,,Parsing with the second zipper\Ncreates an identical context in zipper
+Dialogue: 0,1:50:09.96,1:50:13.08,Default,,0,0,0,,Parsing with the second zipper\Ncreates an identical context and zipper
 Dialogue: 0,1:50:13.08,1:50:14.84,Default,,0,0,0,,but they are separate\Nfrom the first ones
 Dialogue: 0,1:50:14.84,1:50:17.56,Default,,0,0,0,,and the third zipper\Nwill do the same.
 Dialogue: 0,1:50:17.56,1:50:20.88,Default,,0,0,0,,We now have three identical\Ncontexts all labelled c4
-Dialogue: 0,1:50:20.88,1:50:23.64,Default,,0,0,0,,and three identical\Nziplines all labelled z4.
+Dialogue: 0,1:50:20.88,1:50:23.64,Default,,0,0,0,,and three identical\Nzippers all labelled z4.
 Dialogue: 0,1:50:23.64,1:50:25.28,Default,,0,0,0,,This is wasted effort.
 Dialogue: 0,1:50:25.28,1:50:28.08,Default,,0,0,0,,Not only that but if we were to add\Nsupport for cycles at this point
 Dialogue: 0,1:50:28.08,1:50:29.72,Default,,0,0,0,,the inefficiency could compound
 Dialogue: 0,1:50:29.72,1:50:31.76,Default,,0,0,0,,and lead to the number of\Nzippers becoming exponential
 Dialogue: 0,1:50:31.76,1:50:33.24,Default,,0,0,0,,with respect to\Nthe length of the input.
 Dialogue: 0,1:50:33.24,1:50:35.60,Default,,0,0,0,,We can't have that.
-Dialogue: 0,1:50:35.60,1:50:37.24,Default,,0,0,0,,Here of course is what's\Ncurrently happening
+Dialogue: 0,1:50:35.60,1:50:37.24,Default,,0,0,0,,Here is the code as\Nwe currently have it
 Dialogue: 0,1:50:37.24,1:50:40.32,Default,,0,0,0,,but now we'll add memoization.
 Dialogue: 0,1:50:40.32,1:50:43.68,Default,,0,0,0,,The memoization entries simply take\Nthe place of the child contexts
 Dialogue: 0,1:50:43.68,1:50:47.80,Default,,0,0,0,,within each context type as\Nwell as within the zipper.
 Dialogue: 0,1:50:47.80,1:50:50.68,Default,,0,0,0,,We now have a memoization\Ntable shown on the left.
-Dialogue: 0,1:50:50.68,1:50:53.44,Default,,0,0,0,,Although the zipper is actually\Ngoing upwards to memoization entries
+Dialogue: 0,1:50:50.68,1:50:53.44,Default,,0,0,0,,Although the zipper is now actually\Npointing upwards to memoization entries
 Dialogue: 0,1:50:53.44,1:50:55.52,Default,,0,0,0,,I've shown them here according\Nto the associated context
 Dialogue: 0,1:50:55.52,1:50:57.60,Default,,0,0,0,,for visual simplicity.
 Dialogue: 0,1:50:57.60,1:51:00.52,Default,,0,0,0,,When zipper z1 is attempts\Nto parse into expression t1
@@ -1986,7 +1986,7 @@ Dialogue: 0,1:51:02.24,1:51:05.00,Default,,0,0,0,,so subsequent derivations\Ndo 
 Dialogue: 0,1:51:05.00,1:51:07.44,Default,,0,0,0,,It is important that the table\Nentry is added before descending
 Dialogue: 0,1:51:07.44,1:51:11.24,Default,,0,0,0,,or else you may still end up\Nwith redundant traversals.
 Dialogue: 0,1:51:11.24,1:51:14.32,Default,,0,0,0,,When the first zipper z1 descends\Nthrough the expression t1
-Dialogue: 0,1:51:14.32,1:51:16.56,Default,,0,0,0,,a new entry is added to\Nthe memoization table index
+Dialogue: 0,1:51:14.32,1:51:16.56,Default,,0,0,0,,a new entry is added to\Nthe memoization table indexed
 Dialogue: 0,1:51:16.56,1:51:19.36,Default,,0,0,0,,by a pair consisting of\Nthe current input token position
 Dialogue: 0,1:51:19.36,1:51:22.44,Default,,0,0,0,,which we will call p here\Nand the expression.
 Dialogue: 0,1:51:22.44,1:51:26.12,Default,,0,0,0,,The Zipper's context c1 is\Nadded to the parent's field.
@@ -2026,11 +2026,11 @@ Dialogue: 0,1:52:46.40,1:52:49.76,Default,,0,0,0,,When the second child zipper z
 Dialogue: 0,1:52:49.76,1:52:52.16,Default,,0,0,0,,it also creates a new alt node, a3.
 Dialogue: 0,1:52:52.16,1:52:55.28,Default,,0,0,0,,This node is also added\Nto a1's result field.
 Dialogue: 0,1:52:55.28,1:52:56.96,Default,,0,0,0,,Two alternate nodes\Nhave been created
-Dialogue: 0,1:52:56.96,1:52:59.16,Default,,0,0,0,,and each responder zipper\Nthat will navigate up
+Dialogue: 0,1:52:56.96,1:52:59.16,Default,,0,0,0,,and each has spawned a zipper\Nthat will navigate up
 Dialogue: 0,1:52:59.16,1:53:02.08,Default,,0,0,0,,through parent context\Nc1, this is inefficient
 Dialogue: 0,1:53:02.08,1:53:04.88,Default,,0,0,0,,and similar to the problem\Nwith unshared expressions
 Dialogue: 0,1:53:04.88,1:53:06.88,Default,,0,0,0,,the situation can lead to\Nan exponential blow-up
-Dialogue: 0,1:53:06.88,1:53:08.52,Default,,0,0,0,,in the number of zipper respond
+Dialogue: 0,1:53:06.88,1:53:08.52,Default,,0,0,0,,in the number of zippers spawned
 Dialogue: 0,1:53:08.52,1:53:11.32,Default,,0,0,0,,when deriving over a cyclic grammar.
 Dialogue: 0,1:53:11.32,1:53:13.68,Default,,0,0,0,,To address this we will\Nadjust our memoization code
 Dialogue: 0,1:53:13.68,1:53:17.60,Default,,0,0,0,,to also memoize contexts in\Naddition to expressions.
@@ -2057,9 +2057,9 @@ Dialogue: 0,1:54:04.12,1:54:06.28,Default,,0,0,0,,I mentioned some concerns\Nabo
 Dialogue: 0,1:54:06.28,1:54:07.84,Default,,0,0,0,,when we support cyclic grammars.
 Dialogue: 0,1:54:07.84,1:54:10.44,Default,,0,0,0,,Have no fear, the time\Nhas come to handle cycles
 Dialogue: 0,1:54:10.44,1:54:14.08,Default,,0,0,0,,and behold, they are\Nhandled already.
-Dialogue: 0,1:54:14.08,1:54:15.76,Default,,0,0,0,,Where recursive descend\Nparsing faces a dilemma
-Dialogue: 0,1:54:15.76,1:54:18.96,Default,,0,0,0,,in choosing how times to\Ndescend into a lap recursion
-Dialogue: 0,1:54:18.96,1:54:21.12,Default,,0,0,0,,we size up the issue entirely.
+Dialogue: 0,1:54:14.08,1:54:15.76,Default,,0,0,0,,Where recursive descent\Nparsers face a dilemma
+Dialogue: 0,1:54:15.76,1:54:18.96,Default,,0,0,0,,in choosing how times to\Ndescend into a left recursion
+Dialogue: 0,1:54:18.96,1:54:21.12,Default,,0,0,0,,we side step the issue entirely.
 Dialogue: 0,1:54:21.12,1:54:24.36,Default,,0,0,0,,Our memoization strategy automatically\Nconverts cycles in the grammar
 Dialogue: 0,1:54:24.36,1:54:26.40,Default,,0,0,0,,into cycles in the contexts.
 Dialogue: 0,1:54:26.40,1:54:28.48,Default,,0,0,0,,This allows us to postpone\Nmaking any choices
@@ -2080,10 +2080,10 @@ Dialogue: 0,1:54:57.40,1:54:59.04,Default,,0,0,0,,We eliminate\Nthe position as 
 Dialogue: 0,1:54:59.04,1:55:01.04,Default,,0,0,0,,and instead make two\Nfields in the table entry
 Dialogue: 0,1:55:01.04,1:55:02.72,Default,,0,0,0,,to denote the start\Nand end positions
 Dialogue: 0,1:55:02.72,1:55:06.00,Default,,0,0,0,,corresponding to a successful parse.
-Dialogue: 0,1:55:06.68,1:55:08.44,Default,,0,0,0,,is now indexed only by an expression
-Dialogue: 0,1:55:08.44,1:55:10.40,Default,,0,0,0,,We can actually\Neliminate it entirely
+Dialogue: 0,1:55:06.68,1:55:08.44,Default,,0,0,0,,However, since this table is now\Nindexed only by an expression
+Dialogue: 0,1:55:08.44,1:55:10.40,Default,,0,0,0,,we can actually\Neliminate it entirely
 Dialogue: 0,1:55:10.40,1:55:13.88,Default,,0,0,0,,and simply put a memoization entry\Ninside each expression automatically
-Dialogue: 0,1:55:14.88,1:55:16.92,Default,,0,0,0,,Here is the code that existed\Nwith the memoization tape.
+Dialogue: 0,1:55:14.88,1:55:16.92,Default,,0,0,0,,Here is the code as it existed\Nwith the memoization table.
 Dialogue: 0,1:55:18.16,1:55:20.84,Default,,0,0,0,,And here is the code which\Neliminates memoization tables.
 Dialogue: 0,1:55:21.36,1:55:23.00,Default,,0,0,0,,We now have a new definition of EXP
 Dialogue: 0,1:55:23.00,1:55:24.68,Default,,0,0,0,,which contains a memoization record
@@ -2095,21 +2095,21 @@ Dialogue: 0,1:55:35.68,1:55:37.00,Default,,0,0,0,,whether the entry has grown st
 Dialogue: 0,1:55:37.72,1:55:39.28,Default,,0,0,0,,And with that, the work is done.
 Dialogue: 0,1:55:40.76,1:55:42.28,Default,,0,0,0,,Let's briefly look at our\Nperformance evaluation.
 Dialogue: 0,1:55:43.52,1:55:47.32,Default,,0,0,0,,We ran parsing with Zippers over\Nthe Python 3.4.3 standard library
-Dialogue: 0,1:55:47.32,1:55:49.16,Default,,0,0,0,,and compared the results\Nto a few other parses.
-Dialogue: 0,1:55:49.88,1:55:52.24,Default,,0,0,0,,Parsing (INAUDIBLE)\Nfrom Mike et al, 2011.
-Dialogue: 0,1:55:53.00,1:55:56.00,Default,,0,0,0,,Optimized parsing (INAUDIBLE)\Nfrom Adams et al, 2016.
+Dialogue: 0,1:55:47.32,1:55:49.16,Default,,0,0,0,,and compared the results\Nto a few other parsers.
+Dialogue: 0,1:55:49.88,1:55:52.24,Default,,0,0,0,,Parse derivatives\Nfrom Mike et al, 2011.
+Dialogue: 0,1:55:53.00,1:55:56.00,Default,,0,0,0,,Optimized parse derivatives\Nfrom Adams et al, 2016.
 Dialogue: 0,1:55:56.48,1:55:58.92,Default,,0,0,0,,Menhir an LRK parsing\Ngenerator from Ocaml
 Dialogue: 0,1:55:59.68,1:56:02.20,Default,,0,0,0,,and Deep gen a GLR partial\Ngenerator for Ocaml.
-Dialogue: 0,1:56:03.68,1:56:05.20,Default,,0,0,0,,The pricing with\Nderivatives implementation
+Dialogue: 0,1:56:03.68,1:56:05.20,Default,,0,0,0,,The parsing with\Nderivatives implementation
 Dialogue: 0,1:56:05.20,1:56:06.80,Default,,0,0,0,,had to be ported from\NRacket to OCaml
-Dialogue: 0,1:56:06.80,1:56:09.76,Default,,0,0,0,,and Menhir LRK limitations\Nrequire that we reformulate
+Dialogue: 0,1:56:06.80,1:56:09.76,Default,,0,0,0,,and Menhir's LRK limitations\Nrequire that we reformulate
 Dialogue: 0,1:56:09.76,1:56:12.24,Default,,0,0,0,,some of the Python grammar to\Navoid potential ambiguities
 Dialogue: 0,1:56:12.24,1:56:13.64,Default,,0,0,0,,that might distort our comparisons.
 Dialogue: 0,1:56:14.40,1:56:16.28,Default,,0,0,0,,We run the benchmarks on\Nthe digital ocean droplet
 Dialogue: 0,1:56:16.28,1:56:17.40,Default,,0,0,0,,with a dedicated CPU
 Dialogue: 0,1:56:17.40,1:56:19.80,Default,,0,0,0,,to ensure we did not introduce\Nany sources of invalidity
 Dialogue: 0,1:56:19.80,1:56:20.80,Default,,0,0,0,,due to other tasks.
-Dialogue: 0,1:56:22.56,1:56:25.44,Default,,0,0,0,,The results show that processing with\Nzippers significantly outperform
+Dialogue: 0,1:56:22.56,1:56:25.44,Default,,0,0,0,,The results show that parsing with\Nzippers significantly outperform
 Dialogue: 0,1:56:25.44,1:56:27.24,Default,,0,0,0,,the original parsing with\Nderivatives algorithm
 Dialogue: 0,1:56:27.24,1:56:29.64,Default,,0,0,0,,and even outperforms\Nthe optimized version of PwD
 Dialogue: 0,1:56:29.64,1:56:31.72,Default,,0,0,0,,that relies on many low level\Ntunings and adjustments
@@ -2130,16 +2130,16 @@ Dialogue: 0,1:56:57.44,1:56:58.84,Default,,0,0,0,,a new general parsing algorith
 Dialogue: 0,1:56:58.84,1:56:59.84,Default,,0,0,0,,that is simple to implement,
 Dialogue: 0,1:56:59.84,1:57:01.32,Default,,0,0,0,,it provides surprisingly\Ngood performance.
 Dialogue: 0,1:57:02.56,1:57:04.92,Default,,0,0,0,,Parsing with derivatives generalise\Nthe Bruzewski derivative
-Dialogue: 0,1:57:04.92,1:57:07.04,Default,,0,0,0,,from real expressions to\Ncontext free grammars.
+Dialogue: 0,1:57:04.92,1:57:07.04,Default,,0,0,0,,from regular expressions to\Ncontext free grammars.
 Dialogue: 0,1:57:07.56,1:57:09.84,Default,,0,0,0,,We have generalized\Nthe zipper from tree structures
 Dialogue: 0,1:57:09.84,1:57:11.04,Default,,0,0,0,,to context free grammars.
-Dialogue: 0,1:57:11.76,1:57:13.88,Default,,0,0,0,,We also consider\N(INAUDIBLE) complexity,
-Dialogue: 0,1:57:13.88,1:57:15.28,Default,,0,0,0,,other divergence from PwD
+Dialogue: 0,1:57:11.76,1:57:13.88,Default,,0,0,0,,We also consider\Nasymptotic complexity,
+Dialogue: 0,1:57:13.88,1:57:15.28,Default,,0,0,0,,other divergences from PwD
 Dialogue: 0,1:57:15.76,1:57:17.08,Default,,0,0,0,,and a few more points\Nin the discussion
 Dialogue: 0,1:57:17.08,1:57:18.72,Default,,0,0,0,,and evaluation sections of the paper
 Dialogue: 0,1:57:18.72,1:57:19.72,Default,,0,0,0,,which I would encourage you to read
 Dialogue: 0,1:57:19.72,1:57:21.36,Default,,0,0,0,,if you have further questions\Nthat I did not address.
-Dialogue: 0,1:57:22.60,1:57:24.84,Default,,0,0,0,,I hope you have enjoyed this\Npresentation of pricing with Zippers,
+Dialogue: 0,1:57:22.60,1:57:24.84,Default,,0,0,0,,I hope you have enjoyed this\Npresentation of parsing with Zippers,
 Dialogue: 0,1:57:24.84,1:57:27.36,Default,,0,0,0,,a Function Pearl, by\NPierce Darragh, that's me
 Dialogue: 0,1:57:27.36,1:57:28.48,Default,,0,0,0,,and Michael D. Adams.
 Dialogue: 0,1:57:29.24,1:57:30.36,Default,,0,0,0,,Please feel free to contact us
