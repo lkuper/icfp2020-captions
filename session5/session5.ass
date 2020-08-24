@@ -2155,10 +2155,10 @@ Dialogue: 0,1:58:05.52,1:58:08.56,Default,,0,0,0,,presenting Regular Language Ty
 Dialogue: 0,1:58:10.56,1:58:11.64,Default,,0,0,0,,TIMOTHEE HAUDEBOURG: Hello everyone.
 Dialogue: 0,1:58:11.64,1:58:13.32,Default,,0,0,0,,My name is Timothee Haudebourg.
 Dialogue: 0,1:58:13.32,1:58:16.56,Default,,0,0,0,,And in this presentation we will\Nbe talking about our latest work
-Dialogue: 0,1:58:16.56,1:58:20.00,Default,,0,0,0,,on the automatic verification of\Nhigh order functional program
+Dialogue: 0,1:58:16.56,1:58:20.00,Default,,0,0,0,,on the automatic verification of\Nhigher-order functional programs
 Dialogue: 0,1:58:20.72,1:58:23.96,Default,,0,0,0,,where we designed a Regular\Nlanguage Type Inference system
 Dialogue: 0,1:58:23.96,1:58:25.36,Default,,0,0,0,,using term rewriting.
-Dialogue: 0,1:58:26.60,1:58:29.48,Default,,0,0,0,,This is joined work with Thomas\NGenet and Thomas Jensen
+Dialogue: 0,1:58:26.60,1:58:29.48,Default,,0,0,0,,This is joint work with Thomas\NGenet and Thomas Jensen
 Dialogue: 0,1:58:29.48,1:58:32.20,Default,,0,0,0,,at the French institute for\Nresearch and computer science.
 Dialogue: 0,1:58:33.20,1:58:34.68,Default,,0,0,0,,And the things that\Nwe have developed
 Dialogue: 0,1:58:34.68,1:58:37.20,Default,,0,0,0,,is dedicated to the fully\Nautomatic verification
@@ -2166,28 +2166,28 @@ Dialogue: 0,1:58:37.20,1:58:41.12,Default,,0,0,0,,of higher-order functional pro
 Dialogue: 0,1:58:42.12,1:58:44.20,Default,,0,0,0,,types. What see on this\Nslide is an example
 Dialogue: 0,1:58:44.20,1:58:45.48,Default,,0,0,0,,of what we are going to achieve.
 Dialogue: 0,1:58:45.96,1:58:48.04,Default,,0,0,0,,On the left side is a user input.
-Dialogue: 0,1:58:48.56,1:58:50.76,Default,,0,0,0,,It is a high order\Nfunctional program
+Dialogue: 0,1:58:48.56,1:58:50.76,Default,,0,0,0,,It is a higher-order\Nfunctional program
 Dialogue: 0,1:58:50.76,1:58:54.40,Default,,0,0,0,,written for the purpose of\Nthe presentation in OCaml.
 Dialogue: 0,1:58:54.40,1:58:56.64,Default,,0,0,0,,It defines a recursive function sort
-Dialogue: 0,1:58:56.64,1:58:59.28,Default,,0,0,0,,that implements\N(INAUDIBLE) sort algorithms
-Dialogue: 0,1:58:59.28,1:59:01.40,Default,,0,0,0,,taking as parameters\Ncomparison functions.
+Dialogue: 0,1:58:56.64,1:58:59.28,Default,,0,0,0,,that implements\Nan insertion sort algorithms
+Dialogue: 0,1:58:59.28,1:59:01.40,Default,,0,0,0,,taking as parameters\Na comparison function.
 Dialogue: 0,1:59:02.40,1:59:06.88,Default,,0,0,0,,And also a sorted predicate that verifies\Nthat the list is indeed sorted
 Dialogue: 0,1:59:06.88,1:59:09.12,Default,,0,0,0,,according to the same\Ninput comparison function.
 Dialogue: 0,1:59:09.64,1:59:13.88,Default,,0,0,0,,The right side shows that we imagine\Ncould be the user interface.
-Dialogue: 0,1:59:13.88,1:59:17.20,Default,,0,0,0,,Here the user can type in the\Nproperty wants to verify.
+Dialogue: 0,1:59:13.88,1:59:17.20,Default,,0,0,0,,Here the user can type in the\Nproperty he wants to verify.
 Dialogue: 0,1:59:17.68,1:59:21.52,Default,,0,0,0,,So here for example, we want\Nto verify that for all list l
 Dialogue: 0,1:59:21.52,1:59:24.52,Default,,0,0,0,,the output of the sort\Nfunction is indeed sorted
 Dialogue: 0,1:59:24.52,1:59:26.80,Default,,0,0,0,,according to the corresponding predicate.
-Dialogue: 0,1:59:26.80,1:59:31.12,Default,,0,0,0,,Note that the property uses predicate\Nthat are defined in the program
+Dialogue: 0,1:59:26.80,1:59:31.12,Default,,0,0,0,,Note that the property uses predicates\Nthat are defined in the program
 Dialogue: 0,1:59:31.12,1:59:32.80,Default,,0,0,0,,and without any more information
 Dialogue: 0,1:59:32.80,1:59:36.48,Default,,0,0,0,,without annotation, we are able to\Ncheck if the property is verified
 Dialogue: 0,1:59:37.00,1:59:38.60,Default,,0,0,0,,or find a counterexample.
 Dialogue: 0,1:59:39.60,1:59:42.60,Default,,0,0,0,,If the property cannot be verified\Nwith a regular abstraction
 Dialogue: 0,1:59:42.60,1:59:44.32,Default,,0,0,0,,of the program, it will diverge.
 Dialogue: 0,1:59:45.60,1:59:47.96,Default,,0,0,0,,To understand why our\Ncontribution was necessary
-Dialogue: 0,1:59:48.44,1:59:51.00,Default,,0,0,0,,in how it relates to\Nother high order functional
+Dialogue: 0,1:59:48.44,1:59:51.00,Default,,0,0,0,,in how it relates to\Nother higher-order functional
 Dialogue: 0,1:59:51.00,1:59:52.92,Default,,0,0,0,,program verification techniques
-Dialogue: 0,1:59:52.92,1:59:55.48,Default,,0,0,0,,I'd like to place every\Ntechnique under this diagram.
+Dialogue: 0,1:59:52.92,1:59:55.48,Default,,0,0,0,,I'd like to place every\Ntechnique on this diagram.
 Dialogue: 0,1:59:56.00,1:59:59.52,Default,,0,0,0,,Many properties can be verified\Nby simplifying or abstracting
 Dialogue: 0,1:59:59.52,2:00:02.32,Default,,0,0,0,,the behavior of the input\Nprogram in a certain way
 Dialogue: 0,2:00:02.80,2:00:05.00,Default,,0,0,0,,so we can classify\Nverification techniques
@@ -2198,14 +2198,14 @@ Dialogue: 0,2:00:14.24,2:00:16.96,Default,,0,0,0,,On the top we put techniques\N
 Dialogue: 0,2:00:16.96,2:00:18.20,Default,,0,0,0,,with any abstraction.
 Dialogue: 0,2:00:18.96,2:00:22.96,Default,,0,0,0,,Overall, this axis measures a range\Nof properties that can be verified
 Dialogue: 0,2:00:22.96,2:00:23.96,Default,,0,0,0,,by the technique.
-Dialogue: 0,2:00:24.44,2:00:28.04,Default,,0,0,0,,On left right, we measure\Nhow much a user is active
+Dialogue: 0,2:00:24.44,2:00:28.04,Default,,0,0,0,,On left to right, we measure\Nhow much a user is active
 Dialogue: 0,2:00:28.04,2:00:29.28,Default,,0,0,0,,during the verification.
 Dialogue: 0,2:00:30.76,2:00:33.56,Default,,0,0,0,,On the left we have fully\Nautomatic techniques
 Dialogue: 0,2:00:33.56,2:00:35.52,Default,,0,0,0,,and on the right manual techniques.
-Dialogue: 0,2:00:37.28,2:00:40.44,Default,,0,0,0,,Proof assistance such\Nas Coq, Isabelle HOL
+Dialogue: 0,2:00:37.28,2:00:40.44,Default,,0,0,0,,Proof assistants such\Nas Coq, Isabelle HOL
 Dialogue: 0,2:00:40.44,2:00:41.92,Default,,0,0,0,,can be placed in this region.
 Dialogue: 0,2:00:42.44,2:00:44.56,Default,,0,0,0,,They can verify a large\Nrange of properties
-Dialogue: 0,2:00:45.56,2:00:47.16,Default,,0,0,0,,that require a lot of manual work.
+Dialogue: 0,2:00:45.56,2:00:47.16,Default,,0,0,0,,but require a lot of manual work.
 Dialogue: 0,2:00:47.92,2:00:49.76,Default,,0,0,0,,Refinement type inference techniques
 Dialogue: 0,2:00:49.76,2:00:52.20,Default,,0,0,0,,which can be seen in\Nthe Liquid types or F star
 Dialogue: 0,2:00:52.20,2:00:53.72,Default,,0,0,0,,require less manual work.
@@ -2213,14 +2213,14 @@ Dialogue: 0,2:00:53.72,2:00:55.88,Default,,0,0,0,,So the user only needs\Nto giv
 Dialogue: 0,2:00:55.88,2:00:58.48,Default,,0,0,0,,usually as program type annotations
 Dialogue: 0,2:00:58.48,2:01:02.24,Default,,0,0,0,,however the range of verifiable\Nproperties is reduced.
 Dialogue: 0,2:01:03.24,2:01:05.36,Default,,0,0,0,,Fully automated techniques\Nhave been developed
-Dialogue: 0,2:01:05.36,2:01:09.04,Default,,0,0,0,,around high model checking,\Npredicate abstraction and more.
-Dialogue: 0,2:01:10.04,2:01:12.76,Default,,0,0,0,,This techniques do not\Nrequire any annotations
-Dialogue: 0,2:01:12.76,2:01:15.40,Default,,0,0,0,,but mainly focus on\Nirrational properties
+Dialogue: 0,2:01:05.36,2:01:09.04,Default,,0,0,0,,around higher-order model checking,\Npredicate abstraction and more.
+Dialogue: 0,2:01:10.04,2:01:12.76,Default,,0,0,0,,These techniques do not\Nrequire any annotations
+Dialogue: 0,2:01:12.76,2:01:15.40,Default,,0,0,0,,but mainly focus on\Nrelational properties
 Dialogue: 0,2:01:15.40,2:01:16.84,Default,,0,0,0,,over numerical data types.
 Dialogue: 0,2:01:17.60,2:01:20.68,Default,,0,0,0,,And are generally not good at\Nverifying regular properties
 Dialogue: 0,2:01:20.68,2:01:22.76,Default,,0,0,0,,over algebraic data types.
 Dialogue: 0,2:01:23.52,2:01:26.68,Default,,0,0,0,,There have been some attempts to\Nfully automatic verification
-Dialogue: 0,2:01:26.68,2:01:30.12,Default,,0,0,0,,of regular properties including\Nour proudest in Timbuk
+Dialogue: 0,2:01:26.68,2:01:30.12,Default,,0,0,0,,of regular properties including\Nour previous work in Timbuk
 Dialogue: 0,2:01:30.64,2:01:33.44,Default,,0,0,0,,although these techniques are\Nincomplete and not scalable.
 Dialogue: 0,2:01:34.20,2:01:36.60,Default,,0,0,0,,In our paper, we\Npropose a new technique
 Dialogue: 0,2:01:36.60,2:01:38.52,Default,,0,0,0,,that is complete on\Nregular properties
@@ -2229,29 +2229,29 @@ Dialogue: 0,2:01:41.60,2:01:44.00,Default,,0,0,0,,In our work we use term\Nrewri
 Dialogue: 0,2:01:44.52,2:01:46.48,Default,,0,0,0,,to model programs\Nand their semantics
 Dialogue: 0,2:01:46.48,2:01:49.04,Default,,0,0,0,,and we use regular language\Nof terms as types.
 Dialogue: 0,2:01:49.80,2:01:52.96,Default,,0,0,0,,Which we are able to\Nautomatically infer using regular
-Dialogue: 0,2:01:52.96,2:01:54.40,Default,,0,0,0,,and variant learning techniques.
+Dialogue: 0,2:01:52.96,2:01:54.40,Default,,0,0,0,,invariant learning techniques.
 Dialogue: 0,2:01:55.40,2:01:58.00,Default,,0,0,0,,Before I detail this type\Ninference technique
 Dialogue: 0,2:01:58.00,2:02:02.40,Default,,0,0,0,,let's start by an introduction\Nof our theoretical frameworks.
-Dialogue: 0,2:02:03.16,2:02:05.60,Default,,0,0,0,,Terms, language and writing systems.
-Dialogue: 0,2:02:06.36,2:02:10.04,Default,,0,0,0,,The term is a label tree that we\Nusually represent like this.
+Dialogue: 0,2:02:03.16,2:02:05.60,Default,,0,0,0,,Terms, language and rewriting systems.
+Dialogue: 0,2:02:06.36,2:02:10.04,Default,,0,0,0,,The term is a labelled tree that we\Nusually represent like this.
 Dialogue: 0,2:02:10.52,2:02:14.44,Default,,0,0,0,,It is composed of a symbol f\Nliving in a ranked alphabet
-Dialogue: 0,2:02:14.44,2:02:17.08,Default,,0,0,0,,and subterms t1 to tn.
-Dialogue: 0,2:02:17.56,2:02:20.08,Default,,0,0,0,,Where n is the RET of the symbol f.
-Dialogue: 0,2:02:21.08,2:02:24.72,Default,,0,0,0,,We call a term that\Nhas viable in it.
+Dialogue: 0,2:02:14.44,2:02:17.08,Default,,0,0,0,,and n subterms t1 to tn.
+Dialogue: 0,2:02:17.56,2:02:20.08,Default,,0,0,0,,Where n is the arity of the symbol f.
+Dialogue: 0,2:02:21.08,2:02:24.72,Default,,0,0,0,,We call a pattern a term that\Nhas a variable in it.
 Dialogue: 0,2:02:25.20,2:02:28.76,Default,,0,0,0,,Terms are useful to represent\Nfunctional language expressions.
 Dialogue: 0,2:02:28.76,2:02:32.88,Default,,0,0,0,,This slide shows how OCaml expressions\Ncan be translated into terms.
 Dialogue: 0,2:02:33.64,2:02:35.04,Default,,0,0,0,,Constants do not change,
 Dialogue: 0,2:02:35.04,2:02:36.32,Default,,0,0,0,,they have no subterms
 Dialogue: 0,2:02:37.04,2:02:40.40,Default,,0,0,0,,unless it is a number in which\Ncase we'll represent it by a tree
-Dialogue: 0,2:02:40.40,2:02:42.56,Default,,0,0,0,,using pianos and male\Nrepresentation.
+Dialogue: 0,2:02:40.40,2:02:42.56,Default,,0,0,0,,using Peano's number\Nrepresentation.
 Dialogue: 0,2:02:43.32,2:02:45.40,Default,,0,0,0,,Functions and applications\Ncan be translated
-Dialogue: 0,2:02:45.40,2:02:50.04,Default,,0,0,0,,into a term where the RET of\Nthe symbol is the RET of the function
-Dialogue: 0,2:02:50.04,2:02:51.60,Default,,0,0,0,,on the systems or parameters.
+Dialogue: 0,2:02:45.40,2:02:50.04,Default,,0,0,0,,into a term where the arity of\Nthe symbol is the arity of the function
+Dialogue: 0,2:02:50.04,2:02:51.60,Default,,0,0,0,,and the subterms are parameters.
 Dialogue: 0,2:02:53.12,2:02:56.48,Default,,0,0,0,,However this representation does\Nnot allow partial application of f.
-Dialogue: 0,2:02:56.48,2:02:59.60,Default,,0,0,0,,So instead we use the special\Nart symbol to help us
-Dialogue: 0,2:02:59.60,2:03:02.48,Default,,0,0,0,,in the functional application\Nwhich takes a function
+Dialogue: 0,2:02:56.48,2:02:59.60,Default,,0,0,0,,So instead we use the special\N@ symbol to represent
+Dialogue: 0,2:02:59.60,2:03:02.48,Default,,0,0,0,,a function application\Nwhich takes a function
 Dialogue: 0,2:03:02.48,2:03:04.40,Default,,0,0,0,,and its first parameter.
-Dialogue: 0,2:03:04.92,2:03:07.48,Default,,0,0,0,,Control structure such as eves and ls
+Dialogue: 0,2:03:04.92,2:03:07.48,Default,,0,0,0,,Control structures such as if-then-else
 Dialogue: 0,2:03:07.48,2:03:09.32,Default,,0,0,0,,are simply represented as terms.
 Dialogue: 0,2:03:10.08,2:03:13.04,Default,,0,0,0,,Finally let bindings\Nand anonymous functions
 Dialogue: 0,2:03:13.04,2:03:16.88,Default,,0,0,0,,are erased living only\Nthe bound body here k.
@@ -2259,23 +2259,23 @@ Dialogue: 0,2:03:17.64,2:03:19.20,Default,,0,0,0,,This is because the program's 
 Dialogue: 0,2:03:19.20,2:03:22.40,Default,,0,0,0,,is preserved elsewhere as\Na term writing system.
 Dialogue: 0,2:03:22.88,2:03:26.52,Default,,0,0,0,,A term rewriting system defines\Na set of rewriting rules
 Dialogue: 0,2:03:26.52,2:03:29.12,Default,,0,0,0,,between patterns that encode\Nthe program's logic.
-Dialogue: 0,2:03:29.64,2:03:32.28,Default,,0,0,0,,Here is an example\Nobviously of OCaml program
+Dialogue: 0,2:03:29.64,2:03:32.28,Default,,0,0,0,,Here is an example\Nof the OCaml program
 Dialogue: 0,2:03:32.28,2:03:34.60,Default,,0,0,0,,defining the sorted\Npredicate function on top.
 Dialogue: 0,2:03:35.84,2:03:38.92,Default,,0,0,0,,Translated it into a rewriting\Nsystem on the bottom.
-Dialogue: 0,2:03:38.92,2:03:40.92,Default,,0,0,0,,Because a lot of\Nfunction application
-Dialogue: 0,2:03:40.92,2:03:42.52,Default,,0,0,0,,you see a lot of art symbols
+Dialogue: 0,2:03:38.92,2:03:40.92,Default,,0,0,0,,Because there are a lot of\Nfunction applications
+Dialogue: 0,2:03:40.92,2:03:42.52,Default,,0,0,0,,you see a lot of @ symbols
 Dialogue: 0,2:03:43.24,2:03:44.40,Default,,0,0,0,,which takes a lot of room
 Dialogue: 0,2:03:44.40,2:03:45.84,Default,,0,0,0,,and is hard to read.
 Dialogue: 0,2:03:46.60,2:03:49.60,Default,,0,0,0,,To simplify, we will write\Nspace between the function
-Dialogue: 0,2:03:49.60,2:03:52.48,Default,,0,0,0,,and it's parameters instead\Nof art just like this.
-Dialogue: 0,2:03:53.48,2:03:56.56,Default,,0,0,0,,Underline elements are\Nthe variables of the patterns.
+Dialogue: 0,2:03:49.60,2:03:52.48,Default,,0,0,0,,and it's parameters instead\Nof @ just like this.
+Dialogue: 0,2:03:53.48,2:03:56.56,Default,,0,0,0,,Underlined elements are\Nthe variables of the patterns.
 Dialogue: 0,2:03:57.56,2:04:00.08,Default,,0,0,0,,We see that each pattern\Nmatching rule on the top
 Dialogue: 0,2:04:00.08,2:04:03.72,Default,,0,0,0,,is translated into the one or more\Nrewriting rules on the bottom.
 Dialogue: 0,2:04:04.24,2:04:06.68,Default,,0,0,0,,Rewriting system can also\Nbe used to describe
 Dialogue: 0,2:04:06.68,2:04:09.60,Default,,0,0,0,,a regular language of\Nterms as tree automata.
 Dialogue: 0,2:04:10.32,2:04:12.64,Default,,0,0,0,,Here is for instance on the right.
-Dialogue: 0,2:04:12.64,2:04:15.80,Default,,0,0,0,,The tree automata now\Nrecognising every natural number
-Dialogue: 0,2:04:15.80,2:04:19.96,Default,,0,0,0,,which can be used to partially\Nrepresent the nth type in OCaml.
+Dialogue: 0,2:04:12.64,2:04:15.80,Default,,0,0,0,,The tree automaton\Nrecognising every natural number
+Dialogue: 0,2:04:15.80,2:04:19.96,Default,,0,0,0,,which can be used to partially\Nrepresent the int type in OCaml.
 Dialogue: 0,2:04:20.44,2:04:25.64,Default,,0,0,0,,So rewriting rule defines\Nthat 0 rewrites into int
 Dialogue: 0,2:04:25.64,2:04:27.08,Default,,0,0,0,,because it is int
 Dialogue: 0,2:04:27.08,2:04:30.80,Default,,0,0,0,,and s of int as you saw is also int.
@@ -2286,8 +2286,8 @@ Dialogue: 0,2:04:41.68,2:04:44.56,Default,,0,0,0,,that closely match\Nthe OCaml 
 Dialogue: 0,2:04:44.56,2:04:47.12,Default,,0,0,0,,Tree automata can even\Nrepresent regular language
 Dialogue: 0,2:04:47.12,2:04:49.60,Default,,0,0,0,,that are not possible\Nto define in OCaml.
 Dialogue: 0,2:04:49.60,2:04:53.56,Default,,0,0,0,,For instance, here is tree automata\Nrecognising even numbers.
-Dialogue: 0,2:04:54.08,2:04:56.60,Default,,0,0,0,,This can be seen as\Nthe subtype of it.
-Dialogue: 0,2:04:56.60,2:05:00.32,Default,,0,0,0,,In our case we call it\Nregular language type.
+Dialogue: 0,2:04:54.08,2:04:56.60,Default,,0,0,0,,This can be seen as\Nthe subtype of int.
+Dialogue: 0,2:04:56.60,2:05:00.32,Default,,0,0,0,,In our case we call it\Na regular language type.
 Dialogue: 0,2:05:00.32,2:05:03.72,Default,,0,0,0,,Now that we are familiarized\Nwith rewriting systems
 Dialogue: 0,2:05:03.72,2:05:05.56,Default,,0,0,0,,and regular language types
 Dialogue: 0,2:05:05.56,2:05:08.04,Default,,0,0,0,,let's dive into our\Nverification technique.
@@ -2295,7 +2295,7 @@ Dialogue: 0,2:05:09.04,2:05:11.76,Default,,0,0,0,,Remember that in our initial e
 Dialogue: 0,2:05:11.76,2:05:16.20,Default,,0,0,0,,the user wants to verify that\Nin his program for all list l
 Dialogue: 0,2:05:16.20,2:05:17.96,Default,,0,0,0,,the output of sort l
 Dialogue: 0,2:05:17.96,2:05:20.64,Default,,0,0,0,,is sorted according to\Nthe corresponding predicate.
-Dialogue: 0,2:05:21.64,2:05:25.16,Default,,0,0,0,,In our verification sittings,\Nthis problem is first translated
+Dialogue: 0,2:05:21.64,2:05:25.16,Default,,0,0,0,,In our verification settings,\Nthis problem is first translated
 Dialogue: 0,2:05:25.16,2:05:26.56,Default,,0,0,0,,into a rewriting problem.
 Dialogue: 0,2:05:27.28,2:05:29.92,Default,,0,0,0,,Here it states that for all term l
 Dialogue: 0,2:05:29.92,2:05:31.72,Default,,0,0,0,,in the regular language of lists
@@ -2304,72 +2304,72 @@ Dialogue: 0,2:05:34.44,2:05:36.60,Default,,0,0,0,,if the input term rewrites int
 Dialogue: 0,2:05:36.60,2:05:38.48,Default,,0,0,0,,then v must be equal to true.
 Dialogue: 0,2:05:38.96,2:05:41.08,Default,,0,0,0,,In particular, it cannot be false.
 Dialogue: 0,2:05:41.84,2:05:43.36,Default,,0,0,0,,So list must be sorted.
-Dialogue: 0,2:05:44.60,2:05:47.96,Default,,0,0,0,,The average relation is defined\Nby the term writing system
+Dialogue: 0,2:05:44.60,2:05:47.96,Default,,0,0,0,,The arrow relation is defined\Nby the term writing system
 Dialogue: 0,2:05:47.96,2:05:50.40,Default,,0,0,0,,translating from the input program.
 Dialogue: 0,2:05:52.40,2:05:56.40,Default,,0,0,0,,As we have seen earlier, regular\Nlanguages can be seen as types.
 Dialogue: 0,2:05:57.64,2:06:01.28,Default,,0,0,0,,So we then translate our problem\Ninto a type checking problem
 Dialogue: 0,2:06:01.28,2:06:04.32,Default,,0,0,0,,where we need to check that\Nthe following term is well typed
 Dialogue: 0,2:06:04.32,2:06:06.20,Default,,0,0,0,,using regular language types.
-Dialogue: 0,2:06:07.20,2:06:11.68,Default,,0,0,0,,The overall target type is regular\Nlanguage containing only the term 2.
+Dialogue: 0,2:06:07.20,2:06:11.68,Default,,0,0,0,,The overall target type is a regular\Nlanguage containing only the term true.
 Dialogue: 0,2:06:12.68,2:06:14.08,Default,,0,0,0,,Note that to check that
 Dialogue: 0,2:06:14.08,2:06:18.72,Default,,0,0,0,,we will need to infer the appropriate\Nintermediate type for sort L
 Dialogue: 0,2:06:18.72,2:06:20.04,Default,,0,0,0,,since it is not given.
-Dialogue: 0,2:06:21.80,2:06:25.36,Default,,0,0,0,,Forms are partially typed given\Ninput there on the right.
-Dialogue: 0,2:06:25.36,2:06:28.32,Default,,0,0,0,,So type checking algorithm\Nis defined as follows.
-Dialogue: 0,2:06:29.08,2:06:31.00,Default,,0,0,0,,First we extract\Nthe types in the two
+Dialogue: 0,2:06:21.80,2:06:25.36,Default,,0,0,0,,From the partially typed given\Ninput there on the right.
+Dialogue: 0,2:06:25.36,2:06:28.32,Default,,0,0,0,,the type checking algorithm\Nis defined as follows.
+Dialogue: 0,2:06:29.08,2:06:31.00,Default,,0,0,0,,First we extract\Nthe type signature
 Dialogue: 0,2:06:31.00,2:06:33.00,Default,,0,0,0,,for the top most symbol, sorted.
-Dialogue: 0,2:06:33.76,2:06:36.16,Default,,0,0,0,,We know the expected\Nopen type, true.
+Dialogue: 0,2:06:33.76,2:06:36.16,Default,,0,0,0,,We know the expected\Noutput type, true.
 Dialogue: 0,2:06:36.92,2:06:40.80,Default,,0,0,0,,Constant values such as some\Ncomparison functions, CMP
-Dialogue: 0,2:06:40.80,2:06:42.12,Default,,0,0,0,,are typed with the terms
+Dialogue: 0,2:06:40.80,2:06:42.12,Default,,0,0,0,,are typed with themselves
 Dialogue: 0,2:06:42.12,2:06:45.36,Default,,0,0,0,,and can be reported\Ndirectly on the signature.
-Dialogue: 0,2:06:45.84,2:06:47.72,Default,,0,0,0,,We complete the blends\Nin the signature
+Dialogue: 0,2:06:45.84,2:06:47.72,Default,,0,0,0,,We complete the blanks\Nin the signature
 Dialogue: 0,2:06:47.72,2:06:50.12,Default,,0,0,0,,using our type inference procedure.
-Dialogue: 0,2:06:50.12,2:06:52.52,Default,,0,0,0,,We find that to output two.
-Dialogue: 0,2:06:52.52,2:06:56.40,Default,,0,0,0,,The list must be sorted which is\Nrepresented by the regular language
+Dialogue: 0,2:06:50.12,2:06:52.52,Default,,0,0,0,,We find that to output true,
+Dialogue: 0,2:06:52.52,2:06:56.40,Default,,0,0,0,,the list must be sorted which is\Nrepresented by the regular language
 Dialogue: 0,2:06:56.40,2:06:57.40,Default,,0,0,0,,named sorted.
 Dialogue: 0,2:06:57.88,2:06:59.88,Default,,0,0,0,,We propagate back what we have found
 Dialogue: 0,2:06:59.88,2:07:02.84,Default,,0,0,0,,and check that it matches\Nthe initial type information
-Dialogue: 0,2:07:03.36,2:07:05.04,Default,,0,0,0,,and then we reap it,\Nthe same procedure
-Dialogue: 0,2:07:05.04,2:07:06.60,Default,,0,0,0,,with the sit down.
+Dialogue: 0,2:07:03.36,2:07:05.04,Default,,0,0,0,,and then we reapeat,\Nthe same procedure
+Dialogue: 0,2:07:05.04,2:07:06.60,Default,,0,0,0,,with the subterm.
 Dialogue: 0,2:07:06.60,2:07:08.44,Default,,0,0,0,,Here we need to check, sort l.
 Dialogue: 0,2:07:08.96,2:07:11.20,Default,,0,0,0,,We again extract the template\Nsignature for sort.
 Dialogue: 0,2:07:11.20,2:07:14.60,Default,,0,0,0,,Here we already have all\Nthe type information about sort.
 Dialogue: 0,2:07:14.60,2:07:16.04,Default,,0,0,0,,We just need to check it.
-Dialogue: 0,2:07:17.08,2:07:20.52,Default,,0,0,0,,The algorithm stops, when\Nodds types have been found
+Dialogue: 0,2:07:17.08,2:07:20.52,Default,,0,0,0,,The algorithm stops, when\Nall the types have been found
 Dialogue: 0,2:07:20.52,2:07:23.00,Default,,0,0,0,,or when a type occur, when\Nthere is a contradiction.
 Dialogue: 0,2:07:23.76,2:07:27.96,Default,,0,0,0,,Of course everything is built on\Ntop of type inference procedure
-Dialogue: 0,2:07:27.96,2:07:31.24,Default,,0,0,0,,which has been able to find\Nthe regular language of sorted list.
+Dialogue: 0,2:07:27.96,2:07:31.24,Default,,0,0,0,,which has been able to find\Nthe regular language of sorted lists.
 Dialogue: 0,2:07:32.00,2:07:33.96,Default,,0,0,0,,Let's see how this procedure works.
 Dialogue: 0,2:07:33.96,2:07:35.48,Default,,0,0,0,,So the problem is as follows.
 Dialogue: 0,2:07:36.24,2:07:39.60,Default,,0,0,0,,As input we have rewriting\Nsystem of symbol f
-Dialogue: 0,2:07:39.60,2:07:42.36,Default,,0,0,0,,on an output regular\Nlanguage type o.
+Dialogue: 0,2:07:39.60,2:07:42.36,Default,,0,0,0,,and an output regular\Nlanguage type o.
 Dialogue: 0,2:07:42.36,2:07:46.00,Default,,0,0,0,,We want to find every\Ninput type A1 to An
 Dialogue: 0,2:07:46.00,2:07:50.36,Default,,0,0,0,,such that every term f(t1)\Nto tn is typed with O
 Dialogue: 0,2:07:50.88,2:07:53.36,Default,,0,0,0,,when each ti is typed with AI.
 Dialogue: 0,2:07:53.36,2:07:56.00,Default,,0,0,0,,This can be summarised with\Nthe following abstract
-Dialogue: 0,2:07:56.00,2:07:57.60,Default,,0,0,0,,writing all for f.
+Dialogue: 0,2:07:56.00,2:07:57.60,Default,,0,0,0,,writing rule for f.
 Dialogue: 0,2:07:57.60,2:08:00.76,Default,,0,0,0,,For instance let's consider\Nthe following rewriting system
-Dialogue: 0,2:08:00.76,2:08:02.72,Default,,0,0,0,,defining regular function
-Dialogue: 0,2:08:02.72,2:08:06.84,Default,,0,0,0,,even deciding if\Na number is even on it.
+Dialogue: 0,2:08:00.76,2:08:02.72,Default,,0,0,0,,defining the recursive function
+Dialogue: 0,2:08:02.72,2:08:06.84,Default,,0,0,0,,even deciding if\Na number is even or not.
 Dialogue: 0,2:08:06.84,2:08:09.80,Default,,0,0,0,,We want to know for which\Ninput regular language type
-Dialogue: 0,2:08:09.80,2:08:11.16,Default,,0,0,0,,this function becomes two.
-Dialogue: 0,2:08:11.88,2:08:15.48,Default,,0,0,0,,So here our target open\Ntype contains only two.
-Dialogue: 0,2:08:16.24,2:08:19.36,Default,,0,0,0,,The expected output of\Nthe procedure is partial attraction
-Dialogue: 0,2:08:19.36,2:08:21.40,Default,,0,0,0,,of the input term writing system
-Dialogue: 0,2:08:21.40,2:08:22.80,Default,,0,0,0,,focusing on the even.
-Dialogue: 0,2:08:22.80,2:08:26.60,Default,,0,0,0,,So tells us that even returns\Ntwo for every even number.
+Dialogue: 0,2:08:09.80,2:08:11.16,Default,,0,0,0,,this function returns true.
+Dialogue: 0,2:08:11.88,2:08:15.48,Default,,0,0,0,,So here our target output\Ntype contains only true.
+Dialogue: 0,2:08:16.24,2:08:19.36,Default,,0,0,0,,The expected output of\Nthe procedure is a partial abstraction
+Dialogue: 0,2:08:19.36,2:08:21.40,Default,,0,0,0,,of the input term rewriting system.
+Dialogue: 0,2:08:21.40,2:08:22.80,Default,,0,0,0,,Focusing on even.
+Dialogue: 0,2:08:22.80,2:08:26.60,Default,,0,0,0,,this tells us that even returns\Ntrue for every even number.
 Dialogue: 0,2:08:27.32,2:08:30.44,Default,,0,0,0,,The new type Even is computed\Nduring the analysis.
-Dialogue: 0,2:08:31.20,2:08:33.32,Default,,0,0,0,,For regular functions\Nsuch as this one.
-Dialogue: 0,2:08:33.32,2:08:36.64,Default,,0,0,0,,So type inference is done using\Ninvariant running procedure.
-Dialogue: 0,2:08:37.64,2:08:40.16,Default,,0,0,0,,In our paper, we defined\Ndown to our example
-Dialogue: 0,2:08:40.16,2:08:42.68,Default,,0,0,0,,guided regular invariant\Nand in procedure
-Dialogue: 0,2:08:42.68,2:08:45.60,Default,,0,0,0,,based on the automata\Ncompletion and SMT solving.
+Dialogue: 0,2:08:31.20,2:08:33.32,Default,,0,0,0,,For recursive functions\Nsuch as this one
+Dialogue: 0,2:08:33.32,2:08:36.64,Default,,0,0,0,,the type inference is done using\Nan invariant learning procedure.
+Dialogue: 0,2:08:37.64,2:08:40.16,Default,,0,0,0,,In our paper, we defined\Na counter-example
+Dialogue: 0,2:08:40.16,2:08:42.68,Default,,0,0,0,,guided regular invariant\Nlearning procedure
+Dialogue: 0,2:08:42.68,2:08:45.60,Default,,0,0,0,,based on tree automata\Ncompletion and SMT solving.
 Dialogue: 0,2:08:46.12,2:08:47.92,Default,,0,0,0,,It consists in repeating four steps
-Dialogue: 0,2:08:48.40,2:08:50.84,Default,,0,0,0,,until it finds a solution\Nor gone to our example.
+Dialogue: 0,2:08:48.40,2:08:50.84,Default,,0,0,0,,until it finds a solution\Nor a counter-example.
 Dialogue: 0,2:08:51.32,2:08:52.96,Default,,0,0,0,,Step one we experiment.
 Dialogue: 0,2:08:53.44,2:08:56.60,Default,,0,0,0,,We evaluate some terms of\Nthe form of f of t1 to tn
-Dialogue: 0,2:08:56.60,2:09:01.96,Default,,0,0,0,,where f is analysed symbol and t1\Nto tn some random input values.
-Dialogue: 0,2:09:01.96,2:09:05.36,Default,,0,0,0,,We do that efficiently using\Nthe automata completion algorithm.
+Dialogue: 0,2:08:56.60,2:09:01.96,Default,,0,0,0,,where f is an analysed symbol and t1\Nto tn some random input values.
+Dialogue: 0,2:09:01.96,2:09:05.36,Default,,0,0,0,,We do that efficiently using\Nthe tree automaton completion algorithm.
 Dialogue: 0,2:09:05.88,2:09:08.60,Default,,0,0,0,,We then observe the result\Nof our experiments
 Dialogue: 0,2:09:08.60,2:09:12.52,Default,,0,0,0,,and deduce some constraints on\Nthe language we are learning.
 Dialogue: 0,2:09:12.52,2:09:16.04,Default,,0,0,0,,We then make an hypothesis\Nby using an SMT solver
@@ -2385,26 +2385,26 @@ Dialogue: 0,2:09:36.44,2:09:37.84,Default,,0,0,0,,To illustrate the procedure,
 Dialogue: 0,2:09:37.84,2:09:40.00,Default,,0,0,0,,let's take back\Nthe even function example.
 Dialogue: 0,2:09:40.76,2:09:44.12,Default,,0,0,0,,First we experiment with\Nthe values 0, 1 and 2
 Dialogue: 0,2:09:44.12,2:09:49.08,Default,,0,0,0,,that are recognised in this\Nautomata by this state X0, X1, X2.
-Dialogue: 0,2:09:49.08,2:09:51.20,Default,,0,0,0,,Using the three automata completion
-Dialogue: 0,2:09:51.20,2:09:54.88,Default,,0,0,0,,we know that Even of 0\Nand Even of 2 rewrites to 2.
+Dialogue: 0,2:09:49.08,2:09:51.20,Default,,0,0,0,,Using the tree automaton completion
+Dialogue: 0,2:09:51.20,2:09:54.88,Default,,0,0,0,,we know that Even of 0\Nand Even of 2 rewrites to true.
 Dialogue: 0,2:09:55.36,2:09:57.36,Default,,0,0,0,,This is encoded by\Nthe following rules.
 Dialogue: 0,2:09:58.60,2:10:00.12,Default,,0,0,0,,If we only use this information,
 Dialogue: 0,2:10:00.12,2:10:02.56,Default,,0,0,0,,then we cannot observe\Nthe constraints.
-Dialogue: 0,2:10:02.56,2:10:05.28,Default,,0,0,0,,Every tested value\Nso far rewrites to 2.
-Dialogue: 0,2:10:05.76,2:10:08.68,Default,,0,0,0,,As a consequence,\Nif everything rewrites to 2
+Dialogue: 0,2:10:02.56,2:10:05.28,Default,,0,0,0,,Every tested value\Nso far rewrites to true.
+Dialogue: 0,2:10:05.76,2:10:08.68,Default,,0,0,0,,As a consequence,\Nif everything rewrites to true
 Dialogue: 0,2:10:08.68,2:10:13.48,Default,,0,0,0,,then there is no point in\Nseparating X0 from X1 from X2.
 Dialogue: 0,2:10:14.00,2:10:16.56,Default,,0,0,0,,The solution to our\Nanti-constraint system
-Dialogue: 0,2:10:16.56,2:10:19.56,Default,,0,0,0,,is to merge them together\Ninto a new state to zero
-Dialogue: 0,2:10:20.16,2:10:22.48,Default,,0,0,0,,By applying the substitution\Nin the automata
+Dialogue: 0,2:10:16.56,2:10:19.56,Default,,0,0,0,,is to merge them together\Ninto a new state tau zero
+Dialogue: 0,2:10:20.16,2:10:22.48,Default,,0,0,0,,By applying the substitution\Nin the automaton
 Dialogue: 0,2:10:22.48,2:10:25.52,Default,,0,0,0,,we get a candidate abstraction\Nfor rewriting system
-Dialogue: 0,2:10:25.52,2:10:28.52,Default,,0,0,0,,where even applied to any\Nnumber returns to two.
-Dialogue: 0,2:10:28.52,2:10:30.80,Default,,0,0,0,,Of course this does not pass a test.
+Dialogue: 0,2:10:25.52,2:10:28.52,Default,,0,0,0,,where even applied to any\Nnumber returns to true.
+Dialogue: 0,2:10:28.52,2:10:30.80,Default,,0,0,0,,Of course this does not pass the test.
 Dialogue: 0,2:10:30.80,2:10:33.16,Default,,0,0,0,,Every input value for\NEven is represented
-Dialogue: 0,2:10:33.16,2:10:36.36,Default,,0,0,0,,but some rewriting rules\Nare not used in particular.
-Dialogue: 0,2:10:36.36,2:10:40.48,Default,,0,0,0,,This subtraction misses the fact\Nthat even f1 rewrites to false.
+Dialogue: 0,2:10:33.16,2:10:36.36,Default,,0,0,0,,but some rewriting rules\Nare not used in particular
+Dialogue: 0,2:10:36.36,2:10:40.48,Default,,0,0,0,,this abstraction misses the fact\Nthat even of 1 rewrites to false.
 Dialogue: 0,2:10:41.20,2:10:42.96,Default,,0,0,0,,So we can not stop here.
 Dialogue: 0,2:10:42.96,2:10:46.56,Default,,0,0,0,,To continue we add Even of\None in our experiment.
-Dialogue: 0,2:10:46.56,2:10:48.08,Default,,0,0,0,,It rewrites false.
+Dialogue: 0,2:10:46.56,2:10:48.08,Default,,0,0,0,,It rewrites to false.
 Dialogue: 0,2:10:48.84,2:10:52.68,Default,,0,0,0,,This time we observe that in\Norder to separate true from false
 Dialogue: 0,2:10:52.68,2:10:55.68,Default,,0,0,0,,we need to have X0 different from X2
 Dialogue: 0,2:10:55.68,2:10:57.56,Default,,0,0,0,,and X1 different from X2.
@@ -2418,18 +2418,18 @@ Dialogue: 0,2:11:13.24,2:11:16.12,Default,,0,0,0,,And this time every input\Nval
 Dialogue: 0,2:11:16.12,2:11:18.88,Default,,0,0,0,,And every possible\Nrewriting rule is used.
 Dialogue: 0,2:11:19.64,2:11:21.36,Default,,0,0,0,,So we can stop the analysis here.
 Dialogue: 0,2:11:21.36,2:11:25.08,Default,,0,0,0,,We have found an abstraction that\Ngives us the correct input type
-Dialogue: 0,2:11:25.08,2:11:26.08,Default,,0,0,0,,for the output 2.
-Dialogue: 0,2:11:26.84,2:11:29.92,Default,,0,0,0,,Which is near language even\Norganizing even numbers.
-Dialogue: 0,2:11:30.60,2:11:32.68,Default,,0,0,0,,We have proof that this\Nprocedure is regularly
+Dialogue: 0,2:11:25.08,2:11:26.08,Default,,0,0,0,,for the output true.
+Dialogue: 0,2:11:26.84,2:11:29.92,Default,,0,0,0,,Which is new language even\Norganizing even numbers.
+Dialogue: 0,2:11:30.60,2:11:32.68,Default,,0,0,0,,We have proved that this\Nprocedure is regularly
 Dialogue: 0,2:11:33.36,2:11:36.60,Default,,0,0,0,,complete as it can\Nlearn any regular language
 Dialogue: 0,2:11:36.60,2:11:38.76,Default,,0,0,0,,and complete in refutation.
-Dialogue: 0,2:11:38.76,2:11:42.44,Default,,0,0,0,,We have implemented in Ocaml\Nin a new version of Timbuk
+Dialogue: 0,2:11:38.76,2:11:42.44,Default,,0,0,0,,We have implemented it in Ocaml\Nin a new version of Timbuk
 Dialogue: 0,2:11:42.44,2:11:45.92,Default,,0,0,0,,and tested it on more\Nthan 80 problems.
 Dialogue: 0,2:11:45.92,2:11:48.36,Default,,0,0,0,,When possible, we\Ncompared the performances
 Dialogue: 0,2:11:48.36,2:11:50.96,Default,,0,0,0,,with the previous version of Timbuk.
-Dialogue: 0,2:11:50.96,2:11:53.00,Default,,0,0,0,,We thought that it is in a way,
+Dialogue: 0,2:11:50.96,2:11:53.00,Default,,0,0,0,,We saw that it is on average,
 Dialogue: 0,2:11:53.00,2:11:54.76,Default,,0,0,0,,a second slower than Timbuk Three
-Dialogue: 0,2:11:54.76,2:11:56.48,Default,,0,0,0,,which can be explained\Nby an over (INAUDIBLE)
+Dialogue: 0,2:11:54.76,2:11:56.48,Default,,0,0,0,,which can be explained\Nby an overhead
 Dialogue: 0,2:11:56.48,2:11:59.00,Default,,0,0,0,,due to our typing facility.
 Dialogue: 0,2:11:59.00,2:12:02.68,Default,,0,0,0,,However, in the subset of problems\Non which we could compare,
 Dialogue: 0,2:12:02.68,2:12:07.08,Default,,0,0,0,,our implementation could\Nhandle 16% more problems

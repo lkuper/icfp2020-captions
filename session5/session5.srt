@@ -10150,7 +10150,7 @@ be talking about our latest work
 2145
 01:58:16,560 --> 01:58:20,000
 on the automatic verification of
-high order functional program
+higher-order functional programs
 
 2146
 01:58:20,720 --> 01:58:23,960
@@ -10163,7 +10163,7 @@ using term rewriting.
 
 2148
 01:58:26,600 --> 01:58:29,480
-This is joined work with Thomas
+This is joint work with Thomas
 Genet and Thomas Jensen
 
 2149
@@ -10201,7 +10201,7 @@ On the left side is a user input.
 
 2156
 01:58:48,560 --> 01:58:50,760
-It is a high order
+It is a higher-order
 functional program
 
 2157
@@ -10216,12 +10216,12 @@ It defines a recursive function sort
 2159
 01:58:56,640 --> 01:58:59,280
 that implements
-(INAUDIBLE) sort algorithms
+an insertion sort algorithms
 
 2160
 01:58:59,280 --> 01:59:01,400
 taking as parameters
-comparison functions.
+a comparison function.
 
 2161
 01:59:02,400 --> 01:59:06,880
@@ -10241,7 +10241,7 @@ could be the user interface.
 2164
 01:59:13,880 --> 01:59:17,200
 Here the user can type in the
-property wants to verify.
+property he wants to verify.
 
 2165
 01:59:17,680 --> 01:59:21,520
@@ -10259,7 +10259,7 @@ according to the corresponding predicate.
 
 2168
 01:59:26,800 --> 01:59:31,120
-Note that the property uses predicate
+Note that the property uses predicates
 that are defined in the program
 
 2169
@@ -10292,7 +10292,7 @@ contribution was necessary
 2175
 01:59:48,440 --> 01:59:51,000
 in how it relates to
-other high order functional
+other higher-order functional
 
 2176
 01:59:51,000 --> 01:59:52,920
@@ -10301,7 +10301,7 @@ program verification techniques
 2177
 01:59:52,920 --> 01:59:55,480
 I'd like to place every
-technique under this diagram.
+technique on this diagram.
 
 2178
 01:59:56,000 --> 01:59:59,520
@@ -10352,7 +10352,7 @@ by the technique.
 
 2188
 02:00:24,440 --> 02:00:28,040
-On left right, we measure
+On left to right, we measure
 how much a user is active
 
 2189
@@ -10370,7 +10370,7 @@ and on the right manual techniques.
 
 2192
 02:00:37,280 --> 02:00:40,440
-Proof assistance such
+Proof assistants such
 as Coq, Isabelle HOL
 
 2193
@@ -10384,7 +10384,7 @@ range of properties
 
 2195
 02:00:45,560 --> 02:00:47,160
-that require a lot of manual work.
+but require a lot of manual work.
 
 2196
 02:00:47,920 --> 02:00:49,760
@@ -10420,18 +10420,18 @@ have been developed
 
 2203
 02:01:05,360 --> 02:01:09,040
-around high model checking,
+around higher-order model checking,
 predicate abstraction and more.
 
 2204
 02:01:10,040 --> 02:01:12,760
-This techniques do not
+These techniques do not
 require any annotations
 
 2205
 02:01:12,760 --> 02:01:15,400
 but mainly focus on
-irrational properties
+relational properties
 
 2206
 02:01:15,400 --> 02:01:16,840
@@ -10454,7 +10454,7 @@ fully automatic verification
 2210
 02:01:26,680 --> 02:01:30,120
 of regular properties including
-our proudest in Timbuk
+our previous work in Timbuk
 
 2211
 02:01:30,640 --> 02:01:33,440
@@ -10497,7 +10497,7 @@ automatically infer using regular
 
 2219
 02:01:52,960 --> 02:01:54,400
-and variant learning techniques.
+invariant learning techniques.
 
 2220
 02:01:55,400 --> 02:01:58,000
@@ -10511,11 +10511,11 @@ of our theoretical frameworks.
 
 2222
 02:02:03,160 --> 02:02:05,600
-Terms, language and writing systems.
+Terms, language and rewriting systems.
 
 2223
 02:02:06,360 --> 02:02:10,040
-The term is a label tree that we
+The term is a labelled tree that we
 usually represent like this.
 
 2224
@@ -10525,16 +10525,16 @@ living in a ranked alphabet
 
 2225
 02:02:14,440 --> 02:02:17,080
-and subterms t1 to tn.
+and n subterms t1 to tn.
 
 2226
 02:02:17,560 --> 02:02:20,080
-Where n is the RET of the symbol f.
+Where n is the arity of the symbol f.
 
 2227
 02:02:21,080 --> 02:02:24,720
-We call a term that
-has viable in it.
+We call a pattern a term that
+has a variable in it.
 
 2228
 02:02:25,200 --> 02:02:28,760
@@ -10561,7 +10561,7 @@ case we'll represent it by a tree
 
 2233
 02:02:40,400 --> 02:02:42,560
-using pianos and male
+using Peano's number
 representation.
 
 2234
@@ -10571,12 +10571,12 @@ can be translated
 
 2235
 02:02:45,400 --> 02:02:50,040
-into a term where the RET of
-the symbol is the RET of the function
+into a term where the arity of
+the symbol is the arity of the function
 
 2236
 02:02:50,040 --> 02:02:51,600
-on the systems or parameters.
+and the subterms are parameters.
 
 2237
 02:02:53,120 --> 02:02:56,480
@@ -10586,11 +10586,11 @@ not allow partial application of f.
 2238
 02:02:56,480 --> 02:02:59,600
 So instead we use the special
-art symbol to help us
+@ symbol to represent
 
 2239
 02:02:59,600 --> 02:03:02,480
-in the functional application
+a function application
 which takes a function
 
 2240
@@ -10599,7 +10599,7 @@ and its first parameter.
 
 2241
 02:03:04,920 --> 02:03:07,480
-Control structure such as eves and ls
+Control structures such as if-then-else
 
 2242
 02:03:07,480 --> 02:03:09,320
@@ -10637,7 +10637,7 @@ the program's logic.
 2249
 02:03:29,640 --> 02:03:32,280
 Here is an example
-obviously of OCaml program
+of the OCaml program
 
 2250
 02:03:32,280 --> 02:03:34,600
@@ -10651,12 +10651,12 @@ system on the bottom.
 
 2252
 02:03:38,920 --> 02:03:40,920
-Because a lot of
-function application
+Because there are a lot of
+function applications
 
 2253
 02:03:40,920 --> 02:03:42,520
-you see a lot of art symbols
+you see a lot of @ symbols
 
 2254
 02:03:43,240 --> 02:03:44,400
@@ -10674,11 +10674,11 @@ space between the function
 2257
 02:03:49,600 --> 02:03:52,480
 and it's parameters instead
-of art just like this.
+of @ just like this.
 
 2258
 02:03:53,480 --> 02:03:56,560
-Underline elements are
+Underlined elements are
 the variables of the patterns.
 
 2259
@@ -10707,13 +10707,13 @@ Here is for instance on the right.
 
 2264
 02:04:12,640 --> 02:04:15,800
-The tree automata now
+The tree automaton
 recognising every natural number
 
 2265
 02:04:15,800 --> 02:04:19,960
 which can be used to partially
-represent the nth type in OCaml.
+represent the int type in OCaml.
 
 2266
 02:04:20,440 --> 02:04:25,640
@@ -10766,12 +10766,12 @@ recognising even numbers.
 2276
 02:04:54,080 --> 02:04:56,600
 This can be seen as
-the subtype of it.
+the subtype of int.
 
 2277
 02:04:56,600 --> 02:05:00,320
 In our case we call it
-regular language type.
+a regular language type.
 
 2278
 02:05:00,320 --> 02:05:03,720
@@ -10807,7 +10807,7 @@ the corresponding predicate.
 
 2285
 02:05:21,640 --> 02:05:25,160
-In our verification sittings,
+In our verification settings,
 this problem is first translated
 
 2286
@@ -10844,7 +10844,7 @@ So list must be sorted.
 
 2294
 02:05:44,600 --> 02:05:47,960
-The average relation is defined
+The arrow relation is defined
 by the term writing system
 
 2295
@@ -10872,8 +10872,8 @@ using regular language types.
 
 2300
 02:06:07,200 --> 02:06:11,680
-The overall target type is regular
-language containing only the term 2.
+The overall target type is a regular
+language containing only the term true.
 
 2301
 02:06:12,680 --> 02:06:14,080
@@ -10890,18 +10890,18 @@ since it is not given.
 
 2304
 02:06:21,800 --> 02:06:25,360
-Forms are partially typed given
+From the partially typed given
 input there on the right.
 
 2305
 02:06:25,360 --> 02:06:28,320
-So type checking algorithm
+the type checking algorithm
 is defined as follows.
 
 2306
 02:06:29,080 --> 02:06:31,000
 First we extract
-the types in the two
+the type signature
 
 2307
 02:06:31,000 --> 02:06:33,000
@@ -10910,7 +10910,7 @@ for the top most symbol, sorted.
 2308
 02:06:33,760 --> 02:06:36,160
 We know the expected
-open type, true.
+output type, true.
 
 2309
 02:06:36,920 --> 02:06:40,800
@@ -10919,7 +10919,7 @@ comparison functions, CMP
 
 2310
 02:06:40,800 --> 02:06:42,120
-are typed with the terms
+are typed with themselves
 
 2311
 02:06:42,120 --> 02:06:45,360
@@ -10928,7 +10928,7 @@ directly on the signature.
 
 2312
 02:06:45,840 --> 02:06:47,720
-We complete the blends
+We complete the blanks
 in the signature
 
 2313
@@ -10937,11 +10937,11 @@ using our type inference procedure.
 
 2314
 02:06:50,120 --> 02:06:52,520
-We find that to output two.
+We find that to output true,
 
 2315
 02:06:52,520 --> 02:06:56,400
-The list must be sorted which is
+the list must be sorted which is
 represented by the regular language
 
 2316
@@ -10959,12 +10959,12 @@ the initial type information
 
 2319
 02:07:03,360 --> 02:07:05,040
-and then we reap it,
+and then we reapeat,
 the same procedure
 
 2320
 02:07:05,040 --> 02:07:06,600
-with the sit down.
+with the subterm.
 
 2321
 02:07:06,600 --> 02:07:08,440
@@ -10987,7 +10987,7 @@ We just need to check it.
 2325
 02:07:17,080 --> 02:07:20,520
 The algorithm stops, when
-odds types have been found
+all the types have been found
 
 2326
 02:07:20,520 --> 02:07:23,000
@@ -11002,7 +11002,7 @@ top of type inference procedure
 2328
 02:07:27,960 --> 02:07:31,240
 which has been able to find
-the regular language of sorted list.
+the regular language of sorted lists.
 
 2329
 02:07:32,000 --> 02:07:33,960
@@ -11019,7 +11019,7 @@ system of symbol f
 
 2332
 02:07:39,600 --> 02:07:42,360
-on an output regular
+and an output regular
 language type o.
 
 2333
@@ -11043,7 +11043,7 @@ the following abstract
 
 2337
 02:07:56,000 --> 02:07:57,600
-writing all for f.
+writing rule for f.
 
 2338
 02:07:57,600 --> 02:08:00,760
@@ -11052,12 +11052,12 @@ the following rewriting system
 
 2339
 02:08:00,760 --> 02:08:02,720
-defining regular function
+defining the recursive function
 
 2340
 02:08:02,720 --> 02:08:06,840
 even deciding if
-a number is even on it.
+a number is even or not.
 
 2341
 02:08:06,840 --> 02:08:09,800
@@ -11066,30 +11066,30 @@ input regular language type
 
 2342
 02:08:09,800 --> 02:08:11,160
-this function becomes two.
+this function returns true.
 
 2343
 02:08:11,880 --> 02:08:15,480
-So here our target open
-type contains only two.
+So here our target output
+type contains only true.
 
 2344
 02:08:16,240 --> 02:08:19,360
 The expected output of
-the procedure is partial attraction
+the procedure is a partial abstraction
 
 2345
 02:08:19,360 --> 02:08:21,400
-of the input term writing system
+of the input term rewriting system.
 
 2346
 02:08:21,400 --> 02:08:22,800
-focusing on the even.
+Focusing on even.
 
 2347
 02:08:22,800 --> 02:08:26,600
-So tells us that even returns
-two for every even number.
+this tells us that even returns
+true for every even number.
 
 2348
 02:08:27,320 --> 02:08:30,440
@@ -11098,27 +11098,27 @@ during the analysis.
 
 2349
 02:08:31,200 --> 02:08:33,320
-For regular functions
-such as this one.
+For recursive functions
+such as this one
 
 2350
 02:08:33,320 --> 02:08:36,640
-So type inference is done using
-invariant running procedure.
+the type inference is done using
+an invariant learning procedure.
 
 2351
 02:08:37,640 --> 02:08:40,160
 In our paper, we defined
-down to our example
+a counter-example
 
 2352
 02:08:40,160 --> 02:08:42,680
 guided regular invariant
-and in procedure
+learning procedure
 
 2353
 02:08:42,680 --> 02:08:45,600
-based on the automata
+based on tree automata
 completion and SMT solving.
 
 2354
@@ -11128,7 +11128,7 @@ It consists in repeating four steps
 2355
 02:08:48,400 --> 02:08:50,840
 until it finds a solution
-or gone to our example.
+or a counter-example.
 
 2356
 02:08:51,320 --> 02:08:52,960
@@ -11141,13 +11141,13 @@ the form of f of t1 to tn
 
 2358
 02:08:56,600 --> 02:09:01,960
-where f is analysed symbol and t1
+where f is an analysed symbol and t1
 to tn some random input values.
 
 2359
 02:09:01,960 --> 02:09:05,360
 We do that efficiently using
-the automata completion algorithm.
+the tree automaton completion algorithm.
 
 2360
 02:09:05,880 --> 02:09:08,600
@@ -11222,12 +11222,12 @@ automata by this state X0, X1, X2.
 
 2375
 02:09:49,080 --> 02:09:51,200
-Using the three automata completion
+Using the tree automaton completion
 
 2376
 02:09:51,200 --> 02:09:54,880
 we know that Even of 0
-and Even of 2 rewrites to 2.
+and Even of 2 rewrites to true.
 
 2377
 02:09:55,360 --> 02:09:57,360
@@ -11246,12 +11246,12 @@ the constraints.
 2380
 02:10:02,560 --> 02:10:05,280
 Every tested value
-so far rewrites to 2.
+so far rewrites to true.
 
 2381
 02:10:05,760 --> 02:10:08,680
 As a consequence,
-if everything rewrites to 2
+if everything rewrites to true
 
 2382
 02:10:08,680 --> 02:10:13,480
@@ -11266,12 +11266,12 @@ anti-constraint system
 2384
 02:10:16,560 --> 02:10:19,560
 is to merge them together
-into a new state to zero
+into a new state tau zero
 
 2385
 02:10:20,160 --> 02:10:22,480
 By applying the substitution
-in the automata
+in the automaton
 
 2386
 02:10:22,480 --> 02:10:25,520
@@ -11281,11 +11281,11 @@ for rewriting system
 2387
 02:10:25,520 --> 02:10:28,520
 where even applied to any
-number returns to two.
+number returns to true.
 
 2388
 02:10:28,520 --> 02:10:30,800
-Of course this does not pass a test.
+Of course this does not pass the test.
 
 2389
 02:10:30,800 --> 02:10:33,160
@@ -11295,12 +11295,12 @@ Even is represented
 2390
 02:10:33,160 --> 02:10:36,360
 but some rewriting rules
-are not used in particular.
+are not used in particular
 
 2391
 02:10:36,360 --> 02:10:40,480
-This subtraction misses the fact
-that even f1 rewrites to false.
+this abstraction misses the fact
+that even of 1 rewrites to false.
 
 2392
 02:10:41,200 --> 02:10:42,960
@@ -11313,7 +11313,7 @@ one in our experiment.
 
 2394
 02:10:46,560 --> 02:10:48,080
-It rewrites false.
+It rewrites to false.
 
 2395
 02:10:48,840 --> 02:10:52,680
@@ -11375,16 +11375,16 @@ gives us the correct input type
 
 2408
 02:11:25,080 --> 02:11:26,080
-for the output 2.
+for the output true.
 
 2409
 02:11:26,840 --> 02:11:29,920
-Which is near language even
+Which is new language even
 organizing even numbers.
 
 2410
 02:11:30,600 --> 02:11:32,680
-We have proof that this
+We have proved that this
 procedure is regularly
 
 2411
@@ -11398,7 +11398,7 @@ and complete in refutation.
 
 2413
 02:11:38,760 --> 02:11:42,440
-We have implemented in Ocaml
+We have implemented it in Ocaml
 in a new version of Timbuk
 
 2414
@@ -11417,7 +11417,7 @@ with the previous version of Timbuk.
 
 2417
 02:11:50,960 --> 02:11:53,000
-We thought that it is in a way,
+We saw that it is on average,
 
 2418
 02:11:53,000 --> 02:11:54,760
@@ -11426,7 +11426,7 @@ a second slower than Timbuk Three
 2419
 02:11:54,760 --> 02:11:56,480
 which can be explained
-by an over (INAUDIBLE)
+by an overhead
 
 2420
 02:11:56,480 --> 02:11:59,000
