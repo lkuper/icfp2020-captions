@@ -7182,7 +7182,7 @@ the semantics is defined,
 
 1510
 01:28:46,920 --> 01:28:48,320
-all language too
+all language tools
 
 1511
 01:28:48,320 --> 01:28:50,440
@@ -7201,7 +7201,7 @@ to define
 1514
 01:28:57,600 --> 01:29:00,120
 the formal semantics
-of many robot languages,
+of many real world languages,
 
 1515
 01:29:00,120 --> 01:29:03,480
@@ -7250,16 +7250,16 @@ decision mechanism in K
 
 1525
 01:29:27,600 --> 01:29:29,560
-to provide the correct limitation
+to provide the correct implementation
 
 1526
 01:29:29,560 --> 01:29:31,600
-of capture volume substitution.
+of capture avoiding substitution.
 
 1527
 01:29:31,600 --> 01:29:34,360
 Currently, this only works
-for a restrictive form
+for a restricted form
 
 1528
 01:29:34,360 --> 01:29:36,800
@@ -7289,7 +7289,7 @@ every K definition
 
 1534
 01:29:47,960 --> 01:29:50,440
-is a logical theory of machine logic
+is a logical theory of matching logic
 
 1535
 01:29:50,440 --> 01:29:53,480
@@ -7299,7 +7299,7 @@ of a programming language
 1536
 01:29:53,480 --> 01:29:56,760
 are defined using
-machine logic axioms.
+matching logic axioms.
 
 1537
 01:29:56,760 --> 01:29:58,800
@@ -7308,11 +7308,11 @@ So our job in this paper
 1538
 01:29:58,800 --> 01:30:04,360
 is to show how to define binders
-as machine logic theories.
+as matching logic theories.
 
 1539
 01:30:04,360 --> 01:30:06,760
-Machine logic is expressive.
+Matching logic is expressive.
 
 1540
 01:30:06,760 --> 01:30:09,200
@@ -7321,7 +7321,7 @@ systems can be defined
 
 1541
 01:30:09,200 --> 01:30:11,080
-as machine logic theories.
+as matching logic theories.
 
 1542
 01:30:11,080 --> 01:30:13,240
@@ -7329,23 +7329,23 @@ These include first logic,
 
 1543
 01:30:13,240 --> 01:30:17,160
-separation logic, hall
+separation logic, Hoare
 logic for verification,
 
 1544
 01:30:17,160 --> 01:30:19,720
-temporary logics,
+temporal logics,
 and many others.
 
 1545
 01:30:19,720 --> 01:30:23,840
-Either no logical systems where
+However no logical systems where
 binding plays a major role
 
 1546
 01:30:23,840 --> 01:30:26,760
 have been thoroughly
-defined in machine logic
+defined in matching logic
 
 1547
 01:30:26,760 --> 01:30:28,560
@@ -7368,7 +7368,7 @@ and type systems.
 1551
 01:30:35,120 --> 01:30:37,680
 We defined them as
-machine logic theories
+matching logic theories
 
 1552
 01:30:37,680 --> 01:30:40,480
@@ -7396,7 +7396,7 @@ of the paper.
 
 1557
 01:30:52,160 --> 01:30:54,520
-Firstly, we simplify machine logic
+Firstly, we simplify matching logic
 
 1558
 01:30:54,520 --> 01:30:57,040
@@ -7437,7 +7437,7 @@ lambda XE.
 
 1566
 01:31:15,680 --> 01:31:18,920
-In machine logic, we
+In matching logic, we
 separate these two.
 
 1567
@@ -7458,7 +7458,7 @@ Here, XE is the pair of X and E
 
 1571
 01:31:28,760 --> 01:31:31,600
-and the machine logic
+and the matching logic
 exists means union.
 
 1572
@@ -7496,7 +7496,7 @@ The constructor builds the term.
 1579
 01:31:55,640 --> 01:31:59,760
 In short, we use the built-in
-exist binder of machine logic
+exist binder of matching logic
 
 1580
 01:31:59,760 --> 01:32:02,600
@@ -7607,7 +7607,7 @@ is provable in t,
 
 1603
 01:33:08,920 --> 01:33:12,360
-if and only if it holds EMT.
+if and only if it holds in MT.
 
 1604
 01:33:12,360 --> 01:33:13,800
@@ -7639,7 +7639,7 @@ consider the models
 
 1610
 01:33:26,520 --> 01:33:28,840
-that can fit Cartesian
+that are concrete Cartesian
 closed categories
 
 1611
@@ -7679,7 +7679,7 @@ we generalize it to other systems
 
 1619
 01:33:49,960 --> 01:33:52,160
-with binders, such as system math,
+with binders, such as system F,
 
 1620
 01:33:52,160 --> 01:33:56,000
@@ -7692,7 +7692,7 @@ a high-level overview
 
 1622
 01:33:58,200 --> 01:33:59,440
-of machine logic,
+of matching logic,
 
 1623
 01:33:59,440 --> 01:34:01,560
@@ -7705,7 +7705,7 @@ and then as an example,
 1625
 01:34:03,800 --> 01:34:06,560
 I'll define lambda calculus
-in machine logic.
+in matching logic.
 
 1626
 01:34:06,560 --> 01:34:07,560
@@ -7741,7 +7741,7 @@ Its syntax defines formulas,
 
 1633
 01:34:25,840 --> 01:34:27,520
-which we call banners,
+which we call patterns,
 
 1634
 01:34:27,520 --> 01:34:29,640
@@ -7766,7 +7766,7 @@ propositional variables
 
 1639
 01:34:39,680 --> 01:34:42,880
-in more logic that
+in modal logic that
 range over subsets.
 
 1640
@@ -7808,7 +7808,7 @@ If phi one is a predicate,
 1648
 01:35:02,000 --> 01:35:05,520
 then the result is like
-a first logic commit formula
+a first logic (INAUDIBLE) formula
 
 1649
 01:35:05,520 --> 01:35:08,000
@@ -7821,7 +7821,7 @@ to any other pattern,
 
 1651
 01:35:09,440 --> 01:35:12,840
-giving machine logic
+giving matching logic
 maximum flexibility.
 
 1652
@@ -7837,16 +7837,16 @@ constraints.
 1654
 01:35:19,480 --> 01:35:23,760
 Other propositional operations
-can be defined from this tool.
+can be defined from these two.
 
 1655
 01:35:23,760 --> 01:35:25,880
-Finally exists (INAUDIBLE)
+Finally exists x phi
 
 1656
 01:35:25,880 --> 01:35:29,720
-use the existential quantification
-like in versa logic.
+is the existential quantification
+like in first-order logic.
 
 1657
 01:35:29,720 --> 01:35:32,200
@@ -7859,7 +7859,7 @@ logic is one sentence,
 
 1659
 01:35:34,960 --> 01:35:38,600
-a pattern five is interpreted
+a pattern phi is interpreted
 as the set of elements
 
 1660
@@ -7870,12 +7870,12 @@ words, patterns mean sets.
 1661
 01:35:42,600 --> 01:35:46,000
 Formerly, a model M has
-a non-empty character set
+a non-empty carrier set
 
 1662
 01:35:46,000 --> 01:35:49,720
-in the binary application
-function from M, n
+and binary application
+function from M x M
 
 1663
 01:35:49,720 --> 01:35:51,640
@@ -7889,7 +7889,7 @@ the application pattern.
 1665
 01:35:54,880 --> 01:35:58,920
 Each symbol is also
-interpreted as a subset of n.
+interpreted as a subset of M.
 
 1666
 01:35:58,920 --> 01:36:02,600
@@ -7899,22 +7899,22 @@ assigns element variables
 1667
 01:36:02,600 --> 01:36:05,920
 to elements and set
-variables to set,
+variables to sets,
 
 1668
 01:36:05,920 --> 01:36:10,920
 the pattern interpretation
-phi row is defined like is,
+phi rho is defined like this,
 
 1669
 01:36:10,920 --> 01:36:14,560
 for example, x evaluates
-the elements role of x,
+to the elements rho of x,
 
 1670
 01:36:14,560 --> 01:36:18,360
 sigma evaluates to
-the interpretation, sigma n,
+the interpretation, sigma M,
 
 1671
 01:36:18,360 --> 01:36:20,680
@@ -7966,11 +7966,11 @@ all the resulting sets,
 1681
 01:36:48,560 --> 01:36:53,880
 in short, exists means big
-union in margin logic.
+union in matching logic.
 
 1682
 01:36:53,880 --> 01:36:54,880
-In margin logic,
+In matching logic,
 
 1683
 01:36:54,880 --> 01:36:57,680
@@ -8006,7 +8006,7 @@ With the proper notations,
 
 1690
 01:37:12,880 --> 01:37:15,400
-we can capture the form
+we can capture the formulas
 of those expressions
 
 1691
@@ -8057,7 +8057,7 @@ and the models of the target system.
 
 1701
 01:37:45,280 --> 01:37:48,840
-Then, we can use margin
+Then, we can use matching
 logic patterns to express
 
 1702
@@ -8071,7 +8071,7 @@ In section four of the paper,
 
 1704
 01:37:56,120 --> 01:37:58,080
-we define the margin logic theories
+we define the matching logic theories
 
 1705
 01:37:58,080 --> 01:38:01,720
@@ -8085,17 +8085,17 @@ such as equality, membership,
 1707
 01:38:04,360 --> 01:38:07,080
 the concept of sorts
-and many sorts of functions,
+and many sorted functions,
 
 1708
 01:38:07,080 --> 01:38:09,760
 pairs and the power
-soar two to the s,
+sort two to the s,
 
 1709
 01:38:09,760 --> 01:38:13,360
 whose elements are the sets
-of elements of soar test.
+of elements of sort s.
 
 1710
 01:38:13,360 --> 01:38:16,280
@@ -8105,7 +8105,7 @@ infrastructure definitions,
 1711
 01:38:16,280 --> 01:38:20,560
 we now define binders
-in margin logic.
+in matching logic.
 
 1712
 01:38:20,560 --> 01:38:22,840
@@ -8132,7 +8132,7 @@ equivalent representations,
 
 1717
 01:38:36,160 --> 01:38:39,320
-lambda Xe, X substitutes for X.
+lambda X1 e, X1 substitutes for X, etc.
 
 1718
 01:38:40,000 --> 01:38:44,520
@@ -8235,7 +8235,7 @@ applied to the graph set (x, e).
 1738
 01:39:51,560 --> 01:39:54,520
 In short, to define
-lambda extraction
+lambda abstraction
 
 1739
 01:39:54,520 --> 01:39:58,920
@@ -8268,7 +8268,7 @@ calculus to matching logic
 1745
 01:40:13,640 --> 01:40:17,320
 is faithful with respect
-to the syntax-semantics
+to the syntax semantics
 
 1746
 01:40:17,320 --> 01:40:20,000
@@ -8286,7 +8286,7 @@ lambda expressions verbatim.
 
 1749
 01:40:25,400 --> 01:40:31,800
-The lambda extraction
+The lambda abstraction
 becomes this pattern
 
 1750
@@ -8408,7 +8408,7 @@ among the validity
 
 1775
 01:41:47,400 --> 01:41:52,000
-and the probability of lambda
+and the provability of lambda
 calculus and matching logic.
 
 1776
