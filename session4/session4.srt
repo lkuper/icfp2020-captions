@@ -1,41 +1,54 @@
 1
 00:00:15,920 --> 00:00:59,840
 
+
 2
 00:00:59,840 --> 00:01:59,840
+
 
 3
 00:01:59,840 --> 00:02:59,840
 
+
 4
 00:02:59,840 --> 00:04:00,000
+
 
 5
 00:04:00,000 --> 00:04:28,920
 
+
 6
 00:04:58,640 --> 00:05:59,480
+
 
 7
 00:05:59,480 --> 00:07:00,000
 
+
 8
 00:07:00,000 --> 00:07:59,920
+
 
 9
 00:07:59,920 --> 00:08:36,040
 
+
 10
 00:09:22,120 --> 00:09:59,840
+
 
 11
 00:09:59,840 --> 00:10:59,920
 
+
 12
 00:10:59,920 --> 00:11:59,920
 
+
 13
 00:11:59,920 --> 00:12:13,760
+
 
 14
 00:13:01,760 --> 00:13:03,240
@@ -95,7 +108,7 @@ Algebraic Subtyping,
 
 26
 00:13:31,480 --> 00:13:34,480
-Principal Type and Principal
+Principal Type with Principal
 Subtyping Made Easy.
 
 27
@@ -124,7 +137,7 @@ system feature used to
 
 32
 00:13:45,320 --> 00:13:47,960
-move the relative
+model the relative
 specificity of types.
 
 33
@@ -138,8 +151,8 @@ is strictly more specific than int
 
 35
 00:13:52,440 --> 00:13:54,520
-because on that values
-are also in values.
+because all nat values
+are also int values.
 
 36
 00:13:54,520 --> 00:13:56,160
@@ -177,7 +190,7 @@ between data types
 
 43
 00:14:10,440 --> 00:14:12,120
-based on their variants.
+based on their variance.
 
 44
 00:14:12,120 --> 00:14:15,000
@@ -215,7 +228,7 @@ do not need to be annotated,
 51
 00:14:29,200 --> 00:14:31,440
 in order to be used at
-a less specific time.
+a less specific type.
 
 52
 00:14:32,040 --> 00:14:33,840
@@ -285,7 +298,7 @@ which is itself a subtype of nat.
 66
 00:15:11,200 --> 00:15:14,240
 In fact, subtyping naturally
-lists as design types,
+lets us design types,
 
 67
 00:15:14,240 --> 00:15:18,000
@@ -362,7 +375,7 @@ including OCaml, Haskell and Rust.
 82
 00:16:04,840 --> 00:16:08,160
 In Rust, subtyping is used to
-relay the location lifetimes.
+relate the location lifetimes.
 
 83
 00:16:08,160 --> 00:16:10,080
@@ -430,7 +443,7 @@ types based on unification,
 96
 00:16:47,000 --> 00:16:49,560
 the Hindley-Milner type
-inference algorithm relays
+inference algorithm relies
 
 97
 00:16:49,560 --> 00:16:51,440
@@ -443,7 +456,7 @@ are not yet known,
 
 99
 00:16:53,880 --> 00:16:57,120
-and those variables are later
+and type variables are later
 unified with concrete types
 
 100
@@ -512,7 +525,7 @@ with a new type variable, beta.
 114
 00:17:34,600 --> 00:17:37,600
 Then, we consider
-the evenness expression,
+the if-then-else expression,
 
 115
 00:17:37,600 --> 00:17:39,760
@@ -547,7 +560,7 @@ so we unify beta with int.
 122
 00:17:59,800 --> 00:18:03,480
 Then we consider the branches
-of the int statement,
+of the if statement,
 
 123
 00:18:03,480 --> 00:18:05,960
@@ -560,7 +573,7 @@ has type beta,
 
 125
 00:18:09,200 --> 00:18:12,560
-and since the, evenness
+and since the if-then-else
 must return a single type,
 
 126
@@ -570,12 +583,12 @@ we unify alpha and beta,
 127
 00:18:14,680 --> 00:18:19,520
 which is the same as unifying
-int with ints and its trivial.
+int with int and is trivial.
 
 128
 00:18:19,520 --> 00:18:23,200
 The result type of
-the evenness is alpha,
+the if-then-else is alpha,
 
 129
 00:18:23,200 --> 00:18:25,560
@@ -665,7 +678,7 @@ In the paper,
 
 148
 00:19:10,240 --> 00:19:12,400
-the new symbols of
+the new synthesis
 algorithm is introduced,
 
 149
@@ -698,11 +711,11 @@ a new type variable as before,
 155
 00:19:28,320 --> 00:19:30,880
 same for the second
-lambda obstruction,
+lambda abstruction,
 
 156
 00:19:30,880 --> 00:19:34,280
-we send the context with
+we extend the context with
 the new type variable beta.
 
 157
@@ -740,7 +753,7 @@ The first branch has type alpha,
 
 164
 00:19:56,960 --> 00:19:58,920
-so we're going to branch as type beta,
+second  branch has type beta,
 
 165
 00:19:58,920 --> 00:20:01,720
@@ -803,12 +816,12 @@ of both alpha and beta.
 
 177
 00:20:37,800 --> 00:20:40,320
-Now the cool F of zero and one
+Now the call F of zero and one
 
 178
 00:20:40,320 --> 00:20:44,880
 is more precisely typed
-as net instead of int,
+as nat instead of int,
 
 179
 00:20:44,880 --> 00:20:48,120
@@ -823,7 +836,7 @@ than the type we had before,
 181
 00:20:50,880 --> 00:20:53,600
 we introduced
-the typing into the mix.
+subtyping into the mix.
 
 182
 00:20:53,600 --> 00:20:55,960
@@ -837,7 +850,7 @@ variable into the result type
 184
 00:20:59,200 --> 00:21:03,720
 to use the simpler type, this
-is called bounce coalescing.
+is called bounds coalescing.
 
 185
 00:21:03,720 --> 00:21:05,800
@@ -847,7 +860,7 @@ variable occurrence
 186
 00:21:05,800 --> 00:21:08,720
 with the composition of
-the variables bounds.
+the variable's bounds.
 
 187
 00:21:08,720 --> 00:21:13,320
@@ -907,7 +920,7 @@ equivalent to the original
 
 199
 00:21:42,920 --> 00:21:44,440
-and simplified type,
+unsimplified type,
 
 200
 00:21:44,440 --> 00:21:48,840
@@ -925,7 +938,7 @@ the first simplification.
 
 203
 00:21:53,880 --> 00:21:56,680
-Dominion site here is
+The main insight here is
 that type intersections
 
 204
@@ -969,7 +982,7 @@ of its intersected bounds.
 212
 00:22:18,440 --> 00:22:21,920
 In our case,
-the boundary is just int.
+the bound is just int.
 
 213
 00:22:21,920 --> 00:22:25,400
@@ -978,7 +991,7 @@ of the function are free
 
 214
 00:22:25,400 --> 00:22:28,600
-to instantiate outfit,
+to instantiate alpha to
 whatever type they like,
 
 215
@@ -991,8 +1004,8 @@ if alpha is taken to be a type
 
 217
 00:22:32,080 --> 00:22:37,200
-'cause intersection with
-the ints contains no values.
+whose intersection with
+int contains no values.
 
 218
 00:22:37,200 --> 00:22:40,560
@@ -1021,7 +1034,7 @@ the result type of the function.
 
 223
 00:22:53,080 --> 00:22:55,600
-Formally, the subception relation
+Formally, the subsumption relation
 
 224
 00:22:55,600 --> 00:22:57,560
@@ -1030,7 +1043,7 @@ between two polymorphic types
 225
 00:22:57,560 --> 00:22:59,840
 can be used to reason
-about the equivalents
+about the equivalence
 
 226
 00:22:59,840 --> 00:23:03,280
@@ -1138,12 +1151,12 @@ the application of argument zero
 
 248
 00:24:04,520 --> 00:24:05,680
-of type net.
+of type nat.
 
 249
 00:24:05,680 --> 00:24:07,800
 This generates a constraint
-that net should be
+that nat should be
 
 250
 00:24:07,800 --> 00:24:09,080
@@ -1156,7 +1169,7 @@ type of the function.
 
 252
 00:24:11,800 --> 00:24:14,840
-So we register net as
+So we register nat as
 a lower bound of alpha.
 
 253
@@ -1170,7 +1183,7 @@ the constraint,
 
 255
 00:24:18,480 --> 00:24:22,040
-and check that net is
+and check that nat is
 also a subtype of int,
 
 256
@@ -1194,7 +1207,7 @@ simplified type.
 260
 00:24:31,400 --> 00:24:34,360
 Alpha intersection int,
-to alpha union net.
+to alpha union nat.
 
 261
 00:24:37,440 --> 00:24:39,880
@@ -1246,7 +1259,7 @@ the picture quite a bit,
 
 271
 00:25:06,880 --> 00:25:09,000
-the ending of recursive constraints,
+the handling of recursive constraints,
 
 272
 00:25:09,000 --> 00:25:11,640
@@ -1301,7 +1314,7 @@ directly by programmers
 283
 00:25:35,920 --> 00:25:38,960
 as is done in languages like
-TypeScript or Scarlet ,
+TypeScript or Scala 3,
 
 284
 00:25:38,960 --> 00:25:40,800
@@ -1370,11 +1383,11 @@ which I would like to clarify
 
 298
 00:26:13,200 --> 00:26:15,920
-is its relation with invariants.
+is its relation with invariance.
 
 299
 00:26:15,920 --> 00:26:19,560
-As a typical example of invariants
+As a typical example of invariance
 consider the ref data type,
 
 300
@@ -1462,7 +1475,7 @@ the usage of unions, intersections,
 318
 00:27:11,080 --> 00:27:13,720
 accept a little more verbosity
-around the variance,
+around variance,
 
 319
 00:27:13,720 --> 00:27:15,840
