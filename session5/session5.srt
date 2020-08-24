@@ -6074,11 +6074,11 @@ an impure functional language?
 
 1268
 01:13:46,360 --> 01:13:48,360
-Can we extend the time system
+Can we extend the type system
 
 1269
 01:13:48,360 --> 01:13:52,760
-to input the absence of effects?
+to encode the absence of effects?
 
 1270
 01:13:52,760 --> 01:13:54,480
@@ -6146,8 +6146,8 @@ the head of the list
 
 1284
 01:14:37,200 --> 01:14:42,360
-before recursively they call it
-map to on the date to list.
+before recursively calling
+map two on the tail of the list.
 
 1285
 01:14:42,360 --> 01:14:45,920
@@ -6175,7 +6175,7 @@ two on the following inputs.
 1290
 01:14:58,080 --> 01:15:01,480
 So here F is the identity
-function on strengths,
+function on strings,
 
 1291
 01:15:01,480 --> 01:15:02,880
@@ -6192,11 +6192,11 @@ before returning it.
 
 1294
 01:15:09,680 --> 01:15:13,160
-So let's try to reuse map one.
+So let's try to use map one.
 
 1295
 01:15:13,160 --> 01:15:15,960
-We expand the left and we observe
+We expand the let and we observe
 
 1296
 01:15:15,960 --> 01:15:19,160
@@ -6205,7 +6205,7 @@ that it reaches the end of the list
 1297
 01:15:19,160 --> 01:15:23,360
 when it tries to evaluate
-F on the stream right.
+F on the string right.
 
 1298
 01:15:23,360 --> 01:15:26,600
@@ -6214,11 +6214,11 @@ So this prints, right.
 1299
 01:15:26,600 --> 01:15:30,880
 Reducing more where you see
-that it calls F on two,
+that it calls F on to,
 
 1300
 01:15:30,880 --> 01:15:32,720
-which brings two,
+which prints to,
 
 1301
 01:15:32,720 --> 01:15:37,200
@@ -6247,7 +6247,7 @@ f first on the string left,
 
 1306
 01:15:56,880 --> 01:16:01,200
-then on the string two
+then on the string to
 and then on right,
 
 1307
@@ -6275,7 +6275,7 @@ these two functions f and g
 
 1312
 01:16:19,040 --> 01:16:20,720
-from end to end.
+from int to int.
 
 1313
 01:16:21,480 --> 01:16:23,560
@@ -6350,7 +6350,7 @@ in this language with some examples.
 
 1329
 01:17:16,640 --> 01:17:19,480
-Let's consider this function g.
+Let's consider the function g.
 
 1330
 01:17:19,480 --> 01:17:23,680
@@ -6561,7 +6561,7 @@ variables in our language.
 1376
 01:19:55,840 --> 01:20:01,320
 So we use these qualifiers,
-SRI in blue and red
+S or I in blue and red
 
 1377
 01:20:01,320 --> 01:20:06,240
@@ -6584,7 +6584,7 @@ We add a box type constructor
 1381
 01:20:16,720 --> 01:20:22,200
 and we add two new term
-firmers, box and led box.
+formers, box and let box.
 
 1382
 01:20:22,200 --> 01:20:25,040
@@ -6611,7 +6611,7 @@ whether a term E of type A
 
 1387
 01:20:41,040 --> 01:20:46,520
-is safe in context comma.
+is safe in context gamma.
 
 1388
 01:20:46,520 --> 01:20:49,600
@@ -6662,7 +6662,7 @@ using our box introduction rule.
 1398
 01:21:23,880 --> 01:21:28,040
 And finally, we also have
-a led box elimination rule
+a let box elimination rule
 
 1399
 01:21:28,040 --> 01:21:30,840
@@ -6694,7 +6694,7 @@ a safe annotation.
 1405
 01:21:49,000 --> 01:21:53,120
 So these were the additional
-typing rules for the box site.
+typing rules for the box type.
 
 1406
 01:21:53,120 --> 01:21:58,200
@@ -6741,7 +6741,7 @@ that this box constructor
 
 1415
 01:22:30,480 --> 01:22:32,920
-is a common add.
+is a comonad.
 
 1416
 01:22:32,920 --> 01:22:37,640
@@ -6751,17 +6751,17 @@ and it has a co-multiplication.
 1417
 01:22:37,640 --> 01:22:40,480
 And in fact, our syntax
-for adding common adds
+for adding comonads
 
 1418
 01:22:40,480 --> 01:22:44,800
-to our type two is inspired
-by the classic Pheline Davis
+to our type theory is inspired
+by the classic Pfenning Davies
 
 1419
 01:22:44,800 --> 01:22:51,000
 paper on the judgemental
-reconstruction of S model logic.
+reconstruction of S4 modal logic.
 
 1420
 01:22:51,000 --> 01:22:53,040
@@ -6783,8 +6783,8 @@ original motivation,
 
 1424
 01:23:06,160 --> 01:23:10,360
-and we used this notion of
-safety to recover purity.
+can we used this notion of
+safety to recover purity?
 
 1425
 01:23:10,360 --> 01:23:15,600
@@ -6836,7 +6836,7 @@ to a list of safe expressions.
 
 1435
 01:23:54,280 --> 01:23:57,840
-We can use box and lit
+We can use box and let
 box to rewrite the body
 
 1436
@@ -6869,11 +6869,11 @@ takeaways from this talk.
 1442
 01:24:20,400 --> 01:24:26,080
 First, we can use this notion
-of capabilities to encode FX,
+of capabilities to control effects,
 
 1443
 01:24:26,080 --> 01:24:30,640
-and to control the usage of FX.
+and to control the usage of effects.
 
 1444
 01:24:30,640 --> 01:24:34,960
@@ -6887,7 +6887,7 @@ the environment can be captured
 
 1446
 01:24:38,320 --> 01:24:43,360
-using a common added
+using a comonad
 type discipline.
 
 1447
@@ -6901,12 +6901,12 @@ in our paper.
 
 1449
 01:24:48,320 --> 01:24:52,440
-We formulize an effectful
+We formalize an effectful
 calculus and we extended
 
 1450
 01:24:52,440 --> 01:24:57,000
-with a safety morality and we
+with a safety modality and we
 show how to do substitution
 
 1451
@@ -6939,13 +6939,13 @@ semantics for this language.
 
 1457
 01:25:21,080 --> 01:25:24,320
-It is given by Cartesian
-close category
+It is given by a cartesian
+closed category
 
 1458
 01:25:24,320 --> 01:25:26,200
-with a mon add
-and a common add
+with a monad
+and a comonad
 
 1459
 01:25:26,200 --> 01:25:29,560
@@ -6953,13 +6953,13 @@ which interact with each other.
 
 1460
 01:25:29,560 --> 01:25:33,240
-We deli construction of
+We give a construction of
 capability spaces,
 
 1461
 01:25:33,240 --> 01:25:36,400
 which give us
-denotational semantics,
+a denotational semantics,
 
 1462
 01:25:36,400 --> 01:25:40,640
@@ -7034,7 +7034,7 @@ the equational theory
 
 1477
 01:26:27,680 --> 01:26:30,640
-of the pure SDLC.
+of the pure STLC.
 
 1478
 01:26:30,640 --> 01:26:34,000
@@ -7043,7 +7043,7 @@ is a conservative extension
 
 1479
 01:26:34,000 --> 01:26:36,840
-of the SDLC.
+of the STLC.
 
 1480
 01:26:36,840 --> 01:26:40,200
