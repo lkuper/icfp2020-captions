@@ -678,139 +678,139 @@ Dialogue: 0,0:43:21.40,0:43:24.96,Default,,0,0,0,,so that you can discuss\Nthis 
 Dialogue: 0,0:43:30.40,0:43:31.92,Default,,0,0,0,,Our next talk\Nwill be presented
 Dialogue: 0,0:43:31.92,0:43:34.28,Default,,0,0,0,,by Glenn Mevel,\Nwho will be presenting
 Dialogue: 0,0:43:34.28,0:43:38.60,Default,,0,0,0,,a concurrent separation logic\Nfor multi-core OCaml.
-Dialogue: 0,0:43:39.80,0:43:42.00,Default,,0,0,0,,GLEN MEVEL: So welcome to this talk,\NI 'm Glen Mevel, I 'm with
+Dialogue: 0,0:43:39.80,0:43:42.00,Default,,0,0,0,,GLEN MEVEL: So welcome to this talk,\NI'm Glen Mevel, with
 Dialogue: 0,0:43:42.00,0:43:43.48,Default,,0,0,0,,Jacques-Henri Jourdan\Nand Francois Pottier,
-Dialogue: 0,0:43:43.48,0:43:46.32,Default,,0,0,0,,We've been working on\Na concurrent separation logic,
+Dialogue: 0,0:43:43.48,0:43:46.32,Default,,0,0,0,,we've been working on\Na concurrent separation logic,
 Dialogue: 0,0:43:46.32,0:43:48.72,Default,,0,0,0,,Multicore OCaml\NWhat does that mean
 Dialogue: 0,0:43:48.72,0:43:51.84,Default,,0,0,0,,our aim is to verify,\Nfine-grained concurrent programs
-Dialogue: 0,0:43:51.84,0:43:53.24,Default,,0,0,0,,in the setting\Nof the vertical
-Dialogue: 0,0:43:53.24,0:43:57.16,Default,,0,0,0,,OCaml's memory model,\Nwhich is a weak memory model.
+Dialogue: 0,0:43:51.84,0:43:53.24,Default,,0,0,0,,in the setting\Nof the multicore
+Dialogue: 0,0:43:53.24,0:43:57.16,Default,,0,0,0,,OCaml memory model,\Nwhich is a weak memory model.
 Dialogue: 0,0:43:57.16,0:43:59.52,Default,,0,0,0,,In this talk,\NI present a concurrence
 Dialogue: 0,0:43:59.52,0:44:02.44,Default,,0,0,0,,separation logic\Nwith a notion of views.
-Dialogue: 0,0:44:04.08,0:44:06.60,Default,,0,0,0,,So if you want to\Nsetup Multicore Ocaml
+Dialogue: 0,0:44:04.08,0:44:06.60,Default,,0,0,0,,So if you (INAUDIBLE)\NMulticore Ocaml
 Dialogue: 0,0:44:06.60,0:44:08.88,Default,,0,0,0,,as the name suggests\Nit is an extension
-Dialogue: 0,0:44:08.88,0:44:10.44,Default,,0,0,0,,of your common\Nprogramming language
+Dialogue: 0,0:44:08.88,0:44:10.44,Default,,0,0,0,,of the OCaml\Nprogramming language
 Dialogue: 0,0:44:10.44,0:44:13.12,Default,,0,0,0,,with support\Nfor Multicore programming,
 Dialogue: 0,0:44:13.12,0:44:16.32,Default,,0,0,0,,it comes with a weak memory model\Nwhich has been formalized
-Dialogue: 0,0:44:16.32,0:44:19.52,Default,,0,0,0,,in the paper PLDI, 18,\Nand it features
+Dialogue: 0,0:44:16.32,0:44:19.52,Default,,0,0,0,,in the paper PLDI '18,\Nand it features
 Dialogue: 0,0:44:19.52,0:44:24.52,Default,,0,0,0,,two flavours of locations\Nwhich are atomic and non-atomic.
 Dialogue: 0,0:44:25.12,0:44:27.52,Default,,0,0,0,,By the way if you're interested\Nin the garbage collector
 Dialogue: 0,0:44:27.52,0:44:29.92,Default,,0,0,0,,of Multicore OCaml,\Nplease have a look
-Dialogue: 0,0:44:29.92,0:44:32.16,Default,,0,0,0,,at this other ICFP paper, title is
+Dialogue: 0,0:44:29.92,0:44:32.16,Default,,0,0,0,,at this other ICFP paper, whose title is
 Dialogue: 0,0:44:32.16,0:44:35.52,Default,,0,0,0,,"Retrofitting\NParallelism onto OCaml."
 Dialogue: 0,0:44:36.40,0:44:38.20,Default,,0,0,0,,So what is the challenge here?
 Dialogue: 0,0:44:38.20,0:44:40.36,Default,,0,0,0,,Essentially, the challenge\Nis dealing with
-Dialogue: 0,0:44:40.36,0:44:43.28,Default,,0,0,0,,the weak memory\Nand secondary consistency
-Dialogue: 0,0:44:43.28,0:44:46.08,Default,,0,0,0,,traditionals concurrent\Nseparation logic
-Dialogue: 0,0:44:46.08,0:44:49.52,Default,,0,0,0,,gives you a post to a session,\Nexperts to V
-Dialogue: 0,0:44:49.52,0:44:51.92,Default,,0,0,0,,which expresses your\N(INAUDIBLE) ownership
-Dialogue: 0,0:44:51.92,0:44:55.12,Default,,0,0,0,,of the memory location X\Non which also
-Dialogue: 0,0:44:55.12,0:44:58.44,Default,,0,0,0,,says which volume\Nwe started next.
-Dialogue: 0,0:44:58.44,0:45:01.88,Default,,0,0,0,,Then you have the usual\Nhorse time resolving rules.
+Dialogue: 0,0:44:40.36,0:44:43.28,Default,,0,0,0,,the weak memory\Nand sequential consistency,
+Dialogue: 0,0:44:43.28,0:44:46.08,Default,,0,0,0,,traditional concurrent\Nseparation logic
+Dialogue: 0,0:44:46.08,0:44:49.52,Default,,0,0,0,,gives you a (INAUDIBLE),\Nx points to V
+Dialogue: 0,0:44:49.52,0:44:51.92,Default,,0,0,0,,which expresses your\Nunique ownership
+Dialogue: 0,0:44:51.92,0:44:55.12,Default,,0,0,0,,of the memory location X\Nand which also
+Dialogue: 0,0:44:55.12,0:44:58.44,Default,,0,0,0,,says which value\Nwe started with.
+Dialogue: 0,0:44:58.44,0:45:01.88,Default,,0,0,0,,Then you have the usual\NHoare style resolving rules.
 Dialogue: 0,0:45:01.88,0:45:04.88,Default,,0,0,0,,And this assertion\Ngives you ownership of X
 Dialogue: 0,0:45:04.88,0:45:06.12,Default,,0,0,0,,but you may\Nwant to share
 Dialogue: 0,0:45:06.12,0:45:08.68,Default,,0,0,0,,this ownership\Nand goals, right..
 Dialogue: 0,0:45:08.68,0:45:12.12,Default,,0,0,0,,To do so, And use assertion,\Nis to put the assertion,
 Dialogue: 0,0:45:12.12,0:45:14.28,Default,,0,0,0,,in an invariant,
-Dialogue: 0,0:45:14.28,0:45:16.88,Default,,0,0,0,,intuitively and invariant\Nholes at all times,
+Dialogue: 0,0:45:14.28,0:45:16.88,Default,,0,0,0,,intuitively an invariant\Nholds at all times,
 Dialogue: 0,0:45:16.88,0:45:19.52,Default,,0,0,0,,and it contains\Ncontents can be accessed equally
-Dialogue: 0,0:45:19.52,0:45:21.32,Default,,0,0,0,,by all threats.
+Dialogue: 0,0:45:19.52,0:45:21.32,Default,,0,0,0,,by all threads.
 Dialogue: 0,0:45:21.84,0:45:24.64,Default,,0,0,0,,Here, we can put\NX points to something
-Dialogue: 0,0:45:24.64,0:45:26.92,Default,,0,0,0,,in an invariant\Nwhich we did not
-Dialogue: 0,0:45:26.92,0:45:29.96,Default,,0,0,0,,by boxing in-depth session,\Nthen any thread
-Dialogue: 0,0:45:29.96,0:45:35.36,Default,,0,0,0,,that can access X as long as\Nit presents the inference
-Dialogue: 0,0:45:35.36,0:45:38.68,Default,,0,0,0,,no, what breaths\Nand the weak memory model
+Dialogue: 0,0:45:24.64,0:45:26.92,Default,,0,0,0,,in an invariant\Nwhich we denote
+Dialogue: 0,0:45:26.92,0:45:29.96,Default,,0,0,0,,by boxing the assertion,\Nthen any thread
+Dialogue: 0,0:45:29.96,0:45:35.36,Default,,0,0,0,,that can access X as long as\Nit presents the invariants.
+Dialogue: 0,0:45:35.36,0:45:38.68,Default,,0,0,0,,Now, what breaks\Nin the weak memory model
 Dialogue: 0,0:45:38.68,0:45:41.24,Default,,0,0,0,,is that each thread\Nnow has a different
 Dialogue: 0,0:45:41.24,0:45:43.96,Default,,0,0,0,,view of memory.\NThis notion of view
-Dialogue: 0,0:45:43.96,0:45:47.36,Default,,0,0,0,,is crucial, because it means\Nthat some sessions
-Dialogue: 0,0:45:47.36,0:45:50.56,Default,,0,0,0,,like points to a session\Nare only valid
-Dialogue: 0,0:45:50.56,0:45:53.64,Default,,0,0,0,,with respect\Nto the current view of a threat
-Dialogue: 0,0:45:53.64,0:45:56.24,Default,,0,0,0,,goal these kinds\Nof assertions
+Dialogue: 0,0:45:43.96,0:45:47.36,Default,,0,0,0,,is crucial, because it means\Nthat some assertions
+Dialogue: 0,0:45:47.36,0:45:50.56,Default,,0,0,0,,like the points-to assertion\Nare only valid
+Dialogue: 0,0:45:50.56,0:45:53.64,Default,,0,0,0,,with respect\Nto the current view of a thread.
+Dialogue: 0,0:45:53.64,0:45:56.24,Default,,0,0,0,,We call these kinds\Nof assertions
 Dialogue: 0,0:45:56.24,0:46:00.64,Default,,0,0,0,,subjective assertions.\NBut on the other hand,
-Dialogue: 0,0:46:00.64,0:46:03.32,Default,,0,0,0,,in variance whole\Nequality for offerings,
-Dialogue: 0,0:46:03.32,0:46:05.96,Default,,0,0,0,,so they can only contain\Nobjective sessions
-Dialogue: 0,0:46:05.96,0:46:11.08,Default,,0,0,0,,where by objective\Nwe mean none subjective.
-Dialogue: 0,0:46:11.08,0:46:14.20,Default,,0,0,0,,Then the challenge\Nis to keep a program logic,
+Dialogue: 0,0:46:00.64,0:46:03.32,Default,,0,0,0,,invariants hold\Nequality for all threads,
+Dialogue: 0,0:46:03.32,0:46:05.96,Default,,0,0,0,,so they can only contain\Nobjective assertions
+Dialogue: 0,0:46:05.96,0:46:11.08,Default,,0,0,0,,where by objective\Nwe mean non-subjective.
+Dialogue: 0,0:46:11.08,0:46:14.20,Default,,0,0,0,,Then the challenge\Nis to give a program logic,
 Dialogue: 0,0:46:14.20,0:46:16.88,Default,,0,0,0,,which felt simple\Nand natural enough
 Dialogue: 0,0:46:16.88,0:46:18.96,Default,,0,0,0,,that at the same time\Nis able to deal
-Dialogue: 0,0:46:18.96,0:46:21.16,Default,,0,0,0,,with subjectivity\Non the Loss
-Dialogue: 0,0:46:21.16,0:46:24.32,Default,,0,0,0,,subject assertions\Nto be shared, but in threads.,
+Dialogue: 0,0:46:18.96,0:46:21.16,Default,,0,0,0,,with subjectivity\Non the laws
+Dialogue: 0,0:46:21.16,0:46:24.32,Default,,0,0,0,,subject assertions\Nto be shared, between threads.
 Dialogue: 0,0:46:26.80,0:46:30.04,Default,,0,0,0,,I just spoke about the view\Nof a thread on how it is
 Dialogue: 0,0:46:30.04,0:46:33.08,Default,,0,0,0,,central to the challenge\Nof weak memory,
 Dialogue: 0,0:46:33.08,0:46:34.96,Default,,0,0,0,,but I haven't defined\Nthis concept yet.
 Dialogue: 0,0:46:34.96,0:46:38.36,Default,,0,0,0,,So let me do that now,\Nbecause of weak memory
-Dialogue: 0,0:46:38.36,0:46:41.20,Default,,0,0,0,,H thread only know\Nthe subset of four writes up
-Dialogue: 0,0:46:41.20,0:46:44.00,Default,,0,0,0,,that have upon\Nto the shared memory.
+Dialogue: 0,0:46:38.36,0:46:41.20,Default,,0,0,0,,each thread only know\Nthe subset of all writes
+Dialogue: 0,0:46:41.20,0:46:44.00,Default,,0,0,0,,that have happened\Nto the shared memory.
 Dialogue: 0,0:46:44.00,0:46:48.12,Default,,0,0,0,,This affects how the threads\Nhow the thread reads
-Dialogue: 0,0:46:48.12,0:46:50.44,Default,,0,0,0,,on writes the memory,\Nfor a simple
-Dialogue: 0,0:46:50.44,0:46:53.12,Default,,0,0,0,,once it has learned\Nabout the rights,
-Dialogue: 0,0:46:53.12,0:46:56.44,Default,,0,0,0,,it cannot read\Nfrom (INAUDIBLE) rights anymore.
+Dialogue: 0,0:46:48.12,0:46:50.44,Default,,0,0,0,,or writes the memory,\Nfor example
+Dialogue: 0,0:46:50.44,0:46:53.12,Default,,0,0,0,,once it has learned\Nabout the writes,
+Dialogue: 0,0:46:53.12,0:46:56.44,Default,,0,0,0,,it cannot read\Nfrom earlier writes anymore.
 Dialogue: 0,0:46:56.44,0:46:58.36,Default,,0,0,0,,This is an example\Nof what a weak
-Dialogue: 0,0:46:58.36,0:47:03.88,Default,,0,0,0,,memory model would say U,\Nand this subset of right events,
-Dialogue: 0,0:47:03.88,0:47:06.12,Default,,0,0,0,,we will call it a view,\Nsort of view of the threads
-Dialogue: 0,0:47:06.12,0:47:09.44,Default,,0,0,0,,of the view of a thread\Nis the set of facts
-Dialogue: 0,0:47:09.44,0:47:12.48,Default,,0,0,0,,of the right events\Nit knows about.
+Dialogue: 0,0:46:58.36,0:47:03.88,Default,,0,0,0,,memory model would say U,\Nand this subset of write events,
+Dialogue: 0,0:47:03.88,0:47:06.12,Default,,0,0,0,,we will call it a view,\Nso the view of a thread
+Dialogue: 0,0:47:06.12,0:47:09.44,Default,,0,0,0,,of the view of a thread\Nis the set of
+Dialogue: 0,0:47:09.44,0:47:12.48,Default,,0,0,0,,of the write events\Nit knows about.
 Dialogue: 0,0:47:13.36,0:47:17.04,Default,,0,0,0,,Now, we want to manipulate\Nthese views from logic.
-Dialogue: 0,0:47:17.04,0:47:20.80,Default,,0,0,0,,For that, we are new\Nkinds of perceptions.
+Dialogue: 0,0:47:17.04,0:47:20.80,Default,,0,0,0,,For that, we have new\Nkinds of assertions.
 Dialogue: 0,0:47:20.80,0:47:22.88,Default,,0,0,0,,The first new kind\Nof assertions is
-Dialogue: 0,0:47:22.88,0:47:25.88,Default,,0,0,0,,this upper when you are,\Nyou as a view,
-Dialogue: 0,0:47:25.88,0:47:28.96,Default,,0,0,0,,we pronounce it\Nas we have seen you,
-Dialogue: 0,0:47:28.96,0:47:30.84,Default,,0,0,0,,but it means that\Nthe current threat
-Dialogue: 0,0:47:30.84,0:47:32.96,Default,,0,0,0,,knows all rights\Nand user is an assertion
+Dialogue: 0,0:47:22.88,0:47:25.88,Default,,0,0,0,,this upper view where\NU is a view,
+Dialogue: 0,0:47:25.88,0:47:28.96,Default,,0,0,0,,we pronounce it\Nas we have seen U,
+Dialogue: 0,0:47:28.96,0:47:30.84,Default,,0,0,0,,but it means that\Nthe current thread
+Dialogue: 0,0:47:30.84,0:47:32.96,Default,,0,0,0,,knows all writes\Nand U is an assertion
 Dialogue: 0,0:47:32.96,0:47:36.44,Default,,0,0,0,,about the current view\Nof the thread.
-Dialogue: 0,0:47:37.00,0:47:39.80,Default,,0,0,0,,And the second\Nyour session is P at U,
-Dialogue: 0,0:47:39.80,0:47:42.08,Default,,0,0,0,,were peers\Nin the session,
-Dialogue: 0,0:47:42.08,0:47:46.04,Default,,0,0,0,,and U with U\Nis the P hold in the eyes
+Dialogue: 0,0:47:37.00,0:47:39.80,Default,,0,0,0,,And the second\Nnew session is P at U,
+Dialogue: 0,0:47:39.80,0:47:42.08,Default,,0,0,0,,were P\Nin anassertion,
+Dialogue: 0,0:47:42.08,0:47:46.04,Default,,0,0,0,,and U is a view\Nit means that P holds in the eyes
 Dialogue: 0,0:47:46.04,0:47:48.92,Default,,0,0,0,,of any thread\Nwhich has seen U.
 Dialogue: 0,0:47:48.92,0:47:52.28,Default,,0,0,0,,For example, let's say\Nthat P relies
-Dialogue: 0,0:47:52.28,0:47:54.52,Default,,0,0,0,,on knowing\Nof a given right events.
-Dialogue: 0,0:47:54.52,0:47:58.20,Default,,0,0,0,,Then it requires the current view\Nto contain that right even.
-Dialogue: 0,0:47:58.20,0:48:01.80,Default,,0,0,0,,Sort of serving PE's\Nsearching the subject even.
-Dialogue: 0,0:48:01.80,0:48:04.24,Default,,0,0,0,,But instead we're going to\Nsort of whatever
+Dialogue: 0,0:47:52.28,0:47:54.52,Default,,0,0,0,,on knowing\Na given write event.
+Dialogue: 0,0:47:54.52,0:47:58.20,Default,,0,0,0,,Then it requires the current view\Nto contain that write event.
+Dialogue: 0,0:47:58.20,0:48:01.80,Default,,0,0,0,,(INAUDIBLE) subjective.
+Dialogue: 0,0:48:01.80,0:48:04.24,Default,,0,0,0,,But instead we're going to\N(INAUDIBLE)
 Dialogue: 0,0:48:04.24,0:48:06.76,Default,,0,0,0,,the current view is,\Nif it contains
-Dialogue: 0,0:48:06.76,0:48:10.16,Default,,0,0,0,,that right event,\Nthen B holds.
+Dialogue: 0,0:48:06.76,0:48:10.16,Default,,0,0,0,,that write event,\Nthen P holds.
 Dialogue: 0,0:48:10.16,0:48:14.24,Default,,0,0,0,,And I say these, we do not\Ndepend anymore on the current view.
-Dialogue: 0,0:48:14.24,0:48:18.32,Default,,0,0,0,,So saying this is objective,\Nand then, and then so P
-Dialogue: 0,0:48:18.32,0:48:21.24,Default,,0,0,0,,maybe it's objective.\NAnd that's what
-Dialogue: 0,0:48:21.24,0:48:26.24,Default,,0,0,0,,the art you means when\NU contains the given right events.
-Dialogue: 0,0:48:28.84,0:48:30.84,Default,,0,0,0,,So we've done make\Na subject to assertion objective
+Dialogue: 0,0:48:14.24,0:48:18.32,Default,,0,0,0,,So saying this is objective,\Neven though P
+Dialogue: 0,0:48:18.32,0:48:21.24,Default,,0,0,0,,maybe subjective.\NAnd that's what
+Dialogue: 0,0:48:21.24,0:48:26.24,Default,,0,0,0,,the @U means when\NU contains the given write events.
+Dialogue: 0,0:48:28.84,0:48:30.84,Default,,0,0,0,,So we can make\Na subjective assertions objective
 Dialogue: 0,0:48:30.84,0:48:35.84,Default,,0,0,0,,by specifying the view\Nat which we see it.
 Dialogue: 0,0:48:37.56,0:48:39.72,Default,,0,0,0,,On the way\NU is interesting
-Dialogue: 0,0:48:39.72,0:48:43.08,Default,,0,0,0,,because these note\Nsessions, complementary,
-Dialogue: 0,0:48:43.08,0:48:47.08,Default,,0,0,0,,or precisely in a logic\Nand your session B
+Dialogue: 0,0:48:39.72,0:48:43.08,Default,,0,0,0,,because these new\Nassertions, complementary,
+Dialogue: 0,0:48:43.08,0:48:47.08,Default,,0,0,0,,or precisely in a logic\Nan assertion P
 Dialogue: 0,0:48:47.08,0:48:49.16,Default,,0,0,0,,is equivalent\Nto an objective,
-Dialogue: 0,0:48:49.16,0:48:51.96,Default,,0,0,0,,assertion, any assertion\Nbasically equivalent
+Dialogue: 0,0:48:49.16,0:48:51.96,Default,,0,0,0,,assertion, any assertion\Nis equivalent
 Dialogue: 0,0:48:51.96,0:48:55.32,Default,,0,0,0,,to an objective assertion\Nof the form P at U
-Dialogue: 0,0:48:55.32,0:48:58.48,Default,,0,0,0,,on a session of the form,\Nupper row U,
+Dialogue: 0,0:48:55.32,0:48:58.48,Default,,0,0,0,,and a assertion of the form,\Nupper U,
 Dialogue: 0,0:48:58.48,0:49:02.64,Default,,0,0,0,,for some view U.\NThis shows in particular
 Dialogue: 0,0:49:02.64,0:49:06.32,Default,,0,0,0,,that your assertions\Nof the form upper U.
 Dialogue: 0,0:49:06.32,0:49:08.76,Default,,0,0,0,,Capture all the\Nsubjectivity of the,
 Dialogue: 0,0:49:08.76,0:49:12.24,Default,,0,0,0,,all the subjectivity\Nof the weak memory.
-Dialogue: 0,0:49:12.76,0:49:16.96,Default,,0,0,0,,And this the composition, will allow us\Nto share subjective assertions,
-Dialogue: 0,0:49:16.96,0:49:19.32,Default,,0,0,0,,but in Threads, by using\Na different mechanism for...
+Dialogue: 0,0:49:12.76,0:49:16.96,Default,,0,0,0,,And this decomposition, will allow us\Nto share subjective assertions,
+Dialogue: 0,0:49:16.96,0:49:19.32,Default,,0,0,0,,but in Threads, by using\Na different mechanism for each part.
 Dialogue: 0,0:49:22.44,0:49:24.48,Default,,0,0,0,,The first part P@U,
-Dialogue: 0,0:49:24.48,0:49:25.32,Default,,0,0,0,,is a derivative
+Dialogue: 0,0:49:24.48,0:49:25.32,Default,,0,0,0,,is objective
 Dialogue: 0,0:49:25.32,0:49:27.72,Default,,0,0,0,,so it can be shared by an invariant,
-Dialogue: 0,0:49:27.72,0:49:29.44,Default,,0,0,0,,if via an invariant,
-Dialogue: 0,0:49:29.44,0:49:33.60,Default,,0,0,0,,just as the usual\Nconcurrence assertions logic.
-Dialogue: 0,0:49:33.60,0:49:35.08,Default,,0,0,0,,Regarding the several parts,
+Dialogue: 0,0:49:27.72,0:49:29.44,Default,,0,0,0,,via an invariant,
+Dialogue: 0,0:49:29.44,0:49:33.60,Default,,0,0,0,,just as in usual\Nconcurrent separation logic.
+Dialogue: 0,0:49:33.60,0:49:35.08,Default,,0,0,0,,Regarding the second parts,
 Dialogue: 0,0:49:35.08,0:49:37.08,Default,,0,0,0,,sharing upper U,
-Dialogue: 0,0:49:37.08,0:49:38.96,Default,,0,0,0,,means this changing information
-Dialogue: 0,0:49:38.96,0:49:41.20,Default,,0,0,0,,about right events into threads.
+Dialogue: 0,0:49:37.08,0:49:38.96,Default,,0,0,0,,means exchanging information
+Dialogue: 0,0:49:38.96,0:49:41.20,Default,,0,0,0,,about write events into threads.
 Dialogue: 0,0:49:41.20,0:49:42.04,Default,,0,0,0,,So in other words,
 Dialogue: 0,0:49:42.04,0:49:44.32,Default,,0,0,0,,it means synchronising.
 Dialogue: 0,0:49:44.32,0:49:48.20,Default,,0,0,0,,So we will rely on some form\Nof thread synchronisation,
 Dialogue: 0,0:49:48.20,0:49:50.72,Default,,0,0,0,,that is provided by the memory model.
 Dialogue: 0,0:49:53.32,0:49:55.64,Default,,0,0,0,,That was the main idea of this talk.
 Dialogue: 0,0:49:55.64,0:49:59.56,Default,,0,0,0,,Now I show you what is\Nin our programme logic,
-Dialogue: 0,0:49:59.56,0:50:01.44,Default,,0,0,0,,the reason of our programmes and memory,
+Dialogue: 0,0:49:59.56,0:50:01.44,Default,,0,0,0,,to reason about programmes and memory,
 Dialogue: 0,0:50:01.44,0:50:03.20,Default,,0,0,0,,and I'll start with the simplest thing,
 Dialogue: 0,0:50:03.20,0:50:05.52,Default,,0,0,0,,which are atomic locations.
 Dialogue: 0,0:50:06.68,0:50:07.88,Default,,0,0,0,,For atomic locations,
-Dialogue: 0,0:50:07.88,0:50:10.52,Default,,0,0,0,,we have a neutral looking\Npoints of assertion,
+Dialogue: 0,0:50:07.88,0:50:10.52,Default,,0,0,0,,we have a neutral looking\Npoints-to assertion,
 Dialogue: 0,0:50:11.92,0:50:13.68,Default,,0,0,0,,atomic x points to v,
-Dialogue: 0,0:50:13.68,0:50:15.16,Default,,0,0,0,,which means that there are points
-Dialogue: 0,0:50:15.16,0:50:17.08,Default,,0,0,0,,that we know the atomic location x,
+Dialogue: 0,0:50:13.68,0:50:15.16,Default,,0,0,0,,which means that (INAUDIBLE)
+Dialogue: 0,0:50:15.16,0:50:17.08,Default,,0,0,0,,atomic location x,
 Dialogue: 0,0:50:17.08,0:50:18.60,Default,,0,0,0,,and x stores the value v.
 Dialogue: 0,0:50:20.40,0:50:22.68,Default,,0,0,0,,We are able to say such a thing,
 Dialogue: 0,0:50:22.68,0:50:25.68,Default,,0,0,0,,because atomic locations behave
@@ -818,53 +818,53 @@ Dialogue: 0,0:50:25.68,0:50:28.04,Default,,0,0,0,,in a sequentially consistent w
 Dialogue: 0,0:50:28.04,0:50:29.12,Default,,0,0,0,,At any given time,
 Dialogue: 0,0:50:29.12,0:50:31.92,Default,,0,0,0,,all threads see the same value for x.
 Dialogue: 0,0:50:33.48,0:50:34.84,Default,,0,0,0,,In particular,
-Dialogue: 0,0:50:34.84,0:50:36.52,Default,,0,0,0,,this assertions flipped here,
+Dialogue: 0,0:50:34.84,0:50:36.52,Default,,0,0,0,,this assertion is subjective,
 Dialogue: 0,0:50:37.48,0:50:39.32,Default,,0,0,0,,they should come as no surprise,
 Dialogue: 0,0:50:39.32,0:50:42.00,Default,,0,0,0,,that atomic x's are by the usual,
-Dialogue: 0,0:50:42.00,0:50:45.36,Default,,0,0,0,,or tribals both reads and writes.
+Dialogue: 0,0:50:42.00,0:50:45.36,Default,,0,0,0,,Hoare triples both reads and writes.
 Dialogue: 0,0:50:48.28,0:50:49.76,Default,,0,0,0,,Where things become interesting,
 Dialogue: 0,0:50:49.76,0:50:51.80,Default,,0,0,0,,is for non-atomic locations.
 Dialogue: 0,0:50:51.80,0:50:53.52,Default,,0,0,0,,The non-atomic locations of particular
-Dialogue: 0,0:50:53.52,0:50:55.96,Default,,0,0,0,,cannot have that relaxed behaviour.
-Dialogue: 0,0:50:57.04,0:51:00.28,Default,,0,0,0,,In a logic we still have\Nan assertion express to v,
+Dialogue: 0,0:50:53.52,0:50:55.96,Default,,0,0,0,,OCaml have relaxed behaviour.
+Dialogue: 0,0:50:57.04,0:51:00.28,Default,,0,0,0,,In a logic we still have\Nan assertion x points to v,
 Dialogue: 0,0:51:00.28,0:51:02.44,Default,,0,0,0,,with its meaning differ slightly.
-Dialogue: 0,0:51:02.44,0:51:04.20,Default,,0,0,0,,It still asserts the notion of x,
+Dialogue: 0,0:51:02.44,0:51:04.20,Default,,0,0,0,,It still asserts the (INAUDIBLE) of x,
 Dialogue: 0,0:51:04.20,0:51:05.80,Default,,0,0,0,,but instead of saying that,
-Dialogue: 0,0:51:06.64,0:51:08.16,Default,,0,0,0,,the value affects is v,
-Dialogue: 0,0:51:08.16,0:51:11.36,Default,,0,0,0,,it says that we have seen\Nthe latter tied to x,
-Dialogue: 0,0:51:11.36,0:51:13.04,Default,,0,0,0,,and feels right based upon v.
+Dialogue: 0,0:51:06.64,0:51:08.16,Default,,0,0,0,,the value of x is v,
+Dialogue: 0,0:51:08.16,0:51:11.36,Default,,0,0,0,,it says that we have seen\Nthe (INAUDIBLE) to x,
+Dialogue: 0,0:51:11.36,0:51:13.04,Default,,0,0,0,,and this write bears the value v.
 Dialogue: 0,0:51:14.32,0:51:17.88,Default,,0,0,0,,And this is the typical\Nsubjective assertion.
 Dialogue: 0,0:51:17.88,0:51:19.36,Default,,0,0,0,,There is no such a thing as
-Dialogue: 0,0:51:19.36,0:51:21.24,Default,,0,0,0,,the global value effects,
+Dialogue: 0,0:51:19.36,0:51:21.24,Default,,0,0,0,,the global value of x,
 Dialogue: 0,0:51:21.24,0:51:24.36,Default,,0,0,0,,because different threads\Ndo not necessarily know
-Dialogue: 0,0:51:24.36,0:51:25.80,Default,,0,0,0,,about the same rights to x.
+Dialogue: 0,0:51:24.36,0:51:25.80,Default,,0,0,0,,about the same writes to x.
 Dialogue: 0,0:51:28.84,0:51:31.72,Default,,0,0,0,,What is really nice with\Nthis points to assertion ,
-Dialogue: 0,0:51:31.72,0:51:34.24,Default,,0,0,0,,is that it's also based on the rules.
+Dialogue: 0,0:51:31.72,0:51:34.24,Default,,0,0,0,,is that it also objeys the standard rules.
 Dialogue: 0,0:51:34.24,0:51:37.92,Default,,0,0,0,,So we have a simple looking assertion,
 Dialogue: 0,0:51:37.92,0:51:39.72,Default,,0,0,0,,that behaves in a natural way,
 Dialogue: 0,0:51:39.72,0:51:42.76,Default,,0,0,0,,and the price for it\Nis that the assertion,
-Dialogue: 0,0:51:42.76,0:51:47.04,Default,,0,0,0,,hides more than it gives a bit subjective.
+Dialogue: 0,0:51:42.76,0:51:47.04,Default,,0,0,0,,hides more (INAUDIBLE) it is subjective.
 Dialogue: 0,0:51:47.04,0:51:48.24,Default,,0,0,0,,So we cannot share it,
-Dialogue: 0,0:51:48.24,0:51:50.48,Default,,0,0,0,,only by using an environment.
-Dialogue: 0,0:51:52.48,0:51:54.44,Default,,0,0,0,,So let's see how we can share with them
+Dialogue: 0,0:51:48.24,0:51:50.48,Default,,0,0,0,,only by using an invariant.
+Dialogue: 0,0:51:52.48,0:51:54.44,Default,,0,0,0,,So let's see how we can share it none
 Dialogue: 0,0:51:54.44,0:51:56.32,Default,,0,0,0,,the less and for that,
 Dialogue: 0,0:51:56.32,0:51:58.52,Default,,0,0,0,,let's consider the typical lock pattern,
 Dialogue: 0,0:51:58.52,0:51:59.92,Default,,0,0,0,,which is called a spin lock.
 Dialogue: 0,0:52:01.60,0:52:03.32,Default,,0,0,0,,Let's say we have several threads,
-Dialogue: 0,0:52:03.32,0:52:05.20,Default,,0,0,0,,that we can say have the same results,
+Dialogue: 0,0:52:03.32,0:52:05.20,Default,,0,0,0,,that want to access the same resource,
 Dialogue: 0,0:52:05.20,0:52:08.44,Default,,0,0,0,,such as a single monotone location.
-Dialogue: 0,0:52:08.44,0:52:11.00,Default,,0,0,0,,Then we can use another\Nbig flag toward a resource,
+Dialogue: 0,0:52:08.44,0:52:11.00,Default,,0,0,0,,Then we can use an atomic\Nflag to guard a resource,
 Dialogue: 0,0:52:11.00,0:52:12.20,Default,,0,0,0,,when the flag is true,
 Dialogue: 0,0:52:12.20,0:52:13.36,Default,,0,0,0,,the resource is taken,
 Dialogue: 0,0:52:13.36,0:52:14.92,Default,,0,0,0,,and if you want to acquire it,
 Dialogue: 0,0:52:14.92,0:52:17.64,Default,,0,0,0,,you need to wait for\Nit to become available.
 Dialogue: 0,0:52:17.64,0:52:19.52,Default,,0,0,0,,Now from a logical point of view,
-Dialogue: 0,0:52:19.52,0:52:22.92,Default,,0,0,0,,the lock can be seen as\Nquoting an assertion P,
-Dialogue: 0,0:52:22.92,0:52:24.08,Default,,0,0,0,,which means strictly,
+Dialogue: 0,0:52:19.52,0:52:22.92,Default,,0,0,0,,the lock can be seen as\Nguarding an assertion P,
+Dialogue: 0,0:52:22.92,0:52:24.08,Default,,0,0,0,,which means subjective,
 Dialogue: 0,0:52:24.08,0:52:24.92,Default,,0,0,0,,for example,
-Dialogue: 0,0:52:24.92,0:52:26.72,Default,,0,0,0,,it may be another third\Npoint to assertion,
+Dialogue: 0,0:52:24.92,0:52:26.72,Default,,0,0,0,,it may be another\Npoints to assertion,
 Dialogue: 0,0:52:26.72,0:52:28.68,Default,,0,0,0,,as we've seen before.
-Dialogue: 0,0:52:28.68,0:52:30.76,Default,,0,0,0,,The first thread asks P,
+Dialogue: 0,0:52:28.68,0:52:30.76,Default,,0,0,0,,The first thread has P,
 Dialogue: 0,0:52:30.76,0:52:32.52,Default,,0,0,0,,before releasing the lock.
 Dialogue: 0,0:52:32.52,0:52:36.40,Default,,0,0,0,,The second thread will get P\Nafter it has acquired the lock.
 Dialogue: 0,0:52:36.40,0:52:38.92,Default,,0,0,0,,So we want P to be transferred,
@@ -873,8 +873,8 @@ Dialogue: 0,0:52:43.12,0:52:44.48,Default,,0,0,0,,To see how that works,
 Dialogue: 0,0:52:44.48,0:52:45.92,Default,,0,0,0,,let's consider,
 Dialogue: 0,0:52:45.92,0:52:48.64,Default,,0,0,0,,I'll need a comprehensive\Noperation that exists,
 Dialogue: 0,0:52:48.64,0:52:51.84,Default,,0,0,0,,because that's when the transfer happens.
-Dialogue: 0,0:52:53.40,0:52:56.28,Default,,0,0,0,,As we've seen with a compost\Nspin to an objective part,
-Dialogue: 0,0:52:56.28,0:52:57.60,Default,,0,0,0,,of the subjective part,
+Dialogue: 0,0:52:53.40,0:52:56.28,Default,,0,0,0,,As we've seen we decompose\NP to an objective part,
+Dialogue: 0,0:52:56.28,0:52:57.60,Default,,0,0,0,,and a subjective part,
 Dialogue: 0,0:52:57.60,0:52:59.36,Default,,0,0,0,,so that we can transfer each part.
 Dialogue: 0,0:53:00.28,0:53:03.68,Default,,0,0,0,,The first part P@U is objective.
 Dialogue: 0,0:53:03.68,0:53:06.44,Default,,0,0,0,,So it can be transferred\Nusing an invariant as before.
@@ -883,66 +883,66 @@ Dialogue: 0,0:53:08.04,0:53:10.12,Default,,0,0,0,,So now we are down to the prob
 Dialogue: 0,0:53:10.12,0:53:12.20,Default,,0,0,0,,of transferring up U assertion.
 Dialogue: 0,0:53:14.16,0:53:15.04,Default,,0,0,0,,As I said before,
 Dialogue: 0,0:53:15.04,0:53:17.64,Default,,0,0,0,,we need some form of\Nsynchronisation on here.
-Dialogue: 0,0:53:17.64,0:53:19.00,Default,,0,0,0,,What vertical kernel gives us,
-Dialogue: 0,0:53:19.00,0:53:21.16,Default,,0,0,0,,is a half as before relationship,
-Dialogue: 0,0:53:21.16,0:53:24.52,Default,,0,0,0,,from where it is right\Nto the acquired bit.
-Dialogue: 0,0:53:24.52,0:53:27.44,Default,,0,0,0,,So instead of finding\Nnew primitive language,
-Dialogue: 0,0:53:27.44,0:53:29.08,Default,,0,0,0,,vertical kernel made the choice
-Dialogue: 0,0:53:29.08,0:53:32.36,Default,,0,0,0,,of performing reset quarters\Nin concession on atomic access.
-Dialogue: 0,0:53:34.32,0:53:37.04,Default,,0,0,0,,And we need to reflect\Nthis in a programme logic,
+Dialogue: 0,0:53:17.64,0:53:19.00,Default,,0,0,0,,What OCaml gives us,
+Dialogue: 0,0:53:19.00,0:53:21.16,Default,,0,0,0,,is a happens-before relationship,
+Dialogue: 0,0:53:21.16,0:53:24.52,Default,,0,0,0,,from the realeasing write\Nto the acquired read.
+Dialogue: 0,0:53:24.52,0:53:27.44,Default,,0,0,0,,So instead of adding\Nnew primitives to the language,
+Dialogue: 0,0:53:27.44,0:53:29.08,Default,,0,0,0,,multicore OCaml made the choice
+Dialogue: 0,0:53:29.08,0:53:32.36,Default,,0,0,0,,of performing release-aquire\Nsynchronization on atomic access.
+Dialogue: 0,0:53:34.32,0:53:37.04,Default,,0,0,0,,And we need to reflect\Nthis in our programme logic,
 Dialogue: 0,0:53:37.04,0:53:38.72,Default,,0,0,0,,and we do so,
 Dialogue: 0,0:53:38.72,0:53:40.92,Default,,0,0,0,,by extending the atomic\Npoints to predicate.
-Dialogue: 0,0:53:43.28,0:53:46.76,Default,,0,0,0,,So we call that atomic parts of v,
+Dialogue: 0,0:53:43.28,0:53:46.76,Default,,0,0,0,,So recall that atomic points to v,
 Dialogue: 0,0:53:46.76,0:53:48.76,Default,,0,0,0,,means that x stores the value of v.
 Dialogue: 0,0:53:50.56,0:53:52.20,Default,,0,0,0,,We know what's done this assertion.
-Dialogue: 0,0:53:52.20,0:53:55.08,Default,,0,0,0,,So that atomic locations stores the part
+Dialogue: 0,0:53:52.20,0:53:55.08,Default,,0,0,0,,So that atomic locations stores the pair
 Dialogue: 0,0:53:55.96,0:53:57.16,Default,,0,0,0,,of the value and a view,
-Dialogue: 0,0:53:59.60,0:54:02.00,Default,,0,0,0,,so access is to behave the same,
+Dialogue: 0,0:53:59.60,0:54:02.00,Default,,0,0,0,,so accesses still behave the same,
 Dialogue: 0,0:54:02.00,0:54:04.04,Default,,0,0,0,,with respect to the view value,
 Dialogue: 0,0:54:04.96,0:54:08.92,Default,,0,0,0,,but they also perform a\Nrelease acquire synchronisation
 Dialogue: 0,0:54:08.92,0:54:09.76,Default,,0,0,0,,on the view.
 Dialogue: 0,0:54:11.40,0:54:12.92,Default,,0,0,0,,So when writing,
 Dialogue: 0,0:54:12.92,0:54:15.20,Default,,0,0,0,,we push into the shared location,
 Dialogue: 0,0:54:15.20,0:54:17.96,Default,,0,0,0,,any information we have in the local view.
-Dialogue: 0,0:54:17.96,0:54:20.20,Default,,0,0,0,,So that's a release, right?
+Dialogue: 0,0:54:17.96,0:54:20.20,Default,,0,0,0,,So that's a release write.
 Dialogue: 0,0:54:20.20,0:54:21.40,Default,,0,0,0,,And conversely,
 Dialogue: 0,0:54:21.40,0:54:25.44,Default,,0,0,0,,when reading we pull into a local view,
 Dialogue: 0,0:54:25.44,0:54:28.48,Default,,0,0,0,,any information stored\Nin a shared location.
-Dialogue: 0,0:54:28.48,0:54:29.72,Default,,0,0,0,,So that's an acquire.
+Dialogue: 0,0:54:28.48,0:54:29.72,Default,,0,0,0,,So that's an acquire read.
 Dialogue: 0,0:54:32.00,0:54:33.04,Default,,0,0,0,,And with this in mind,
 Dialogue: 0,0:54:33.04,0:54:34.68,Default,,0,0,0,,let's come back to our spin lock.
 Dialogue: 0,0:54:36.32,0:54:37.64,Default,,0,0,0,,As we have seen before,
 Dialogue: 0,0:54:37.64,0:54:40.08,Default,,0,0,0,,the spin lock has two operations,
-Dialogue: 0,0:54:40.08,0:54:41.96,Default,,0,0,0,,releasing and acquire,
-Dialogue: 0,0:54:41.96,0:54:44.88,Default,,0,0,0,,in the interface equals assertion P,
-Dialogue: 0,0:54:44.88,0:54:47.20,Default,,0,0,0,,we give the spin a specification,
-Dialogue: 0,0:54:47.20,0:54:49.80,Default,,0,0,0,,which holds under some variant,
+Dialogue: 0,0:54:40.08,0:54:41.96,Default,,0,0,0,,release and acquire,
+Dialogue: 0,0:54:41.96,0:54:44.88,Default,,0,0,0,,in the interface (INAUDIBLE) assertion P,
+Dialogue: 0,0:54:44.88,0:54:47.20,Default,,0,0,0,,we give the spin lock a specification,
+Dialogue: 0,0:54:47.20,0:54:49.80,Default,,0,0,0,,which holds under some invariant,
 Dialogue: 0,0:54:49.80,0:54:50.88,Default,,0,0,0,,and now,
 Dialogue: 0,0:54:50.88,0:54:55.08,Default,,0,0,0,,to put this specification in\Nthe usual separation logic,
 Dialogue: 0,0:54:56.16,0:54:57.64,Default,,0,0,0,,with sequential consistency,
-Dialogue: 0,0:54:58.64,0:55:00.44,Default,,0,0,0,,we state an environment like this.
+Dialogue: 0,0:54:58.64,0:55:00.44,Default,,0,0,0,,we state an invariant like this.
 Dialogue: 0,0:55:01.40,0:55:04.56,Default,,0,0,0,,We are either locked or unlocked,
 Dialogue: 0,0:55:04.56,0:55:05.84,Default,,0,0,0,,in the latter case
-Dialogue: 0,0:55:05.84,0:55:08.76,Default,,0,0,0,,the environ itself holds the assertion P.
+Dialogue: 0,0:55:05.84,0:55:08.76,Default,,0,0,0,,the invariant itself holds the assertion P.
 Dialogue: 0,0:55:11.40,0:55:14.92,Default,,0,0,0,,Now in our programme\Nlogic with weak memory,
-Dialogue: 0,0:55:14.92,0:55:16.56,Default,,0,0,0,,being misdirected,
-Dialogue: 0,0:55:16.56,0:55:20.00,Default,,0,0,0,,but everything in the\Nenviron has to be objective.
-Dialogue: 0,0:55:20.00,0:55:24.84,Default,,0,0,0,,So the environment we\Nstate instead is that one.
+Dialogue: 0,0:55:14.92,0:55:16.56,Default,,0,0,0,,P is subjective,
+Dialogue: 0,0:55:16.56,0:55:20.00,Default,,0,0,0,,but everything in the\Nivariant has to be objective.
+Dialogue: 0,0:55:20.00,0:55:24.84,Default,,0,0,0,,So the ivariant we\Nstate instead is that one.
 Dialogue: 0,0:55:27.28,0:55:28.52,Default,,0,0,0,,In fact,
 Dialogue: 0,0:55:28.52,0:55:31.60,Default,,0,0,0,,it is the same as in your\Nold separation logic,
 Dialogue: 0,0:55:31.60,0:55:33.00,Default,,0,0,0,,but we add views.
 Dialogue: 0,0:55:33.00,0:55:34.92,Default,,0,0,0,,To remain objective,
 Dialogue: 0,0:55:34.92,0:55:36.24,Default,,0,0,0,,we make it explicit,
-Dialogue: 0,0:55:36.24,0:55:39.12,Default,,0,0,0,,at which view we have been,
+Dialogue: 0,0:55:36.24,0:55:39.12,Default,,0,0,0,,at which view we have P,
 Dialogue: 0,0:55:39.12,0:55:41.28,Default,,0,0,0,,and we say that if it is the same view,
-Dialogue: 0,0:55:41.28,0:55:43.00,Default,,0,0,0,,as historic in our case.
+Dialogue: 0,0:55:41.28,0:55:43.00,Default,,0,0,0,,as is stored in our case.
 Dialogue: 0,0:55:43.92,0:55:45.24,Default,,0,0,0,,In other words,
 Dialogue: 0,0:55:45.24,0:55:48.56,Default,,0,0,0,,P holds in the eyes of whoever,
 Dialogue: 0,0:55:48.56,0:55:50.12,Default,,0,0,0,,last released the lock.
 Dialogue: 0,0:55:52.44,0:55:55.56,Default,,0,0,0,,So that P@U in the invariants,
-Dialogue: 0,0:55:55.56,0:55:57.36,Default,,0,0,0,,you still have to transfer,
+Dialogue: 0,0:55:55.56,0:55:57.36,Default,,0,0,0,,obviously allows to transfer,
 Dialogue: 0,0:55:57.36,0:55:59.80,Default,,0,0,0,,the objective part of P,
-Dialogue: 0,0:55:59.80,0:56:01.52,Default,,0,0,0,,where the atomic location cells,
+Dialogue: 0,0:55:59.80,0:56:01.52,Default,,0,0,0,,where the atomic location itself,
 Dialogue: 0,0:56:01.52,0:56:05.36,Default,,0,0,0,,allows to transfer the\Nsubjective part of P.
 Dialogue: 0,0:56:10.48,0:56:13.52,Default,,0,0,0,,So that was the proof of the spin lock.
 Dialogue: 0,0:56:13.52,0:56:14.96,Default,,0,0,0,,And in addition to this example,
@@ -960,7 +960,7 @@ Dialogue: 0,0:56:43.24,0:56:45.04,Default,,0,0,0,,concurrent sequential logic.
 Dialogue: 0,0:56:45.04,0:56:49.00,Default,,0,0,0,,Then identifying where\Nsynchronisation happens,
 Dialogue: 0,0:56:49.00,0:56:51.08,Default,,0,0,0,,and make it explicit by adding views.
 Dialogue: 0,0:56:55.08,0:56:57.08,Default,,0,0,0,,To sum up I have presented\Na programme logic,
-Dialogue: 0,0:56:57.08,0:56:58.88,Default,,0,0,0,,from the curriculum,
+Dialogue: 0,0:56:57.08,0:56:58.88,Default,,0,0,0,,for OCaml,
 Dialogue: 0,0:56:58.88,0:57:01.72,Default,,0,0,0,,based on isolating\Nsubjectivity into views.
 Dialogue: 0,0:57:01.72,0:57:04.64,Default,,0,0,0,,I argued that this logic enables concise
 Dialogue: 0,0:57:04.64,0:57:08.12,Default,,0,0,0,,and natural reasoning of\Nhow threads synchronise.
@@ -968,17 +968,17 @@ Dialogue: 0,0:57:09.12,0:57:10.36,Default,,0,0,0,,There is more in the paper,
 Dialogue: 0,0:57:10.36,0:57:13.72,Default,,0,0,0,,namely how the logic is realised,
 Dialogue: 0,0:57:13.72,0:57:15.92,Default,,0,0,0,,by building on top of a lower-level logic.
 Dialogue: 0,0:57:17.76,0:57:19.88,Default,,0,0,0,,And we also have more case studies.
-Dialogue: 0,0:57:21.48,0:57:24.24,Default,,0,0,0,,This entire works mechanised\Nin the Coq proper system,
-Dialogue: 0,0:57:24.24,0:57:27.12,Default,,0,0,0,,using the Iris version logic framework.
+Dialogue: 0,0:57:21.48,0:57:24.24,Default,,0,0,0,,This entire work is mechanised\Nin the Coq proof assistant,
+Dialogue: 0,0:57:24.24,0:57:27.12,Default,,0,0,0,,using the Iris logic framework.
 Dialogue: 0,0:57:27.12,0:57:29.68,Default,,0,0,0,,So we have a verified proof of soundness,
-Dialogue: 0,0:57:29.68,0:57:32.76,Default,,0,0,0,,on the title language with\Nwhich we can write programmes
-Dialogue: 0,0:57:32.76,0:57:36.12,Default,,0,0,0,,and problem correct using\Nour appropriate logic.
+Dialogue: 0,0:57:29.68,0:57:32.76,Default,,0,0,0,,and an entire language with\Nwhich we can write programmes
+Dialogue: 0,0:57:32.76,0:57:36.12,Default,,0,0,0,,and prove them correct using\NHoare logic.
 Dialogue: 0,0:57:37.64,0:57:38.80,Default,,0,0,0,,And in the future,
 Dialogue: 0,0:57:38.80,0:57:41.68,Default,,0,0,0,,we would like to verify\Neven more data structures.
 Dialogue: 0,0:57:41.68,0:57:45.08,Default,,0,0,0,,Thus so we would like to\Ninvestigate data races,
 Dialogue: 0,0:57:45.08,0:57:47.88,Default,,0,0,0,,because data races are currently\Nnot supported in logic.
 Dialogue: 0,0:57:49.24,0:57:52.48,Default,,0,0,0,,Even though the underlying memory model,
-Dialogue: 0,0:57:52.48,0:57:54.64,Default,,0,0,0,,gives a few warranties about that.
+Dialogue: 0,0:57:52.48,0:57:54.64,Default,,0,0,0,,gives a few guarantees about them.
 Dialogue: 0,0:57:56.00,0:57:57.28,Default,,0,0,0,,Thank you for your attention.
 Dialogue: 0,0:57:57.28,0:57:59.24,Default,,0,0,0,,And if you have seen on previous slides,
 Dialogue: 0,0:57:59.24,0:58:01.84,Default,,0,0,0,,you hold the right to\Nask questions though.
