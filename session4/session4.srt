@@ -1,0 +1,11008 @@
+1
+00:00:15,920 --> 00:00:59,840
+
+2
+00:00:59,840 --> 00:01:59,840
+
+3
+00:01:59,840 --> 00:02:59,840
+
+4
+00:02:59,840 --> 00:04:00,000
+
+5
+00:04:00,000 --> 00:04:28,920
+
+6
+00:04:58,640 --> 00:05:59,480
+
+7
+00:05:59,480 --> 00:07:00,000
+
+8
+00:07:00,000 --> 00:07:59,920
+
+9
+00:07:59,920 --> 00:08:36,040
+
+10
+00:09:22,120 --> 00:09:59,840
+
+11
+00:09:59,840 --> 00:10:59,920
+
+12
+00:10:59,920 --> 00:11:59,920
+
+13
+00:11:59,920 --> 00:12:13,760
+
+14
+00:13:01,760 --> 00:13:03,240
+STEPHANIE WEIRICH: Hello, my name
+is Stephanie Weirich
+
+15
+00:13:03,240 --> 00:13:06,280
+and I'm the General
+Chair of ICFP, 2020.
+
+16
+00:13:06,280 --> 00:13:10,760
+And I'd like to welcome
+you to Session 4 of ICFP.
+
+17
+00:13:10,760 --> 00:13:11,880
+Our first talk comes from
+
+18
+00:13:11,880 --> 00:13:14,840
+one of my favorite
+categories of ICFP papers,
+
+19
+00:13:14,840 --> 00:13:16,320
+Functional Pearls.
+
+20
+00:13:16,320 --> 00:13:18,240
+The emphasis of papers
+in this category
+
+21
+00:13:18,240 --> 00:13:20,240
+is on the clarity of exposition
+
+22
+00:13:20,240 --> 00:13:23,840
+and I'm sure that you'll agree that
+this paper is a beautiful read.
+
+23
+00:13:23,840 --> 00:13:26,920
+This paper will be presented
+by Lionel Parreaux
+
+24
+00:13:26,920 --> 00:13:28,720
+and he will tell us about
+
+25
+00:13:28,720 --> 00:13:31,480
+The Simple Essence of
+Algebraic Subtyping,
+
+26
+00:13:31,480 --> 00:13:34,480
+Principal Type and Principal
+Subtyping Made Easy.
+
+27
+00:13:35,400 --> 00:13:36,400
+LIONEL PARREAUX: Hi, I'm Lionel Parreaux
+
+28
+00:13:36,400 --> 00:13:37,960
+and I will present
+my functional pearl
+
+29
+00:13:37,960 --> 00:13:40,360
+on the simple essence of
+algebraic subtyping.
+
+30
+00:13:40,360 --> 00:13:43,360
+But first, what exactly
+do we mean by subtyping?
+
+31
+00:13:43,360 --> 00:13:45,320
+Subtyping is a type
+system feature used to
+
+32
+00:13:45,320 --> 00:13:47,960
+move the relative
+specificity of types.
+
+33
+00:13:47,960 --> 00:13:50,400
+For instance, the type
+nat of natural numbers
+
+34
+00:13:50,400 --> 00:13:52,440
+is strictly more specific than int
+
+35
+00:13:52,440 --> 00:13:54,520
+because on that values
+are also in values.
+
+36
+00:13:54,520 --> 00:13:56,160
+But the converse is not true.
+
+37
+00:13:56,160 --> 00:13:58,760
+In this work, we focus
+on inclusive subtyping,
+
+38
+00:13:58,760 --> 00:14:01,280
+in which the types in
+a subtyping relationship
+
+39
+00:14:01,280 --> 00:14:03,400
+share compatible runtime
+representations,
+
+40
+00:14:03,400 --> 00:14:05,800
+meaning that no runtime
+coercions are needed.
+
+41
+00:14:06,360 --> 00:14:07,840
+Inclusive subtyping
+is useful
+
+42
+00:14:07,840 --> 00:14:10,440
+because it can express relationships
+between data types
+
+43
+00:14:10,440 --> 00:14:12,120
+based on their variants.
+
+44
+00:14:12,120 --> 00:14:15,000
+For instance, since the list
+data type is covariant,
+
+45
+00:14:15,000 --> 00:14:17,080
+nat list is a subtype of int list.
+
+46
+00:14:17,080 --> 00:14:19,600
+So that a list of natural
+numbers can be used in place
+
+47
+00:14:19,600 --> 00:14:22,480
+where a list of
+integers is expected.
+
+48
+00:14:22,960 --> 00:14:25,400
+Moreover, we focus on
+implicit subtyping,
+
+49
+00:14:25,400 --> 00:14:27,560
+which means that expressions
+of a certain type
+
+50
+00:14:27,560 --> 00:14:29,200
+do not need to be annotated,
+
+51
+00:14:29,200 --> 00:14:31,440
+in order to be used at
+a less specific time.
+
+52
+00:14:32,040 --> 00:14:33,840
+So when we write 1+2,
+
+53
+00:14:33,840 --> 00:14:36,000
+we don't need to explicitly annotate
+
+54
+00:14:36,000 --> 00:14:39,280
+1 as being of type int, although
+it's also of type nat.
+
+55
+00:14:39,920 --> 00:14:42,000
+Now let us see a few
+examples of subtyping.
+
+56
+00:14:42,840 --> 00:14:46,200
+Singleton types are types
+which represent single values.
+
+57
+00:14:46,200 --> 00:14:48,320
+For instance, the type written 0
+
+58
+00:14:48,320 --> 00:14:50,480
+is the singleton type
+of the value 0.
+
+59
+00:14:51,320 --> 00:14:53,840
+Union types are used
+to type expressions,
+
+60
+00:14:53,840 --> 00:14:56,360
+which can be either one
+of two given types.
+
+61
+00:14:56,360 --> 00:14:59,200
+Intersection types are
+used to type expressions,
+
+62
+00:14:59,200 --> 00:15:01,080
+which are of both given types.
+
+63
+00:15:01,880 --> 00:15:04,880
+As an example, subtyping
+relationship between these,
+
+64
+00:15:04,880 --> 00:15:08,560
+the type 0 is a subtype
+of the union of 0 and 1,
+
+65
+00:15:08,560 --> 00:15:10,440
+which is itself a subtype of nat.
+
+66
+00:15:11,200 --> 00:15:14,240
+In fact, subtyping naturally
+lists as design types,
+
+67
+00:15:14,240 --> 00:15:18,000
+which are as close as desired to
+corresponding operations and values.
+
+68
+00:15:18,840 --> 00:15:22,360
+For instance, we can define
+the singleton type of empty lists
+
+69
+00:15:22,360 --> 00:15:25,480
+as well as the type of
+prepending a value to a lists.
+
+70
+00:15:26,680 --> 00:15:29,160
+This allows us to use
+the same list syntax
+
+71
+00:15:29,160 --> 00:15:31,640
+in representation to
+express things like
+
+72
+00:15:31,640 --> 00:15:35,440
+tuple types, non-empty lists
+and everything in between.
+
+73
+00:15:37,760 --> 00:15:40,840
+Subtyping is not just for
+object-oriented programming.
+
+74
+00:15:40,840 --> 00:15:43,400
+In fact, it has found
+a host of applications
+
+75
+00:15:43,400 --> 00:15:45,360
+in functional programming.
+
+76
+00:15:45,360 --> 00:15:48,720
+It can, for example, be used
+for predicate refinement types,
+
+77
+00:15:48,720 --> 00:15:52,440
+first-class modules, XML
+transformations and much more.
+
+78
+00:15:54,000 --> 00:15:55,720
+Now some may be under the impression
+
+79
+00:15:55,720 --> 00:15:59,320
+that functional languages,
+usually try to avoid subtyping.
+
+80
+00:15:59,320 --> 00:16:02,320
+But, in fact, subtyping is present
+in many of those languages
+
+81
+00:16:02,320 --> 00:16:04,840
+including OCaml, Haskell and Rust.
+
+82
+00:16:04,840 --> 00:16:08,160
+In Rust, subtyping is used to
+relay the location lifetimes.
+
+83
+00:16:08,160 --> 00:16:10,080
+In Ocaml, where
+subtyping is explicit,
+
+84
+00:16:10,080 --> 00:16:13,040
+it is used in many places such
+as polymorphic variants,
+
+85
+00:16:13,040 --> 00:16:15,600
+first-class modules
+and the object system.
+
+86
+00:16:15,600 --> 00:16:18,280
+In Haskell, subtyping is
+used in the context of
+
+87
+00:16:18,280 --> 00:16:21,440
+first-class polymorphism to check
+inferred types against signatures.
+
+88
+00:16:22,240 --> 00:16:24,640
+Yet all these languages
+use type inference engines
+
+89
+00:16:24,640 --> 00:16:25,880
+based on unification, which
+
+90
+00:16:26,640 --> 00:16:28,440
+does not
+handle subtyping well
+
+91
+00:16:28,440 --> 00:16:31,600
+and limits its applicability.
+
+92
+00:16:31,600 --> 00:16:34,560
+What we'd really like is
+a way of integrating subtyping
+
+93
+00:16:34,560 --> 00:16:40,960
+in ML style type inference, more
+consistently and reliably.
+
+94
+00:16:40,960 --> 00:16:43,320
+So first, let's review
+the way ML languages
+
+95
+00:16:43,320 --> 00:16:47,000
+have traditionally inferred
+types based on unification,
+
+96
+00:16:47,000 --> 00:16:49,560
+the Hindley-Milner type
+inference algorithm relays
+
+97
+00:16:49,560 --> 00:16:51,440
+and introducing type variables
+
+98
+00:16:51,440 --> 00:16:53,880
+when the types of expressions
+are not yet known,
+
+99
+00:16:53,880 --> 00:16:57,120
+and those variables are later
+unified with concrete types
+
+100
+00:16:57,120 --> 00:16:58,600
+or with other type variables,
+
+101
+00:16:58,600 --> 00:17:02,040
+based on the way these
+expressions are used.
+
+102
+00:17:02,040 --> 00:17:04,440
+As an example, consider
+the following term,
+
+103
+00:17:04,440 --> 00:17:06,840
+which takes two parameters, X and Y,
+
+104
+00:17:06,840 --> 00:17:10,120
+compares them and returns
+the smaller of the two.
+
+105
+00:17:10,120 --> 00:17:12,000
+We start from a context gamma,
+
+106
+00:17:12,000 --> 00:17:15,000
+including only the comparison
+operation defined
+
+107
+00:17:15,000 --> 00:17:18,040
+to operate an integer values.
+
+108
+00:17:18,040 --> 00:17:21,800
+First, we can see that
+the outer lambda binding X,
+
+109
+00:17:21,800 --> 00:17:23,840
+we assign X to
+type variable alpha,
+
+110
+00:17:23,840 --> 00:17:26,680
+and place it in the context,
+
+111
+00:17:26,680 --> 00:17:30,160
+then we look at
+the inner lambda binding Y
+
+112
+00:17:30,160 --> 00:17:31,760
+and similarly extend the context
+
+113
+00:17:31,760 --> 00:17:34,600
+with a new type variable, beta.
+
+114
+00:17:34,600 --> 00:17:37,600
+Then, we consider
+the evenness expression,
+
+115
+00:17:37,600 --> 00:17:39,760
+in particular, the condition,
+
+116
+00:17:39,760 --> 00:17:42,240
+variable X has type alpha
+
+117
+00:17:42,240 --> 00:17:44,000
+and it's used on the left hand side
+
+118
+00:17:44,000 --> 00:17:50,240
+of the less than operation,
+so we unify alpha with int.
+
+119
+00:17:50,240 --> 00:17:52,480
+Variable Y has type beta
+
+120
+00:17:52,480 --> 00:17:53,960
+and it's used on the right hand side
+
+121
+00:17:53,960 --> 00:17:59,800
+of the comparison operation,
+so we unify beta with int.
+
+122
+00:17:59,800 --> 00:18:03,480
+Then we consider the branches
+of the int statement,
+
+123
+00:18:03,480 --> 00:18:05,960
+the first branch has type alpha,
+
+124
+00:18:05,960 --> 00:18:09,200
+the second branch
+has type beta,
+
+125
+00:18:09,200 --> 00:18:12,560
+and since the, evenness
+must return a single type,
+
+126
+00:18:12,560 --> 00:18:14,680
+we unify alpha and beta,
+
+127
+00:18:14,680 --> 00:18:19,520
+which is the same as unifying
+int with ints and its trivial.
+
+128
+00:18:19,520 --> 00:18:23,200
+The result type of
+the evenness is alpha,
+
+129
+00:18:23,200 --> 00:18:25,560
+so the result type is int
+
+130
+00:18:25,560 --> 00:18:28,960
+because we have unified
+int with alpha.
+
+131
+00:18:28,960 --> 00:18:31,800
+The result of the inner
+lambda is beta to int,
+
+132
+00:18:31,800 --> 00:18:33,600
+which is int to int,
+
+133
+00:18:33,600 --> 00:18:36,840
+and the final result type
+is alpha to int to int,
+
+134
+00:18:36,840 --> 00:18:39,240
+which is int to int to int.
+
+135
+00:18:39,240 --> 00:18:42,320
+Now let's review how to adapt
+this algorithm to subtyping,
+
+136
+00:18:42,320 --> 00:18:44,760
+instead of tracking
+equalities between types,
+
+137
+00:18:44,760 --> 00:18:47,600
+we now track inequalities
+between types.
+
+138
+00:18:47,600 --> 00:18:49,120
+We do not unify type variables,
+
+139
+00:18:49,120 --> 00:18:52,640
+but instead we keep track
+of their assumed subtypes
+
+140
+00:18:52,640 --> 00:18:57,440
+and super types, that is we
+keep track of their bounds.
+
+141
+00:18:57,440 --> 00:18:58,520
+We base our approach
+
+142
+00:18:58,520 --> 00:19:00,880
+on the previous
+algorithm called ML-sub,
+
+143
+00:19:00,880 --> 00:19:03,040
+which was the first to
+infer most specific types
+
+144
+00:19:03,040 --> 00:19:05,200
+in the presence of subtyping,
+
+145
+00:19:05,200 --> 00:19:06,920
+but whose presentation was complex
+
+146
+00:19:06,920 --> 00:19:09,200
+and difficult to understand.
+
+147
+00:19:09,200 --> 00:19:10,240
+In the paper,
+
+148
+00:19:10,240 --> 00:19:12,400
+the new symbols of
+algorithm is introduced,
+
+149
+00:19:12,400 --> 00:19:15,120
+which is closer to the traditional
+type inference algorithm
+
+150
+00:19:15,120 --> 00:19:16,120
+we have just seen,
+
+151
+00:19:16,120 --> 00:19:19,040
+and it's easier to
+specify and implement.
+
+152
+00:19:19,040 --> 00:19:21,320
+Going back to our example,
+
+153
+00:19:21,320 --> 00:19:23,720
+we look at the outer lambda again,
+
+154
+00:19:23,720 --> 00:19:28,320
+we extend the context with
+a new type variable as before,
+
+155
+00:19:28,320 --> 00:19:30,880
+same for the second
+lambda obstruction,
+
+156
+00:19:30,880 --> 00:19:34,280
+we send the context with
+the new type variable beta.
+
+157
+00:19:34,280 --> 00:19:36,680
+Then we'll look at
+the condition again,
+
+158
+00:19:36,680 --> 00:19:40,200
+the variable X has type
+alpha, but this time,
+
+159
+00:19:40,200 --> 00:19:42,520
+instead of unifying alpha with int,
+
+160
+00:19:42,520 --> 00:19:45,440
+we simply specify that alpha
+should be a subtype of int,
+
+161
+00:19:45,440 --> 00:19:50,120
+so we register int as one of
+the upper bounds of alpha,
+
+162
+00:19:50,120 --> 00:19:55,160
+we do the same for beta,
+and then we look at the branches.
+
+163
+00:19:55,160 --> 00:19:56,960
+The first branch has type alpha,
+
+164
+00:19:56,960 --> 00:19:58,920
+so we're going to branch as type beta,
+
+165
+00:19:58,920 --> 00:20:01,720
+but this time we introduced
+a new type variable
+
+166
+00:20:01,720 --> 00:20:05,720
+to represent the union
+of the two branches.
+
+167
+00:20:05,720 --> 00:20:08,280
+We constraint this type
+variable to be a super type
+
+168
+00:20:08,280 --> 00:20:12,320
+of the types of both
+branches, alpha and beta.
+
+169
+00:20:12,320 --> 00:20:15,960
+The resulting type of
+the inner lambda is beta to gamma,
+
+170
+00:20:15,960 --> 00:20:20,040
+and the final resulting type
+is alpha to beta to gamma,
+
+171
+00:20:20,040 --> 00:20:23,160
+together with
+the inferred constraints.
+
+172
+00:20:23,160 --> 00:20:26,720
+So we have inferred the type
+alpha to beta to gamma,
+
+173
+00:20:26,720 --> 00:20:30,200
+where alpha is less than
+int, beta is less than int,
+
+174
+00:20:30,200 --> 00:20:33,120
+and alpha union beta
+is less than gamma,
+
+175
+00:20:33,120 --> 00:20:35,320
+which means that
+gamma is a super type
+
+176
+00:20:35,320 --> 00:20:37,800
+of both alpha and beta.
+
+177
+00:20:37,800 --> 00:20:40,320
+Now the cool F of zero and one
+
+178
+00:20:40,320 --> 00:20:44,880
+is more precisely typed
+as net instead of int,
+
+179
+00:20:44,880 --> 00:20:48,120
+but is this really a type
+we want to show users?
+
+180
+00:20:48,120 --> 00:20:50,880
+It looks much more confusing
+than the type we had before,
+
+181
+00:20:50,880 --> 00:20:53,600
+we introduced
+the typing into the mix.
+
+182
+00:20:53,600 --> 00:20:55,960
+In fact, we can inline so to say,
+
+183
+00:20:55,960 --> 00:20:59,200
+the bounds of each type
+variable into the result type
+
+184
+00:20:59,200 --> 00:21:03,720
+to use the simpler type, this
+is called bounce coalescing.
+
+185
+00:21:03,720 --> 00:21:05,800
+We replace each type
+variable occurrence
+
+186
+00:21:05,800 --> 00:21:08,720
+with the composition of
+the variables bounds.
+
+187
+00:21:08,720 --> 00:21:13,320
+For occurrences in output position
+or in positive position,
+
+188
+00:21:13,320 --> 00:21:17,160
+we use a union of the type
+variable with its lower bounds.
+
+189
+00:21:17,160 --> 00:21:21,680
+Conversely, for occurrences in
+input or negative positions,
+
+190
+00:21:21,680 --> 00:21:24,120
+we use an intersection
+of the type variable
+
+191
+00:21:24,120 --> 00:21:26,000
+with its upper bounds.
+
+192
+00:21:26,000 --> 00:21:28,480
+We can actually simplify
+these type further
+
+193
+00:21:28,480 --> 00:21:29,600
+by removing gamma,
+
+194
+00:21:29,600 --> 00:21:32,560
+which is useless
+and merging alpha and beta
+
+195
+00:21:32,560 --> 00:21:34,120
+using a type expression,
+
+196
+00:21:34,120 --> 00:21:38,000
+which is much more
+compact and easy to read.
+
+197
+00:21:38,000 --> 00:21:39,920
+Both of these simplifications,
+
+198
+00:21:39,920 --> 00:21:42,920
+leave us with a type that is
+equivalent to the original
+
+199
+00:21:42,920 --> 00:21:44,440
+and simplified type,
+
+200
+00:21:44,440 --> 00:21:48,840
+despite not featuring the same
+number of type variables.
+
+201
+00:21:48,840 --> 00:21:50,400
+To understand why that is correct,
+
+202
+00:21:50,400 --> 00:21:53,880
+let us first consider
+the first simplification.
+
+203
+00:21:53,880 --> 00:21:56,680
+Dominion site here is
+that type intersections
+
+204
+00:21:56,680 --> 00:22:00,000
+can act like upper bounds
+to type variables
+
+205
+00:22:00,000 --> 00:22:02,720
+as long as they are added to
+all the negative occurrences
+
+206
+00:22:02,720 --> 00:22:04,520
+of that variable.
+
+207
+00:22:04,520 --> 00:22:07,840
+Indeed, using the resulting
+function in our case
+
+208
+00:22:07,840 --> 00:22:10,320
+requires an argument
+whose type is a subtype
+
+209
+00:22:10,320 --> 00:22:11,880
+of the said intersection,
+
+210
+00:22:11,880 --> 00:22:13,800
+which is to say that
+it must be a subtype
+
+211
+00:22:13,800 --> 00:22:18,440
+of the type variable and each
+of its intersected bounds.
+
+212
+00:22:18,440 --> 00:22:21,920
+In our case,
+the boundary is just int.
+
+213
+00:22:21,920 --> 00:22:25,400
+In particular where users
+of the function are free
+
+214
+00:22:25,400 --> 00:22:28,600
+to instantiate outfit,
+whatever type they like,
+
+215
+00:22:28,600 --> 00:22:30,280
+the function will not be callable
+
+216
+00:22:30,280 --> 00:22:32,080
+if alpha is taken to be a type
+
+217
+00:22:32,080 --> 00:22:37,200
+'cause intersection with
+the ints contains no values.
+
+218
+00:22:37,200 --> 00:22:40,560
+Next, let us look at
+the second simplification.
+
+219
+00:22:40,560 --> 00:22:42,680
+Here, the insight is
+that alpha and beta
+
+220
+00:22:42,680 --> 00:22:45,240
+are indistinguishable
+from each other
+
+221
+00:22:45,240 --> 00:22:48,920
+since they always occur together
+in positive positions,
+
+222
+00:22:48,920 --> 00:22:53,080
+which is to say here in
+the result type of the function.
+
+223
+00:22:53,080 --> 00:22:55,600
+Formally, the subception relation
+
+224
+00:22:55,600 --> 00:22:57,560
+between two polymorphic types
+
+225
+00:22:57,560 --> 00:22:59,840
+can be used to reason
+about the equivalents
+
+226
+00:22:59,840 --> 00:23:03,280
+of simplified
+and unsimplified types.
+
+227
+00:23:03,280 --> 00:23:05,880
+To show that one type
+subsumes another,
+
+228
+00:23:05,880 --> 00:23:10,120
+that is tau zero less
+than for all tau one,
+
+229
+00:23:10,120 --> 00:23:11,720
+it is sufficient to
+pick an assignment
+
+230
+00:23:11,720 --> 00:23:13,920
+of tau zero's type variables,
+
+231
+00:23:13,920 --> 00:23:17,600
+which satisfies tau zero
+less than tau one.
+
+232
+00:23:17,600 --> 00:23:19,520
+For the first subsumption direction,
+
+233
+00:23:19,520 --> 00:23:21,360
+which is to show that
+the original type
+
+234
+00:23:21,360 --> 00:23:23,640
+subsumes the simplified type,
+
+235
+00:23:23,640 --> 00:23:26,920
+we can pick the following
+variable assignments.
+
+236
+00:23:26,920 --> 00:23:30,760
+Alpha is left as alpha,
+and beta is taken to be alpha.
+
+237
+00:23:30,760 --> 00:23:33,720
+This makes both types identical,
+which trivially means
+
+238
+00:23:33,720 --> 00:23:37,040
+that the former subsumes the latter.
+
+239
+00:23:37,040 --> 00:23:39,040
+For the other subsumption direction,
+
+240
+00:23:39,040 --> 00:23:43,120
+we pick alpha to be
+the union of alpha and beta.
+
+241
+00:23:43,120 --> 00:23:46,160
+Indeed, this instantiation
+is sufficient to show
+
+242
+00:23:46,160 --> 00:23:51,240
+that the simplified type is
+a subtype of the original type.
+
+243
+00:23:51,240 --> 00:23:53,880
+Let us once again go back to
+the type inference example,
+
+244
+00:23:53,880 --> 00:23:56,320
+but this time consider
+the same term applied
+
+245
+00:23:56,320 --> 00:23:58,320
+to the value zero.
+
+246
+00:23:58,320 --> 00:24:01,440
+We go back to the state of
+type inference as we left it.
+
+247
+00:24:01,440 --> 00:24:04,520
+And now consider
+the application of argument zero
+
+248
+00:24:04,520 --> 00:24:05,680
+of type net.
+
+249
+00:24:05,680 --> 00:24:07,800
+This generates a constraint
+that net should be
+
+250
+00:24:07,800 --> 00:24:09,080
+a subtype of alpha,
+
+251
+00:24:09,080 --> 00:24:11,800
+which is the argument
+type of the function.
+
+252
+00:24:11,800 --> 00:24:14,840
+So we register net as
+a lower bound of alpha.
+
+253
+00:24:14,840 --> 00:24:16,480
+But we are not done yet.
+
+254
+00:24:16,480 --> 00:24:18,480
+We also have to propagate
+the constraint,
+
+255
+00:24:18,480 --> 00:24:22,040
+and check that net is
+also a subtype of int,
+
+256
+00:24:22,040 --> 00:24:23,520
+which works out.
+
+257
+00:24:23,520 --> 00:24:26,400
+This gives us the result
+type beta to gamma,
+
+258
+00:24:26,400 --> 00:24:28,200
+with these new constraints,
+
+259
+00:24:28,200 --> 00:24:31,400
+which yields the following
+simplified type.
+
+260
+00:24:31,400 --> 00:24:34,360
+Alpha intersection int,
+to alpha union net.
+
+261
+00:24:37,440 --> 00:24:39,880
+But what happens if we
+have a type error?
+
+262
+00:24:39,880 --> 00:24:42,120
+For example, if we tried
+to apply the function
+
+263
+00:24:42,120 --> 00:24:45,240
+with the Boolean literal false?
+
+264
+00:24:45,240 --> 00:24:49,920
+In this case, we use bool
+as a lower bound of alpha,
+
+265
+00:24:49,920 --> 00:24:52,240
+but while propagating
+the constraint,
+
+266
+00:24:52,240 --> 00:24:55,400
+we are left constraining bool
+to be a subtype of int,
+
+267
+00:24:55,400 --> 00:24:59,240
+which obviously leads to an error.
+
+268
+00:24:59,240 --> 00:25:01,760
+As you can imagine, there's
+a lot more to talk about.
+
+269
+00:25:01,760 --> 00:25:04,480
+You can read the paper to
+learn about let-polymorphism,
+
+270
+00:25:04,480 --> 00:25:06,880
+which complicates
+the picture quite a bit,
+
+271
+00:25:06,880 --> 00:25:09,000
+the ending of recursive constraints,
+
+272
+00:25:09,000 --> 00:25:11,640
+different approaches to
+type simplification.
+
+273
+00:25:11,640 --> 00:25:13,960
+The soundness and completeness
+of type inference,
+
+274
+00:25:13,960 --> 00:25:16,440
+and how subtyping
+enables typing terms,
+
+275
+00:25:16,440 --> 00:25:19,400
+which were not typable before.
+
+276
+00:25:19,400 --> 00:25:22,240
+Finally, I'd like to correct
+some common misunderstandings
+
+277
+00:25:22,240 --> 00:25:24,160
+about algebraic subtyping.
+
+278
+00:25:24,160 --> 00:25:26,640
+First union and intersection types,
+
+279
+00:25:26,640 --> 00:25:28,520
+are not truly first-class.
+
+280
+00:25:28,520 --> 00:25:31,280
+As we have seen, they simply
+result from the printing
+
+281
+00:25:31,280 --> 00:25:33,440
+of compact type representations.
+
+282
+00:25:33,440 --> 00:25:35,920
+In fact, they cannot be used
+directly by programmers
+
+283
+00:25:35,920 --> 00:25:38,960
+as is done in languages like
+TypeScript or Scarlet ,
+
+284
+00:25:38,960 --> 00:25:40,800
+because in our approach,
+
+285
+00:25:40,800 --> 00:25:43,720
+there are syntactic restrictions
+on the places where unions
+
+286
+00:25:43,720 --> 00:25:46,360
+and intersections are
+allowed to occur.
+
+287
+00:25:46,360 --> 00:25:48,360
+Supporting first-class
+unions and intersections
+
+288
+00:25:48,360 --> 00:25:49,920
+would be difficult when maintaining
+
+289
+00:25:49,920 --> 00:25:51,720
+the principle type property.
+
+290
+00:25:51,720 --> 00:25:55,040
+That is the ability to always
+infer a most specific type.
+
+291
+00:25:55,040 --> 00:25:56,640
+Moreover, it would
+make simplification
+
+292
+00:25:56,640 --> 00:25:58,480
+and other algorithms difficult.
+
+293
+00:25:58,480 --> 00:26:01,280
+So the expressiveness of
+the language studied in the paper
+
+294
+00:26:01,280 --> 00:26:04,160
+is in fact, similar to
+a structurally typed Java,
+
+295
+00:26:04,160 --> 00:26:10,080
+which includes its F-bounded
+quantification features.
+
+296
+00:26:10,080 --> 00:26:11,720
+Another aspect of
+algebraic subtyping,
+
+297
+00:26:11,720 --> 00:26:13,200
+which I would like to clarify
+
+298
+00:26:13,200 --> 00:26:15,920
+is its relation with invariants.
+
+299
+00:26:15,920 --> 00:26:19,560
+As a typical example of invariants
+consider the ref data type,
+
+300
+00:26:19,560 --> 00:26:22,200
+which is the type of
+mutable variable references
+
+301
+00:26:22,200 --> 00:26:25,400
+and which is invariant
+in its type argument.
+
+302
+00:26:25,400 --> 00:26:29,600
+When constraining one ref type
+to be a subtype of another,
+
+303
+00:26:29,600 --> 00:26:33,800
+it is sufficient to constrain
+the type arguments, both ways.
+
+304
+00:26:33,800 --> 00:26:36,800
+However, we can no longer
+coalesce the type arguments
+
+305
+00:26:36,800 --> 00:26:38,600
+of invariant types easily,
+
+306
+00:26:38,600 --> 00:26:42,760
+since coalescing relies on
+the polarity of types to work.
+
+307
+00:26:42,760 --> 00:26:44,240
+Thankfully, there are several ways
+
+308
+00:26:44,240 --> 00:26:46,080
+to work around the problem.
+
+309
+00:26:46,080 --> 00:26:48,200
+We can simply avoid coalescing types
+
+310
+00:26:48,200 --> 00:26:50,080
+in invariant position,
+
+311
+00:26:50,080 --> 00:26:52,200
+or we could introduce new notation
+
+312
+00:26:52,200 --> 00:26:54,400
+to express ranges
+overload type arguments
+
+313
+00:26:54,400 --> 00:26:59,480
+in invariant position.
+
+314
+00:26:59,480 --> 00:27:03,800
+In conclusion, contrary to
+what many people believe,
+
+315
+00:27:03,800 --> 00:27:05,640
+complete type inference
+with subtyping
+
+316
+00:27:05,640 --> 00:27:07,760
+is not actually that hard.
+
+317
+00:27:07,760 --> 00:27:11,080
+As long as we restrict
+the usage of unions, intersections,
+
+318
+00:27:11,080 --> 00:27:13,720
+accept a little more verbosity
+around the variance,
+
+319
+00:27:13,720 --> 00:27:15,840
+and support recursive types.
+
+320
+00:27:15,840 --> 00:27:17,880
+Simple Sub is available online
+
+321
+00:27:17,880 --> 00:27:20,320
+and is less than 500 lines of code,
+
+322
+00:27:20,320 --> 00:27:22,640
+including parsing, type
+inference, simplification,
+
+323
+00:27:22,640 --> 00:27:24,480
+and pretty printing.
+
+324
+00:27:24,480 --> 00:27:28,200
+That's it from our presentation.
+Thanks for watching.
+
+325
+00:27:28,200 --> 00:27:35,840
+(AUDIENCE CLAPS)
+
+326
+00:27:35,840 --> 00:27:37,680
+STEPHANIE: Thank you Lionel.
+
+327
+00:27:37,680 --> 00:27:42,120
+If you're watching this talk as
+live as an ICFP participant,
+
+328
+00:27:42,120 --> 00:27:45,360
+please look to see if there is
+a Q&A session available
+
+329
+00:27:45,360 --> 00:27:57,360
+with the author in
+your time band now.
+
+330
+00:28:01,400 --> 00:28:03,080
+Our next talk addresses
+the challenges
+
+331
+00:28:03,080 --> 00:28:04,800
+of reasoning about resource usage
+
+332
+00:28:04,800 --> 00:28:07,080
+at compile time.
+
+333
+00:28:07,080 --> 00:28:10,080
+This talk will be
+presented by Di Wang
+
+334
+00:28:10,080 --> 00:28:13,080
+and is entitled Liquid
+Resource Types.
+
+335
+00:28:13,080 --> 00:28:17,680
+It is based on work developed
+by a team of researchers
+
+336
+00:28:17,680 --> 00:28:20,560
+at university of
+California at San Diego
+
+337
+00:28:20,560 --> 00:28:22,800
+and at Carnegie Mellon University.
+
+338
+00:28:22,800 --> 00:28:24,720
+The other authors of
+this paper include
+
+339
+00:28:24,720 --> 00:28:28,960
+Tristan Knoth, Adam
+Reynolds, Nadia Polikarpova,
+
+340
+00:28:28,960 --> 00:28:33,120
+and Jan Hoffman.
+
+341
+00:28:33,120 --> 00:28:36,240
+DI WANG: Hello, ICFP and
+the future viewers of this video.
+
+342
+00:28:36,240 --> 00:28:37,240
+My name is Di,
+
+343
+00:28:37,240 --> 00:28:39,840
+a PhD student at
+the Carnegie Mellon University.
+
+344
+00:28:39,840 --> 00:28:41,880
+And today I'm going
+to present our work
+
+345
+00:28:41,880 --> 00:28:43,640
+on liquid resource types,
+
+346
+00:28:43,640 --> 00:28:45,680
+a technique for
+automatically verifying
+
+347
+00:28:45,680 --> 00:28:48,720
+the resource consumption
+of functional programs.
+
+348
+00:28:48,720 --> 00:28:51,800
+This is a joint work with
+Tristan, Adam, Nadia,
+
+349
+00:28:51,800 --> 00:28:53,640
+from the university of San Diego,
+
+350
+00:28:53,640 --> 00:28:56,120
+and Jan from Carnegie Mellon.
+
+351
+00:28:56,120 --> 00:28:57,400
+Resource analysis studies
+
+352
+00:28:57,400 --> 00:29:00,720
+the consumption of various kinds
+of resources in a program,
+
+353
+00:29:00,720 --> 00:29:03,720
+such as time, memory,
+power, et cetera.
+
+354
+00:29:03,720 --> 00:29:06,000
+One classic scenario
+for resource analysis
+
+355
+00:29:06,000 --> 00:29:08,920
+to find out the time
+complexity of algorithms.
+
+356
+00:29:08,920 --> 00:29:11,520
+Resource analysis can also
+be applied to measure
+
+357
+00:29:11,520 --> 00:29:14,440
+gas usage of smart
+contract via blockchains
+
+358
+00:29:14,440 --> 00:29:16,840
+or detect side-channel
+vulnerabilities,
+
+359
+00:29:16,840 --> 00:29:18,920
+encrypted graphic code.
+
+360
+00:29:18,920 --> 00:29:21,200
+In this talk, let's
+focus on a scenario
+
+361
+00:29:21,200 --> 00:29:24,600
+about the time complexity
+of sorting algorithms.
+
+362
+00:29:24,600 --> 00:29:26,240
+Consider a situation
+where we want to
+
+363
+00:29:26,240 --> 00:29:29,920
+compare the performance of
+Quick sort and Insertion sorts.
+
+364
+00:29:29,920 --> 00:29:32,080
+These algorithms are
+functionally equivalent
+
+365
+00:29:32,080 --> 00:29:35,560
+and both of them run in
+quadratic time in the worst case.
+
+366
+00:29:35,560 --> 00:29:39,560
+However, if we already know
+the input is nearly sorted,
+
+367
+00:29:39,560 --> 00:29:41,320
+which means that most
+of the elements
+
+368
+00:29:41,320 --> 00:29:42,840
+are in the correct place,
+
+369
+00:29:42,840 --> 00:29:45,720
+which algorithm will have
+a better performance?
+
+370
+00:29:45,720 --> 00:29:49,520
+In fact, insertion sorts can
+achieve linear time complexity
+
+371
+00:29:49,520 --> 00:29:52,040
+on nearly sorted data.
+
+372
+00:29:52,040 --> 00:29:54,400
+So instead of
+a quadratic upper band,
+
+373
+00:29:54,400 --> 00:29:57,080
+how can we express
+the fine grain complexity
+
+374
+00:29:57,080 --> 00:29:58,520
+of insertion sorts?
+
+375
+00:29:58,520 --> 00:30:00,560
+Look at the animation that
+might help you recall
+
+376
+00:30:00,560 --> 00:30:01,920
+how insertion sort works.
+
+377
+00:30:01,920 --> 00:30:04,240
+It goes through the elements
+in the list iteratively,
+
+378
+00:30:04,240 --> 00:30:07,720
+and tries to move them to
+correct places per swaps.
+
+379
+00:30:07,720 --> 00:30:10,000
+Indeed, we can have
+a better estimation
+
+380
+00:30:10,000 --> 00:30:11,960
+than the quadratic worst case band.
+
+381
+00:30:11,960 --> 00:30:13,960
+The amount of swaps is proportional
+
+382
+00:30:13,960 --> 00:30:17,400
+to the number of out of
+order pairs in the list.
+
+383
+00:30:17,400 --> 00:30:20,720
+Now, here comes a challenge that
+our work wants to address.
+
+384
+00:30:20,720 --> 00:30:23,560
+How can a resource analysis
+formally describe
+
+385
+00:30:23,560 --> 00:30:26,240
+and also automatically
+verify such a complex,
+
+386
+00:30:26,240 --> 00:30:28,800
+value-dependent resource bands?
+
+387
+00:30:28,800 --> 00:30:30,600
+To achieve this, our work follows
+
+388
+00:30:30,600 --> 00:30:32,520
+a line fork on liquid types,
+
+389
+00:30:32,520 --> 00:30:34,280
+which support automatic verification
+
+390
+00:30:34,280 --> 00:30:35,760
+of functional properties.
+
+391
+00:30:35,760 --> 00:30:38,600
+For example, a function
+returns the absolute value
+
+392
+00:30:38,600 --> 00:30:41,080
+of its input, recent arguments
+
+393
+00:30:41,080 --> 00:30:42,920
+and existing liquid type system.
+
+394
+00:30:42,920 --> 00:30:44,720
+With a simple construct,
+
+395
+00:30:44,720 --> 00:30:47,440
+types can be annotated
+with potentials.
+
+396
+00:30:47,440 --> 00:30:49,760
+For example, a list where
+each element carries
+
+397
+00:30:49,760 --> 00:30:51,760
+one unit of potential.
+
+398
+00:30:51,760 --> 00:30:55,480
+Potentials can be used to pay
+for the costs in the program.
+
+399
+00:30:55,480 --> 00:30:57,760
+(INAUDIBLE) function
+consumes all the potential
+
+400
+00:30:57,760 --> 00:30:58,760
+in the list.
+
+401
+00:30:58,760 --> 00:31:01,600
+The cost band is linear in
+the length of the list.
+
+402
+00:31:01,600 --> 00:31:03,760
+A major limitation of
+recent type system
+
+403
+00:31:03,760 --> 00:31:06,360
+is that it only
+supports linear bands.
+
+404
+00:31:06,360 --> 00:31:09,320
+In our work, we propose
+liquid resource types,
+
+405
+00:31:09,320 --> 00:31:10,840
+with the ability to express
+
+406
+00:31:10,840 --> 00:31:13,320
+a lot more nontrivial
+resource bands.
+
+407
+00:31:13,320 --> 00:31:16,120
+A key idea is that
+the potential can be inductively
+
+408
+00:31:16,120 --> 00:31:19,880
+specified from the formation
+of data structure themselves,
+
+409
+00:31:19,880 --> 00:31:22,320
+which allows us to express
+the time complexity
+
+410
+00:31:22,320 --> 00:31:24,280
+of insertion sorts.
+
+411
+00:31:24,280 --> 00:31:27,600
+In general, liquid resource
+types provide a mechanism
+
+412
+00:31:27,600 --> 00:31:30,280
+for expressing
+and verifying super linear,
+
+413
+00:31:30,280 --> 00:31:32,240
+value-dependent resource bands.
+
+414
+00:31:32,240 --> 00:31:34,480
+We formalize to improve
+the type soundness
+
+415
+00:31:34,480 --> 00:31:36,920
+with respect to our cost semantics.
+
+416
+00:31:36,920 --> 00:31:39,560
+We also implement
+an automatic type checker
+
+417
+00:31:39,560 --> 00:31:40,960
+for liquid resource types.
+
+418
+00:31:40,960 --> 00:31:44,240
+And we validate on a suite
+of talented examples.
+
+419
+00:31:44,240 --> 00:31:47,480
+Now I have talked about
+motivations for resource analysis
+
+420
+00:31:47,480 --> 00:31:50,080
+and the main contribution
+of our work.
+
+421
+00:31:50,080 --> 00:31:52,480
+Before diving into
+the technical details,
+
+422
+00:31:52,480 --> 00:31:54,800
+I want to first introduce
+two important concepts
+
+423
+00:31:54,800 --> 00:31:56,760
+that our system is built upon:
+
+424
+00:31:56,760 --> 00:31:59,680
+Liquid types and
+the potential methods.
+
+425
+00:31:59,680 --> 00:32:02,360
+Liquid types can be seen as
+a refinement type system
+
+426
+00:32:02,360 --> 00:32:05,040
+where types are annotated
+with logical predicates
+
+427
+00:32:05,040 --> 00:32:07,280
+that can constrain the values.
+
+428
+00:32:07,280 --> 00:32:09,720
+A refined type can be
+written as a subset.
+
+429
+00:32:09,720 --> 00:32:11,400
+B is a base type of the value
+
+430
+00:32:11,400 --> 00:32:13,440
+and psi is the logical predicate.
+
+431
+00:32:13,440 --> 00:32:15,720
+For example,
+natural numbers can be defined
+
+432
+00:32:15,720 --> 00:32:19,040
+as a refined type with integers.
+
+433
+00:32:19,040 --> 00:32:21,280
+The predicate can measure
+special variable B,
+
+434
+00:32:21,280 --> 00:32:23,680
+which reflects the value
+of its inhabitants.
+
+435
+00:32:23,680 --> 00:32:26,080
+In addition, our types
+can be dependent
+
+436
+00:32:26,080 --> 00:32:28,120
+and our type can be annotated
+
+437
+00:32:28,120 --> 00:32:31,440
+with the predicate that
+references the arguments.
+
+438
+00:32:31,440 --> 00:32:33,480
+For example, the type
+showed on the slide,
+
+439
+00:32:33,480 --> 00:32:34,840
+specify that function
+
+440
+00:32:34,840 --> 00:32:37,520
+that returns a list
+whose length is one plus
+
+441
+00:32:37,520 --> 00:32:40,040
+the length of the input list.
+
+442
+00:32:40,040 --> 00:32:42,680
+The potential method
+for amortized analysis
+
+443
+00:32:42,680 --> 00:32:45,800
+is a classic approach
+for algorithm analysis,
+
+444
+00:32:45,800 --> 00:32:48,080
+which can be dated back to 1985.
+
+445
+00:32:48,080 --> 00:32:50,800
+The high lift idea to
+treat a program execution
+
+446
+00:32:50,800 --> 00:32:52,640
+as a translation graph
+on non program states.
+
+447
+00:32:53,320 --> 00:32:54,680
+And each arc
+on the graph
+
+448
+00:32:54,680 --> 00:32:56,760
+contains the actual
+transitional cost
+
+449
+00:32:56,760 --> 00:32:59,760
+between two states to analyze
+the resource consumption,
+
+450
+00:32:59,760 --> 00:33:01,680
+we devise a potential
+function five
+
+451
+00:33:01,680 --> 00:33:05,360
+that maps program state
+to a non-negative number,
+
+452
+00:33:05,360 --> 00:33:07,160
+such that the potential
+of the state
+
+453
+00:33:07,160 --> 00:33:09,480
+is enough to pay
+for the extra cost
+
+454
+00:33:09,480 --> 00:33:11,600
+of the current transition
+and the potential
+
+455
+00:33:11,600 --> 00:33:13,600
+of the next state
+in this way,
+
+456
+00:33:13,600 --> 00:33:16,640
+the potential of the initial state
+provide an upper bound
+
+457
+00:33:16,640 --> 00:33:19,240
+or the actual
+resource consumption.
+
+458
+00:33:19,240 --> 00:33:22,160
+A prior work, RESYN,
+has combined liquid types
+
+459
+00:33:22,160 --> 00:33:24,160
+with the potential methods
+to automatically
+
+460
+00:33:24,160 --> 00:33:26,680
+verify resource bonds
+of function programs.
+
+461
+00:33:26,680 --> 00:33:29,840
+The tiers to annotate
+types of potentials.
+
+462
+00:33:29,840 --> 00:33:31,440
+The potential annotation
+that the logical
+
+463
+00:33:31,440 --> 00:33:34,040
+predicates are in
+RESYN refinement language.
+
+464
+00:33:34,040 --> 00:33:36,160
+The difference that's
+potentially numeric
+
+465
+00:33:36,160 --> 00:33:39,280
+that's predicates a Boolean.
+The potential annotations
+
+466
+00:33:39,280 --> 00:33:43,000
+then defines a potential function
+or the value of the annotated type.
+
+467
+00:33:43,000 --> 00:33:46,600
+For example, the type on the slide
+describes a natural number,
+
+468
+00:33:46,600 --> 00:33:49,800
+countering potential
+equal to five times of its value.
+
+469
+00:33:49,800 --> 00:33:52,280
+Potential annotations
+can also be conditional.
+
+470
+00:33:52,280 --> 00:33:55,560
+The type gesture on the slide
+describes a list of numbers
+
+471
+00:33:55,560 --> 00:33:59,160
+where each non-negative element
+carries one unit of potential.
+
+472
+00:33:59,160 --> 00:34:01,800
+What's this construct,
+RESYN is able to express
+
+473
+00:34:01,800 --> 00:34:05,080
+and verify value dependent
+linear resource bounds.
+
+474
+00:34:05,080 --> 00:34:07,880
+Take a look at
+the functional program on the slide.
+
+475
+00:34:07,880 --> 00:34:10,760
+The insertion function
+as a set routine of insertion sorts
+
+476
+00:34:10,760 --> 00:34:13,400
+in certain elements X
+to a proper place
+
+477
+00:34:13,400 --> 00:34:16,800
+in the list Xs.
+Where you stick expressions,
+
+478
+00:34:16,800 --> 00:34:20,000
+marked in blue
+specify as resource metric.
+
+479
+00:34:20,000 --> 00:34:22,200
+In this program,
+we use text to count the number
+
+480
+00:34:22,200 --> 00:34:24,720
+of recursive cost.
+RESYN can verify
+
+481
+00:34:24,720 --> 00:34:26,800
+a value dependent
+linear resource bound
+
+482
+00:34:26,800 --> 00:34:29,080
+showed on this list,
+however, they can
+
+483
+00:34:29,080 --> 00:34:31,360
+not express a type
+for insertion types
+
+484
+00:34:31,360 --> 00:34:35,600
+because it can only distribute
+potential uniformly within a list.
+
+485
+00:34:35,600 --> 00:34:37,840
+But insertion sorts
+request a mechanism
+
+486
+00:34:37,840 --> 00:34:41,240
+to display pairs
+of elements in the list.
+
+487
+00:34:41,240 --> 00:34:43,800
+OK, Now I have introduced
+a two important
+
+488
+00:34:43,800 --> 00:34:47,720
+building blocks of our work
+liquid types as a potential message.
+
+489
+00:34:47,720 --> 00:34:50,320
+No, we have show
+how our work extends prior work,
+
+490
+00:34:50,320 --> 00:34:53,560
+which two powerful mechanisms
+and how to reduce
+
+491
+00:34:53,560 --> 00:34:56,160
+type verification
+to constant solving
+
+492
+00:34:56,160 --> 00:34:59,440
+Our first mechanism
+is inductive potentials.
+
+493
+00:34:59,440 --> 00:35:01,600
+Rather than only put
+potential to elements
+
+494
+00:35:01,600 --> 00:35:03,840
+in a data structure.
+We can specify potentials
+
+495
+00:35:03,840 --> 00:35:07,880
+inductively from the formation
+of the data structure itself.
+
+496
+00:35:07,880 --> 00:35:10,800
+The code on the slide
+shows that definition of Q list
+
+497
+00:35:10,800 --> 00:35:14,520
+available in list types
+with quadratic potentials.
+
+498
+00:35:14,520 --> 00:35:18,160
+Here, the Q curse constructor
+maintains as a tail of list
+
+499
+00:35:18,160 --> 00:35:22,280
+carries one more unit of potential
+in each element and the head
+
+500
+00:35:22,280 --> 00:35:25,480
+and the tail itself is
+again a Q list.
+
+501
+00:35:25,480 --> 00:35:28,640
+How does such a simple
+constant potential annotation
+
+502
+00:35:28,640 --> 00:35:31,600
+leads to an overall
+quadratic potential function?
+
+503
+00:35:31,600 --> 00:35:35,120
+Well, let's do a calculation,
+supposed to list a elements
+
+504
+00:35:35,120 --> 00:35:38,680
+v1, v2, through Vn
+is of type Q list T
+
+505
+00:35:38,680 --> 00:35:43,000
+While the value of type T
+has P units of potential
+
+506
+00:35:43,000 --> 00:35:45,640
+Then for every element
+of BI in your list,
+
+507
+00:35:45,640 --> 00:35:49,920
+it carries P units of potential
+and a definition of queue comes.
+
+508
+00:35:49,920 --> 00:35:53,600
+It also indicates extra potential
+equal to the number of elements
+
+509
+00:35:53,600 --> 00:35:56,640
+to the right of Vi.
+Therefore, those
+
+510
+00:35:56,640 --> 00:36:00,720
+10 potential function is quadratic
+in the length of the list.
+
+511
+00:36:00,720 --> 00:36:02,520
+More interestingly,
+we can use a value
+
+512
+00:36:02,520 --> 00:36:06,280
+dependent in that potential
+to express fine green bonds,
+
+513
+00:36:06,280 --> 00:36:08,680
+the type of ISList
+showed on a slide.
+
+514
+00:36:08,680 --> 00:36:11,120
+It's almost identical
+except that IQList
+
+515
+00:36:11,120 --> 00:36:15,080
+except that extra potential required by
+the IS course constructor
+
+516
+00:36:15,080 --> 00:36:18,240
+is not the constant one,
+but a conditioner expression
+
+517
+00:36:18,240 --> 00:36:21,040
+does evaluate to one.
+Even only if element
+
+518
+00:36:21,040 --> 00:36:23,720
+in the tail is less than
+the head elements,
+
+519
+00:36:23,720 --> 00:36:25,600
+In other words,
+the potential specified
+
+520
+00:36:25,600 --> 00:36:30,560
+by ISList is exactly the number
+of out of order repairs in the list.
+
+521
+00:36:30,560 --> 00:36:33,000
+In this way, we formally express
+a fine grade
+
+522
+00:36:33,000 --> 00:36:36,600
+time complexity of insertion sorts
+in your type system.
+
+523
+00:36:37,240 --> 00:36:41,640
+However, inductive potentials
+on their own, are difficult to use.
+
+524
+00:36:41,640 --> 00:36:45,160
+The potential annotations are built
+into the data type definitions.
+
+525
+00:36:45,160 --> 00:36:47,120
+So any slight change
+in the analysis
+
+526
+00:36:47,120 --> 00:36:49,760
+or resource metric,
+request redefining
+
+527
+00:36:49,760 --> 00:36:52,440
+a nucleotide type.
+To address this issues,
+
+528
+00:36:52,440 --> 00:36:55,600
+We have proposed
+a second mechanism,
+
+529
+00:36:55,600 --> 00:36:58,280
+abstract potentials
+in liquid resource types.
+
+530
+00:36:58,280 --> 00:37:00,080
+We allow data types
+to be parameterized
+
+531
+00:37:00,080 --> 00:37:04,520
+by a numeric potential extractor.
+Thus both QList and ISList
+
+532
+00:37:04,520 --> 00:37:08,920
+can be seen as an extension
+of a more general list type.
+
+533
+00:37:08,920 --> 00:37:12,040
+The list type is parameterized
+by numerical function Q,
+
+534
+00:37:12,040 --> 00:37:14,920
+which takes two
+of this element as arguments.
+
+535
+00:37:14,920 --> 00:37:17,800
+Then is the curse constructor
+will use the function Q
+
+536
+00:37:17,800 --> 00:37:20,280
+to define the amount
+of extra potential
+
+537
+00:37:20,280 --> 00:37:23,280
+added to the tail.
+What's this abstract type?
+
+538
+00:37:23,280 --> 00:37:26,040
+QList list can be defined
+as list with Q
+
+539
+00:37:26,040 --> 00:37:28,720
+inserted with
+a constant one function
+
+540
+00:37:28,720 --> 00:37:32,360
+while ISList can be fine as list
+with Q inserted.
+
+541
+00:37:32,360 --> 00:37:36,240
+Where's that conditional expression
+that compares two elements.
+
+542
+00:37:36,240 --> 00:37:38,760
+Now you may wonder
+where's this new construct,
+
+543
+00:37:38,760 --> 00:37:40,480
+how can type checking
+your type system
+
+544
+00:37:40,480 --> 00:37:42,840
+be automated.
+Let's use the insertion
+
+545
+00:37:42,840 --> 00:37:45,520
+sort program as an example,
+to illustrate a reduction
+
+546
+00:37:45,520 --> 00:37:48,280
+from type checking
+to constant solving.
+
+547
+00:37:48,280 --> 00:37:52,920
+The program uses insert (INAUDIBLE)
+plus elements to the right place.
+
+548
+00:37:52,920 --> 00:37:55,560
+Our system does not infer types.
+So we assumed that
+
+549
+00:37:55,560 --> 00:37:58,160
+we have the types signature
+for recursive functions.
+
+550
+00:37:58,160 --> 00:38:00,320
+Insert and sort,
+Our type checker
+
+551
+00:38:00,320 --> 00:38:02,520
+goes through the program,
+in a top down manner
+
+552
+00:38:02,520 --> 00:38:04,480
+and generates
+constraints on the flight.
+
+553
+00:38:04,480 --> 00:38:06,440
+For a sort of function.
+Initially, the content
+
+554
+00:38:06,440 --> 00:38:08,880
+only sometimes
+the argument X's
+
+555
+00:38:08,880 --> 00:38:11,600
+after the pattern match.
+If Xs is an empty list,
+
+556
+00:38:11,600 --> 00:38:14,960
+then it caries zero potential.
+But because it is also free
+
+557
+00:38:14,960 --> 00:38:18,360
+to create a new empty list,
+the new case is verified.
+
+558
+00:38:18,360 --> 00:38:21,720
+Otherwise, if Xs is not emptied,
+then the potential of Xs
+
+559
+00:38:21,720 --> 00:38:23,600
+is transferred
+to the variables,
+
+560
+00:38:23,600 --> 00:38:27,200
+head and tail.
+The component of con's constructor.
+
+561
+00:38:27,200 --> 00:38:30,960
+Use the definition of Cons,
+we can unfold the type signature
+
+562
+00:38:30,960 --> 00:38:34,800
+and obtain the potential
+story head, head and tail.
+
+563
+00:38:34,800 --> 00:38:36,560
+Then there is the rest
+of the program.
+
+564
+00:38:36,560 --> 00:38:39,360
+There are two function cause.
+At this point, we need
+
+565
+00:38:39,360 --> 00:38:42,280
+to split the potential
+in the context into two parts.
+
+566
+00:38:42,280 --> 00:38:44,480
+And each part is used
+to pay for the cost
+
+567
+00:38:44,480 --> 00:38:47,200
+of one function call
+and the top down phase.
+
+568
+00:38:47,200 --> 00:38:50,280
+We don't really know
+how to split the potential.
+
+569
+00:38:50,280 --> 00:38:51,800
+So it creates
+symbolic potentials,
+
+570
+00:38:51,800 --> 00:38:55,000
+annotations, and generous
+constraints among the symbols.
+
+571
+00:38:55,000 --> 00:38:59,600
+No doubt for the culture of sorts,
+it's wrapped by a tick expression.
+
+572
+00:38:59,600 --> 00:39:02,560
+So it needs to use the potential
+to pay for the tick.
+
+573
+00:39:02,560 --> 00:39:04,280
+For simplicity,
+let's assume that
+
+574
+00:39:04,280 --> 00:39:06,120
+the type checker
+uses a potential
+
+575
+00:39:06,120 --> 00:39:08,920
+sorting head to pay for the tick,
+something in the context
+
+576
+00:39:08,920 --> 00:39:11,000
+for type checking
+the cons to sort,
+
+577
+00:39:11,000 --> 00:39:14,840
+the annotation ahead
+to complete two minus one.
+
+578
+00:39:14,840 --> 00:39:16,080
+Now let's take a look
+at the constraints
+
+579
+00:39:16,080 --> 00:39:18,640
+generated by our type checker.
+They concentrate our search,
+
+580
+00:39:18,640 --> 00:39:23,280
+the predictions of P1, P2, Q1, Q2.
+First of all, there are constraints
+
+581
+00:39:23,280 --> 00:39:26,960
+specifying the potential split.
+The potential in different parts.
+
+582
+00:39:26,960 --> 00:39:30,680
+So sum up to the original potential
+in the context, then for the tick,
+
+583
+00:39:30,680 --> 00:39:32,520
+we need to ensure
+that the potential
+
+584
+00:39:32,520 --> 00:39:34,520
+is enough to pay
+for the cost,
+
+585
+00:39:34,520 --> 00:39:36,840
+which means that
+the potential after the tick
+
+586
+00:39:36,840 --> 00:39:39,880
+is still non-negative.
+Finally the type checker
+
+587
+00:39:39,880 --> 00:39:42,320
+generates the constraint
+for function cost
+
+588
+00:39:42,320 --> 00:39:44,480
+for the culture of sorts
+with assume that
+
+589
+00:39:44,480 --> 00:39:47,000
+there's a type of parameter a,
+instantiated away
+
+590
+00:39:47,000 --> 00:39:49,640
+and unknown potential
+annotation S
+
+591
+00:39:49,640 --> 00:39:51,520
+which is so used
+to stress on potential
+
+592
+00:39:51,520 --> 00:39:54,800
+to be used by the later
+call to insert.
+
+593
+00:39:54,800 --> 00:39:56,640
+Similarly, we'll use
+the signature insert
+
+594
+00:39:56,640 --> 00:40:01,000
+to generate that constraint on S.
+Now, after the type checker
+
+595
+00:40:01,000 --> 00:40:03,400
+generates all its constraints,
+it tries to solve
+
+596
+00:40:03,400 --> 00:40:05,920
+the constraints by fighting
+proper instances
+
+597
+00:40:05,920 --> 00:40:09,480
+of P1, P2 and Q1, Q2.
+this cons are essentially
+
+598
+00:40:09,480 --> 00:40:12,320
+Second-Order Conditional
+Linear Arithmetic constraints.
+
+599
+00:40:12,320 --> 00:40:14,320
+And solving such constraints
+automatically is
+
+600
+00:40:14,320 --> 00:40:17,320
+a well-studied problem.
+So in this way,
+
+601
+00:40:17,320 --> 00:40:22,120
+we are an automatic type checker
+for the liquid resource types.
+
+602
+00:40:22,120 --> 00:40:24,560
+As for theoretical aspects,
+we've formalized
+
+603
+00:40:24,560 --> 00:40:26,960
+and improve the standards,
+liquid resource types,
+
+604
+00:40:26,960 --> 00:40:30,000
+with respect to our cost,
+to aware small step
+
+605
+00:40:30,000 --> 00:40:33,680
+operational semantics
+are some new shorts
+
+606
+00:40:33,680 --> 00:40:35,080
+that are weld
+have close program.
+
+607
+00:40:35,080 --> 00:40:38,200
+We'll never run out of resources.
+If it starts with
+
+608
+00:40:38,200 --> 00:40:41,080
+the amount of resources
+equal to the initial potential
+
+609
+00:40:41,080 --> 00:40:44,560
+specified by the types,
+details of the theoretical results
+
+610
+00:40:44,560 --> 00:40:47,640
+can be found in our paper,
+and the technical reports.
+
+611
+00:40:47,640 --> 00:40:49,840
+As I explain
+how our type system
+
+612
+00:40:49,840 --> 00:40:52,160
+formally expresses
+and automatically
+
+613
+00:40:52,160 --> 00:40:54,880
+verified resource banks
+with liquid resource types.
+
+614
+00:40:54,880 --> 00:40:58,560
+You may wonder whether the system
+is effective in practice or not.
+
+615
+00:40:58,560 --> 00:41:00,880
+Let's first take a look at some
+reuse support resource
+
+616
+00:41:00,880 --> 00:41:03,560
+annotated data types,
+which we'll use to specify
+
+617
+00:41:03,560 --> 00:41:06,520
+the type signature
+for (INAUDIBLE) programs.
+
+618
+00:41:06,520 --> 00:41:09,000
+The first one for
+quadratic potential over list.
+
+619
+00:41:09,000 --> 00:41:11,560
+We have already shown
+during the presentation.
+
+620
+00:41:11,560 --> 00:41:15,080
+The second, they were specified
+explanation potential over list,
+
+621
+00:41:15,080 --> 00:41:17,880
+by doubling the potential
+in each element of the tail
+
+622
+00:41:17,880 --> 00:41:20,960
+and ECOS constructor,
+the sub one to find
+
+623
+00:41:20,960 --> 00:41:24,160
+binary trees, to capture
+tree hiding the potential.
+
+624
+00:41:24,160 --> 00:41:26,960
+Then not constructor
+asks Q more unit for potentials
+
+625
+00:41:26,960 --> 00:41:30,280
+to the element, the structure.
+So basically an element
+
+626
+00:41:30,280 --> 00:41:33,640
+at a list caries Q times H,
+units of potential
+
+627
+00:41:33,640 --> 00:41:37,120
+where H is the depth of the lists.
+In this way, we can express
+
+628
+00:41:37,120 --> 00:41:39,160
+our resource path
+like O and like M.
+
+629
+00:41:39,160 --> 00:41:41,200
+It's a binary tree
+it's balanced.
+
+630
+00:41:41,200 --> 00:41:44,080
+The fourth one
+also defines binary trees.
+
+631
+00:41:44,080 --> 00:41:46,640
+Pathed data science potential,
+proceeds to the
+
+632
+00:41:46,640 --> 00:41:49,480
+to lift pass on a tree.
+This is achieved
+
+633
+00:41:49,480 --> 00:41:51,200
+by primary rights
+in the pipe,
+
+634
+00:41:51,200 --> 00:41:55,200
+biological predicate,
+as a guide to a specific list.
+
+635
+00:41:55,200 --> 00:41:56,440
+What is this data types?
+
+636
+00:41:56,440 --> 00:41:59,080
+We are able to extract
+and verify the type complexities
+
+637
+00:41:59,080 --> 00:42:01,720
+of type challenging
+benchmark programs.
+
+638
+00:42:01,720 --> 00:42:03,760
+As a table shows
+the resource bounds
+
+639
+00:42:03,760 --> 00:42:07,040
+can be polynomial
+non-polynomial or value dependent,
+
+640
+00:42:07,040 --> 00:42:10,480
+or prototype implementation
+is written globally efficient,
+
+641
+00:42:10,480 --> 00:42:13,200
+and a non-automated
+resource announcing system
+
+642
+00:42:13,200 --> 00:42:15,880
+can verify all
+of our benchmarks,
+
+643
+00:42:15,880 --> 00:42:18,920
+details of the benchmark programs
+can be found in our paper
+
+644
+00:42:18,920 --> 00:42:22,160
+and the technical reports.
+In summary what propels
+
+645
+00:42:22,160 --> 00:42:24,280
+liquid resource types
+as an extension
+
+646
+00:42:24,280 --> 00:42:26,480
+of liquid types to express
+and automatically
+
+647
+00:42:26,480 --> 00:42:29,840
+verify value-dependent.
+super-linear resource bounds
+
+648
+00:42:29,840 --> 00:42:32,040
+or functional programs.
+We formally prove
+
+649
+00:42:32,040 --> 00:42:34,520
+the soundness of our
+type system and implement
+
+650
+00:42:34,520 --> 00:42:37,280
+a prototype type checker
+that is shown to be
+
+651
+00:42:37,280 --> 00:42:40,320
+effective in our experiments.
+Our work still has
+
+652
+00:42:40,320 --> 00:42:43,120
+a bunch of limitations.
+For example, our system
+
+653
+00:42:43,120 --> 00:42:45,960
+only supports
+inductively defined potentials.
+
+654
+00:42:45,960 --> 00:42:49,760
+Does not allow multi-variate
+bounds like m times m.
+
+655
+00:42:49,760 --> 00:42:52,360
+And we don't have
+a type inference algorithms yet.
+
+656
+00:42:52,360 --> 00:42:55,440
+This is the limitations
+are interesting research directions.
+
+657
+00:42:55,440 --> 00:42:57,480
+And we hope
+to explore some of them
+
+658
+00:42:57,480 --> 00:43:00,560
+in the future.
+Thanks for your attention.
+
+659
+00:43:00,560 --> 00:43:07,680
+(APPLAUSE)
+
+660
+00:43:08,640 --> 00:43:11,600
+STEPHANIE Thank you Dee,
+at this point,
+
+661
+00:43:11,600 --> 00:43:15,680
+if you're watching this stream
+live as an ICP participant,
+
+662
+00:43:15,680 --> 00:43:17,280
+please remember
+to look to see if
+
+663
+00:43:17,280 --> 00:43:21,400
+there's a Q&A session
+available in your time band
+
+664
+00:43:21,400 --> 00:43:24,960
+so that you can discuss
+this work with the author.
+
+665
+00:43:30,400 --> 00:43:31,920
+Our next talk
+will be presented
+
+666
+00:43:31,920 --> 00:43:34,280
+by Glenn Mevel,
+who will be presenting
+
+667
+00:43:34,280 --> 00:43:38,600
+a concurrent separation logic
+for multi-core OCaml.
+
+668
+00:43:39,800 --> 00:43:42,000
+GLEN MEVEL: So welcome to this talk,
+I 'm Glen Mevel, I 'm with
+
+669
+00:43:42,000 --> 00:43:43,480
+Jacques-Henri Jourdan
+and Francois Pottier,
+
+670
+00:43:43,480 --> 00:43:46,320
+We've been working on
+a concurrent separation logic,
+
+671
+00:43:46,320 --> 00:43:48,720
+Multicore OCaml
+What does that mean
+
+672
+00:43:48,720 --> 00:43:51,840
+our aim is to verify,
+fine-grained concurrent programs
+
+673
+00:43:51,840 --> 00:43:53,240
+in the setting
+of the vertical
+
+674
+00:43:53,240 --> 00:43:57,160
+OCaml's memory model,
+which is a weak memory model.
+
+675
+00:43:57,160 --> 00:43:59,520
+In this talk,
+I present a concurrence
+
+676
+00:43:59,520 --> 00:44:02,440
+separation logic
+with a notion of views.
+
+677
+00:44:04,080 --> 00:44:06,600
+So if you want to
+setup Multicore Ocaml
+
+678
+00:44:06,600 --> 00:44:08,880
+as the name suggests
+it is an extension
+
+679
+00:44:08,880 --> 00:44:10,440
+of your common
+programming language
+
+680
+00:44:10,440 --> 00:44:13,120
+with support
+for Multicore programming,
+
+681
+00:44:13,120 --> 00:44:16,320
+it comes with a weak memory model
+which has been formalized
+
+682
+00:44:16,320 --> 00:44:19,520
+in the paper PLDI, 18,
+and it features
+
+683
+00:44:19,520 --> 00:44:24,520
+two flavours of locations
+which are atomic and non-atomic.
+
+684
+00:44:25,120 --> 00:44:27,520
+By the way if you're interested
+in the garbage collector
+
+685
+00:44:27,520 --> 00:44:29,920
+of Multicore OCaml,
+please have a look
+
+686
+00:44:29,920 --> 00:44:32,160
+at this other ICFP paper, title is
+
+687
+00:44:32,160 --> 00:44:35,520
+"Retrofitting
+Parallelism onto OCaml."
+
+688
+00:44:36,400 --> 00:44:38,200
+So what is the challenge here?
+
+689
+00:44:38,200 --> 00:44:40,360
+Essentially, the challenge
+is dealing with
+
+690
+00:44:40,360 --> 00:44:43,280
+the weak memory
+and secondary consistency
+
+691
+00:44:43,280 --> 00:44:46,080
+traditionals concurrent
+separation logic
+
+692
+00:44:46,080 --> 00:44:49,520
+gives you a post to a session,
+experts to V
+
+693
+00:44:49,520 --> 00:44:51,920
+which expresses your
+(INAUDIBLE) ownership
+
+694
+00:44:51,920 --> 00:44:55,120
+of the memory location X
+on which also
+
+695
+00:44:55,120 --> 00:44:58,440
+says which volume
+we started next.
+
+696
+00:44:58,440 --> 00:45:01,880
+Then you have the usual
+horse time resolving rules.
+
+697
+00:45:01,880 --> 00:45:04,880
+And this assertion
+gives you ownership of X
+
+698
+00:45:04,880 --> 00:45:06,120
+but you may
+want to share
+
+699
+00:45:06,120 --> 00:45:08,680
+this ownership
+and goals, right..
+
+700
+00:45:08,680 --> 00:45:12,120
+To do so, And use assertion,
+is to put the assertion,
+
+701
+00:45:12,120 --> 00:45:14,280
+in an invariant,
+
+702
+00:45:14,280 --> 00:45:16,880
+intuitively and invariant
+holes at all times,
+
+703
+00:45:16,880 --> 00:45:19,520
+and it contains
+contents can be accessed equally
+
+704
+00:45:19,520 --> 00:45:21,320
+by all threats.
+
+705
+00:45:21,840 --> 00:45:24,640
+Here, we can put
+X points to something
+
+706
+00:45:24,640 --> 00:45:26,920
+in an invariant
+which we did not
+
+707
+00:45:26,920 --> 00:45:29,960
+by boxing in-depth session,
+then any thread
+
+708
+00:45:29,960 --> 00:45:35,360
+that can access X as long as
+it presents the inference
+
+709
+00:45:35,360 --> 00:45:38,680
+no, what breaths
+and the weak memory model
+
+710
+00:45:38,680 --> 00:45:41,240
+is that each thread
+now has a different
+
+711
+00:45:41,240 --> 00:45:43,960
+view of memory.
+This notion of view
+
+712
+00:45:43,960 --> 00:45:47,360
+is crucial, because it means
+that some sessions
+
+713
+00:45:47,360 --> 00:45:50,560
+like points to a session
+are only valid
+
+714
+00:45:50,560 --> 00:45:53,640
+with respect
+to the current view of a threat
+
+715
+00:45:53,640 --> 00:45:56,240
+goal these kinds
+of assertions
+
+716
+00:45:56,240 --> 00:46:00,640
+subjective assertions.
+But on the other hand,
+
+717
+00:46:00,640 --> 00:46:03,320
+in variance whole
+equality for offerings,
+
+718
+00:46:03,320 --> 00:46:05,960
+so they can only contain
+objective sessions
+
+719
+00:46:05,960 --> 00:46:11,080
+where by objective
+we mean none subjective.
+
+720
+00:46:11,080 --> 00:46:14,200
+Then the challenge
+is to keep a program logic,
+
+721
+00:46:14,200 --> 00:46:16,880
+which felt simple
+and natural enough
+
+722
+00:46:16,880 --> 00:46:18,960
+that at the same time
+is able to deal
+
+723
+00:46:18,960 --> 00:46:21,160
+with subjectivity
+on the Loss
+
+724
+00:46:21,160 --> 00:46:24,320
+subject assertions
+to be shared, but in threads.,
+
+725
+00:46:26,800 --> 00:46:30,040
+I just spoke about the view
+of a thread on how it is
+
+726
+00:46:30,040 --> 00:46:33,080
+central to the challenge
+of weak memory,
+
+727
+00:46:33,080 --> 00:46:34,960
+but I haven't defined
+this concept yet.
+
+728
+00:46:34,960 --> 00:46:38,360
+So let me do that now,
+because of weak memory
+
+729
+00:46:38,360 --> 00:46:41,200
+H thread only know
+the subset of four writes up
+
+730
+00:46:41,200 --> 00:46:44,000
+that have upon
+to the shared memory.
+
+731
+00:46:44,000 --> 00:46:48,120
+This affects how the threads
+how the thread reads
+
+732
+00:46:48,120 --> 00:46:50,440
+on writes the memory,
+for a simple
+
+733
+00:46:50,440 --> 00:46:53,120
+once it has learned
+about the rights,
+
+734
+00:46:53,120 --> 00:46:56,440
+it cannot read
+from (INAUDIBLE) rights anymore.
+
+735
+00:46:56,440 --> 00:46:58,360
+This is an example
+of what a weak
+
+736
+00:46:58,360 --> 00:47:03,880
+memory model would say U,
+and this subset of right events,
+
+737
+00:47:03,880 --> 00:47:06,120
+we will call it a view,
+sort of view of the threads
+
+738
+00:47:06,120 --> 00:47:09,440
+of the view of a thread
+is the set of facts
+
+739
+00:47:09,440 --> 00:47:12,480
+of the right events
+it knows about.
+
+740
+00:47:13,360 --> 00:47:17,040
+Now, we want to manipulate
+these views from logic.
+
+741
+00:47:17,040 --> 00:47:20,800
+For that, we are new
+kinds of perceptions.
+
+742
+00:47:20,800 --> 00:47:22,880
+The first new kind
+of assertions is
+
+743
+00:47:22,880 --> 00:47:25,880
+this upper when you are,
+you as a view,
+
+744
+00:47:25,880 --> 00:47:28,960
+we pronounce it
+as we have seen you,
+
+745
+00:47:28,960 --> 00:47:30,840
+but it means that
+the current threat
+
+746
+00:47:30,840 --> 00:47:32,960
+knows all rights
+and user is an assertion
+
+747
+00:47:32,960 --> 00:47:36,440
+about the current view
+of the thread.
+
+748
+00:47:37,000 --> 00:47:39,800
+And the second
+your session is P at U,
+
+749
+00:47:39,800 --> 00:47:42,080
+were peers
+in the session,
+
+750
+00:47:42,080 --> 00:47:46,040
+and U with U
+is the P hold in the eyes
+
+751
+00:47:46,040 --> 00:47:48,920
+of any thread
+which has seen U.
+
+752
+00:47:48,920 --> 00:47:52,280
+For example, let's say
+that P relies
+
+753
+00:47:52,280 --> 00:47:54,520
+on knowing
+of a given right events.
+
+754
+00:47:54,520 --> 00:47:58,200
+Then it requires the current view
+to contain that right even.
+
+755
+00:47:58,200 --> 00:48:01,800
+Sort of serving PE's
+searching the subject even.
+
+756
+00:48:01,800 --> 00:48:04,240
+But instead we're going to
+sort of whatever
+
+757
+00:48:04,240 --> 00:48:06,760
+the current view is,
+if it contains
+
+758
+00:48:06,760 --> 00:48:10,160
+that right event,
+then B holds.
+
+759
+00:48:10,160 --> 00:48:14,240
+And I say these, we do not
+depend anymore on the current view.
+
+760
+00:48:14,240 --> 00:48:18,320
+So saying this is objective,
+and then, and then so P
+
+761
+00:48:18,320 --> 00:48:21,240
+maybe it's objective.
+And that's what
+
+762
+00:48:21,240 --> 00:48:26,240
+the art you means when
+U contains the given right events.
+
+763
+00:48:28,840 --> 00:48:30,840
+So we've done make
+a subject to assertion objective
+
+764
+00:48:30,840 --> 00:48:35,840
+by specifying the view
+at which we see it.
+
+765
+00:48:37,560 --> 00:48:39,720
+On the way
+U is interesting
+
+766
+00:48:39,720 --> 00:48:43,080
+because these note
+sessions, complementary,
+
+767
+00:48:43,080 --> 00:48:47,080
+or precisely in a logic
+and your session B
+
+768
+00:48:47,080 --> 00:48:49,160
+is equivalent
+to an objective,
+
+769
+00:48:49,160 --> 00:48:51,960
+assertion, any assertion
+basically equivalent
+
+770
+00:48:51,960 --> 00:48:55,320
+to an objective assertion
+of the form P at U
+
+771
+00:48:55,320 --> 00:48:58,480
+on a session of the form,
+upper row U,
+
+772
+00:48:58,480 --> 00:49:02,640
+for some view U.
+This shows in particular
+
+773
+00:49:02,640 --> 00:49:06,320
+that your assertions
+of the form upper U.
+
+774
+00:49:06,320 --> 00:49:08,760
+Capture all the
+subjectivity of the,
+
+775
+00:49:08,760 --> 00:49:12,240
+all the subjectivity
+of the weak memory.
+
+776
+00:49:12,760 --> 00:49:16,960
+And this the composition, will allow us
+to share subjective assertions,
+
+777
+00:49:16,960 --> 00:49:19,320
+but in Threads, by using
+a different mechanism for...
+
+778
+00:49:22,440 --> 00:49:24,480
+The first part P@U,
+
+779
+00:49:24,480 --> 00:49:25,320
+is a derivative
+
+780
+00:49:25,320 --> 00:49:27,720
+so it can be shared by an invariant,
+
+781
+00:49:27,720 --> 00:49:29,440
+if via an invariant,
+
+782
+00:49:29,440 --> 00:49:33,600
+just as the usual
+concurrence assertions logic.
+
+783
+00:49:33,600 --> 00:49:35,080
+Regarding the several parts,
+
+784
+00:49:35,080 --> 00:49:37,080
+sharing upper U,
+
+785
+00:49:37,080 --> 00:49:38,960
+means this changing information
+
+786
+00:49:38,960 --> 00:49:41,200
+about right events into threads.
+
+787
+00:49:41,200 --> 00:49:42,040
+So in other words,
+
+788
+00:49:42,040 --> 00:49:44,320
+it means synchronising.
+
+789
+00:49:44,320 --> 00:49:48,200
+So we will rely on some form
+of thread synchronisation,
+
+790
+00:49:48,200 --> 00:49:50,720
+that is provided by the memory model.
+
+791
+00:49:53,320 --> 00:49:55,640
+That was the main idea of this talk.
+
+792
+00:49:55,640 --> 00:49:59,560
+Now I show you what is
+in our programme logic,
+
+793
+00:49:59,560 --> 00:50:01,440
+the reason of our programmes and memory,
+
+794
+00:50:01,440 --> 00:50:03,200
+and I'll start with the simplest thing,
+
+795
+00:50:03,200 --> 00:50:05,520
+which are atomic locations.
+
+796
+00:50:06,680 --> 00:50:07,880
+For atomic locations,
+
+797
+00:50:07,880 --> 00:50:10,520
+we have a neutral looking
+points of assertion,
+
+798
+00:50:11,920 --> 00:50:13,680
+atomic x points to v,
+
+799
+00:50:13,680 --> 00:50:15,160
+which means that there are points
+
+800
+00:50:15,160 --> 00:50:17,080
+that we know the atomic location x,
+
+801
+00:50:17,080 --> 00:50:18,600
+and x stores the value v.
+
+802
+00:50:20,400 --> 00:50:22,680
+We are able to say such a thing,
+
+803
+00:50:22,680 --> 00:50:25,680
+because atomic locations behave
+
+804
+00:50:25,680 --> 00:50:28,040
+in a sequentially consistent way.
+
+805
+00:50:28,040 --> 00:50:29,120
+At any given time,
+
+806
+00:50:29,120 --> 00:50:31,920
+all threads see the same value for x.
+
+807
+00:50:33,480 --> 00:50:34,840
+In particular,
+
+808
+00:50:34,840 --> 00:50:36,520
+this assertions flipped here,
+
+809
+00:50:37,480 --> 00:50:39,320
+they should come as no surprise,
+
+810
+00:50:39,320 --> 00:50:42,000
+that atomic x's are by the usual,
+
+811
+00:50:42,000 --> 00:50:45,360
+or tribals both reads and writes.
+
+812
+00:50:48,280 --> 00:50:49,760
+Where things become interesting,
+
+813
+00:50:49,760 --> 00:50:51,800
+is for non-atomic locations.
+
+814
+00:50:51,800 --> 00:50:53,520
+The non-atomic locations of particular
+
+815
+00:50:53,520 --> 00:50:55,960
+cannot have that relaxed behaviour.
+
+816
+00:50:57,040 --> 00:51:00,280
+In a logic we still have
+an assertion express to v,
+
+817
+00:51:00,280 --> 00:51:02,440
+with its meaning differ slightly.
+
+818
+00:51:02,440 --> 00:51:04,200
+It still asserts the notion of x,
+
+819
+00:51:04,200 --> 00:51:05,800
+but instead of saying that,
+
+820
+00:51:06,640 --> 00:51:08,160
+the value affects is v,
+
+821
+00:51:08,160 --> 00:51:11,360
+it says that we have seen
+the latter tied to x,
+
+822
+00:51:11,360 --> 00:51:13,040
+and feels right based upon v.
+
+823
+00:51:14,320 --> 00:51:17,880
+And this is the typical
+subjective assertion.
+
+824
+00:51:17,880 --> 00:51:19,360
+There is no such a thing as
+
+825
+00:51:19,360 --> 00:51:21,240
+the global value effects,
+
+826
+00:51:21,240 --> 00:51:24,360
+because different threads
+do not necessarily know
+
+827
+00:51:24,360 --> 00:51:25,800
+about the same rights to x.
+
+828
+00:51:28,840 --> 00:51:31,720
+What is really nice with
+this points to assertion ,
+
+829
+00:51:31,720 --> 00:51:34,240
+is that it's also based on the rules.
+
+830
+00:51:34,240 --> 00:51:37,920
+So we have a simple looking assertion,
+
+831
+00:51:37,920 --> 00:51:39,720
+that behaves in a natural way,
+
+832
+00:51:39,720 --> 00:51:42,760
+and the price for it
+is that the assertion,
+
+833
+00:51:42,760 --> 00:51:47,040
+hides more than it gives a bit subjective.
+
+834
+00:51:47,040 --> 00:51:48,240
+So we cannot share it,
+
+835
+00:51:48,240 --> 00:51:50,480
+only by using an environment.
+
+836
+00:51:52,480 --> 00:51:54,440
+So let's see how we can share with them
+
+837
+00:51:54,440 --> 00:51:56,320
+the less and for that,
+
+838
+00:51:56,320 --> 00:51:58,520
+let's consider the typical lock pattern,
+
+839
+00:51:58,520 --> 00:51:59,920
+which is called a spin lock.
+
+840
+00:52:01,600 --> 00:52:03,320
+Let's say we have several threads,
+
+841
+00:52:03,320 --> 00:52:05,200
+that we can say have the same results,
+
+842
+00:52:05,200 --> 00:52:08,440
+such as a single monotone location.
+
+843
+00:52:08,440 --> 00:52:11,000
+Then we can use another
+big flag toward a resource,
+
+844
+00:52:11,000 --> 00:52:12,200
+when the flag is true,
+
+845
+00:52:12,200 --> 00:52:13,360
+the resource is taken,
+
+846
+00:52:13,360 --> 00:52:14,920
+and if you want to acquire it,
+
+847
+00:52:14,920 --> 00:52:17,640
+you need to wait for
+it to become available.
+
+848
+00:52:17,640 --> 00:52:19,520
+Now from a logical point of view,
+
+849
+00:52:19,520 --> 00:52:22,920
+the lock can be seen as
+quoting an assertion P,
+
+850
+00:52:22,920 --> 00:52:24,080
+which means strictly,
+
+851
+00:52:24,080 --> 00:52:24,920
+for example,
+
+852
+00:52:24,920 --> 00:52:26,720
+it may be another third
+point to assertion,
+
+853
+00:52:26,720 --> 00:52:28,680
+as we've seen before.
+
+854
+00:52:28,680 --> 00:52:30,760
+The first thread asks P,
+
+855
+00:52:30,760 --> 00:52:32,520
+before releasing the lock.
+
+856
+00:52:32,520 --> 00:52:36,400
+The second thread will get P
+after it has acquired the lock.
+
+857
+00:52:36,400 --> 00:52:38,920
+So we want P to be transferred,
+
+858
+00:52:38,920 --> 00:52:41,760
+from the first thread to the second one.
+
+859
+00:52:43,120 --> 00:52:44,480
+To see how that works,
+
+860
+00:52:44,480 --> 00:52:45,920
+let's consider,
+
+861
+00:52:45,920 --> 00:52:48,640
+I'll need a comprehensive
+operation that exists,
+
+862
+00:52:48,640 --> 00:52:51,840
+because that's when the transfer happens.
+
+863
+00:52:53,400 --> 00:52:56,280
+As we've seen with a compost
+spin to an objective part,
+
+864
+00:52:56,280 --> 00:52:57,600
+of the subjective part,
+
+865
+00:52:57,600 --> 00:52:59,360
+so that we can transfer each part.
+
+866
+00:53:00,280 --> 00:53:03,680
+The first part P@U is objective.
+
+867
+00:53:03,680 --> 00:53:06,440
+So it can be transferred
+using an invariant as before.
+
+868
+00:53:06,440 --> 00:53:08,040
+So we get rid of it.
+
+869
+00:53:08,040 --> 00:53:10,120
+So now we are down to the problem
+
+870
+00:53:10,120 --> 00:53:12,200
+of transferring up U assertion.
+
+871
+00:53:14,160 --> 00:53:15,040
+As I said before,
+
+872
+00:53:15,040 --> 00:53:17,640
+we need some form of
+synchronisation on here.
+
+873
+00:53:17,640 --> 00:53:19,000
+What vertical kernel gives us,
+
+874
+00:53:19,000 --> 00:53:21,160
+is a half as before relationship,
+
+875
+00:53:21,160 --> 00:53:24,520
+from where it is right
+to the acquired bit.
+
+876
+00:53:24,520 --> 00:53:27,440
+So instead of finding
+new primitive language,
+
+877
+00:53:27,440 --> 00:53:29,080
+vertical kernel made the choice
+
+878
+00:53:29,080 --> 00:53:32,360
+of performing reset quarters
+in concession on atomic access.
+
+879
+00:53:34,320 --> 00:53:37,040
+And we need to reflect
+this in a programme logic,
+
+880
+00:53:37,040 --> 00:53:38,720
+and we do so,
+
+881
+00:53:38,720 --> 00:53:40,920
+by extending the atomic
+points to predicate.
+
+882
+00:53:43,280 --> 00:53:46,760
+So we call that atomic parts of v,
+
+883
+00:53:46,760 --> 00:53:48,760
+means that x stores the value of v.
+
+884
+00:53:50,560 --> 00:53:52,200
+We know what's done this assertion.
+
+885
+00:53:52,200 --> 00:53:55,080
+So that atomic locations stores the part
+
+886
+00:53:55,960 --> 00:53:57,160
+of the value and a view,
+
+887
+00:53:59,600 --> 00:54:02,000
+so access is to behave the same,
+
+888
+00:54:02,000 --> 00:54:04,040
+with respect to the view value,
+
+889
+00:54:04,960 --> 00:54:08,920
+but they also perform a
+release acquire synchronisation
+
+890
+00:54:08,920 --> 00:54:09,760
+on the view.
+
+891
+00:54:11,400 --> 00:54:12,920
+So when writing,
+
+892
+00:54:12,920 --> 00:54:15,200
+we push into the shared location,
+
+893
+00:54:15,200 --> 00:54:17,960
+any information we have in the local view.
+
+894
+00:54:17,960 --> 00:54:20,200
+So that's a release, right?
+
+895
+00:54:20,200 --> 00:54:21,400
+And conversely,
+
+896
+00:54:21,400 --> 00:54:25,440
+when reading we pull into a local view,
+
+897
+00:54:25,440 --> 00:54:28,480
+any information stored
+in a shared location.
+
+898
+00:54:28,480 --> 00:54:29,720
+So that's an acquire.
+
+899
+00:54:32,000 --> 00:54:33,040
+And with this in mind,
+
+900
+00:54:33,040 --> 00:54:34,680
+let's come back to our spin lock.
+
+901
+00:54:36,320 --> 00:54:37,640
+As we have seen before,
+
+902
+00:54:37,640 --> 00:54:40,080
+the spin lock has two operations,
+
+903
+00:54:40,080 --> 00:54:41,960
+releasing and acquire,
+
+904
+00:54:41,960 --> 00:54:44,880
+in the interface equals assertion P,
+
+905
+00:54:44,880 --> 00:54:47,200
+we give the spin a specification,
+
+906
+00:54:47,200 --> 00:54:49,800
+which holds under some variant,
+
+907
+00:54:49,800 --> 00:54:50,880
+and now,
+
+908
+00:54:50,880 --> 00:54:55,080
+to put this specification in
+the usual separation logic,
+
+909
+00:54:56,160 --> 00:54:57,640
+with sequential consistency,
+
+910
+00:54:58,640 --> 00:55:00,440
+we state an environment like this.
+
+911
+00:55:01,400 --> 00:55:04,560
+We are either locked or unlocked,
+
+912
+00:55:04,560 --> 00:55:05,840
+in the latter case
+
+913
+00:55:05,840 --> 00:55:08,760
+the environ itself holds the assertion P.
+
+914
+00:55:11,400 --> 00:55:14,920
+Now in our programme
+logic with weak memory,
+
+915
+00:55:14,920 --> 00:55:16,560
+being misdirected,
+
+916
+00:55:16,560 --> 00:55:20,000
+but everything in the
+environ has to be objective.
+
+917
+00:55:20,000 --> 00:55:24,840
+So the environment we
+state instead is that one.
+
+918
+00:55:27,280 --> 00:55:28,520
+In fact,
+
+919
+00:55:28,520 --> 00:55:31,600
+it is the same as in your
+old separation logic,
+
+920
+00:55:31,600 --> 00:55:33,000
+but we add views.
+
+921
+00:55:33,000 --> 00:55:34,920
+To remain objective,
+
+922
+00:55:34,920 --> 00:55:36,240
+we make it explicit,
+
+923
+00:55:36,240 --> 00:55:39,120
+at which view we have been,
+
+924
+00:55:39,120 --> 00:55:41,280
+and we say that if it is the same view,
+
+925
+00:55:41,280 --> 00:55:43,000
+as historic in our case.
+
+926
+00:55:43,920 --> 00:55:45,240
+In other words,
+
+927
+00:55:45,240 --> 00:55:48,560
+P holds in the eyes of whoever,
+
+928
+00:55:48,560 --> 00:55:50,120
+last released the lock.
+
+929
+00:55:52,440 --> 00:55:55,560
+So that P@U in the invariants,
+
+930
+00:55:55,560 --> 00:55:57,360
+you still have to transfer,
+
+931
+00:55:57,360 --> 00:55:59,800
+the objective part of P,
+
+932
+00:55:59,800 --> 00:56:01,520
+where the atomic location cells,
+
+933
+00:56:01,520 --> 00:56:05,360
+allows to transfer the
+subjective part of P.
+
+934
+00:56:10,480 --> 00:56:13,520
+So that was the proof of the spin lock.
+
+935
+00:56:13,520 --> 00:56:14,960
+And in addition to this example,
+
+936
+00:56:14,960 --> 00:56:17,440
+we did more case studies with
+different kinds of locks.
+
+937
+00:56:17,440 --> 00:56:20,600
+Like algorithms for mutual exclusion,
+
+938
+00:56:20,600 --> 00:56:21,960
+and in all of these examples,
+
+939
+00:56:21,960 --> 00:56:25,280
+we have been experiencing the same pattern
+
+940
+00:56:25,280 --> 00:56:30,400
+of sprinkling views over our invariants.
+
+941
+00:56:30,400 --> 00:56:33,720
+So our general method
+for proving correctness,
+
+942
+00:56:33,720 --> 00:56:36,000
+of a concurrent data structure,
+
+943
+00:56:36,000 --> 00:56:37,880
+is to start by reasoning
+
+944
+00:56:37,880 --> 00:56:40,560
+as if we had a sequentially
+consistent model,
+
+945
+00:56:40,560 --> 00:56:43,240
+expressing the invariant in the usual
+
+946
+00:56:43,240 --> 00:56:45,040
+concurrent sequential logic.
+
+947
+00:56:45,040 --> 00:56:49,000
+Then identifying where
+synchronisation happens,
+
+948
+00:56:49,000 --> 00:56:51,080
+and make it explicit by adding views.
+
+949
+00:56:55,080 --> 00:56:57,080
+To sum up I have presented
+a programme logic,
+
+950
+00:56:57,080 --> 00:56:58,880
+from the curriculum,
+
+951
+00:56:58,880 --> 00:57:01,720
+based on isolating
+subjectivity into views.
+
+952
+00:57:01,720 --> 00:57:04,640
+I argued that this logic enables concise
+
+953
+00:57:04,640 --> 00:57:08,120
+and natural reasoning of
+how threads synchronise.
+
+954
+00:57:09,120 --> 00:57:10,360
+There is more in the paper,
+
+955
+00:57:10,360 --> 00:57:13,720
+namely how the logic is realised,
+
+956
+00:57:13,720 --> 00:57:15,920
+by building on top of a lower-level logic.
+
+957
+00:57:17,760 --> 00:57:19,880
+And we also have more case studies.
+
+958
+00:57:21,480 --> 00:57:24,240
+This entire works mechanised
+in the Coq proper system,
+
+959
+00:57:24,240 --> 00:57:27,120
+using the Iris version logic framework.
+
+960
+00:57:27,120 --> 00:57:29,680
+So we have a verified proof of soundness,
+
+961
+00:57:29,680 --> 00:57:32,760
+on the title language with
+which we can write programmes
+
+962
+00:57:32,760 --> 00:57:36,120
+and problem correct using
+our appropriate logic.
+
+963
+00:57:37,640 --> 00:57:38,800
+And in the future,
+
+964
+00:57:38,800 --> 00:57:41,680
+we would like to verify
+even more data structures.
+
+965
+00:57:41,680 --> 00:57:45,080
+Thus so we would like to
+investigate data races,
+
+966
+00:57:45,080 --> 00:57:47,880
+because data races are currently
+not supported in logic.
+
+967
+00:57:49,240 --> 00:57:52,480
+Even though the underlying memory model,
+
+968
+00:57:52,480 --> 00:57:54,640
+gives a few warranties about that.
+
+969
+00:57:56,000 --> 00:57:57,280
+Thank you for your attention.
+
+970
+00:57:57,280 --> 00:57:59,240
+And if you have seen on previous slides,
+
+971
+00:57:59,240 --> 00:58:01,840
+you hold the right to
+ask questions though.
+
+972
+00:58:03,240 --> 00:58:05,480
+(clapping)
+
+973
+00:58:12,040 --> 00:58:14,160
+STEPHANIE: Thank you Glenn.
+
+974
+00:58:14,160 --> 00:58:16,040
+If you are watching this talk live,
+
+975
+00:58:16,040 --> 00:58:17,920
+as an ICFP participant,
+
+976
+00:58:17,920 --> 00:58:20,960
+please look to see if there
+is a Q&A session available,
+
+977
+00:58:20,960 --> 00:58:23,280
+so that you may discuss this work
+
+978
+00:58:23,280 --> 00:58:25,160
+with the authors of this paper.
+
+979
+00:58:31,880 --> 00:58:33,760
+The fourth talk of this session,
+
+980
+00:58:33,760 --> 00:58:38,520
+is entitled Composing and
+Decomposing Op-Based CRDTs
+
+981
+00:58:38,520 --> 00:58:40,640
+with Semidirect Products.
+
+982
+00:58:40,640 --> 00:58:44,160
+This paper has been
+written by Matthew Weidner,
+
+983
+00:58:44,160 --> 00:58:46,960
+Christopher Meiklejohn, Heather Miller,
+
+984
+00:58:46,960 --> 00:58:49,560
+all from Carnegie Mellon University.
+
+985
+00:58:49,560 --> 00:58:51,480
+Matthew will be presenting the talk.
+
+986
+00:58:54,320 --> 00:58:55,520
+MATTHEW WEIDNER: Hello, I'm Matthew.
+
+987
+00:58:55,520 --> 00:58:57,120
+And I'm going to be
+talking about our paper,
+
+988
+00:58:57,120 --> 00:58:59,600
+Composing and Decomposing Op-Based
+CRDTs
+
+989
+00:58:59,600 --> 00:59:00,920
+with Semidirect Products.
+
+990
+00:59:00,920 --> 00:59:02,240
+And this was worked with Heather Miller,
+
+991
+00:59:02,240 --> 00:59:03,600
+and Christopher Meiklejohn.
+
+992
+00:59:04,640 --> 00:59:05,480
+So you'll start off,
+
+993
+00:59:05,480 --> 00:59:06,760
+let's say you're building a web app,
+
+994
+00:59:06,760 --> 00:59:08,440
+where you have some kind of storage state,
+
+995
+00:59:08,440 --> 00:59:10,400
+that can be shared
+between different users.
+
+996
+00:59:10,400 --> 00:59:12,400
+So this is basically any website nowadays,
+
+997
+00:59:12,400 --> 00:59:14,280
+and some specific examples I have in mind
+
+998
+00:59:14,280 --> 00:59:16,840
+are things like Slack or Facebook groups,
+
+999
+00:59:16,840 --> 00:59:19,440
+maybe a conference management website.
+
+1000
+00:59:19,440 --> 00:59:21,120
+So the usual way you'd build this,
+
+1001
+00:59:21,120 --> 00:59:22,960
+is you have a server.
+
+1002
+00:59:22,960 --> 00:59:24,320
+And when a client wants
+to change their state,
+
+1003
+00:59:24,320 --> 00:59:26,480
+they send a message to the server.
+
+1004
+00:59:26,480 --> 00:59:27,400
+The server responds,
+
+1005
+00:59:27,400 --> 00:59:30,080
+and then the client updates
+their own view of the state.
+
+1006
+00:59:30,080 --> 00:59:31,040
+Okay.
+
+1007
+00:59:31,040 --> 00:59:32,480
+But we know that actually the server
+
+1008
+00:59:32,480 --> 00:59:33,680
+is probably not a single machine,
+
+1009
+00:59:33,680 --> 00:59:36,040
+but a bunch of machines
+working together in the cloud
+
+1010
+00:59:36,040 --> 00:59:37,200
+using message passing.
+
+1011
+00:59:38,080 --> 00:59:39,080
+Now a lot of work has gone
+
+1012
+00:59:39,080 --> 00:59:40,520
+into making these systems efficient
+
+1013
+00:59:40,520 --> 00:59:41,840
+and easier to use,
+
+1014
+00:59:41,840 --> 00:59:43,400
+but it still can get pretty complicated.
+
+1015
+00:59:43,400 --> 00:59:45,040
+It's easy to introduce subtle bugs,
+
+1016
+00:59:45,040 --> 00:59:46,640
+and you need a lot of
+specialised knowledge
+
+1017
+00:59:46,640 --> 00:59:48,160
+to write the server-side code.
+
+1018
+00:59:50,320 --> 00:59:52,400
+So CRDTs is provide an alternative way
+
+1019
+00:59:52,400 --> 00:59:56,440
+to build applications
+that use shared state.
+
+1020
+00:59:56,440 --> 00:59:59,400
+CRDTs stand for Conflict-free
+Replicated Data Types.
+
+1021
+00:59:59,400 --> 01:00:01,640
+And basically they're
+like ordinary datatypes,
+
+1022
+01:00:01,640 --> 01:00:04,040
+except that they're shared
+between a group of users,
+
+1023
+01:00:04,040 --> 01:00:05,440
+and they intelligently sync up
+
+1024
+01:00:05,440 --> 01:00:07,440
+with each other in the background.
+
+1025
+01:00:07,440 --> 01:00:09,480
+So as an example of how you might use this
+
+1026
+01:00:09,480 --> 01:00:10,680
+on the client side,
+
+1027
+01:00:10,680 --> 01:00:14,480
+you can use this snippet
+from the Legion CRDT library.
+
+1028
+01:00:14,480 --> 01:00:15,640
+So the first two lines here
+
+1029
+01:00:15,640 --> 01:00:17,800
+set up the group state basically,
+
+1030
+01:00:17,800 --> 01:00:19,440
+and connect to each other.
+
+1031
+01:00:19,440 --> 01:00:20,480
+And then after that,
+
+1032
+01:00:20,480 --> 01:00:22,280
+if you want to have a shared set,
+
+1033
+01:00:22,280 --> 01:00:23,680
+like maybe a shopping list,
+
+1034
+01:00:23,680 --> 01:00:26,240
+all you do is instead of
+making an ordinary set,
+
+1035
+01:00:26,240 --> 01:00:27,960
+you make a legion set,
+
+1036
+01:00:27,960 --> 01:00:30,280
+and then you can just use this
+like an ordinary data type.
+
+1037
+01:00:30,280 --> 01:00:31,120
+So for instance,
+
+1038
+01:00:31,120 --> 01:00:34,440
+you're can say shopping.addmilk
+to add milk to the set.
+
+1039
+01:00:34,440 --> 01:00:36,680
+And what this will do under the hood
+
+1040
+01:00:36,680 --> 01:00:38,800
+is it updates to some
+local state immediately.
+
+1041
+01:00:38,800 --> 01:00:41,000
+And it also loosely
+broadcasts the operation
+
+1042
+01:00:41,000 --> 01:00:42,280
+to other users and replicas,
+
+1043
+01:00:42,280 --> 01:00:43,560
+who will then apply the operation
+
+1044
+01:00:43,560 --> 01:00:45,120
+to their own copy of the state.
+
+1045
+01:00:46,960 --> 01:00:48,280
+And CRDTs neat
+
+1046
+01:00:48,280 --> 01:00:49,600
+because they're programming languages
+
+1047
+01:00:49,600 --> 01:00:51,120
+way of solving a systems problem
+
+1048
+01:00:51,120 --> 01:00:53,640
+of how to build these
+applications with shared state.
+
+1049
+01:00:53,640 --> 01:00:54,480
+And in particular,
+
+1050
+01:00:54,480 --> 01:00:56,680
+the way you design them is
+principal to mathematical.
+
+1051
+01:00:56,680 --> 01:00:57,520
+So at least in theory,
+
+1052
+01:00:57,520 --> 01:01:00,120
+it should be hard to introduce
+bugs when you use it.
+
+1053
+01:01:01,760 --> 01:01:02,640
+So some pros.
+
+1054
+01:01:02,640 --> 01:01:04,800
+You have this simple
+client-side programming model,
+
+1055
+01:01:04,800 --> 01:01:05,640
+like I described,
+
+1056
+01:01:05,640 --> 01:01:07,000
+where you basically just switch out your
+
+1057
+01:01:07,000 --> 01:01:09,160
+ordinary data types for CRDTs.
+
+1058
+01:01:09,160 --> 01:01:11,880
+And then they run on
+top of a generic server.
+
+1059
+01:01:11,880 --> 01:01:13,040
+They have minimal latency.
+
+1060
+01:01:13,040 --> 01:01:13,960
+They work offline,
+
+1061
+01:01:13,960 --> 01:01:16,080
+can support end-to-end encryption.
+
+1062
+01:01:16,080 --> 01:01:18,040
+Some cons is that they're targeted
+
+1063
+01:01:18,040 --> 01:01:20,440
+for ad data that's shared
+in small groups only,
+
+1064
+01:01:20,440 --> 01:01:22,600
+it's because everyone
+has to share the state
+
+1065
+01:01:22,600 --> 01:01:23,640
+with each other and sync up.
+
+1066
+01:01:23,640 --> 01:01:25,720
+So you don't want the group to be too big.
+
+1067
+01:01:26,680 --> 01:01:29,000
+Also they have automatic
+conflict resolution,
+
+1068
+01:01:29,000 --> 01:01:31,200
+but this algorithm will
+make some specific choices,
+
+1069
+01:01:31,200 --> 01:01:34,000
+which won't be appropriate for every app.
+
+1070
+01:01:34,000 --> 01:01:35,520
+They're not for data that needs locking.
+
+1071
+01:01:35,520 --> 01:01:37,360
+But the biggest thing
+that I want to talk about,
+
+1072
+01:01:37,360 --> 01:01:38,920
+is the fact that you have to design
+
+1073
+01:01:38,920 --> 01:01:41,600
+the conflict resolution
+algorithm for each data type.
+
+1074
+01:01:41,600 --> 01:01:43,920
+Which is a difficult and ad hoc process.
+
+1075
+01:01:43,920 --> 01:01:44,760
+So in practise,
+
+1076
+01:01:44,760 --> 01:01:46,040
+what this means is that you're restricted
+
+1077
+01:01:46,040 --> 01:01:49,000
+to using a few common data types
+with restricted interfaces.
+
+1078
+01:01:49,000 --> 01:01:50,840
+Basically whatever CRDT researchers
+
+1079
+01:01:50,840 --> 01:01:52,920
+have figured out within the past 10 years.
+
+1080
+01:01:54,960 --> 01:01:55,800
+In this work,
+
+1081
+01:01:55,800 --> 01:01:57,320
+we present a compositional
+design technique
+
+1082
+01:01:57,320 --> 01:01:58,760
+for op-based CRDTs,
+
+1083
+01:01:58,760 --> 01:02:00,280
+which we call a semidirect product.
+
+1084
+01:02:00,280 --> 01:02:02,040
+It is supposed to address the difficulty
+
+1085
+01:02:02,040 --> 01:02:03,200
+of designing CRDTs.
+
+1086
+01:02:04,200 --> 01:02:05,200
+What it lets you do,
+
+1087
+01:02:05,200 --> 01:02:07,000
+is you take two inputs CRDTs,
+
+1088
+01:02:07,000 --> 01:02:08,960
+here's C1 and C2,
+
+1089
+01:02:08,960 --> 01:02:11,920
+oh and they have to operate
+on the same state type.
+
+1090
+01:02:11,920 --> 01:02:13,600
+You take a bit of extra information
+
+1091
+01:02:13,600 --> 01:02:16,200
+in the form of this function
+that we call the action.
+
+1092
+01:02:16,200 --> 01:02:17,360
+And then what you get out,
+
+1093
+01:02:17,360 --> 01:02:21,240
+is this CRDT that supports the operations
+
+1094
+01:02:21,240 --> 01:02:22,760
+of both of your inputs CRDTs,
+
+1095
+01:02:22,760 --> 01:02:25,640
+and also resolves conflicts
+between them in a natural way.
+
+1096
+01:02:27,280 --> 01:02:30,080
+You can use this for a
+composition of CRDTs directly.
+
+1097
+01:02:30,080 --> 01:02:31,640
+This is where you take two existing CRDTs
+
+1098
+01:02:31,640 --> 01:02:33,760
+and you combine them to get a CRDT
+
+1099
+01:02:33,760 --> 01:02:35,760
+with both of the operations.
+
+1100
+01:02:35,760 --> 01:02:36,800
+In practise usually,
+
+1101
+01:02:36,800 --> 01:02:40,680
+you can use this to add
+operations to an existing CRDT.
+
+1102
+01:02:40,680 --> 01:02:41,520
+So for instance,
+
+1103
+01:02:41,520 --> 01:02:43,680
+we show how to take an
+integer counter CRDT
+
+1104
+01:02:43,680 --> 01:02:45,920
+and add multiplication operations.
+
+1105
+01:02:45,920 --> 01:02:48,920
+or take off this CRDT
+add a reverse operation,
+
+1106
+01:02:48,920 --> 01:02:52,440
+or take a dictionary CRDT
+that maps keys to values
+
+1107
+01:02:52,440 --> 01:02:54,440
+and add a functional mapping operation,
+
+1108
+01:02:54,440 --> 01:02:55,760
+which applies sum operation
+
+1109
+01:02:55,760 --> 01:02:57,400
+to every value in the dictionary.
+
+1110
+01:02:58,760 --> 01:03:01,280
+You can also use our semidirect
+product for decomposition,
+
+1111
+01:03:01,280 --> 01:03:03,960
+by which I mean taking
+the existing CRDT design,
+
+1112
+01:03:03,960 --> 01:03:06,000
+and exhibiting it as a semidirect product,
+
+1113
+01:03:06,000 --> 01:03:07,640
+of two simpler CRDTs.
+
+1114
+01:03:07,640 --> 01:03:09,240
+Often, commutative data types,
+
+1115
+01:03:09,240 --> 01:03:11,880
+just sort of the simplest type of CRDTs.
+
+1116
+01:03:11,880 --> 01:03:12,720
+So for instance,
+
+1117
+01:03:12,720 --> 01:03:14,240
+if you have a set CRDT,
+
+1118
+01:03:14,240 --> 01:03:15,920
+we show how to decompose it
+
+1119
+01:03:15,920 --> 01:03:18,840
+into two simpler commutative data types.
+
+1120
+01:03:18,840 --> 01:03:20,520
+One that only has add operations,
+
+1121
+01:03:20,520 --> 01:03:22,280
+and one the only has removes.
+
+1122
+01:03:22,280 --> 01:03:25,120
+Likewise with some generic
+resettable CRDT designs,
+
+1123
+01:03:25,120 --> 01:03:27,720
+we decompose them into the non-resettable,
+
+1124
+01:03:27,720 --> 01:03:29,000
+and the resettable parts.
+
+1125
+01:03:31,480 --> 01:03:32,600
+So to explain our construction,
+
+1126
+01:03:32,600 --> 01:03:34,360
+I first want to give
+a bit more background,
+
+1127
+01:03:34,360 --> 01:03:36,120
+on how CRDTs work.
+
+1128
+01:03:36,120 --> 01:03:37,360
+So recall our system model,
+
+1129
+01:03:37,360 --> 01:03:38,760
+when one user updates the state,
+
+1130
+01:03:38,760 --> 01:03:40,600
+they update their local state immediately,
+
+1131
+01:03:40,600 --> 01:03:42,120
+and also broadcast the operation
+
+1132
+01:03:42,120 --> 01:03:44,560
+to other users in the background.
+
+1133
+01:03:44,560 --> 01:03:49,320
+So the problem can come if you
+have conflicting operations,
+
+1134
+01:03:49,320 --> 01:03:50,160
+for instance,
+
+1135
+01:03:50,160 --> 01:03:51,880
+let's say Alice and Bob share an integer,
+
+1136
+01:03:51,880 --> 01:03:53,560
+and Alice sets the value to three,
+
+1137
+01:03:53,560 --> 01:03:56,320
+while at the same time Bob
+sets the value to five.
+
+1138
+01:03:56,320 --> 01:03:58,040
+So then later they'll
+sync up with each other,
+
+1139
+01:03:58,040 --> 01:04:00,440
+and they see that they have a conflict.
+
+1140
+01:04:00,440 --> 01:04:01,920
+So they have to decide what to do,
+
+1141
+01:04:01,920 --> 01:04:03,520
+in order to get the same answer.
+
+1142
+01:04:04,400 --> 01:04:06,720
+So one main conflict resolution technique,
+
+1143
+01:04:06,720 --> 01:04:08,400
+that's used in CRDT design,
+
+1144
+01:04:08,400 --> 01:04:10,480
+is to make operations commute.
+
+1145
+01:04:10,480 --> 01:04:11,640
+So for instance,
+
+1146
+01:04:11,640 --> 01:04:13,600
+in Alice and Bob example,
+
+1147
+01:04:13,600 --> 01:04:15,200
+let's say that they're
+actually counting something,
+
+1148
+01:04:15,200 --> 01:04:17,040
+like the number of clicks on an ad.
+
+1149
+01:04:17,040 --> 01:04:19,080
+In that case, when Alice
+sets the value to three,
+
+1150
+01:04:19,080 --> 01:04:20,040
+what she actually wants to do
+
+1151
+01:04:20,040 --> 01:04:21,960
+is add three to the current value.
+
+1152
+01:04:21,960 --> 01:04:23,760
+Likewise when Bob sets the value to five,
+
+1153
+01:04:23,760 --> 01:04:25,360
+he actually wants to add five.
+
+1154
+01:04:25,360 --> 01:04:26,960
+But these addition operations
+
+1155
+01:04:26,960 --> 01:04:29,840
+will both get answered eight
+once they exchange operations.
+
+1156
+01:04:29,840 --> 01:04:30,680
+So that's fine.
+
+1157
+01:04:30,680 --> 01:04:32,200
+We avoided the conflict.
+
+1158
+01:04:32,200 --> 01:04:33,800
+You can also use commutatively
+
+1159
+01:04:33,800 --> 01:04:34,960
+to design a clever sequence types
+
+1160
+01:04:34,960 --> 01:04:36,280
+that don't have conflicts.
+
+1161
+01:04:37,640 --> 01:04:40,120
+Another thing you can do is
+to reason about causality.
+
+1162
+01:04:40,120 --> 01:04:41,160
+So I'll go into more detail
+
+1163
+01:04:41,160 --> 01:04:43,400
+about what I mean by
+causality on the next slide.
+
+1164
+01:04:43,400 --> 01:04:44,240
+But a simple example,
+
+1165
+01:04:44,240 --> 01:04:46,760
+is if Alice and Bob share a shopping list,
+
+1166
+01:04:46,760 --> 01:04:49,080
+say Alice adds milk to the shopping list,
+
+1167
+01:04:49,080 --> 01:04:51,080
+later Bob sees this operation,
+
+1168
+01:04:51,080 --> 01:04:52,720
+but he's already bought milk at the store.
+
+1169
+01:04:52,720 --> 01:04:55,160
+So he's going to remove
+milk from the shopping list.
+
+1170
+01:04:55,160 --> 01:04:56,520
+And what a CRDT will do,
+
+1171
+01:04:56,520 --> 01:04:59,440
+is it'll send out a message
+to the other users saying,
+
+1172
+01:04:59,440 --> 01:05:00,880
+remove milk from the shopping list,
+
+1173
+01:05:00,880 --> 01:05:03,880
+but only after applying Alice's operation.
+
+1174
+01:05:03,880 --> 01:05:05,840
+So we notice that anyone else will apply,
+
+1175
+01:05:05,840 --> 01:05:07,960
+add then milk, in that order.
+
+1176
+01:05:07,960 --> 01:05:08,800
+So they'll end up in the state
+
+1177
+01:05:08,800 --> 01:05:10,800
+where they don't have
+milk on the shopping list.
+
+1178
+01:05:10,800 --> 01:05:12,640
+Thus everyone will end
+up in the same state,
+
+1179
+01:05:12,640 --> 01:05:15,720
+there's no conflict anymore.
+
+1180
+01:05:15,720 --> 01:05:16,560
+So in general,
+
+1181
+01:05:16,560 --> 01:05:18,000
+when I say reasoning about causality,
+
+1182
+01:05:18,000 --> 01:05:18,840
+I mean,
+
+1183
+01:05:18,840 --> 01:05:22,640
+reasoning about the causal
+order on operations.
+
+1184
+01:05:22,640 --> 01:05:24,120
+This is the partial order defined
+
+1185
+01:05:24,120 --> 01:05:25,720
+according to three rules,
+
+1186
+01:05:25,720 --> 01:05:27,440
+which I'll illustrate using this diagram.
+
+1187
+01:05:27,440 --> 01:05:29,040
+So here time goes to the right,
+
+1188
+01:05:29,040 --> 01:05:32,040
+and I add more arrows to
+indicate message sending.
+
+1189
+01:05:32,040 --> 01:05:32,880
+Okay.
+
+1190
+01:05:32,880 --> 01:05:34,080
+So the first rule is that,
+
+1191
+01:05:34,080 --> 01:05:37,240
+if some user like Alice sends
+two operations in a row,
+
+1192
+01:05:37,240 --> 01:05:39,080
+and the first operation is
+less than the second one,
+
+1193
+01:05:39,080 --> 01:05:40,960
+we have a partial order,
+
+1194
+01:05:40,960 --> 01:05:44,200
+for instance here adding milk
+is less than adding bread.
+
+1195
+01:05:44,200 --> 01:05:46,640
+The second rule is that if say Alice.
+
+1196
+01:05:46,640 --> 01:05:48,440
+The message,
+Bob receives it,
+
+1197
+01:05:48,440 --> 01:05:50,680
+indicated by the first
+diagonal orange arrow.
+
+1198
+01:05:50,680 --> 01:05:52,720
+And then, Bob sends
+his own operation,
+
+1199
+01:05:52,720 --> 01:05:54,240
+like "Remove milk," here.
+
+1200
+01:05:54,240 --> 01:05:56,120
+Then, the first one
+assesses the second one.
+
+1201
+01:05:56,120 --> 01:05:58,200
+So, here, "Add milk" is
+less than "Remove milk,"
+
+1202
+01:05:58,200 --> 01:06:00,320
+in the causal order.
+
+1203
+01:06:00,320 --> 01:06:01,960
+And the third rule is transitivity.
+
+1204
+01:06:01,960 --> 01:06:02,960
+So, by what I just said,
+
+1205
+01:06:02,960 --> 01:06:04,560
+"Add milk" is less
+than "Remove milk,"
+
+1206
+01:06:04,560 --> 01:06:05,880
+and by the first rule, again,
+
+1207
+01:06:05,880 --> 01:06:08,080
+"Remove milk" is less
+than "Add eggs."
+
+1208
+01:06:08,080 --> 01:06:09,920
+So then, we dictate that, also,
+
+1209
+01:06:09,920 --> 01:06:11,360
+"Add milk" is less than "Add eggs."
+
+1210
+01:06:11,360 --> 01:06:13,520
+A transitivity. OK?
+
+1211
+01:06:14,320 --> 01:06:16,000
+So, note that this
+is a partial order,
+
+1212
+01:06:16,000 --> 01:06:18,080
+and it's possible to have
+a situation like this,
+
+1213
+01:06:18,080 --> 01:06:20,120
+where these two "Add
+milk" operations
+
+1214
+01:06:20,120 --> 01:06:22,440
+are neither less than, nor
+greater than each other.
+
+1215
+01:06:22,440 --> 01:06:25,400
+In this case, we say that
+they're concurrent.
+
+1216
+01:06:25,400 --> 01:06:26,600
+And the good thing about causality
+
+1217
+01:06:26,600 --> 01:06:29,160
+is that CRDTs can query
+the causal order.
+
+1218
+01:06:29,160 --> 01:06:31,760
+Basically, you can attach
+metadata to operations,
+
+1219
+01:06:31,760 --> 01:06:33,120
+when you send them over the network,
+
+1220
+01:06:33,120 --> 01:06:35,800
+so that everyone agrees on
+what the causal order is.
+
+1221
+01:06:35,800 --> 01:06:37,160
+And then, this lets
+you make definitions,
+
+1222
+01:06:37,160 --> 01:06:38,840
+like, for a sexier DT,
+
+1223
+01:06:38,840 --> 01:06:40,600
+you could say X is in the set,
+
+1224
+01:06:40,600 --> 01:06:42,480
+if there is an add x operation
+
+1225
+01:06:42,480 --> 01:06:46,160
+that is not less than
+any remove X operation. OK?
+
+1226
+01:06:46,160 --> 01:06:49,280
+Because this will assess
+the reasons about causality,
+
+1227
+01:06:49,280 --> 01:06:50,880
+there's no possibility of conflict.
+
+1228
+01:06:50,880 --> 01:06:53,000
+Even if people get operations
+in different orders,
+
+1229
+01:06:53,000 --> 01:06:57,160
+they'll come with the same result.
+
+1230
+01:06:57,160 --> 01:06:58,640
+And you can see, in
+the example I have here,
+
+1231
+01:06:58,640 --> 01:07:00,120
+milk is going to stay
+on the shopping list,
+
+1232
+01:07:00,120 --> 01:07:01,520
+according to this rule,
+
+1233
+01:07:01,520 --> 01:07:03,480
+because Charlie's
+"Add milk" operation
+
+1234
+01:07:03,480 --> 01:07:08,480
+is not constantly less than
+any "Remove milk" operation. OK.
+
+1235
+01:07:10,360 --> 01:07:12,280
+So, again, here are
+the conflict resolution techniques
+
+1236
+01:07:12,280 --> 01:07:13,560
+for building CRDTs:
+
+1237
+01:07:13,560 --> 01:07:16,000
+commutativity
+and reasoning about causality.
+
+1238
+01:07:16,000 --> 01:07:17,400
+There's- then, what
+direct product does
+
+1239
+01:07:17,400 --> 01:07:19,800
+is it provides a uniform
+and reasonable way
+
+1240
+01:07:19,800 --> 01:07:21,320
+of reasoning about causality,
+
+1241
+01:07:21,320 --> 01:07:22,360
+so that CRDT designers
+
+1242
+01:07:22,360 --> 01:07:24,960
+don't have to do it from
+scratch, each time.
+
+1243
+01:07:24,960 --> 01:07:26,600
+This is a good rule for
+coming up with rules,
+
+1244
+01:07:26,600 --> 01:07:29,200
+like this rule that I've
+specified here, for a set,
+
+1245
+01:07:29,200 --> 01:07:30,720
+and it's also good for
+implementing them.
+
+1246
+01:07:30,720 --> 01:07:32,000
+So, if you just look
+at this definition,
+
+1247
+01:07:32,000 --> 01:07:33,080
+it's not entirely clear
+
+1248
+01:07:33,080 --> 01:07:35,080
+how you would implement
+this efficiently,
+
+1249
+01:07:35,080 --> 01:07:37,200
+without just looping over
+the full history of operations,
+
+1250
+01:07:37,200 --> 01:07:40,360
+every time you get a new one. OK?
+
+1251
+01:07:40,360 --> 01:07:41,960
+So, what our semi-direct
+product enables
+
+1252
+01:07:41,960 --> 01:07:44,000
+is a new CRDT-designed workflow.
+
+1253
+01:07:44,000 --> 01:07:45,560
+So, starting from
+an ordinary data type
+
+1254
+01:07:45,560 --> 01:07:47,760
+that you want to turn into a CRDT,
+
+1255
+01:07:47,760 --> 01:07:49,800
+you first design
+commutative data types,
+
+1256
+01:07:49,800 --> 01:07:51,480
+for simple subsets of operations,
+
+1257
+01:07:51,480 --> 01:07:53,160
+and then, you glue
+together those subsets,
+
+1258
+01:07:53,160 --> 01:07:54,600
+the semi-direct products,
+
+1259
+01:07:54,600 --> 01:07:56,560
+and it'll handle conflicts
+between the operations
+
+1260
+01:07:56,560 --> 01:07:59,760
+that don't commute
+in the natural way.
+
+1261
+01:07:59,760 --> 01:08:01,320
+In our experience,
+this design workflow
+
+1262
+01:08:01,320 --> 01:08:03,560
+works for most existing CRDT design,
+
+1263
+01:08:03,560 --> 01:08:06,560
+for existing CRDT types,
+plus novel ones.
+
+1264
+01:08:08,240 --> 01:08:09,480
+OK. Now, for the rest of the talk,
+
+1265
+01:08:09,480 --> 01:08:10,960
+I want to give an example
+
+1266
+01:08:10,960 --> 01:08:12,760
+of how our semi-direct
+product works,
+
+1267
+01:08:12,760 --> 01:08:14,400
+particularly, a simple example.
+
+1268
+01:08:14,400 --> 01:08:16,960
+We're going to just start with
+two commutative data types,
+
+1269
+01:08:16,960 --> 01:08:19,440
+an integer register that
+has add operations,
+
+1270
+01:08:19,440 --> 01:08:22,720
+and an integer register that
+has multiplication operations.
+
+1271
+01:08:22,720 --> 01:08:24,000
+And we went to compose them
+
+1272
+01:08:24,000 --> 01:08:25,000
+into an integer register
+
+1273
+01:08:25,000 --> 01:08:28,560
+that supports both kinds
+of operations at once. OK?
+
+1274
+01:08:28,560 --> 01:08:31,320
+So, an example of something
+you can do with this data type
+
+1275
+01:08:31,320 --> 01:08:32,760
+is, you start in state one,
+
+1276
+01:08:32,760 --> 01:08:34,960
+multiply by three, and add one.
+
+1277
+01:08:34,960 --> 01:08:36,600
+But, of course, the tricky
+part is that multiple users
+
+1278
+01:08:36,600 --> 01:08:39,000
+might be making these
+operations concurrently,
+
+1279
+01:08:39,000 --> 01:08:41,600
+and we have to resolve
+conflict between them.
+
+1280
+01:08:41,600 --> 01:08:42,680
+So, add operations are
+
+1281
+01:08:42,680 --> 01:08:43,720
+alone, are easy.
+
+1282
+01:08:43,720 --> 01:08:45,800
+They already commute,
+so there's no conflicts.
+
+1283
+01:08:45,800 --> 01:08:48,320
+Similarly, for
+multiplication operations,
+
+1284
+01:08:48,320 --> 01:08:50,440
+but they conflict with each other.
+
+1285
+01:08:50,440 --> 01:08:52,960
+For instance, if Dave
+and Mary are sharing a counter,
+
+1286
+01:08:52,960 --> 01:08:55,880
+and then, Dave says to
+multiply his state by three,
+
+1287
+01:08:55,880 --> 01:08:58,040
+while concurrently- so,
+without coordination,
+
+1288
+01:08:58,040 --> 01:09:00,000
+Mary says to add one to her state.
+
+1289
+01:09:00,000 --> 01:09:01,920
+Then, after they
+exchanged these messages,
+
+1290
+01:09:01,920 --> 01:09:03,560
+if we just apply them literally,
+
+1291
+01:09:03,560 --> 01:09:04,720
+they'll end up different States.
+
+1292
+01:09:04,720 --> 01:09:07,080
+Mary's going to be six
+and David's going to get four.
+
+1293
+01:09:07,080 --> 01:09:10,320
+So, this is a conflict. OK.
+
+1294
+01:09:10,320 --> 01:09:12,040
+So now to resolve this conflict,
+
+1295
+01:09:12,040 --> 01:09:13,440
+you're going to make the choice that,
+
+1296
+01:09:13,440 --> 01:09:14,680
+in the face of a conflict,
+
+1297
+01:09:14,680 --> 01:09:16,520
+add should go before mult.
+
+1298
+01:09:16,520 --> 01:09:18,240
+So basically here,
+Mary is in the right
+
+1299
+01:09:18,240 --> 01:09:19,240
+and Dave is in the wrong.
+
+1300
+01:09:19,240 --> 01:09:22,120
+We want to get the answer six.
+
+1301
+01:09:22,120 --> 01:09:24,640
+And our observation is
+that to make this happen,
+
+1302
+01:09:24,640 --> 01:09:25,880
+if you're like Dave here,
+
+1303
+01:09:25,880 --> 01:09:28,280
+and you get the add and
+the mult in the wrong order,
+
+1304
+01:09:28,280 --> 01:09:31,000
+you can fix it up by
+acting on the addition
+
+1305
+01:09:31,000 --> 01:09:33,640
+with the multiplication. OK.
+
+1306
+01:09:33,640 --> 01:09:35,160
+So here, what we say is when Dave
+
+1307
+01:09:35,160 --> 01:09:37,440
+receives Mary's add one message,
+
+1308
+01:09:37,440 --> 01:09:38,600
+instead of applying it literally,
+
+1309
+01:09:38,600 --> 01:09:40,480
+he's going to act on it
+
+1310
+01:09:40,480 --> 01:09:42,920
+with this multiply by three message
+
+1311
+01:09:42,920 --> 01:09:44,960
+and add three instead,
+
+1312
+01:09:44,960 --> 01:09:46,880
+'cause then he gets in
+the state six as well,
+
+1313
+01:09:46,880 --> 01:09:48,560
+and we've solved the conflict.
+
+1314
+01:09:48,560 --> 01:09:50,080
+And this works by
+the Distributive Law
+
+1315
+01:09:50,080 --> 01:09:54,280
+of multiplication over addition. OK.
+
+1316
+01:09:54,280 --> 01:09:56,160
+So more generally, we have
+a more complicated situation
+
+1317
+01:09:56,160 --> 01:09:57,200
+like this one,
+
+1318
+01:09:57,200 --> 01:10:00,000
+we make the rule that when
+you receive an add operation,
+
+1319
+01:10:00,000 --> 01:10:02,000
+before applying it,
+you first act on it
+
+1320
+01:10:02,000 --> 01:10:04,080
+by all concurrent
+multiplication operations
+
+1321
+01:10:04,080 --> 01:10:06,720
+that you've already received. OK.
+
+1322
+01:10:06,720 --> 01:10:10,520
+So in this example,
+
+1323
+01:10:10,520 --> 01:10:13,640
+Dave has multiplied his state
+by two, and then added one,
+
+1324
+01:10:13,640 --> 01:10:15,840
+while concurrently,
+so without coordination,
+
+1325
+01:10:15,840 --> 01:10:18,680
+Mary multiplied by three
+and then added four. OK.
+
+1326
+01:10:18,680 --> 01:10:19,680
+And now they sync up.
+
+1327
+01:10:19,680 --> 01:10:22,600
+So, they exchange these operations.
+
+1328
+01:10:22,600 --> 01:10:25,080
+So Dave gets the multiply by
+three operation for Mary.
+
+1329
+01:10:25,080 --> 01:10:26,880
+We'll just apply that literally
+
+1330
+01:10:26,880 --> 01:10:29,080
+And then, when he gets
+this add four operation,
+
+1331
+01:10:29,080 --> 01:10:30,720
+he first looks in
+his history and sees that
+
+1332
+01:10:30,720 --> 01:10:33,680
+he's already applied
+the multiply by two operation
+
+1333
+01:10:33,680 --> 01:10:35,680
+that is concurrent to the add four.
+
+1334
+01:10:35,680 --> 01:10:37,480
+He's going to use that
+as a transformation
+
+1335
+01:10:37,480 --> 01:10:41,120
+and add two times four
+instead to get 17.
+
+1336
+01:10:41,120 --> 01:10:44,120
+Likewise, Mary receives the multiply
+by two operation from Dave.
+
+1337
+01:10:44,120 --> 01:10:45,280
+She applies it literally.
+
+1338
+01:10:45,280 --> 01:10:48,040
+And then, when she receives
+the add one operation,
+
+1339
+01:10:48,040 --> 01:10:50,880
+she's going to transform it
+by her mult three operation
+
+1340
+01:10:50,880 --> 01:10:52,120
+because that's
+the concurrent message
+
+1341
+01:10:52,120 --> 01:10:53,880
+that she's already applied.
+
+1342
+01:10:53,880 --> 01:10:55,600
+So she adds three instead of one,
+
+1343
+01:10:55,600 --> 01:10:58,440
+And then, they both
+end up in stage 17.
+
+1344
+01:10:58,440 --> 01:11:00,440
+So the fact that they both
+end up in the same state,
+
+1345
+01:11:00,440 --> 01:11:05,200
+was again, just the consequences
+of distributivity.
+
+1346
+01:11:05,200 --> 01:11:06,560
+Well, I know a way of
+stating this rule
+
+1347
+01:11:06,560 --> 01:11:10,880
+is that if you receive an add
+N message from another user,
+
+1348
+01:11:10,880 --> 01:11:14,480
+then you turn it into
+add of N one times N K,
+
+1349
+01:11:14,480 --> 01:11:16,160
+et cetera, times M,
+
+1350
+01:11:16,160 --> 01:11:18,080
+or mult N long through mult N K,
+
+1351
+01:11:18,080 --> 01:11:19,640
+or all the multiply operations
+
+1352
+01:11:19,640 --> 01:11:21,160
+that you've previously received
+
+1353
+01:11:21,160 --> 01:11:25,440
+that are concurrent
+to the all new (INAUDIBLE) OK?
+
+1354
+01:11:25,440 --> 01:11:27,520
+And this rule is
+the same general rule
+
+1355
+01:11:27,520 --> 01:11:30,520
+that we use in the full
+centimeter product construction.
+
+1356
+01:11:30,520 --> 01:11:32,280
+Basically, you give some action,
+
+1357
+01:11:32,280 --> 01:11:34,840
+which says, "If
+I receive one operation
+
+1358
+01:11:34,840 --> 01:11:37,720
+"after a concurrent
+operation of another one,
+
+1359
+01:11:37,720 --> 01:11:40,240
+"I'm going to act on it
+with this action."
+
+1360
+01:11:40,240 --> 01:11:41,240
+And this works in general,
+
+1361
+01:11:41,240 --> 01:11:43,720
+subject to algebraic
+constraints on the input CUDT
+
+1362
+01:11:43,720 --> 01:11:46,960
+and on the action.
+
+1363
+01:11:46,960 --> 01:11:50,400
+OK, so that's all I wanted to
+say about our constructions.
+
+1364
+01:11:50,400 --> 01:11:51,560
+Just a quick recap.
+
+1365
+01:11:51,560 --> 01:11:53,680
+CUDTs are our next
+programming languages,
+
+1366
+01:11:53,680 --> 01:11:55,240
+ways of building systems that act
+
+1367
+01:11:55,240 --> 01:11:57,480
+on a shared state, like WhatApps.
+
+1368
+01:11:57,480 --> 01:11:58,560
+The way you use them is that
+
+1369
+01:11:58,560 --> 01:12:00,400
+program will just replaced
+ordinary data types
+
+1370
+01:12:00,400 --> 01:12:02,640
+with CUDT versions
+on the client side,
+
+1371
+01:12:02,640 --> 01:12:06,480
+then server is just
+a messaging server.
+
+1372
+01:12:06,480 --> 01:12:07,480
+You want more
+information about these,
+
+1373
+01:12:07,480 --> 01:12:10,160
+I encourage you to check
+out the website, CUDT.tech,
+
+1374
+01:12:10,160 --> 01:12:13,400
+which has a collection
+of nice resources.
+
+1375
+01:12:13,400 --> 01:12:16,120
+Some of our work represent
+the (INAUDIBLE) product,
+
+1376
+01:12:16,120 --> 01:12:19,120
+which is a compositional
+design technique for CUDTs.
+
+1377
+01:12:19,120 --> 01:12:22,520
+These all help between operations by
+recently about personality,
+
+1378
+01:12:22,520 --> 01:12:25,720
+the uniform weight,
+so that you don't have to.
+
+1379
+01:12:25,720 --> 01:12:28,080
+And it enables a new
+CRDT design workflow,
+
+1380
+01:12:28,080 --> 01:12:30,640
+where you start with a data type
+that you want to replicate,
+
+1381
+01:12:31,280 --> 01:12:32,680
+you design communicative data types,
+
+1382
+01:12:32,680 --> 01:12:34,120
+for subsets of operations,
+
+1383
+01:12:34,120 --> 01:12:37,560
+and then you group these together
+with some of direct cotics.
+
+1384
+01:12:37,560 --> 01:12:39,840
+OK, that's all I have to say,
+so thanks for watching,
+
+1385
+01:12:39,840 --> 01:12:44,840
+and I hope there'll
+be some questions.
+
+1386
+01:12:46,920 --> 01:12:51,920
+(APPLAUSE)
+
+1387
+01:12:54,800 --> 01:12:57,120
+STEPHANIE: Thank you, Matthew.
+
+1388
+01:12:57,120 --> 01:12:59,400
+If you are watching this talk live,
+
+1389
+01:13:00,080 --> 01:13:02,120
+as an ICFP participant,
+
+1390
+01:13:02,120 --> 01:13:05,280
+please remember to
+join the Q&A session,
+
+1391
+01:13:05,280 --> 01:13:10,360
+if it is available
+in your time zone.
+
+1392
+01:13:13,760 --> 01:13:18,160
+Our next talk is a new approach to
+impredicative polymorphism,
+
+1393
+01:13:18,160 --> 01:13:20,560
+in the Glasgow Haskell Compiler.
+
+1394
+01:13:20,560 --> 01:13:25,560
+This work has been developed by
+Alejandro Serrano, Jurean Hawk,
+
+1395
+01:13:27,080 --> 01:13:30,920
+Simon Paton-Jones,
+and Dimitrios Vitinyadas.
+
+1396
+01:13:30,920 --> 01:13:36,320
+Alejandro Serrano will be
+giving the presentation.
+
+1397
+01:13:36,320 --> 01:13:38,480
+ALEJANDRO SERRANO: Hi.
+I'm Alejandro.
+
+1398
+01:13:38,480 --> 01:13:39,720
+I'm going to talk to you about
+
+1399
+01:13:39,720 --> 01:13:44,240
+a bit how we brought
+impredicativity into GHC.
+
+1400
+01:13:44,240 --> 01:13:48,240
+But, first of all, what
+is impredicativity?
+
+1401
+01:13:48,240 --> 01:13:49,880
+Take a function like map.
+
+1402
+01:13:49,880 --> 01:13:51,760
+It has two type arguments,
+
+1403
+01:13:51,760 --> 01:13:53,840
+and it takes a function, a list,
+
+1404
+01:13:53,840 --> 01:13:56,320
+and returns a list.
+
+1405
+01:13:56,320 --> 01:13:58,920
+Because, this function
+is polymorphic,
+
+1406
+01:13:58,920 --> 01:14:01,200
+we can use map with
+a wide range of types,
+
+1407
+01:14:01,200 --> 01:14:02,520
+we can use map even,
+
+1408
+01:14:02,520 --> 01:14:04,680
+and then get a function
+from little things
+
+1409
+01:14:04,680 --> 01:14:05,680
+to list of bulls,
+
+1410
+01:14:05,680 --> 01:14:07,960
+or we can have map, of greater than,
+
+1411
+01:14:07,960 --> 01:14:12,160
+and then we have a list of
+ints to a list of functions.
+
+1412
+01:14:12,160 --> 01:14:14,080
+But, if now we want to use map
+
+1413
+01:14:14,080 --> 01:14:17,880
+with this function, which takes
+
+1414
+01:14:17,880 --> 01:14:20,360
+an argument which itself
+has a polymorphic type,
+
+1415
+01:14:21,880 --> 01:14:24,920
+in many cases we cannot
+really use this.
+
+1416
+01:14:24,920 --> 01:14:27,960
+Polymorphic types, those
+types having with for all,
+
+1417
+01:14:27,960 --> 01:14:32,000
+are of a not first-class in
+many programming languages.
+
+1418
+01:14:32,000 --> 01:14:34,560
+Impredicativity is
+exactly the feature
+
+1419
+01:14:34,560 --> 01:14:37,320
+that allows you to
+instantiate a type variable,
+
+1420
+01:14:37,320 --> 01:14:38,960
+like A or B in map,
+
+1421
+01:14:38,960 --> 01:14:40,520
+with a polymorphic type.
+
+1422
+01:14:40,520 --> 01:14:44,320
+A type which has a for all in front.
+
+1423
+01:14:44,320 --> 01:14:48,480
+System F, which is
+the basis for GHC Core,
+
+1424
+01:14:48,480 --> 01:14:50,000
+is itself impredicative.
+
+1425
+01:14:50,000 --> 01:14:53,960
+You can always instantiate
+with a for all type.
+
+1426
+01:14:53,960 --> 01:14:57,000
+But, you have to be very
+explicit about it.
+
+1427
+01:14:57,000 --> 01:14:58,240
+You need to annotate.
+
+1428
+01:14:58,240 --> 01:15:01,160
+In fact, in System F,
+you need to annotate
+
+1429
+01:15:01,160 --> 01:15:04,640
+every time you instantiate
+with a type application,
+
+1430
+01:15:04,640 --> 01:15:09,160
+like I am doing here
+with at for all AA to A,
+
+1431
+01:15:09,160 --> 01:15:12,160
+and you also have to annotate
+every time you generalize,
+
+1432
+01:15:12,160 --> 01:15:14,480
+every time you need to
+have a for all in a type,
+
+1433
+01:15:14,480 --> 01:15:16,600
+with a big lambda,
+like I am doing here,
+
+1434
+01:15:16,600 --> 01:15:20,720
+in the big lambda for
+the first argument.
+
+1435
+01:15:20,720 --> 01:15:23,720
+So the problem actually
+is not impredicativity,
+
+1436
+01:15:23,720 --> 01:15:25,840
+but impredicative inference.
+
+1437
+01:15:25,840 --> 01:15:27,600
+We want to write
+something like here,
+
+1438
+01:15:27,600 --> 01:15:30,920
+where we cont,
+an identity function to id,
+
+1439
+01:15:30,920 --> 01:15:35,160
+which is itself a list
+of for all AA to As,
+
+1440
+01:15:35,160 --> 01:15:38,600
+and we want the inference
+
+1441
+01:15:38,600 --> 01:15:42,520
+and to be able to add
+anything we need.
+
+1442
+01:15:42,520 --> 01:15:44,440
+But there are several questions.
+
+1443
+01:15:44,440 --> 01:15:47,840
+First of all, how do we
+instantiate the cones?
+
+1444
+01:15:47,840 --> 01:15:49,560
+Hindley-Damas-Milner
+for example,
+
+1445
+01:15:49,560 --> 01:15:53,320
+which is one of the best known
+inference algorithms,
+
+1446
+01:15:53,320 --> 01:15:57,120
+that's not allowed polymorphic
+installation at all.
+
+1447
+01:15:57,120 --> 01:16:00,600
+The second question is how
+do we choose to generalize?
+
+1448
+01:16:00,600 --> 01:16:03,640
+How do we know that we have
+to have a big Lambda exit
+
+1449
+01:16:03,640 --> 01:16:07,920
+at the point we need it
+and not somewhere else?
+
+1450
+01:16:07,920 --> 01:16:11,440
+There's been a lot of work about
+in impredicative inference.
+
+1451
+01:16:11,440 --> 01:16:14,440
+There are so many related to work.
+
+1452
+01:16:14,440 --> 01:16:18,520
+Here I want to present Quick
+Look which is a new idea
+
+1453
+01:16:18,520 --> 01:16:20,960
+in which what we do is
+we introduce a new
+
+1454
+01:16:20,960 --> 01:16:23,480
+Quick Look phase through
+an instantiation which discovers
+
+1455
+01:16:23,480 --> 01:16:26,520
+impredicative activity
+as much as possible.
+
+1456
+01:16:26,520 --> 01:16:32,640
+And then there is a type check-in
+just remains as it was.
+
+1457
+01:16:32,640 --> 01:16:34,160
+Let me show you an example.
+
+1458
+01:16:34,160 --> 01:16:37,280
+For example, I have here cone IDs
+
+1459
+01:16:37,280 --> 01:16:41,080
+where instead of using ID directly,
+
+1460
+01:16:41,560 --> 01:16:43,640
+I'm putting this into
+a local binding,
+
+1461
+01:16:43,640 --> 01:16:46,560
+but here you can see all the types.
+
+1462
+01:16:46,560 --> 01:16:48,720
+If you do inference with
+Hindley-Damas-Milner,
+
+1463
+01:16:48,720 --> 01:16:51,240
+what will happen is
+that you instantiate
+
+1464
+01:16:51,240 --> 01:16:54,760
+the type of cones
+and you're introducing cones
+
+1465
+01:16:54,760 --> 01:16:58,400
+applied to one type
+variable, you don't know
+
+1466
+01:16:58,400 --> 01:16:59,960
+I'm going to call it
+alpha here,
+
+1467
+01:16:59,960 --> 01:17:03,800
+and then you have
+the argument ID and IVs.
+
+1468
+01:17:03,800 --> 01:17:08,800
+The type of arguments are then
+alpha and list of alphas.
+
+1469
+01:17:10,120 --> 01:17:12,760
+The question now is what
+is alpha of course,
+
+1470
+01:17:12,760 --> 01:17:14,720
+and if you have a declarative spec,
+
+1471
+01:17:14,720 --> 01:17:17,200
+maybe you guess the instantiation,
+
+1472
+01:17:17,200 --> 01:17:19,160
+or if you have a type
+of inference engine
+
+1473
+01:17:19,160 --> 01:17:21,040
+that inference will do unification
+
+1474
+01:17:21,040 --> 01:17:23,800
+and try to figure this
+out, but the thing is
+
+1475
+01:17:23,800 --> 01:17:28,440
+no instantiation without
+for all type works,
+
+1476
+01:17:28,440 --> 01:17:32,680
+so this example is predicted
+by Hindley-Damas-Milner.
+
+1477
+01:17:32,680 --> 01:17:34,040
+How does it work with Quick Look?
+
+1478
+01:17:34,040 --> 01:17:35,920
+Well you start with the same step,
+
+1479
+01:17:35,920 --> 01:17:37,720
+you instantiate the type of cones,
+
+1480
+01:17:37,720 --> 01:17:40,840
+and at this point you have
+a quick look at the arguments.
+
+1481
+01:17:40,840 --> 01:17:43,360
+You try to get as many
+information about
+
+1482
+01:17:43,360 --> 01:17:45,120
+the impredicativity
+you need by looking
+
+1483
+01:17:45,120 --> 01:17:47,320
+at having a peek at the arguments.
+
+1484
+01:17:47,320 --> 01:17:48,720
+In this case we're
+going to learn nothing
+
+1485
+01:17:48,720 --> 01:17:50,840
+from the first argument IDs,
+
+1486
+01:17:50,840 --> 01:17:52,760
+and from the second arguments
+we're going to learn
+
+1487
+01:17:52,760 --> 01:17:57,040
+that alpha has to be
+exactly for all A to A.
+
+1488
+01:17:57,040 --> 01:17:58,440
+At this point, what we
+know is that
+
+1489
+01:17:58,440 --> 01:18:01,200
+the type of these arguments are
+not just any alpha,
+
+1490
+01:18:01,200 --> 01:18:05,520
+they are exactly for all Aa to A
+and listed for all Aa to A.
+
+1491
+01:18:05,520 --> 01:18:08,080
+And there is nothing else to guess
+
+1492
+01:18:08,080 --> 01:18:12,480
+and that check-in can succeed.
+
+1493
+01:18:12,480 --> 01:18:15,760
+Now I've said that we
+learn nothing from ID,
+
+1494
+01:18:15,760 --> 01:18:19,280
+but from IDs we learn
+that alpha must be
+
+1495
+01:18:19,280 --> 01:18:21,800
+for all Aa-As, so you
+might be wondering
+
+1496
+01:18:21,800 --> 01:18:24,960
+what's different between
+these two argument?
+
+1497
+01:18:24,960 --> 01:18:27,160
+Let me try to explain this.
+
+1498
+01:18:27,160 --> 01:18:30,160
+Here are the types we are
+push, the types that went
+
+1499
+01:18:30,160 --> 01:18:35,080
+from the instantiation,
+and the types that are obtained
+
+1500
+01:18:35,080 --> 01:18:37,240
+from looking at
+the type of the variables.
+
+1501
+01:18:37,240 --> 01:18:39,520
+In the case of ID,
+the type which is push
+
+1502
+01:18:39,520 --> 01:18:43,880
+is this singles type
+variable unfounded
+
+1503
+01:18:43,880 --> 01:18:46,520
+we get from
+the variable is for all Aa-A
+
+1504
+01:18:46,520 --> 01:18:48,120
+and from IDs it's
+the same,
+
+1505
+01:18:48,120 --> 01:18:53,320
+but everything
+is wrapped in a list construct.
+
+1506
+01:18:53,320 --> 01:18:57,800
+So actually in the case of IDs
+we have only one possibility.
+
+1507
+01:18:57,800 --> 01:18:59,720
+In order for the list of alpha
+
+1508
+01:18:59,720 --> 01:19:03,760
+and the list of for all
+Aa to A to be equal,
+
+1509
+01:19:03,760 --> 01:19:08,760
+just alpha has to be
+for all A, A to A.
+
+1510
+01:19:10,200 --> 01:19:13,640
+Now for the second case, we
+actually have two possibilities.
+
+1511
+01:19:13,640 --> 01:19:16,360
+It could be that alpha
+is for all A, A to A,
+
+1512
+01:19:16,360 --> 01:19:17,600
+but we have another option.
+
+1513
+01:19:17,600 --> 01:19:20,080
+At this point, we could instantiate,
+
+1514
+01:19:20,080 --> 01:19:23,160
+so the for all A, A to
+A becomes beta to beta,
+
+1515
+01:19:23,160 --> 01:19:27,680
+and then we make alpha
+equal to this beta to beta.
+
+1516
+01:19:27,680 --> 01:19:30,680
+The difference here is that
+alpha in the second case
+
+1517
+01:19:30,680 --> 01:19:32,440
+is what we call guarded,
+
+1518
+01:19:32,440 --> 01:19:35,680
+which means it appears
+under a type construct.
+
+1519
+01:19:35,680 --> 01:19:39,280
+And the key idea is that
+the instantiation relation
+
+1520
+01:19:39,280 --> 01:19:41,600
+becomes simple equality
+when you have
+
+1521
+01:19:41,600 --> 01:19:43,480
+a type constructor on top.
+
+1522
+01:19:43,480 --> 01:19:45,960
+So in the second case, you
+have nothing to decide.
+
+1523
+01:19:45,960 --> 01:19:48,080
+There is only one
+choice, so you take it.
+
+1524
+01:19:48,080 --> 01:19:51,520
+If you have a single state
+variable line around,
+
+1525
+01:19:51,520 --> 01:19:53,960
+like in a type of IDs, you
+don't know what to do,
+
+1526
+01:19:53,960 --> 01:19:57,400
+so we just say, "Well, at this
+point we learn nothing."
+
+1527
+01:19:57,400 --> 01:19:58,480
+And actually, it can be the case
+
+1528
+01:19:58,480 --> 01:20:01,000
+that quick look gets
+us no information.
+
+1529
+01:20:01,000 --> 01:20:03,840
+That's, for example, const
+ID with an empty list.
+
+1530
+01:20:03,840 --> 01:20:06,720
+In this list, we will
+instantiate the type of const,
+
+1531
+01:20:06,720 --> 01:20:08,600
+have a quick look at the arguments,
+
+1532
+01:20:08,600 --> 01:20:10,840
+and we will learn nothing from ID,
+
+1533
+01:20:10,840 --> 01:20:12,720
+and we will learn nothing
+from the empty list,
+
+1534
+01:20:12,720 --> 01:20:15,920
+so we need to fall back to
+monomorphic instantiation.
+
+1535
+01:20:15,920 --> 01:20:18,440
+And the result will be
+that the inferred type
+
+1536
+01:20:18,440 --> 01:20:22,800
+is the most useful
+list of tau to tau,
+
+1537
+01:20:22,800 --> 01:20:27,000
+where these taus are
+monomorphic types.
+
+1538
+01:20:27,000 --> 01:20:30,280
+We can also get some other
+information into a count.
+
+1539
+01:20:30,280 --> 01:20:33,800
+Imagine, for example, we
+have this go to single ID.
+
+1540
+01:20:33,800 --> 01:20:37,360
+Well, we have a pretty similar
+story with the arguments.
+
+1541
+01:20:37,360 --> 01:20:41,400
+The type of ID is going to be
+alpha when we push it,
+
+1542
+01:20:41,400 --> 01:20:43,920
+and then we have
+a for all A, A to A.
+
+1543
+01:20:43,920 --> 01:20:45,560
+So we have two choices here, again:
+
+1544
+01:20:45,560 --> 01:20:47,720
+we can make alpha equal
+to for all A, A to A,
+
+1545
+01:20:47,720 --> 01:20:49,600
+or we could instantiate.
+
+1546
+01:20:49,600 --> 01:20:53,960
+So quick look if you
+know information here.
+
+1547
+01:20:53,960 --> 01:20:56,800
+But if we have a better look,
+
+1548
+01:20:56,800 --> 01:21:00,080
+we can also take into consideration
+the type of the result,
+
+1549
+01:21:00,080 --> 01:21:02,400
+and in that case, we
+can play the same trick
+
+1550
+01:21:02,400 --> 01:21:05,320
+as we did for
+the const of ID with IDs.
+
+1551
+01:21:05,320 --> 01:21:08,120
+The type we get pushed
+is for all A, A to A,
+
+1552
+01:21:08,120 --> 01:21:09,240
+that's from the annotation,
+
+1553
+01:21:09,240 --> 01:21:12,840
+and the type we get from
+the instantiation is list of alpha.
+
+1554
+01:21:12,840 --> 01:21:16,680
+So we can make alpha equal
+to for all A, A to A.
+
+1555
+01:21:16,680 --> 01:21:19,240
+So by knowing
+the special result type,
+
+1556
+01:21:19,240 --> 01:21:22,680
+we can get even more
+impredicative information,
+
+1557
+01:21:22,680 --> 01:21:24,600
+and this will actually inform us
+
+1558
+01:21:24,600 --> 01:21:26,920
+to get a bidirectional type system
+
+1559
+01:21:26,920 --> 01:21:30,720
+instead of a single-directional one,
+
+1560
+01:21:30,720 --> 01:21:35,000
+as Hindley-Milner is, for example.
+
+1561
+01:21:35,000 --> 01:21:37,760
+But the question is when
+to stop with looking.
+
+1562
+01:21:37,760 --> 01:21:40,200
+Up to now, we've only
+dealt with variables.
+
+1563
+01:21:40,200 --> 01:21:43,360
+So everything was one application,
+
+1564
+01:21:43,360 --> 01:21:45,280
+and this application had arguments,
+
+1565
+01:21:45,280 --> 01:21:47,960
+but those arguments
+were all variables.
+
+1566
+01:21:47,960 --> 01:21:51,080
+We can actually go deeper
+and inspect nested applications,
+
+1567
+01:21:51,080 --> 01:21:52,240
+and if you think, for example,
+
+1568
+01:21:52,240 --> 01:21:56,000
+into this goal const
+ID to const ID IDs,
+
+1569
+01:21:56,000 --> 01:21:58,040
+in order for the top-most consts
+
+1570
+01:21:58,040 --> 01:21:59,360
+to be correctly instantiated,
+
+1571
+01:21:59,360 --> 01:22:03,920
+you need to go up to
+the IDs so that you learn that,
+
+1572
+01:22:03,920 --> 01:22:06,160
+well, this should
+have a type of list
+
+1573
+01:22:06,160 --> 01:22:09,440
+of for all A, A to A, and this
+will inform both constants.
+
+1574
+01:22:09,440 --> 01:22:12,640
+So you gain something by
+inspecting nested applications.
+
+1575
+01:22:13,320 --> 01:22:15,840
+But we don't know more.
+We really want to keep the symbols.
+
+1576
+01:22:15,840 --> 01:22:18,240
+We don't want to go
+into environmental changes.
+
+1577
+01:22:18,240 --> 01:22:21,000
+So we don't inspect Lambdas.
+We don't inspect
+
+1578
+01:22:21,000 --> 01:22:24,280
+let's because this introduce
+new things into the environment.
+
+1579
+01:22:24,280 --> 01:22:26,320
+And we don't try
+to inspect them
+
+1580
+01:22:26,320 --> 01:22:29,120
+with multiple branches,
+like ifs or pattern matching
+
+1581
+01:22:29,120 --> 01:22:33,000
+because it's willing by
+that we need to not only
+
+1582
+01:22:33,000 --> 01:22:35,240
+unify things in a simple way
+would also need
+
+1583
+01:22:35,240 --> 01:22:38,040
+to consider the case
+in which these two branches
+
+1584
+01:22:38,040 --> 01:22:41,520
+don't have a similar type.
+So we just really want
+
+1585
+01:22:41,520 --> 01:22:43,560
+to keep it simple.
+And we want, we found that
+
+1586
+01:22:43,560 --> 01:22:45,920
+nested applications
+seems to be a sweet spot.
+
+1587
+01:22:45,920 --> 01:22:47,800
+So you really gain
+a lot of information
+
+1588
+01:22:47,800 --> 01:22:51,040
+by looking at net applications
+and for the rest
+
+1589
+01:22:51,040 --> 01:22:54,400
+of the cases you,
+well, you often get
+
+1590
+01:22:54,400 --> 01:22:57,000
+information pushed
+by directional
+
+1591
+01:22:57,000 --> 01:22:59,880
+typing mechanisms.
+So this is the sweet spot.
+
+1592
+01:22:59,880 --> 01:23:03,320
+So it will say,
+so our goal actually
+
+1593
+01:23:03,320 --> 01:23:05,520
+has always been
+to have a predictable
+
+1594
+01:23:05,520 --> 01:23:08,960
+inference for which
+I mean a simple mental
+
+1595
+01:23:08,960 --> 01:23:10,760
+model that the
+developer can have.
+
+1596
+01:23:10,760 --> 01:23:13,480
+One thing will succeed.
+And also when things
+
+1597
+01:23:13,480 --> 01:23:16,360
+break where the annotations
+should be placed,
+
+1598
+01:23:17,000 --> 01:23:19,480
+we also want obvious
+programs to be typable
+
+1599
+01:23:19,480 --> 01:23:22,920
+without annotations.
+And of course, what obvious are,
+
+1600
+01:23:22,920 --> 01:23:25,800
+is objective in the paper.
+We have a big list of example,
+
+1601
+01:23:25,800 --> 01:23:27,560
+would we need,
+should we think
+
+1602
+01:23:27,560 --> 01:23:29,840
+we should be typed?
+I'm going to be that annotations.
+
+1603
+01:23:29,840 --> 01:23:31,840
+And many of the examples
+I've shown here
+
+1604
+01:23:31,840 --> 01:23:33,720
+are also type
+of word without annotations
+
+1605
+01:23:33,720 --> 01:23:37,280
+so we really want to push
+for getting as much
+
+1606
+01:23:37,280 --> 01:23:39,760
+as in predicatively
+information as we can,
+
+1607
+01:23:39,760 --> 01:23:44,240
+so that developers don't have
+to annotate all the time.
+
+1608
+01:23:45,080 --> 01:23:48,000
+The other goal we have
+is to be a conservative extension
+
+1609
+01:23:48,000 --> 01:23:51,160
+of existing features.
+So we want this thing
+
+1610
+01:23:51,160 --> 01:23:52,640
+to be compatible
+with type class
+
+1611
+01:23:52,640 --> 01:23:55,680
+or step family is everything
+which is already into GNC
+
+1612
+01:23:55,680 --> 01:23:58,680
+and also to be localized
+in a specific issue
+
+1613
+01:23:58,680 --> 01:24:01,040
+on implementation.
+Because as I was saying,
+
+1614
+01:24:01,040 --> 01:24:04,000
+we want to implement
+this in GC without
+
+1615
+01:24:04,000 --> 01:24:08,920
+massive changes.
+So let me talk a bit more
+
+1616
+01:24:08,920 --> 01:24:11,720
+about the fact that
+quick look is very localized.
+
+1617
+01:24:11,720 --> 01:24:14,800
+And as I said,
+this only affects instantiation.
+
+1618
+01:24:14,800 --> 01:24:18,240
+The rest of the type
+check-in has no changes.
+
+1619
+01:24:18,240 --> 01:24:20,640
+So we've integrated
+this into GSE,
+
+1620
+01:24:20,640 --> 01:24:23,520
+which has type classes,
+type families, data type promotion,
+
+1621
+01:24:23,520 --> 01:24:25,640
+levity, polymorphism,
+you name it.
+
+1622
+01:24:25,640 --> 01:24:27,840
+And we were able
+to implement this
+
+1623
+01:24:27,840 --> 01:24:29,720
+and there is a merge request
+for doing so.
+
+1624
+01:24:29,720 --> 01:24:34,160
+And we only had to add
+450 lines out of roughly
+
+1625
+01:24:34,160 --> 01:24:37,840
+90,000 land which make up
+the type checker in C.
+
+1626
+01:24:37,840 --> 01:24:40,160
+So I think we succeeded
+in making thing,
+
+1627
+01:24:40,160 --> 01:24:43,560
+really localized.
+Of course, I encourage
+
+1628
+01:24:43,560 --> 01:24:45,760
+you to read the paper.
+There is more there
+
+1629
+01:24:45,760 --> 01:24:48,960
+you have the full formalization.
+And actually we think
+
+1630
+01:24:48,960 --> 01:24:50,600
+it's the first time
+that bidirectional
+
+1631
+01:24:50,600 --> 01:24:53,520
+type inference and constraint
+have been written
+
+1632
+01:24:53,520 --> 01:24:57,760
+down in a paper.
+This is what was inside DC,
+
+1633
+01:24:57,760 --> 01:25:01,960
+but there was no nothing written
+about how you integrate
+
+1634
+01:25:01,960 --> 01:25:04,160
+all of this together.
+And on top of that,
+
+1635
+01:25:04,160 --> 01:25:06,880
+we built curriculum
+in predicativity.
+
+1636
+01:25:06,880 --> 01:25:08,760
+Of course we have,
+we talk about
+
+1637
+01:25:08,760 --> 01:25:13,160
+metatheoretical properties.
+Also we talk about
+
+1638
+01:25:13,160 --> 01:25:16,640
+how we integrate quick loop
+with visibles type application.
+
+1639
+01:25:16,640 --> 01:25:21,200
+And the reason is that when,
+when quick look fails,
+
+1640
+01:25:21,200 --> 01:25:23,960
+the easiest way to operate,
+this is a way to tell
+
+1641
+01:25:23,960 --> 01:25:26,040
+the competitor
+what this institution
+
+1642
+01:25:26,040 --> 01:25:28,200
+should be is to use
+visible type application.
+
+1643
+01:25:28,200 --> 01:25:29,600
+So we think it's really
+important that does
+
+1644
+01:25:29,600 --> 01:25:31,600
+these two things
+play together.
+
+1645
+01:25:31,600 --> 01:25:34,920
+Well, we also talk
+a bit about how qualified type
+
+1646
+01:25:34,920 --> 01:25:37,440
+and GADTs is integrated
+with quick look
+
+1647
+01:25:37,440 --> 01:25:40,000
+and also lots of related work,
+because as I shown
+
+1648
+01:25:40,000 --> 01:25:41,760
+at the beginning,
+a lot of people
+
+1649
+01:25:41,760 --> 01:25:43,800
+have been struggling
+with this problem
+
+1650
+01:25:43,800 --> 01:25:47,080
+and trying to solve it
+for a long time.
+
+1651
+01:25:47,080 --> 01:25:49,080
+In summary, quck look
+impredicativity
+
+1652
+01:25:49,080 --> 01:25:51,960
+is a simple approach
+to impredicative inference
+
+1653
+01:25:51,960 --> 01:25:54,880
+with stress to be predictable,
+but yet type
+
+1654
+01:25:54,880 --> 01:25:57,960
+as many obvious program
+as possible without annotation.
+
+1655
+01:25:57,960 --> 01:26:00,200
+And it's also
+a conservative extension
+
+1656
+01:26:00,200 --> 01:26:02,720
+to what it's already there
+and very localized.
+
+1657
+01:26:02,720 --> 01:26:05,640
+And this specific
+question and implementation.
+
+1658
+01:26:05,640 --> 01:26:07,960
+That's what the whole,
+I love to hear you
+
+1659
+01:26:07,960 --> 01:26:11,400
+any new ideas,
+any questions in the,
+
+1660
+01:26:11,400 --> 01:26:15,760
+in the ESFB channel for this,
+and thanks for watching
+
+1661
+01:26:17,200 --> 01:26:24,040
+(APPLAUSE)
+
+1662
+01:26:24,040 --> 01:26:26,160
+(VIDEO STOPPED)
+
+1663
+01:26:26,160 --> 01:26:28,640
+STEPHANIE: Thank you Alejandro.
+If you are watching
+
+1664
+01:26:28,640 --> 01:26:31,160
+this talk live,
+please don't forget
+
+1665
+01:26:31,160 --> 01:26:34,200
+about the Q & A session
+that may be available
+
+1666
+01:26:34,200 --> 01:26:38,600
+in your time now.
+We will now pause here
+
+1667
+01:26:38,600 --> 01:26:41,760
+to sync up with
+the talk schedule.
+
+1668
+01:28:02,120 --> 01:28:04,720
+Our next talk presents
+a general mechanism
+
+1669
+01:28:04,720 --> 01:28:07,880
+and type system design
+inspired by modal logic.
+
+1670
+01:28:08,480 --> 01:28:10,680
+This work is called
+'A unified view
+
+1671
+01:28:10,680 --> 01:28:12,720
+of modalities
+in type systems',
+
+1672
+01:28:12,720 --> 01:28:15,160
+and it is a paper
+by Andreas Abel
+
+1673
+01:28:15,160 --> 01:28:19,040
+and Jean-Phillipe Bernardy,
+both from Gothenburg.
+
+1674
+01:28:19,040 --> 01:28:22,920
+Jean-Phillipe Bernardy
+will be giving the talk.
+
+1675
+01:28:22,920 --> 01:28:24,040
+JEAN-PHILLIPE BERNARDY: Hello
+and welcome to
+
+1676
+01:28:24,040 --> 01:28:27,120
+A unified view of Modalities
+in type systems.
+
+1677
+01:28:27,120 --> 01:28:29,760
+My name is Jean-Phillipe Bernardy
+and this is joint work
+
+1678
+01:28:29,760 --> 01:28:32,680
+with Andreas Abel.
+
+1679
+01:28:32,680 --> 01:28:36,240
+Modalities are qualifiers,
+25 types of propositions.
+
+1680
+01:28:36,240 --> 01:28:39,080
+For example, in the sentence,
+it may rain today.
+
+1681
+01:28:39,080 --> 01:28:41,240
+The rain today
+position is qualified
+
+1682
+01:28:41,240 --> 01:28:43,360
+with the possibility modal.
+
+1683
+01:28:43,360 --> 01:28:46,520
+Another possible example
+is the qualification of positions
+
+1684
+01:28:46,520 --> 01:28:49,880
+by the agent who believe it
+as in John thinks
+
+1685
+01:28:49,880 --> 01:28:53,720
+that it rains today
+in programming languages,
+
+1686
+01:28:53,720 --> 01:28:55,320
+it can be useful
+to qualify your type,
+
+1687
+01:28:55,320 --> 01:28:58,480
+but in amount in presenting,
+how much is available.
+
+1688
+01:28:58,480 --> 01:29:03,520
+For example 5.543mm of rain.
+
+1689
+01:29:03,520 --> 01:29:06,760
+Another useful kind of qualifier
+is whether information
+
+1690
+01:29:06,760 --> 01:29:09,840
+is public or secrets
+in this work.
+
+1691
+01:29:09,840 --> 01:29:12,040
+I will go this to describe
+the system which unifies
+
+1692
+01:29:12,040 --> 01:29:15,000
+all such instances
+of modalities.
+
+1693
+01:29:15,000 --> 01:29:18,200
+We also want the system
+to have a useful meta theory,
+
+1694
+01:29:18,200 --> 01:29:21,000
+which only instances
+can inherit.
+
+1695
+01:29:21,000 --> 01:29:22,800
+Our work is set
+in the framework
+
+1696
+01:29:22,800 --> 01:29:25,400
+of the system F
+also known that is
+
+1697
+01:29:25,400 --> 01:29:29,480
+the Polymorphic Lambda Calculus.
+I am going to assume
+
+1698
+01:29:29,480 --> 01:29:32,440
+familiarity with it.
+Also, I assume
+
+1699
+01:29:32,440 --> 01:29:34,560
+you know that
+they are isomorphic.
+
+1700
+01:29:34,560 --> 01:29:37,320
+If you watch the video offline,
+feel free to pause,
+
+1701
+01:29:37,320 --> 01:29:39,280
+and we decide
+that you won't face,
+
+1702
+01:29:39,280 --> 01:29:43,400
+or we can consult the paper
+and come back later here,
+
+1703
+01:29:43,400 --> 01:29:44,760
+as suggested
+by the examples
+
+1704
+01:29:44,760 --> 01:29:47,400
+that I've shown above.
+We add a new type form
+
+1705
+01:29:47,400 --> 01:29:52,400
+of P(A), which I will just read
+out PA in the future.
+
+1706
+01:29:52,960 --> 01:29:56,760
+This means A
+qualifying by modality P.
+
+1707
+01:29:57,720 --> 01:30:00,040
+To support modal types.
+The key ID is to
+
+1708
+01:30:00,040 --> 01:30:03,960
+annotate every type variable
+or every variable
+
+1709
+01:30:03,960 --> 01:30:08,360
+we do modality.
+In addition to each type again,
+
+1710
+01:30:08,360 --> 01:30:10,720
+to support modal types.
+The key ID is to annotate
+
+1711
+01:30:10,720 --> 01:30:12,440
+every variable
+with the modality.
+
+1712
+01:30:12,440 --> 01:30:15,320
+In addition to each site,
+formerly what we do
+
+1713
+01:30:15,320 --> 01:30:17,280
+is to change the judgment.
+So that includes
+
+1714
+01:30:17,280 --> 01:30:20,720
+this little gamma here.
+It is a map
+
+1715
+01:30:20,720 --> 01:30:23,400
+from variable names to modalities
+and important thing
+
+1716
+01:30:23,400 --> 01:30:24,840
+to note is that
+the reason thing
+
+1717
+01:30:24,840 --> 01:30:27,920
+type A in the judgment
+has a unit in guide.
+
+1718
+01:30:27,920 --> 01:30:30,360
+This unit without it
+will be interpreted differently
+
+1719
+01:30:30,360 --> 01:30:33,080
+depending on the application.
+But I can only say that
+
+1720
+01:30:33,080 --> 01:30:39,800
+it acts as a default
+to produce a modality, say P(A),
+
+1721
+01:30:39,800 --> 01:30:42,680
+here we need to multiply
+the modality context by P
+
+1722
+01:30:42,680 --> 01:30:47,000
+that is we multiply every modality
+in the context by P.
+
+1723
+01:30:47,000 --> 01:30:49,640
+In the same vein.
+If we want the product
+
+1724
+01:30:49,640 --> 01:30:52,720
+of A and B, then we,
+the sum of their
+
+1725
+01:30:52,720 --> 01:30:57,400
+respective modality context
+to see how this plays out.
+
+1726
+01:30:57,400 --> 01:31:00,320
+It is first look
+at the fragment of A system F,
+
+1727
+01:31:00,320 --> 01:31:03,240
+without modalities.
+Then we can see
+
+1728
+01:31:03,240 --> 01:31:06,000
+how modality adaptations
+gets added.
+
+1729
+01:31:06,000 --> 01:31:07,680
+Let's look first
+at the variable,
+
+1730
+01:31:07,680 --> 01:31:10,760
+the world, what it says
+is that a is used exactly once.
+
+1731
+01:31:10,760 --> 01:31:13,720
+And so A is invaded
+with a unit modality
+
+1732
+01:31:13,720 --> 01:31:16,840
+in the context also
+that the rest of the context
+
+1733
+01:31:16,840 --> 01:31:20,200
+is not used at all.
+And so it is emanated
+
+1734
+01:31:20,200 --> 01:31:24,240
+with the zero modality
+for consistency,
+
+1735
+01:31:24,240 --> 01:31:27,000
+We also annotate domain
+of the hour type
+
+1736
+01:31:27,000 --> 01:31:29,560
+with the modality.
+You can see how this
+
+1737
+01:31:29,560 --> 01:31:33,480
+plays out in the ABS
+and (INAUDIBLE) roots
+
+1738
+01:31:33,480 --> 01:31:39,720
+obstruction applications.
+In particular, in the application
+
+1739
+01:31:39,720 --> 01:31:42,080
+to be able to fit qA
+to the function.
+
+1740
+01:31:42,080 --> 01:31:45,000
+We need q times delta.
+
+1741
+01:31:45,000 --> 01:31:47,160
+In passing we know quickly
+that the application
+
+1742
+01:31:47,160 --> 01:31:50,200
+does nothing useful
+with the modality context.
+
+1743
+01:31:51,440 --> 01:31:52,960
+Let's now look
+at the introduction
+
+1744
+01:31:52,960 --> 01:31:56,160
+and elimination rules
+for qualified types.
+
+1745
+01:31:57,200 --> 01:31:59,760
+Introduction rule works.
+As we said before,
+
+1746
+01:31:59,760 --> 01:32:03,040
+namely, we multiplied
+the context by P.
+
+1747
+01:32:03,040 --> 01:32:05,600
+Elimination rule
+is a bit more involved.
+
+1748
+01:32:05,600 --> 01:32:08,240
+No first that we assume
+that little (INAUDIBLE)
+
+1749
+01:32:08,240 --> 01:32:11,280
+would use P(A).
+Now we want to use this A
+
+1750
+01:32:11,280 --> 01:32:14,160
+to put to produce
+C in continuation.
+
+1751
+01:32:14,160 --> 01:32:16,560
+We could think that
+we'd have PA
+
+1752
+01:32:16,560 --> 01:32:18,560
+in the context
+of the continuation,
+
+1753
+01:32:18,560 --> 01:32:22,400
+but instead we are outcome
+replied by the additional average Q.
+
+1754
+01:32:22,400 --> 01:32:26,640
+In reality, this is because
+to produce 1C,
+
+1755
+01:32:26,640 --> 01:32:29,160
+you need C,
+we may need another modality.
+
+1756
+01:32:29,160 --> 01:32:32,520
+Exactly B for A,
+and thus this version
+
+1757
+01:32:32,520 --> 01:32:35,160
+gives more flexibility
+to the programmer.
+
+1758
+01:32:35,160 --> 01:32:39,560
+On top of this, we also have
+an order of modalities
+
+1759
+01:32:39,560 --> 01:32:44,720
+and it is generated
+by this lattice.
+
+1760
+01:32:44,720 --> 01:32:47,040
+This order drives
+the weakening rule
+
+1761
+01:32:47,040 --> 01:32:50,600
+as shown here.
+We can also see the converse,
+
+1762
+01:32:50,600 --> 01:32:55,120
+and, this is
+a conversion rule from PTQ.
+
+1763
+01:32:55,120 --> 01:32:58,720
+If P is less than Q,
+the exact structure
+
+1764
+01:32:58,720 --> 01:33:01,600
+of morality is
+as shown here.
+
+1765
+01:33:01,600 --> 01:33:05,800
+Pose the video, or you can
+check out the paper.
+
+1766
+01:33:05,800 --> 01:33:08,080
+But the interesting bit
+is the last line,
+
+1767
+01:33:08,080 --> 01:33:10,320
+namely, that addition
+distribute over meat,
+
+1768
+01:33:10,320 --> 01:33:13,920
+is probably also you guys,
+addition is monitored.
+
+1769
+01:33:15,000 --> 01:33:17,040
+We can instantiate
+the structure to various
+
+1770
+01:33:17,040 --> 01:33:20,120
+various especial cases
+and obtain several
+
+1771
+01:33:20,120 --> 01:33:23,280
+useful systems in this way.
+First, we can do
+
+1772
+01:33:23,280 --> 01:33:25,640
+(KEYBOARD CLICKS)
+zero and one,
+
+1773
+01:33:25,640 --> 01:33:28,440
+as you'd expect,
+we just need to add
+
+1774
+01:33:28,440 --> 01:33:33,600
+the modality Omega to support
+unrestricted usage
+
+1775
+01:33:33,600 --> 01:33:37,240
+That's the band
+modality in radiology.
+
+1776
+01:33:37,840 --> 01:33:40,640
+The rest of the structure
+is at you respect.
+
+1777
+01:33:40,640 --> 01:33:44,080
+And Omega is acting
+as a cache value.
+
+1778
+01:33:44,080 --> 01:33:47,520
+Useful generalization
+of linear types is the system
+
+1779
+01:33:47,520 --> 01:33:49,560
+which tracks
+the exact number of times
+
+1780
+01:33:49,560 --> 01:33:52,440
+that a variable is used.
+However, one must
+
+1781
+01:33:52,440 --> 01:33:55,040
+allow for sets
+of possible usages.
+
+1782
+01:33:55,040 --> 01:33:58,120
+We implemented meet, et cetera.
+The rest of the structure
+
+1783
+01:33:58,120 --> 01:34:02,120
+falls out from this choice.
+An interesting property
+
+1784
+01:34:02,120 --> 01:34:05,160
+of all such models,
+Modal systems
+
+1785
+01:34:05,160 --> 01:34:10,120
+is that zero annotated per meter
+is guaranteed not to be used
+
+1786
+01:34:10,120 --> 01:34:12,520
+this capture by
+the irrelevance theory,
+
+1787
+01:34:12,520 --> 01:34:14,360
+which is stated
+as shown here
+
+1788
+01:34:14,360 --> 01:34:19,920
+and proven in the paper,
+the lattice, which as you'll recall,
+
+1789
+01:34:19,920 --> 01:34:22,920
+corresponds to the order
+of modalities can be used
+
+1790
+01:34:22,920 --> 01:34:26,480
+for various purposes.
+It can be used
+
+1791
+01:34:26,480 --> 01:34:30,320
+for security purposes,
+with more secret levels
+
+1792
+01:34:30,320 --> 01:34:32,880
+towards the top.
+It can be used to represent
+
+1793
+01:34:32,880 --> 01:34:35,080
+the necessity modalities
+with more necessary
+
+1794
+01:34:35,080 --> 01:34:37,200
+for positions towards
+the bottom.
+
+1795
+01:34:37,200 --> 01:34:39,760
+It can represent
+levels of beliefs.
+
+1796
+01:34:39,760 --> 01:34:42,960
+More credulist agents
+are at the top.
+
+1797
+01:34:43,640 --> 01:34:46,160
+We can represent
+computational relevance
+
+1798
+01:34:46,160 --> 01:34:49,560
+with more 11 types
+toward the bottom.
+
+1799
+01:34:50,440 --> 01:34:53,600
+Remember that convertibility
+is from bottom to top.
+
+1800
+01:34:53,600 --> 01:34:57,160
+And so at the meat of P & Q
+all data which is available
+
+1801
+01:34:57,160 --> 01:35:01,600
+for either P or Q is
+also available there.
+
+1802
+01:35:03,520 --> 01:35:05,200
+We can now take
+a moment to ponder
+
+1803
+01:35:05,200 --> 01:35:08,280
+what happens when one
+does not care about quantities.
+
+1804
+01:35:08,280 --> 01:35:10,400
+And so modalities
+are only used to be
+
+1805
+01:35:10,400 --> 01:35:13,960
+present levels in areas
+such as from previously
+
+1806
+01:35:13,960 --> 01:35:15,560
+in this case,
+the meat becomes
+
+1807
+01:35:15,560 --> 01:35:19,240
+the addition and the joint
+becomes multiplication.
+
+1808
+01:35:19,240 --> 01:35:23,120
+Additionally, zero
+is also the top of the ladder.
+
+1809
+01:35:23,120 --> 01:35:25,960
+The consequence is that
+to produce zero A
+
+1810
+01:35:25,960 --> 01:35:29,600
+or really top A,
+the modality context
+
+1811
+01:35:29,600 --> 01:35:33,560
+can be ignored.
+And so we can use all variables,
+
+1812
+01:35:33,560 --> 01:35:35,120
+even those
+that are available
+
+1813
+01:35:35,120 --> 01:35:39,320
+with modality zero, data.
+It has the application
+
+1814
+01:35:39,320 --> 01:35:41,520
+where precise quantities
+are tracked,
+
+1815
+01:35:41,520 --> 01:35:45,520
+is sensitive analysis,
+which you can read
+
+1816
+01:35:45,520 --> 01:35:48,280
+about in the paper.
+Let's now turn
+
+1817
+01:35:48,280 --> 01:35:51,720
+to the metatheory.
+We consider our first
+
+1818
+01:35:51,720 --> 01:35:53,920
+operation out semantics,
+who's cornerstone
+
+1819
+01:35:53,920 --> 01:35:56,600
+is the substitution Lemme,
+the proof follows
+
+1820
+01:35:56,600 --> 01:35:59,560
+the issue of structure.
+We have additionally
+
+1821
+01:35:59,560 --> 01:36:03,600
+to express how modalities
+are transformed by substitution.
+
+1822
+01:36:03,600 --> 01:36:06,360
+It turns out that the modality
+transformation applied by
+
+1823
+01:36:06,360 --> 01:36:11,560
+your substitution here, Sigma
+is a linear operator, here.
+
+1824
+01:36:11,560 --> 01:36:13,960
+So, the proof
+is straightforward,
+
+1825
+01:36:13,960 --> 01:36:16,280
+but it is interesting
+to note that the requirements,
+
+1826
+01:36:16,280 --> 01:36:18,840
+this is a reformed modality
+is correspond exactly
+
+1827
+01:36:18,840 --> 01:36:23,080
+to the model structure,
+which we have shown previously.
+
+1828
+01:36:23,080 --> 01:36:26,400
+We also have a modality
+preserving abstract machine.
+
+1829
+01:36:26,400 --> 01:36:27,800
+This is a (INAUDIBLE)
+binding machine
+
+1830
+01:36:27,800 --> 01:36:31,360
+where every state is well typed
+and well-qualified.
+
+1831
+01:36:31,360 --> 01:36:33,080
+The main point
+of showing this machine
+
+1832
+01:36:33,080 --> 01:36:35,640
+is to show that
+dynamic execution steps
+
+1833
+01:36:35,640 --> 01:36:38,160
+will never over-consume
+under consume,
+
+1834
+01:36:38,160 --> 01:36:42,000
+see private information,
+et cetera.
+
+1835
+01:36:42,680 --> 01:36:45,720
+So the modalities annotations
+can be realized
+
+1836
+01:36:45,720 --> 01:36:47,840
+the trend times as such.
+
+1837
+01:36:49,040 --> 01:36:51,840
+Finally, we have
+a relation now
+
+1838
+01:36:51,840 --> 01:36:56,800
+Kripke case style semantics.
+We interpret types by relations
+
+1839
+01:36:56,800 --> 01:37:00,000
+and these relations
+are indexed by words.
+
+1840
+01:37:00,000 --> 01:37:02,840
+The main novelty here
+is that we can interpret
+
+1841
+01:37:02,840 --> 01:37:05,360
+the PA type by
+a notion of division
+
+1842
+01:37:05,360 --> 01:37:08,960
+or more precisely
+a gala connection.
+
+1843
+01:37:10,480 --> 01:37:12,320
+For quantitative assistant
+instead of a new,
+
+1844
+01:37:12,320 --> 01:37:15,560
+it's a multiset
+of resources to consume.
+
+1845
+01:37:15,560 --> 01:37:18,560
+P is that integrated
+is a natural number
+
+1846
+01:37:18,560 --> 01:37:24,120
+and to interpret P(A),
+27 PA at a world w,
+
+1847
+01:37:24,120 --> 01:37:28,720
+we interpret A
+at a world w divided by P.
+
+1848
+01:37:28,720 --> 01:37:30,720
+For non quantitative systems,
+
+1849
+01:37:30,720 --> 01:37:35,480
+w is a set of capabilities.
+Types are indistinguishable.
+
+1850
+01:37:35,480 --> 01:37:39,640
+If the associated capability
+is not in w.
+
+1851
+01:37:39,640 --> 01:37:41,600
+We can take
+advantage of the fact
+
+1852
+01:37:41,600 --> 01:37:44,920
+that every modality
+can be represented
+
+1853
+01:37:44,920 --> 01:37:47,000
+by a set of capabilities.
+
+1854
+01:37:47,000 --> 01:37:50,920
+So to interpret P(A) at w
+we interpret A at the world,
+
+1855
+01:37:50,920 --> 01:37:54,840
+which is the difference
+of the sets w and P
+
+1856
+01:37:56,000 --> 01:37:58,800
+combining the two of you
+is somewhat curious,
+
+1857
+01:37:58,800 --> 01:38:03,520
+but it is showing the paper.
+Perhaps controversial choice
+
+1858
+01:38:03,520 --> 01:38:07,560
+is that we have a constraint
+on which modalities...
+
+1859
+01:38:10,600 --> 01:38:12,480
+can the value
+take to be scrutinized
+
+1860
+01:38:12,480 --> 01:38:16,240
+by a case expression.
+We demand that they must
+
+1861
+01:38:16,240 --> 01:38:19,320
+be convertible
+to the unit modality.
+
+1862
+01:38:19,320 --> 01:38:22,520
+This constraint is
+necessary for irrelevance.
+
+1863
+01:38:22,520 --> 01:38:25,600
+Otherwise we will be able to see
+if we are on the left
+
+1864
+01:38:25,600 --> 01:38:27,760
+or on the right
+of the sun
+
+1865
+01:38:27,760 --> 01:38:31,840
+for every modality, and then
+everything becomes observable
+
+1866
+01:38:31,840 --> 01:38:35,160
+at every level,
+even zero,
+
+1867
+01:38:35,960 --> 01:38:39,360
+but the operational semantics
+do not in fact realize...
+
+1868
+01:38:40,000 --> 01:38:43,320
+this constraint, rely
+on this constraint.
+
+1869
+01:38:43,320 --> 01:38:45,400
+And so there are other choices.
+
+1870
+01:38:46,640 --> 01:38:49,720
+There is an extended discussion
+of this topic in the paper.
+
+1871
+01:38:51,480 --> 01:38:55,680
+Additionally in the paper, we deal
+with the whole of system F of course
+
+1872
+01:38:55,680 --> 01:38:56,880
+with sum and products.
+
+1873
+01:38:57,360 --> 01:39:00,240
+And we have quantification
+of a modalities
+
+1874
+01:39:00,240 --> 01:39:04,120
+which means that we have
+high order model types.
+
+1875
+01:39:04,880 --> 01:39:07,560
+We also show more applications
+of free theorems.
+
+1876
+01:39:07,560 --> 01:39:10,080
+And we also give
+a wealth of nice details.
+
+1877
+01:39:10,080 --> 01:39:11,600
+So feel free to check these out.
+
+1878
+01:39:12,600 --> 01:39:15,160
+In conclusion we
+declare victory because
+
+1879
+01:39:15,920 --> 01:39:19,800
+many useful system can be
+captured by our trademark.
+
+1880
+01:39:20,320 --> 01:39:22,360
+And indicating in each method here.
+
+1881
+01:39:23,360 --> 01:39:25,800
+As usual, it can be useful
+to describe an application
+
+1882
+01:39:25,800 --> 01:39:29,600
+which exhibits a non
+commutative multiplication
+
+1883
+01:39:30,840 --> 01:39:34,120
+or (INAUDIBLE)
+
+1884
+01:39:35,880 --> 01:39:39,320
+Another useful development would be
+to have a representation theorem
+
+1885
+01:39:39,320 --> 01:39:40,840
+for the modality structure.
+
+1886
+01:39:42,320 --> 01:39:43,320
+Thanks for watching.
+
+1887
+01:39:43,320 --> 01:39:48,320
+(APPLAUSE)
+
+1888
+01:39:51,440 --> 01:39:53,080
+STEPHANIE: Thank you Jean-Philippe.
+
+1889
+01:39:53,840 --> 01:39:57,960
+At this point please make
+sure you join a Q&A session
+
+1890
+01:39:57,960 --> 01:40:00,240
+if it is available in your time map.
+
+1891
+01:40:02,480 --> 01:40:05,440
+We will now pause to sync up with
+the rest of the talk schedule.
+
+1892
+01:40:57,440 --> 01:41:02,440
+(ROCK MUSIC PLAYING)
+
+1893
+01:42:42,800 --> 01:42:44,480
+(MUSIC ENDS)
+
+1894
+01:43:00,240 --> 01:43:04,520
+Our next talk discusses
+pattern matching
+
+1895
+01:43:04,520 --> 01:43:07,000
+in the Glasgow Haskell compiler.
+
+1896
+01:43:07,920 --> 01:43:11,880
+It is based on work by Sebastian
+Graf, Simon Peyton Jones
+
+1897
+01:43:11,880 --> 01:43:12,880
+and Ryan Scott.
+
+1898
+01:43:13,360 --> 01:43:15,720
+The talk will be
+presented by Sebastian.
+
+1899
+01:43:17,480 --> 01:43:19,120
+SEBASTIAN GRAF: Hi, I'm Sebastian
+
+1900
+01:43:19,120 --> 01:43:22,840
+and I'm here to talk to you about
+pattern match coverage checking.
+
+1901
+01:43:23,360 --> 01:43:25,840
+In case you are wondering how
+this problem hasn't been solved
+
+1902
+01:43:25,840 --> 01:43:26,920
+like 40 years ago,
+
+1903
+01:43:26,920 --> 01:43:29,920
+well lower your guard
+and hold back on your jet
+
+1904
+01:43:29,920 --> 01:43:31,200
+just for a few more minutes.
+
+1905
+01:43:32,960 --> 01:43:36,080
+Let's start with a quick recap
+of our pattern match warnings.
+
+1906
+01:43:36,800 --> 01:43:39,520
+This incomplete definition
+of isJust in Haskell here
+
+1907
+01:43:40,240 --> 01:43:42,040
+will crush when called with nothing
+
+1908
+01:43:43,040 --> 01:43:44,880
+because it lucks a covering clause.
+
+1909
+01:43:45,640 --> 01:43:47,640
+Now run time crushes are
+
+1910
+01:43:47,640 --> 01:43:49,840
+annoying especially such
+an obvious oversight.
+
+1911
+01:43:50,320 --> 01:43:53,920
+So the compiler should end
+indeed in the case of GHC
+
+1912
+01:43:53,920 --> 01:43:55,320
+it does run about it.
+
+1913
+01:43:56,320 --> 01:43:59,520
+I'll talk about how GHC
+figures out this missing cases
+
+1914
+01:44:01,000 --> 01:44:04,720
+apart from such missing
+equations like nothing here,
+
+1915
+01:44:05,200 --> 01:44:07,240
+compilers can also find
+redundant equations
+
+1916
+01:44:07,240 --> 01:44:08,600
+like the third one here.
+
+1917
+01:44:09,360 --> 01:44:11,520
+In fact compilers have
+been able to produce
+
+1918
+01:44:11,520 --> 01:44:13,280
+these kinds of warning
+for a long time.
+
+1919
+01:44:14,000 --> 01:44:16,240
+So you might think there is
+nothing new to find here.
+
+1920
+01:44:17,720 --> 01:44:20,800
+And I thought so to for
+I picked up maintenance
+
+1921
+01:44:20,800 --> 01:44:25,040
+of GHC pattern match checker as
+a side project about a year ago.
+
+1922
+01:44:26,560 --> 01:44:29,200
+As of recently there are
+over 28 open tickets
+
+1923
+01:44:29,200 --> 01:44:30,680
+for the pattern match checker
+
+1924
+01:44:30,680 --> 01:44:33,760
+most of them related to
+performance and incorrect handling
+
+1925
+01:44:33,760 --> 01:44:37,240
+of some subtle interaction
+of source syntax features.
+
+1926
+01:44:39,720 --> 01:44:43,480
+So how exactly can something
+that looks so simple
+
+1927
+01:44:43,480 --> 01:44:44,880
+give us so many headaches.
+
+1928
+01:44:46,880 --> 01:44:49,320
+Let's start with a little
+warm up exercise.
+
+1929
+01:44:50,040 --> 01:44:51,480
+Is this function exhaustive?
+
+1930
+01:44:52,200 --> 01:44:54,360
+Well that's a pretty
+suggestive question
+
+1931
+01:44:54,360 --> 01:44:56,200
+and since this isn't a live talk,
+
+1932
+01:44:56,920 --> 01:44:58,000
+I won't be waiting for you.
+
+1933
+01:44:58,480 --> 01:45:01,160
+The answer is no and these are
+values that it failed to cover.
+
+1934
+01:45:02,400 --> 01:45:04,360
+There are only four pattern matches
+
+1935
+01:45:04,360 --> 01:45:07,880
+but 16 different combinations
+of arguments to consider.
+
+1936
+01:45:08,880 --> 01:45:12,520
+Clearly a scalable automated
+checker needs to know when
+
+1937
+01:45:12,520 --> 01:45:15,640
+and how to bail out of this
+exponential behaviour.
+
+1938
+01:45:17,640 --> 01:45:21,080
+Now Haskell is
+lazy but not total.
+
+1939
+01:45:21,080 --> 01:45:23,400
+That also reflects in it's
+pattern matching semantics.
+
+1940
+01:45:24,160 --> 01:45:26,320
+Take this function
+here as an example.
+
+1941
+01:45:27,600 --> 01:45:30,800
+It might be tempting to think that
+the second equation is redundant
+
+1942
+01:45:31,280 --> 01:45:32,640
+but in fact it isn't.
+
+1943
+01:45:34,120 --> 01:45:37,160
+Deleting equation two would
+alter the semantics of function
+
+1944
+01:45:37,160 --> 01:45:41,360
+from crushing to return
+three in this call here.
+
+1945
+01:45:41,360 --> 01:45:42,480
+So not redundant.
+
+1946
+01:45:44,000 --> 01:45:46,400
+But on the other end we
+can never return to
+
+1947
+01:45:46,400 --> 01:45:50,120
+which definitely smells like
+a bug worth reporting to the user.
+
+1948
+01:45:51,360 --> 01:45:54,960
+We say that the equation has
+an inaccessible right handside.
+
+1949
+01:45:55,720 --> 01:45:57,880
+Of course when we call
+a clause redundant
+
+1950
+01:45:57,880 --> 01:46:01,120
+that always implies it's right
+hand side it's inaccessible.
+
+1951
+01:46:03,360 --> 01:46:05,480
+Lazy but not total also means
+
+1952
+01:46:05,480 --> 01:46:08,320
+that we have bottom
+inhabiting every data type.
+
+1953
+01:46:08,840 --> 01:46:10,560
+That includes the data type void
+
+1954
+01:46:10,560 --> 01:46:12,800
+which doesn't have any
+data constructors.
+
+1955
+01:46:12,800 --> 01:46:15,120
+So bottom is only inhabitant.
+
+1956
+01:46:16,600 --> 01:46:19,400
+This examples here introduce
+bindings of type void
+
+1957
+01:46:19,920 --> 01:46:23,040
+by resorting to divergence
+and runtime errors.
+
+1958
+01:46:24,040 --> 01:46:26,720
+F here matches on them in
+a lazy world cup match
+
+1959
+01:46:26,720 --> 01:46:29,760
+and it's just regular exhaustive
+function definition.
+
+1960
+01:46:32,520 --> 01:46:36,400
+Now that we have void, we can
+combine it with strict fields.
+
+1961
+01:46:37,400 --> 01:46:40,080
+There is a strict maybe
+data type as you can tell
+
+1962
+01:46:40,080 --> 01:46:43,840
+by the strictness annotation
+of Sjust yield here.
+
+1963
+01:46:44,560 --> 01:46:46,080
+Whenever SJust is constructed
+
+1964
+01:46:46,080 --> 01:46:48,440
+it's field needs to
+be evaluated first.
+
+1965
+01:46:49,920 --> 01:46:51,080
+The function F here
+
+1966
+01:46:51,080 --> 01:46:52,960
+matches on SMaybe of Void.
+
+1967
+01:46:53,720 --> 01:46:57,520
+Question, is the second clause
+of F redundant or not.
+
+1968
+01:46:58,760 --> 01:47:00,280
+We can answer this systematically
+
+1969
+01:47:00,280 --> 01:47:03,840
+by enumerating
+the inhabitants of SMaybe Void
+
+1970
+01:47:03,840 --> 01:47:06,760
+and see which equations
+of F match them.
+
+1971
+01:47:08,240 --> 01:47:11,440
+The only two inhabitants
+are bottom and SNothing.
+
+1972
+01:47:12,960 --> 01:47:14,720
+SJust of bottom is
+just an inhabitant
+
+1973
+01:47:14,720 --> 01:47:16,440
+because of the strict field.
+
+1974
+01:47:17,200 --> 01:47:19,720
+The first equation of
+F diverges on bottom
+
+1975
+01:47:20,480 --> 01:47:22,160
+and matches on nothing.
+
+1976
+01:47:24,160 --> 01:47:25,200
+So yes redundant.
+
+1977
+01:47:25,200 --> 01:47:28,040
+There is no value possibly
+reaching the second equation.
+
+1978
+01:47:31,800 --> 01:47:35,360
+Guards are another very basic
+pattern language feature of Haskell
+
+1979
+01:47:36,880 --> 01:47:38,680
+Does hind have any
+redundant clauses,
+
+1980
+01:47:39,680 --> 01:47:42,120
+in general it's hard to tell
+without knowing the definition
+
+1981
+01:47:42,120 --> 01:47:44,800
+of less than EQ and so on.
+
+1982
+01:47:45,320 --> 01:47:48,600
+Also would quickly become undecidable
+if we just reasoned about
+
+1983
+01:47:48,600 --> 01:47:50,280
+every function we know
+the definition of.
+
+1984
+01:47:52,520 --> 01:47:56,320
+So apparently guards are quite
+rich semantically speaking.
+
+1985
+01:47:57,320 --> 01:48:00,280
+Here you can see how it's even
+possible to pattern matching
+
+1986
+01:48:00,280 --> 01:48:01,400
+with pattern guards.
+
+1987
+01:48:01,880 --> 01:48:06,600
+And get here, even mixes both
+structural pattern matching
+
+1988
+01:48:07,600 --> 01:48:08,760
+and pattern guards.
+
+1989
+01:48:09,760 --> 01:48:13,320
+This definition is exhaustive
+and the compiler should not flag it
+
+1990
+01:48:13,320 --> 01:48:14,360
+as non exhaustive.
+
+1991
+01:48:16,360 --> 01:48:18,320
+I hope it has become clearer that
+
+1992
+01:48:18,320 --> 01:48:20,840
+there are a lot of
+surface language features
+
+1993
+01:48:20,840 --> 01:48:24,160
+that the pattern match checker
+has to cope with efficiently.
+
+1994
+01:48:24,880 --> 01:48:27,840
+Also many of these features
+interact with each other.
+
+1995
+01:48:28,600 --> 01:48:31,080
+I won't have time to talk
+about the ones in parenthesis
+
+1996
+01:48:31,080 --> 01:48:32,920
+like long distance information.
+
+1997
+01:48:33,440 --> 01:48:36,120
+So please do ask
+questions afterwards
+
+1998
+01:48:36,120 --> 01:48:38,120
+and read the paper
+if you are interested.
+
+1999
+01:48:40,840 --> 01:48:46,520
+The status quo in GHC was
+based on a 2015 ICFP paper
+
+2000
+01:48:46,520 --> 01:48:50,120
+that handles most of the language
+features in the previous list
+
+2001
+01:48:50,120 --> 01:48:53,600
+including GADTs and type level
+information in particular.
+
+2002
+01:48:54,600 --> 01:48:58,120
+But having beet battle tested
+over the last couple of years
+
+2003
+01:48:59,120 --> 01:49:02,600
+the implementation revealed shortcomings
+in being too buggy and slow.
+
+2004
+01:49:03,120 --> 01:49:09,920
+Also it was pretty complicated in
+trying to improve on what we had,
+
+2005
+01:49:09,920 --> 01:49:11,240
+we iterated a couple of times
+
+2006
+01:49:11,240 --> 01:49:14,440
+and came out with the new approach
+we called lower your guard.
+
+2007
+01:49:16,920 --> 01:49:18,360
+As the name suggests that
+
+2008
+01:49:18,360 --> 01:49:22,120
+we abandoned all structural
+pattern matching like an F here
+
+2009
+01:49:22,120 --> 01:49:25,560
+and Desugar function
+definitions into guard trees.
+
+2010
+01:49:27,080 --> 01:49:29,400
+Then we do coverage checking
+on these guard trees
+
+2011
+01:49:29,400 --> 01:49:34,080
+which is split in two
+simple functions A and U.
+
+2012
+01:49:35,560 --> 01:49:39,320
+A returns an annotated tree
+decorated with refinement types
+
+2013
+01:49:39,320 --> 01:49:42,320
+that capture redundancies
+and inaccessibility information.
+
+2014
+01:49:43,320 --> 01:49:45,240
+If you want to know about these part
+
+2015
+01:49:45,240 --> 01:49:46,880
+I encourage you to read the paper.
+
+2016
+01:49:48,400 --> 01:49:52,240
+You compute the set of values that
+weren't covered by any clause
+
+2017
+01:49:52,240 --> 01:49:53,640
+as a refinement type theta.
+
+2018
+01:49:54,400 --> 01:49:58,480
+And then all we have to do is
+report the inhabitants of theta
+
+2019
+01:49:58,480 --> 01:50:01,200
+as uncurrent patterns
+of the definition.
+
+2020
+01:50:04,920 --> 01:50:07,120
+Let's Desugar this
+fancy example function.
+
+2021
+01:50:07,840 --> 01:50:09,840
+Re indicates source index.
+
+2022
+01:50:09,840 --> 01:50:13,040
+You can see that fancy makes
+use of constructor patterns
+
+2023
+01:50:13,040 --> 01:50:14,680
+and even to language extensions
+
+2024
+01:50:15,400 --> 01:50:17,680
+a bang pattern that
+forces the match thing
+
+2025
+01:50:18,440 --> 01:50:21,960
+and a view pattern that
+applies the match thing to g
+
+2026
+01:50:23,440 --> 01:50:25,640
+and matches
+the results against True.
+
+2027
+01:50:29,120 --> 01:50:32,040
+In yellow you see fancy
+Desugaring to guard trees.
+
+2028
+01:50:33,280 --> 01:50:35,240
+Here is the syntax
+definition for reference.
+
+2029
+01:50:36,000 --> 01:50:37,800
+Let's focus on tree syntax first.
+
+2030
+01:50:38,800 --> 01:50:40,600
+There is one branch
+in the guard tree
+
+2031
+01:50:40,600 --> 01:50:42,760
+for each clause in
+the function definition
+
+2032
+01:50:43,240 --> 01:50:44,440
+modelling for through semantics.
+
+2033
+01:50:45,160 --> 01:50:47,320
+There is also a bunch of
+guards on each branch
+
+2034
+01:50:47,320 --> 01:50:51,080
+and each branch ends in
+an ordinal that identifies
+
+2035
+01:50:51,080 --> 01:50:54,080
+a particular clause in
+the original program.
+
+2036
+01:50:56,560 --> 01:51:00,040
+Looking at guards, we can see
+that nested pattern matching
+
+2037
+01:51:00,040 --> 01:51:03,840
+was completely decomposed into
+multiple flat pattern guards
+
+2038
+01:51:03,840 --> 01:51:05,320
+like unjust here.
+
+2039
+01:51:08,320 --> 01:51:10,120
+Pattern guards are considered lazy
+
+2040
+01:51:10,120 --> 01:51:15,160
+and evaluation is forced by
+bang guards such as x1 here
+
+2041
+01:51:15,160 --> 01:51:17,000
+which stands for the first argument.
+
+2042
+01:51:19,760 --> 01:51:21,760
+Pattern guards can only
+match in variables
+
+2043
+01:51:21,760 --> 01:51:23,480
+and only one level deep at a time.
+
+2044
+01:51:24,760 --> 01:51:27,200
+We give names to more
+complex expressions
+
+2045
+01:51:27,200 --> 01:51:29,920
+like this function application
+with a let binding
+
+2046
+01:51:30,680 --> 01:51:35,080
+which also allows us Desugar
+the view pattern here for example.
+
+2047
+01:51:36,320 --> 01:51:40,280
+Desugaring also introduces
+a few administrative lets
+
+2048
+01:51:41,040 --> 01:51:42,480
+that fix up naming differences
+
+2049
+01:51:42,480 --> 01:51:45,880
+like the one binding Xs to
+the temporary t2 here.
+
+2050
+01:51:49,880 --> 01:51:53,280
+We found similar Desugaring for
+all the pattern match syntax
+
+2051
+01:51:53,280 --> 01:51:54,280
+of modern Haskell.
+
+2052
+01:51:55,000 --> 01:51:58,040
+Also note that desugaring is
+for coverage checking only.
+
+2053
+01:51:58,040 --> 01:51:59,440
+There is no code
+generation involved.
+
+2054
+01:52:03,200 --> 01:52:08,080
+Alright, next up characterizing
+the set of uncover values
+
+2055
+01:52:08,080 --> 01:52:10,440
+that we can report
+uncovered patterns for.
+
+2056
+01:52:11,680 --> 01:52:16,160
+We compute the set by gradually
+refining the set of possible values
+
+2057
+01:52:17,160 --> 01:52:21,040
+as a fraction of them fought through
+from one clause to the next.
+
+2058
+01:52:23,040 --> 01:52:27,360
+How do we represent such a set with
+possibly infinitely many values?
+
+2059
+01:52:28,840 --> 01:52:30,520
+We pick refinement
+types for the job.
+
+2060
+01:52:31,520 --> 01:52:34,040
+Here are a few example
+refinement types in blue
+
+2061
+01:52:34,040 --> 01:52:37,040
+as well as the sets
+they denote in orange.
+
+2062
+01:52:38,040 --> 01:52:42,360
+Rose is the unsatisfiable
+refinement predicate.
+
+2063
+01:52:42,360 --> 01:52:44,120
+So there are no inhabitants.
+
+2064
+01:52:45,400 --> 01:52:49,160
+Check mark is the trivial
+satisfiable refinement predicate
+
+2065
+01:52:49,160 --> 01:52:51,680
+which means we have all
+the inhabitants of bool.
+
+2066
+01:52:53,440 --> 01:52:56,400
+This is the type of
+unlifted Booleans
+
+2067
+01:52:56,400 --> 01:52:58,720
+and this one also rules out false.
+
+2068
+01:53:00,440 --> 01:53:04,280
+This last one here shows what's
+unusual about our refinement types.
+
+2069
+01:53:04,280 --> 01:53:06,840
+It has a pattern guard on mx
+
+2070
+01:53:07,840 --> 01:53:10,960
+that brings Just field X into scope
+
+2071
+01:53:11,960 --> 01:53:15,240
+which then scopes over the conjunct
+to the right of the pattern guard.
+
+2072
+01:53:19,240 --> 01:53:21,840
+For some reasonably simple
+end to end example,
+
+2073
+01:53:21,840 --> 01:53:23,400
+consider this source program.
+
+2074
+01:53:24,160 --> 01:53:25,880
+It will desugar to this guard tree
+
+2075
+01:53:25,880 --> 01:53:29,120
+which in turn we can compute
+the uncovered set for.
+
+2076
+01:53:31,120 --> 01:53:33,120
+Note that the resulting
+refinement type
+
+2077
+01:53:33,120 --> 01:53:35,120
+as a disjunction in it's predicate
+
+2078
+01:53:35,880 --> 01:53:38,560
+because we can fall through
+from this clause here
+
+2079
+01:53:38,560 --> 01:53:39,600
+in two different ways.
+
+2080
+01:53:40,120 --> 01:53:42,040
+First the match on Just
+could have failed
+
+2081
+01:53:42,040 --> 01:53:44,360
+and even if the match
+on Just succeeded,
+
+2082
+01:53:45,080 --> 01:53:46,800
+the match on true could have failed.
+
+2083
+01:53:47,280 --> 01:53:50,040
+Question, how do we
+do this in general?
+
+2084
+01:53:52,560 --> 01:53:53,760
+With a function like this,
+
+2085
+01:53:55,040 --> 01:53:57,280
+you compute the subset of theta
+
+2086
+01:53:57,280 --> 01:54:00,320
+whose values do not
+match the guard tree t.
+
+2087
+01:54:02,320 --> 01:54:05,600
+When we reach the right handside,
+every incoming value is covered.
+
+2088
+01:54:05,600 --> 01:54:07,960
+So we would turn
+the empty refinement type.
+
+2089
+01:54:08,960 --> 01:54:11,160
+Ranches model fall
+through semantics.
+
+2090
+01:54:11,160 --> 01:54:13,480
+Only values that fall
+through the first branch
+
+2091
+01:54:14,480 --> 01:54:16,400
+and fall through the second branch.
+
+2092
+01:54:17,920 --> 01:54:21,400
+A bang guard on x hence
+the constraint that x can bottom
+
+2093
+01:54:21,400 --> 01:54:23,320
+to the incoming values
+of the subtree
+
+2094
+01:54:24,320 --> 01:54:25,560
+likewise for let bindings.
+
+2095
+01:54:27,320 --> 01:54:30,680
+The pattern guard matching
+against constructor k
+
+2096
+01:54:30,680 --> 01:54:33,320
+will fall through when x is not k.
+
+2097
+01:54:35,560 --> 01:54:39,440
+Also everything not covered
+by the subtree is uncovered
+
+2098
+01:54:39,440 --> 01:54:43,080
+so we join the two refinement types.
+
+2099
+01:54:44,080 --> 01:54:45,840
+And that is all there is
+to coverage checking.
+
+2100
+01:54:47,320 --> 01:54:51,800
+The next step is to generate
+inhabitants of the refinement types
+
+2101
+01:54:51,800 --> 01:54:53,160
+falling out at the bottom.
+
+2102
+01:54:53,640 --> 01:54:57,160
+These are the uncovered clauses
+which we want to report to the user.
+
+2103
+01:54:57,160 --> 01:55:00,000
+If it's empty, then
+the pattern match was exhaustive.
+
+2104
+01:55:01,240 --> 01:55:03,400
+For our particular running example
+
+2105
+01:55:03,400 --> 01:55:06,000
+the inhabitants are easy
+to find, just two and
+
+2106
+01:55:07,320 --> 01:55:09,320
+just faults which are
+already in a suitable form
+
+2107
+01:55:09,320 --> 01:55:12,000
+to be presented to the user.
+
+2108
+01:55:12,520 --> 01:55:14,120
+Algorithmically, we could use
+
+2109
+01:55:14,120 --> 01:55:16,680
+Liquid Haskell's embedding
+of refinement types,
+
+2110
+01:55:16,680 --> 01:55:19,680
+or an SMT solver directly
+to generate inhabitants.
+
+2111
+01:55:19,680 --> 01:55:22,520
+But we didn't do that, because
+
+2112
+01:55:22,520 --> 01:55:27,200
+reflecting GHC's type
+constraints over into SMT logic,
+
+2113
+01:55:27,200 --> 01:55:29,080
+it's quite an undertaking.
+
+2114
+01:55:29,080 --> 01:55:33,520
+And we think that FFI calls
+and serialization affects
+
+2115
+01:55:33,520 --> 01:55:35,840
+and queues too much overhead.
+
+2116
+01:55:35,840 --> 01:55:37,440
+So, we bit the bullet,
+
+2117
+01:55:37,440 --> 01:55:40,760
+and just wrote our own ad
+hoc generator function.
+
+2118
+01:55:40,760 --> 01:55:42,880
+You can read more about
+its implementation
+
+2119
+01:55:42,880 --> 01:55:46,160
+and its completeness
+properties in the paper.
+
+2120
+01:55:46,680 --> 01:55:50,120
+Now, for an uncovered
+set coming from
+
+2121
+01:55:50,120 --> 01:55:53,040
+an obviously exhaustive
+definition, like H here,
+
+2122
+01:55:53,040 --> 01:55:55,440
+we find that we can
+produce any inhabitants.
+
+2123
+01:55:55,440 --> 01:55:59,440
+So, no values to represent,
+hence no warnings to emit.
+
+2124
+01:55:59,440 --> 01:56:01,560
+H is found to be exhaustive.
+
+2125
+01:56:03,800 --> 01:56:07,560
+In conclusion, we came up
+with what we find to be
+
+2126
+01:56:07,560 --> 01:56:11,240
+quite a nice solution to
+pattern-match coverage checking.
+
+2127
+01:56:11,240 --> 01:56:12,600
+It took us many
+iterations to get there,
+
+2128
+01:56:12,600 --> 01:56:14,400
+but, in the end, it paid off.
+
+2129
+01:56:14,400 --> 01:56:17,280
+The end result is, at the same
+time, simpler to think about;
+
+2130
+01:56:17,280 --> 01:56:20,920
+simpler to implement;
+and executes much faster.
+
+2131
+01:56:22,320 --> 01:56:24,400
+The fact that we invented
+it for a lazy language
+
+2132
+01:56:24,400 --> 01:56:26,520
+shouldn't stop you from
+lowering your guards
+
+2133
+01:56:26,520 --> 01:56:29,480
+in strict or even mostly
+imperative languages.
+
+2134
+01:56:29,480 --> 01:56:31,480
+Just write your own
+de-sugaring function.
+
+2135
+01:56:31,480 --> 01:56:33,680
+And if you're in the process
+of writing a coverage checker
+
+2136
+01:56:33,680 --> 01:56:36,120
+and don't want to make
+the same mistakes,
+
+2137
+01:56:36,120 --> 01:56:38,320
+I can only encourage
+you to read the paper.
+
+2138
+01:56:38,320 --> 01:56:40,440
+Lots of more stories to be told
+
+2139
+01:56:40,440 --> 01:56:43,640
+about language extensions
+and efficiency concerns.
+
+2140
+01:56:45,320 --> 01:56:48,080
+Alright, that's it.
+Thank you for listening.
+
+2141
+01:56:48,560 --> 01:56:53,560
+(APPLAUSE)
+
+2142
+01:56:56,920 --> 01:56:58,440
+STEPHANIE: Thank you, Sebastian.
+
+2143
+01:56:58,440 --> 01:57:00,720
+If you are watching this talk live,
+
+2144
+01:57:00,720 --> 01:57:03,640
+be sure to join the Q&A
+session with the author,
+
+2145
+01:57:03,640 --> 01:57:07,600
+if it is available in your time zone.
+
+2146
+01:57:09,200 --> 01:57:14,200
+We will now pause to sync up
+with the rest of the schedule.
+
+2147
+01:58:01,680 --> 01:58:03,560
+STEPHANIE: The last talk
+of this session is
+
+2148
+01:58:03,560 --> 01:58:08,000
+signature restriction for
+polymorphic algebraic effects.
+
+2149
+01:58:08,000 --> 01:58:13,920
+This paper is by Taro Sekiyama,
+Takeshi Tsukada and Atsushi Igarashi.
+
+2150
+01:58:14,800 --> 01:58:18,520
+The talk will be presented
+by Taro Sekiyama.
+
+2151
+01:58:19,240 --> 01:58:21,640
+TARO SEKIYAMA: Hello,
+I'm Taro Sekiyama.
+
+2152
+01:58:21,640 --> 01:58:24,680
+This talk is about our ICFP paper,
+
+2153
+01:58:24,680 --> 01:58:29,040
+signature restriction for
+polymorphic algebraic effect.
+
+2154
+01:58:29,040 --> 01:58:33,640
+In this work, we consider
+our new type-safe approach
+
+2155
+01:58:33,640 --> 01:58:36,520
+to combining two
+programming features,
+
+2156
+01:58:36,520 --> 01:58:40,440
+algebraic effects handlers
+and polymorphism.
+
+2157
+01:58:41,040 --> 01:58:46,840
+Algebraic effect handlers is
+an approach to user-defined effects.
+
+2158
+01:58:46,840 --> 01:58:53,200
+And they can also structure effectful
+programs in a more general way.
+
+2159
+01:58:53,200 --> 01:58:58,200
+Thanks to the separation of interface
+and implementation of effect.
+
+2160
+01:58:58,920 --> 01:59:02,040
+Using algebraic effect handlers,
+we can define various effects,
+
+2161
+01:59:02,040 --> 01:59:07,040
+such as an exception backtracking
+state, and interactions by you.
+
+2162
+01:59:08,400 --> 01:59:13,440
+Another feature we consider in
+this work is polymorphism.
+
+2163
+01:59:13,440 --> 01:59:16,960
+In particular, we consider
+implicit polymorphism
+
+2164
+01:59:16,960 --> 01:59:19,880
+as let-polymorphism.
+
+2165
+01:59:19,880 --> 01:59:23,280
+And by combining these
+two programming features,
+
+2166
+01:59:23,280 --> 01:59:28,280
+we can make not only exceptions,
+but also effects are polymorphic.
+
+2167
+01:59:30,680 --> 01:59:35,480
+So, let's show one
+example of using your
+
+2168
+01:59:35,480 --> 01:59:39,360
+algebraic effect handlers
+and polymorphism.
+
+2169
+01:59:39,360 --> 01:59:44,240
+Algebraic effects handlers
+provide us three constructs
+
+2170
+01:59:44,240 --> 01:59:46,880
+to implement our effect.
+
+2171
+01:59:48,360 --> 01:59:52,840
+The first construct is
+effect declarations
+
+2172
+01:59:52,840 --> 01:59:57,840
+which is used in the first
+line of the running example.
+
+2173
+01:59:58,680 --> 02:00:06,200
+Here, the operation 'choose' is declared
+with this polymorphic type.
+
+2174
+02:00:06,200 --> 02:00:10,200
+So, this type means that the 'choose'
+operation takes two arguments,
+
+2175
+02:00:10,200 --> 02:00:12,760
+and returns either of them.
+
+2176
+02:00:13,280 --> 02:00:17,000
+Here, polymorphism are
+those type of 'choose'
+
+2177
+02:00:17,000 --> 02:00:20,920
+to abstract over
+the type of argument.
+
+2178
+02:00:23,800 --> 02:00:25,560
+The second construct
+is operation calls,
+
+2179
+02:00:25,560 --> 02:00:29,160
+which is used in these expressions.
+
+2180
+02:00:30,760 --> 02:00:36,080
+Here, the arguments to choose
+operation calls are passed
+
+2181
+02:00:36,080 --> 02:00:40,400
+on the second function for peers.
+
+2182
+02:00:41,080 --> 02:00:46,880
+So, both of these functions can
+be of this polymorphic type.
+
+2183
+02:00:47,480 --> 02:00:52,400
+So, the result of this
+operation calls is also
+
+2184
+02:00:52,400 --> 02:00:55,840
+assigned the same polymorphic type.
+
+2185
+02:00:56,760 --> 02:01:03,480
+The third construct is
+for 'define' effect.
+
+2186
+02:01:04,440 --> 02:01:08,280
+(INAUDIBLE) which is achieved by
+the use of effects handlers.
+
+2187
+02:01:08,280 --> 02:01:13,400
+So, if you have handlers, a key
+component in defining effects,
+
+2188
+02:01:13,400 --> 02:01:16,960
+but in this talk, I only
+the deals of them.
+
+2189
+02:01:19,520 --> 02:01:26,720
+So, the program we consider
+in this talk is (INAUDIBLE)
+
+2190
+02:01:26,720 --> 02:01:30,800
+combining algebraic library;
+combining algebraic effect handlers
+
+2191
+02:01:30,800 --> 02:01:32,200
+and implicit polymorphism.
+
+2192
+02:01:32,680 --> 02:01:36,480
+So, this is a program because
+the ninth combination
+
+2193
+02:01:36,480 --> 02:01:38,800
+of these programming features
+
+2194
+02:01:38,800 --> 02:01:42,640
+makes a statically
+typed language unsafe.
+
+2195
+02:01:42,640 --> 02:01:47,320
+This is because algebraic effect
+handles have the ability
+
+2196
+02:01:47,320 --> 02:01:50,200
+to manipulate delimited
+continuations.
+
+2197
+02:01:50,200 --> 02:01:56,040
+But the ninth combinations
+or the use of continuations
+
+2198
+02:01:56,040 --> 02:02:01,040
+and implicit polymorphism
+is known to be unsafe.
+
+2199
+02:02:01,040 --> 02:02:06,040
+So, this is a problem we attack
+in this program, in this work.
+
+2200
+02:02:06,600 --> 02:02:08,920
+But this is a classic problem.
+
+2201
+02:02:08,920 --> 02:02:13,200
+There are many approaches
+to solving this one.
+
+2202
+02:02:13,200 --> 02:02:19,920
+So, the existing approaches can be
+classified into two categories.
+
+2203
+02:02:19,920 --> 02:02:22,200
+The first category is considered
+
+2204
+02:02:22,200 --> 02:02:27,200
+restricting operation calls
+in polymorphic expressions.
+
+2205
+02:02:28,040 --> 02:02:30,480
+For the running examples,
+
+2206
+02:02:30,480 --> 02:02:36,600
+the approaches in this category
+restrict these expressions,
+
+2207
+02:02:36,600 --> 02:02:41,720
+because this is an operation call
+in a polymorphic expression.
+
+2208
+02:02:41,720 --> 02:02:46,320
+For example, value restriction,
+weak polymorphism closure typing
+
+2209
+02:02:46,320 --> 02:02:49,440
+belong to this category.
+
+2210
+02:02:49,440 --> 02:02:53,240
+An advantage of using
+these approaches is that
+
+2211
+02:02:53,240 --> 02:02:57,040
+they can otherwise any effect
+
+2212
+02:02:57,040 --> 02:03:01,280
+including (INAUDIBLE)
+under control operators.
+
+2213
+02:03:01,880 --> 02:03:06,360
+However, the disadvantage
+of these approaches is that
+
+2214
+02:03:06,360 --> 02:03:11,360
+they impose a restriction
+on any effect code.
+
+2215
+02:03:12,040 --> 02:03:14,600
+Because, for example,
+
+2216
+02:03:14,600 --> 02:03:19,280
+even if the operation call
+doesn't need restriction.
+
+2217
+02:03:19,280 --> 02:03:23,280
+For example, we found
+in the previous work,
+
+2218
+02:03:23,280 --> 02:03:28,760
+exceptions on the backtracking
+don't need or restriction.
+
+2219
+02:03:28,760 --> 02:03:35,040
+But the approaches in this category
+don't distinguish effect.
+
+2220
+02:03:35,040 --> 02:03:37,760
+That means they don't need
+a restriction on the effects,
+
+2221
+02:03:37,760 --> 02:03:39,960
+and effects that don't
+need a restriction.
+
+2222
+02:03:40,480 --> 02:03:44,400
+So, they impose
+a restriction for all effects.
+
+2223
+02:03:46,560 --> 02:03:49,600
+As a complimentary approach
+in the previous work,
+
+2224
+02:03:49,600 --> 02:03:56,480
+we provided our new approach to
+restricting effect handlers
+
+2225
+02:03:56,480 --> 02:03:58,720
+instead of operation calls.
+
+2226
+02:03:58,720 --> 02:04:00,960
+So, in the running example,
+
+2227
+02:04:00,960 --> 02:04:05,400
+this approach illustrates
+this part, effect handlers.
+
+2228
+02:04:07,640 --> 02:04:10,400
+A good point over this
+approach is that
+
+2229
+02:04:10,400 --> 02:04:15,600
+it allows operation calls
+of safe effects anywhere;
+
+2230
+02:04:15,600 --> 02:04:20,240
+and it rejects unsafe
+effects safely.
+
+2231
+02:04:20,840 --> 02:04:26,800
+But the problem of
+this approach is that
+
+2232
+02:04:26,800 --> 02:04:29,760
+it is not clear how to mix
+
+2233
+02:04:29,760 --> 02:04:34,320
+safe and unsafe effects
+in a single program.
+
+2234
+02:04:34,320 --> 02:04:38,800
+So, this could be a problem
+in the general purpose,
+
+2235
+02:04:38,800 --> 02:04:42,880
+because we may want to use
+
+2236
+02:04:42,880 --> 02:04:47,880
+a safe and unsafe effect
+in a single program.
+
+2237
+02:04:50,400 --> 02:04:54,680
+To solve this problem, we
+propose a new approach
+
+2238
+02:04:54,680 --> 02:04:59,240
+which restricts the types
+of effect operations.
+
+2239
+02:04:59,240 --> 02:05:02,800
+So, in this running examples,
+
+2240
+02:05:02,800 --> 02:05:06,800
+this new approach restricts
+effect declarations.
+
+2241
+02:05:07,800 --> 02:05:12,320
+We can determine whether
+any usable effects are safe
+
+2242
+02:05:12,320 --> 02:05:15,600
+only by examining how this is like.
+
+2243
+02:05:18,680 --> 02:05:21,200
+OK, so, let me summarize our work.
+
+2244
+02:05:21,720 --> 02:05:26,360
+We propose a signature restriction
+which can ensure safety
+
+2245
+02:05:26,360 --> 02:05:29,280
+or effects with polymorphism.
+
+2246
+02:05:29,280 --> 02:05:33,120
+And the signature restriction
+accepts only effects that can
+
+2247
+02:05:33,120 --> 02:05:37,200
+be safely used anywhere, even
+in polymorphic expressions
+
+2248
+02:05:37,200 --> 02:05:40,120
+without any other restriction.
+
+2249
+02:05:40,640 --> 02:05:44,040
+Now, the signature
+restriction examines
+
+2250
+02:05:44,040 --> 02:05:47,560
+the typed signatures of effects.
+
+2251
+02:05:47,560 --> 02:05:50,520
+So, it is very simple criteria.
+
+2252
+02:05:51,080 --> 02:05:55,720
+But how it is still
+permissive, in the sense that
+
+2253
+02:05:55,720 --> 02:06:00,960
+it can accept a many useful
+effects and it is also scalable.
+
+2254
+02:06:00,960 --> 02:06:05,320
+It means that their signature
+restriction can easily support
+
+2255
+02:06:05,320 --> 02:06:11,120
+basic programming constructs
+including products, sums and lists.
+
+2256
+02:06:13,520 --> 02:06:17,000
+And two shows the correctness
+of this signature restriction.
+
+2257
+02:06:17,000 --> 02:06:20,560
+We provide for simple type system
+
+2258
+02:06:20,560 --> 02:06:24,880
+for algebraic effect
+handlers and polymorphism.
+
+2259
+02:06:24,880 --> 02:06:28,280
+We show soundness of
+the simple type system
+
+2260
+02:06:28,280 --> 02:06:33,280
+by assuming all effects satisfy
+the signature restriction.
+
+2261
+02:06:33,920 --> 02:06:38,920
+So, this demonstrates the correctness
+of the signature restriction.
+
+2262
+02:06:40,760 --> 02:06:44,840
+But the problem with this
+simple type system is that
+
+2263
+02:06:44,840 --> 02:06:48,440
+we cannot use both effects
+
+2264
+02:06:48,440 --> 02:06:52,960
+that satisfy and don't satisfy
+the signature restriction.
+
+2265
+02:06:52,960 --> 02:06:57,760
+So, to solve this situation,
+we propose an effect system
+
+2266
+02:06:57,760 --> 02:07:03,560
+where both safe effects
+and unsafe effects can be used.
+
+2267
+02:07:06,080 --> 02:07:10,600
+And more precisely, in
+the English effect system,
+
+2268
+02:07:10,600 --> 02:07:14,000
+effects that satisfy
+the signature restriction can be used
+
+2269
+02:07:14,000 --> 02:07:16,680
+anywhere without a restriction.
+
+2270
+02:07:16,680 --> 02:07:20,320
+But if effects don't satisfy
+the signature restriction,
+
+2271
+02:07:20,320 --> 02:07:25,320
+then they can be used only
+in monomorphic expressions.
+
+2272
+02:07:26,160 --> 02:07:29,720
+We also provide
+an artefact that implements
+
+2273
+02:07:29,720 --> 02:07:33,360
+a tiny small override functional
+programming language,
+
+2274
+02:07:33,360 --> 02:07:38,880
+where all effects are supposed to
+satisfy the signature restriction.
+
+2275
+02:07:39,360 --> 02:07:43,400
+And this implementation does not
+cover the effect system part.
+
+2276
+02:07:45,400 --> 02:07:49,640
+OK, so this is a quick
+summary of our work.
+
+2277
+02:07:49,640 --> 02:07:54,760
+On the next, I will present a brief
+overview of signature restriction.
+
+2278
+02:07:54,760 --> 02:07:59,760
+As I said, signature
+restriction is an approach
+
+2279
+02:07:59,760 --> 02:08:04,760
+to determining safety of effects
+with the signature of effects.
+
+2280
+02:08:05,480 --> 02:08:09,320
+So, let's suppose we
+consider these operations
+
+2281
+02:08:09,320 --> 02:08:12,320
+with this polymorphic type
+
+2282
+02:08:12,320 --> 02:08:18,720
+Here, the signature restriction
+determines the safety of effect
+
+2283
+02:08:19,280 --> 02:08:23,400
+only by examining
+the polarities of alpha
+
+2284
+02:08:23,400 --> 02:08:27,320
+in argument type one
+and return type two.
+
+2285
+02:08:27,800 --> 02:08:34,040
+But formally, we can say operation
+satisfy the signature restriction,
+
+2286
+02:08:34,040 --> 02:08:37,800
+if and only if alpha
+occurs only negatively,
+
+2287
+02:08:37,800 --> 02:08:42,960
+or strictly positively
+in argument type one.
+
+2288
+02:08:42,960 --> 02:08:47,960
+And alpha occurs only
+positively in return type two.
+
+2289
+02:08:48,520 --> 02:08:54,720
+Here, let me remember what that
+means by strictly positively.
+
+2290
+02:08:55,400 --> 02:08:58,320
+So, in this simple function type,
+
+2291
+02:08:58,320 --> 02:09:04,520
+the occurrences of alpha one
+and alpha three are positive,
+
+2292
+02:09:05,120 --> 02:09:09,440
+but only the occurrence of alpha
+three is strictly positive.
+
+2293
+02:09:09,440 --> 02:09:12,360
+This is because the openness
+of alpha three is reached
+
+2294
+02:09:12,360 --> 02:09:16,760
+by going through only
+the positive part of function five,
+
+2295
+02:09:16,760 --> 02:09:21,520
+but the occurrence of
+alpha one is reached by
+
+2296
+02:09:21,520 --> 02:09:26,040
+going through a negative part
+or functional type constructor.
+
+2297
+02:09:26,040 --> 02:09:27,840
+So, this is the difference of
+
+2298
+02:09:27,840 --> 02:09:32,400
+the polarities of alpha
+one and alpha three.
+
+2299
+02:09:32,920 --> 02:09:38,080
+And by using this
+definitions, we check
+
+2300
+02:09:38,080 --> 02:09:44,880
+if our three operation calls
+satisfy the signature restriction.
+
+2301
+02:09:45,480 --> 02:09:48,040
+The first example is 'choose'.
+
+2302
+02:09:48,040 --> 02:09:51,880
+So, we can easily find this type.
+
+2303
+02:09:52,360 --> 02:09:55,960
+This type of 'choose' satisfies
+the signature restriction
+
+2304
+02:09:55,960 --> 02:09:58,880
+because, for the argument type,
+
+2305
+02:09:58,880 --> 02:10:03,320
+the bound type variables occurs
+only strictly positively.
+
+2306
+02:10:03,320 --> 02:10:09,520
+And for return type, it also
+occurs only positively.
+
+2307
+02:10:10,000 --> 02:10:15,280
+So, all these operations satisfy
+the signature restriction;
+
+2308
+02:10:15,280 --> 02:10:19,680
+and we can apply similar discussion
+to the 'fail' operation.
+
+2309
+02:10:19,680 --> 02:10:26,200
+For the satisfied operations,
+this whole function or
+
+2310
+02:10:26,200 --> 02:10:29,960
+this argument type
+may seem complicated,
+
+2311
+02:10:29,960 --> 02:10:32,960
+but their priority
+checking is very easy.
+
+2312
+02:10:32,960 --> 02:10:36,760
+We can easily find out if this type,
+
+2313
+02:10:36,760 --> 02:10:43,440
+the bond type variable alpha
+occurs only strictly positively.
+
+2314
+02:10:43,960 --> 02:10:48,960
+So, 'satisfy' operation also
+follows the signature restriction.
+
+2315
+02:10:49,760 --> 02:10:50,840
+And, as a result,
+
+2316
+02:10:50,840 --> 02:10:54,400
+all of these three operations
+satisfy the signature restriction.
+
+2317
+02:10:54,400 --> 02:10:58,680
+OK. So, this is our work.
+
+2318
+02:10:58,680 --> 02:11:02,400
+But our work does not
+cover all useful features
+
+2319
+02:11:02,400 --> 02:11:04,200
+in functional programming language.
+
+2320
+02:11:04,200 --> 02:11:07,440
+For example, this work does
+not cover type inference
+
+2321
+02:11:07,440 --> 02:11:11,880
+and general algebraic data types.
+
+2322
+02:11:11,880 --> 02:11:18,160
+So, the support for these
+features is left as future work.
+
+2323
+02:11:18,160 --> 02:11:26,560
+And we also consider studying
+your CPS transformation
+
+2324
+02:11:26,560 --> 02:11:28,240
+for this restriction method
+
+2325
+02:11:28,240 --> 02:11:32,680
+and applying the signature
+restriction to other user defined,
+
+2326
+02:11:33,360 --> 02:11:36,200
+or user defined effect
+and mechanisms such as the monads.
+
+2327
+02:11:36,200 --> 02:11:41,480
+It should be interesting
+because you know.
+
+2328
+02:11:41,480 --> 02:11:44,720
+OK, let me summarize this talk.
+
+2329
+02:11:44,720 --> 02:11:48,120
+The problem we attack
+in this work is that,
+
+2330
+02:11:48,120 --> 02:11:53,280
+naive combinations of
+algebraic effect handlers,
+
+2331
+02:11:53,280 --> 02:11:56,160
+polymorphism may be problematic.
+
+2332
+02:11:56,160 --> 02:11:57,920
+To solve these problems,
+
+2333
+02:11:57,920 --> 02:12:01,000
+we propose signature restriction
+
+2334
+02:12:01,000 --> 02:12:03,640
+which is a new approach to determine
+
+2335
+02:12:03,640 --> 02:12:08,400
+safety of effect in
+a polymorphic setting.
+
+2336
+02:12:08,400 --> 02:12:10,880
+The signature restriction
+rests only on
+
+2337
+02:12:10,880 --> 02:12:13,600
+the properties of
+balanced type variables.
+
+2338
+02:12:13,600 --> 02:12:15,240
+So, it is very simple,
+
+2339
+02:12:15,240 --> 02:12:20,240
+it just examines
+the signature of effect.
+
+2340
+02:12:20,760 --> 02:12:25,760
+And it is still
+permissive and scalable.
+
+2341
+02:12:26,240 --> 02:12:28,760
+We provide a simple type system
+
+2342
+02:12:28,760 --> 02:12:30,760
+and prove its soundness
+
+2343
+02:12:30,760 --> 02:12:34,640
+by assuming all effects satisfy
+the signature restriction
+
+2344
+02:12:34,640 --> 02:12:39,640
+and which demonstrates qualities
+of signature restriction.
+
+2345
+02:12:40,240 --> 02:12:43,160
+We also provide effects system
+
+2346
+02:12:43,160 --> 02:12:48,240
+where both effects that satisfy
+
+2347
+02:12:48,240 --> 02:12:53,080
+and don't satisfy the signature
+restriction can be used.
+
+2348
+02:12:53,080 --> 02:12:54,080
+That's it,
+
+2349
+02:12:54,080 --> 02:12:55,480
+thank you for resting.
+
+2350
+02:12:55,480 --> 02:13:00,480
+(APPLAUSE)
+
+2351
+02:13:03,680 --> 02:13:05,800
+STEPHANIE: Thank you Toro.
+
+2352
+02:13:05,800 --> 02:13:07,880
+If you are watching
+this stream live,
+
+2353
+02:13:07,880 --> 02:13:10,080
+don't forget about
+the Q&A session
+
+2354
+02:13:10,080 --> 02:13:12,720
+that may be available
+in your time band
+
+2355
+02:13:12,720 --> 02:13:17,800
+so that you can discuss this
+work with the authors.
+
+2356
+02:13:17,800 --> 02:13:20,280
+This is the last paper
+in session four,
+
+2357
+02:13:20,280 --> 02:13:25,280
+thank you for attending.
+
+2358
+02:14:22,280 --> 02:14:27,280
+(SOFT INSTRUMENTAL MUSIC PLAYS)
+
