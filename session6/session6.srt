@@ -1,0 +1,9454 @@
+﻿1
+00:00:42,960 --> 00:00:47,960
+(MUSIC PLAYS)
+
+2
+00:13:01,200 --> 00:13:03,400
+SUKYOUNG RYU: Hi! My name
+is Sukyoung Ryu.
+
+3
+00:13:03,400 --> 00:13:08,040
+And I'm the Virtualization
+Committee member of ICFP 2020
+
+4
+00:13:08,040 --> 00:13:12,040
+and the General Chair of ICFP 2021.
+
+5
+00:13:12,040 --> 00:13:15,920
+Hope to see you all in
+the next year as well.
+
+6
+00:13:15,920 --> 00:13:19,680
+I'd like to welcome you
+to Session Six of ICFP.
+
+7
+00:13:19,680 --> 00:13:21,880
+The first talk is entitled
+
+8
+00:13:21,880 --> 00:13:26,000
+'Compiling Effect Handlers in
+Capability-Passing Style'.
+
+9
+00:13:26,000 --> 00:13:29,160
+This paper will be presented
+by Philipp Schuster
+
+10
+00:13:29,160 --> 00:13:32,720
+and he will tell us about
+a language for Effect Handlers
+
+11
+00:13:32,720 --> 00:13:36,680
+in Capability-Passing Style
+and implementation of the language
+
+12
+00:13:36,680 --> 00:13:40,360
+as a translation to
+simply-typed lambda calculus
+
+13
+00:13:40,360 --> 00:13:44,360
+in iterated
+continuation-passing style.
+
+14
+00:13:46,720 --> 00:13:50,920
+PHILIPP: Hi. I'm Philipp
+and I present out ICFP 20 paper,
+
+15
+00:13:50,920 --> 00:13:55,040
+'Compiling Effect Handlers in
+Capability-Passing Style'
+
+16
+00:13:55,040 --> 00:13:58,080
+This is joint work with
+Jonathan Immanuel Brachthäuser
+
+17
+00:13:58,080 --> 00:14:00,640
+and Klaus Ostermann.
+
+18
+00:14:01,080 --> 00:14:03,800
+Effect Handlers are great
+and more and more languages
+
+19
+00:14:03,800 --> 00:14:06,320
+are getting support for Effect
+Handlers in more and more libraries
+
+20
+00:14:06,320 --> 00:14:08,960
+where Effect Handlers emerge.
+
+21
+00:14:08,960 --> 00:14:11,840
+Still, performance is lacking.
+
+22
+00:14:11,840 --> 00:14:15,560
+So, this is about
+the performance of Effect Handlers.
+
+23
+00:14:15,560 --> 00:14:17,680
+Now, there are two separate
+aspects to the performance
+
+24
+00:14:17,680 --> 00:14:19,120
+of effect handlers.
+
+25
+00:14:19,360 --> 00:14:22,080
+One, enabling compile-time
+optimizations
+
+26
+00:14:22,080 --> 00:14:25,560
+and two, having efficient
+run-time operations.
+
+27
+00:14:25,560 --> 00:14:29,400
+This work is strictly
+about the former.
+
+28
+00:14:29,400 --> 00:14:33,160
+Effect Handlers allow you to
+abstract over complex patterns
+
+29
+00:14:33,160 --> 00:14:38,160
+of control flow. Yet, this
+abstraction comes at a cost.
+
+30
+00:14:38,880 --> 00:14:41,560
+To this end, our first
+result is a theorem.
+
+31
+00:14:41,560 --> 00:14:43,200
+I'll read it out for you.
+
+32
+00:14:43,200 --> 00:14:46,000
+Full elimination - the translations
+of capability-abstraction.
+
+33
+00:14:46,680 --> 00:14:49,640
+The ability
+application do handle and so on.
+
+34
+00:14:49,640 --> 00:14:53,040
+Do not introduce any residual Lambda
+abstractions or applications,
+
+35
+00:14:53,040 --> 00:14:56,120
+except for those in
+the translation of the subterms.
+
+36
+00:14:56,120 --> 00:14:58,120
+What this means intuitively
+
+37
+00:14:58,120 --> 00:15:01,400
+is that we fully eliminate
+all handler abstraction.
+
+38
+00:15:01,400 --> 00:15:04,840
+Of course, this is only possible
+under certain conditions
+
+39
+00:15:04,840 --> 00:15:07,480
+and in the paper, we formally
+state those conditions.
+
+40
+00:15:07,480 --> 00:15:09,080
+When those conditions are met,
+
+41
+00:15:09,080 --> 00:15:12,840
+we guarantee full elimination
+as per this theorem.
+
+42
+00:15:13,800 --> 00:15:17,040
+A theoretical result is great,
+but what about practice?
+
+43
+00:15:17,040 --> 00:15:21,560
+Well, we've conducted some benchmarks
+and they look generally good.
+
+44
+00:15:21,560 --> 00:15:25,120
+And in one case, for
+example, versus Kalka,
+
+45
+00:15:25,120 --> 00:15:27,680
+we see a speed of 409x.
+
+46
+00:15:27,680 --> 00:15:30,560
+Whoa. So what do we do?
+
+47
+00:15:31,760 --> 00:15:34,560
+We define the source
+language, Lamda Cap,
+
+48
+00:15:34,560 --> 00:15:37,000
+in explicit capability
+passing style.
+
+49
+00:15:37,000 --> 00:15:39,640
+And we will see what
+that is in a moment.
+
+50
+00:15:39,960 --> 00:15:43,200
+We then translate this language
+to simply type Lambda calculus
+
+51
+00:15:43,200 --> 00:15:45,640
+in iterated continuation
+passing style.
+
+52
+00:15:45,640 --> 00:15:48,520
+We will also see what
+that is in a moment.
+
+53
+00:15:48,520 --> 00:15:50,760
+This translation specializes
+effectful functions
+
+54
+00:15:50,760 --> 00:15:53,640
+to the number of handlers
+they are used under.
+
+55
+00:15:55,000 --> 00:15:58,400
+We then go on to define a second
+language, Lambda two cap.
+
+56
+00:15:58,400 --> 00:16:01,040
+It has exactly the same
+syntax as Lambda cap,
+
+57
+00:16:01,040 --> 00:16:02,920
+but the different system.
+
+58
+00:16:03,480 --> 00:16:05,680
+We go on to define
+the second translation,
+
+59
+00:16:05,680 --> 00:16:08,280
+this time to two level
+Lambda calculus.
+
+60
+00:16:10,200 --> 00:16:14,160
+This specialized translation
+specializes effectful functions
+
+61
+00:16:14,160 --> 00:16:16,720
+to concrete handler implementations.
+
+62
+00:16:17,080 --> 00:16:20,440
+So the important keywords are
+explicit capability passing style
+
+63
+00:16:20,440 --> 00:16:23,000
+and iterated continuation
+passing style.
+
+64
+00:16:23,440 --> 00:16:25,240
+Let's look at an example.
+
+65
+00:16:25,520 --> 00:16:27,600
+I'll show you a little magic trick.
+
+66
+00:16:27,600 --> 00:16:29,960
+I make all handlers disappear,
+
+67
+00:16:29,960 --> 00:16:33,560
+and this will go in two steps
+corresponding to the two translations.
+
+68
+00:16:33,840 --> 00:16:37,560
+Now this is an effectful
+function choice
+
+69
+00:16:37,760 --> 00:16:40,520
+written in our source
+language, Lambda cap.
+
+70
+00:16:40,880 --> 00:16:44,520
+It chooses a number between
+its argument, n and one.
+
+71
+00:16:44,720 --> 00:16:48,440
+It uses two effects, flip for
+non-deterministic choice,
+
+72
+00:16:48,440 --> 00:16:51,560
+and fail for aborting
+the current continuation.
+
+73
+00:16:51,560 --> 00:16:54,240
+It is written in explicit
+capability passing style,
+
+74
+00:16:54,240 --> 00:16:58,240
+which means it explicitly
+abstracts over capabilities,
+
+75
+00:16:58,240 --> 00:17:01,040
+flip and fail in lowercase here.
+
+76
+00:17:01,800 --> 00:17:04,000
+If the argument n is
+smaller than one,
+
+77
+00:17:04,000 --> 00:17:07,720
+we fail or else we flip a coin.
+
+78
+00:17:07,720 --> 00:17:09,320
+And if the result is true,
+
+79
+00:17:09,320 --> 00:17:14,000
+we return n or else we recurse
+and choose a smaller number.
+
+80
+00:17:14,400 --> 00:17:16,160
+Let's look at the n inside.
+
+81
+00:17:17,000 --> 00:17:20,400
+Here, we first install
+a handler for a flip.
+
+82
+00:17:20,640 --> 00:17:23,720
+Handler for flip uses is
+continuation k twice,
+
+83
+00:17:23,720 --> 00:17:25,480
+and appends the results.
+
+84
+00:17:26,480 --> 00:17:28,640
+Then we install a handler for fail,
+
+85
+00:17:28,880 --> 00:17:30,760
+which its cards has continuation k
+
+86
+00:17:30,760 --> 00:17:33,280
+and immediately answers
+with the empty list.
+
+87
+00:17:33,280 --> 00:17:37,160
+Both handlers introduce capabilities,
+lower case flip and fail.
+
+88
+00:17:37,760 --> 00:17:42,480
+In the cons or choice here, we
+explicitly pass those capabilities
+
+89
+00:17:42,760 --> 00:17:44,640
+to the effect for function choice.
+
+90
+00:17:45,680 --> 00:17:49,360
+Each handler expects
+a specific answer type.
+
+91
+00:17:49,720 --> 00:17:51,680
+The handler for flip expects a list
+
+92
+00:17:51,680 --> 00:17:55,440
+because it appends the results
+of the continuation calls.
+
+93
+00:17:55,440 --> 00:17:58,320
+The handler of a fail also
+happens to expect a list
+
+94
+00:17:58,320 --> 00:18:01,520
+because it immediately
+answers with the empty list.
+
+95
+00:18:02,400 --> 00:18:07,160
+This is all so why we wrap the call
+to choice into a singleton list.
+
+96
+00:18:08,320 --> 00:18:10,080
+We call the list of answer types
+
+97
+00:18:10,080 --> 00:18:13,720
+from outermost sender to
+innermost sender the stack shape.
+
+98
+00:18:14,120 --> 00:18:16,520
+Let me illustrate
+why with a picture.
+
+99
+00:18:16,840 --> 00:18:19,600
+This is the caustic at
+the quarter choice.
+
+100
+00:18:20,000 --> 00:18:22,360
+At the bottom, we have
+the handler for flip,
+
+101
+00:18:23,040 --> 00:18:26,000
+which expects an answer
+of type list of int.
+
+102
+00:18:26,560 --> 00:18:28,560
+Above it, we have
+the handle for fail,
+
+103
+00:18:28,560 --> 00:18:33,080
+which expects also
+an answer type list of it.
+
+104
+00:18:33,080 --> 00:18:38,080
+And then we have a frame which wraps
+things into the singleton list.
+
+105
+00:18:39,480 --> 00:18:43,520
+Now, to approximate
+the shape of the stack,
+
+106
+00:18:43,840 --> 00:18:46,360
+we have the list of answer types.
+
+107
+00:18:46,360 --> 00:18:49,280
+In this case, it's
+a two-element list.
+
+108
+00:18:49,800 --> 00:18:52,800
+The two elements are list
+of int and list of int.
+
+109
+00:18:53,680 --> 00:18:57,560
+Because we've created their
+capability flip at the outer handler
+
+110
+00:18:57,560 --> 00:19:00,760
+in a context with a stack
+shape with a single element,
+
+111
+00:19:00,760 --> 00:19:03,320
+I want to use it inside
+of the inner handler.
+
+112
+00:19:03,320 --> 00:19:06,440
+We have to fix the mismatch
+on the type level here
+
+113
+00:19:06,440 --> 00:19:09,240
+and explicitly lift the capability.
+
+114
+00:19:11,080 --> 00:19:12,880
+Guided by the stack shape,
+
+115
+00:19:12,880 --> 00:19:16,600
+we translate our program to iterate
+it continuation passing style.
+
+116
+00:19:17,160 --> 00:19:21,520
+It is like ordinary continuation
+passing style, but with a twist.
+
+117
+00:19:22,280 --> 00:19:24,800
+So, the translation looks like this.
+
+118
+00:19:25,520 --> 00:19:27,120
+We have the effect
+for function choice,
+
+119
+00:19:27,120 --> 00:19:30,560
+and it abstracts over
+capabilities flip and fail.
+
+120
+00:19:30,560 --> 00:19:32,800
+This is ordinary Lambda abstraction.
+
+121
+00:19:32,800 --> 00:19:35,200
+We then define
+a recursive function loop
+
+122
+00:19:35,200 --> 00:19:38,160
+in iterated continuation
+passing style.
+
+123
+00:19:38,160 --> 00:19:42,520
+This means that it gets one
+or more continuation arguments.
+
+124
+00:19:42,960 --> 00:19:44,600
+The number of continuation arguments
+
+125
+00:19:44,600 --> 00:19:47,720
+is determined by the number of
+elements in the stack shape
+
+126
+00:19:47,720 --> 00:19:51,400
+because we've used choice
+here under two handlers
+
+127
+00:19:51,400 --> 00:19:54,560
+correspondingly in a stack
+shape with two elements,
+
+128
+00:19:54,560 --> 00:19:57,560
+it now gets two
+continuation arguments.
+
+129
+00:19:57,760 --> 00:20:00,840
+Capabilities are ordinary functions,
+
+130
+00:20:00,840 --> 00:20:03,640
+also an iterated
+continuation passing style.
+
+131
+00:20:03,640 --> 00:20:07,520
+For example, failure gets
+two continuation arguments.
+
+132
+00:20:08,000 --> 00:20:09,400
+And also in the rest
+of the function,
+
+133
+00:20:09,400 --> 00:20:11,400
+for example, in
+the recourse of code to do
+
+134
+00:20:11,400 --> 00:20:14,520
+we also supply two
+continuation arguments.
+
+135
+00:20:15,600 --> 00:20:20,600
+If we look at the handling side, we
+define capabilities flip and fail.
+
+136
+00:20:21,800 --> 00:20:24,320
+Flip is an iterator to CPS,
+
+137
+00:20:25,080 --> 00:20:27,000
+but in a stack shape
+with a single element
+
+138
+00:20:27,000 --> 00:20:29,960
+and consequently gets
+a single continuation.
+
+139
+00:20:30,200 --> 00:20:35,120
+Fail is an iterated CPS, but in
+a stack shape with two elements.
+
+140
+00:20:35,120 --> 00:20:37,520
+So it gets two continuations.
+
+141
+00:20:37,840 --> 00:20:42,520
+Now, we also see that lifting
+has operational meaning
+
+142
+00:20:43,480 --> 00:20:46,160
+because we want to use
+the flip capability
+
+143
+00:20:46,160 --> 00:20:48,840
+in a context where we supplied
+with two continuation arguments.
+
+144
+00:20:48,840 --> 00:20:50,880
+We somehow have to
+fix this mismatch.
+
+145
+00:20:50,880 --> 00:20:54,000
+So we defined a new
+capability, lifted flip,
+
+146
+00:20:54,240 --> 00:20:56,640
+which abstracts over
+two continuations,
+
+147
+00:20:56,640 --> 00:21:00,920
+composes them and passes
+the composition to the capability flip.
+
+148
+00:21:01,520 --> 00:21:04,400
+The Corta choice now
+gets five arguments,
+
+149
+00:21:04,640 --> 00:21:09,320
+two capabilities, the argument
+n, and two continuations.
+
+150
+00:21:11,440 --> 00:21:15,440
+So far, we've seen our
+source language Lambda cap
+
+151
+00:21:15,440 --> 00:21:18,200
+and our translation to
+simply type Lambda calculus
+
+152
+00:21:18,440 --> 00:21:20,960
+in iterated continuation
+passing style.
+
+153
+00:21:20,960 --> 00:21:24,080
+We've specialized effectful
+functions to the number of handlers
+
+154
+00:21:24,080 --> 00:21:25,560
+they are used under.
+
+155
+00:21:26,600 --> 00:21:28,920
+We want to go further
+and specialize functions
+
+156
+00:21:28,920 --> 00:21:31,560
+to concrete handler implementations.
+
+157
+00:21:31,800 --> 00:21:34,800
+As it happens, this
+program is also typable
+
+158
+00:21:34,800 --> 00:21:37,480
+under the rules of our second
+language, Lambda two cap.
+
+159
+00:21:37,480 --> 00:21:42,040
+So we can use our second translation
+to two level Lambda calculus.
+
+160
+00:21:43,520 --> 00:21:46,000
+This will specialize
+effectful functions
+
+161
+00:21:46,000 --> 00:21:48,400
+to concrete handler implementations.
+
+162
+00:21:49,400 --> 00:21:51,720
+It is the same as our
+first translation,
+
+163
+00:21:51,720 --> 00:21:55,640
+except that we mark some applications
+and abstractions as static
+
+164
+00:21:55,640 --> 00:21:57,560
+and others as dynamic.
+
+165
+00:21:57,560 --> 00:22:02,560
+Specifically, we mark aesthetic
+capability abstraction,
+
+166
+00:22:03,360 --> 00:22:07,440
+the use of capabilities,
+capability definitions,
+
+167
+00:22:07,440 --> 00:22:12,160
+the lifting of capabilities
+and passing of capabilities to functions.
+
+168
+00:22:12,840 --> 00:22:16,080
+This program now reduces to this.
+
+169
+00:22:16,640 --> 00:22:18,320
+All handlers are gone.
+
+170
+00:22:19,760 --> 00:22:22,440
+We've specialized
+the effectful function choice
+
+171
+00:22:22,440 --> 00:22:26,520
+to the concrete handler
+implementations of flip and fail.
+
+172
+00:22:27,120 --> 00:22:30,920
+We call the result of
+the specialization choice flip fail.
+
+173
+00:22:30,920 --> 00:22:35,560
+The handler implementations have
+been inlined into the body of choice
+
+174
+00:22:35,560 --> 00:22:37,520
+and the continuations
+have been inlined
+
+175
+00:22:37,760 --> 00:22:39,600
+into the handle implementations.
+
+176
+00:22:39,600 --> 00:22:42,600
+This enables optimizations
+across effect codes.
+
+177
+00:22:42,920 --> 00:22:46,560
+We are not looking up dynamically
+any handler implementations,
+
+178
+00:22:46,560 --> 00:22:50,240
+and we're not searching for prompts
+on the stack or something either.
+
+179
+00:22:50,240 --> 00:22:53,240
+We directly invoke
+the correct continuation.
+
+180
+00:22:53,720 --> 00:22:58,720
+At the handing side, we see
+that the result is still
+
+181
+00:22:59,080 --> 00:23:02,560
+an iterated continuation
+passing style. This is OK.
+
+182
+00:23:03,040 --> 00:23:06,400
+Now, let's look at those
+benchmark results again.
+
+183
+00:23:07,160 --> 00:23:11,880
+We've benchmarked against different
+languages abd different systems,
+
+184
+00:23:12,280 --> 00:23:14,880
+the Kalka language
+with effect handlers
+
+185
+00:23:14,880 --> 00:23:19,040
+and implementation of multi-pronged
+limited control, eg a scheme
+
+186
+00:23:19,040 --> 00:23:22,800
+and effects as implemented
+in multi(INAUDIBLE).
+
+187
+00:23:22,800 --> 00:23:27,800
+In all of these, we see significant
+speed-ups sometimes very big.
+
+188
+00:23:29,080 --> 00:23:31,400
+In this benchmark, we
+see a slight slowdown,
+
+189
+00:23:31,400 --> 00:23:33,880
+but still competitive performance.
+
+190
+00:23:34,480 --> 00:23:36,840
+Interestingly, in the case
+of (INAUDIBLE) scheme,
+
+191
+00:23:36,840 --> 00:23:39,680
+we don't see a difference
+between our first translation
+
+192
+00:23:39,680 --> 00:23:41,640
+and our second translation.
+
+193
+00:23:41,880 --> 00:23:45,680
+This is because (INAUDIBLE) scheme
+does all these reductions for us.
+
+194
+00:23:45,680 --> 00:23:48,280
+We didn't have to extend
+the (INAUDIBLE) compiler
+
+195
+00:23:48,280 --> 00:23:50,160
+or teach it any new tricks.
+
+196
+00:23:50,400 --> 00:23:55,120
+It's just Lambdas
+inlining data reduction.
+
+197
+00:23:56,640 --> 00:23:58,440
+To wrap up, we've presented
+
+198
+00:23:58,440 --> 00:24:01,160
+a compilation technique
+for effect handlers.
+
+199
+00:24:01,920 --> 00:24:04,720
+Important concepts are explicit
+capability passing style
+
+200
+00:24:04,720 --> 00:24:07,800
+and iterated continuation
+passing style.
+
+201
+00:24:10,320 --> 00:24:12,920
+We are translating to just
+simply type Lambda calculus.
+
+202
+00:24:12,920 --> 00:24:15,120
+We don't need any
+special run time system
+
+203
+00:24:15,360 --> 00:24:18,400
+and we don't need any special
+optimizations either.
+
+204
+00:24:19,160 --> 00:24:22,480
+We have a theorem that
+guarantees full elimination
+
+205
+00:24:22,480 --> 00:24:25,680
+under certain conditions, which
+we formally state in the paper.
+
+206
+00:24:26,840 --> 00:24:30,680
+We have benchmarks which
+show good speed-ups.
+
+207
+00:24:31,680 --> 00:24:35,880
+And right now we're working on
+integrating this compilation technique
+
+208
+00:24:35,880 --> 00:24:39,000
+in a new standard
+or language called Effekt.
+
+209
+00:24:39,000 --> 00:24:41,160
+You should go check it out.
+
+210
+00:24:42,960 --> 00:24:44,840
+PHILIP: If you're interested
+in Effekt Handlers
+
+211
+00:24:44,840 --> 00:24:47,560
+and the implementation technique
+of explicitly passing them,
+
+212
+00:24:47,560 --> 00:24:49,680
+we invite you to read our paper.
+
+213
+00:24:49,680 --> 00:24:53,040
+At the Hope Workshop, we will
+present our new language Effekt
+
+214
+00:24:53,040 --> 00:24:55,080
+and discuss its design.
+
+215
+00:24:55,080 --> 00:24:59,000
+In another ICFP talk, our
+collaborator (INAUDIBLE) presents
+
+216
+00:24:59,000 --> 00:25:02,000
+the important missing link between
+traditional effect handlers
+
+217
+00:25:02,000 --> 00:25:04,040
+and explicitly passing them.
+
+218
+00:25:04,040 --> 00:25:07,120
+And finally, she also presents
+her Haskell implementation
+
+219
+00:25:07,120 --> 00:25:10,000
+at the Haskell symposium.
+See you there.
+
+220
+00:25:13,960 --> 00:25:18,960
+(APPLAUSE)
+
+221
+00:25:21,920 --> 00:25:23,240
+SUKYOUNG: Thank you, Philip.
+
+222
+00:25:23,240 --> 00:25:27,280
+If you're watching this talk
+live as an ICFP participant,
+
+223
+00:25:27,280 --> 00:25:30,680
+please look to see
+if there is a Q&A session
+
+224
+00:25:30,680 --> 00:25:32,760
+available in your time band
+
+225
+00:25:32,760 --> 00:25:37,040
+so that you can discuss this work
+with the author of the paper.
+
+226
+00:25:37,280 --> 00:25:41,680
+We will now pause here to sync
+up with the talk schedule.
+
+227
+00:28:00,680 --> 00:28:03,920
+Our next talk addresses
+the challenge of extending
+
+228
+00:28:03,920 --> 00:28:07,680
+the meta theory of
+Scala's core type system.
+
+229
+00:28:07,680 --> 00:28:10,960
+This talk will be presented
+by Paolo Giarrusso
+
+230
+00:28:10,960 --> 00:28:15,240
+and the paper is entitled,
+Scala step-by-step
+
+231
+00:28:15,240 --> 00:28:20,240
+Soundness for DOT with Step-Indexed
+Logical Relations in Iris.
+
+232
+00:28:21,280 --> 00:28:23,760
+PAOLO GIARRUSSO: Hi everybody
+and thanks for tuning in.
+
+233
+00:28:23,760 --> 00:28:26,480
+Today I'll present joint
+work with Léo Stefanesco,
+
+234
+00:28:26,480 --> 00:28:29,120
+Amin Timany, Lars Birkedal,
+and Robbert Krebbers.
+
+235
+00:28:29,120 --> 00:28:34,160
+A new approach to soundness
+for DOT (INAUDIBLE).
+
+236
+00:28:34,160 --> 00:28:36,800
+Before we dive into these
+stories you might task,
+
+237
+00:28:36,800 --> 00:28:39,560
+what's interesting about
+the Scala type system?
+
+238
+00:28:39,560 --> 00:28:42,600
+One might answer as
+Scala unifies financial
+
+239
+00:28:42,600 --> 00:28:44,680
+and object oriented programming,
+
+240
+00:28:44,680 --> 00:28:46,680
+while also very expressive
+modular system.
+
+241
+00:28:46,680 --> 00:28:48,240
+But what does that mean?
+
+242
+00:28:48,240 --> 00:28:50,400
+In other functional
+programming languages,
+
+243
+00:28:50,400 --> 00:28:53,120
+software modules are equalized
+to special constructs,
+
+244
+00:28:53,120 --> 00:28:55,440
+such as type classes or modules,
+
+245
+00:28:55,440 --> 00:28:59,720
+which are not first class and require
+a special abstraction making.
+
+246
+00:28:59,720 --> 00:29:04,400
+Instead, Scala extends irregular
+objects without a planned member,
+
+247
+00:29:04,400 --> 00:29:07,240
+allowing objects to serve
+as first-class model,
+
+248
+00:29:07,240 --> 00:29:09,800
+hence you can insensate
+modules on time
+
+249
+00:29:09,800 --> 00:29:12,000
+and abstract code across
+modules you're using
+
+250
+00:29:12,000 --> 00:29:14,400
+regularized kind of
+structural mechanisms,
+
+251
+00:29:14,400 --> 00:29:17,920
+such as playing functions
+or even mixing in (INAUDIBLE).
+
+252
+00:29:17,920 --> 00:29:22,120
+Well, absolute types of (INAUDBLE)
+sound type speed time systems
+
+253
+00:29:22,120 --> 00:29:25,120
+scala are time members are
+a significant challenge
+
+254
+00:29:25,120 --> 00:29:27,280
+for a type soundness
+
+255
+00:29:27,280 --> 00:29:32,600
+because they gain (INAUDIBLE).
+
+256
+00:29:33,480 --> 00:29:35,000
+Challenging
+to prove sound.
+
+257
+00:29:35,000 --> 00:29:39,920
+In a few slides, we will
+see a very small example.
+
+258
+00:29:39,920 --> 00:29:42,040
+While Scala is interesting,
+
+259
+00:29:42,040 --> 00:29:44,560
+it's type soundness has been
+in fact an open question
+
+260
+00:29:44,560 --> 00:29:47,520
+since Scala's introduction in 2003.
+
+261
+00:29:47,600 --> 00:29:49,560
+Soundness proof has been
+(INAUDIBLE) checked
+
+262
+00:29:49,720 --> 00:29:51,280
+for significant (INAUDIBLE),
+
+263
+00:29:51,400 --> 00:29:54,520
+the DOT calculi, amazing success.
+
+264
+00:29:54,520 --> 00:29:57,760
+However, we have no proof
+that abstract types are
+
+265
+00:29:57,760 --> 00:30:00,400
+indeed abstract.
+
+266
+00:30:00,400 --> 00:30:04,560
+And DOT calculi lags behind
+Scala even on call features.
+
+267
+00:30:04,560 --> 00:30:07,920
+In (INAUDIBLE) DOT is hard to extend
+
+268
+00:30:07,920 --> 00:30:11,680
+while Scala revolution
+is not slowing down.
+
+269
+00:30:11,680 --> 00:30:13,920
+To create a more
+sensible DOT calculus,
+
+270
+00:30:13,920 --> 00:30:16,760
+our approach is to avoid
+syntactic rules which is
+
+271
+00:30:16,840 --> 00:30:18,480
+preservation and progress.
+
+272
+00:30:18,480 --> 00:30:22,920
+Instead, would be at
+the logical relations models
+
+273
+00:30:22,920 --> 00:30:25,480
+to prove type soundness
+and data abstraction.
+
+274
+00:30:25,480 --> 00:30:29,000
+Then, a retrofit version
+of DOT over model
+
+275
+00:30:29,000 --> 00:30:31,240
+obtaining a more
+sensible DOT variant
+
+276
+00:30:31,240 --> 00:30:33,920
+called guarded DOT or gDOT.
+
+277
+00:30:33,920 --> 00:30:38,800
+Unfortunately, guarded DOT adds
+certain guardedness restrictions.
+
+278
+00:30:38,800 --> 00:30:41,200
+But in our evaluation,
+it's more acceptable.
+
+279
+00:30:41,200 --> 00:30:44,880
+In exchange, result is more
+extensible as we show
+
+280
+00:30:44,880 --> 00:30:48,880
+through some additional features
+that we'll mention later.
+
+281
+00:30:48,880 --> 00:30:50,160
+To make things concrete,
+
+282
+00:30:50,160 --> 00:30:53,920
+let's now look at
+an example of Scala code.
+
+283
+00:30:53,920 --> 00:30:56,600
+In these examples, we create
+validator components
+
+284
+00:30:56,600 --> 00:30:59,120
+to validate input from users.
+
+285
+00:30:59,120 --> 00:31:02,440
+They provide an abstract
+validator of valid inputs.
+
+286
+00:31:02,440 --> 00:31:04,720
+And a corresponding smart
+constructor is made
+
+287
+00:31:04,720 --> 00:31:09,280
+that validates its input and returns
+either valid data or nothing.
+
+288
+00:31:09,280 --> 00:31:12,240
+Up to this point, nothing too fancy.
+
+289
+00:31:12,240 --> 00:31:17,040
+However, new validators
+can be created at runtime
+
+290
+00:31:17,040 --> 00:31:20,320
+each with a distinct
+abstract type valid.
+
+291
+00:31:20,320 --> 00:31:21,880
+Simplified code.
+
+292
+00:31:21,880 --> 00:31:24,960
+We had code that
+input type to the int.
+
+293
+00:31:24,960 --> 00:31:27,160
+And we say that
+an input n is valid if it
+
+294
+00:31:27,160 --> 00:31:29,880
+is greater than some constant k.
+
+295
+00:31:29,880 --> 00:31:32,640
+The solution is in the next slide.
+
+296
+00:31:32,640 --> 00:31:35,960
+Our solution is an option to
+the client's type of validators.
+
+297
+00:31:35,960 --> 00:31:39,440
+In evidence, a type validator
+contains two members,
+
+298
+00:31:39,440 --> 00:31:41,280
+the type validator inputs, valid,
+
+299
+00:31:41,280 --> 00:31:43,440
+and the smart constructor is made.
+
+300
+00:31:43,440 --> 00:31:45,880
+Valid is to be a subtype of int,
+
+301
+00:31:45,880 --> 00:31:47,480
+the type of all ints.
+
+302
+00:31:47,480 --> 00:31:50,720
+That is type valid as int
+(INAUDIBLE) upper bound
+
+303
+00:31:50,720 --> 00:31:55,560
+and implicitly (INAUDIBLE)
+type nothing as lower bound.
+
+304
+00:31:55,560 --> 00:31:58,760
+These bounds encode
+valid as abstract.
+
+305
+00:31:58,760 --> 00:32:03,240
+Hence, in evidence of valid can
+only be constructed through make.
+
+306
+00:32:03,240 --> 00:32:06,480
+Function make validator maps input k
+
+307
+00:32:06,480 --> 00:32:10,120
+to a validator that accepts
+only integers greater than k.
+
+308
+00:32:10,120 --> 00:32:13,720
+For instance, here by
+calling make validator zero,
+
+309
+00:32:13,720 --> 00:32:15,800
+we create a validator
+called pos which
+
+310
+00:32:16,000 --> 00:32:18,240
+only accepts positive ints
+
+311
+00:32:18,240 --> 00:32:22,080
+as shown by fails and works.
+
+312
+00:32:22,320 --> 00:32:25,240
+The type system rejects nope
+
+313
+00:32:25,240 --> 00:32:28,440
+because positive valid is abstract
+
+314
+00:32:28,440 --> 00:32:30,880
+even though it is
+implemented by int.
+
+315
+00:32:30,880 --> 00:32:34,160
+Preventing users from bypassing
+as smart constructors.
+
+316
+00:32:34,160 --> 00:32:37,800
+Thanks to first-class models,
+you can also choose k at runtime
+
+317
+00:32:37,800 --> 00:32:40,240
+as now when creating legal ages.
+
+318
+00:32:40,240 --> 00:32:42,800
+As promised, type
+legal age is not valid
+
+319
+00:32:42,800 --> 00:32:44,640
+as a distinct abstract type
+
+320
+00:32:44,640 --> 00:32:46,920
+because legal ages is
+a different object
+
+321
+00:32:46,920 --> 00:32:50,440
+with different
+validation conditions.
+
+322
+00:32:50,440 --> 00:32:54,560
+This is one example that
+uses many Scala features.
+
+323
+00:32:54,560 --> 00:32:57,000
+So we see that in Scala
+first-class modules,
+
+324
+00:32:57,000 --> 00:32:58,600
+the abstract types are
+encoded as objects
+
+325
+00:32:58,680 --> 00:33:00,760
+with bounded type members.
+
+326
+00:33:01,760 --> 00:33:04,920
+We have used the type in view
+for type member interaction.
+
+327
+00:33:04,920 --> 00:33:07,520
+Type definition type A equals T.
+
+328
+00:33:07,520 --> 00:33:09,520
+And if it's a bounded
+type declaration,
+
+329
+00:33:09,520 --> 00:33:12,280
+type A between bound,
+
+330
+00:33:12,280 --> 00:33:14,400
+between bounds L and U
+
+331
+00:33:14,400 --> 00:33:18,760
+if type T is indeed
+between bounds L and U.
+
+332
+00:33:18,760 --> 00:33:22,240
+We have even used
+impredicatively type members.
+
+333
+00:33:22,240 --> 00:33:26,160
+Types like validator with
+nested type members like valid
+
+334
+00:33:26,160 --> 00:33:27,920
+are still regular types,
+
+335
+00:33:27,920 --> 00:33:30,440
+not large types,
+
+336
+00:33:30,600 --> 00:33:32,920
+and are subject to
+regular abstraction.
+
+337
+00:33:33,040 --> 00:33:38,240
+So, for instance, validator
+can in turn be a type member.
+
+338
+00:33:38,520 --> 00:33:42,440
+Next, we sketched our
+proof type soundness.
+
+339
+00:33:42,440 --> 00:33:46,800
+We'll oversimplify in this talk
+and leave the rest of the paper.
+
+340
+00:33:46,800 --> 00:33:49,280
+Our model uses a logical relation.
+
+341
+00:33:49,280 --> 00:33:51,560
+That is we map each type T
+
+342
+00:33:51,560 --> 00:33:54,400
+for set V of T or values that behave
+
+343
+00:33:54,400 --> 00:33:56,280
+as required by type T.
+
+344
+00:33:56,280 --> 00:33:58,680
+For instance, intersection
+types are in type
+
+345
+00:33:58,680 --> 00:34:00,240
+(INAUDIBLE) intersection.
+
+346
+00:34:00,240 --> 00:34:02,960
+The set V of S and T
+is the intersection
+
+347
+00:34:02,960 --> 00:34:05,680
+of V over S and V of T.
+
+348
+00:34:05,680 --> 00:34:08,480
+Then, we map syntactic
+typing judgments
+
+349
+00:34:08,480 --> 00:34:10,080
+to semantic typing judgments.
+
+350
+00:34:10,080 --> 00:34:13,080
+For instance, S is a type of T
+
+351
+00:34:13,080 --> 00:34:17,120
+if V of S is a subset of V of T.
+
+352
+00:34:17,120 --> 00:34:21,360
+(INAUDIBLE) and expression
+E, a semantic type T
+
+353
+00:34:21,360 --> 00:34:25,720
+if E runs safely
+and result is in V of T.
+
+354
+00:34:25,720 --> 00:34:28,080
+Hence, semantically type expressions
+
+355
+00:34:28,080 --> 00:34:31,120
+are type-safe by definition.
+
+356
+00:34:31,120 --> 00:34:33,760
+Then we map each typing
+rule to a typing lemma
+
+357
+00:34:33,760 --> 00:34:35,200
+semantic typing judgments
+
+358
+00:34:35,200 --> 00:34:36,680
+that we masked for this.
+
+359
+00:34:36,680 --> 00:34:41,680
+For instance, type S
+and T is a subtype of S
+
+360
+00:34:41,920 --> 00:34:44,360
+because V of S and T
+
+361
+00:34:44,360 --> 00:34:47,560
+is a subset of V of S.
+
+362
+00:34:47,560 --> 00:34:50,440
+We now have type soundness proofs
+
+363
+00:34:50,440 --> 00:34:51,720
+that is extensible.
+
+364
+00:34:51,720 --> 00:34:53,160
+Proving new typing lemmas
+
+365
+00:34:53,160 --> 00:34:54,720
+cannot invalidate all at once
+
+366
+00:34:54,720 --> 00:34:58,880
+because each lemma is
+proved independently.
+
+367
+00:34:58,880 --> 00:35:03,360
+Next, we show a naive model of
+impredicatively type members.
+
+368
+00:35:03,360 --> 00:35:08,120
+We say that a type of object
+V as a type member A
+
+369
+00:35:08,120 --> 00:35:10,160
+between bounds L and U
+
+370
+00:35:10,160 --> 00:35:14,280
+if V dot A contains some type V
+
+371
+00:35:14,280 --> 00:35:17,760
+which is indeed those
+bounds L and U.
+
+372
+00:35:17,760 --> 00:35:19,840
+Here are metavariables V and V
+
+373
+00:35:19,840 --> 00:35:22,560
+arranged over sets of
+semantic types of values
+
+374
+00:35:22,560 --> 00:35:24,640
+defined as false.
+
+375
+00:35:24,640 --> 00:35:27,760
+Types as sets of values represented
+as membership (INAUDIBLE)
+
+376
+00:35:27,800 --> 00:35:31,360
+values can be among
+other things objects.
+
+377
+00:35:31,360 --> 00:35:35,480
+That is valid maps for field
+labels to values or types.
+
+378
+00:35:35,480 --> 00:35:39,000
+However, this definition is illegal
+
+379
+00:35:39,000 --> 00:35:42,240
+because in lining, some types shows
+
+380
+00:35:42,240 --> 00:35:46,760
+that we are to find unsound
+by a negative recursion
+
+381
+00:35:46,760 --> 00:35:48,800
+which is illegal.
+
+382
+00:35:48,800 --> 00:35:51,920
+This problem is exclusive to
+
+383
+00:35:51,920 --> 00:35:54,280
+certainly where we have
+
+384
+00:35:54,280 --> 00:35:58,680
+to model impredicative type members.
+
+385
+00:35:58,680 --> 00:36:02,000
+Thankfully, abstract (INAUDIBLE)
+
+386
+00:36:02,000 --> 00:36:05,640
+allows us to construct SemVal
+
+387
+00:36:05,640 --> 00:36:08,440
+(INAUDIBLE).
+
+388
+00:36:08,440 --> 00:36:10,240
+We must guard our recursion.
+
+389
+00:36:10,240 --> 00:36:15,200
+That is storing types into
+values must truncate types
+
+390
+00:36:15,200 --> 00:36:18,920
+using the Iris later functor.
+
+391
+00:36:18,920 --> 00:36:21,520
+I want to explain what
+exactly that means.
+
+392
+00:36:21,520 --> 00:36:24,040
+But we can ignore details
+and reason about the solution
+
+393
+00:36:24,040 --> 00:36:27,160
+to this question
+using the Iris logic.
+
+394
+00:36:27,160 --> 00:36:29,800
+Most of the logical relation
+would be identical
+
+395
+00:36:29,800 --> 00:36:31,320
+to the (INAUDIBLE) model
+
+396
+00:36:31,320 --> 00:36:32,960
+except for type members
+
+397
+00:36:32,960 --> 00:36:37,320
+since values only contain
+truncated type members.
+
+398
+00:36:37,320 --> 00:36:38,880
+Assertions about type members
+
+399
+00:36:38,880 --> 00:36:41,560
+must be weakened using
+the later modality
+
+400
+00:36:41,560 --> 00:36:43,760
+as shown in this example.
+
+401
+00:36:43,760 --> 00:36:48,120
+Here, a valid V as type
+member A between L and U.
+
+402
+00:36:48,120 --> 00:36:52,280
+If V DOT A contains type V
+
+403
+00:36:52,280 --> 00:36:57,280
+but later V in between
+later L and later U.
+
+404
+00:36:59,520 --> 00:37:04,120
+At this point, we can
+retrofit DOT over this model
+
+405
+00:37:04,120 --> 00:37:05,960
+obtaining gDOT.
+
+406
+00:37:05,960 --> 00:37:09,400
+So, we turn rules from
+pDOT and OOPSLA DOT
+
+407
+00:37:09,400 --> 00:37:12,480
+into typing lemmas
+appropriate to the model.
+
+408
+00:37:12,480 --> 00:37:16,800
+Each proof is around two
+to ten lines of Coq.
+
+409
+00:37:16,800 --> 00:37:18,480
+We add a type later T
+
+410
+00:37:18,480 --> 00:37:20,080
+reflecting the later modality
+
+411
+00:37:20,080 --> 00:37:23,800
+and associated typing rules.
+
+412
+00:37:23,800 --> 00:37:28,400
+In this process, we obtain some
+stronger additional rules.
+
+413
+00:37:28,400 --> 00:37:31,320
+In other cases, the restrictions
+become more principled.
+
+414
+00:37:31,320 --> 00:37:35,120
+For instance, abstract types
+supported also in nested objects
+
+415
+00:37:35,120 --> 00:37:38,720
+as we have used in our example.
+
+416
+00:37:38,720 --> 00:37:42,720
+Distributive, we obtain
+distributivity of n and all
+
+417
+00:37:42,720 --> 00:37:43,960
+in our (INAUDIBLE).
+
+418
+00:37:43,960 --> 00:37:46,280
+And we also obtain subtyping
+for recursive types
+
+419
+00:37:46,280 --> 00:37:49,840
+even beyond the typing rules used in
+
+420
+00:37:49,840 --> 00:37:53,840
+the OOPSLA DOT type.
+
+421
+00:37:53,840 --> 00:37:58,120
+Here we show a few
+selected typing rules.
+
+422
+00:37:58,120 --> 00:38:01,040
+Rules subtype Sel,
+
+423
+00:38:01,040 --> 00:38:06,040
+Sel subtype show that selecting
+
+424
+00:38:07,000 --> 00:38:12,000
+a type member A from part B
+
+425
+00:38:12,440 --> 00:38:16,760
+which is a certain type
+member between L and U.
+
+426
+00:38:16,760 --> 00:38:21,800
+but gives us a type which is
+between later L and later U.
+
+427
+00:38:21,800 --> 00:38:26,040
+This reflects guardedness
+restriction on type members.
+
+428
+00:38:26,040 --> 00:38:28,360
+Next, we will (INAUDIBLE)
+
+429
+00:38:28,360 --> 00:38:31,080
+shows how we can eliminate
+later in many cases
+
+430
+00:38:31,080 --> 00:38:35,200
+by adding no question to types.
+
+431
+00:38:35,200 --> 00:38:38,680
+Next, UT (INAUDIBLE) I
+
+432
+00:38:38,680 --> 00:38:41,520
+allows introducing
+recursive objects.
+
+433
+00:38:41,520 --> 00:38:44,920
+To prevent certain circular
+type innovations,
+
+434
+00:38:44,920 --> 00:38:47,560
+we avoided gDOT features
+of other DOT calculi
+
+435
+00:38:47,560 --> 00:38:50,160
+and guard against
+recursive Sel-references
+
+436
+00:38:50,160 --> 00:38:52,800
+by adding later to
+the type of Sel-variable x.
+
+437
+00:38:52,840 --> 00:38:55,720
+The rule says it creates an object
+
+438
+00:38:55,800 --> 00:39:00,560
+with definition x and give
+it type (INAUDIBLE) DOT T.
+
+439
+00:39:00,560 --> 00:39:04,720
+We must check the definitions
+(INAUDIBLE) type T
+
+440
+00:39:04,760 --> 00:39:08,000
+in a context with a Sel-variable x
+
+441
+00:39:08,000 --> 00:39:11,760
+as type later T.
+
+442
+00:39:11,760 --> 00:39:15,760
+Finally, U D-Val allows
+
+443
+00:39:15,760 --> 00:39:17,920
+to nest objects inside other objects
+
+444
+00:39:17,920 --> 00:39:19,760
+like in pDOT,
+
+445
+00:39:19,760 --> 00:39:23,240
+nested objects support
+abstract type members.
+
+446
+00:39:23,240 --> 00:39:24,800
+And this is possible
+because of the restriction
+
+447
+00:39:24,840 --> 00:39:27,840
+we added today from (INAUDIBLE).
+
+448
+00:39:27,840 --> 00:39:30,600
+In a paper, we give
+motivating examples
+
+449
+00:39:30,600 --> 00:39:32,720
+for some of our novel features.
+
+450
+00:39:32,720 --> 00:39:35,360
+We scaled these models to gDOT
+
+451
+00:39:35,360 --> 00:39:38,080
+explaining how to deal with
+u-types, singleton types,
+
+452
+00:39:38,120 --> 00:39:40,040
+path-dependent functions,
+
+453
+00:39:40,120 --> 00:39:41,840
+rule paths, and so on.
+
+454
+00:39:41,840 --> 00:39:46,440
+We demonstrate expressivity by
+the restrictions to type members
+
+455
+00:39:46,440 --> 00:39:49,480
+and we give proofs about
+data abstractions.
+
+456
+00:39:49,480 --> 00:39:53,080
+And we mechanize
+(INAUDIBLE) Coq using Iris.
+
+457
+00:39:53,080 --> 00:39:56,960
+Soundness proof is
+around 9,000 lines.
+
+458
+00:39:56,960 --> 00:40:01,960
+And our examples take
+around 5,000 lines.
+
+459
+00:40:02,200 --> 00:40:05,520
+For future work, we assign our model
+
+460
+00:40:05,520 --> 00:40:08,400
+to deal with type projection
+and higher kinds,
+
+461
+00:40:08,400 --> 00:40:10,960
+additional Scala features
+which have not been supported
+
+462
+00:40:10,960 --> 00:40:14,840
+by (INAUDIBLE) calculi.
+
+463
+00:40:14,840 --> 00:40:19,840
+We would like to find
+a way to elaborate
+
+464
+00:40:21,040 --> 00:40:23,760
+to DOT from calculi closer to Scala
+
+465
+00:40:23,840 --> 00:40:26,480
+and to inferences of later
+which Scala uses currently
+
+466
+00:40:26,640 --> 00:40:28,680
+do not have (INAUDIBLE).
+
+467
+00:40:29,240 --> 00:40:32,920
+And we hope that these
+techniques can be extended
+
+468
+00:40:32,920 --> 00:40:35,200
+for (INAUDIBLE) type systems
+
+469
+00:40:35,200 --> 00:40:40,200
+with impredicative type
+members or virtual classes.
+
+470
+00:40:41,240 --> 00:40:44,800
+In conclusion, Scala's type system
+
+471
+00:40:44,800 --> 00:40:48,520
+calls for extensible type-soundness.
+
+472
+00:40:48,520 --> 00:40:52,040
+So we use, so we design
+our type system
+
+473
+00:40:52,040 --> 00:40:55,840
+using a semantics-first approach.
+
+474
+00:40:55,840 --> 00:40:59,400
+The challenge or one
+of the challenges
+
+475
+00:40:59,400 --> 00:41:03,240
+was that impredicative
+type members are crucial
+
+476
+00:41:03,320 --> 00:41:08,320
+for Scala's expressivity
+but are hard to support.
+
+477
+00:41:08,760 --> 00:41:13,080
+But luckily, using Iris enabled
+machine-checking solution
+
+478
+00:41:13,080 --> 00:41:16,880
+in a convenient way in Coq.
+
+479
+00:41:16,880 --> 00:41:20,680
+Thank you very much
+for your attention.
+
+480
+00:41:20,680 --> 00:41:25,680
+(AUDIENCE APPLAUDS)
+
+481
+00:41:28,800 --> 00:41:30,120
+SUKYOUNG: Thank you, Paolo.
+
+482
+00:41:30,120 --> 00:41:32,120
+If you are watching this talk live
+
+483
+00:41:32,120 --> 00:41:34,800
+as an ICFP participant,
+
+484
+00:41:34,800 --> 00:41:36,720
+please look to see if there
+
+485
+00:41:36,720 --> 00:41:39,920
+is a Q&A session
+available in your time band
+
+486
+00:41:39,920 --> 00:41:41,880
+so that you can discuss this work
+
+487
+00:41:41,880 --> 00:41:46,880
+with the author of the paper.
+
+488
+00:43:02,320 --> 00:43:04,320
+Our next talk is entitled
+
+489
+00:43:04,680 --> 00:43:06,840
+A Dependently Typed Calculus with
+
+490
+00:43:06,840 --> 00:43:10,000
+Pattern Matching
+and Erasure Inference.
+
+491
+00:43:10,000 --> 00:43:13,600
+This paper has been
+written by Matus Tejsak.
+
+492
+00:43:13,600 --> 00:43:17,680
+And he will tell us that
+erasure in well-typed programs
+
+493
+00:43:17,680 --> 00:43:22,680
+is sound in that it
+commutes with reduction.
+
+494
+00:43:23,520 --> 00:43:25,080
+MATUS TEJSAK: Hello, thank you for
+
+495
+00:43:25,080 --> 00:43:26,520
+coming to my talk.
+
+496
+00:43:26,520 --> 00:43:28,240
+My name is Matus Tejsak
+and I would like to
+
+497
+00:43:28,240 --> 00:43:32,120
+talk about erasure
+independently type programming.
+
+498
+00:43:32,120 --> 00:43:33,520
+Dependent types are great.
+
+499
+00:43:33,520 --> 00:43:35,520
+They let us write specifications
+
+500
+00:43:35,520 --> 00:43:37,680
+and formulate invariants
+
+501
+00:43:37,680 --> 00:43:40,160
+and let the computer help us
+
+502
+00:43:40,160 --> 00:43:43,760
+make sure that our programs
+conform to those specifications.
+
+503
+00:43:43,760 --> 00:43:46,120
+For example, here's
+a program that reads
+
+504
+00:43:46,120 --> 00:43:48,040
+a binary number from the input,
+
+505
+00:43:48,040 --> 00:43:51,160
+adds one to it,
+and prints a result out.
+
+506
+00:43:51,160 --> 00:43:55,520
+Where the type of binary
+numbers is indexed
+
+507
+00:43:55,520 --> 00:43:58,760
+by its unary representation
+which is easier to reason about
+
+508
+00:43:58,760 --> 00:44:03,120
+which allows us to give
+the function add one a type
+
+509
+00:44:03,120 --> 00:44:05,480
+that guarantees that add one indeed
+
+510
+00:44:05,480 --> 00:44:10,320
+computes the successor of
+the given binary number.
+
+511
+00:44:10,320 --> 00:44:14,400
+Unfortunately, just by
+looking at the types,
+
+512
+00:44:14,400 --> 00:44:16,600
+we can already tell
+that this program
+
+513
+00:44:16,600 --> 00:44:19,360
+will run in exponential time
+and space with respect...
+
+514
+00:44:20,080 --> 00:44:22,360
+MATUS: Do the number of
+bits right from the input.
+
+515
+00:44:22,360 --> 00:44:23,400
+Why is that?
+
+516
+00:44:23,400 --> 00:44:27,240
+Well, if we look at
+the implicit arguments,
+
+517
+00:44:27,240 --> 00:44:30,080
+which are usually hidden
+and filled in by the elaborator,
+
+518
+00:44:30,080 --> 00:44:33,560
+we can see that each binary number
+
+519
+00:44:33,560 --> 00:44:36,600
+also contains
+the unit representation
+
+520
+00:44:37,320 --> 00:44:41,000
+of the binary numbers
+contained within
+
+521
+00:44:41,000 --> 00:44:43,040
+and the function adds one also,
+
+522
+00:44:43,840 --> 00:44:47,920
+takes unit representation of
+the binary number it takes
+
+523
+00:44:48,600 --> 00:44:53,480
+and those unit representations
+are exponentially sized
+
+524
+00:44:53,480 --> 00:44:55,080
+with respective number of bits.
+
+525
+00:44:55,080 --> 00:44:58,560
+And therefore the representation of
+memory looks roughly like this.
+
+526
+00:44:58,560 --> 00:45:03,560
+The useful bit on
+the left is dwarfed by the,
+
+527
+00:45:03,880 --> 00:45:08,080
+compile-time only
+information on the right.
+
+528
+00:45:10,040 --> 00:45:12,080
+So, in this talk,
+I would like to convince
+
+529
+00:45:12,080 --> 00:45:13,720
+you that this is real problem.
+
+530
+00:45:13,720 --> 00:45:16,800
+That we should really address this
+
+531
+00:45:16,800 --> 00:45:20,400
+and that by specifying our
+programs more precisely,
+
+532
+00:45:20,400 --> 00:45:22,720
+we should not make them run slower
+
+533
+00:45:22,720 --> 00:45:26,000
+and we should not make
+a linear program run
+
+534
+00:45:26,520 --> 00:45:28,840
+in exponential time or worse,
+
+535
+00:45:28,880 --> 00:45:31,560
+just by saying about it, that it,
+
+536
+00:45:32,040 --> 00:45:34,920
+calculates the right answer.
+
+537
+00:45:34,920 --> 00:45:36,840
+I'll sketch that,
+
+538
+00:45:36,840 --> 00:45:41,640
+irrelevance erased
+universes or laziness also-
+
+539
+00:45:41,640 --> 00:45:43,480
+it's a slightly different problem.
+
+540
+00:45:43,480 --> 00:45:47,840
+So, they are not always applicable
+or not always the best choice.
+
+541
+00:45:47,840 --> 00:45:51,760
+I'll sketch the gist of
+how we can discover,
+
+542
+00:45:52,240 --> 00:45:54,240
+this compile-time only information,
+
+543
+00:45:55,000 --> 00:45:58,160
+that might be too big
+
+544
+00:45:58,160 --> 00:46:01,400
+and automatically discover it
+
+545
+00:46:01,400 --> 00:46:04,480
+and remove it from the program,
+
+546
+00:46:04,480 --> 00:46:09,480
+thus recovering the intended
+run time complexity.
+
+547
+00:46:11,600 --> 00:46:16,000
+And I'll show this
+optimization makes
+
+548
+00:46:16,000 --> 00:46:18,320
+other optimizations more powerful,
+
+549
+00:46:18,320 --> 00:46:21,120
+and also makes
+the compiler run faster,
+
+550
+00:46:21,120 --> 00:46:23,440
+because there's less
+code to generate.
+
+551
+00:46:23,440 --> 00:46:24,840
+In language like COKE.
+
+552
+00:46:24,840 --> 00:46:28,720
+We might want-we
+might attempt to use,
+
+553
+00:46:28,720 --> 00:46:32,360
+the erase universe of prop.
+
+554
+00:46:32,360 --> 00:46:35,960
+However, while this is
+great for erasing proofs,
+
+555
+00:46:35,960 --> 00:46:38,560
+it's not so good at raising indices,
+
+556
+00:46:38,560 --> 00:46:42,800
+as illustrated by
+the function natToBin.
+
+557
+00:46:42,800 --> 00:46:44,960
+Because what should
+be the type of n,
+
+558
+00:46:44,960 --> 00:46:48,560
+should the type of n be
+erased or not erased,
+
+559
+00:46:48,560 --> 00:46:53,560
+since function natToBin
+requires n to do its job
+
+560
+00:46:54,200 --> 00:46:56,880
+n must have a non-erased type.
+
+561
+00:46:56,880 --> 00:47:01,560
+However, because the same n
+is used as an index of Bin,
+
+562
+00:47:01,560 --> 00:47:03,360
+it must have an erased type.
+
+563
+00:47:03,360 --> 00:47:06,800
+So, tying erasure to
+a type of variable,
+
+564
+00:47:06,800 --> 00:47:10,600
+is not useful in this case.
+
+565
+00:47:10,600 --> 00:47:15,600
+We might even try laziness,
+that works sometimes,
+
+566
+00:47:16,000 --> 00:47:19,760
+but it's a dynamic
+fix for a static problem.
+
+567
+00:47:19,760 --> 00:47:23,000
+We can already tell at compile time,
+
+568
+00:47:23,000 --> 00:47:28,080
+which bits can be erased
+and which bits we need for runtime.
+
+569
+00:47:28,080 --> 00:47:33,120
+So, we should not keep
+a runtime check,
+
+570
+00:47:33,120 --> 00:47:36,720
+to prevent evaluation
+of that information
+
+571
+00:47:36,720 --> 00:47:38,760
+we should just erase it altogether.
+
+572
+00:47:38,760 --> 00:47:43,240
+Laziness is not an option in
+eagerly evaluated languages.
+
+573
+00:47:43,240 --> 00:47:47,640
+And as illustrated by
+the function serverLoop,
+
+574
+00:47:49,280 --> 00:47:54,120
+we have a choice here between,
+
+575
+00:47:54,120 --> 00:47:58,360
+accumulating thunks
+in the variable n,
+
+576
+00:47:58,360 --> 00:48:02,480
+if we do not evaluate it
+and therefore leaking memory
+
+577
+00:48:02,480 --> 00:48:07,480
+or evaluating it and having
+n explode exponentially in size.
+
+578
+00:48:08,400 --> 00:48:10,640
+Irrelevance can also be used,
+
+579
+00:48:12,000 --> 00:48:15,120
+to achieve erasure,
+irrelevance is too strong.
+
+580
+00:48:15,120 --> 00:48:19,040
+By irrelevance I mean,
+the property of subexpressions
+
+581
+00:48:19,040 --> 00:48:21,760
+ignored in definitional equality.
+
+582
+00:48:21,760 --> 00:48:26,760
+This is a very strong property,
+
+583
+00:48:26,760 --> 00:48:31,760
+and it's not necessary
+for erasure and runtime,
+
+584
+00:48:32,920 --> 00:48:35,960
+in Agda...
+
+585
+00:48:35,960 --> 00:48:40,000
+irrelevance does not help us
+with the binary number example,
+
+586
+00:48:40,600 --> 00:48:45,280
+just because it's too powerful
+and causes problems.
+
+587
+00:48:45,280 --> 00:48:47,560
+Also inference of irrelevance is harder
+
+588
+00:48:47,560 --> 00:48:49,840
+than just inference of erasure.
+
+589
+00:48:50,120 --> 00:48:54,480
+So, there's-if we just need erasure,
+
+590
+00:48:54,480 --> 00:48:59,480
+we do not need irrelevance with
+all the consequences it brings.
+
+591
+00:49:01,200 --> 00:49:02,760
+So, what do we do then?
+
+592
+00:49:02,840 --> 00:49:04,240
+Well, here's a small example,
+
+593
+00:49:04,240 --> 00:49:08,840
+function V-length that takes
+a vector and calculates its length.
+
+594
+00:49:08,840 --> 00:49:10,320
+We can ask the question,
+
+595
+00:49:11,200 --> 00:49:14,280
+can we erase the second
+argument of V-length call n?
+
+596
+00:49:15,000 --> 00:49:19,240
+Or does V-length need to look at
+this argument to do its job?
+
+597
+00:49:19,240 --> 00:49:21,440
+Well in the first clause,
+
+598
+00:49:21,440 --> 00:49:25,000
+the second argument is forced to
+zero indicated by square brackets,
+
+599
+00:49:25,000 --> 00:49:26,560
+because the vector is empty.
+
+600
+00:49:26,560 --> 00:49:30,320
+So, since the types tell us that
+the second argument is zero.
+
+601
+00:49:30,320 --> 00:49:33,880
+We need not look at it. We
+do not have to inspect it.
+
+602
+00:49:33,880 --> 00:49:37,280
+In the second clause,
+the types tell us that
+
+603
+00:49:37,280 --> 00:49:41,680
+the second argument is a successor
+of a certain number called n.
+
+604
+00:49:41,680 --> 00:49:44,880
+So, the types tell us
+the tag of the constructor.
+
+605
+00:49:48,280 --> 00:49:51,120
+But they do not tell us what n is.
+
+606
+00:49:51,120 --> 00:49:53,480
+However, on the right-hand side,
+
+607
+00:49:53,480 --> 00:49:57,320
+n is used in the recursive call,
+
+608
+00:49:57,320 --> 00:49:58,600
+as a second argument of V-length.
+
+609
+00:49:58,600 --> 00:50:01,680
+So, if the recursive call,
+
+610
+00:50:01,680 --> 00:50:05,840
+does not need the second argument,
+
+611
+00:50:05,840 --> 00:50:08,600
+we do not need n
+and since we know the tag
+
+612
+00:50:08,600 --> 00:50:11,040
+and we do not need the n,
+
+613
+00:50:11,040 --> 00:50:14,360
+we do not need the second
+argument altogether.
+
+614
+00:50:14,360 --> 00:50:17,400
+And it's consistent then to say that
+
+615
+00:50:17,400 --> 00:50:20,160
+the second argument of
+V-length can be erased.
+
+616
+00:50:20,160 --> 00:50:22,200
+To make this a little
+bit more formal,
+
+617
+00:50:22,840 --> 00:50:26,760
+we need to get a bit more explicit
+about the pattern variables,
+
+618
+00:50:26,760 --> 00:50:29,720
+so we insert the two lines
+starting with where,
+
+619
+00:50:29,720 --> 00:50:34,760
+that bind the pattern variables
+explicitly and give them types.
+
+620
+00:50:34,760 --> 00:50:39,120
+Next, we number all colons and
+
+621
+00:50:39,120 --> 00:50:41,520
+all applications in
+the whole program.
+
+622
+00:50:41,520 --> 00:50:46,080
+So, all name bindings
+are numbered now.
+
+623
+00:50:46,080 --> 00:50:49,560
+Each of these numbers will be-
+
+624
+00:50:49,560 --> 00:50:52,640
+will eventually be replaced
+by a definite annotation
+
+625
+00:50:52,720 --> 00:50:55,040
+R or E, retained or erased.
+
+626
+00:50:55,040 --> 00:50:57,680
+But we cannot just fill in
+any annotations we like,
+
+627
+00:50:57,680 --> 00:51:02,080
+because they need to satisfy
+some consistency constraints.
+
+628
+00:51:02,080 --> 00:51:05,280
+So, then we traverse
+the whole program
+
+629
+00:51:05,280 --> 00:51:07,600
+and gather consistency constraints.
+
+630
+00:51:08,240 --> 00:51:12,360
+For example, in this program,
+we can notice that-
+
+631
+00:51:12,400 --> 00:51:14,480
+that the annotation number 19,
+
+632
+00:51:14,480 --> 00:51:17,360
+has to be the same as
+the annotation number 30,
+
+633
+00:51:17,360 --> 00:51:19,880
+because it's the same function
+
+634
+00:51:19,880 --> 00:51:22,320
+as the first argument
+of function V-length,
+
+635
+00:51:22,320 --> 00:51:25,280
+so it has to have
+the same annotation.
+
+636
+00:51:25,280 --> 00:51:27,760
+This is expressible in
+the horn-clause form.
+
+637
+00:51:28,480 --> 00:51:31,760
+Then on the right-hand
+side, we can observe that,
+
+638
+00:51:31,760 --> 00:51:35,120
+if S uses its first
+argument and vector length
+
+639
+00:51:35,120 --> 00:51:36,840
+uses it's second argument,
+
+640
+00:51:36,840 --> 00:51:41,480
+then the pattern variable
+n needs to be available.
+
+641
+00:51:42,120 --> 00:51:44,960
+This is also expressible
+in the horn-clause form
+
+642
+00:51:44,960 --> 00:51:47,720
+and we can see it in
+the second line of the table.
+
+643
+00:51:48,800 --> 00:51:53,680
+Finally on the left-hand
+side of this clause,
+
+644
+00:51:54,520 --> 00:51:59,480
+we can observe that
+if n has to be available,
+
+645
+00:51:59,480 --> 00:52:04,200
+then S needs to remember
+it's argument,
+
+646
+00:52:04,200 --> 00:52:09,000
+which means number 32
+has to be retained
+
+647
+00:52:09,000 --> 00:52:13,600
+and vector length has to
+retain its second argument,
+
+648
+00:52:13,600 --> 00:52:16,560
+which means number 31
+has to be retained.
+
+649
+00:52:16,560 --> 00:52:21,560
+This is also expressible
+as two horn-clauses.
+
+650
+00:52:21,960 --> 00:52:26,960
+And in this manner, we go
+through the whole program,
+
+651
+00:52:27,320 --> 00:52:30,480
+gather the constraints
+and then find a solution,
+
+652
+00:52:31,720 --> 00:52:35,280
+that erases as much as possible,
+
+653
+00:52:35,280 --> 00:52:38,960
+while being consistent
+with these constraints.
+
+654
+00:52:38,960 --> 00:52:46,360
+This yields an annotated
+program where every variable
+
+655
+00:52:46,800 --> 00:52:51,560
+and every application has
+been annotated with R or E.
+
+656
+00:52:51,560 --> 00:52:55,760
+And with the annotations are
+built into of the type system,
+
+657
+00:52:55,760 --> 00:52:58,000
+it's not something we
+keep on the side,
+
+658
+00:52:58,000 --> 00:53:00,520
+it's really built into
+the type signatures.
+
+659
+00:53:00,520 --> 00:53:05,520
+So, then we can erase everything
+that's annotated with E,
+
+660
+00:53:05,880 --> 00:53:08,440
+obtaining the program that
+we actually wants to run.
+
+661
+00:53:08,440 --> 00:53:13,120
+And that does not contain
+any traces of overhead cost
+
+662
+00:53:13,120 --> 00:53:16,320
+by dependent typing and indices.
+
+663
+00:53:16,320 --> 00:53:19,800
+This erasure system has
+some nice properties.
+
+664
+00:53:19,800 --> 00:53:22,840
+For example, the function subst,
+
+665
+00:53:22,840 --> 00:53:26,160
+does not require-does not
+retain its proof arguments.
+
+666
+00:53:26,160 --> 00:53:27,920
+So, the proof can be erased.
+
+667
+00:53:28,000 --> 00:53:30,280
+despite being matched on.
+
+668
+00:53:30,280 --> 00:53:33,320
+The types tell us what
+the constructor tag must be.
+
+669
+00:53:33,320 --> 00:53:36,520
+We know because there's only one
+constructor in the type family
+
+670
+00:53:36,520 --> 00:53:41,160
+and the argument X is not
+used on the right-hand side.
+
+671
+00:53:41,160 --> 00:53:43,560
+Therefore the proof can
+be erased and subst
+
+672
+00:53:43,560 --> 00:53:47,640
+becomes an identity
+function after erasure.
+
+673
+00:53:47,640 --> 00:53:50,720
+Of course, this is doable only
+if the type system is sound
+
+674
+00:53:50,720 --> 00:53:54,600
+and does not allow things
+like non-termination.
+
+675
+00:53:55,000 --> 00:53:57,560
+Erasure also helps
+the newtype optimization,
+
+676
+00:53:57,560 --> 00:54:03,920
+makes it more broadly applicable
+and in combination with it,
+
+677
+00:54:04,160 --> 00:54:09,040
+it can collapse large
+richly indexed structures,
+
+678
+00:54:09,040 --> 00:54:11,600
+into just the bare
+bones representation,
+
+679
+00:54:12,000 --> 00:54:16,520
+the meat of the structure.
+
+680
+00:54:16,520 --> 00:54:20,640
+Finally the identity optimization
+gets more powerful with erasure,
+
+681
+00:54:20,640 --> 00:54:25,520
+because it's much easier to
+spot that something is.
+
+682
+00:54:25,520 --> 00:54:30,520
+is an identity after it's
+been erased so weaken E
+
+683
+00:54:30,800 --> 00:54:35,720
+is more obviously
+an identity than weaken.
+
+684
+00:54:35,720 --> 00:54:39,880
+Finally, here are some benchmarks
+of my prototype implementation.
+
+685
+00:54:41,000 --> 00:54:43,600
+The times shown include the whole
+
+686
+00:54:43,600 --> 00:54:46,320
+compiler pipeline from parsing,
+
+687
+00:54:46,320 --> 00:54:49,560
+up to including native
+code degeneration.
+
+688
+00:54:49,560 --> 00:54:53,960
+And we can see that
+with erasure enabled,
+
+689
+00:54:53,960 --> 00:54:56,520
+the total compilation
+time, it's much shorter,
+
+690
+00:54:56,520 --> 00:55:00,600
+because there's less
+code to generate.
+
+691
+00:55:00,600 --> 00:55:03,600
+Given that we've shown that we can,
+
+692
+00:55:03,600 --> 00:55:06,280
+distinguish between
+compile-time only information
+
+693
+00:55:06,280 --> 00:55:11,040
+and runtime information
+automatically.
+
+694
+00:55:11,040 --> 00:55:13,120
+We have shown that the commonly
+
+695
+00:55:13,120 --> 00:55:15,040
+claimed lack of phase distinction
+
+696
+00:55:15,040 --> 00:55:17,120
+in dependently type
+programs is a myth.
+
+697
+00:55:17,120 --> 00:55:22,120
+And it's true that the phase
+distinction it no longer lines up
+
+698
+00:55:22,400 --> 00:55:24,840
+with the distinction (INAUDIBLE)
+terms and types, beginning,
+
+699
+00:55:24,840 --> 00:55:28,920
+implicit and explicit (INAUDIBLE)
+there and we can make use of it.
+
+700
+00:55:28,920 --> 00:55:32,360
+So, the main direction of further
+research is unification with QTT,
+
+701
+00:55:32,360 --> 00:55:36,600
+which is Bob (INAUDIBLE) extension
+of Connor McBride's work,
+
+702
+00:55:36,600 --> 00:55:39,680
+featuring linearity as
+an additional quantity
+
+703
+00:55:39,680 --> 00:55:42,680
+to erased and not erased.
+
+704
+00:55:42,680 --> 00:55:45,440
+It would be nice to have
+a ratio polymorphism
+
+705
+00:55:45,440 --> 00:55:47,000
+or quantity polymorphism,
+
+706
+00:55:47,000 --> 00:55:52,000
+so that functions like apply can
+take erase and not erase functions.
+
+707
+00:55:53,040 --> 00:55:55,840
+Finally, erasure can
+be inferred from
+
+708
+00:55:55,840 --> 00:55:58,640
+a completely un-annotated program.
+
+709
+00:55:58,640 --> 00:56:02,400
+However, these are
+the same drawbacks as Haskell
+
+710
+00:56:02,400 --> 00:56:04,920
+or an ML program without
+type annotations.
+
+711
+00:56:04,920 --> 00:56:06,680
+You make a mistake somewhere,
+
+712
+00:56:07,200 --> 00:56:08,960
+the system infers the wrong type
+
+713
+00:56:08,960 --> 00:56:11,200
+and then something
+very far away breaks
+
+714
+00:56:11,200 --> 00:56:14,040
+and it's hard to find
+the real cause.
+
+715
+00:56:14,600 --> 00:56:17,280
+Moreover explicit annotation would
+
+716
+00:56:17,280 --> 00:56:18,760
+help with separate compilation.
+
+717
+00:56:18,760 --> 00:56:21,360
+So, it would be good to
+find a convenient way-
+
+718
+00:56:21,360 --> 00:56:26,360
+convenient rules for explicit
+annotation that would help with both.
+
+719
+00:56:27,240 --> 00:56:29,280
+Thank you for attention.
+
+720
+00:56:29,280 --> 00:56:31,960
+Questions are very welcome.
+
+721
+00:56:31,960 --> 00:56:36,960
+(APPLAUSE)
+
+722
+00:56:39,440 --> 00:56:41,000
+SUKYOUNG: Thank you, Matus.
+
+723
+00:56:41,000 --> 00:56:43,040
+If you're watching this talk live,
+
+724
+00:56:43,040 --> 00:56:46,280
+please don't forget
+about a Q&A session,
+
+725
+00:56:46,280 --> 00:56:51,280
+that may be available
+in your time band.
+
+726
+00:58:00,880 --> 00:58:05,880
+The first talk of this session is
+entitled raising expectations,
+
+727
+00:58:05,880 --> 00:58:09,960
+automating expected cost
+analysis with types.
+
+728
+00:58:09,960 --> 00:58:13,480
+Di Wang and David Khan will
+present a talk together.
+
+729
+00:58:13,480 --> 00:58:15,920
+And they will tell us
+about a type-based
+
+730
+00:58:15,920 --> 00:58:18,720
+analysis of driving or (INAUDIBLE)
+
+731
+00:58:18,720 --> 00:58:23,720
+on the expected exclusion cost
+of probabilistic programs.
+
+732
+00:58:24,800 --> 00:58:28,760
+DI WANG: Hello, SSP, and
+a future viewers of this video.
+
+733
+00:58:28,760 --> 00:58:33,160
+My name is Di, a Ph.D. student
+at Camagie Mellon University.
+
+734
+00:58:33,160 --> 00:58:35,160
+And today my cohort, David and I
+
+735
+00:58:35,160 --> 00:58:37,480
+are going to be presenting our work,
+
+736
+00:58:37,480 --> 00:58:41,760
+on automatic probabilistic
+resource analyzing language,
+
+737
+00:58:41,760 --> 00:58:44,400
+from our paper raising expectations:
+
+738
+00:58:44,400 --> 00:58:47,600
+automating expected cost
+analysis with types,
+
+739
+00:58:47,600 --> 00:58:50,320
+(INAUDIBLE) accompanied
+by any implementation,
+
+740
+00:58:50,320 --> 00:58:55,320
+we call PRAML, standing for
+probabilistic resource-aware ML.
+
+741
+00:58:56,040 --> 00:58:58,760
+Resource analysis of
+programs is something that
+
+742
+00:58:58,760 --> 00:59:01,560
+is of renewed interest
+in the modern-day.
+
+743
+00:59:01,560 --> 00:59:04,200
+Not only does it fulfill
+the traditional role,
+
+744
+00:59:04,200 --> 00:59:06,040
+of identifying performance
+bottlenecks, but also
+
+745
+00:59:06,720 --> 00:59:09,880
+so the following,
+if you care about this security,
+
+746
+00:59:09,880 --> 00:59:12,840
+you'll need timely analysis
+to mitigate side channel
+
+747
+00:59:12,840 --> 00:59:15,120
+timing attacks.
+If you want to take advantage
+
+748
+00:59:15,120 --> 00:59:18,280
+of the latest tech trends
+in smart contracts,
+
+749
+00:59:18,280 --> 00:59:21,120
+you will need to be able
+to measure your past usage.
+
+750
+00:59:21,120 --> 00:59:23,480
+And of course,
+if you'll care about
+
+751
+00:59:23,480 --> 00:59:26,240
+our real world,
+it will sure help the climate
+
+752
+00:59:26,280 --> 00:59:28,840
+to be able to consider
+the carbon footprint
+
+753
+00:59:28,920 --> 00:59:31,840
+of the colored
+running data centers.
+
+754
+00:59:31,920 --> 00:59:34,520
+There are just
+so many different resources,
+
+755
+00:59:34,520 --> 00:59:38,480
+installment different programs.
+So the problem is then nobody
+
+756
+00:59:38,480 --> 00:59:42,280
+has the time to go through
+and formally analyze all of them.
+
+757
+00:59:42,280 --> 00:59:44,880
+For this reason,
+all work builds upon
+
+758
+00:59:44,880 --> 00:59:48,960
+an approach of language based
+automatic resource analysis.
+
+759
+00:59:48,960 --> 00:59:51,800
+in PRAML a program
+may call as per your role,
+
+760
+00:59:51,800 --> 00:59:54,760
+and just about type of inference
+received verifiably
+
+761
+00:59:54,760 --> 00:59:58,360
+sound resource analysis
+at their fingertips.
+
+762
+00:59:58,360 --> 01:00:01,440
+Now, so far, all of this
+already exists in
+
+763
+01:00:01,440 --> 01:00:05,960
+PRAML's predecessor
+resource ML, or RAML.
+
+764
+01:00:05,960 --> 01:00:09,920
+However, PRAML can model
+something that RaML cannot
+
+765
+01:00:09,920 --> 01:00:13,280
+Probability, probability
+is increasingly important
+
+766
+01:00:13,280 --> 01:00:16,480
+in modern algorithm design,
+random mice and
+
+767
+01:00:16,480 --> 01:00:19,920
+statistical algorithms
+are employed on mass data
+
+768
+01:00:19,920 --> 01:00:23,400
+constantly to squeeze out
+every bit of efficiency.
+
+769
+01:00:23,440 --> 01:00:26,040
+So it is crucial that
+modern resource analysis
+
+770
+01:00:26,040 --> 01:00:29,280
+systems can cope
+with expected costs
+
+771
+01:00:29,280 --> 01:00:32,720
+rather than just worst case.
+This is where I'll work
+
+772
+01:00:32,720 --> 01:00:35,920
+on CraML comes in,
+CraML extends the worst
+
+773
+01:00:35,920 --> 01:00:38,720
+case resource analysis
+or RaML to measure
+
+774
+01:00:38,720 --> 01:00:42,960
+the worst case expected value.
+And it's always worth noting
+
+775
+01:00:42,960 --> 01:00:45,400
+that the resulting man put
+is also suitable
+
+776
+01:00:45,400 --> 01:00:48,560
+for probabilistic modeling
+and a way we'll discuss
+
+777
+01:00:48,560 --> 01:00:51,880
+a couple of these
+applications later on.
+
+778
+01:00:51,880 --> 01:00:54,440
+Now, a little bit to David
+to talk about more
+
+779
+01:00:54,440 --> 01:00:58,080
+about the meat of the work.
+DAVID: Thank you Di.
+
+780
+01:00:58,160 --> 01:01:01,360
+Let's start by quickly going over
+how type system based
+
+781
+01:01:01,360 --> 01:01:05,680
+resource analysis works
+in a non probabilistic setting.
+
+782
+01:01:05,680 --> 01:01:08,640
+We will be using RAML's
+automatic amortized
+
+783
+01:01:08,640 --> 01:01:14,600
+resource analysis type system,
+or AARA, the idea of AARA
+
+784
+01:01:14,640 --> 01:01:17,840
+is based on the potential method
+of amortized analysis
+
+785
+01:01:17,840 --> 01:01:21,040
+set out by Robert Tajin.
+What we're going to do
+
+786
+01:01:21,040 --> 01:01:23,480
+is imbue the types
+at each stage
+
+787
+01:01:23,480 --> 01:01:25,840
+of a program environment
+with some notion
+
+788
+01:01:25,840 --> 01:01:28,880
+of potential energy
+and allow the energy
+
+789
+01:01:28,880 --> 01:01:32,840
+to change over time,
+but changes in potential energy
+
+790
+01:01:32,840 --> 01:01:36,040
+between each step
+then describes the energy
+
+791
+01:01:36,040 --> 01:01:41,200
+discharged to pay for costs.
+The key takeaway is this,
+
+792
+01:01:41,200 --> 01:01:44,040
+the total potential
+needed at the beginning
+
+793
+01:01:44,120 --> 01:01:47,440
+is an upper bound
+on the total cost.
+
+794
+01:01:47,440 --> 01:01:50,120
+So, by typing the program
+with this notion
+
+795
+01:01:50,120 --> 01:01:53,920
+of potential energy,
+we've bounded the cost,
+
+796
+01:01:53,920 --> 01:01:57,480
+and AARA does this
+while still maintaining
+
+797
+01:01:57,480 --> 01:01:59,880
+the compositionality
+of a type system.
+
+798
+01:01:59,880 --> 01:02:02,720
+This technique even works
+for higher order functions
+
+799
+01:02:02,800 --> 01:02:06,520
+and polynomial
+or exponential cost bounds.
+
+800
+01:02:06,520 --> 01:02:09,600
+However, let's start small
+and make an example
+
+801
+01:02:09,600 --> 01:02:12,560
+of the mem function
+like that from
+
+802
+01:02:12,560 --> 01:02:15,920
+the Ocaml standard library
+list module,
+
+803
+01:02:15,920 --> 01:02:20,480
+we will use AARA to bound
+the number of recursive calls.
+
+804
+01:02:20,480 --> 01:02:23,880
+So here is a version
+of the mem function.
+
+805
+01:02:24,240 --> 01:02:27,040
+Now, the men function
+takes the naive approach
+
+806
+01:02:27,040 --> 01:02:29,120
+of checking whether
+the argument X
+
+807
+01:02:29,120 --> 01:02:32,880
+is in the given list,
+it iterates over the list,
+
+808
+01:02:32,960 --> 01:02:36,440
+checks each element for equality
+and returns true
+
+809
+01:02:36,440 --> 01:02:39,920
+if it ever finds one,
+at worst we might need
+
+810
+01:02:39,920 --> 01:02:42,360
+to check the whole list,
+which means we could expect
+
+811
+01:02:42,360 --> 01:02:45,480
+n recursive calls
+in the worst case
+
+812
+01:02:45,480 --> 01:02:47,640
+where n is the
+length of the list.
+
+813
+01:02:48,400 --> 01:02:52,360
+We can show this using
+the potential method as follows.
+
+814
+01:02:52,360 --> 01:02:54,520
+First, we explicitly
+mark the costs
+
+815
+01:02:54,520 --> 01:02:58,080
+where they occur
+using tick operations.
+
+816
+01:02:58,080 --> 01:03:01,720
+That would occur right here
+at the recursive call.
+
+817
+01:03:01,800 --> 01:03:03,800
+Then we can type
+the list argument
+
+818
+01:03:03,800 --> 01:03:06,800
+with one unit
+of potential per element
+
+819
+01:03:06,800 --> 01:03:09,840
+written like so,
+with a superscript one
+
+820
+01:03:09,840 --> 01:03:13,640
+representing the amount
+of potential per element.
+
+821
+01:03:13,640 --> 01:03:15,720
+This aligns with
+what we've just guessed.
+
+822
+01:03:15,720 --> 01:03:19,920
+The worst case cost will be.
+The length of the list.
+
+823
+01:03:20,720 --> 01:03:23,080
+Then we can write
+the type of the whole function
+
+824
+01:03:23,080 --> 01:03:26,640
+with this, where
+these numbers here
+
+825
+01:03:26,640 --> 01:03:30,120
+on either side of the arrow
+represent the resources present
+
+826
+01:03:30,120 --> 01:03:32,920
+before and after
+the function call
+
+827
+01:03:32,920 --> 01:03:35,880
+in this case, we can
+just let them be zero.
+
+828
+01:03:36,520 --> 01:03:38,840
+Now let's move on
+to the interesting parts
+
+829
+01:03:38,840 --> 01:03:41,280
+in the function body
+and see how we use
+
+830
+01:03:41,280 --> 01:03:44,280
+these types with potential
+and how we match up
+
+831
+01:03:44,280 --> 01:03:47,560
+with the function signature
+just provided.
+
+832
+01:03:48,360 --> 01:03:51,960
+We first deconstruct the list,
+gaining the one unit
+
+833
+01:03:51,960 --> 01:03:54,040
+of potential that was
+previously stored
+
+834
+01:03:54,040 --> 01:03:57,160
+at the head
+of the input list.
+
+835
+01:03:57,160 --> 01:03:59,720
+Then if the head is the element
+we're looking for,
+
+836
+01:03:59,720 --> 01:04:02,040
+we can just return true
+and drop all
+
+837
+01:04:02,040 --> 01:04:06,240
+the remaining potential.
+Otherwise we use
+
+838
+01:04:06,240 --> 01:04:10,800
+that one free unit of potential
+to pay for the ticket expression.
+
+839
+01:04:10,880 --> 01:04:14,440
+And then Recurse on the tail
+of the input list
+
+840
+01:04:14,440 --> 01:04:16,360
+to perform
+this recursive call.
+
+841
+01:04:16,360 --> 01:04:19,080
+We check the potential
+in the current environment
+
+842
+01:04:19,080 --> 01:04:23,200
+against the function signature
+because the mem function
+
+843
+01:04:23,200 --> 01:04:26,360
+requires one unit of potential
+per element in the list.
+
+844
+01:04:26,360 --> 01:04:29,680
+And the tail of the input list
+still has one unit
+
+845
+01:04:29,680 --> 01:04:33,200
+of potential per element,
+this line type checks.
+
+846
+01:04:33,800 --> 01:04:35,840
+And that's it.
+The potential we guessed
+
+847
+01:04:35,840 --> 01:04:38,640
+at the beginning,
+one per element in the list
+
+848
+01:04:38,640 --> 01:04:43,040
+is the worst case bound we guessed.
+The length of the list.
+
+849
+01:04:44,080 --> 01:04:46,440
+As a final note
+about this example,
+
+850
+01:04:46,440 --> 01:04:48,280
+although we did it
+by guessing check,
+
+851
+01:04:48,280 --> 01:04:51,600
+these types actually
+can be inferred.
+
+852
+01:04:51,600 --> 01:04:53,560
+This is because
+all the relevant arithmetic
+
+853
+01:04:53,560 --> 01:04:55,920
+we did to calculate
+these constants,
+
+854
+01:04:55,960 --> 01:05:00,000
+can actually be given
+via linear constraints.
+
+855
+01:05:00,000 --> 01:05:01,880
+If we collect
+the linear constraints
+
+856
+01:05:01,880 --> 01:05:03,760
+and solve them,
+we get our desired
+
+857
+01:05:03,760 --> 01:05:06,880
+resource bounding type.
+This continues to hold
+
+858
+01:05:06,880 --> 01:05:11,520
+for PraML in general as well.
+Now, the language we just saw
+
+859
+01:05:11,560 --> 01:05:15,680
+is a subset of oCaml
+and non probabilistic.
+
+860
+01:05:15,680 --> 01:05:18,400
+So to make expected values
+at all meaningful,
+
+861
+01:05:18,400 --> 01:05:20,960
+we extended with what is probably
+the most primitive
+
+862
+01:05:20,960 --> 01:05:24,600
+probabilistic operation possible.
+The coin flip.
+
+863
+01:05:24,960 --> 01:05:28,320
+Specifically, we flip a coin
+to decide which
+
+864
+01:05:28,320 --> 01:05:31,600
+branch of code to run.
+We can slot this new behavior
+
+865
+01:05:31,600 --> 01:05:36,120
+into the RaML type system
+with some pretty intuitive rules.
+
+866
+01:05:36,120 --> 01:05:39,360
+The flip rule deals
+with coin flip expressions,
+
+867
+01:05:39,360 --> 01:05:42,120
+where the coin bias
+is a constant.
+
+868
+01:05:42,120 --> 01:05:44,960
+In this rule.
+Gamma is a typing context.
+
+869
+01:05:44,960 --> 01:05:47,760
+Q is the initial
+amount of resources.
+
+870
+01:05:47,760 --> 01:05:49,920
+A is the resource
+annotated type
+
+871
+01:05:49,920 --> 01:05:52,680
+of the expression.
+And of course, P
+
+872
+01:05:52,680 --> 01:05:56,320
+is the coin flip bias.
+So what this bottom part
+
+873
+01:05:56,320 --> 01:05:58,440
+says is just that
+the flip expression
+
+874
+01:05:58,440 --> 01:06:00,680
+type checks
+is A under context
+
+875
+01:06:00,680 --> 01:06:05,200
+gamma with Q extra resources.
+The key idea
+
+876
+01:06:05,240 --> 01:06:08,040
+of the flip rule
+is that the expected cost
+
+877
+01:06:08,040 --> 01:06:09,560
+between the two branches
+
+878
+01:06:09,560 --> 01:06:14,560
+e1 and e2, can be calculated
+as the weighted sum
+
+879
+01:06:14,640 --> 01:06:17,360
+of their respective
+typing judgments.
+
+880
+01:06:17,360 --> 01:06:19,360
+And you can see
+here and here
+
+881
+01:06:19,360 --> 01:06:21,080
+that we perform
+some sort of weighting
+
+882
+01:06:21,080 --> 01:06:25,000
+by the flip probability p.
+We also allow for
+
+883
+01:06:25,000 --> 01:06:27,240
+a more complicated case
+where the coin bias
+
+884
+01:06:27,240 --> 01:06:30,960
+is parameterized,
+as if it were a program variable.
+
+885
+01:06:30,960 --> 01:06:33,120
+It turns out in
+our implementation
+
+886
+01:06:33,120 --> 01:06:34,640
+that these two rules
+can be treated
+
+887
+01:06:34,640 --> 01:06:38,000
+as special cases
+of one more general rule.
+
+888
+01:06:38,760 --> 01:06:41,840
+However, despite the intuition
+behind these rules,
+
+889
+01:06:41,840 --> 01:06:44,560
+they posed a problem
+while these type rules
+
+890
+01:06:44,560 --> 01:06:46,600
+do indeed turn out
+to be sound.
+
+891
+01:06:46,600 --> 01:06:49,520
+The probabilistic nature
+of the new flip operations
+
+892
+01:06:49,520 --> 01:06:53,160
+are incompatible
+with the operational semantics
+
+893
+01:06:53,160 --> 01:06:57,840
+used in RaML AARA
+However, we need
+
+894
+01:06:57,840 --> 01:07:00,160
+an operational semantics
+in order to show
+
+895
+01:07:00,160 --> 01:07:04,080
+that the resource analysis is sound.
+To overcome this.
+
+896
+01:07:04,080 --> 01:07:07,040
+We created a whole
+new operational semantics for PRAML
+
+897
+01:07:07,040 --> 01:07:09,680
+based on boards
+from at all 2016's
+
+898
+01:07:09,680 --> 01:07:14,680
+trace based and step index
+distribution based semantics.
+
+899
+01:07:14,800 --> 01:07:16,760
+You can find the details
+of this adaptation
+
+900
+01:07:16,760 --> 01:07:20,680
+in the paper.
+With operational semantics in hand,
+
+901
+01:07:20,680 --> 01:07:23,880
+we can state
+soundness as follows.
+
+902
+01:07:23,880 --> 01:07:27,280
+If expression E types as A
+under context gamma
+
+903
+01:07:27,280 --> 01:07:30,600
+with Q units of initial potential.
+Then the expected
+
+904
+01:07:30,600 --> 01:07:34,480
+cost of evaluating E
+is bounded by Q
+
+905
+01:07:34,480 --> 01:07:38,360
+plus the potential in gamma.
+This soundness statement
+
+906
+01:07:38,360 --> 01:07:42,200
+should seem familiar.
+It is exactly the key takeaway
+
+907
+01:07:42,200 --> 01:07:44,880
+of the potential method
+mentioned earlier.
+
+908
+01:07:44,880 --> 01:07:48,120
+The initial potential
+bounds the cost,
+
+909
+01:07:48,120 --> 01:07:52,080
+this holds even for programs
+that may not terminate.
+
+910
+01:07:52,080 --> 01:07:53,960
+We can also say that
+if the cost model
+
+911
+01:07:53,960 --> 01:07:56,560
+counts evaluation steps,
+then the existence
+
+912
+01:07:56,560 --> 01:07:59,240
+of any expected
+cost bound at all.
+
+913
+01:07:59,240 --> 01:08:04,120
+Implies almost sure termination.
+Now let's look at this
+
+914
+01:08:04,120 --> 01:08:07,440
+new type system in action
+on a simple example.
+
+915
+01:08:07,440 --> 01:08:10,440
+Here's the program bernoulli,
+which performs a sequence
+
+916
+01:08:10,440 --> 01:08:14,560
+of bernoulli trials,
+when run, it has a 50% chance
+
+917
+01:08:14,560 --> 01:08:17,920
+of re-cursing and a 50%
+chance of terminating
+
+918
+01:08:18,280 --> 01:08:20,320
+as many might remember
+from their intro
+
+919
+01:08:20,320 --> 01:08:22,560
+to probability course,
+this results in a
+
+920
+01:08:22,560 --> 01:08:26,560
+geometric distribution
+with expected value too.
+
+921
+01:08:26,560 --> 01:08:28,760
+Thus, while it
+could go on forever,
+
+922
+01:08:28,760 --> 01:08:32,160
+we can actually give it
+a finite notion of cost.
+
+923
+01:08:32,160 --> 01:08:34,840
+Let's check it now
+using PRAML.
+
+924
+01:08:34,840 --> 01:08:39,880
+Now the only initial potential
+that bernoulli needs is two units.
+
+925
+01:08:39,880 --> 01:08:43,920
+One unit of potential is spent
+immediately on the tick.
+
+926
+01:08:43,920 --> 01:08:45,800
+After the coin flip,
+we assigned
+
+927
+01:08:45,800 --> 01:08:49,680
+zero potential to the headcase
+because it returns immediately.
+
+928
+01:08:49,680 --> 01:08:52,880
+And two units of potential
+to the tails case.
+
+929
+01:08:52,880 --> 01:08:55,760
+Then in the tails case,
+we reuse the guests
+
+930
+01:08:55,760 --> 01:08:58,880
+type of bernoulli,
+and it all works out
+
+931
+01:08:58,880 --> 01:09:01,800
+because the weighted sum
+of the potential assigned
+
+932
+01:09:01,800 --> 01:09:05,000
+to these two branches
+is exactly one.
+
+933
+01:09:05,000 --> 01:09:07,560
+The flip rule justifies
+billing into these branches
+
+934
+01:09:07,560 --> 01:09:10,360
+with only one unit of potential,
+even though
+
+935
+01:09:10,440 --> 01:09:14,520
+the tails branch by itself
+would require two.
+
+936
+01:09:14,600 --> 01:09:16,520
+In the paper
+we use this same
+
+937
+01:09:16,520 --> 01:09:20,000
+automated technique on a variety
+of more complicated functions
+
+938
+01:09:20,000 --> 01:09:22,440
+with more interesting
+resource bounds.
+
+939
+01:09:22,440 --> 01:09:24,960
+For instance, we show
+that PRAML, can analyze
+
+940
+01:09:24,960 --> 01:09:27,920
+the gambler's ruin
+where in two players,
+
+941
+01:09:27,920 --> 01:09:31,920
+Alison, Bob, continually bet
+$1 against each other
+
+942
+01:09:31,920 --> 01:09:33,840
+on the results
+of a coin flip
+
+943
+01:09:33,840 --> 01:09:36,720
+until one player
+runs out of money.
+
+944
+01:09:36,720 --> 01:09:38,680
+In the program,
+we modeled the amount
+
+945
+01:09:38,680 --> 01:09:41,080
+of money as
+the length of a list.
+
+946
+01:09:41,080 --> 01:09:42,800
+If the coin is fair,
+Alice starts with
+
+947
+01:09:42,800 --> 01:09:47,040
+$A and Bob starts with $B
+Then this series of bets
+
+948
+01:09:47,040 --> 01:09:51,080
+is expected to take
+A times B rounds.
+
+949
+01:09:51,080 --> 01:09:54,920
+Our implementation infer
+this bound exactly.
+
+950
+01:09:54,920 --> 01:09:57,240
+PRAML can also infer
+non-trivial bounds
+
+951
+01:09:57,240 --> 01:10:01,880
+with parameterized probabilities.
+The Von Neumann function
+
+952
+01:10:01,880 --> 01:10:04,520
+implements a mechanism
+to make a fair coin
+
+953
+01:10:04,520 --> 01:10:08,680
+from a biased one.
+With some scaling trick PRAML
+
+954
+01:10:08,680 --> 01:10:11,440
+derives that the function
+is expected to take
+
+955
+01:10:11,520 --> 01:10:15,600
+one over P times
+one minus P steps,
+
+956
+01:10:15,600 --> 01:10:18,120
+where P is the probability
+for the biased coin
+
+957
+01:10:18,120 --> 01:10:21,080
+to show heads.
+Both of these examples
+
+958
+01:10:21,080 --> 01:10:22,800
+also show that PRAML
+can be of use
+
+959
+01:10:22,800 --> 01:10:25,040
+in probabilistic modeling.
+As these are
+
+960
+01:10:25,040 --> 01:10:28,760
+both probabilistic models.
+Here are some tables
+
+961
+01:10:28,760 --> 01:10:31,680
+of various other analyses
+of probabilistic models
+
+962
+01:10:31,680 --> 01:10:34,720
+from the paper.
+The bounds themselves
+
+963
+01:10:34,720 --> 01:10:37,880
+are a various complexities,
+but one nice takeaway
+
+964
+01:10:37,880 --> 01:10:40,520
+is that the time taken
+to analyze this programs
+
+965
+01:10:40,520 --> 01:10:44,160
+automatically, is usually
+well under one second,
+
+966
+01:10:44,160 --> 01:10:46,480
+this is good,
+because real world analyses
+
+967
+01:10:46,480 --> 01:10:50,400
+need to run in
+a practical timeframe.
+
+968
+01:10:50,400 --> 01:10:54,480
+Now let's talk about some more
+empirical probabilistic modeling.
+
+969
+01:10:54,480 --> 01:10:58,120
+Look back quickly
+at mem and bernoulli.
+
+970
+01:10:58,120 --> 01:11:00,400
+If you squint a little,
+you might notice that
+
+971
+01:11:00,400 --> 01:11:03,320
+mem behaves
+a lot like bernoulli,
+
+972
+01:11:03,320 --> 01:11:06,000
+possibly terminating
+at each iteration.
+
+973
+01:11:06,000 --> 01:11:10,560
+In fact, if we say that
+equality holds with 50% chance,
+
+974
+01:11:10,560 --> 01:11:13,560
+then the runtime profiles
+of these two programs
+
+975
+01:11:13,560 --> 01:11:18,400
+are pretty much the same
+and note the constant expected
+
+976
+01:11:18,400 --> 01:11:22,040
+cost of two from bernoulli
+is far better
+
+977
+01:11:22,080 --> 01:11:25,520
+than the linear
+worst-case cost of mem.
+
+978
+01:11:25,520 --> 01:11:29,800
+This opens up another avenue
+for analysis using probability,
+
+979
+01:11:29,800 --> 01:11:31,760
+approximating
+deterministic branches
+
+980
+01:11:31,760 --> 01:11:35,600
+with probabilistic ones.
+If we can impuricably determine
+
+981
+01:11:35,600 --> 01:11:38,840
+that some code
+branches with a given probability,
+
+982
+01:11:38,920 --> 01:11:41,520
+we can approximate it
+with a flip and use
+
+983
+01:11:41,520 --> 01:11:43,600
+the PRAML type system
+to get a better sense
+
+984
+01:11:43,600 --> 01:11:46,040
+of the actual
+resource usage
+
+985
+01:11:46,040 --> 01:11:48,680
+in our implementation artifact.
+We include a mode
+
+986
+01:11:48,680 --> 01:11:51,760
+for doing this and we include
+some results of its application
+
+987
+01:11:51,760 --> 01:11:55,560
+in our paper.
+For instance, insertion sort
+
+988
+01:11:55,600 --> 01:11:59,880
+achieves linear time complexity
+on nearly sorted data.
+
+989
+01:11:59,880 --> 01:12:04,160
+That's all I have.
+I now leave it to Di for the close.
+
+990
+01:12:04,160 --> 01:12:08,000
+DI: Thank you, David.
+In summary in this paper
+
+991
+01:12:08,000 --> 01:12:10,560
+we have developed
+a probabilistic attention
+
+992
+01:12:10,560 --> 01:12:13,960
+to the ARA type system.
+We overhauled the operation
+
+993
+01:12:13,960 --> 01:12:17,880
+of semantics to provide sum.
+We also implemented
+
+994
+01:12:17,880 --> 01:12:21,520
+the result atleast back
+to determination programs,
+
+995
+01:12:21,520 --> 01:12:24,680
+which seemed pretty close
+to statistical techniques.
+
+996
+01:12:24,680 --> 01:12:28,040
+In the paper, we also give
+one more application
+
+997
+01:12:28,120 --> 01:12:32,440
+about automatic analysis
+of sample complexity.
+
+998
+01:12:32,480 --> 01:12:34,800
+That is all we have
+the time to talk about
+
+999
+01:12:34,800 --> 01:12:37,320
+incentive for less than
+impure talk.
+
+1000
+01:12:37,320 --> 01:12:38,920
+Stay healthy
+and hopefully
+
+1001
+01:12:38,920 --> 01:12:41,560
+we can talk in person
+the next year.
+
+1002
+01:12:41,800 --> 01:12:49,040
+(APPLAUSE)
+
+1003
+01:12:49,360 --> 01:12:51,560
+SUKYOUNG: Thank you,
+Dee and David,
+
+1004
+01:12:51,560 --> 01:12:53,880
+if you are watching
+this talk live,
+
+1005
+01:12:53,880 --> 01:12:56,800
+please don't forget
+about a Q &A session
+
+1006
+01:12:56,800 --> 01:13:00,400
+that may be available
+in your time band.
+
+1007
+01:13:05,720 --> 01:13:10,600
+Now our next talk is entitled,
+"Problem sketching with life
+
+1008
+01:13:10,600 --> 01:13:14,480
+by directional evaluation."
+Justin Lubin will present
+
+1009
+01:13:14,480 --> 01:13:17,680
+a talk and he will
+introduce Smith,
+
+1010
+01:13:17,680 --> 01:13:20,000
+an example based
+program synthesizer
+
+1011
+01:13:20,000 --> 01:13:25,280
+with supper for sketching and no
+trace (INAUDIBLE) requirement.
+
+1012
+01:13:25,880 --> 01:13:27,880
+JUSTIN LUBIN: Hi everyone.
+My name is Justin Lubin,
+
+1013
+01:13:27,880 --> 01:13:29,160
+and I'm gonna be
+presenting programs
+
+1014
+01:13:29,160 --> 01:13:32,240
+sketching with live
+bi-directional evaluation.
+
+1015
+01:13:32,240 --> 01:13:34,280
+So this is a program
+synthesis project.
+
+1016
+01:13:34,280 --> 01:13:36,640
+And by program synthesis,
+I mean computer generation
+
+1017
+01:13:36,640 --> 01:13:39,440
+of programs satisfying
+a specification.
+
+1018
+01:13:39,440 --> 01:13:41,080
+So the two key words
+to take away here
+
+1019
+01:13:41,080 --> 01:13:43,600
+are satisfying
+and specification.
+
+1020
+01:13:43,600 --> 01:13:44,600
+Let's take a look
+at what I mean
+
+1021
+01:13:44,600 --> 01:13:47,440
+by those, by specification.
+I mean the user
+
+1022
+01:13:47,440 --> 01:13:50,200
+interface to a synthesizer.
+It's how the user provides
+
+1023
+01:13:50,200 --> 01:13:52,720
+a notion of correctness
+for potential program.
+
+1024
+01:13:53,400 --> 01:13:55,320
+Satisfaction is
+then simply a program
+
+1025
+01:13:55,320 --> 01:13:58,000
+meeting the specification criteria.
+
+1026
+01:13:58,000 --> 01:14:01,000
+So let's take a look at two popular
+user interfaces, the synthesizers.
+
+1027
+01:14:01,000 --> 01:14:03,600
+The first of which is
+logic-based synthesis.
+
+1028
+01:14:03,600 --> 01:14:06,920
+In logic-based synthesis, we
+provide a logical formula
+
+1029
+01:14:06,920 --> 01:14:08,640
+as a means of specification.
+
+1030
+01:14:08,640 --> 01:14:11,360
+So for example, if we're trying
+to specify the sole function,
+
+1031
+01:14:11,360 --> 01:14:15,120
+we might say that for all
+indices i in array A,
+
+1032
+01:14:15,120 --> 01:14:18,680
+A(i) has to be less than
+or equal to A(i+1).
+
+1033
+01:14:18,680 --> 01:14:20,400
+Satisfaction in
+logic-based synthesis
+
+1034
+01:14:20,400 --> 01:14:22,920
+is typically going to be
+static verification.
+
+1035
+01:14:22,920 --> 01:14:25,800
+So for example, we might use
+tools such as SMT solvers,
+
+1036
+01:14:25,800 --> 01:14:29,000
+dependent type-checking,
+model checking, etcetera.
+
+1037
+01:14:29,000 --> 01:14:31,000
+Now, there have been many great
+logic-based synthesizers
+
+1038
+01:14:31,000 --> 01:14:32,480
+that have come out over the years.
+
+1039
+01:14:32,480 --> 01:14:36,480
+For example, Synquid,
+Rosette, Sketch and Leon.
+
+1040
+01:14:36,480 --> 01:14:39,160
+These types of tools excel when we
+need to encode complex invariants
+
+1041
+01:14:39,160 --> 01:14:42,800
+about more complicated data
+structures, such as red-black trees.
+
+1042
+01:14:42,800 --> 01:14:45,280
+Let's take a look at another
+interface to program synthesis,
+
+1043
+01:14:45,280 --> 01:14:47,080
+example-based synthesis.
+
+1044
+01:14:47,080 --> 01:14:48,240
+In example-based synthesis,
+
+1045
+01:14:48,240 --> 01:14:50,920
+specification takes the form of
+input-output examples.
+
+1046
+01:14:50,920 --> 01:14:53,000
+Here, I've asserted
+the sort of the empty list
+
+1047
+01:14:53,000 --> 01:14:56,960
+as the empty list and that
+sort of (3,1,2) is (1,2,3).
+
+1048
+01:14:56,960 --> 01:15:00,320
+Satisfaction will now take on
+the form of dynamic verification.
+
+1049
+01:15:00,320 --> 01:15:01,320
+What we'll need to do
+
+1050
+01:15:01,320 --> 01:15:03,360
+is we need to test each
+input-output pair.
+
+1051
+01:15:03,360 --> 01:15:05,400
+We'll need to evaluate and check.
+
+1052
+01:15:05,400 --> 01:15:08,080
+And the key words on this
+slide are evaluate and check.
+
+1053
+01:15:08,080 --> 01:15:10,720
+We'll definitely be
+returning to that later.
+
+1054
+01:15:10,720 --> 01:15:12,360
+So, some really great
+example-base synthesizers
+
+1055
+01:15:12,360 --> 01:15:17,080
+that have come out include Myth,
+Escher and Lambda squared.
+
+1056
+01:15:17,080 --> 01:15:18,880
+For this project, we're gonna
+be working in the domain
+
+1057
+01:15:18,880 --> 01:15:21,000
+of example-based, richly-typed,
+
+1058
+01:15:21,000 --> 01:15:24,240
+general-purpose, functional,
+program synthesis.
+
+1059
+01:15:24,240 --> 01:15:25,360
+Let's take a look at
+the current state
+
+1060
+01:15:25,360 --> 01:15:27,520
+of the art in this domain to
+see what we're up against.
+
+1061
+01:15:27,520 --> 01:15:29,840
+And that would be the Myth project.
+
+1062
+01:15:29,840 --> 01:15:32,120
+The way that Myth works is
+you give it a type signature
+
+1063
+01:15:32,120 --> 01:15:33,840
+instead of input-output examples.
+
+1064
+01:15:33,840 --> 01:15:36,320
+And as output, you get
+a function that when run,
+
+1065
+01:15:36,320 --> 01:15:39,320
+will satisfy those assertions.
+
+1066
+01:15:39,320 --> 01:15:40,560
+For the purposes of this talk,
+
+1067
+01:15:40,560 --> 01:15:43,080
+I'm more or less gonna be
+treating Myth as a blackbox.
+
+1068
+01:15:43,080 --> 01:15:47,760
+One, it will take in examples
+and give us a solution as output.
+
+1069
+01:15:47,760 --> 01:15:49,800
+Myth is a powerful
+program synthesizer,
+
+1070
+01:15:49,800 --> 01:15:52,560
+but it has two key limitations
+that we might like to address.
+
+1071
+01:15:52,560 --> 01:15:55,320
+Let's take a look at
+the first of these two.
+
+1072
+01:15:55,320 --> 01:15:56,840
+Given input-output examples,
+
+1073
+01:15:56,840 --> 01:16:00,280
+Myth will transform an empty
+program into a full solution.
+
+1074
+01:16:00,280 --> 01:16:01,960
+What if we, as programmers,
+
+1075
+01:16:01,960 --> 01:16:04,080
+wanted to encode some
+domain-specific knowledge
+
+1076
+01:16:04,080 --> 01:16:06,160
+that we might have into
+a partial solution
+
+1077
+01:16:06,160 --> 01:16:07,880
+towards the program that
+we'd like to make.
+
+1078
+01:16:07,880 --> 01:16:09,600
+Then we'd like for Myth to transform
+
+1079
+01:16:09,600 --> 01:16:12,480
+this partial solution
+into a full solution.
+
+1080
+01:16:12,480 --> 01:16:15,400
+The idea here is known
+as program sketching.
+
+1081
+01:16:15,400 --> 01:16:17,800
+And it already exists for
+logic-based synthesis
+
+1082
+01:16:17,800 --> 01:16:21,480
+in untyped languages via
+the Sketch and Rosette projects.
+
+1083
+01:16:21,480 --> 01:16:24,720
+But we want sketching for
+example-based synthesis
+
+1084
+01:16:24,720 --> 01:16:27,880
+and richly-typed language.
+
+1085
+01:16:27,880 --> 01:16:30,000
+So, to recap, program sketching
+
+1086
+01:16:30,000 --> 01:16:32,320
+is when you have a program
+with some holes in it,
+
+1087
+01:16:32,320 --> 01:16:35,040
+which might possibly
+be interdependent,
+
+1088
+01:16:35,040 --> 01:16:37,760
+and arbitrary assertions
+on this program,
+
+1089
+01:16:37,760 --> 01:16:39,960
+which is where we're gonna
+derive our input-output examples.
+
+1090
+01:16:39,960 --> 01:16:42,120
+And what you get at
+the end of the day
+
+1091
+01:16:42,120 --> 01:16:45,400
+is a completed program.
+
+1092
+01:16:45,400 --> 01:16:47,680
+So let's take a look at,
+Myth's second limitation
+
+1093
+01:16:47,680 --> 01:16:50,760
+which is known as
+the trace-completeness requirement.
+
+1094
+01:16:50,760 --> 01:16:53,800
+To be fair, this isn't just Myth
+that suffers from this problem.
+
+1095
+01:16:53,800 --> 01:16:56,040
+A lot of the programs synthesizers
+that I mentioned earlier
+
+1096
+01:16:56,040 --> 01:16:58,760
+also have some sort of
+trace-completeness requirement.
+
+1097
+01:16:58,760 --> 01:17:01,640
+So, what is trace-completeness?
+
+1098
+01:17:01,720 --> 01:17:05,720
+Well, a set of examples for
+a function is trace-complete if
+
+1099
+01:17:05,720 --> 01:17:09,040
+when the function is called
+on each example in the set,
+
+1100
+01:17:09,040 --> 01:17:12,600
+all its recursive calls also
+have an example in the set.
+
+1101
+01:17:12,600 --> 01:17:14,320
+Let's take a look at
+a small example.
+
+1102
+01:17:14,320 --> 01:17:16,640
+Let's say I have the length
+function as defined here.
+
+1103
+01:17:16,640 --> 01:17:18,600
+And I want to specify
+the example that
+
+1104
+01:17:18,680 --> 01:17:22,440
+length of (1,5,6,1) is 4.
+
+1105
+01:17:22,440 --> 01:17:25,040
+Well, the problem is
+that length actually makes
+
+1106
+01:17:25,080 --> 01:17:28,160
+a recursive call here
+on the tail of its input.
+
+1107
+01:17:28,160 --> 01:17:30,000
+So, I'm going to actually
+need to specify
+
+1108
+01:17:30,000 --> 01:17:32,520
+an example for length of (5,6,1).
+
+1109
+01:17:32,520 --> 01:17:34,640
+And similarly, I'm then
+going to need to specify
+
+1110
+01:17:34,640 --> 01:17:36,480
+an example for length of (6,1)
+
+1111
+01:17:36,480 --> 01:17:41,040
+and length of (1)
+and length of the empty list.
+
+1112
+01:17:41,120 --> 01:17:43,840
+So, to recap, here are
+two limitations of Myth.
+
+1113
+01:17:43,840 --> 01:17:46,040
+First one is that it has
+no support for sketching.
+
+1114
+01:17:46,040 --> 01:17:48,920
+And the second is that it has this
+trace-completeness requirement.
+
+1115
+01:17:48,920 --> 01:17:51,480
+But, instead of framing
+these as limitations,
+
+1116
+01:17:51,480 --> 01:17:53,160
+what if we treated them as goals?
+
+1117
+01:17:53,160 --> 01:17:55,120
+And instead saying that there is
+no support for sketching,
+
+1118
+01:17:55,120 --> 01:17:56,800
+we wanted to add
+support for sketching
+
+1119
+01:17:56,800 --> 01:17:59,120
+and remove
+the trace-completeness requirement.
+
+1120
+01:17:59,120 --> 01:18:02,680
+Then we could call our system Smyth.
+
+1121
+01:18:02,680 --> 01:18:05,040
+So what we'd like to do is
+provide Smyth a sketch,
+
+1122
+01:18:05,040 --> 01:18:06,440
+which would be our first goal,
+
+1123
+01:18:06,440 --> 01:18:08,080
+and some non-trace-complete
+examples,
+
+1124
+01:18:08,080 --> 01:18:09,440
+which would be our second goal,
+
+1125
+01:18:09,440 --> 01:18:11,720
+and get the same output as before.
+
+1126
+01:18:11,720 --> 01:18:14,000
+Let's take a look at how we
+can support this first goal,
+
+1127
+01:18:14,000 --> 01:18:16,200
+adding support for sketching.
+
+1128
+01:18:16,200 --> 01:18:17,800
+So here's how Smyth
+is going to work.
+
+1129
+01:18:17,800 --> 01:18:20,040
+As a specification, we're
+going to give it a sketch
+
+1130
+01:18:20,040 --> 01:18:21,440
+and some assertions.
+
+1131
+01:18:21,440 --> 01:18:23,360
+And because Smyth is example-based
+
+1132
+01:18:23,360 --> 01:18:25,560
+we're going to need to do
+dynamic verification.
+
+1133
+01:18:25,560 --> 01:18:28,960
+As before, this means that we're
+going to need to test each assertion.
+
+1134
+01:18:28,960 --> 01:18:31,520
+We're going to evaluate and check.
+
+1135
+01:18:31,520 --> 01:18:33,280
+But here is where it gets tricky.
+
+1136
+01:18:33,280 --> 01:18:36,520
+What exactly do evaluating
+and checking mean
+
+1137
+01:18:36,520 --> 01:18:38,600
+when given a program sketch?
+
+1138
+01:18:38,600 --> 01:18:41,880
+Well, the answer to the first of
+these questions is live evaluation,
+
+1139
+01:18:41,880 --> 01:18:44,200
+which is a theory that we draw
+from the Hazel project
+
+1140
+01:18:44,200 --> 01:18:46,680
+which you can find @hazel.org.
+
+1141
+01:18:46,680 --> 01:18:48,480
+Let's take a look at how it works.
+
+1142
+01:18:48,480 --> 01:18:50,840
+Say we are given
+the program e on the left,
+
+1143
+01:18:50,840 --> 01:18:52,600
+which computes 10+20
+
+1144
+01:18:52,600 --> 01:18:57,200
+plus the first of this pair
+x, where x is 4, comma, a hole.
+
+1145
+01:18:57,200 --> 01:19:00,400
+Well, we can compute
+the 10+20 and get 30 just fine.
+
+1146
+01:19:00,400 --> 01:19:02,280
+And then we can also take
+the first of this pair,
+
+1147
+01:19:02,280 --> 01:19:04,240
+which we know is going to
+be the concrete value four.
+
+1148
+01:19:04,240 --> 01:19:07,640
+So we can get normal output 34.
+
+1149
+01:19:07,640 --> 01:19:09,800
+Notationally, we would say that
+in the empty environment,
+
+1150
+01:19:09,880 --> 01:19:12,720
+e evaluates to 34.
+
+1151
+01:19:12,720 --> 01:19:15,600
+But what if we change
+the first of x to second of x.
+
+1152
+01:19:15,600 --> 01:19:18,240
+We can complete the 10+20
+just fine as before,
+
+1153
+01:19:18,240 --> 01:19:21,160
+but now second of x is
+going to give us a hole.
+
+1154
+01:19:21,160 --> 01:19:22,840
+In traditional programming systems,
+
+1155
+01:19:22,840 --> 01:19:24,040
+this would either
+result in an exception
+
+1156
+01:19:24,040 --> 01:19:26,160
+or a crash or some sort
+of meaningless output.
+
+1157
+01:19:26,160 --> 01:19:27,840
+But the key instead
+of live evaluation
+
+1158
+01:19:27,840 --> 01:19:30,560
+is that we can actually just
+evaluate around this hole.
+
+1159
+01:19:30,560 --> 01:19:32,200
+So, because we have
+a hole in our input,
+
+1160
+01:19:32,200 --> 01:19:33,720
+we get a hole in our output.
+
+1161
+01:19:33,720 --> 01:19:35,920
+And we get 30 plus hole zero.
+
+1162
+01:19:35,920 --> 01:19:38,200
+Note that we also keep
+track of the environment
+
+1163
+01:19:38,200 --> 01:19:40,640
+around the hole at
+the time of evaluation
+
+1164
+01:19:40,640 --> 01:19:43,360
+because that's gonna be really
+useful for synthesis later.
+
+1165
+01:19:43,360 --> 01:19:45,440
+Notationally, we would say that
+in the empty environment,
+
+1166
+01:19:45,440 --> 01:19:49,800
+e live evaluates to 30 plus hole
+zero with that environment.
+
+1167
+01:19:49,800 --> 01:19:51,760
+So that's how we can run
+these program sketches.
+
+1168
+01:19:51,760 --> 01:19:53,720
+But now how do we check
+these programs sketches
+
+1169
+01:19:53,720 --> 01:19:56,840
+against the arbitrary assertions
+that we might have on them?
+
+1170
+01:19:56,840 --> 01:19:59,240
+Our answer to that is
+a novel mechanism
+
+1171
+01:19:59,240 --> 01:20:01,960
+that we call live unevaluation.
+
+1172
+01:20:01,960 --> 01:20:05,640
+Let's take a look at how
+live unevaluation works.
+
+1173
+01:20:05,640 --> 01:20:07,840
+Let's say we are given
+the same program before, e,
+
+1174
+01:20:07,920 --> 01:20:11,680
+and evaluates to 30 plus that
+whole closure hole zero.
+
+1175
+01:20:11,680 --> 01:20:15,000
+Well, if we want the entire
+program to be equal to 100,
+
+1176
+01:20:15,000 --> 01:20:17,040
+then we can actually transform
+this global constraint
+
+1177
+01:20:17,040 --> 01:20:19,880
+from an assertion onto
+a local constraint on the hole.
+
+1178
+01:20:19,880 --> 01:20:22,800
+Namely, that hole
+zero needs to be 70.
+
+1179
+01:20:22,800 --> 01:20:24,680
+As a slightly more
+complicated example,
+
+1180
+01:20:24,680 --> 01:20:26,200
+let's say we have
+a program e that evaluates
+
+1181
+01:20:26,200 --> 01:20:28,240
+the first of some hole or one.
+
+1182
+01:20:28,240 --> 01:20:31,000
+And we want the entire
+program to evaluate to eight.
+
+1183
+01:20:31,000 --> 01:20:32,960
+You can transform this
+global constraint
+
+1184
+01:20:32,960 --> 01:20:34,680
+onto a local constraint on the hole,
+
+1185
+01:20:34,680 --> 01:20:38,440
+namely, that hole one
+needs to be the pair eight, comma,
+
+1186
+01:20:38,480 --> 01:20:41,880
+top, where top is anything at all.
+
+1187
+01:20:41,880 --> 01:20:44,560
+Finally, let's take a look at
+our max program from before.
+
+1188
+01:20:44,560 --> 01:20:46,240
+If we want to assert
+that max of (1,2)
+
+1189
+01:20:46,240 --> 01:20:48,360
+needs to be two with
+this program sketch,
+
+1190
+01:20:48,360 --> 01:20:50,520
+we can actually live evaluate it.
+
+1191
+01:20:50,520 --> 01:20:52,000
+So in the empty environment,
+
+1192
+01:20:52,000 --> 01:20:55,360
+we say that max (1,2)
+live evaluates to (4,2)
+
+1193
+01:20:55,360 --> 01:20:58,720
+with the environment
+n=1, m=2 and n'=0.
+
+1194
+01:20:58,720 --> 01:21:02,720
+We live unevaluate
+the two onto this expression.
+
+1195
+01:21:02,720 --> 01:21:04,440
+And we get the whole
+constraint that hole two
+
+1196
+01:21:04,440 --> 01:21:07,840
+needs to be two in that environment
+that I mentioned earlier.
+
+1197
+01:21:07,840 --> 01:21:09,920
+So that's how live
+unevaluation works.
+
+1198
+01:21:09,920 --> 01:21:13,400
+Plus satisfaction in Smyth
+will look like live evaluation
+
+1199
+01:21:13,400 --> 01:21:15,560
+followed by live unevaluation.
+
+1200
+01:21:15,560 --> 01:21:17,080
+And it's a combination
+of these two concepts
+
+1201
+01:21:17,080 --> 01:21:20,560
+that we call live
+bidirectional evaluation.
+
+1202
+01:21:20,560 --> 01:21:22,280
+But as a satisfaction mechanism,
+
+1203
+01:21:22,280 --> 01:21:24,400
+live bidirectional evaluation
+actually introduces
+
+1204
+01:21:24,400 --> 01:21:27,160
+these new constraints x over
+here on the right hand side.
+
+1205
+01:21:27,160 --> 01:21:28,720
+So let's take a look,
+at a high level,
+
+1206
+01:21:28,720 --> 01:21:32,480
+how this will fit into
+the program synthesis loop.
+
+1207
+01:21:32,480 --> 01:21:35,880
+In Smyth, we're gonna start
+with Myth as a blackbox.
+
+1208
+01:21:35,880 --> 01:21:37,920
+Then, when the user
+provides a sketch,
+
+1209
+01:21:37,920 --> 01:21:40,640
+we can live evaluate
+it and get a result.
+
+1210
+01:21:40,640 --> 01:21:43,120
+We'll also collect these programming
+samples from the assertion
+
+1211
+01:21:43,120 --> 01:21:46,080
+and live unevaluate them onto
+the result that we get.
+
+1212
+01:21:46,080 --> 01:21:48,760
+This process, which we call
+live bidirectional evaluation,
+
+1213
+01:21:48,760 --> 01:21:51,360
+will result on constraints
+on individual holes
+
+1214
+01:21:51,360 --> 01:21:53,640
+that we can plug directly into Myth.
+
+1215
+01:21:53,640 --> 01:21:56,640
+Then if we augment Myth
+with some additional rules
+
+1216
+01:21:56,640 --> 01:21:59,440
+to handle the partial solutions
+that we're looking for,
+
+1217
+01:21:59,440 --> 01:22:01,600
+we can actually get
+a partial solution from Myth
+
+1218
+01:22:01,600 --> 01:22:03,680
+and some new program examples.
+
+1219
+01:22:03,680 --> 01:22:08,040
+Then we can iterate this process
+until we arrive at a full solution.
+
+1220
+01:22:08,040 --> 01:22:09,720
+So if we look back at our goals,
+
+1221
+01:22:09,720 --> 01:22:11,640
+we can see that live
+bidirectional evaluation
+
+1222
+01:22:11,640 --> 01:22:13,760
+enables us to add
+support for sketching.
+
+1223
+01:22:13,760 --> 01:22:15,840
+What about this
+trace-completeness requirement?
+
+1224
+01:22:15,840 --> 01:22:18,240
+Well, it turns out that live
+bidirectional evaluation
+
+1225
+01:22:18,240 --> 01:22:20,120
+also solves this problem.
+
+1226
+01:22:20,120 --> 01:22:23,000
+To see how, let's take a closer
+look at trace-completeness.
+
+1227
+01:22:23,000 --> 01:22:25,040
+Let's say we want to
+specify the function length
+
+1228
+01:22:25,040 --> 01:22:27,400
+using these two
+non-trace-complete examples
+
+1229
+01:22:27,400 --> 01:22:29,160
+as well as a blank sketch.
+
+1230
+01:22:29,160 --> 01:22:31,720
+The first step would be to live
+unevaluate these assertions
+
+1231
+01:22:31,720 --> 01:22:33,360
+and get the two hole
+constraints that
+
+1232
+01:22:33,360 --> 01:22:35,880
+when x is the empty list,
+well, zero needs to be zero.
+
+1233
+01:22:35,880 --> 01:22:39,760
+And when x is (1,5,6,1),
+well, zero needs to be four.
+
+1234
+01:22:39,760 --> 01:22:41,320
+Because Smyth is not going to find
+
+1235
+01:22:41,320 --> 01:22:44,160
+a non-branching expression
+to satisfy this hole,
+
+1236
+01:22:44,160 --> 01:22:48,160
+it's going to introduce a case
+expression that splits on x's.
+
+1237
+01:22:48,160 --> 01:22:50,640
+Now, we live unevaluate
+these assertions again
+
+1238
+01:22:50,640 --> 01:22:52,600
+and get two new hole constraints.
+
+1239
+01:22:52,600 --> 01:22:56,120
+Namely, that when x is the empty
+list, well, one needs to be zero.
+
+1240
+01:22:56,120 --> 01:23:00,240
+And when tail is (5,6,1), among
+other things in the environment,
+
+1241
+01:23:00,240 --> 01:23:02,400
+well, two needs to be four.
+
+1242
+01:23:02,400 --> 01:23:03,920
+Now this first hole
+constraint is very easy
+
+1243
+01:23:03,920 --> 01:23:05,200
+for Smyth to solve.
+
+1244
+01:23:05,200 --> 01:23:08,040
+It can simply bind hole one
+to be the constant zero.
+
+1245
+01:23:08,040 --> 01:23:09,480
+That will take care of
+this first constraint,
+
+1246
+01:23:09,480 --> 01:23:11,800
+so we no longer need
+to worry about it.
+
+1247
+01:23:11,800 --> 01:23:14,080
+The second constraint could
+be handled similarly,
+
+1248
+01:23:14,080 --> 01:23:17,200
+but Smith avoids over specializing
+on large constants like four
+
+1249
+01:23:17,200 --> 01:23:18,920
+because they don't generalize well.
+
+1250
+01:23:18,920 --> 01:23:21,680
+So, instead, it might try to
+synthesize the expression
+
+1251
+01:23:21,680 --> 01:23:23,320
+one plus length tail.
+
+1252
+01:23:23,320 --> 01:23:25,000
+Well, we run into a dilemma here.
+
+1253
+01:23:25,000 --> 01:23:27,040
+How can we be calling length on tail
+
+1254
+01:23:27,040 --> 01:23:28,640
+when we don't even
+know what length is?
+
+1255
+01:23:28,640 --> 01:23:30,320
+Because that's the function that
+we're trying to synthesize
+
+1256
+01:23:30,400 --> 01:23:31,640
+in the first place.
+
+1257
+01:23:31,640 --> 01:23:33,120
+Here's where traditional
+program synthesizers
+
+1258
+01:23:33,120 --> 01:23:35,280
+could leverage
+the trace-completeness requirement.
+
+1259
+01:23:35,280 --> 01:23:36,800
+If we were guaranteed
+to have the example
+
+1260
+01:23:36,800 --> 01:23:38,840
+that when x is equal to (5,6,1),
+
+1261
+01:23:38,840 --> 01:23:40,800
+length of x is going to be three.
+
+1262
+01:23:40,800 --> 01:23:42,960
+And we could simply slot in
+three for length of tail
+
+1263
+01:23:42,960 --> 01:23:45,280
+and see that 1+3 is going
+to satisfy our requirement
+
+1264
+01:23:45,280 --> 01:23:47,600
+that hole two needs
+to be equal to four.
+
+1265
+01:23:47,600 --> 01:23:49,240
+But we don't have that example.
+
+1266
+01:23:49,240 --> 01:23:51,240
+So instead, the key
+insight is to realize
+
+1267
+01:23:51,240 --> 01:23:54,520
+that we actually do have
+a definition for length of x's.
+
+1268
+01:23:54,520 --> 01:23:57,560
+Length of x's is going to
+be equal to hole zero.
+
+1269
+01:23:57,560 --> 01:23:58,560
+In our partial solution,
+
+1270
+01:23:58,560 --> 01:23:59,840
+we see that hole zero is
+going to be equal to
+
+1271
+01:23:59,880 --> 01:24:01,120
+this case expression right here,
+
+1272
+01:24:01,120 --> 01:24:03,640
+which depends on hole
+one and hole two.
+
+1273
+01:24:03,640 --> 01:24:06,680
+But nonetheless, we can run
+live bidirectional evaluation
+
+1274
+01:24:06,680 --> 01:24:09,000
+from before as usual
+on these programs,
+
+1275
+01:24:09,000 --> 01:24:10,800
+because they're just
+normal sketches.
+
+1276
+01:24:10,800 --> 01:24:12,480
+Doing so will result
+in a new set of
+
+1277
+01:24:12,480 --> 01:24:14,600
+live unevaluation problems
+that we can just perform
+
+1278
+01:24:14,600 --> 01:24:16,240
+to get a set of new constraints.
+
+1279
+01:24:16,240 --> 01:24:18,240
+And it turns out that this
+program that we synthesized
+
+1280
+01:24:18,240 --> 01:24:20,680
+actually satisfies all these
+generated constraints,
+
+1281
+01:24:20,680 --> 01:24:24,640
+as well as our original constraint
+that hole two needs to be four.
+
+1282
+01:24:24,640 --> 01:24:26,520
+Therefore, all of our constraints
+have been taken care of,
+
+1283
+01:24:26,520 --> 01:24:29,040
+so we have a full
+solution for length.
+
+1284
+01:24:29,040 --> 01:24:30,960
+So, that's how live
+bidirectional evaluation
+
+1285
+01:24:30,960 --> 01:24:34,760
+can also take care of
+the trace-completeness requirement for Myth.
+
+1286
+01:24:34,760 --> 01:24:36,800
+So, to wrap up, let's talk
+about some of the experiments
+
+1287
+01:24:36,800 --> 01:24:38,440
+that we run to evaluate Smyth.
+
+1288
+01:24:38,440 --> 01:24:40,520
+Here, I'll be talking about
+four experiments that we run
+
+1289
+01:24:40,520 --> 01:24:42,800
+based on the Myth benchmark suite.
+
+1290
+01:24:42,800 --> 01:24:43,920
+In the first experiment,
+
+1291
+01:24:43,920 --> 01:24:46,360
+we took the trace-complete examples
+from the Myth benchmark suite
+
+1292
+01:24:46,360 --> 01:24:48,520
+to specified various functions
+
+1293
+01:24:48,520 --> 01:24:51,400
+and provided no additional
+sketching information to Smyth.
+
+1294
+01:24:51,400 --> 01:24:53,760
+With this information, we
+could successfully synthesize
+
+1295
+01:24:53,760 --> 01:24:57,280
+38 out of the 43 benchmarks
+from the Myth benchmark suite.
+
+1296
+01:24:57,280 --> 01:24:58,880
+In the paper, we talk
+about some hypotheses
+
+1297
+01:24:58,880 --> 01:25:01,440
+why we couldn't get
+that number up to 43.
+
+1298
+01:25:01,440 --> 01:25:02,600
+In our second experiment,
+
+1299
+01:25:02,600 --> 01:25:03,880
+we took these
+trace-complete examples,
+
+1300
+01:25:03,880 --> 01:25:05,560
+but we removed as many as we could
+
+1301
+01:25:05,560 --> 01:25:08,680
+while still having Smyth
+synthesize a correct solution.
+
+1302
+01:25:08,680 --> 01:25:10,680
+We found that with these
+non-trace-complete examples,
+
+1303
+01:25:10,680 --> 01:25:12,800
+we could achieve a 61%
+specification size
+
+1304
+01:25:12,800 --> 01:25:15,640
+in Smyth as compared to Myth.
+
+1305
+01:25:15,640 --> 01:25:18,080
+In our third experiment, we took
+just the recursive functions
+
+1306
+01:25:18,080 --> 01:25:19,760
+from the 38 that we could synthesize
+
+1307
+01:25:19,760 --> 01:25:22,520
+and provided a sketch of
+the base case Smyth.
+
+1308
+01:25:22,520 --> 01:25:25,200
+Then, like in experiment two, we
+took the trace-complete examples
+
+1309
+01:25:25,200 --> 01:25:27,760
+from experiment one, and paired
+them down to a minimal subset
+
+1310
+01:25:27,760 --> 01:25:30,720
+that Smyth needed to be able to
+synthesize the function correctly.
+
+1311
+01:25:30,720 --> 01:25:32,520
+Including the sketch
+of the base case,
+
+1312
+01:25:32,520 --> 01:25:35,880
+we found that we needed approximately
+a 46% specification size
+
+1313
+01:25:35,880 --> 01:25:38,360
+as compared to Myth.
+
+1314
+01:25:38,360 --> 01:25:40,960
+In our fourth experiment, we
+ran experiments two and three
+
+1315
+01:25:40,960 --> 01:25:44,320
+in the popular logic-based
+synthesizers, Leon and Synquid.
+
+1316
+01:25:44,320 --> 01:25:46,160
+It's commonly said that
+logic-based synthesizers
+
+1317
+01:25:46,160 --> 01:25:48,880
+are strictly superior to
+example-based synthesizers
+
+1318
+01:25:48,880 --> 01:25:50,880
+because you can simply
+encode examples and logic
+
+1319
+01:25:50,880 --> 01:25:52,840
+as a conjunction of implications.
+
+1320
+01:25:52,840 --> 01:25:54,640
+Well, there is some
+truth to that sentiment.
+
+1321
+01:25:54,640 --> 01:25:56,680
+It's also true that many
+logic-based synthesizers
+
+1322
+01:25:56,680 --> 01:25:59,360
+are not well equipped to handle
+that kind of specification.
+
+1323
+01:25:59,360 --> 01:26:02,360
+And in fact, this experiment showed
+that while there are many tasks
+
+1324
+01:26:02,360 --> 01:26:04,680
+on which Leon and Synquid
+performed quite well,
+
+1325
+01:26:04,680 --> 01:26:06,760
+there are also many tasks
+on which they did not,
+
+1326
+01:26:06,760 --> 01:26:09,840
+particularly relating to
+non-trace-complete examples.
+
+1327
+01:26:09,840 --> 01:26:11,680
+We hypothesize that
+combining the insights
+
+1328
+01:26:11,680 --> 01:26:14,720
+of live bidirectional evaluation
+with logic-based program synthesis
+
+1329
+01:26:14,720 --> 01:26:17,080
+could result in a system that
+has the power to specify
+
+1330
+01:26:17,080 --> 01:26:18,880
+complex data structure and variance,
+
+1331
+01:26:18,880 --> 01:26:21,200
+while also having the ease of
+use of not having to specify
+
+1332
+01:26:21,200 --> 01:26:23,400
+trace-complete examples.
+
+1333
+01:26:23,400 --> 01:26:25,440
+The last thing that I'd like to
+say is that these four experiments
+
+1334
+01:26:25,440 --> 01:26:27,120
+are a measure of expressivity.
+
+1335
+01:26:27,120 --> 01:26:30,000
+But we also ran experiments that
+tested the robustness of Smyth.
+
+1336
+01:26:30,000 --> 01:26:32,280
+And these are described
+more in the paper.
+
+1337
+01:26:32,280 --> 01:26:35,000
+So that's Smyth, an example-based
+program synthesizer
+
+1338
+01:26:35,000 --> 01:26:38,400
+with support for sketching and no
+trace-completeness requirement.
+
+1339
+01:26:38,400 --> 01:26:40,160
+Here's an overview of what
+the system looks like.
+
+1340
+01:26:40,160 --> 01:26:42,320
+And here's a link to where
+you can find it on GitHub.
+
+1341
+01:26:42,320 --> 01:26:45,680
+You can also find me
+@jplubin on Twitter.
+
+1342
+01:26:45,680 --> 01:26:48,760
+I'd like to give a huge thanks to
+my collaborators Nick Collins,
+
+1343
+01:26:48,760 --> 01:26:51,840
+Cyrus Omar and Ravi Chugh for
+helping me with this project,
+
+1344
+01:26:51,840 --> 01:26:54,040
+as well as the ICFP
+organizers and volunteers
+
+1345
+01:26:54,040 --> 01:26:56,200
+for making this conference possible.
+
+1346
+01:26:56,200 --> 01:26:57,760
+Lastly, I'd like to give
+a shout out to an event
+
+1347
+01:26:57,760 --> 01:27:02,520
+that I'm helping organize
+ICFP,  #ShutdownPL@ICFP.
+
+1348
+01:27:02,520 --> 01:27:05,920
+There will be an anti-racism event
+occurring on Thursday, August 27,
+
+1349
+01:27:05,920 --> 01:27:08,120
+from 2pm to 6pm Eastern time.
+
+1350
+01:27:08,120 --> 01:27:12,400
+I hope to see you there.
+And thanks for watching.
+
+1351
+01:27:12,400 --> 01:27:17,400
+(AUDIENCE APPLAUDS)
+
+1352
+01:27:20,000 --> 01:27:21,240
+SUKYOUNG: Thank you, Justin.
+
+1353
+01:27:21,240 --> 01:27:24,760
+And thanks (INAUDIBLE) for organizing
+the anti-racism event,
+
+1354
+01:27:24,760 --> 01:27:28,400
+#ShutdownPL@ICFP.
+
+1355
+01:27:28,400 --> 01:27:30,320
+If you are watching this talk live,
+
+1356
+01:27:30,320 --> 01:27:33,000
+please don't forget
+about a Q&A session
+
+1357
+01:27:33,000 --> 01:27:39,680
+that may be available
+in your time band.
+
+1358
+01:28:00,920 --> 01:28:03,240
+Our next talk is entitled
+
+1359
+01:28:03,240 --> 01:28:06,960
+Elaboration with First-Class
+Implicit Function Types.
+
+1360
+01:28:06,960 --> 01:28:11,560
+Andras Kovacs will be
+presenting the talk.
+
+1361
+01:28:11,560 --> 01:28:13,440
+ANDRAS KOVACS: Hello everyone,
+this is Andras Kovacs.
+
+1362
+01:28:13,440 --> 01:28:14,440
+And I will talk about
+
+1363
+01:28:14,440 --> 01:28:17,760
+elaboration with first-class
+implicit function types.
+
+1364
+01:28:17,760 --> 01:28:20,680
+In this talk, I will only give
+a rough overview of the paper.
+
+1365
+01:28:20,680 --> 01:28:23,320
+And you can look at
+the paper for details.
+
+1366
+01:28:23,320 --> 01:28:25,760
+Let's explain the title
+of the talk a bit.
+
+1367
+01:28:25,760 --> 01:28:27,640
+First, what is elaboration?
+
+1368
+01:28:27,640 --> 01:28:30,920
+It is a translation from
+surface syntax to core syntax.
+
+1369
+01:28:30,920 --> 01:28:33,720
+Surface syntax is a parsed
+representation of what programmers
+
+1370
+01:28:33,720 --> 01:28:35,560
+actually see in a source file.
+
+1371
+01:28:35,560 --> 01:28:38,320
+It is usually compact
+and convenient to read and write,
+
+1372
+01:28:38,400 --> 01:28:39,400
+but omits a lot of
+typing information.
+
+1373
+01:28:40,080 --> 01:28:42,240
+and it is not
+necessarily (INAUDIBLE)
+
+1374
+01:28:42,760 --> 01:28:45,520
+the core syntax is used
+internally by the compiler.
+
+1375
+01:28:45,520 --> 01:28:47,880
+It is simple (INAUDIBLE)
+
+1376
+01:28:47,880 --> 01:28:48,920
+and explicitly annotated
+
+1377
+01:28:48,920 --> 01:28:52,080
+but it is much more (INAUDIBLE)
+into surface syntax.
+
+1378
+01:28:52,800 --> 01:28:55,200
+Elaboration can include
+inference, desugaring,
+
+1379
+01:28:55,200 --> 01:28:57,120
+instance resolution and other things
+
+1380
+01:28:57,600 --> 01:28:59,520
+but this talk mostly
+focuses on inference.
+
+1381
+01:29:00,000 --> 01:29:01,600
+in certain independent types
+
+1382
+01:29:01,600 --> 01:29:04,400
+people often use the term elaboration
+instead of type inference.
+
+1383
+01:29:05,120 --> 01:29:07,400
+Because inference necessarily
+involves term inferences
+
+1384
+01:29:07,400 --> 01:29:09,920
+while the type inference
+is a bit too specific.
+
+1385
+01:29:10,440 --> 01:29:12,080
+Second, what are implicit functions?
+
+1386
+01:29:12,600 --> 01:29:15,240
+These are functions such that
+arguments are given by inference
+
+1387
+01:29:15,240 --> 01:29:17,000
+by default and not
+by the programmer.
+
+1388
+01:29:17,760 --> 01:29:19,800
+IN GHC Haskell forall
+types are an example.
+
+1389
+01:29:20,800 --> 01:29:22,760
+These are functions
+abstracting over types
+
+1390
+01:29:23,240 --> 01:29:24,800
+or other types that are data.
+
+1391
+01:29:25,040 --> 01:29:28,800
+The arguments for Forall abstraction
+are inferred by default as here
+
+1392
+01:29:29,560 --> 01:29:31,440
+but you can all see these
+visible type application
+
+1393
+01:29:31,440 --> 01:29:34,120
+to fall back to explicit
+arguments as here.
+
+1394
+01:29:34,640 --> 01:29:37,480
+In GHC type level abstraction
+in all this implicit
+
+1395
+01:29:37,480 --> 01:29:39,640
+and value other functions
+are all these explicit.
+
+1396
+01:29:40,360 --> 01:29:42,840
+But this restriction
+is specific to GHC
+
+1397
+01:29:42,840 --> 01:29:44,480
+and it is not something fundamental.
+
+1398
+01:29:45,720 --> 01:29:48,760
+In Agda, (INAUDIBLE) having
+implicit functions types
+
+1399
+01:29:48,760 --> 01:29:51,080
+but you are free to make any
+function implicit or explicit
+
+1400
+01:29:51,080 --> 01:29:53,840
+and type abstraction is
+just a special case
+
+1401
+01:29:53,840 --> 01:29:55,440
+of general independent functions.
+
+1402
+01:29:56,440 --> 01:29:59,920
+Both in GHC and Agda, implicit
+function types control elaboration
+
+1403
+01:29:59,920 --> 01:30:02,240
+by signalling varying
+input applications
+
+1404
+01:30:02,240 --> 01:30:03,480
+should be inserted.
+
+1405
+01:30:04,000 --> 01:30:06,920
+After elaboration, implicit functions
+are not that important any more
+
+1406
+01:30:06,920 --> 01:30:10,080
+because everything is fully
+explicit in the core syntax.
+
+1407
+01:30:11,040 --> 01:30:13,840
+Implicit function types are
+first class if they can be used
+
+1408
+01:30:13,840 --> 01:30:15,520
+as (INAUDIBLE) as any other type.
+
+1409
+01:30:15,520 --> 01:30:18,080
+In GHC with RankNTypes
+in enabled
+
+1410
+01:30:18,080 --> 01:30:20,560
+we can use an implicit function
+as a function argument type
+
+1411
+01:30:21,040 --> 01:30:23,880
+and in this case type inference
+also goes fairly well.
+
+1412
+01:30:24,400 --> 01:30:26,480
+But what if you want to
+use implicit function
+
+1413
+01:30:26,480 --> 01:30:28,480
+in some other (INAUDIBLE) data type?
+
+1414
+01:30:28,480 --> 01:30:31,200
+Such as Maybe as in this
+particular example.
+
+1415
+01:30:32,480 --> 01:30:35,000
+This is not really
+possible in current GHC.
+
+1416
+01:30:35,280 --> 01:30:37,760
+There is a language extension
+called inpredicative times
+
+1417
+01:30:37,760 --> 01:30:40,080
+which technically allows
+writing down this type
+
+1418
+01:30:40,080 --> 01:30:42,880
+that is deprecated and doesn't
+let you work in practice.
+
+1419
+01:30:43,640 --> 01:30:46,800
+There is another talk at
+the current ICF which introduces a new
+
+1420
+01:30:46,800 --> 01:30:50,040
+and practical usable implementation
+of this language extension.
+
+1421
+01:30:50,800 --> 01:30:53,080
+As a side note, users
+of lens libraries
+
+1422
+01:30:53,080 --> 01:30:55,640
+may be familiar with
+the examples on this slide.
+
+1423
+01:30:56,160 --> 01:30:57,640
+Lenses are polymorphic functions
+
+1424
+01:30:57,640 --> 01:30:59,680
+so they can be used in
+high order functions
+
+1425
+01:30:59,680 --> 01:31:01,760
+but if you want to store
+them in data structures
+
+1426
+01:31:01,760 --> 01:31:04,080
+then you have to use some
+new type records
+
+1427
+01:31:04,840 --> 01:31:06,160
+What happens in Agda.
+
+1428
+01:31:06,240 --> 01:31:08,640
+Here we can use implicit
+functions times any variance
+
+1429
+01:31:08,640 --> 01:31:10,400
+so this type signature
+is completely fine.
+
+1430
+01:31:11,400 --> 01:31:13,520
+However elaboration is not
+as smart as it could be
+
+1431
+01:31:13,520 --> 01:31:15,280
+and the next line
+does not elaborate.
+
+1432
+01:31:16,280 --> 01:31:18,800
+Here we have to write out
+an emphasis lambda abstraction
+
+1433
+01:31:18,800 --> 01:31:20,480
+in order to make Agda happy.
+
+1434
+01:31:20,960 --> 01:31:23,920
+The main contribution of this
+talk is a generous solution
+
+1435
+01:31:23,920 --> 01:31:26,720
+which triggers such insertions
+of implicit lambdas.
+
+1436
+01:31:27,720 --> 01:31:30,800
+At this point some people may know
+that the previous Agda example
+
+1437
+01:31:30,800 --> 01:31:33,560
+is an instance of something
+called impredicative inference.
+
+1438
+01:31:34,080 --> 01:31:36,000
+Or impredicative polymorphism
+
+1439
+01:31:36,000 --> 01:31:38,680
+which is a topic in divider
+field of type inference.
+
+1440
+01:31:39,400 --> 01:31:42,200
+In the main point of this work
+is to provide a solution for
+
+1441
+01:31:42,200 --> 01:31:43,480
+impredicative inference.
+
+1442
+01:31:44,240 --> 01:31:48,040
+However impredicativity means
+mostly orthogonal things
+
+1443
+01:31:48,040 --> 01:31:50,080
+in the type theory and in
+the type inference literature.
+
+1444
+01:31:50,560 --> 01:31:53,960
+You can look at the paper for how
+exactly the two notions differ.
+
+1445
+01:31:54,480 --> 01:31:57,160
+I personally prefer to use
+the term impredicative
+
+1446
+01:31:57,160 --> 01:31:59,120
+in the technical type
+theoretic sense
+
+1447
+01:31:59,120 --> 01:32:01,680
+and talk instead about
+implicit functions
+
+1448
+01:32:01,680 --> 01:32:03,480
+in the context of type inference.
+
+1449
+01:32:04,240 --> 01:32:07,160
+With that said, to summarise
+the contributions of the current work
+
+1450
+01:32:07,160 --> 01:32:09,240
+we have an elaboration algorithm
+
+1451
+01:32:10,240 --> 01:32:13,360
+which supports strong inference for
+first class implicit function types
+
+1452
+01:32:13,360 --> 01:32:15,000
+or impredicative inference
+
+1453
+01:32:15,520 --> 01:32:19,840
+and it also supports dependent
+types and global inference
+
+1454
+01:32:19,840 --> 01:32:22,520
+which means that
+the whole module of program
+
+1455
+01:32:22,560 --> 01:32:24,240
+can be considered in inference
+
+1456
+01:32:24,240 --> 01:32:26,480
+and not just a particular
+function applications
+
+1457
+01:32:26,480 --> 01:32:27,840
+as in some previous works.
+
+1458
+01:32:28,600 --> 01:32:30,160
+The algorithm is also efficient
+
+1459
+01:32:30,160 --> 01:32:32,400
+it uses no backtracking or iteration
+
+1460
+01:32:32,400 --> 01:32:35,920
+and it actually traverses
+the pre-syntax exactly once.
+
+1461
+01:32:36,640 --> 01:32:39,080
+And lastly the algorithm
+is the modest extension
+
+1462
+01:32:39,080 --> 01:32:42,240
+of bidirectional elaboration
+as implemented in Agda.
+
+1463
+01:32:43,000 --> 01:32:46,480
+Since the paper algorithm is
+the extension of bidirectional elaboration
+
+1464
+01:32:46,960 --> 01:32:49,960
+first we shall briefly talk about it
+and then look at the short comings
+
+1465
+01:32:49,960 --> 01:32:52,440
+with respect to handling first
+class implicit functions
+
+1466
+01:32:52,440 --> 01:32:55,320
+and finally look at the solution
+presented in the paper.
+
+1467
+01:32:55,800 --> 01:32:58,640
+Bidirectional elaboration
+consists of two functions
+
+1468
+01:32:58,640 --> 01:33:01,080
+defined by (INAUDIBLE)
+recursions and surface syntax
+
+1469
+01:33:01,560 --> 01:33:04,160
+Let us assume a service expression T
+
+1470
+01:33:04,160 --> 01:33:05,240
+and a core context gamma.
+
+1471
+01:33:05,760 --> 01:33:08,800
+The purpose of elaboration
+is to create something
+
+1472
+01:33:08,800 --> 01:33:11,040
+in the core syntax from
+the service expression.
+
+1473
+01:33:11,560 --> 01:33:15,680
+First we have the info function
+which takes as input a core context
+
+1474
+01:33:16,160 --> 01:33:20,600
+and a surface expression
+and return a core expression together
+
+1475
+01:33:20,600 --> 01:33:21,600
+with this core type.
+
+1476
+01:33:21,840 --> 01:33:25,080
+the check function addition takes
+an input an expected core type
+
+1477
+01:33:25,080 --> 01:33:27,800
+and returns a core
+term with that type.
+
+1478
+01:33:28,320 --> 01:33:30,800
+And the expected type of
+the expression is already known,
+
+1479
+01:33:30,800 --> 01:33:33,880
+we use a check function,
+otherwise we use infer.
+
+1480
+01:33:34,400 --> 01:33:36,720
+This is similar to
+bidirectional type checking
+
+1481
+01:33:36,720 --> 01:33:39,040
+but here each function
+also returns a quarter.
+
+1482
+01:33:40,280 --> 01:33:43,120
+Let's look at the short
+example of how checking works.
+
+1483
+01:33:43,880 --> 01:33:46,280
+We use an informal
+(INAUDIBLE) notation
+
+1484
+01:33:46,280 --> 01:33:48,840
+as we have as side effect
+possibility of failure
+
+1485
+01:33:49,360 --> 01:33:52,880
+and we also carry around a state
+context of meta variables.
+
+1486
+01:33:53,400 --> 01:33:56,480
+Here we are checking a lambda
+expression with the function type.
+
+1487
+01:33:56,480 --> 01:33:59,360
+So what we do is to expand
+the context with the variable
+
+1488
+01:33:59,600 --> 01:34:02,800
+and check the function body
+(INAUDIBLE) mean type.
+
+1489
+01:34:03,320 --> 01:34:05,920
+After this return of our
+first lambda expression.
+
+1490
+01:34:06,680 --> 01:34:10,400
+In general the check function tries
+to push types inside constructors
+
+1491
+01:34:10,640 --> 01:34:13,600
+which is beneficial for
+performance elaboration
+
+1492
+01:34:13,600 --> 01:34:15,680
+and also for the locality
+of error messages.
+
+1493
+01:34:16,160 --> 01:34:19,000
+In the paper the only change
+the elaborator can make
+
+1494
+01:34:19,000 --> 01:34:20,600
+on the input surface syntax
+
+1495
+01:34:20,600 --> 01:34:23,000
+is that it can insert
+implicit lambdas
+
+1496
+01:34:23,000 --> 01:34:24,360
+and implicit applications.
+
+1497
+01:34:24,840 --> 01:34:26,120
+As we will shortly see,
+
+1498
+01:34:26,120 --> 01:34:29,800
+this implicit insertion relies
+crucially on the bidirectional style.
+
+1499
+01:34:30,320 --> 01:34:32,840
+We want to look at the exact
+rules of the elaborations here
+
+1500
+01:34:32,840 --> 01:34:34,720
+and then look at some examples.
+
+1501
+01:34:34,960 --> 01:34:37,880
+First let's look at an example
+for application insertion.
+
+1502
+01:34:38,360 --> 01:34:41,560
+Assume that we have the usual
+polymorphic identity function
+
+1503
+01:34:41,560 --> 01:34:45,440
+and we want to infer time for ID
+applying for the Boolean tree
+
+1504
+01:34:45,680 --> 01:34:48,160
+This expression is
+functional application.
+
+1505
+01:34:48,160 --> 01:34:52,000
+So first we are in for a type for
+the function involved which is ID.
+
+1506
+01:34:52,480 --> 01:34:55,880
+Then we noticed that infer type
+is an implicit function type.
+
+1507
+01:34:56,400 --> 01:34:58,600
+So we insert an implicit
+application here.
+
+1508
+01:34:59,360 --> 01:35:02,560
+First create a fresh meta
+variable named alpha,
+
+1509
+01:35:03,040 --> 01:35:06,720
+then we apply the new elaborated
+ID expression into it.
+
+1510
+01:35:07,440 --> 01:35:10,760
+In the following link, we will name
+meta variables using Greek letters.
+
+1511
+01:35:11,000 --> 01:35:13,520
+Now we have a function
+from alpha to alpha.
+
+1512
+01:35:14,000 --> 01:35:16,520
+This is good because we started
+elaborating an explicit
+
+1513
+01:35:16,600 --> 01:35:17,680
+function application
+
+1514
+01:35:17,680 --> 01:35:20,280
+and now we have an inferred
+explicit function type
+
+1515
+01:35:20,320 --> 01:35:22,280
+for of next sub
+term the application.
+
+1516
+01:35:23,280 --> 01:35:25,640
+What remains is to
+check the right subterm
+
+1517
+01:35:25,640 --> 01:35:27,040
+with the function domain type.
+
+1518
+01:35:27,800 --> 01:35:30,360
+Here we don't have any
+specific checking rule
+
+1519
+01:35:30,360 --> 01:35:33,320
+so we change from
+checking to inference
+
+1520
+01:35:33,320 --> 01:35:35,640
+and infer type bool for true.
+
+1521
+01:35:36,360 --> 01:35:40,440
+Then the unified expected
+other type inferred bool type.
+
+1522
+01:35:40,920 --> 01:35:44,360
+Now we can return the whole
+application as elaboration output
+
+1523
+01:35:44,360 --> 01:35:45,720
+together with the bool type.
+
+1524
+01:35:46,200 --> 01:35:49,400
+In general whether we have
+a bound or defined variable
+
+1525
+01:35:49,400 --> 01:35:51,240
+named with an implicit function type
+
+1526
+01:35:51,240 --> 01:35:53,520
+when we use the name
+implicit applications
+
+1527
+01:35:53,520 --> 01:35:55,560
+are inserted for
+the implicit arguments.
+
+1528
+01:35:56,080 --> 01:35:59,280
+Now let's look at an example for
+inserting an implicit lambda.
+
+1529
+01:35:59,800 --> 01:36:01,600
+We want to check this
+lambda expression
+
+1530
+01:36:01,600 --> 01:36:04,280
+with the usual polymorphic
+identity function type.
+
+1531
+01:36:04,760 --> 01:36:08,080
+First we noticed that expression
+is not an implicit lambda
+
+1532
+01:36:08,080 --> 01:36:09,760
+much rather an explicit lambda.
+
+1533
+01:36:10,520 --> 01:36:12,600
+So the expression as
+it is definitely
+
+1534
+01:36:12,600 --> 01:36:14,840
+does not have
+the expected checking type.
+
+1535
+01:36:15,600 --> 01:36:17,480
+However we can rub the expression
+
+1536
+01:36:17,480 --> 01:36:19,400
+in the newly inserted
+implicit lambda
+
+1537
+01:36:19,880 --> 01:36:21,440
+so that's what we are going to do.
+
+1538
+01:36:21,680 --> 01:36:24,040
+We assume the implicit argument
+in the typing context
+
+1539
+01:36:24,040 --> 01:36:27,440
+and check the expression with
+the code name of the checking type
+
+1540
+01:36:27,440 --> 01:36:29,760
+which happens to be
+an explicit function type here.
+
+1541
+01:36:30,280 --> 01:36:31,920
+Now the types march up
+
+1542
+01:36:31,920 --> 01:36:34,800
+so the checkings succeeds
+and return the expression
+
+1543
+01:36:35,320 --> 01:36:36,760
+with the inserted lambda.
+
+1544
+01:36:37,760 --> 01:36:39,520
+To summarize implicit insertion
+
+1545
+01:36:39,520 --> 01:36:41,640
+when we infer
+an implicit function type
+
+1546
+01:36:41,640 --> 01:36:44,080
+we may insert
+an implicit application
+
+1547
+01:36:44,080 --> 01:36:46,520
+and when we check with
+an implicit function type
+
+1548
+01:36:46,520 --> 01:36:48,280
+we may insert an implicit lambda.
+
+1549
+01:36:49,000 --> 01:36:51,040
+This has a nice symmetry
+and it performs
+
+1550
+01:36:51,040 --> 01:36:54,200
+in a fairly convenient
+and (INAUDIBLE) way in practice.
+
+1551
+01:36:54,960 --> 01:36:59,520
+Note that we don't always perform
+insertion in these two cases.
+
+1552
+01:37:00,040 --> 01:37:02,320
+For example when we
+check an implicit lambda
+
+1553
+01:37:02,360 --> 01:37:05,400
+with an implicit function type
+there is no need to do insertion.
+
+1554
+01:37:06,120 --> 01:37:08,800
+Again for the exact rules
+you can look at the paper.
+
+1555
+01:37:09,040 --> 01:37:10,960
+What can go wrong with the solution?
+
+1556
+01:37:10,960 --> 01:37:13,360
+Let's go back to
+the failing and the example.
+
+1557
+01:37:13,880 --> 01:37:16,320
+We also assume that
+we do not have rule
+
+1558
+01:37:16,360 --> 01:37:18,200
+for checking the constructor
+of the Maybe type.
+
+1559
+01:37:18,200 --> 01:37:20,400
+This is not necessarily
+always the case
+
+1560
+01:37:20,400 --> 01:37:22,720
+and actually the most
+recent version of Agda
+
+1561
+01:37:22,800 --> 01:37:24,280
+can handle this example fine
+
+1562
+01:37:24,280 --> 01:37:27,280
+but to stick from this example
+for the sake of simplicity.
+
+1563
+01:37:27,760 --> 01:37:29,880
+Because we don't have
+a checking rule for just
+
+1564
+01:37:29,880 --> 01:37:32,040
+the first infer type
+for this expression
+
+1565
+01:37:32,040 --> 01:37:35,280
+then you find an infer type
+with the given annotation.
+
+1566
+01:37:35,800 --> 01:37:39,680
+The just constructor is polymorphic
+so it has implicit type argument
+
+1567
+01:37:39,680 --> 01:37:42,720
+and they insert an application
+to a fresh matter variable.
+
+1568
+01:37:43,240 --> 01:37:46,600
+Next we have to check
+the lambda x expression
+
+1569
+01:37:46,600 --> 01:37:48,640
+with the (INAUDIBLE) alpha type.
+
+1570
+01:37:49,160 --> 01:37:50,760
+This is the key point of failure.
+
+1571
+01:37:50,760 --> 01:37:53,760
+The problem is that we cannot do
+lambda insertion at this point
+
+1572
+01:37:53,760 --> 01:37:55,560
+because the checking
+time is unknown.
+
+1573
+01:37:56,040 --> 01:37:59,160
+The only thing we can do is to
+infer an explicit function type
+
+1574
+01:37:59,160 --> 01:38:01,360
+for the lambda XX expression
+
+1575
+01:38:01,360 --> 01:38:04,480
+but to first unify
+the given type annotation.
+
+1576
+01:38:04,720 --> 01:38:07,680
+Likewise we have dual
+version of this problem.
+
+1577
+01:38:07,920 --> 01:38:11,800
+When the infer type is unknown we
+cannot do application insertion.
+
+1578
+01:38:12,320 --> 01:38:15,960
+The solution is to represent unknown
+insertions in the core theory.
+
+1579
+01:38:15,960 --> 01:38:18,600
+With meta variables, we
+already have the ability
+
+1580
+01:38:18,600 --> 01:38:20,080
+to represent unknown terms
+
+1581
+01:38:20,080 --> 01:38:23,120
+so we extend this to all
+cover unknown insertions.
+
+1582
+01:38:23,640 --> 01:38:26,120
+We had a strictly
+curried funtion type.
+
+1583
+01:38:26,120 --> 01:38:29,760
+This is a function type such that
+the domain is always a record time
+
+1584
+01:38:29,760 --> 01:38:31,680
+and curried codes by definition.
+
+1585
+01:38:32,160 --> 01:38:36,000
+Here we have an example of how curried
+computes for this function type.
+
+1586
+01:38:36,480 --> 01:38:39,560
+The type in the left side has
+an empty record type as domain
+
+1587
+01:38:40,040 --> 01:38:41,720
+we denote the record type as a rec
+
+1588
+01:38:41,720 --> 01:38:43,240
+followed by a list of types.
+
+1589
+01:38:43,760 --> 01:38:46,040
+Here the list is empty so we
+get the empty record type.
+
+1590
+01:38:46,560 --> 01:38:49,240
+This function type computes
+to just (INAUDIBLE)
+
+1591
+01:38:49,480 --> 01:38:51,480
+so the trivial function
+argument disappears.
+
+1592
+01:38:51,960 --> 01:38:55,480
+For another example, if the domain
+is record type with two fields
+
+1593
+01:38:55,480 --> 01:38:58,200
+the function type computes
+for a function type
+
+1594
+01:38:58,200 --> 01:38:59,880
+for two implicit arguments.
+
+1595
+01:38:59,880 --> 01:39:02,480
+In general a curried
+function type computes
+
+1596
+01:39:02,480 --> 01:39:04,400
+to an iterated implicit
+function type.
+
+1597
+01:39:04,400 --> 01:39:07,920
+The are also appropriate computation
+rules for term constructors
+
+1598
+01:39:07,920 --> 01:39:09,640
+which follow the rules for times.
+
+1599
+01:39:10,160 --> 01:39:13,240
+Now we can represent an unknown
+number of implicit arguments
+
+1600
+01:39:13,240 --> 01:39:15,560
+by putting the meta
+variables in the domain.
+
+1601
+01:39:16,080 --> 01:39:18,440
+We use this to improve
+on the elaboration.
+
+1602
+01:39:18,440 --> 01:39:22,040
+Previously, unknown types always
+prevented the implicit insertion.
+
+1603
+01:39:22,760 --> 01:39:23,760
+We change this as follows.
+
+1604
+01:39:24,120 --> 01:39:26,320
+We check with an unknown type
+
+1605
+01:39:26,320 --> 01:39:27,960
+we insert with an unknown
+number of lambdas
+
+1606
+01:39:28,040 --> 01:39:30,040
+using strictly curried
+function type.
+
+1607
+01:39:30,520 --> 01:39:33,040
+Concretely we enter
+strictly curried lambda
+
+1608
+01:39:33,040 --> 01:39:36,320
+which may compute later to zero
+or more implicit lambdas.
+
+1609
+01:39:37,080 --> 01:39:39,800
+Changing lambda insertion this
+way is easy to implement
+
+1610
+01:39:39,800 --> 01:39:41,840
+and improve inference
+in a large number
+
+1611
+01:39:41,840 --> 01:39:43,520
+of practically interesting cases.
+
+1612
+01:39:43,520 --> 01:39:46,600
+However we don't enhance
+application insertion
+
+1613
+01:39:46,600 --> 01:39:48,120
+and live that to future work.
+
+1614
+01:39:48,640 --> 01:39:51,120
+The reason is that unknown
+application insertion
+
+1615
+01:39:51,120 --> 01:39:53,320
+yields rather complex
+unification problems
+
+1616
+01:39:53,600 --> 01:39:55,600
+which could be a line of
+research on it's own.
+
+1617
+01:39:56,360 --> 01:39:59,360
+Now the running example is
+elaborated without issues.
+
+1618
+01:39:59,840 --> 01:40:02,240
+In the inferred time
+for the expression
+
+1619
+01:40:02,240 --> 01:40:05,520
+the Rec alpha stands for an unknown
+number of implicit arguments.
+
+1620
+01:40:05,520 --> 01:40:08,880
+Also the unknown data types can
+now depend on the argument.
+
+1621
+01:40:09,400 --> 01:40:12,800
+Then being defined inferred
+and expected types.
+
+1622
+01:40:12,920 --> 01:40:14,480
+For strictly curried function
+
+1623
+01:40:14,480 --> 01:40:17,400
+unification tries to measure
+two sides of the equation
+
+1624
+01:40:17,400 --> 01:40:19,480
+by solving current function domains.
+
+1625
+01:40:19,480 --> 01:40:22,920
+In this case the domain is
+solved (INAUDIBLE) record
+
+1626
+01:40:22,920 --> 01:40:24,320
+which contains a set.
+
+1627
+01:40:24,840 --> 01:40:28,760
+So unification succeeds and we get
+the expected elaboration output.
+
+1628
+01:40:29,240 --> 01:40:31,080
+We are nearing the end of the talk
+
+1629
+01:40:31,080 --> 01:40:34,720
+so let's revisit this picture about
+elaboration to provide the summary.
+
+1630
+01:40:35,480 --> 01:40:37,560
+This picture is actually
+not quite correct.
+
+1631
+01:40:37,800 --> 01:40:39,320
+In practical implementation,
+
+1632
+01:40:40,040 --> 01:40:42,200
+the core syntax which is
+used for optimizations
+
+1633
+01:40:42,200 --> 01:40:46,000
+and further compilations is not
+the same as the core syntax used
+
+1634
+01:40:46,000 --> 01:40:49,600
+in elaboration, we used to
+have a picture like this.
+
+1635
+01:40:50,600 --> 01:40:53,880
+We used slightly larger
+and more complicated core theory
+
+1636
+01:40:53,880 --> 01:40:55,240
+for the purpose of elaboration.
+
+1637
+01:40:55,760 --> 01:40:59,200
+Implicit function types provides
+control over implicit insertions
+
+1638
+01:40:59,200 --> 01:41:02,240
+and meta variables allowing
+representing unknown terms.
+
+1639
+01:41:03,000 --> 01:41:06,840
+However this core theory is also
+nice and well behaved type theory.
+
+1640
+01:41:07,320 --> 01:41:10,600
+This is infact a model type
+theory since meta variables
+
+1641
+01:41:10,600 --> 01:41:13,800
+and meta context form
+the so called crisp modality
+
+1642
+01:41:14,040 --> 01:41:16,640
+or alternatively,
+contextual modality.
+
+1643
+01:41:17,160 --> 01:41:18,720
+If you don't use meta variable
+
+1644
+01:41:18,720 --> 01:41:20,880
+and we only use
+bidirectional type checking,
+
+1645
+01:41:20,880 --> 01:41:23,320
+the inference becomes
+rather limited.
+
+1646
+01:41:23,560 --> 01:41:27,160
+Meta variables are the natural solutions
+for representing unknown terms
+
+1647
+01:41:27,160 --> 01:41:28,960
+and they are a basic ingredient
+
+1648
+01:41:28,960 --> 01:41:31,440
+in implementing more
+sophisticated inference.
+
+1649
+01:41:32,440 --> 01:41:36,360
+It is also important to not that
+if you successfully finish elaboration
+
+1650
+01:41:36,360 --> 01:41:38,160
+all meta variables are solved.
+
+1651
+01:41:38,640 --> 01:41:42,840
+And we can also just ignore or translate
+a very implicit function types
+
+1652
+01:41:43,360 --> 01:41:46,840
+So the extra features don't
+affect down stream compilation.
+
+1653
+01:41:47,840 --> 01:41:50,400
+If we allow first class
+implicit functions types
+
+1654
+01:41:50,400 --> 01:41:53,200
+that causes implicit
+insertion to be more dynamic
+
+1655
+01:41:53,200 --> 01:41:55,800
+and more interlude in
+the elaboration algorithm.
+
+1656
+01:41:56,320 --> 01:41:58,560
+Therefore if you want to
+have robust inference
+
+1657
+01:41:58,560 --> 01:42:00,560
+with first class
+implicit function types
+
+1658
+01:42:01,040 --> 01:42:03,560
+we need to represent unknown
+implicit insertions.
+
+1659
+01:42:04,320 --> 01:42:06,640
+Strictly curried function
+types provide a natural
+
+1660
+01:42:06,640 --> 01:42:07,960
+and tight representation.
+
+1661
+01:42:08,960 --> 01:42:11,080
+Additionally strictly
+curried functions
+
+1662
+01:42:11,080 --> 01:42:12,960
+are a modest extension
+of type theory
+
+1663
+01:42:12,960 --> 01:42:14,600
+so we still have a well behaved
+
+1664
+01:42:14,600 --> 01:42:16,560
+and computationally
+adequate core theory.
+
+1665
+01:42:17,320 --> 01:42:19,000
+Unlike the other extra features,
+
+1666
+01:42:19,000 --> 01:42:22,680
+strictly curried features also
+disappear after elaboration.
+
+1667
+01:42:23,200 --> 01:42:25,200
+My impression is that
+if you want to have
+
+1668
+01:42:25,200 --> 01:42:26,800
+robust impredicative inference
+
+1669
+01:42:27,080 --> 01:42:29,760
+strictly curried functions
+are a basic ingredient
+
+1670
+01:42:29,760 --> 01:42:32,880
+similar to how meta variables
+are a basic ingredient
+
+1671
+01:42:32,880 --> 01:42:34,240
+for general inference.
+
+1672
+01:42:34,720 --> 01:42:37,800
+Without those basic building
+block potential solutions
+
+1673
+01:42:37,800 --> 01:42:40,640
+are significantly limited
+in other end efficiency.
+
+1674
+01:42:41,640 --> 01:42:46,640
+(APPLAUSE)
+
+1675
+01:42:49,040 --> 01:42:50,360
+SUKYOUNG: Thank you Andreas.
+
+1676
+01:42:50,360 --> 01:42:52,360
+If you are watching this talk live
+
+1677
+01:42:52,360 --> 01:42:56,040
+be sure to join the Q&A
+session with the author
+
+1678
+01:42:56,040 --> 01:42:58,360
+if it is available
+in your time zone.
+
+1679
+01:43:05,120 --> 01:43:08,240
+The last talk of this
+session is entitled
+
+1680
+01:43:08,240 --> 01:43:10,200
+Kinds are Calling Conventions.
+
+1681
+01:43:10,960 --> 01:43:12,960
+Paul Downen will present the talk.
+
+1682
+01:43:13,720 --> 01:43:15,680
+PAUL DOWNEN: Hi, I'm Paul Downen
+
+1683
+01:43:15,680 --> 01:43:17,120
+and I'll be telling
+you about how kinds
+
+1684
+01:43:17,120 --> 01:43:19,600
+can express calling conventions
+in programing languages.
+
+1685
+01:43:20,120 --> 01:43:22,720
+Functional languages making
+calling function simple and easy.
+
+1686
+01:43:22,960 --> 01:43:24,840
+But there are many different
+parameter passing techniques
+
+1687
+01:43:24,960 --> 01:43:26,080
+which impact the performance of
+
+1688
+01:43:26,760 --> 01:43:27,760
+PAUL:.. function calls.
+
+1689
+01:43:27,760 --> 01:43:30,040
+Because this is a pervasive
+function languages,
+
+1690
+01:43:30,040 --> 01:43:31,920
+it's important to
+make them efficient.
+
+1691
+01:43:31,920 --> 01:43:33,320
+To implement a function call,
+
+1692
+01:43:33,320 --> 01:43:36,520
+we need to be able to answer some
+basic questions about its arguments.
+
+1693
+01:43:36,880 --> 01:43:39,400
+First, what is the arguments
+for a representation runtime?
+
+1694
+01:43:39,400 --> 01:43:40,800
+It could be an address, a character,
+
+1695
+01:43:40,800 --> 01:43:42,280
+a floating point number etcetera.
+
+1696
+01:43:42,280 --> 01:43:43,680
+And how big is it?
+
+1697
+01:43:43,680 --> 01:43:47,320
+For example, it could be just
+1 byte or a 64-bit word.
+
+1698
+01:43:47,320 --> 01:43:49,280
+We also need to know
+where is it stored.
+
+1699
+01:43:49,280 --> 01:43:51,920
+It might be in a specialized
+floating point register
+
+1700
+01:43:51,920 --> 01:43:54,600
+or it could be
+a pointer into the heap.
+
+1701
+01:43:55,680 --> 01:43:58,320
+For the function main call,
+we need to know its arity
+
+1702
+01:43:58,320 --> 01:44:00,320
+which is how many
+arguments are needed
+
+1703
+01:44:00,320 --> 01:44:02,720
+before its code can be
+properly executed.
+
+1704
+01:44:02,720 --> 01:44:04,040
+We also need to know
+
+1705
+01:44:04,040 --> 01:44:06,320
+how many arguments
+can be passed simultaneously.
+
+1706
+01:44:06,320 --> 01:44:08,560
+Should it be passed all at
+once in multiple chunks?
+
+1707
+01:44:08,560 --> 01:44:10,360
+Or individually, one at a time?
+
+1708
+01:44:10,720 --> 01:44:12,360
+Lastly, we need to know the levity
+
+1709
+01:44:12,360 --> 01:44:14,000
+by which I mean to say
+
+1710
+01:44:14,000 --> 01:44:16,160
+the evaluation
+strategy of the argument.
+
+1711
+01:44:16,160 --> 01:44:19,080
+For example, eager
+languages use call-by-value
+
+1712
+01:44:19,080 --> 01:44:21,760
+and lazy languages use
+call-by-need evaluation.
+
+1713
+01:44:21,760 --> 01:44:23,840
+Laziness in particular
+has an overhead
+
+1714
+01:44:23,840 --> 01:44:26,680
+that might not be necessary
+for a script function.
+
+1715
+01:44:27,040 --> 01:44:30,080
+Moreover, we will see that evaluation
+strategy interacts with arity
+
+1716
+01:44:30,080 --> 01:44:31,680
+as well as representation.
+
+1717
+01:44:32,040 --> 01:44:34,560
+Since it's probably the least
+understood of these three topics,
+
+1718
+01:44:34,560 --> 01:44:37,480
+I will focus primarily
+on arity in this talk.
+
+1719
+01:44:37,920 --> 01:44:40,000
+Arity is not always
+so simple to see.
+
+1720
+01:44:40,000 --> 01:44:42,520
+Consider these four
+functions of the same type.
+
+1721
+01:44:42,520 --> 01:44:44,720
+The type suggests they have arity 2.
+
+1722
+01:44:44,720 --> 01:44:47,200
+They need two arguments before
+they produce a result.
+
+1723
+01:44:47,200 --> 01:44:49,800
+But this type might leave out
+important operational details
+
+1724
+01:44:49,800 --> 01:44:52,080
+that we only learn from
+the function definitions.
+
+1725
+01:44:52,600 --> 01:44:54,760
+Look at the definition of f1.
+
+1726
+01:44:54,760 --> 01:44:58,200
+It starts with two lambas,
+so it requires two arguments
+
+1727
+01:44:58,200 --> 01:44:59,640
+before doing any interesting part.
+
+1728
+01:44:59,640 --> 01:45:02,360
+So, f1 definitely has arity 2.
+
+1729
+01:45:03,280 --> 01:45:05,280
+Now, look at f2.
+
+1730
+01:45:05,280 --> 01:45:06,800
+It normally starts with one lambda,
+
+1731
+01:45:06,800 --> 01:45:09,040
+however, all it does is call f1.
+
+1732
+01:45:09,040 --> 01:45:12,680
+So, it also requires two
+arguments before doing any work.
+
+1733
+01:45:12,680 --> 01:45:16,800
+In fact, we can either expand f2 and
+
+1734
+01:45:16,880 --> 01:45:20,320
+doing so does not change its
+meaning or runtime behavior.
+
+1735
+01:45:20,320 --> 01:45:25,240
+This sound eta expansion makes it
+clear that f2 also has arity 2.
+
+1736
+01:45:25,240 --> 01:45:28,960
+F3 is very similar to f1, both
+an important difference -
+
+1737
+01:45:28,960 --> 01:45:32,200
+f3 starts with only one
+lambda for binding x
+
+1738
+01:45:32,200 --> 01:45:36,400
+then it does some work on x before
+requesting the next argument y.
+
+1739
+01:45:36,400 --> 01:45:39,080
+So, what is f3's arity?
+
+1740
+01:45:39,080 --> 01:45:43,000
+As a hint, consider that expensive
+of x might be costly to compute
+
+1741
+01:45:43,000 --> 01:45:44,760
+as an (INAUDIBLE) suggests.
+
+1742
+01:45:44,760 --> 01:45:48,560
+And it might even cause side
+effects in a language like Opal.
+
+1743
+01:45:48,560 --> 01:45:51,600
+For this reason, f3
+only has arity 1.
+
+1744
+01:45:52,480 --> 01:45:56,120
+F4 is defined similarly to
+f2, however this time,
+
+1745
+01:45:56,120 --> 01:45:58,520
+the eta expansion is not sound.
+
+1746
+01:45:58,520 --> 01:46:02,760
+That's because f3 can do some
+serious work with only one argument.
+
+1747
+01:46:02,760 --> 01:46:05,760
+So, f4 also has arity 1.
+
+1748
+01:46:06,720 --> 01:46:09,080
+Based on those examples,
+let's pair to come up
+
+1749
+01:46:09,080 --> 01:46:11,040
+with some informal
+intuitive definitions
+
+1750
+01:46:11,040 --> 01:46:13,240
+about what arity is
+meant to capture.
+
+1751
+01:46:13,600 --> 01:46:16,400
+First, we already used
+the intuition of 'serious work'
+
+1752
+01:46:16,400 --> 01:46:18,400
+when analyzing
+the arity of a function.
+
+1753
+01:46:18,400 --> 01:46:22,800
+For example, if f applied to
+1, 2, and 3 does work,
+
+1754
+01:46:22,800 --> 01:46:25,200
+but f applied to only
+1 and 2 does not,
+
+1755
+01:46:25,200 --> 01:46:28,240
+then arity has... f has arity 3.
+
+1756
+01:46:28,240 --> 01:46:32,080
+Second, we sometimes need
+to use eta expansion
+
+1757
+01:46:32,080 --> 01:46:35,680
+to see the full arity of eta
+reduced function definitions.
+
+1758
+01:46:35,720 --> 01:46:40,000
+So, if f is equivalent to its
+(INAUDIBLE) eta expanded form
+
+1759
+01:46:40,000 --> 01:46:42,960
+as shown here, then f has arity 3.
+
+1760
+01:46:42,960 --> 01:46:44,520
+Note that we need to be careful.
+
+1761
+01:46:44,520 --> 01:46:47,040
+Sometimes this eta expansion
+might not be sound
+
+1762
+01:46:47,040 --> 01:46:50,280
+because it could change behavior
+or the cost of a function.
+
+1763
+01:46:50,280 --> 01:46:52,640
+This is especially true in
+languages with effects,
+
+1764
+01:46:52,640 --> 01:46:55,640
+but even pure languages like
+Haskell care about efficiency,
+
+1765
+01:46:55,640 --> 01:46:57,640
+so we have to be careful there too.
+
+1766
+01:46:57,640 --> 01:47:02,400
+Third, in operational sense, arity
+tells us a number of arguments
+
+1767
+01:47:02,400 --> 01:47:06,000
+that may pass to a function
+simultaneously in a single call.
+
+1768
+01:47:06,000 --> 01:47:10,880
+For example, if f has arity 3,
+then f applied to 1, 2 and 3
+
+1769
+01:47:10,880 --> 01:47:13,440
+can be compiled into
+a single function call
+
+1770
+01:47:13,440 --> 01:47:15,960
+rather than a chain of
+three partial applications.
+
+1771
+01:47:15,960 --> 01:47:18,960
+Now, focus on definitions 2 and 3.
+
+1772
+01:47:18,960 --> 01:47:21,440
+They serve as the main
+backbone for our idea.
+
+1773
+01:47:21,440 --> 01:47:25,320
+Definition 3 suggests that arity
+is important for performance.
+
+1774
+01:47:25,320 --> 01:47:28,440
+There's reduced cost for calling
+functions of higher arity
+
+1775
+01:47:28,440 --> 01:47:31,240
+whereas definition 2 says
+that arity can be seen
+
+1776
+01:47:31,240 --> 01:47:33,800
+in terms of the eta law
+of the lambda calculus.
+
+1777
+01:47:33,800 --> 01:47:35,680
+The arity of a function corresponds
+
+1778
+01:47:35,680 --> 01:47:37,880
+to the number of
+valid eta expansions.
+
+1779
+01:47:37,880 --> 01:47:39,000
+Taking together,
+
+1780
+01:47:39,000 --> 01:47:42,680
+making more eta expansions
+valid can improve the arity
+
+1781
+01:47:42,680 --> 01:47:45,760
+and thus, performance of
+function calls in a language.
+
+1782
+01:47:46,080 --> 01:47:49,240
+This link sets up our goal in
+the context of an intermediate language
+
+1783
+01:47:49,240 --> 01:47:50,800
+for an optimizing compiler.
+
+1784
+01:47:50,800 --> 01:47:53,080
+However arity analysis is done,
+
+1785
+01:47:53,080 --> 01:47:57,400
+that information must somehow be
+expressed inside of the internal code
+
+1786
+01:47:57,400 --> 01:47:59,320
+used in the compiler.
+
+1787
+01:48:00,080 --> 01:48:01,920
+We can do this with an ultimatum.
+
+1788
+01:48:01,920 --> 01:48:04,240
+Eta expansion is always valid.
+
+1789
+01:48:04,240 --> 01:48:07,360
+In that way, there are no more
+(INAUDIBLE) cases to worry about
+
+1790
+01:48:07,360 --> 01:48:09,560
+and so, arity is always
+the largest number
+
+1791
+01:48:09,560 --> 01:48:11,600
+that makes sense for any function.
+
+1792
+01:48:11,960 --> 01:48:14,120
+However, we can't lose
+what we already have.
+
+1793
+01:48:14,120 --> 01:48:16,760
+Practical compilers place
+restrictions of beta reduction
+
+1794
+01:48:16,760 --> 01:48:19,680
+they are crucial for
+algorithmic complexity.
+
+1795
+01:48:19,680 --> 01:48:22,160
+Therefore, our goal is to have
+an intermediate language
+
+1796
+01:48:22,160 --> 01:48:24,920
+with unrestricted eta
+expansion for functions
+
+1797
+01:48:24,920 --> 01:48:27,840
+but alongside with
+restricted beta reduction
+
+1798
+01:48:27,840 --> 01:48:29,400
+for arguments of other types.
+
+1799
+01:48:29,920 --> 01:48:32,240
+Here is our general
+approach to the design
+
+1800
+01:48:32,240 --> 01:48:34,920
+of an arity aware
+intermediate language.
+
+1801
+01:48:35,360 --> 01:48:38,240
+First, we add a new type
+for primitive functions
+
+1802
+01:48:38,240 --> 01:48:41,720
+denoted by this squiggly arrow, rather
+than this normal straight arrow
+
+1803
+01:48:41,720 --> 01:48:42,840
+to help distinguish them
+
+1804
+01:48:42,840 --> 01:48:44,960
+from functions in the source
+programming language
+
+1805
+01:48:44,960 --> 01:48:46,760
+that have a slightly
+different semantics.
+
+1806
+01:48:46,760 --> 01:48:49,840
+In particular, primitive
+functions are fully extensional
+
+1807
+01:48:49,840 --> 01:48:52,160
+and this is different
+from the functions in
+
+1808
+01:48:52,160 --> 01:48:55,200
+normal programming languages
+like Haskell and OCaml
+
+1809
+01:48:55,200 --> 01:48:57,360
+where the eta law might not apply
+
+1810
+01:48:57,360 --> 01:48:59,400
+to all expressions
+of a function type.
+
+1811
+01:48:59,920 --> 01:49:03,600
+However, application may still
+be restricted for efficiency
+
+1812
+01:49:03,600 --> 01:49:07,520
+and for the purposes of
+languages semantics.
+
+1813
+01:49:07,520 --> 01:49:11,920
+So, for example, in the case where
+a paremeter is used more than once.
+
+1814
+01:49:12,640 --> 01:49:14,880
+If you apply the function lambda x,
+
+1815
+01:49:14,880 --> 01:49:17,240
+x applied to x to
+an expensive argument,
+
+1816
+01:49:17,240 --> 01:49:20,240
+it doesn't need to be
+recomputed for both uses of x.
+
+1817
+01:49:21,320 --> 01:49:22,760
+Because of unrestricted eta,
+
+1818
+01:49:22,760 --> 01:49:25,160
+types can now express
+the arity of functions.
+
+1819
+01:49:25,160 --> 01:49:27,200
+All we have to do is
+count the arrows.
+
+1820
+01:49:27,200 --> 01:49:30,760
+For example, if f is to
+type into bool to string,
+
+1821
+01:49:30,760 --> 01:49:32,920
+we know that it has arity 2 already
+
+1822
+01:49:32,920 --> 01:49:35,000
+without even looking
+at f's definition.
+
+1823
+01:49:35,000 --> 01:49:38,000
+But just having unrestricted eta
+
+1824
+01:49:38,000 --> 01:49:40,320
+isn't enough for
+practical compilation
+
+1825
+01:49:40,320 --> 01:49:42,240
+that's because there
+are some instances
+
+1826
+01:49:42,240 --> 01:49:44,600
+where we intentionally
+want to lower the arity
+
+1827
+01:49:44,600 --> 01:49:47,600
+for a different behavior or
+a better algorithmic complexity.
+
+1828
+01:49:47,720 --> 01:49:50,440
+For example, we call f3 from before.
+
+1829
+01:49:50,440 --> 01:49:54,120
+Its definition was conspicuously
+written as an arity 1 function
+
+1830
+01:49:54,120 --> 01:49:56,680
+just so that the expensive
+computation of z
+
+1831
+01:49:56,680 --> 01:49:59,640
+can be shared or used for
+many different values of y.
+
+1832
+01:50:00,080 --> 01:50:01,600
+But applying eta expansion,
+
+1833
+01:50:01,600 --> 01:50:03,200
+which is now always allowed,
+
+1834
+01:50:03,200 --> 01:50:05,920
+means that f3 has arity 2, not 1.
+
+1835
+01:50:06,440 --> 01:50:09,760
+If we use a partial
+application of f3 many times,
+
+1836
+01:50:09,760 --> 01:50:12,400
+like mapping over a large list here,
+
+1837
+01:50:12,400 --> 01:50:15,840
+it will recompute expensive
+of 100 over and over.
+
+1838
+01:50:15,840 --> 01:50:16,840
+That's bad.
+
+1839
+01:50:16,840 --> 01:50:19,840
+We solve this problem
+by adding another type
+
+1840
+01:50:19,840 --> 01:50:22,400
+for representing explicit closures.
+
+1841
+01:50:22,400 --> 01:50:25,760
+Here, we can note the closure
+of a type with curly braces.
+
+1842
+01:50:25,760 --> 01:50:28,640
+They're introduce with
+the Clos constructor
+
+1843
+01:50:28,640 --> 01:50:32,280
+and that lets us wrap up
+a unary function from Int to Int
+
+1844
+01:50:32,280 --> 01:50:34,400
+inside of a closure
+of the same type.
+
+1845
+01:50:35,160 --> 01:50:38,440
+Including closures in
+the results of a function
+
+1846
+01:50:38,440 --> 01:50:41,200
+let us intentionally
+break up as arity
+
+1847
+01:50:41,200 --> 01:50:42,560
+when partial applications matter
+
+1848
+01:50:42,560 --> 01:50:43,560
+like an f3 prime.
+
+1849
+01:50:43,560 --> 01:50:46,560
+This is an arity 1 function
+taking the first argument
+
+1850
+01:50:46,600 --> 01:50:49,200
+and returning a closure of
+another arity 1 function,
+
+1851
+01:50:49,200 --> 01:50:50,520
+that takes the second argument.
+
+1852
+01:50:50,520 --> 01:50:54,440
+This closure is then later used
+with an explicit App operation.
+
+1853
+01:50:54,440 --> 01:50:59,080
+So, you can take the closure
+we turned by f3 prime of 100
+
+1854
+01:50:59,080 --> 01:51:02,280
+and then, apply it to the second
+argument to get a result.
+
+1855
+01:51:02,280 --> 01:51:05,520
+Now, the partial
+application of f3 prime
+
+1856
+01:51:05,520 --> 01:51:08,080
+computes expensive of 100 only once
+
+1857
+01:51:08,080 --> 01:51:12,040
+even though the reclosure it
+returns is reused many times.
+
+1858
+01:51:12,560 --> 01:51:13,880
+But there's a subtle impact
+
+1859
+01:51:13,880 --> 01:51:15,920
+of allowing all of these
+extra eta expansions.
+
+1860
+01:51:15,920 --> 01:51:19,080
+For example, consider
+this definition -
+
+1861
+01:51:19,080 --> 01:51:23,560
+defines a function f to the apparent
+computation expensive of 100.
+
+1862
+01:51:23,560 --> 01:51:25,840
+F is used several times
+within its scope,
+
+1863
+01:51:25,840 --> 01:51:28,800
+so when exactly is
+expensive of 100 evaluated?
+
+1864
+01:51:28,800 --> 01:51:32,560
+That depends on the evaluation
+strategy of this (INAUDIBLE) binding.
+
+1865
+01:51:32,560 --> 01:51:35,480
+Under call-by-value,
+the right-hand side expensive of 100
+
+1866
+01:51:35,480 --> 01:51:39,400
+must be computed first before
+a value can be bound to f.
+
+1867
+01:51:39,480 --> 01:51:42,320
+Instead, under
+call-by-need evaluation,
+
+1868
+01:51:42,320 --> 01:51:45,960
+the right-hand side is evaluated
+later only when f is first needed,
+
+1869
+01:51:45,960 --> 01:51:48,040
+but its value is remembered
+
+1870
+01:51:48,040 --> 01:51:51,760
+so it never gets re-evaluated
+on future uses of f.
+
+1871
+01:51:52,640 --> 01:51:55,360
+Slightly different is
+call-by-name evaluation -
+
+1872
+01:51:55,360 --> 01:51:59,040
+there the right-hand side is still
+evaluated later when f is used
+
+1873
+01:51:59,040 --> 01:52:03,280
+but it's also re-evaluated every
+single time that f is used.
+
+1874
+01:52:03,720 --> 01:52:07,320
+But remember, in this language,
+eta expansion is always valid.
+
+1875
+01:52:07,320 --> 01:52:12,200
+So, the definition of x above is
+actually the same as x prime here.
+
+1876
+01:52:12,200 --> 01:52:14,280
+But look at x prime,
+
+1877
+01:52:14,280 --> 01:52:17,840
+the evaluation of f definitely
+follows a call-by-name order
+
+1878
+01:52:17,840 --> 01:52:22,240
+because the eta expanded right-hand
+side is manifesting a value.
+
+1879
+01:52:22,240 --> 01:52:25,720
+That means that expensive
+100 will be recomputed
+
+1880
+01:52:25,720 --> 01:52:27,760
+every single time f is called.
+
+1881
+01:52:27,760 --> 01:52:31,560
+Therefore,
+the operational consequence
+
+1882
+01:52:31,560 --> 01:52:34,000
+of allowing unrestricted
+eta for primitive functions
+
+1883
+01:52:34,000 --> 01:52:37,560
+means that they cannot be evaluated
+for any (INAUDIBLE) reason
+
+1884
+01:52:37,560 --> 01:52:39,960
+like in a restrict
+but binding here or the
+
+1885
+01:52:39,960 --> 01:52:41,920
+(INAUDIBLE) operation in Haskell.
+
+1886
+01:52:41,920 --> 01:52:43,960
+Primitive functions
+can only be evaluated
+
+1887
+01:52:43,960 --> 01:52:46,280
+when they are called with
+all of their arguments.
+
+1888
+01:52:47,040 --> 01:52:50,520
+Knowing link up the high level
+notion of arity about eta expansion
+
+1889
+01:52:50,520 --> 01:52:53,640
+with the low level notion about
+simultaneous parameter passing,
+
+1890
+01:52:53,640 --> 01:52:56,120
+we need to be careful
+about polymorphism.
+
+1891
+01:52:56,120 --> 01:52:58,320
+Consider this
+polymorphic definition.
+
+1892
+01:52:58,320 --> 01:52:59,880
+It takes a function f
+
+1893
+01:52:59,880 --> 01:53:03,200
+that returns an arbitrary
+type a and applies it twice.
+
+1894
+01:53:03,200 --> 01:53:06,880
+This is done through
+the local definition of g
+
+1895
+01:53:06,880 --> 01:53:09,600
+which is the partial
+application of f to 3.
+
+1896
+01:53:10,120 --> 01:53:12,400
+Now, what are
+the arities of f and g?
+
+1897
+01:53:12,400 --> 01:53:15,320
+Well, I said we could just count
+the arrows in the types so,
+
+1898
+01:53:15,320 --> 01:53:17,000
+f's type has two arrows in it,
+
+1899
+01:53:17,000 --> 01:53:18,400
+so it has arity 2.
+
+1900
+01:53:18,400 --> 01:53:21,720
+And g's type is Int to
+a, so it has arity 1.
+
+1901
+01:53:21,720 --> 01:53:23,160
+This seems sensible at first,
+
+1902
+01:53:23,160 --> 01:53:25,000
+but what happens when
+the polymorphic a
+
+1903
+01:53:25,000 --> 01:53:27,320
+gets instantiated with
+a concrete type?
+
+1904
+01:53:27,320 --> 01:53:30,600
+For example, a might be instantiated
+with another function type
+
+1905
+01:53:30,600 --> 01:53:31,840
+like Bool to Bool.
+
+1906
+01:53:31,840 --> 01:53:35,800
+While when we do this, now f's
+type suddenly has 3 arrows in it.
+
+1907
+01:53:35,800 --> 01:53:38,720
+So, its arity has changed to 3
+
+1908
+01:53:38,720 --> 01:53:42,240
+and g's type becomes
+Int to Bool to Bool
+
+1909
+01:53:42,240 --> 01:53:46,560
+so now, the arity is 2
+instead of the original 1.
+
+1910
+01:53:46,560 --> 01:53:48,680
+This is a big problem.
+
+1911
+01:53:48,680 --> 01:53:51,320
+We want to be able to statically
+compile a function calls
+
+1912
+01:53:51,320 --> 01:53:54,760
+as passing multiple arguments
+and jumping to the code of the function.
+
+1913
+01:53:54,760 --> 01:53:59,280
+If we look at the application
+of g to 5 and g to 4,
+
+1914
+01:53:59,280 --> 01:54:01,760
+how do we compile those calls?
+
+1915
+01:54:01,760 --> 01:54:05,480
+If g's arity is 1, then this
+is a complete function call.
+
+1916
+01:54:05,480 --> 01:54:08,120
+But if it's arity
+somehow becomes 2, then
+
+1917
+01:54:08,120 --> 01:54:11,000
+there suddenly aren't
+enough arguments
+
+1918
+01:54:11,000 --> 01:54:13,200
+to correctly execute the body of g.
+
+1919
+01:54:13,200 --> 01:54:16,600
+How can we possibly statially
+compile multiargument function calls
+
+1920
+01:54:16,600 --> 01:54:19,640
+when the arity of functions
+isn't even stable?
+
+1921
+01:54:19,640 --> 01:54:24,040
+These shortcomings can be
+overcome with polymorphism -
+
+1922
+01:54:24,040 --> 01:54:27,240
+the ideas to encode
+the intentional details of types
+
+1923
+01:54:27,240 --> 01:54:30,040
+like the runtime representations
+and calling conventions
+
+1924
+01:54:30,040 --> 01:54:31,280
+into their kind.
+
+1925
+01:54:31,720 --> 01:54:34,640
+First, we can generalize
+the basic kind of types,
+
+1926
+01:54:34,640 --> 01:54:38,480
+usually written as star, to
+the more detailed form TYPE r c -
+
+1927
+01:54:38,480 --> 01:54:41,480
+r stands for the runtime
+representation of the type a.
+
+1928
+01:54:41,480 --> 01:54:44,960
+It could be a primitive representation
+like a pointer or an integer.
+
+1929
+01:54:44,960 --> 01:54:47,800
+or it could be something
+compound like an unboxed tuple.
+
+1930
+01:54:47,800 --> 01:54:50,800
+C stands for
+the calling convention of a
+
+1931
+01:54:50,800 --> 01:54:53,040
+which spells out how those
+values can be in vote.
+
+1932
+01:54:53,040 --> 01:54:56,360
+So, for example if we have
+an unknown type variable a,
+
+1933
+01:54:56,360 --> 01:54:59,920
+we can give it a kind like
+TYPE Pointer Call of n -
+
+1934
+01:54:59,920 --> 01:55:03,120
+this says that the values
+of type a are represented
+
+1935
+01:55:03,120 --> 01:55:04,600
+as pointers at runtime
+
+1936
+01:55:04,600 --> 01:55:07,160
+and that those values can be
+called with n arguments.
+
+1937
+01:55:07,920 --> 01:55:10,960
+Note that representing
+the arity as a single number
+
+1938
+01:55:10,960 --> 01:55:13,080
+is slightly simplified from
+the full system in the paper
+
+1939
+01:55:13,080 --> 01:55:14,720
+which presents all the details.
+
+1940
+01:55:14,720 --> 01:55:17,720
+Now that the arity appears
+explicitly in the types,
+
+1941
+01:55:17,720 --> 01:55:19,960
+it can be used to
+resolve the ambiguity
+
+1942
+01:55:19,960 --> 01:55:21,640
+that came from polymorphism.
+
+1943
+01:55:21,640 --> 01:55:23,440
+For example, let's return
+
+1944
+01:55:23,440 --> 01:55:25,920
+to the troublesome poly
+definition from before.
+
+1945
+01:55:25,920 --> 01:55:28,400
+We can now pin down a specific arity
+
+1946
+01:55:28,400 --> 01:55:31,520
+for the generic type variable
+a introduced by the flaw.
+
+1947
+01:55:31,520 --> 01:55:35,400
+Here we say that the generic type
+a is called with two arguments.
+
+1948
+01:55:35,400 --> 01:55:38,280
+Even though that
+the type of a is abstract,
+
+1949
+01:55:38,280 --> 01:55:41,120
+it's kind makes it clear
+that f has arity 4.
+
+1950
+01:55:41,120 --> 01:55:45,680
+That's counting for the two
+known integers in the type of f
+
+1951
+01:55:45,680 --> 01:55:48,800
+plus two more from
+the return type a.
+
+1952
+01:55:49,280 --> 01:55:53,960
+Also, g has the type Int to a,
+but we know it has arity 3,
+
+1953
+01:55:53,960 --> 01:55:56,560
+so it takes one known
+integer argument
+
+1954
+01:55:56,560 --> 01:55:59,800
+plus two more arguments
+from the return type a.
+
+1955
+01:56:00,560 --> 01:56:04,400
+Furthermore, since the calling
+convention appears in the types,
+
+1956
+01:56:04,400 --> 01:56:06,040
+we can also abstract over them.
+
+1957
+01:56:06,040 --> 01:56:09,600
+For example, the revapp function
+here supplies an argument x
+
+1958
+01:56:09,600 --> 01:56:12,920
+to a function f. Does
+this type make sense?
+
+1959
+01:56:12,920 --> 01:56:16,960
+The function f has the type a to b
+
+1960
+01:56:16,960 --> 01:56:20,720
+and to generate the code for calling
+f, we need to know its arity.
+
+1961
+01:56:20,720 --> 01:56:23,880
+Since f takes an argument a
+
+1962
+01:56:25,360 --> 01:56:30,200
+and b already has arity 1, this
+adds up to an arity of 2.
+
+1963
+01:56:31,440 --> 01:56:35,720
+The argument x has the type a.
+
+1964
+01:56:35,720 --> 01:56:38,400
+To pass it around, we need
+to know its representation.
+
+1965
+01:56:38,400 --> 01:56:41,240
+The kind of a is TYPE Pointer c.
+
+1966
+01:56:41,240 --> 01:56:43,360
+So, we know that x is
+represented as a pointer,
+
+1967
+01:56:43,360 --> 01:56:45,640
+but we don't know
+the calling convention of x.
+
+1968
+01:56:45,640 --> 01:56:47,920
+That's fine because revapp
+doesn't call itself,
+
+1969
+01:56:47,920 --> 01:56:49,520
+it just passes x around.
+
+1970
+01:56:50,760 --> 01:56:52,800
+If we found this type interesting,
+
+1971
+01:56:52,800 --> 01:56:55,120
+here is even more
+material in the paper.
+
+1972
+01:56:55,120 --> 01:56:58,280
+I was only able to talk
+about calling conventions
+
+1973
+01:56:58,280 --> 01:57:00,080
+and a little bit about
+representations,
+
+1974
+01:57:00,080 --> 01:57:03,040
+but we expressed levity
+in this kind system too.
+
+1975
+01:57:03,040 --> 01:57:07,120
+This lets us accommodate both eager
+and lazy functional languages
+
+1976
+01:57:07,120 --> 01:57:09,880
+with the exact same shared
+intermediate language.
+
+1977
+01:57:09,880 --> 01:57:12,680
+We also described
+a compiler pipeline
+
+1978
+01:57:12,680 --> 01:57:15,280
+along with its correctness from a
+
+1979
+01:57:16,040 --> 01:57:19,600
+simple source language to
+the intermediate language
+
+1980
+01:57:19,600 --> 01:57:22,160
+and finally, to a well-level
+target language.
+
+1981
+01:57:22,160 --> 01:57:24,440
+This compilation depends
+on types and kinds.
+
+1982
+01:57:24,440 --> 01:57:26,120
+So, we used a type system to ensure
+
+1983
+01:57:26,120 --> 01:57:28,440
+that (INAUDIBLE) compilation
+is always possible
+
+1984
+01:57:28,440 --> 01:57:30,680
+for every single well type program.
+
+1985
+01:57:31,240 --> 01:57:33,760
+In the end, we can say that kinds
+
+1986
+01:57:33,760 --> 01:57:36,560
+give us a formal and high-level
+language for capturing the details
+
+1987
+01:57:36,560 --> 01:57:39,640
+of efficient calling
+conventions for functions.
+
+1988
+01:57:39,640 --> 01:57:41,200
+Thank you for your attention.
+
+1989
+01:57:41,880 --> 01:57:46,880
+(AUDIENCE CLAPPING)
+
+1990
+01:57:49,480 --> 01:57:50,840
+SUKYOUNG: Thank you Paul.
+
+1991
+01:57:50,840 --> 01:57:52,440
+If you are watching this talk live,
+
+1992
+01:57:52,440 --> 01:57:55,520
+please don't forget
+about a Q&A session
+
+1993
+01:57:55,520 --> 01:57:58,080
+that may be available
+in your time band.
+
+1994
+01:57:58,320 --> 01:58:01,160
+This is the last
+paper in session six.
+
+1995
+01:58:01,160 --> 01:58:03,320
+Thank you for attending.
+
