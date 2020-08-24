@@ -6412,7 +6412,7 @@ Alejandro Serrano, Jurean Hawk,
 
 1395
 01:13:27,080 --> 01:13:30,920
-Simon Paton-Jones,
+Simon Payton-Jones,
 and Dimitrios Vitinyadas.
 
 1396
@@ -6472,11 +6472,11 @@ we can use map even,
 1408
 01:14:02,520 --> 01:14:04,680
 and then get a function
-from little things
+from list of ints
 
 1409
 01:14:04,680 --> 01:14:05,680
-to list of bulls,
+to list of bools,
 
 1410
 01:14:05,680 --> 01:14:07,960
@@ -6508,11 +6508,11 @@ really use this.
 1416
 01:14:24,920 --> 01:14:27,960
 Polymorphic types, those
-types having with for all,
+types headed with for all,
 
 1417
 01:14:27,960 --> 01:14:32,000
-are of a not first-class in
+are not first-class in
 many programming languages.
 
 1418
@@ -6573,7 +6573,7 @@ with a type application,
 1430
 01:15:04,640 --> 01:15:09,160
 like I am doing here
-with at for all AA to A,
+with at for all A A to A,
 
 1431
 01:15:09,160 --> 01:15:12,160
@@ -6611,13 +6611,13 @@ something like here,
 
 1438
 01:15:27,600 --> 01:15:30,920
-where we cont,
+where we cons,
 an identity function to id,
 
 1439
 01:15:30,920 --> 01:15:35,160
 which is itself a list
-of for all AA to As,
+of for all A A to As,
 
 1440
 01:15:35,160 --> 01:15:38,600
@@ -6650,7 +6650,7 @@ inference algorithms,
 1446
 01:15:53,320 --> 01:15:57,120
 that's not allowed polymorphic
-installation at all.
+instantiation at all.
 
 1447
 01:15:57,120 --> 01:16:00,600
@@ -6660,7 +6660,7 @@ do we choose to generalize?
 1448
 01:16:00,600 --> 01:16:03,640
 How do we know that we have
-to have a big Lambda exit
+to have a big Lambda
 
 1449
 01:16:03,640 --> 01:16:07,920
@@ -6670,11 +6670,11 @@ and not somewhere else?
 1450
 01:16:07,920 --> 01:16:11,440
 There's been a lot of work about
-in impredicative inference.
+impredicative inference.
 
 1451
 01:16:11,440 --> 01:16:14,440
-There are so many related to work.
+There are so many related work.
 
 1452
 01:16:14,440 --> 01:16:18,520
@@ -6698,7 +6698,7 @@ as much as possible.
 
 1456
 01:16:26,520 --> 01:16:32,640
-And then there is a type check-in
+And then there is a type checking
 just remains as it was.
 
 1457
@@ -6707,7 +6707,7 @@ Let me show you an example.
 
 1458
 01:16:34,160 --> 01:16:37,280
-For example, I have here cone IDs
+For example, I have here cons ID
 
 1459
 01:16:37,280 --> 01:16:41,080
@@ -6734,8 +6734,8 @@ that you instantiate
 
 1464
 01:16:51,240 --> 01:16:54,760
-the type of cones
-and you're introducing cones
+the type of cons
+and you're introducing cons
 
 1465
 01:16:54,760 --> 01:16:58,400
@@ -6750,11 +6750,11 @@ alpha here,
 1467
 01:16:59,960 --> 01:17:03,800
 and then you have
-the argument ID and IVs.
+the argument ID and ISs.
 
 1468
 01:17:03,800 --> 01:17:08,800
-The type of arguments are then
+The type of the arguments are then
 alpha and list of alphas.
 
 1469
@@ -6773,7 +6773,7 @@ maybe you guess the instantiation,
 1472
 01:17:17,200 --> 01:17:19,160
 or if you have a type
-of inference engine
+inference engine
 
 1473
 01:17:19,160 --> 01:17:21,040
@@ -6791,7 +6791,7 @@ for all type works,
 
 1476
 01:17:28,440 --> 01:17:32,680
-so this example is predicted
+so this example is prohibited
 by Hindley-Damas-Milner.
 
 1477
@@ -6804,7 +6804,7 @@ Well you start with the same step,
 
 1479
 01:17:35,920 --> 01:17:37,720
-you instantiate the type of cones,
+you instantiate the type of cons,
 
 1480
 01:17:37,720 --> 01:17:40,840
@@ -6857,7 +6857,7 @@ not just any alpha,
 1490
 01:18:01,200 --> 01:18:05,520
 they are exactly for all Aa to A
-and listed for all Aa to A.
+and list of for all Aa to A.
 
 1491
 01:18:05,520 --> 01:18:08,080
@@ -6865,7 +6865,7 @@ And there is nothing else to guess
 
 1492
 01:18:08,080 --> 01:18:12,480
-and that check-in can succeed.
+and type checking can succeed.
 
 1493
 01:18:12,480 --> 01:18:15,760
@@ -6879,13 +6879,13 @@ that alpha must be
 
 1495
 01:18:19,280 --> 01:18:21,800
-for all Aa-As, so you
+for all A A to A, so you
 might be wondering
 
 1496
 01:18:21,800 --> 01:18:24,960
-what's different between
-these two argument?
+what's difference between
+these two arguments?
 
 1497
 01:18:24,960 --> 01:18:27,160
@@ -6913,13 +6913,13 @@ the type which is push
 
 1502
 01:18:39,520 --> 01:18:43,880
-is this singles type
-variable unfounded
+is this single type
+variable alpha
 
 1503
 01:18:43,880 --> 01:18:46,520
 we get from
-the variable is for all Aa-A
+the variable is for all A A to A
 
 1504
 01:18:46,520 --> 01:18:48,120
@@ -6943,7 +6943,7 @@ In order for the list of alpha
 1508
 01:18:59,720 --> 01:19:03,760
 and the list of for all
-Aa to A to be equal,
+A A to B to be equal,
 
 1509
 01:19:03,760 --> 01:19:08,760
@@ -7018,8 +7018,8 @@ choice, so you take it.
 
 1524
 01:19:48,080 --> 01:19:51,520
-If you have a single state
-variable line around,
+If you have a single type
+variable lying around,
 
 1525
 01:19:51,520 --> 01:19:53,960
@@ -7042,13 +7042,13 @@ us no information.
 
 1529
 01:20:01,000 --> 01:20:03,840
-That's, for example, const
+That's, for example, cons
 ID with an empty list.
 
 1530
 01:20:03,840 --> 01:20:06,720
 In this list, we will
-instantiate the type of const,
+instantiate the type of cons,
 
 1531
 01:20:06,720 --> 01:20:08,600
@@ -7085,8 +7085,8 @@ monomorphic types.
 
 1538
 01:20:27,000 --> 01:20:30,280
-We can also get some other
-information into a count.
+We can also take some other
+information into account.
 
 1539
 01:20:30,280 --> 01:20:33,800
@@ -7123,8 +7123,8 @@ or we could instantiate.
 
 1546
 01:20:49,600 --> 01:20:53,960
-So quick look if you
-know information here.
+So quick look gives you
+no information here.
 
 1547
 01:20:53,960 --> 01:20:56,800
@@ -7143,7 +7143,7 @@ can play the same trick
 1550
 01:21:02,400 --> 01:21:05,320
 as we did for
-the const of ID with IDs.
+the cons of ID with IDs.
 
 1551
 01:21:05,320 --> 01:21:08,120
@@ -7224,12 +7224,12 @@ and if you think, for example,
 
 1568
 01:21:52,240 --> 01:21:56,000
-into this goal const
-ID to const ID IDs,
+into this goal cons
+ID to cons ID IDs,
 
 1569
 01:21:56,000 --> 01:21:58,040
-in order for the top-most consts
+in order for the top-most cons
 
 1570
 01:21:58,040 --> 01:21:59,360
@@ -7258,7 +7258,7 @@ inspecting nested applications.
 1575
 01:22:13,320 --> 01:22:15,840
 But we don't know more.
-We really want to keep the symbols.
+We really want to keep this simple.
 
 1576
 01:22:15,840 --> 01:22:18,240
@@ -7287,13 +7287,13 @@ like ifs or pattern matching
 
 1581
 01:22:29,120 --> 01:22:33,000
-because it's willing by
+because it's (INAUDIBLE)
 that we need to not only
 
 1582
 01:22:33,000 --> 01:22:35,240
 unify things in a simple way
-would also need
+we also need
 
 1583
 01:22:35,240 --> 01:22:38,040
@@ -7322,7 +7322,7 @@ a lot of information
 
 1588
 01:22:47,800 --> 01:22:51,040
-by looking at net applications
+by looking at nested applications
 and for the rest
 
 1589
@@ -7333,7 +7333,7 @@ well, you often get
 1590
 01:22:54,400 --> 01:22:57,000
 information pushed
-by directional
+by bidirectional
 
 1591
 01:22:57,000 --> 01:22:59,880
@@ -7392,8 +7392,8 @@ should we think
 
 1602
 01:23:27,560 --> 01:23:29,840
-we should be typed?
-I'm going to be that annotations.
+we should be typeable
+without annotations.
 
 1603
 01:23:29,840 --> 01:23:31,840
@@ -7402,8 +7402,8 @@ I've shown here
 
 1604
 01:23:31,840 --> 01:23:33,720
-are also type
-of word without annotations
+are also typeable
+without annotations
 
 1605
 01:23:33,720 --> 01:23:37,280
@@ -7412,7 +7412,7 @@ for getting as much
 
 1606
 01:23:37,280 --> 01:23:39,760
-as in predicatively
+impredicatively
 information as we can,
 
 1607
@@ -7433,27 +7433,27 @@ So we want this thing
 1610
 01:23:51,160 --> 01:23:52,640
 to be compatible
-with type class
+with type classes,
 
 1611
 01:23:52,640 --> 01:23:55,680
-or step family is everything
-which is already into GNC
+type families, everything
+which is already in GHC
 
 1612
 01:23:55,680 --> 01:23:58,680
 and also to be localized
-in a specific issue
+in specification and
 
 1613
 01:23:58,680 --> 01:24:01,040
-on implementation.
+implementation.
 Because as I was saying,
 
 1614
 01:24:01,040 --> 01:24:04,000
 we want to implement
-this in GC without
+this in GHC without
 
 1615
 01:24:04,000 --> 01:24:08,920
@@ -7478,7 +7478,7 @@ check-in has no changes.
 1619
 01:24:18,240 --> 01:24:20,640
 So we've integrated
-this into GSE,
+this into GHC,
 
 1620
 01:24:20,640 --> 01:24:23,520
@@ -7487,7 +7487,7 @@ type families, data type promotion,
 
 1621
 01:24:23,520 --> 01:24:25,640
-levity, polymorphism,
+levity polymorphism,
 you name it.
 
 1622
@@ -7507,8 +7507,8 @@ And we only had to add
 
 1625
 01:24:34,160 --> 01:24:37,840
-90,000 land which make up
-the type checker in C.
+90,000 lines which make up
+the type checker in GHC.
 
 1626
 01:24:37,840 --> 01:24:40,160
@@ -7543,7 +7543,7 @@ have been written
 1632
 01:24:53,520 --> 01:24:57,760
 down in a paper.
-This is what was inside DC,
+This is what was inside GHC,
 
 1633
 01:24:57,760 --> 01:25:01,960
@@ -7557,8 +7557,8 @@ And on top of that,
 
 1635
 01:25:04,160 --> 01:25:06,880
-we built curriculum
-in predicativity.
+we built QuickLook
+impredicativity.
 
 1636
 01:25:06,880 --> 01:25:08,760
@@ -7572,8 +7572,8 @@ Also we talk about
 
 1638
 01:25:13,160 --> 01:25:16,640
-how we integrate quick loop
-with visibles type application.
+how we integrate quick look
+with visible type application.
 
 1639
 01:25:16,640 --> 01:25:21,200
@@ -7582,13 +7582,13 @@ when quick look fails,
 
 1640
 01:25:21,200 --> 01:25:23,960
-the easiest way to operate,
+the easiest way to override
 this is a way to tell
 
 1641
 01:25:23,960 --> 01:25:26,040
-the competitor
-what this institution
+the compiler
+what this instantiation
 
 1642
 01:25:26,040 --> 01:25:28,200
@@ -7647,7 +7647,7 @@ to impredicative inference
 
 1653
 01:25:51,960 --> 01:25:54,880
-with stress to be predictable,
+which tries to be predictable,
 but yet type
 
 1654
@@ -7663,12 +7663,12 @@ a conservative extension
 1656
 01:26:00,200 --> 01:26:02,720
 to what it's already there
-and very localized.
+and very localized
 
 1657
 01:26:02,720 --> 01:26:05,640
-And this specific
-question and implementation.
+in the specification
+and implementation.
 
 1658
 01:26:05,640 --> 01:26:07,960
@@ -7682,7 +7682,7 @@ any questions in the,
 
 1660
 01:26:11,400 --> 01:26:15,760
-in the ESFB channel for this,
+in the ICFP channel for this,
 and thanks for watching
 
 1661
@@ -7691,7 +7691,7 @@ and thanks for watching
 
 1662
 01:26:24,040 --> 01:26:26,160
-(VIDEO STOPPED)
+
 
 1663
 01:26:26,160 --> 01:26:28,640
