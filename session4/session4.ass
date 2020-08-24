@@ -1055,12 +1055,12 @@ Dialogue: 0,1:00:38.80,1:00:41.00,Default,,0,0,0,,And it also loosely\Nbroadcast
 Dialogue: 0,1:00:41.00,1:00:42.28,Default,,0,0,0,,to other users and replicas,
 Dialogue: 0,1:00:42.28,1:00:43.56,Default,,0,0,0,,who will then apply the operation
 Dialogue: 0,1:00:43.56,1:00:45.12,Default,,0,0,0,,to their own copy of the state.
-Dialogue: 0,1:00:46.96,1:00:48.28,Default,,0,0,0,,And CRDTs neat
+Dialogue: 0,1:00:46.96,1:00:48.28,Default,,0,0,0,,And CRDTs are neat
 Dialogue: 0,1:00:48.28,1:00:49.60,Default,,0,0,0,,because they're programming languages
 Dialogue: 0,1:00:49.60,1:00:51.12,Default,,0,0,0,,way of solving a systems problem
 Dialogue: 0,1:00:51.12,1:00:53.64,Default,,0,0,0,,of how to build these\Napplications with shared state.
 Dialogue: 0,1:00:53.64,1:00:54.48,Default,,0,0,0,,And in particular,
-Dialogue: 0,1:00:54.48,1:00:56.68,Default,,0,0,0,,the way you design them is\Nprincipal to mathematical.
+Dialogue: 0,1:00:54.48,1:00:56.68,Default,,0,0,0,,the way you design them is\Nprincipled and mathematical.
 Dialogue: 0,1:00:56.68,1:00:57.52,Default,,0,0,0,,So at least in theory,
 Dialogue: 0,1:00:57.52,1:01:00.12,Default,,0,0,0,,it should be hard to introduce\Nbugs when you use it.
 Dialogue: 0,1:01:01.76,1:01:02.64,Default,,0,0,0,,So some pros.
@@ -1073,7 +1073,7 @@ Dialogue: 0,1:01:11.88,1:01:13.04,Default,,0,0,0,,They have minimal latency.
 Dialogue: 0,1:01:13.04,1:01:13.96,Default,,0,0,0,,They work offline,
 Dialogue: 0,1:01:13.96,1:01:16.08,Default,,0,0,0,,can support end-to-end encryption.
 Dialogue: 0,1:01:16.08,1:01:18.04,Default,,0,0,0,,Some cons is that they're targeted
-Dialogue: 0,1:01:18.04,1:01:20.44,Default,,0,0,0,,for ad data that's shared\Nin small groups only,
+Dialogue: 0,1:01:18.04,1:01:20.44,Default,,0,0,0,,for data that's shared\Nin small groups only,
 Dialogue: 0,1:01:20.44,1:01:22.60,Default,,0,0,0,,it's because everyone\Nhas to share the state
 Dialogue: 0,1:01:22.60,1:01:23.64,Default,,0,0,0,,with each other and sync up.
 Dialogue: 0,1:01:23.64,1:01:25.72,Default,,0,0,0,,So you don't want the group to be too big.
@@ -1115,10 +1115,10 @@ Dialogue: 0,1:02:36.80,1:02:40.68,Default,,0,0,0,,you can use this to add\Nopera
 Dialogue: 0,1:02:40.68,1:02:41.52,Default,,0,0,0,,So for instance,
 Dialogue: 0,1:02:41.52,1:02:43.68,Default,,0,0,0,,we show how to take an\Ninteger counter CRDT
 Dialogue: 0,1:02:43.68,1:02:45.92,Default,,0,0,0,,and add multiplication operations.
-Dialogue: 0,1:02:45.92,1:02:48.92,Default,,0,0,0,,or take off this CRDT\Nadd a reverse operation,
+Dialogue: 0,1:02:45.92,1:02:48.92,Default,,0,0,0,,or take a list CRDT\Nadd a reverse operation,
 Dialogue: 0,1:02:48.92,1:02:52.44,Default,,0,0,0,,or take a dictionary CRDT\Nthat maps keys to values
 Dialogue: 0,1:02:52.44,1:02:54.44,Default,,0,0,0,,and add a functional mapping operation,
-Dialogue: 0,1:02:54.44,1:02:55.76,Default,,0,0,0,,which applies sum operation
+Dialogue: 0,1:02:54.44,1:02:55.76,Default,,0,0,0,,which applies some operation
 Dialogue: 0,1:02:55.76,1:02:57.40,Default,,0,0,0,,to every value in the dictionary.
 Dialogue: 0,1:02:58.76,1:03:01.28,Default,,0,0,0,,You can also use our semidirect\Nproduct for decomposition,
 Dialogue: 0,1:03:01.28,1:03:03.96,Default,,0,0,0,,by which I mean taking\Nthe existing CRDT design,
@@ -1210,7 +1210,7 @@ Dialogue: 0,1:05:46.64,1:05:48.44,Default,,0,0,0,,The message,\NBob receives it,
 Dialogue: 0,1:05:48.44,1:05:50.68,Default,,0,0,0,,indicated by the first\Ndiagonal orange arrow.
 Dialogue: 0,1:05:50.68,1:05:52.72,Default,,0,0,0,,And then, Bob sends\Nhis own operation,
 Dialogue: 0,1:05:52.72,1:05:54.24,Default,,0,0,0,,like "Remove milk," here.
-Dialogue: 0,1:05:54.24,1:05:56.12,Default,,0,0,0,,Then, the first one\Nassesses the second one.
+Dialogue: 0,1:05:54.24,1:05:56.12,Default,,0,0,0,,Then, the first one\Nis less than the second one.
 Dialogue: 0,1:05:56.12,1:05:58.20,Default,,0,0,0,,So, here, "Add milk" is\Nless than "Remove milk,"
 Dialogue: 0,1:05:58.20,1:06:00.32,Default,,0,0,0,,in the causal order.
 Dialogue: 0,1:06:00.32,1:06:01.96,Default,,0,0,0,,And the third rule is transitivity.
@@ -1218,7 +1218,7 @@ Dialogue: 0,1:06:01.96,1:06:02.96,Default,,0,0,0,,So, by what I just said,
 Dialogue: 0,1:06:02.96,1:06:04.56,Default,,0,0,0,,"Add milk" is less\Nthan "Remove milk,"
 Dialogue: 0,1:06:04.56,1:06:05.88,Default,,0,0,0,,and by the first rule, again,
 Dialogue: 0,1:06:05.88,1:06:08.08,Default,,0,0,0,,"Remove milk" is less\Nthan "Add eggs."
-Dialogue: 0,1:06:08.08,1:06:09.92,Default,,0,0,0,,So then, we dictate that, also,
+Dialogue: 0,1:06:08.08,1:06:09.92,Default,,0,0,0,,So then, we detect  that, also,
 Dialogue: 0,1:06:09.92,1:06:11.36,Default,,0,0,0,,"Add milk" is less than "Add eggs."
 Dialogue: 0,1:06:11.36,1:06:13.52,Default,,0,0,0,,A transitivity. OK?
 Dialogue: 0,1:06:14.32,1:06:16.00,Default,,0,0,0,,So, note that this\Nis a partial order,
@@ -1232,11 +1232,11 @@ Dialogue: 0,1:06:29.16,1:06:31.76,Default,,0,0,0,,Basically, you can attach\Nmet
 Dialogue: 0,1:06:31.76,1:06:33.12,Default,,0,0,0,,when you send them over the network,
 Dialogue: 0,1:06:33.12,1:06:35.80,Default,,0,0,0,,so that everyone agrees on\Nwhat the causal order is.
 Dialogue: 0,1:06:35.80,1:06:37.16,Default,,0,0,0,,And then, this lets\Nyou make definitions,
-Dialogue: 0,1:06:37.16,1:06:38.84,Default,,0,0,0,,like, for a sexier DT,
+Dialogue: 0,1:06:37.16,1:06:38.84,Default,,0,0,0,,like, for a set CRDT,
 Dialogue: 0,1:06:38.84,1:06:40.60,Default,,0,0,0,,you could say X is in the set,
 Dialogue: 0,1:06:40.60,1:06:42.48,Default,,0,0,0,,if there is an add x operation
 Dialogue: 0,1:06:42.48,1:06:46.16,Default,,0,0,0,,that is not less than\Nany remove X operation. OK?
-Dialogue: 0,1:06:46.16,1:06:49.28,Default,,0,0,0,,Because this will assess\Nthe reasons about causality,
+Dialogue: 0,1:06:46.16,1:06:49.28,Default,,0,0,0,,Because this will respect\Nthe reasoning about causality,
 Dialogue: 0,1:06:49.28,1:06:50.88,Default,,0,0,0,,there's no possibility of conflict.
 Dialogue: 0,1:06:50.88,1:06:53.00,Default,,0,0,0,,Even if people get operations\Nin different orders,
 Dialogue: 0,1:06:53.00,1:06:57.16,Default,,0,0,0,,they'll come with the same result.
@@ -1363,9 +1363,9 @@ Dialogue: 0,1:11:14.48,1:11:16.16,Default,,0,0,0,,et cetera, times M,
 Dialogue: 0,1:11:16.16,1:11:18.08,Default,,0,0,0,,or mult N long through mult N K,
 Dialogue: 0,1:11:18.08,1:11:19.64,Default,,0,0,0,,or all the multiply operations
 Dialogue: 0,1:11:19.64,1:11:21.16,Default,,0,0,0,,that you've previously received
-Dialogue: 0,1:11:21.16,1:11:25.44,Default,,0,0,0,,that are concurrent\Nto the all new (INAUDIBLE) OK?
+Dialogue: 0,1:11:21.16,1:11:25.44,Default,,0,0,0,,that are concurrent\Nto the one you've just received, OK?
 Dialogue: 0,1:11:25.44,1:11:27.52,Default,,0,0,0,,And this rule is\Nthe same general rule
-Dialogue: 0,1:11:27.52,1:11:30.52,Default,,0,0,0,,that we use in the full\Ncentimeter product construction.
+Dialogue: 0,1:11:27.52,1:11:30.52,Default,,0,0,0,,that we use in the full\Nsemiproduct construction.
 Dialogue: 0,1:11:30.52,1:11:32.28,Default,,0,0,0,,Basically, you give some action,
 Dialogue: 0,1:11:32.28,1:11:34.84,Default,,0,0,0,,which says, "If\NI receive one operation
 Dialogue: 0,1:11:34.84,1:11:37.72,Default,,0,0,0,,"after a concurrent\Noperation of another one,
@@ -1375,25 +1375,25 @@ Dialogue: 0,1:11:41.24,1:11:43.72,Default,,0,0,0,,subject to algebraic\Nconstrai
 Dialogue: 0,1:11:43.72,1:11:46.96,Default,,0,0,0,,and on the action.
 Dialogue: 0,1:11:46.96,1:11:50.40,Default,,0,0,0,,OK, so that's all I wanted to\Nsay about our constructions.
 Dialogue: 0,1:11:50.40,1:11:51.56,Default,,0,0,0,,Just a quick recap.
-Dialogue: 0,1:11:51.56,1:11:53.68,Default,,0,0,0,,CUDTs are our next\Nprogramming languages,
-Dialogue: 0,1:11:53.68,1:11:55.24,Default,,0,0,0,,ways of building systems that act
-Dialogue: 0,1:11:55.24,1:11:57.48,Default,,0,0,0,,on a shared state, like WhatApps.
+Dialogue: 0,1:11:51.56,1:11:53.68,Default,,0,0,0,,CRDTs are a neat\Nprogramming languages,
+Dialogue: 0,1:11:53.68,1:11:55.24,Default,,0,0,0,,way of building systems that act
+Dialogue: 0,1:11:55.24,1:11:57.48,Default,,0,0,0,,on a shared state, like web apps.
 Dialogue: 0,1:11:57.48,1:11:58.56,Default,,0,0,0,,The way you use them is that
 Dialogue: 0,1:11:58.56,1:12:00.40,Default,,0,0,0,,program will just replaced\Nordinary data types
-Dialogue: 0,1:12:00.40,1:12:02.64,Default,,0,0,0,,with CUDT versions\Non the client side,
+Dialogue: 0,1:12:00.40,1:12:02.64,Default,,0,0,0,,with CRDT versions\Non the client side,
 Dialogue: 0,1:12:02.64,1:12:06.48,Default,,0,0,0,,then server is just\Na messaging server.
 Dialogue: 0,1:12:06.48,1:12:07.48,Default,,0,0,0,,You want more\Ninformation about these,
-Dialogue: 0,1:12:07.48,1:12:10.16,Default,,0,0,0,,I encourage you to check\Nout the website, CUDT.tech,
+Dialogue: 0,1:12:07.48,1:12:10.16,Default,,0,0,0,,I encourage you to check\Nout the website, CRDT.tech,
 Dialogue: 0,1:12:10.16,1:12:13.40,Default,,0,0,0,,which has a collection\Nof nice resources.
-Dialogue: 0,1:12:13.40,1:12:16.12,Default,,0,0,0,,Some of our work represent\Nthe (INAUDIBLE) product,
-Dialogue: 0,1:12:16.12,1:12:19.12,Default,,0,0,0,,which is a compositional\Ndesign technique for CUDTs.
-Dialogue: 0,1:12:19.12,1:12:22.52,Default,,0,0,0,,These all help between operations by\Nrecently about personality,
-Dialogue: 0,1:12:22.52,1:12:25.72,Default,,0,0,0,,the uniform weight,\Nso that you don't have to.
+Dialogue: 0,1:12:13.40,1:12:16.12,Default,,0,0,0,,So our work present\Nthe semidirect product,
+Dialogue: 0,1:12:16.12,1:12:19.12,Default,,0,0,0,,which is a compositional\Ndesign technique for CRDTs.
+Dialogue: 0,1:12:19.12,1:12:22.52,Default,,0,0,0,,These resove conflicts between operations by\Nreasoning about causality,
+Dialogue: 0,1:12:22.52,1:12:25.72,Default,,0,0,0,,in a uniform way,\Nso that you don't have to.
 Dialogue: 0,1:12:25.72,1:12:28.08,Default,,0,0,0,,And it enables a new\NCRDT design workflow,
 Dialogue: 0,1:12:28.08,1:12:30.64,Default,,0,0,0,,where you start with a data type\Nthat you want to replicate,
 Dialogue: 0,1:12:31.28,1:12:32.68,Default,,0,0,0,,you design communicative data types,
 Dialogue: 0,1:12:32.68,1:12:34.12,Default,,0,0,0,,for subsets of operations,
-Dialogue: 0,1:12:34.12,1:12:37.56,Default,,0,0,0,,and then you group these together\Nwith some of direct cotics.
+Dialogue: 0,1:12:34.12,1:12:37.56,Default,,0,0,0,,and then you group these together\Nwith semidirect products.
 Dialogue: 0,1:12:37.56,1:12:39.84,Default,,0,0,0,,OK, that's all I have to say,\Nso thanks for watching,
 Dialogue: 0,1:12:39.84,1:12:44.84,Default,,0,0,0,,and I hope there'll\Nbe some questions.
 Dialogue: 0,1:12:46.92,1:12:51.92,Default,,0,0,0,,(APPLAUSE)

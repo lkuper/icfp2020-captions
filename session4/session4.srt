@@ -4855,7 +4855,7 @@ to their own copy of the state.
 
 1045
 01:00:46,960 --> 01:00:48,280
-And CRDTs neat
+And CRDTs are neat
 
 1046
 01:00:48,280 --> 01:00:49,600
@@ -4877,7 +4877,7 @@ And in particular,
 1050
 01:00:54,480 --> 01:00:56,680
 the way you design them is
-principal to mathematical.
+principled and mathematical.
 
 1051
 01:00:56,680 --> 01:00:57,520
@@ -4932,7 +4932,7 @@ Some cons is that they're targeted
 
 1063
 01:01:18,040 --> 01:01:20,440
-for ad data that's shared
+for data that's shared
 in small groups only,
 
 1064
@@ -5114,7 +5114,7 @@ and add multiplication operations.
 
 1105
 01:02:45,920 --> 01:02:48,920
-or take off this CRDT
+or take a list CRDT
 add a reverse operation,
 
 1106
@@ -5128,7 +5128,7 @@ and add a functional mapping operation,
 
 1108
 01:02:54,440 --> 01:02:55,760
-which applies sum operation
+which applies some operation
 
 1109
 01:02:55,760 --> 01:02:57,400
@@ -5521,7 +5521,7 @@ like "Remove milk," here.
 1200
 01:05:54,240 --> 01:05:56,120
 Then, the first one
-assesses the second one.
+is less than the second one.
 
 1201
 01:05:56,120 --> 01:05:58,200
@@ -5556,7 +5556,7 @@ than "Add eggs."
 
 1208
 01:06:08,080 --> 01:06:09,920
-So then, we dictate that, also,
+So then, we detect  that, also,
 
 1209
 01:06:09,920 --> 01:06:11,360
@@ -5621,7 +5621,7 @@ you make definitions,
 
 1222
 01:06:37,160 --> 01:06:38,840
-like, for a sexier DT,
+like, for a set CRDT,
 
 1223
 01:06:38,840 --> 01:06:40,600
@@ -5638,8 +5638,8 @@ any remove X operation. OK?
 
 1226
 01:06:46,160 --> 01:06:49,280
-Because this will assess
-the reasons about causality,
+Because this will respect
+the reasoning about causality,
 
 1227
 01:06:49,280 --> 01:06:50,880
@@ -6217,7 +6217,7 @@ that you've previously received
 1353
 01:11:21,160 --> 01:11:25,440
 that are concurrent
-to the all new (INAUDIBLE) OK?
+to the one you've just received, OK?
 
 1354
 01:11:25,440 --> 01:11:27,520
@@ -6227,7 +6227,7 @@ the same general rule
 1355
 01:11:27,520 --> 01:11:30,520
 that we use in the full
-centimeter product construction.
+semiproduct construction.
 
 1356
 01:11:30,520 --> 01:11:32,280
@@ -6272,16 +6272,16 @@ Just a quick recap.
 
 1365
 01:11:51,560 --> 01:11:53,680
-CUDTs are our next
+CRDTs are a neat
 programming languages,
 
 1366
 01:11:53,680 --> 01:11:55,240
-ways of building systems that act
+way of building systems that act
 
 1367
 01:11:55,240 --> 01:11:57,480
-on a shared state, like WhatApps.
+on a shared state, like web apps.
 
 1368
 01:11:57,480 --> 01:11:58,560
@@ -6294,7 +6294,7 @@ ordinary data types
 
 1370
 01:12:00,400 --> 01:12:02,640
-with CUDT versions
+with CRDT versions
 on the client side,
 
 1371
@@ -6310,7 +6310,7 @@ information about these,
 1373
 01:12:07,480 --> 01:12:10,160
 I encourage you to check
-out the website, CUDT.tech,
+out the website, CRDT.tech,
 
 1374
 01:12:10,160 --> 01:12:13,400
@@ -6319,22 +6319,22 @@ of nice resources.
 
 1375
 01:12:13,400 --> 01:12:16,120
-Some of our work represent
-the (INAUDIBLE) product,
+So our work present
+the semidirect product,
 
 1376
 01:12:16,120 --> 01:12:19,120
 which is a compositional
-design technique for CUDTs.
+design technique for CRDTs.
 
 1377
 01:12:19,120 --> 01:12:22,520
-These all help between operations by
-recently about personality,
+These resove conflicts between operations by
+reasoning about causality,
 
 1378
 01:12:22,520 --> 01:12:25,720
-the uniform weight,
+in a uniform way,
 so that you don't have to.
 
 1379
@@ -6358,7 +6358,7 @@ for subsets of operations,
 1383
 01:12:34,120 --> 01:12:37,560
 and then you group these together
-with some of direct cotics.
+with semidirect products.
 
 1384
 01:12:37,560 --> 01:12:39,840
