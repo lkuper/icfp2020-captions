@@ -2168,15 +2168,15 @@ Dialogue: 0,1:58:29.04,1:58:33.64,Default,,0,0,0,,In this work, we consider\Nour
 Dialogue: 0,1:58:33.64,1:58:36.52,Default,,0,0,0,,to combining two\Nprogramming features,
 Dialogue: 0,1:58:36.52,1:58:40.44,Default,,0,0,0,,algebraic effects handlers\Nand polymorphism.
 Dialogue: 0,1:58:41.04,1:58:46.84,Default,,0,0,0,,Algebraic effect handlers is\Nan approach to user-defined effects.
-Dialogue: 0,1:58:46.84,1:58:53.20,Default,,0,0,0,,And they can also structure effectful\Nprograms in a more general way.
+Dialogue: 0,1:58:46.84,1:58:53.20,Default,,0,0,0,,And they can also structure effectful\Nprograms in a modular way.
 Dialogue: 0,1:58:53.20,1:58:58.20,Default,,0,0,0,,Thanks to the separation of interface\Nand implementation of effect.
 Dialogue: 0,1:58:58.92,1:59:02.04,Default,,0,0,0,,Using algebraic effect handlers,\Nwe can define various effects,
-Dialogue: 0,1:59:02.04,1:59:07.04,Default,,0,0,0,,such as an exception backtracking\Nstate, and interactions by you.
+Dialogue: 0,1:59:02.04,1:59:07.04,Default,,0,0,0,,such as an exception backtracking\Nstate, and interactions by user.
 Dialogue: 0,1:59:08.40,1:59:13.44,Default,,0,0,0,,Another feature we consider in\Nthis work is polymorphism.
 Dialogue: 0,1:59:13.44,1:59:16.96,Default,,0,0,0,,In particular, we consider\Nimplicit polymorphism
-Dialogue: 0,1:59:16.96,1:59:19.88,Default,,0,0,0,,as let-polymorphism.
+Dialogue: 0,1:59:16.96,1:59:19.88,Default,,0,0,0,,as in let-polymorphism.
 Dialogue: 0,1:59:19.88,1:59:23.28,Default,,0,0,0,,And by combining these\Ntwo programming features,
-Dialogue: 0,1:59:23.28,1:59:28.28,Default,,0,0,0,,we can make not only exceptions,\Nbut also effects are polymorphic.
+Dialogue: 0,1:59:23.28,1:59:28.28,Default,,0,0,0,,we can make not only expressions,\Nbut also effects polymorphic.
 Dialogue: 0,1:59:30.68,1:59:35.48,Default,,0,0,0,,So, let's show one\Nexample of using your
 Dialogue: 0,1:59:35.48,1:59:39.36,Default,,0,0,0,,algebraic effect handlers\Nand polymorphism.
 Dialogue: 0,1:59:39.36,1:59:44.24,Default,,0,0,0,,Algebraic effects handlers\Nprovide us three constructs
@@ -2186,7 +2186,7 @@ Dialogue: 0,1:59:52.84,1:59:57.84,Default,,0,0,0,,which is used in the first\Nli
 Dialogue: 0,1:59:58.68,2:00:06.20,Default,,0,0,0,,Here, the operation 'choose' is declared\Nwith this polymorphic type.
 Dialogue: 0,2:00:06.20,2:00:10.20,Default,,0,0,0,,So, this type means that the 'choose'\Noperation takes two arguments,
 Dialogue: 0,2:00:10.20,2:00:12.76,Default,,0,0,0,,and returns either of them.
-Dialogue: 0,2:00:13.28,2:00:17.00,Default,,0,0,0,,Here, polymorphism are\Nthose type of 'choose'
+Dialogue: 0,2:00:13.28,2:00:17.00,Default,,0,0,0,,Here, polymorphism allows\Nthe type of 'choose'
 Dialogue: 0,2:00:17.00,2:00:20.92,Default,,0,0,0,,to abstract over\Nthe type of argument.
 Dialogue: 0,2:00:23.80,2:00:25.56,Default,,0,0,0,,The second construct\Nis operation calls,
 Dialogue: 0,2:00:25.56,2:00:29.16,Default,,0,0,0,,which is used in these expressions.
@@ -2196,18 +2196,18 @@ Dialogue: 0,2:00:41.08,2:00:46.88,Default,,0,0,0,,So, both of these functions ca
 Dialogue: 0,2:00:47.48,2:00:52.40,Default,,0,0,0,,So, the result of this\Noperation calls is also
 Dialogue: 0,2:00:52.40,2:00:55.84,Default,,0,0,0,,assigned the same polymorphic type.
 Dialogue: 0,2:00:56.76,2:01:03.48,Default,,0,0,0,,The third construct is\Nfor 'define' effect.
-Dialogue: 0,2:01:04.44,2:01:08.28,Default,,0,0,0,,(INAUDIBLE) which is achieved by\Nthe use of effects handlers.
+Dialogue: 0,2:01:04.44,2:01:08.28,Default,,0,0,0,,and which is achieved by\Nthe use of effects handlers.
 Dialogue: 0,2:01:08.28,2:01:13.40,Default,,0,0,0,,So, if you have handlers, a key\Ncomponent in defining effects,
-Dialogue: 0,2:01:13.40,2:01:16.96,Default,,0,0,0,,but in this talk, I only\Nthe deals of them.
-Dialogue: 0,2:01:19.52,2:01:26.72,Default,,0,0,0,,So, the program we consider\Nin this talk is (INAUDIBLE)
+Dialogue: 0,2:01:13.40,2:01:16.96,Default,,0,0,0,,but in this talk, I omit\Nthe details of them.
+Dialogue: 0,2:01:19.52,2:01:26.72,Default,,0,0,0,,So, the problem we consider\Nin this talk is (INAUDIBLE)
 Dialogue: 0,2:01:26.72,2:01:30.80,Default,,0,0,0,,combining algebraic library;\Ncombining algebraic effect handlers
 Dialogue: 0,2:01:30.80,2:01:32.20,Default,,0,0,0,,and implicit polymorphism.
-Dialogue: 0,2:01:32.68,2:01:36.48,Default,,0,0,0,,So, this is a program because\Nthe ninth combination
+Dialogue: 0,2:01:32.68,2:01:36.48,Default,,0,0,0,,So, this is a problem because\Nthe right combination
 Dialogue: 0,2:01:36.48,2:01:38.80,Default,,0,0,0,,of these programming features
 Dialogue: 0,2:01:38.80,2:01:42.64,Default,,0,0,0,,makes a statically\Ntyped language unsafe.
 Dialogue: 0,2:01:42.64,2:01:47.32,Default,,0,0,0,,This is because algebraic effect\Nhandles have the ability
 Dialogue: 0,2:01:47.32,2:01:50.20,Default,,0,0,0,,to manipulate delimited\Ncontinuations.
-Dialogue: 0,2:01:50.20,2:01:56.04,Default,,0,0,0,,But the ninth combinations\Nor the use of continuations
+Dialogue: 0,2:01:50.20,2:01:56.04,Default,,0,0,0,,But the combination\Nof the use of continuations
 Dialogue: 0,2:01:56.04,2:02:01.04,Default,,0,0,0,,and implicit polymorphism\Nis known to be unsafe.
 Dialogue: 0,2:02:01.04,2:02:06.04,Default,,0,0,0,,So, this is a problem we attack\Nin this program, in this work.
 Dialogue: 0,2:02:06.60,2:02:08.92,Default,,0,0,0,,But this is a classic problem.
@@ -2218,20 +2218,20 @@ Dialogue: 0,2:02:22.20,2:02:27.20,Default,,0,0,0,,restricting operation calls\Ni
 Dialogue: 0,2:02:28.04,2:02:30.48,Default,,0,0,0,,For the running examples,
 Dialogue: 0,2:02:30.48,2:02:36.60,Default,,0,0,0,,the approaches in this category\Nrestrict these expressions,
 Dialogue: 0,2:02:36.60,2:02:41.72,Default,,0,0,0,,because this is an operation call\Nin a polymorphic expression.
-Dialogue: 0,2:02:41.72,2:02:46.32,Default,,0,0,0,,For example, value restriction,\Nweak polymorphism closure typing
+Dialogue: 0,2:02:41.72,2:02:46.32,Default,,0,0,0,,For example, value restriction,\Nweak polymorphism, closure typing
 Dialogue: 0,2:02:46.32,2:02:49.44,Default,,0,0,0,,belong to this category.
 Dialogue: 0,2:02:49.44,2:02:53.24,Default,,0,0,0,,An advantage of using\Nthese approaches is that
-Dialogue: 0,2:02:53.24,2:02:57.04,Default,,0,0,0,,they can otherwise any effect
-Dialogue: 0,2:02:57.04,2:03:01.28,Default,,0,0,0,,including (INAUDIBLE)\Nunder control operators.
+Dialogue: 0,2:02:53.24,2:02:57.04,Default,,0,0,0,,they can address any effect
+Dialogue: 0,2:02:57.04,2:03:01.28,Default,,0,0,0,,including ML-style reference\Nunder control operators.
 Dialogue: 0,2:03:01.88,2:03:06.36,Default,,0,0,0,,However, the disadvantage\Nof these approaches is that
 Dialogue: 0,2:03:06.36,2:03:11.36,Default,,0,0,0,,they impose a restriction\Non any effect code.
 Dialogue: 0,2:03:12.04,2:03:14.60,Default,,0,0,0,,Because, for example,
 Dialogue: 0,2:03:14.60,2:03:19.28,Default,,0,0,0,,even if the operation call\Ndoesn't need restriction.
 Dialogue: 0,2:03:19.28,2:03:23.28,Default,,0,0,0,,For example, we found\Nin the previous work,
-Dialogue: 0,2:03:23.28,2:03:28.76,Default,,0,0,0,,exceptions on the backtracking\Ndon't need or restriction.
-Dialogue: 0,2:03:28.76,2:03:35.04,Default,,0,0,0,,But the approaches in this category\Ndon't distinguish effect.
-Dialogue: 0,2:03:35.04,2:03:37.76,Default,,0,0,0,,That means they don't need\Na restriction on the effects,
-Dialogue: 0,2:03:37.76,2:03:39.96,Default,,0,0,0,,and effects that don't\Nneed a restriction.
+Dialogue: 0,2:03:23.28,2:03:28.76,Default,,0,0,0,,exceptions on the backtracking\Ndon't need a restriction.
+Dialogue: 0,2:03:28.76,2:03:35.04,Default,,0,0,0,,But the approaches in this category\Ndon't distinguish effect
+Dialogue: 0,2:03:35.04,2:03:37.76,Default,,0,0,0,,that need\Na restriction from the effects,
+Dialogue: 0,2:03:37.76,2:03:39.96,Default,,0,0,0,,that don't\Nneed a restriction.
 Dialogue: 0,2:03:40.48,2:03:44.40,Default,,0,0,0,,So, they impose\Na restriction for all effects.
 Dialogue: 0,2:03:46.56,2:03:49.60,Default,,0,0,0,,As a complimentary approach\Nin the previous work,
 Dialogue: 0,2:03:49.60,2:03:56.48,Default,,0,0,0,,we provided our new approach to\Nrestricting effect handlers
@@ -2244,7 +2244,7 @@ Dialogue: 0,2:04:15.60,2:04:20.24,Default,,0,0,0,,and it rejects unsafe\Neffects
 Dialogue: 0,2:04:20.84,2:04:26.80,Default,,0,0,0,,But the problem of\Nthis approach is that
 Dialogue: 0,2:04:26.80,2:04:29.76,Default,,0,0,0,,it is not clear how to mix
 Dialogue: 0,2:04:29.76,2:04:34.32,Default,,0,0,0,,safe and unsafe effects\Nin a single program.
-Dialogue: 0,2:04:34.32,2:04:38.80,Default,,0,0,0,,So, this could be a problem\Nin the general purpose,
+Dialogue: 0,2:04:34.32,2:04:38.80,Default,,0,0,0,,So, this could be a problem\Nin a general purpose program,
 Dialogue: 0,2:04:38.80,2:04:42.88,Default,,0,0,0,,because we may want to use
 Dialogue: 0,2:04:42.88,2:04:47.88,Default,,0,0,0,,a safe and unsafe effect\Nin a single program.
 Dialogue: 0,2:04:50.40,2:04:54.68,Default,,0,0,0,,To solve this problem, we\Npropose a new approach
@@ -2255,7 +2255,7 @@ Dialogue: 0,2:05:07.80,2:05:12.32,Default,,0,0,0,,We can determine whether\Nany 
 Dialogue: 0,2:05:12.32,2:05:15.60,Default,,0,0,0,,only by examining how this is like.
 Dialogue: 0,2:05:18.68,2:05:21.20,Default,,0,0,0,,OK, so, let me summarize our work.
 Dialogue: 0,2:05:21.72,2:05:26.36,Default,,0,0,0,,We propose a signature restriction\Nwhich can ensure safety
-Dialogue: 0,2:05:26.36,2:05:29.28,Default,,0,0,0,,or effects with polymorphism.
+Dialogue: 0,2:05:26.36,2:05:29.28,Default,,0,0,0,,of effects with polymorphism.
 Dialogue: 0,2:05:29.28,2:05:33.12,Default,,0,0,0,,And the signature restriction\Naccepts only effects that can
 Dialogue: 0,2:05:33.12,2:05:37.20,Default,,0,0,0,,be safely used anywhere, even\Nin polymorphic expressions
 Dialogue: 0,2:05:37.20,2:05:40.12,Default,,0,0,0,,without any other restriction.
@@ -2266,8 +2266,8 @@ Dialogue: 0,2:05:51.08,2:05:55.72,Default,,0,0,0,,But how it is still\Npermissiv
 Dialogue: 0,2:05:55.72,2:06:00.96,Default,,0,0,0,,it can accept a many useful\Neffects and it is also scalable.
 Dialogue: 0,2:06:00.96,2:06:05.32,Default,,0,0,0,,It means that their signature\Nrestriction can easily support
 Dialogue: 0,2:06:05.32,2:06:11.12,Default,,0,0,0,,basic programming constructs\Nincluding products, sums and lists.
-Dialogue: 0,2:06:13.52,2:06:17.00,Default,,0,0,0,,And two shows the correctness\Nof this signature restriction.
-Dialogue: 0,2:06:17.00,2:06:20.56,Default,,0,0,0,,We provide for simple type system
+Dialogue: 0,2:06:13.52,2:06:17.00,Default,,0,0,0,,And to shows the correctness\Nof this signature restriction.
+Dialogue: 0,2:06:17.00,2:06:20.56,Default,,0,0,0,,We provided a simple type system
 Dialogue: 0,2:06:20.56,2:06:24.88,Default,,0,0,0,,for algebraic effect\Nhandlers and polymorphism.
 Dialogue: 0,2:06:24.88,2:06:28.28,Default,,0,0,0,,We show soundness of\Nthe simple type system
 Dialogue: 0,2:06:28.28,2:06:33.28,Default,,0,0,0,,by assuming all effects satisfy\Nthe signature restriction.
@@ -2277,13 +2277,13 @@ Dialogue: 0,2:06:44.84,2:06:48.44,Default,,0,0,0,,we cannot use both effects
 Dialogue: 0,2:06:48.44,2:06:52.96,Default,,0,0,0,,that satisfy and don't satisfy\Nthe signature restriction.
 Dialogue: 0,2:06:52.96,2:06:57.76,Default,,0,0,0,,So, to solve this situation,\Nwe propose an effect system
 Dialogue: 0,2:06:57.76,2:07:03.56,Default,,0,0,0,,where both safe effects\Nand unsafe effects can be used.
-Dialogue: 0,2:07:06.08,2:07:10.60,Default,,0,0,0,,And more precisely, in\Nthe English effect system,
+Dialogue: 0,2:07:06.08,2:07:10.60,Default,,0,0,0,,And more precisely, in\Nthis effect system,
 Dialogue: 0,2:07:10.60,2:07:14.00,Default,,0,0,0,,effects that satisfy\Nthe signature restriction can be used
 Dialogue: 0,2:07:14.00,2:07:16.68,Default,,0,0,0,,anywhere without a restriction.
 Dialogue: 0,2:07:16.68,2:07:20.32,Default,,0,0,0,,But if effects don't satisfy\Nthe signature restriction,
 Dialogue: 0,2:07:20.32,2:07:25.32,Default,,0,0,0,,then they can be used only\Nin monomorphic expressions.
 Dialogue: 0,2:07:26.16,2:07:29.72,Default,,0,0,0,,We also provide\Nan artefact that implements
-Dialogue: 0,2:07:29.72,2:07:33.36,Default,,0,0,0,,a tiny small override functional\Nprogramming language,
+Dialogue: 0,2:07:29.72,2:07:33.36,Default,,0,0,0,,a tiny small ML-like functional\Nprogramming language,
 Dialogue: 0,2:07:33.36,2:07:38.88,Default,,0,0,0,,where all effects are supposed to\Nsatisfy the signature restriction.
 Dialogue: 0,2:07:39.36,2:07:43.40,Default,,0,0,0,,And this implementation does not\Ncover the effect system part.
 Dialogue: 0,2:07:45.40,2:07:49.64,Default,,0,0,0,,OK, so this is a quick\Nsummary of our work.
@@ -2294,23 +2294,23 @@ Dialogue: 0,2:08:05.48,2:08:09.32,Default,,0,0,0,,So, let's suppose we\Nconsider
 Dialogue: 0,2:08:09.32,2:08:12.32,Default,,0,0,0,,with this polymorphic type
 Dialogue: 0,2:08:12.32,2:08:18.72,Default,,0,0,0,,Here, the signature restriction\Ndetermines the safety of effect
 Dialogue: 0,2:08:19.28,2:08:23.40,Default,,0,0,0,,only by examining\Nthe polarities of alpha
-Dialogue: 0,2:08:23.40,2:08:27.32,Default,,0,0,0,,in argument type one\Nand return type two.
+Dialogue: 0,2:08:23.40,2:08:27.32,Default,,0,0,0,,in argument type tau one\Nand return type tau two.
 Dialogue: 0,2:08:27.80,2:08:34.04,Default,,0,0,0,,But formally, we can say operation\Nsatisfy the signature restriction,
 Dialogue: 0,2:08:34.04,2:08:37.80,Default,,0,0,0,,if and only if alpha\Noccurs only negatively,
-Dialogue: 0,2:08:37.80,2:08:42.96,Default,,0,0,0,,or strictly positively\Nin argument type one.
-Dialogue: 0,2:08:42.96,2:08:47.96,Default,,0,0,0,,And alpha occurs only\Npositively in return type two.
+Dialogue: 0,2:08:37.80,2:08:42.96,Default,,0,0,0,,or strictly positively\Nin argument type tau one.
+Dialogue: 0,2:08:42.96,2:08:47.96,Default,,0,0,0,,And alpha occurs only\Npositively in return type tau two.
 Dialogue: 0,2:08:48.52,2:08:54.72,Default,,0,0,0,,Here, let me remember what that\Nmeans by strictly positively.
 Dialogue: 0,2:08:55.40,2:08:58.32,Default,,0,0,0,,So, in this simple function type,
 Dialogue: 0,2:08:58.32,2:09:04.52,Default,,0,0,0,,the occurrences of alpha one\Nand alpha three are positive,
 Dialogue: 0,2:09:05.12,2:09:09.44,Default,,0,0,0,,but only the occurrence of alpha\Nthree is strictly positive.
-Dialogue: 0,2:09:09.44,2:09:12.36,Default,,0,0,0,,This is because the openness\Nof alpha three is reached
-Dialogue: 0,2:09:12.36,2:09:16.76,Default,,0,0,0,,by going through only\Nthe positive part of function five,
+Dialogue: 0,2:09:09.44,2:09:12.36,Default,,0,0,0,,This is because the occurrence\Nof alpha three is reached
+Dialogue: 0,2:09:12.36,2:09:16.76,Default,,0,0,0,,by going through only\Nthe positive part of function phi,
 Dialogue: 0,2:09:16.76,2:09:21.52,Default,,0,0,0,,but the occurrence of\Nalpha one is reached by
-Dialogue: 0,2:09:21.52,2:09:26.04,Default,,0,0,0,,going through a negative part\Nor functional type constructor.
+Dialogue: 0,2:09:21.52,2:09:26.04,Default,,0,0,0,,going through a negative part\Nof functional type constructor.
 Dialogue: 0,2:09:26.04,2:09:27.84,Default,,0,0,0,,So, this is the difference of
 Dialogue: 0,2:09:27.84,2:09:32.40,Default,,0,0,0,,the polarities of alpha\None and alpha three.
 Dialogue: 0,2:09:32.92,2:09:38.08,Default,,0,0,0,,And by using this\Ndefinitions, we check
-Dialogue: 0,2:09:38.08,2:09:44.88,Default,,0,0,0,,if our three operation calls\Nsatisfy the signature restriction.
+Dialogue: 0,2:09:38.08,2:09:44.88,Default,,0,0,0,,our three operation calls\Nsatisfy the signature restriction.
 Dialogue: 0,2:09:45.48,2:09:48.04,Default,,0,0,0,,The first example is 'choose'.
 Dialogue: 0,2:09:48.04,2:09:51.88,Default,,0,0,0,,So, we can easily find this type.
 Dialogue: 0,2:09:52.36,2:09:55.96,Default,,0,0,0,,This type of 'choose' satisfies\Nthe signature restriction
@@ -2322,8 +2322,8 @@ Dialogue: 0,2:10:15.28,2:10:19.68,Default,,0,0,0,,and we can apply similar discu
 Dialogue: 0,2:10:19.68,2:10:26.20,Default,,0,0,0,,For the satisfied operations,\Nthis whole function or
 Dialogue: 0,2:10:26.20,2:10:29.96,Default,,0,0,0,,this argument type\Nmay seem complicated,
 Dialogue: 0,2:10:29.96,2:10:32.96,Default,,0,0,0,,but their priority\Nchecking is very easy.
-Dialogue: 0,2:10:32.96,2:10:36.76,Default,,0,0,0,,We can easily find out if this type,
-Dialogue: 0,2:10:36.76,2:10:43.44,Default,,0,0,0,,the bond type variable alpha\Noccurs only strictly positively.
+Dialogue: 0,2:10:32.96,2:10:36.76,Default,,0,0,0,,We can easily find that this type,
+Dialogue: 0,2:10:36.76,2:10:43.44,Default,,0,0,0,,the bound type variable alpha\Noccurs only strictly positively.
 Dialogue: 0,2:10:43.96,2:10:48.96,Default,,0,0,0,,So, 'satisfy' operation also\Nfollows the signature restriction.
 Dialogue: 0,2:10:49.76,2:10:50.84,Default,,0,0,0,,And, as a result,
 Dialogue: 0,2:10:50.84,2:10:54.40,Default,,0,0,0,,all of these three operations\Nsatisfy the signature restriction.
@@ -2333,21 +2333,21 @@ Dialogue: 0,2:11:02.40,2:11:04.20,Default,,0,0,0,,in functional programming lang
 Dialogue: 0,2:11:04.20,2:11:07.44,Default,,0,0,0,,For example, this work does\Nnot cover type inference
 Dialogue: 0,2:11:07.44,2:11:11.88,Default,,0,0,0,,and general algebraic data types.
 Dialogue: 0,2:11:11.88,2:11:18.16,Default,,0,0,0,,So, the support for these\Nfeatures is left as future work.
-Dialogue: 0,2:11:18.16,2:11:26.56,Default,,0,0,0,,And we also consider studying\Nyour CPS transformation
+Dialogue: 0,2:11:18.16,2:11:26.56,Default,,0,0,0,,And we also consider studying\Na CPS transformation
 Dialogue: 0,2:11:26.56,2:11:28.24,Default,,0,0,0,,for this restriction method
 Dialogue: 0,2:11:28.24,2:11:32.68,Default,,0,0,0,,and applying the signature\Nrestriction to other user defined,
-Dialogue: 0,2:11:33.36,2:11:36.20,Default,,0,0,0,,or user defined effect\Nand mechanisms such as the monads.
+Dialogue: 0,2:11:33.36,2:11:36.20,Default,,0,0,0,,or user defined effect\Nhandler mechanisms such as the monads.
 Dialogue: 0,2:11:36.20,2:11:41.48,Default,,0,0,0,,It should be interesting\Nbecause you know.
 Dialogue: 0,2:11:41.48,2:11:44.72,Default,,0,0,0,,OK, let me summarize this talk.
 Dialogue: 0,2:11:44.72,2:11:48.12,Default,,0,0,0,,The problem we attack\Nin this work is that,
 Dialogue: 0,2:11:48.12,2:11:53.28,Default,,0,0,0,,naive combinations of\Nalgebraic effect handlers,
-Dialogue: 0,2:11:53.28,2:11:56.16,Default,,0,0,0,,polymorphism may be problematic.
+Dialogue: 0,2:11:53.28,2:11:56.16,Default,,0,0,0,,and polymorphism may be problematic.
 Dialogue: 0,2:11:56.16,2:11:57.92,Default,,0,0,0,,To solve these problems,
-Dialogue: 0,2:11:57.92,2:12:01.00,Default,,0,0,0,,we propose signature restriction
+Dialogue: 0,2:11:57.92,2:12:01.00,Default,,0,0,0,,we propose a signature restriction
 Dialogue: 0,2:12:01.00,2:12:03.64,Default,,0,0,0,,which is a new approach to determine
 Dialogue: 0,2:12:03.64,2:12:08.40,Default,,0,0,0,,safety of effect in\Na polymorphic setting.
 Dialogue: 0,2:12:08.40,2:12:10.88,Default,,0,0,0,,The signature restriction\Nrests only on
-Dialogue: 0,2:12:10.88,2:12:13.60,Default,,0,0,0,,the properties of\Nbalanced type variables.
+Dialogue: 0,2:12:10.88,2:12:13.60,Default,,0,0,0,,the properties of\Nbound type variables.
 Dialogue: 0,2:12:13.60,2:12:15.24,Default,,0,0,0,,So, it is very simple,
 Dialogue: 0,2:12:15.24,2:12:20.24,Default,,0,0,0,,it just examines\Nthe signature of effect.
 Dialogue: 0,2:12:20.76,2:12:25.76,Default,,0,0,0,,And it is still\Npermissive and scalable.
@@ -2359,7 +2359,7 @@ Dialogue: 0,2:12:40.24,2:12:43.16,Default,,0,0,0,,We also provide effects system
 Dialogue: 0,2:12:43.16,2:12:48.24,Default,,0,0,0,,where both effects that satisfy
 Dialogue: 0,2:12:48.24,2:12:53.08,Default,,0,0,0,,and don't satisfy the signature\Nrestriction can be used.
 Dialogue: 0,2:12:53.08,2:12:54.08,Default,,0,0,0,,That's it,
-Dialogue: 0,2:12:54.08,2:12:55.48,Default,,0,0,0,,thank you for resting.
+Dialogue: 0,2:12:54.08,2:12:55.48,Default,,0,0,0,,thank you for listening.
 Dialogue: 0,2:12:55.48,2:13:00.48,Default,,0,0,0,,(APPLAUSE)
 Dialogue: 0,2:13:03.68,2:13:05.80,Default,,0,0,0,,STEPHANIE: Thank you Toro.
 Dialogue: 0,2:13:05.80,2:13:07.88,Default,,0,0,0,,If you are watching\Nthis stream live,

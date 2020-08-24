@@ -10067,7 +10067,7 @@ an approach to user-defined effects.
 2158
 01:58:46,840 --> 01:58:53,200
 And they can also structure effectful
-programs in a more general way.
+programs in a modular way.
 
 2159
 01:58:53,200 --> 01:58:58,200
@@ -10082,7 +10082,7 @@ we can define various effects,
 2161
 01:59:02,040 --> 01:59:07,040
 such as an exception backtracking
-state, and interactions by you.
+state, and interactions by user.
 
 2162
 01:59:08,400 --> 01:59:13,440
@@ -10096,7 +10096,7 @@ implicit polymorphism
 
 2164
 01:59:16,960 --> 01:59:19,880
-as let-polymorphism.
+as in let-polymorphism.
 
 2165
 01:59:19,880 --> 01:59:23,280
@@ -10105,8 +10105,8 @@ two programming features,
 
 2166
 01:59:23,280 --> 01:59:28,280
-we can make not only exceptions,
-but also effects are polymorphic.
+we can make not only expressions,
+but also effects polymorphic.
 
 2167
 01:59:30,680 --> 01:59:35,480
@@ -10153,8 +10153,8 @@ and returns either of them.
 
 2176
 02:00:13,280 --> 02:00:17,000
-Here, polymorphism are
-those type of 'choose'
+Here, polymorphism allows
+the type of 'choose'
 
 2177
 02:00:17,000 --> 02:00:20,920
@@ -10200,7 +10200,7 @@ for 'define' effect.
 
 2186
 02:01:04,440 --> 02:01:08,280
-(INAUDIBLE) which is achieved by
+and which is achieved by
 the use of effects handlers.
 
 2187
@@ -10210,12 +10210,12 @@ component in defining effects,
 
 2188
 02:01:13,400 --> 02:01:16,960
-but in this talk, I only
-the deals of them.
+but in this talk, I omit
+the details of them.
 
 2189
 02:01:19,520 --> 02:01:26,720
-So, the program we consider
+So, the problem we consider
 in this talk is (INAUDIBLE)
 
 2190
@@ -10229,8 +10229,8 @@ and implicit polymorphism.
 
 2192
 02:01:32,680 --> 02:01:36,480
-So, this is a program because
-the ninth combination
+So, this is a problem because
+the right combination
 
 2193
 02:01:36,480 --> 02:01:38,800
@@ -10253,8 +10253,8 @@ continuations.
 
 2197
 02:01:50,200 --> 02:01:56,040
-But the ninth combinations
-or the use of continuations
+But the combination
+of the use of continuations
 
 2198
 02:01:56,040 --> 02:02:01,040
@@ -10306,7 +10306,7 @@ in a polymorphic expression.
 2208
 02:02:41,720 --> 02:02:46,320
 For example, value restriction,
-weak polymorphism closure typing
+weak polymorphism, closure typing
 
 2209
 02:02:46,320 --> 02:02:49,440
@@ -10319,11 +10319,11 @@ these approaches is that
 
 2211
 02:02:53,240 --> 02:02:57,040
-they can otherwise any effect
+they can address any effect
 
 2212
 02:02:57,040 --> 02:03:01,280
-including (INAUDIBLE)
+including ML-style reference
 under control operators.
 
 2213
@@ -10353,21 +10353,21 @@ in the previous work,
 2218
 02:03:23,280 --> 02:03:28,760
 exceptions on the backtracking
-don't need or restriction.
+don't need a restriction.
 
 2219
 02:03:28,760 --> 02:03:35,040
 But the approaches in this category
-don't distinguish effect.
+don't distinguish effect
 
 2220
 02:03:35,040 --> 02:03:37,760
-That means they don't need
-a restriction on the effects,
+that need
+a restriction from the effects,
 
 2221
 02:03:37,760 --> 02:03:39,960
-and effects that don't
+that don't
 need a restriction.
 
 2222
@@ -10430,7 +10430,7 @@ in a single program.
 2234
 02:04:34,320 --> 02:04:38,800
 So, this could be a problem
-in the general purpose,
+in a general purpose program,
 
 2235
 02:04:38,800 --> 02:04:42,880
@@ -10480,7 +10480,7 @@ which can ensure safety
 
 2245
 02:05:26,360 --> 02:05:29,280
-or effects with polymorphism.
+of effects with polymorphism.
 
 2246
 02:05:29,280 --> 02:05:33,120
@@ -10531,12 +10531,12 @@ including products, sums and lists.
 
 2256
 02:06:13,520 --> 02:06:17,000
-And two shows the correctness
+And to shows the correctness
 of this signature restriction.
 
 2257
 02:06:17,000 --> 02:06:20,560
-We provide for simple type system
+We provided a simple type system
 
 2258
 02:06:20,560 --> 02:06:24,880
@@ -10585,7 +10585,7 @@ and unsafe effects can be used.
 2267
 02:07:06,080 --> 02:07:10,600
 And more precisely, in
-the English effect system,
+this effect system,
 
 2268
 02:07:10,600 --> 02:07:14,000
@@ -10613,7 +10613,7 @@ an artefact that implements
 
 2273
 02:07:29,720 --> 02:07:33,360
-a tiny small override functional
+a tiny small ML-like functional
 programming language,
 
 2274
@@ -10667,8 +10667,8 @@ the polarities of alpha
 
 2284
 02:08:23,400 --> 02:08:27,320
-in argument type one
-and return type two.
+in argument type tau one
+and return type tau two.
 
 2285
 02:08:27,800 --> 02:08:34,040
@@ -10683,12 +10683,12 @@ occurs only negatively,
 2287
 02:08:37,800 --> 02:08:42,960
 or strictly positively
-in argument type one.
+in argument type tau one.
 
 2288
 02:08:42,960 --> 02:08:47,960
 And alpha occurs only
-positively in return type two.
+positively in return type tau two.
 
 2289
 02:08:48,520 --> 02:08:54,720
@@ -10711,13 +10711,13 @@ three is strictly positive.
 
 2293
 02:09:09,440 --> 02:09:12,360
-This is because the openness
+This is because the occurrence
 of alpha three is reached
 
 2294
 02:09:12,360 --> 02:09:16,760
 by going through only
-the positive part of function five,
+the positive part of function phi,
 
 2295
 02:09:16,760 --> 02:09:21,520
@@ -10727,7 +10727,7 @@ alpha one is reached by
 2296
 02:09:21,520 --> 02:09:26,040
 going through a negative part
-or functional type constructor.
+of functional type constructor.
 
 2297
 02:09:26,040 --> 02:09:27,840
@@ -10745,7 +10745,7 @@ definitions, we check
 
 2300
 02:09:38,080 --> 02:09:44,880
-if our three operation calls
+our three operation calls
 satisfy the signature restriction.
 
 2301
@@ -10802,11 +10802,11 @@ checking is very easy.
 
 2312
 02:10:32,960 --> 02:10:36,760
-We can easily find out if this type,
+We can easily find that this type,
 
 2313
 02:10:36,760 --> 02:10:43,440
-the bond type variable alpha
+the bound type variable alpha
 occurs only strictly positively.
 
 2314
@@ -10853,7 +10853,7 @@ features is left as future work.
 2323
 02:11:18,160 --> 02:11:26,560
 And we also consider studying
-your CPS transformation
+a CPS transformation
 
 2324
 02:11:26,560 --> 02:11:28,240
@@ -10867,7 +10867,7 @@ restriction to other user defined,
 2326
 02:11:33,360 --> 02:11:36,200
 or user defined effect
-and mechanisms such as the monads.
+handler mechanisms such as the monads.
 
 2327
 02:11:36,200 --> 02:11:41,480
@@ -10890,7 +10890,7 @@ algebraic effect handlers,
 
 2331
 02:11:53,280 --> 02:11:56,160
-polymorphism may be problematic.
+and polymorphism may be problematic.
 
 2332
 02:11:56,160 --> 02:11:57,920
@@ -10898,7 +10898,7 @@ To solve these problems,
 
 2333
 02:11:57,920 --> 02:12:01,000
-we propose signature restriction
+we propose a signature restriction
 
 2334
 02:12:01,000 --> 02:12:03,640
@@ -10917,7 +10917,7 @@ rests only on
 2337
 02:12:10,880 --> 02:12:13,600
 the properties of
-balanced type variables.
+bound type variables.
 
 2338
 02:12:13,600 --> 02:12:15,240
@@ -10970,7 +10970,7 @@ That's it,
 
 2349
 02:12:54,080 --> 02:12:55,480
-thank you for resting.
+thank you for listening.
 
 2350
 02:12:55,480 --> 02:13:00,480
