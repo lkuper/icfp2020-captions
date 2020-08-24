@@ -7775,7 +7775,7 @@ with Andreas Abel.
 1679
 01:28:32,680 --> 01:28:36,240
 Modalities are qualifiers,
-25 types of propositions.
+that modify types or propositions.
 
 1680
 01:28:36,240 --> 01:28:39,080
@@ -7785,16 +7785,16 @@ it may rain today.
 1681
 01:28:39,080 --> 01:28:41,240
 The rain today
-position is qualified
+proposition is qualified
 
 1682
 01:28:41,240 --> 01:28:43,360
-with the possibility modal.
+with the possibility modality.
 
 1683
 01:28:43,360 --> 01:28:46,520
 Another possible example
-is the qualification of positions
+is the qualification of propositions
 
 1684
 01:28:46,520 --> 01:28:49,880
@@ -7827,7 +7827,7 @@ is whether information
 
 1690
 01:29:06,760 --> 01:29:09,840
-is public or secrets
+is public or secret
 in this work.
 
 1691
@@ -7847,7 +7847,7 @@ to have a useful meta theory,
 
 1694
 01:29:18,200 --> 01:29:21,000
-which only instances
+which all instances
 can inherit.
 
 1695
@@ -7858,7 +7858,7 @@ in the framework
 1696
 01:29:22,800 --> 01:29:25,400
 of the system F
-also known that is
+also known as
 
 1697
 01:29:25,400 --> 01:29:29,480
@@ -7902,7 +7902,7 @@ We add a new type form
 
 1705
 01:29:47,400 --> 01:29:52,400
-of P(A), which I will just read
+of P<A>, which I will just read
 out PA in the future.
 
 1706
@@ -7913,7 +7913,7 @@ qualifying by modality P.
 1707
 01:29:57,720 --> 01:30:00,040
 To support modal types.
-The key ID is to
+The key idea is to
 
 1708
 01:30:00,040 --> 01:30:03,960
@@ -7922,23 +7922,23 @@ or every variable
 
 1709
 01:30:03,960 --> 01:30:08,360
-we do modality.
-In addition to each type again,
+with a modality
+in addition to its type. Again.
 
 1710
 01:30:08,360 --> 01:30:10,720
-to support modal types.
-The key ID is to annotate
+To support modal types
+the key idea is to annotate
 
 1711
 01:30:10,720 --> 01:30:12,440
 every variable
-with the modality.
+with the modality
 
 1712
 01:30:12,440 --> 01:30:15,320
-In addition to each site,
-formerly what we do
+in addition to its type.
+Formally what we do
 
 1713
 01:30:15,320 --> 01:30:17,280
@@ -7958,16 +7958,16 @@ and important thing
 1716
 01:30:23,400 --> 01:30:24,840
 to note is that
-the reason thing
+the reason we have
 
 1717
 01:30:24,840 --> 01:30:27,920
 type A in the judgment
-has a unit in guide.
+has a unit in gamma.
 
 1718
 01:30:27,920 --> 01:30:30,360
-This unit without it
+This unit modality
 will be interpreted differently
 
 1719
@@ -7997,18 +7997,18 @@ If we want the product
 
 1724
 01:30:49,640 --> 01:30:52,720
-of A and B, then we,
-the sum of their
+of A and B, then we
+build the sum of their
 
 1725
 01:30:52,720 --> 01:30:57,400
-respective modality context
-to see how this plays out.
+respective modality contexts.
+To see how this plays out
 
 1726
 01:30:57,400 --> 01:31:00,320
-It is first look
-at the fragment of A system F,
+let us first look
+at the fragment of system F,
 
 1727
 01:31:00,320 --> 01:31:03,240
@@ -8017,22 +8017,22 @@ Then we can see
 
 1728
 01:31:03,240 --> 01:31:06,000
-how modality adaptations
-gets added.
+how modality annotations
+get added.
 
 1729
 01:31:06,000 --> 01:31:07,680
 Let's look first
-at the variable,
+at the variable
 
 1730
 01:31:07,680 --> 01:31:10,760
-the world, what it says
+rule, what it says
 is that a is used exactly once.
 
 1731
 01:31:10,760 --> 01:31:13,720
-And so A is invaded
+And so A is annotated
 with a unit modality
 
 1732
@@ -8043,7 +8043,7 @@ that the rest of the context
 1733
 01:31:16,840 --> 01:31:20,200
 is not used at all.
-And so it is emanated
+And so it is annotated
 
 1734
 01:31:20,200 --> 01:31:24,240
@@ -8053,7 +8053,7 @@ for consistency,
 1735
 01:31:24,240 --> 01:31:27,000
 We also annotate domain
-of the hour type
+of the arrow type
 
 1736
 01:31:27,000 --> 01:31:29,560
@@ -8063,12 +8063,12 @@ You can see how this
 1737
 01:31:29,560 --> 01:31:33,480
 plays out in the ABS
-and (INAUDIBLE) roots
+and APP rules
 
 1738
 01:31:33,480 --> 01:31:39,720
-obstruction applications.
-In particular, in the application
+abstruction applications.
+In particular, in the application rule
 
 1739
 01:31:39,720 --> 01:31:42,080
@@ -8101,8 +8101,8 @@ for qualified types.
 
 1745
 01:31:57,200 --> 01:31:59,760
-Introduction rule works.
-As we said before,
+Introduction rule works
+as we said before,
 
 1746
 01:31:59,760 --> 01:32:03,040
@@ -8116,12 +8116,12 @@ is a bit more involved.
 
 1748
 01:32:05,600 --> 01:32:08,240
-No first that we assume
-that little (INAUDIBLE)
+Note first that we assume
+that little gamma
 
 1749
 01:32:08,240 --> 01:32:11,280
-would use P(A).
+produces P(A).
 Now we want to use this A
 
 1750
@@ -8141,22 +8141,22 @@ of the continuation,
 
 1753
 01:32:18,560 --> 01:32:22,400
-but instead we are outcome
-replied by the additional average Q.
+but instead we are allowed
+to multiply by the annotation of an arbitrary Q.
 
 1754
 01:32:22,400 --> 01:32:26,640
-In reality, this is because
+This is because
 to produce 1C,
 
 1755
 01:32:26,640 --> 01:32:29,160
-you need C,
+unit C,
 we may need another modality.
 
 1756
 01:32:29,160 --> 01:32:32,520
-Exactly B for A,
+Exactly P for A,
 and thus this version
 
 1757
@@ -8187,21 +8187,21 @@ We can also see the converse,
 1762
 01:32:50,600 --> 01:32:55,120
 and, this is
-a conversion rule from PTQ.
+a conversion rule from P to Q.
 
 1763
 01:32:55,120 --> 01:32:58,720
-If P is less than Q,
-the exact structure
+If P is less than Q.
+The exact structure
 
 1764
 01:32:58,720 --> 01:33:01,600
-of morality is
+of modalities is
 as shown here.
 
 1765
 01:33:01,600 --> 01:33:05,800
-Pose the video, or you can
+Pause the video, or you can
 check out the paper.
 
 1766
@@ -8212,12 +8212,12 @@ is the last line,
 1767
 01:33:08,080 --> 01:33:10,320
 namely, that addition
-distribute over meat,
+distribute over meet,
 
 1768
 01:33:10,320 --> 01:33:13,920
-is probably also you guys,
-addition is monitored.
+This property also implies
+addition is monotonous.
 
 1769
 01:33:15,000 --> 01:33:17,040
@@ -8226,7 +8226,7 @@ the structure to various
 
 1770
 01:33:17,040 --> 01:33:20,120
-various especial cases
+various special cases
 and obtain several
 
 1771
@@ -8236,7 +8236,6 @@ First, we can do
 
 1772
 01:33:23,280 --> 01:33:25,640
-(KEYBOARD CLICKS)
 zero and one,
 
 1773
@@ -8251,22 +8250,22 @@ unrestricted usage
 
 1775
 01:33:33,600 --> 01:33:37,240
-That's the band
-modality in radiology.
+That's the bang
+modality in linear (INAUDIBLE) .
 
 1776
 01:33:37,840 --> 01:33:40,640
 The rest of the structure
-is at you respect.
+is at you expect.
 
 1777
 01:33:40,640 --> 01:33:44,080
 And Omega is acting
-as a cache value.
+as a catch-all value.
 
 1778
 01:33:44,080 --> 01:33:47,520
-Useful generalization
+A useful generalization
 of linear types is the system
 
 1779
@@ -8301,13 +8300,13 @@ Modal systems
 
 1785
 01:34:05,160 --> 01:34:10,120
-is that zero annotated per meter
+is that zero annotated parameter
 is guaranteed not to be used
 
 1786
 01:34:10,120 --> 01:34:12,520
-this capture by
-the irrelevance theory,
+this is capture by
+the irrelevance theorem,
 
 1787
 01:34:12,520 --> 01:34:14,360
@@ -8346,7 +8345,7 @@ with more necessary
 
 1794
 01:34:35,080 --> 01:34:37,200
-for positions towards
+propositions towards
 the bottom.
 
 1795
@@ -8356,7 +8355,7 @@ levels of beliefs.
 
 1796
 01:34:39,760 --> 01:34:42,960
-More credulist agents
+More credulous agents
 are at the top.
 
 1797
@@ -8366,7 +8365,7 @@ computational relevance
 
 1798
 01:34:46,160 --> 01:34:49,560
-with more 11 types
+with more relevant types
 toward the bottom.
 
 1799
@@ -8376,7 +8375,7 @@ is from bottom to top.
 
 1800
 01:34:53,600 --> 01:34:57,160
-And so at the meat of P & Q
+And so at the meet of P and Q
 all data which is available
 
 1801
@@ -8397,27 +8396,27 @@ does not care about quantities.
 1804
 01:35:08,280 --> 01:35:10,400
 And so modalities
-are only used to be
+are only used to
 
 1805
 01:35:10,400 --> 01:35:13,960
-present levels in areas
-such as from previously
+represent levels in areas
+such as shown previously
 
 1806
 01:35:13,960 --> 01:35:15,560
 in this case,
-the meat becomes
+the meet becomes
 
 1807
 01:35:15,560 --> 01:35:19,240
-the addition and the joint
+the addition and the join
 becomes multiplication.
 
 1808
 01:35:19,240 --> 01:35:23,120
 Additionally, zero
-is also the top of the ladder.
+is also the top of the lattice.
 
 1809
 01:35:23,120 --> 01:35:25,960
@@ -8441,7 +8440,7 @@ that are available
 
 1813
 01:35:35,120 --> 01:35:39,320
-with modality zero, data.
+with modality zero, in data.
 It has the application
 
 1814
@@ -8451,7 +8450,7 @@ are tracked,
 
 1815
 01:35:41,520 --> 01:35:45,520
-is sensitive analysis,
+in sensitivity analysis,
 which you can read
 
 1816
@@ -8466,12 +8465,12 @@ We consider our first
 
 1818
 01:35:51,720 --> 01:35:53,920
-operation out semantics,
-who's cornerstone
+operational semantics,
+whose cornerstone
 
 1819
 01:35:53,920 --> 01:35:56,600
-is the substitution Lemme,
+is the substitution Lemma,
 the proof follows
 
 1820
@@ -8506,12 +8505,12 @@ to note that the requirements,
 
 1826
 01:36:16,280 --> 01:36:18,840
-this is a reformed modality
+this is a well-formed modality
 is correspond exactly
 
 1827
 01:36:18,840 --> 01:36:23,080
-to the model structure,
+to the modality structure,
 which we have shown previously.
 
 1828
@@ -8521,8 +8520,7 @@ preserving abstract machine.
 
 1829
 01:36:26,400 --> 01:36:27,800
-This is a (INAUDIBLE)
-binding machine
+This is a call by name machine
 
 1830
 01:36:27,800 --> 01:36:31,360
@@ -8556,7 +8554,7 @@ can be realized
 
 1836
 01:36:45,720 --> 01:36:47,840
-the trend times as such.
+at run time time as such.
 
 1837
 01:36:49,040 --> 01:36:51,840
@@ -8571,7 +8569,7 @@ We interpret types by relations
 1839
 01:36:56,800 --> 01:37:00,000
 and these relations
-are indexed by words.
+are indexed by worlds.
 
 1840
 01:37:00,000 --> 01:37:02,840
@@ -8586,27 +8584,25 @@ a notion of division
 1842
 01:37:05,360 --> 01:37:08,960
 or more precisely
-a gala connection.
+a galois connection.
 
 1843
 01:37:10,480 --> 01:37:12,320
-For quantitative assistant
-instead of a new,
+For quantitative systems
 
 1844
 01:37:12,320 --> 01:37:15,560
-it's a multiset
+w is a multiset
 of resources to consume.
 
 1845
 01:37:15,560 --> 01:37:18,560
-P is that integrated
-is a natural number
+P is then interpreted
+as a natural number
 
 1846
 01:37:18,560 --> 01:37:24,120
-and to interpret P(A),
-27 PA at a world w,
+and to interpret P(A) at a world w,
 
 1847
 01:37:24,120 --> 01:37:28,720
@@ -8620,11 +8616,11 @@ For non quantitative systems,
 1849
 01:37:30,720 --> 01:37:35,480
 w is a set of capabilities.
-Types are indistinguishable.
+Types are indistinguishable
 
 1850
 01:37:35,480 --> 01:37:39,640
-If the associated capability
+if the associated capability
 is not in w.
 
 1851
@@ -8653,13 +8649,13 @@ of the sets w and P
 
 1856
 01:37:56,000 --> 01:37:58,800
-combining the two of you
+combining the two views
 is somewhat curious,
 
 1857
 01:37:58,800 --> 01:38:03,520
-but it is showing the paper.
-Perhaps controversial choice
+but it is shown in the paper.
+A perhaps controversial choice
 
 1858
 01:38:03,520 --> 01:38:07,560
@@ -8668,8 +8664,7 @@ on which modalities...
 
 1859
 01:38:10,600 --> 01:38:12,480
-can the value
-take to be scrutinized
+can take to be scrutinized
 
 1860
 01:38:12,480 --> 01:38:16,240
@@ -8694,7 +8689,7 @@ if we are on the left
 1864
 01:38:25,600 --> 01:38:27,760
 or on the right
-of the sun
+of the sum
 
 1865
 01:38:27,760 --> 01:38:31,840
@@ -8709,7 +8704,7 @@ even zero,
 1867
 01:38:35,960 --> 01:38:39,360
 but the operational semantics
-do not in fact realize...
+do not in fact rely...
 
 1868
 01:38:40,000 --> 01:38:43,320
@@ -8737,12 +8732,12 @@ with sum and products.
 1873
 01:38:57,360 --> 01:39:00,240
 And we have quantification
-of a modalities
+over modalities
 
 1874
 01:39:00,240 --> 01:39:04,120
 which means that we have
-high order model types.
+higher-order modal types.
 
 1875
 01:39:04,880 --> 01:39:07,560
@@ -8766,11 +8761,11 @@ declare victory because
 1879
 01:39:15,920 --> 01:39:19,800
 many useful system can be
-captured by our trademark.
+captured by our framework.
 
 1880
 01:39:20,320 --> 01:39:22,360
-And indicating in each method here.
+And (INAUDIBLE) rich metatheory.
 
 1881
 01:39:23,360 --> 01:39:25,800
@@ -8810,7 +8805,7 @@ STEPHANIE: Thank you Jean-Philippe.
 1889
 01:39:53,840 --> 01:39:57,960
 At this point please make
-sure you join a Q&A session
+sure to join a Q&A session
 
 1890
 01:39:57,960 --> 01:40:00,240

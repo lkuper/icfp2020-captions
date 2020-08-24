@@ -1689,24 +1689,24 @@ Dialogue: 0,1:28:22.92,1:28:24.04,Default,,0,0,0,,JEAN-PHILLIPE BERNARDY: Hello\
 Dialogue: 0,1:28:24.04,1:28:27.12,Default,,0,0,0,,A unified view of Modalities\Nin type systems.
 Dialogue: 0,1:28:27.12,1:28:29.76,Default,,0,0,0,,My name is Jean-Phillipe Bernardy\Nand this is joint work
 Dialogue: 0,1:28:29.76,1:28:32.68,Default,,0,0,0,,with Andreas Abel.
-Dialogue: 0,1:28:32.68,1:28:36.24,Default,,0,0,0,,Modalities are qualifiers,\N25 types of propositions.
+Dialogue: 0,1:28:32.68,1:28:36.24,Default,,0,0,0,,Modalities are qualifiers,\Nthat modify types or propositions.
 Dialogue: 0,1:28:36.24,1:28:39.08,Default,,0,0,0,,For example, in the sentence,\Nit may rain today.
-Dialogue: 0,1:28:39.08,1:28:41.24,Default,,0,0,0,,The rain today\Nposition is qualified
-Dialogue: 0,1:28:41.24,1:28:43.36,Default,,0,0,0,,with the possibility modal.
-Dialogue: 0,1:28:43.36,1:28:46.52,Default,,0,0,0,,Another possible example\Nis the qualification of positions
+Dialogue: 0,1:28:39.08,1:28:41.24,Default,,0,0,0,,The rain today\Nproposition is qualified
+Dialogue: 0,1:28:41.24,1:28:43.36,Default,,0,0,0,,with the possibility modality.
+Dialogue: 0,1:28:43.36,1:28:46.52,Default,,0,0,0,,Another possible example\Nis the qualification of propositions
 Dialogue: 0,1:28:46.52,1:28:49.88,Default,,0,0,0,,by the agent who believe it\Nas in John thinks
 Dialogue: 0,1:28:49.88,1:28:53.72,Default,,0,0,0,,that it rains today\Nin programming languages,
 Dialogue: 0,1:28:53.72,1:28:55.32,Default,,0,0,0,,it can be useful\Nto qualify your type,
 Dialogue: 0,1:28:55.32,1:28:58.48,Default,,0,0,0,,but in amount in presenting,\Nhow much is available.
 Dialogue: 0,1:28:58.48,1:29:03.52,Default,,0,0,0,,For example 5.543mm of rain.
 Dialogue: 0,1:29:03.52,1:29:06.76,Default,,0,0,0,,Another useful kind of qualifier\Nis whether information
-Dialogue: 0,1:29:06.76,1:29:09.84,Default,,0,0,0,,is public or secrets\Nin this work.
+Dialogue: 0,1:29:06.76,1:29:09.84,Default,,0,0,0,,is public or secret\Nin this work.
 Dialogue: 0,1:29:09.84,1:29:12.04,Default,,0,0,0,,I will go this to describe\Nthe system which unifies
 Dialogue: 0,1:29:12.04,1:29:15.00,Default,,0,0,0,,all such instances\Nof modalities.
 Dialogue: 0,1:29:15.00,1:29:18.20,Default,,0,0,0,,We also want the system\Nto have a useful meta theory,
-Dialogue: 0,1:29:18.20,1:29:21.00,Default,,0,0,0,,which only instances\Ncan inherit.
+Dialogue: 0,1:29:18.20,1:29:21.00,Default,,0,0,0,,which all instances\Ncan inherit.
 Dialogue: 0,1:29:21.00,1:29:22.80,Default,,0,0,0,,Our work is set\Nin the framework
-Dialogue: 0,1:29:22.80,1:29:25.40,Default,,0,0,0,,of the system F\Nalso known that is
+Dialogue: 0,1:29:22.80,1:29:25.40,Default,,0,0,0,,of the system F\Nalso known as
 Dialogue: 0,1:29:25.40,1:29:29.48,Default,,0,0,0,,the Polymorphic Lambda Calculus.\NI am going to assume
 Dialogue: 0,1:29:29.48,1:29:32.44,Default,,0,0,0,,familiarity with it.\NAlso, I assume
 Dialogue: 0,1:29:32.44,1:29:34.56,Default,,0,0,0,,you know that\Nthey are isomorphic.
@@ -1715,88 +1715,88 @@ Dialogue: 0,1:29:37.32,1:29:39.28,Default,,0,0,0,,and we decide\Nthat you won't 
 Dialogue: 0,1:29:39.28,1:29:43.40,Default,,0,0,0,,or we can consult the paper\Nand come back later here,
 Dialogue: 0,1:29:43.40,1:29:44.76,Default,,0,0,0,,as suggested\Nby the examples
 Dialogue: 0,1:29:44.76,1:29:47.40,Default,,0,0,0,,that I've shown above.\NWe add a new type form
-Dialogue: 0,1:29:47.40,1:29:52.40,Default,,0,0,0,,of P(A), which I will just read\Nout PA in the future.
+Dialogue: 0,1:29:47.40,1:29:52.40,Default,,0,0,0,,of P<A>, which I will just read\Nout PA in the future.
 Dialogue: 0,1:29:52.96,1:29:56.76,Default,,0,0,0,,This means A\Nqualifying by modality P.
-Dialogue: 0,1:29:57.72,1:30:00.04,Default,,0,0,0,,To support modal types.\NThe key ID is to
+Dialogue: 0,1:29:57.72,1:30:00.04,Default,,0,0,0,,To support modal types.\NThe key idea is to
 Dialogue: 0,1:30:00.04,1:30:03.96,Default,,0,0,0,,annotate every type variable\Nor every variable
-Dialogue: 0,1:30:03.96,1:30:08.36,Default,,0,0,0,,we do modality.\NIn addition to each type again,
-Dialogue: 0,1:30:08.36,1:30:10.72,Default,,0,0,0,,to support modal types.\NThe key ID is to annotate
-Dialogue: 0,1:30:10.72,1:30:12.44,Default,,0,0,0,,every variable\Nwith the modality.
-Dialogue: 0,1:30:12.44,1:30:15.32,Default,,0,0,0,,In addition to each site,\Nformerly what we do
+Dialogue: 0,1:30:03.96,1:30:08.36,Default,,0,0,0,,with a modality\Nin addition to its type. Again.
+Dialogue: 0,1:30:08.36,1:30:10.72,Default,,0,0,0,,To support modal types\Nthe key idea is to annotate
+Dialogue: 0,1:30:10.72,1:30:12.44,Default,,0,0,0,,every variable\Nwith the modality
+Dialogue: 0,1:30:12.44,1:30:15.32,Default,,0,0,0,,in addition to its type.\NFormally what we do
 Dialogue: 0,1:30:15.32,1:30:17.28,Default,,0,0,0,,is to change the judgment.\NSo that includes
 Dialogue: 0,1:30:17.28,1:30:20.72,Default,,0,0,0,,this little gamma here.\NIt is a map
 Dialogue: 0,1:30:20.72,1:30:23.40,Default,,0,0,0,,from variable names to modalities\Nand important thing
-Dialogue: 0,1:30:23.40,1:30:24.84,Default,,0,0,0,,to note is that\Nthe reason thing
-Dialogue: 0,1:30:24.84,1:30:27.92,Default,,0,0,0,,type A in the judgment\Nhas a unit in guide.
-Dialogue: 0,1:30:27.92,1:30:30.36,Default,,0,0,0,,This unit without it\Nwill be interpreted differently
+Dialogue: 0,1:30:23.40,1:30:24.84,Default,,0,0,0,,to note is that\Nthe reason we have
+Dialogue: 0,1:30:24.84,1:30:27.92,Default,,0,0,0,,type A in the judgment\Nhas a unit in gamma.
+Dialogue: 0,1:30:27.92,1:30:30.36,Default,,0,0,0,,This unit modality\Nwill be interpreted differently
 Dialogue: 0,1:30:30.36,1:30:33.08,Default,,0,0,0,,depending on the application.\NBut I can only say that
 Dialogue: 0,1:30:33.08,1:30:39.80,Default,,0,0,0,,it acts as a default\Nto produce a modality, say P(A),
 Dialogue: 0,1:30:39.80,1:30:42.68,Default,,0,0,0,,here we need to multiply\Nthe modality context by P
 Dialogue: 0,1:30:42.68,1:30:47.00,Default,,0,0,0,,that is we multiply every modality\Nin the context by P.
 Dialogue: 0,1:30:47.00,1:30:49.64,Default,,0,0,0,,In the same vein.\NIf we want the product
-Dialogue: 0,1:30:49.64,1:30:52.72,Default,,0,0,0,,of A and B, then we,\Nthe sum of their
-Dialogue: 0,1:30:52.72,1:30:57.40,Default,,0,0,0,,respective modality context\Nto see how this plays out.
-Dialogue: 0,1:30:57.40,1:31:00.32,Default,,0,0,0,,It is first look\Nat the fragment of A system F,
+Dialogue: 0,1:30:49.64,1:30:52.72,Default,,0,0,0,,of A and B, then we\Nbuild the sum of their
+Dialogue: 0,1:30:52.72,1:30:57.40,Default,,0,0,0,,respective modality contexts.\NTo see how this plays out
+Dialogue: 0,1:30:57.40,1:31:00.32,Default,,0,0,0,,let us first look\Nat the fragment of system F,
 Dialogue: 0,1:31:00.32,1:31:03.24,Default,,0,0,0,,without modalities.\NThen we can see
-Dialogue: 0,1:31:03.24,1:31:06.00,Default,,0,0,0,,how modality adaptations\Ngets added.
-Dialogue: 0,1:31:06.00,1:31:07.68,Default,,0,0,0,,Let's look first\Nat the variable,
-Dialogue: 0,1:31:07.68,1:31:10.76,Default,,0,0,0,,the world, what it says\Nis that a is used exactly once.
-Dialogue: 0,1:31:10.76,1:31:13.72,Default,,0,0,0,,And so A is invaded\Nwith a unit modality
+Dialogue: 0,1:31:03.24,1:31:06.00,Default,,0,0,0,,how modality annotations\Nget added.
+Dialogue: 0,1:31:06.00,1:31:07.68,Default,,0,0,0,,Let's look first\Nat the variable
+Dialogue: 0,1:31:07.68,1:31:10.76,Default,,0,0,0,,rule, what it says\Nis that a is used exactly once.
+Dialogue: 0,1:31:10.76,1:31:13.72,Default,,0,0,0,,And so A is annotated\Nwith a unit modality
 Dialogue: 0,1:31:13.72,1:31:16.84,Default,,0,0,0,,in the context also\Nthat the rest of the context
-Dialogue: 0,1:31:16.84,1:31:20.20,Default,,0,0,0,,is not used at all.\NAnd so it is emanated
+Dialogue: 0,1:31:16.84,1:31:20.20,Default,,0,0,0,,is not used at all.\NAnd so it is annotated
 Dialogue: 0,1:31:20.20,1:31:24.24,Default,,0,0,0,,with the zero modality\Nfor consistency,
-Dialogue: 0,1:31:24.24,1:31:27.00,Default,,0,0,0,,We also annotate domain\Nof the hour type
+Dialogue: 0,1:31:24.24,1:31:27.00,Default,,0,0,0,,We also annotate domain\Nof the arrow type
 Dialogue: 0,1:31:27.00,1:31:29.56,Default,,0,0,0,,with the modality.\NYou can see how this
-Dialogue: 0,1:31:29.56,1:31:33.48,Default,,0,0,0,,plays out in the ABS\Nand (INAUDIBLE) roots
-Dialogue: 0,1:31:33.48,1:31:39.72,Default,,0,0,0,,obstruction applications.\NIn particular, in the application
+Dialogue: 0,1:31:29.56,1:31:33.48,Default,,0,0,0,,plays out in the ABS\Nand APP rules
+Dialogue: 0,1:31:33.48,1:31:39.72,Default,,0,0,0,,abstruction applications.\NIn particular, in the application rule
 Dialogue: 0,1:31:39.72,1:31:42.08,Default,,0,0,0,,to be able to fit qA\Nto the function.
 Dialogue: 0,1:31:42.08,1:31:45.00,Default,,0,0,0,,We need q times delta.
 Dialogue: 0,1:31:45.00,1:31:47.16,Default,,0,0,0,,In passing we know quickly\Nthat the application
 Dialogue: 0,1:31:47.16,1:31:50.20,Default,,0,0,0,,does nothing useful\Nwith the modality context.
 Dialogue: 0,1:31:51.44,1:31:52.96,Default,,0,0,0,,Let's now look\Nat the introduction
 Dialogue: 0,1:31:52.96,1:31:56.16,Default,,0,0,0,,and elimination rules\Nfor qualified types.
-Dialogue: 0,1:31:57.20,1:31:59.76,Default,,0,0,0,,Introduction rule works.\NAs we said before,
+Dialogue: 0,1:31:57.20,1:31:59.76,Default,,0,0,0,,Introduction rule works\Nas we said before,
 Dialogue: 0,1:31:59.76,1:32:03.04,Default,,0,0,0,,namely, we multiplied\Nthe context by P.
 Dialogue: 0,1:32:03.04,1:32:05.60,Default,,0,0,0,,Elimination rule\Nis a bit more involved.
-Dialogue: 0,1:32:05.60,1:32:08.24,Default,,0,0,0,,No first that we assume\Nthat little (INAUDIBLE)
-Dialogue: 0,1:32:08.24,1:32:11.28,Default,,0,0,0,,would use P(A).\NNow we want to use this A
+Dialogue: 0,1:32:05.60,1:32:08.24,Default,,0,0,0,,Note first that we assume\Nthat little gamma
+Dialogue: 0,1:32:08.24,1:32:11.28,Default,,0,0,0,,produces P(A).\NNow we want to use this A
 Dialogue: 0,1:32:11.28,1:32:14.16,Default,,0,0,0,,to put to produce\NC in continuation.
 Dialogue: 0,1:32:14.16,1:32:16.56,Default,,0,0,0,,We could think that\Nwe'd have PA
 Dialogue: 0,1:32:16.56,1:32:18.56,Default,,0,0,0,,in the context\Nof the continuation,
-Dialogue: 0,1:32:18.56,1:32:22.40,Default,,0,0,0,,but instead we are outcome\Nreplied by the additional average Q.
-Dialogue: 0,1:32:22.40,1:32:26.64,Default,,0,0,0,,In reality, this is because\Nto produce 1C,
-Dialogue: 0,1:32:26.64,1:32:29.16,Default,,0,0,0,,you need C,\Nwe may need another modality.
-Dialogue: 0,1:32:29.16,1:32:32.52,Default,,0,0,0,,Exactly B for A,\Nand thus this version
+Dialogue: 0,1:32:18.56,1:32:22.40,Default,,0,0,0,,but instead we are allowed\Nto multiply by the annotation of an arbitrary Q.
+Dialogue: 0,1:32:22.40,1:32:26.64,Default,,0,0,0,,This is because\Nto produce 1C,
+Dialogue: 0,1:32:26.64,1:32:29.16,Default,,0,0,0,,unit C,\Nwe may need another modality.
+Dialogue: 0,1:32:29.16,1:32:32.52,Default,,0,0,0,,Exactly P for A,\Nand thus this version
 Dialogue: 0,1:32:32.52,1:32:35.16,Default,,0,0,0,,gives more flexibility\Nto the programmer.
 Dialogue: 0,1:32:35.16,1:32:39.56,Default,,0,0,0,,On top of this, we also have\Nan order of modalities
 Dialogue: 0,1:32:39.56,1:32:44.72,Default,,0,0,0,,and it is generated\Nby this lattice.
 Dialogue: 0,1:32:44.72,1:32:47.04,Default,,0,0,0,,This order drives\Nthe weakening rule
 Dialogue: 0,1:32:47.04,1:32:50.60,Default,,0,0,0,,as shown here.\NWe can also see the converse,
-Dialogue: 0,1:32:50.60,1:32:55.12,Default,,0,0,0,,and, this is\Na conversion rule from PTQ.
-Dialogue: 0,1:32:55.12,1:32:58.72,Default,,0,0,0,,If P is less than Q,\Nthe exact structure
-Dialogue: 0,1:32:58.72,1:33:01.60,Default,,0,0,0,,of morality is\Nas shown here.
-Dialogue: 0,1:33:01.60,1:33:05.80,Default,,0,0,0,,Pose the video, or you can\Ncheck out the paper.
+Dialogue: 0,1:32:50.60,1:32:55.12,Default,,0,0,0,,and, this is\Na conversion rule from P to Q.
+Dialogue: 0,1:32:55.12,1:32:58.72,Default,,0,0,0,,If P is less than Q.\NThe exact structure
+Dialogue: 0,1:32:58.72,1:33:01.60,Default,,0,0,0,,of modalities is\Nas shown here.
+Dialogue: 0,1:33:01.60,1:33:05.80,Default,,0,0,0,,Pause the video, or you can\Ncheck out the paper.
 Dialogue: 0,1:33:05.80,1:33:08.08,Default,,0,0,0,,But the interesting bit\Nis the last line,
-Dialogue: 0,1:33:08.08,1:33:10.32,Default,,0,0,0,,namely, that addition\Ndistribute over meat,
-Dialogue: 0,1:33:10.32,1:33:13.92,Default,,0,0,0,,is probably also you guys,\Naddition is monitored.
+Dialogue: 0,1:33:08.08,1:33:10.32,Default,,0,0,0,,namely, that addition\Ndistribute over meet,
+Dialogue: 0,1:33:10.32,1:33:13.92,Default,,0,0,0,,This property also implies\Naddition is monotonous.
 Dialogue: 0,1:33:15.00,1:33:17.04,Default,,0,0,0,,We can instantiate\Nthe structure to various
-Dialogue: 0,1:33:17.04,1:33:20.12,Default,,0,0,0,,various especial cases\Nand obtain several
+Dialogue: 0,1:33:17.04,1:33:20.12,Default,,0,0,0,,various special cases\Nand obtain several
 Dialogue: 0,1:33:20.12,1:33:23.28,Default,,0,0,0,,useful systems in this way.\NFirst, we can do
-Dialogue: 0,1:33:23.28,1:33:25.64,Default,,0,0,0,,(KEYBOARD CLICKS)\Nzero and one,
+Dialogue: 0,1:33:23.28,1:33:25.64,Default,,0,0,0,,zero and one,
 Dialogue: 0,1:33:25.64,1:33:28.44,Default,,0,0,0,,as you'd expect,\Nwe just need to add
 Dialogue: 0,1:33:28.44,1:33:33.60,Default,,0,0,0,,the modality Omega to support\Nunrestricted usage
-Dialogue: 0,1:33:33.60,1:33:37.24,Default,,0,0,0,,That's the band\Nmodality in radiology.
-Dialogue: 0,1:33:37.84,1:33:40.64,Default,,0,0,0,,The rest of the structure\Nis at you respect.
-Dialogue: 0,1:33:40.64,1:33:44.08,Default,,0,0,0,,And Omega is acting\Nas a cache value.
-Dialogue: 0,1:33:44.08,1:33:47.52,Default,,0,0,0,,Useful generalization\Nof linear types is the system
+Dialogue: 0,1:33:33.60,1:33:37.24,Default,,0,0,0,,That's the bang\Nmodality in linear (INAUDIBLE) .
+Dialogue: 0,1:33:37.84,1:33:40.64,Default,,0,0,0,,The rest of the structure\Nis at you expect.
+Dialogue: 0,1:33:40.64,1:33:44.08,Default,,0,0,0,,And Omega is acting\Nas a catch-all value.
+Dialogue: 0,1:33:44.08,1:33:47.52,Default,,0,0,0,,A useful generalization\Nof linear types is the system
 Dialogue: 0,1:33:47.52,1:33:49.56,Default,,0,0,0,,which tracks\Nthe exact number of times
 Dialogue: 0,1:33:49.56,1:33:52.44,Default,,0,0,0,,that a variable is used.\NHowever, one must
 Dialogue: 0,1:33:52.44,1:33:55.04,Default,,0,0,0,,allow for sets\Nof possible usages.
 Dialogue: 0,1:33:55.04,1:33:58.12,Default,,0,0,0,,We implemented meet, et cetera.\NThe rest of the structure
 Dialogue: 0,1:33:58.12,1:34:02.12,Default,,0,0,0,,falls out from this choice.\NAn interesting property
 Dialogue: 0,1:34:02.12,1:34:05.16,Default,,0,0,0,,of all such models,\NModal systems
-Dialogue: 0,1:34:05.16,1:34:10.12,Default,,0,0,0,,is that zero annotated per meter\Nis guaranteed not to be used
-Dialogue: 0,1:34:10.12,1:34:12.52,Default,,0,0,0,,this capture by\Nthe irrelevance theory,
+Dialogue: 0,1:34:05.16,1:34:10.12,Default,,0,0,0,,is that zero annotated parameter\Nis guaranteed not to be used
+Dialogue: 0,1:34:10.12,1:34:12.52,Default,,0,0,0,,this is capture by\Nthe irrelevance theorem,
 Dialogue: 0,1:34:12.52,1:34:14.36,Default,,0,0,0,,which is stated\Nas shown here
 Dialogue: 0,1:34:14.36,1:34:19.92,Default,,0,0,0,,and proven in the paper,\Nthe lattice, which as you'll recall,
 Dialogue: 0,1:34:19.92,1:34:22.92,Default,,0,0,0,,corresponds to the order\Nof modalities can be used
@@ -1804,93 +1804,93 @@ Dialogue: 0,1:34:22.92,1:34:26.48,Default,,0,0,0,,for various purposes.\NIt can 
 Dialogue: 0,1:34:26.48,1:34:30.32,Default,,0,0,0,,for security purposes,\Nwith more secret levels
 Dialogue: 0,1:34:30.32,1:34:32.88,Default,,0,0,0,,towards the top.\NIt can be used to represent
 Dialogue: 0,1:34:32.88,1:34:35.08,Default,,0,0,0,,the necessity modalities\Nwith more necessary
-Dialogue: 0,1:34:35.08,1:34:37.20,Default,,0,0,0,,for positions towards\Nthe bottom.
+Dialogue: 0,1:34:35.08,1:34:37.20,Default,,0,0,0,,propositions towards\Nthe bottom.
 Dialogue: 0,1:34:37.20,1:34:39.76,Default,,0,0,0,,It can represent\Nlevels of beliefs.
-Dialogue: 0,1:34:39.76,1:34:42.96,Default,,0,0,0,,More credulist agents\Nare at the top.
+Dialogue: 0,1:34:39.76,1:34:42.96,Default,,0,0,0,,More credulous agents\Nare at the top.
 Dialogue: 0,1:34:43.64,1:34:46.16,Default,,0,0,0,,We can represent\Ncomputational relevance
-Dialogue: 0,1:34:46.16,1:34:49.56,Default,,0,0,0,,with more 11 types\Ntoward the bottom.
+Dialogue: 0,1:34:46.16,1:34:49.56,Default,,0,0,0,,with more relevant types\Ntoward the bottom.
 Dialogue: 0,1:34:50.44,1:34:53.60,Default,,0,0,0,,Remember that convertibility\Nis from bottom to top.
-Dialogue: 0,1:34:53.60,1:34:57.16,Default,,0,0,0,,And so at the meat of P & Q\Nall data which is available
+Dialogue: 0,1:34:53.60,1:34:57.16,Default,,0,0,0,,And so at the meet of P and Q\Nall data which is available
 Dialogue: 0,1:34:57.16,1:35:01.60,Default,,0,0,0,,for either P or Q is\Nalso available there.
 Dialogue: 0,1:35:03.52,1:35:05.20,Default,,0,0,0,,We can now take\Na moment to ponder
 Dialogue: 0,1:35:05.20,1:35:08.28,Default,,0,0,0,,what happens when one\Ndoes not care about quantities.
-Dialogue: 0,1:35:08.28,1:35:10.40,Default,,0,0,0,,And so modalities\Nare only used to be
-Dialogue: 0,1:35:10.40,1:35:13.96,Default,,0,0,0,,present levels in areas\Nsuch as from previously
-Dialogue: 0,1:35:13.96,1:35:15.56,Default,,0,0,0,,in this case,\Nthe meat becomes
-Dialogue: 0,1:35:15.56,1:35:19.24,Default,,0,0,0,,the addition and the joint\Nbecomes multiplication.
-Dialogue: 0,1:35:19.24,1:35:23.12,Default,,0,0,0,,Additionally, zero\Nis also the top of the ladder.
+Dialogue: 0,1:35:08.28,1:35:10.40,Default,,0,0,0,,And so modalities\Nare only used to
+Dialogue: 0,1:35:10.40,1:35:13.96,Default,,0,0,0,,represent levels in areas\Nsuch as shown previously
+Dialogue: 0,1:35:13.96,1:35:15.56,Default,,0,0,0,,in this case,\Nthe meet becomes
+Dialogue: 0,1:35:15.56,1:35:19.24,Default,,0,0,0,,the addition and the join\Nbecomes multiplication.
+Dialogue: 0,1:35:19.24,1:35:23.12,Default,,0,0,0,,Additionally, zero\Nis also the top of the lattice.
 Dialogue: 0,1:35:23.12,1:35:25.96,Default,,0,0,0,,The consequence is that\Nto produce zero A
 Dialogue: 0,1:35:25.96,1:35:29.60,Default,,0,0,0,,or really top A,\Nthe modality context
 Dialogue: 0,1:35:29.60,1:35:33.56,Default,,0,0,0,,can be ignored.\NAnd so we can use all variables,
 Dialogue: 0,1:35:33.56,1:35:35.12,Default,,0,0,0,,even those\Nthat are available
-Dialogue: 0,1:35:35.12,1:35:39.32,Default,,0,0,0,,with modality zero, data.\NIt has the application
+Dialogue: 0,1:35:35.12,1:35:39.32,Default,,0,0,0,,with modality zero, in data.\NIt has the application
 Dialogue: 0,1:35:39.32,1:35:41.52,Default,,0,0,0,,where precise quantities\Nare tracked,
-Dialogue: 0,1:35:41.52,1:35:45.52,Default,,0,0,0,,is sensitive analysis,\Nwhich you can read
+Dialogue: 0,1:35:41.52,1:35:45.52,Default,,0,0,0,,in sensitivity analysis,\Nwhich you can read
 Dialogue: 0,1:35:45.52,1:35:48.28,Default,,0,0,0,,about in the paper.\NLet's now turn
 Dialogue: 0,1:35:48.28,1:35:51.72,Default,,0,0,0,,to the metatheory.\NWe consider our first
-Dialogue: 0,1:35:51.72,1:35:53.92,Default,,0,0,0,,operation out semantics,\Nwho's cornerstone
-Dialogue: 0,1:35:53.92,1:35:56.60,Default,,0,0,0,,is the substitution Lemme,\Nthe proof follows
+Dialogue: 0,1:35:51.72,1:35:53.92,Default,,0,0,0,,operational semantics,\Nwhose cornerstone
+Dialogue: 0,1:35:53.92,1:35:56.60,Default,,0,0,0,,is the substitution Lemma,\Nthe proof follows
 Dialogue: 0,1:35:56.60,1:35:59.56,Default,,0,0,0,,the issue of structure.\NWe have additionally
 Dialogue: 0,1:35:59.56,1:36:03.60,Default,,0,0,0,,to express how modalities\Nare transformed by substitution.
 Dialogue: 0,1:36:03.60,1:36:06.36,Default,,0,0,0,,It turns out that the modality\Ntransformation applied by
 Dialogue: 0,1:36:06.36,1:36:11.56,Default,,0,0,0,,your substitution here, Sigma\Nis a linear operator, here.
 Dialogue: 0,1:36:11.56,1:36:13.96,Default,,0,0,0,,So, the proof\Nis straightforward,
 Dialogue: 0,1:36:13.96,1:36:16.28,Default,,0,0,0,,but it is interesting\Nto note that the requirements,
-Dialogue: 0,1:36:16.28,1:36:18.84,Default,,0,0,0,,this is a reformed modality\Nis correspond exactly
-Dialogue: 0,1:36:18.84,1:36:23.08,Default,,0,0,0,,to the model structure,\Nwhich we have shown previously.
+Dialogue: 0,1:36:16.28,1:36:18.84,Default,,0,0,0,,this is a well-formed modality\Nis correspond exactly
+Dialogue: 0,1:36:18.84,1:36:23.08,Default,,0,0,0,,to the modality structure,\Nwhich we have shown previously.
 Dialogue: 0,1:36:23.08,1:36:26.40,Default,,0,0,0,,We also have a modality\Npreserving abstract machine.
-Dialogue: 0,1:36:26.40,1:36:27.80,Default,,0,0,0,,This is a (INAUDIBLE)\Nbinding machine
+Dialogue: 0,1:36:26.40,1:36:27.80,Default,,0,0,0,,This is a call by name machine
 Dialogue: 0,1:36:27.80,1:36:31.36,Default,,0,0,0,,where every state is well typed\Nand well-qualified.
 Dialogue: 0,1:36:31.36,1:36:33.08,Default,,0,0,0,,The main point\Nof showing this machine
 Dialogue: 0,1:36:33.08,1:36:35.64,Default,,0,0,0,,is to show that\Ndynamic execution steps
 Dialogue: 0,1:36:35.64,1:36:38.16,Default,,0,0,0,,will never over-consume\Nunder consume,
 Dialogue: 0,1:36:38.16,1:36:42.00,Default,,0,0,0,,see private information,\Net cetera.
 Dialogue: 0,1:36:42.68,1:36:45.72,Default,,0,0,0,,So the modalities annotations\Ncan be realized
-Dialogue: 0,1:36:45.72,1:36:47.84,Default,,0,0,0,,the trend times as such.
+Dialogue: 0,1:36:45.72,1:36:47.84,Default,,0,0,0,,at run time time as such.
 Dialogue: 0,1:36:49.04,1:36:51.84,Default,,0,0,0,,Finally, we have\Na relation now
 Dialogue: 0,1:36:51.84,1:36:56.80,Default,,0,0,0,,Kripke case style semantics.\NWe interpret types by relations
-Dialogue: 0,1:36:56.80,1:37:00.00,Default,,0,0,0,,and these relations\Nare indexed by words.
+Dialogue: 0,1:36:56.80,1:37:00.00,Default,,0,0,0,,and these relations\Nare indexed by worlds.
 Dialogue: 0,1:37:00.00,1:37:02.84,Default,,0,0,0,,The main novelty here\Nis that we can interpret
 Dialogue: 0,1:37:02.84,1:37:05.36,Default,,0,0,0,,the PA type by\Na notion of division
-Dialogue: 0,1:37:05.36,1:37:08.96,Default,,0,0,0,,or more precisely\Na gala connection.
-Dialogue: 0,1:37:10.48,1:37:12.32,Default,,0,0,0,,For quantitative assistant\Ninstead of a new,
-Dialogue: 0,1:37:12.32,1:37:15.56,Default,,0,0,0,,it's a multiset\Nof resources to consume.
-Dialogue: 0,1:37:15.56,1:37:18.56,Default,,0,0,0,,P is that integrated\Nis a natural number
-Dialogue: 0,1:37:18.56,1:37:24.12,Default,,0,0,0,,and to interpret P(A),\N27 PA at a world w,
+Dialogue: 0,1:37:05.36,1:37:08.96,Default,,0,0,0,,or more precisely\Na galois connection.
+Dialogue: 0,1:37:10.48,1:37:12.32,Default,,0,0,0,,For quantitative systems
+Dialogue: 0,1:37:12.32,1:37:15.56,Default,,0,0,0,,w is a multiset\Nof resources to consume.
+Dialogue: 0,1:37:15.56,1:37:18.56,Default,,0,0,0,,P is then interpreted\Nas a natural number
+Dialogue: 0,1:37:18.56,1:37:24.12,Default,,0,0,0,,and to interpret P(A) at a world w,
 Dialogue: 0,1:37:24.12,1:37:28.72,Default,,0,0,0,,we interpret A\Nat a world w divided by P.
 Dialogue: 0,1:37:28.72,1:37:30.72,Default,,0,0,0,,For non quantitative systems,
-Dialogue: 0,1:37:30.72,1:37:35.48,Default,,0,0,0,,w is a set of capabilities.\NTypes are indistinguishable.
-Dialogue: 0,1:37:35.48,1:37:39.64,Default,,0,0,0,,If the associated capability\Nis not in w.
+Dialogue: 0,1:37:30.72,1:37:35.48,Default,,0,0,0,,w is a set of capabilities.\NTypes are indistinguishable
+Dialogue: 0,1:37:35.48,1:37:39.64,Default,,0,0,0,,if the associated capability\Nis not in w.
 Dialogue: 0,1:37:39.64,1:37:41.60,Default,,0,0,0,,We can take\Nadvantage of the fact
 Dialogue: 0,1:37:41.60,1:37:44.92,Default,,0,0,0,,that every modality\Ncan be represented
 Dialogue: 0,1:37:44.92,1:37:47.00,Default,,0,0,0,,by a set of capabilities.
 Dialogue: 0,1:37:47.00,1:37:50.92,Default,,0,0,0,,So to interpret P(A) at w\Nwe interpret A at the world,
 Dialogue: 0,1:37:50.92,1:37:54.84,Default,,0,0,0,,which is the difference\Nof the sets w and P
-Dialogue: 0,1:37:56.00,1:37:58.80,Default,,0,0,0,,combining the two of you\Nis somewhat curious,
-Dialogue: 0,1:37:58.80,1:38:03.52,Default,,0,0,0,,but it is showing the paper.\NPerhaps controversial choice
+Dialogue: 0,1:37:56.00,1:37:58.80,Default,,0,0,0,,combining the two views\Nis somewhat curious,
+Dialogue: 0,1:37:58.80,1:38:03.52,Default,,0,0,0,,but it is shown in the paper.\NA perhaps controversial choice
 Dialogue: 0,1:38:03.52,1:38:07.56,Default,,0,0,0,,is that we have a constraint\Non which modalities...
-Dialogue: 0,1:38:10.60,1:38:12.48,Default,,0,0,0,,can the value\Ntake to be scrutinized
+Dialogue: 0,1:38:10.60,1:38:12.48,Default,,0,0,0,,can take to be scrutinized
 Dialogue: 0,1:38:12.48,1:38:16.24,Default,,0,0,0,,by a case expression.\NWe demand that they must
 Dialogue: 0,1:38:16.24,1:38:19.32,Default,,0,0,0,,be convertible\Nto the unit modality.
 Dialogue: 0,1:38:19.32,1:38:22.52,Default,,0,0,0,,This constraint is\Nnecessary for irrelevance.
 Dialogue: 0,1:38:22.52,1:38:25.60,Default,,0,0,0,,Otherwise we will be able to see\Nif we are on the left
-Dialogue: 0,1:38:25.60,1:38:27.76,Default,,0,0,0,,or on the right\Nof the sun
+Dialogue: 0,1:38:25.60,1:38:27.76,Default,,0,0,0,,or on the right\Nof the sum
 Dialogue: 0,1:38:27.76,1:38:31.84,Default,,0,0,0,,for every modality, and then\Neverything becomes observable
 Dialogue: 0,1:38:31.84,1:38:35.16,Default,,0,0,0,,at every level,\Neven zero,
-Dialogue: 0,1:38:35.96,1:38:39.36,Default,,0,0,0,,but the operational semantics\Ndo not in fact realize...
+Dialogue: 0,1:38:35.96,1:38:39.36,Default,,0,0,0,,but the operational semantics\Ndo not in fact rely...
 Dialogue: 0,1:38:40.00,1:38:43.32,Default,,0,0,0,,this constraint, rely\Non this constraint.
 Dialogue: 0,1:38:43.32,1:38:45.40,Default,,0,0,0,,And so there are other choices.
 Dialogue: 0,1:38:46.64,1:38:49.72,Default,,0,0,0,,There is an extended discussion\Nof this topic in the paper.
 Dialogue: 0,1:38:51.48,1:38:55.68,Default,,0,0,0,,Additionally in the paper, we deal\Nwith the whole of system F of course
 Dialogue: 0,1:38:55.68,1:38:56.88,Default,,0,0,0,,with sum and products.
-Dialogue: 0,1:38:57.36,1:39:00.24,Default,,0,0,0,,And we have quantification\Nof a modalities
-Dialogue: 0,1:39:00.24,1:39:04.12,Default,,0,0,0,,which means that we have\Nhigh order model types.
+Dialogue: 0,1:38:57.36,1:39:00.24,Default,,0,0,0,,And we have quantification\Nover modalities
+Dialogue: 0,1:39:00.24,1:39:04.12,Default,,0,0,0,,which means that we have\Nhigher-order modal types.
 Dialogue: 0,1:39:04.88,1:39:07.56,Default,,0,0,0,,We also show more applications\Nof free theorems.
 Dialogue: 0,1:39:07.56,1:39:10.08,Default,,0,0,0,,And we also give\Na wealth of nice details.
 Dialogue: 0,1:39:10.08,1:39:11.60,Default,,0,0,0,,So feel free to check these out.
 Dialogue: 0,1:39:12.60,1:39:15.16,Default,,0,0,0,,In conclusion we\Ndeclare victory because
-Dialogue: 0,1:39:15.92,1:39:19.80,Default,,0,0,0,,many useful system can be\Ncaptured by our trademark.
-Dialogue: 0,1:39:20.32,1:39:22.36,Default,,0,0,0,,And indicating in each method here.
+Dialogue: 0,1:39:15.92,1:39:19.80,Default,,0,0,0,,many useful system can be\Ncaptured by our framework.
+Dialogue: 0,1:39:20.32,1:39:22.36,Default,,0,0,0,,And (INAUDIBLE) rich metatheory.
 Dialogue: 0,1:39:23.36,1:39:25.80,Default,,0,0,0,,As usual, it can be useful\Nto describe an application
 Dialogue: 0,1:39:25.80,1:39:29.60,Default,,0,0,0,,which exhibits a non\Ncommutative multiplication
 Dialogue: 0,1:39:30.84,1:39:34.12,Default,,0,0,0,,or (INAUDIBLE)
@@ -1899,7 +1899,7 @@ Dialogue: 0,1:39:39.32,1:39:40.84,Default,,0,0,0,,for the modality structure.
 Dialogue: 0,1:39:42.32,1:39:43.32,Default,,0,0,0,,Thanks for watching.
 Dialogue: 0,1:39:43.32,1:39:48.32,Default,,0,0,0,,(APPLAUSE)
 Dialogue: 0,1:39:51.44,1:39:53.08,Default,,0,0,0,,STEPHANIE: Thank you Jean-Philippe.
-Dialogue: 0,1:39:53.84,1:39:57.96,Default,,0,0,0,,At this point please make\Nsure you join a Q&A session
+Dialogue: 0,1:39:53.84,1:39:57.96,Default,,0,0,0,,At this point please make\Nsure to join a Q&A session
 Dialogue: 0,1:39:57.96,1:40:00.24,Default,,0,0,0,,if it is available in your time map.
 Dialogue: 0,1:40:02.48,1:40:05.44,Default,,0,0,0,,We will now pause to sync up with\Nthe rest of the talk schedule.
 Dialogue: 0,1:40:57.44,1:41:02.44,Default,,0,0,0,,(ROCK MUSIC PLAYING)
