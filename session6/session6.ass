@@ -1,0 +1,2008 @@
+﻿[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: session6
+ScriptType: v4.00+
+Collisions: Normal
+PlayDepth: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H0300FFFF,&H00000000,&H02000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:42.96,0:00:47.96,Default,,0,0,0,,(MUSIC PLAYS)
+Dialogue: 0,0:13:01.20,0:13:03.40,Default,,0,0,0,,SUKYOUNG RYU: Hi! My name\Nis Sukyoung Ryu.
+Dialogue: 0,0:13:03.40,0:13:08.04,Default,,0,0,0,,And I'm the Virtualization\NCommittee member of ICFP 2020
+Dialogue: 0,0:13:08.04,0:13:12.04,Default,,0,0,0,,and the General Chair of ICFP 2021.
+Dialogue: 0,0:13:12.04,0:13:15.92,Default,,0,0,0,,Hope to see you all in\Nthe next year as well.
+Dialogue: 0,0:13:15.92,0:13:19.68,Default,,0,0,0,,I'd like to welcome you\Nto Session Six of ICFP.
+Dialogue: 0,0:13:19.68,0:13:21.88,Default,,0,0,0,,The first talk is entitled
+Dialogue: 0,0:13:21.88,0:13:26.00,Default,,0,0,0,,'Compiling Effect Handlers in\NCapability-Passing Style'.
+Dialogue: 0,0:13:26.00,0:13:29.16,Default,,0,0,0,,This paper will be presented\Nby Philipp Schuster
+Dialogue: 0,0:13:29.16,0:13:32.72,Default,,0,0,0,,and he will tell us about\Na language for Effect Handlers
+Dialogue: 0,0:13:32.72,0:13:36.68,Default,,0,0,0,,in Capability-Passing Style\Nand implementation of the language
+Dialogue: 0,0:13:36.68,0:13:40.36,Default,,0,0,0,,as a translation to\Nsimply-typed lambda calculus
+Dialogue: 0,0:13:40.36,0:13:44.36,Default,,0,0,0,,in iterated\Ncontinuation-passing style.
+Dialogue: 0,0:13:46.72,0:13:50.92,Default,,0,0,0,,PHILIPP: Hi. I'm Philipp\Nand I present out ICFP 20 paper,
+Dialogue: 0,0:13:50.92,0:13:55.04,Default,,0,0,0,,'Compiling Effect Handlers in\NCapability-Passing Style'
+Dialogue: 0,0:13:55.04,0:13:58.08,Default,,0,0,0,,This is joint work with\NJonathan Immanuel Brachthäuser
+Dialogue: 0,0:13:58.08,0:14:00.64,Default,,0,0,0,,and Klaus Ostermann.
+Dialogue: 0,0:14:01.08,0:14:03.80,Default,,0,0,0,,Effect Handlers are great\Nand more and more languages
+Dialogue: 0,0:14:03.80,0:14:06.32,Default,,0,0,0,,are getting support for Effect\NHandlers in more and more libraries
+Dialogue: 0,0:14:06.32,0:14:08.96,Default,,0,0,0,,where Effect Handlers emerge.
+Dialogue: 0,0:14:08.96,0:14:11.84,Default,,0,0,0,,Still, performance is lacking.
+Dialogue: 0,0:14:11.84,0:14:15.56,Default,,0,0,0,,So, this is about\Nthe performance of Effect Handlers.
+Dialogue: 0,0:14:15.56,0:14:17.68,Default,,0,0,0,,Now, there are two separate\Naspects to the performance
+Dialogue: 0,0:14:17.68,0:14:19.12,Default,,0,0,0,,of effect handlers.
+Dialogue: 0,0:14:19.36,0:14:22.08,Default,,0,0,0,,One, enabling compile-time\Noptimizations
+Dialogue: 0,0:14:22.08,0:14:25.56,Default,,0,0,0,,and two, having efficient\Nrun-time operations.
+Dialogue: 0,0:14:25.56,0:14:29.40,Default,,0,0,0,,This work is strictly\Nabout the former.
+Dialogue: 0,0:14:29.40,0:14:33.16,Default,,0,0,0,,Effect Handlers allow you to\Nabstract over complex patterns
+Dialogue: 0,0:14:33.16,0:14:38.16,Default,,0,0,0,,of control flow. Yet, this\Nabstraction comes at a cost.
+Dialogue: 0,0:14:38.88,0:14:41.56,Default,,0,0,0,,To this end, our first\Nresult is a theorem.
+Dialogue: 0,0:14:41.56,0:14:43.20,Default,,0,0,0,,I'll read it out for you.
+Dialogue: 0,0:14:43.20,0:14:46.00,Default,,0,0,0,,Full elimination - the translations\Nof capability-abstraction.
+Dialogue: 0,0:14:46.68,0:14:49.64,Default,,0,0,0,,The ability\Napplication do handle and so on.
+Dialogue: 0,0:14:49.64,0:14:53.04,Default,,0,0,0,,Do not introduce any residual Lambda\Nabstractions or applications,
+Dialogue: 0,0:14:53.04,0:14:56.12,Default,,0,0,0,,except for those in\Nthe translation of the subterms.
+Dialogue: 0,0:14:56.12,0:14:58.12,Default,,0,0,0,,What this means intuitively
+Dialogue: 0,0:14:58.12,0:15:01.40,Default,,0,0,0,,is that we fully eliminate\Nall handler abstraction.
+Dialogue: 0,0:15:01.40,0:15:04.84,Default,,0,0,0,,Of course, this is only possible\Nunder certain conditions
+Dialogue: 0,0:15:04.84,0:15:07.48,Default,,0,0,0,,and in the paper, we formally\Nstate those conditions.
+Dialogue: 0,0:15:07.48,0:15:09.08,Default,,0,0,0,,When those conditions are met,
+Dialogue: 0,0:15:09.08,0:15:12.84,Default,,0,0,0,,we guarantee full elimination\Nas per this theorem.
+Dialogue: 0,0:15:13.80,0:15:17.04,Default,,0,0,0,,A theoretical result is great,\Nbut what about practice?
+Dialogue: 0,0:15:17.04,0:15:21.56,Default,,0,0,0,,Well, we've conducted some benchmarks\Nand they look generally good.
+Dialogue: 0,0:15:21.56,0:15:25.12,Default,,0,0,0,,And in one case, for\Nexample, versus Kalka,
+Dialogue: 0,0:15:25.12,0:15:27.68,Default,,0,0,0,,we see a speed of 409x.
+Dialogue: 0,0:15:27.68,0:15:30.56,Default,,0,0,0,,Whoa. So what do we do?
+Dialogue: 0,0:15:31.76,0:15:34.56,Default,,0,0,0,,We define the source\Nlanguage, Lamda Cap,
+Dialogue: 0,0:15:34.56,0:15:37.00,Default,,0,0,0,,in explicit capability\Npassing style.
+Dialogue: 0,0:15:37.00,0:15:39.64,Default,,0,0,0,,And we will see what\Nthat is in a moment.
+Dialogue: 0,0:15:39.96,0:15:43.20,Default,,0,0,0,,We then translate this language\Nto simply type Lambda calculus
+Dialogue: 0,0:15:43.20,0:15:45.64,Default,,0,0,0,,in iterated continuation\Npassing style.
+Dialogue: 0,0:15:45.64,0:15:48.52,Default,,0,0,0,,We will also see what\Nthat is in a moment.
+Dialogue: 0,0:15:48.52,0:15:50.76,Default,,0,0,0,,This translation specializes\Neffectful functions
+Dialogue: 0,0:15:50.76,0:15:53.64,Default,,0,0,0,,to the number of handlers\Nthey are used under.
+Dialogue: 0,0:15:55.00,0:15:58.40,Default,,0,0,0,,We then go on to define a second\Nlanguage, Lambda two cap.
+Dialogue: 0,0:15:58.40,0:16:01.04,Default,,0,0,0,,It has exactly the same\Nsyntax as Lambda cap,
+Dialogue: 0,0:16:01.04,0:16:02.92,Default,,0,0,0,,but the different system.
+Dialogue: 0,0:16:03.48,0:16:05.68,Default,,0,0,0,,We go on to define\Nthe second translation,
+Dialogue: 0,0:16:05.68,0:16:08.28,Default,,0,0,0,,this time to two level\NLambda calculus.
+Dialogue: 0,0:16:10.20,0:16:14.16,Default,,0,0,0,,This specialized translation\Nspecializes effectful functions
+Dialogue: 0,0:16:14.16,0:16:16.72,Default,,0,0,0,,to concrete handler implementations.
+Dialogue: 0,0:16:17.08,0:16:20.44,Default,,0,0,0,,So the important keywords are\Nexplicit capability passing style
+Dialogue: 0,0:16:20.44,0:16:23.00,Default,,0,0,0,,and iterated continuation\Npassing style.
+Dialogue: 0,0:16:23.44,0:16:25.24,Default,,0,0,0,,Let's look at an example.
+Dialogue: 0,0:16:25.52,0:16:27.60,Default,,0,0,0,,I'll show you a little magic trick.
+Dialogue: 0,0:16:27.60,0:16:29.96,Default,,0,0,0,,I make all handlers disappear,
+Dialogue: 0,0:16:29.96,0:16:33.56,Default,,0,0,0,,and this will go in two steps\Ncorresponding to the two translations.
+Dialogue: 0,0:16:33.84,0:16:37.56,Default,,0,0,0,,Now this is an effectful\Nfunction choice
+Dialogue: 0,0:16:37.76,0:16:40.52,Default,,0,0,0,,written in our source\Nlanguage, Lambda cap.
+Dialogue: 0,0:16:40.88,0:16:44.52,Default,,0,0,0,,It chooses a number between\Nits argument, n and one.
+Dialogue: 0,0:16:44.72,0:16:48.44,Default,,0,0,0,,It uses two effects, flip for\Nnon-deterministic choice,
+Dialogue: 0,0:16:48.44,0:16:51.56,Default,,0,0,0,,and fail for aborting\Nthe current continuation.
+Dialogue: 0,0:16:51.56,0:16:54.24,Default,,0,0,0,,It is written in explicit\Ncapability passing style,
+Dialogue: 0,0:16:54.24,0:16:58.24,Default,,0,0,0,,which means it explicitly\Nabstracts over capabilities,
+Dialogue: 0,0:16:58.24,0:17:01.04,Default,,0,0,0,,flip and fail in lowercase here.
+Dialogue: 0,0:17:01.80,0:17:04.00,Default,,0,0,0,,If the argument n is\Nsmaller than one,
+Dialogue: 0,0:17:04.00,0:17:07.72,Default,,0,0,0,,we fail or else we flip a coin.
+Dialogue: 0,0:17:07.72,0:17:09.32,Default,,0,0,0,,And if the result is true,
+Dialogue: 0,0:17:09.32,0:17:14.00,Default,,0,0,0,,we return n or else we recurse\Nand choose a smaller number.
+Dialogue: 0,0:17:14.40,0:17:16.16,Default,,0,0,0,,Let's look at the n inside.
+Dialogue: 0,0:17:17.00,0:17:20.40,Default,,0,0,0,,Here, we first install\Na handler for a flip.
+Dialogue: 0,0:17:20.64,0:17:23.72,Default,,0,0,0,,Handler for flip uses is\Ncontinuation k twice,
+Dialogue: 0,0:17:23.72,0:17:25.48,Default,,0,0,0,,and appends the results.
+Dialogue: 0,0:17:26.48,0:17:28.64,Default,,0,0,0,,Then we install a handler for fail,
+Dialogue: 0,0:17:28.88,0:17:30.76,Default,,0,0,0,,which its cards has continuation k
+Dialogue: 0,0:17:30.76,0:17:33.28,Default,,0,0,0,,and immediately answers\Nwith the empty list.
+Dialogue: 0,0:17:33.28,0:17:37.16,Default,,0,0,0,,Both handlers introduce capabilities,\Nlower case flip and fail.
+Dialogue: 0,0:17:37.76,0:17:42.48,Default,,0,0,0,,In the cons or choice here, we\Nexplicitly pass those capabilities
+Dialogue: 0,0:17:42.76,0:17:44.64,Default,,0,0,0,,to the effect for function choice.
+Dialogue: 0,0:17:45.68,0:17:49.36,Default,,0,0,0,,Each handler expects\Na specific answer type.
+Dialogue: 0,0:17:49.72,0:17:51.68,Default,,0,0,0,,The handler for flip expects a list
+Dialogue: 0,0:17:51.68,0:17:55.44,Default,,0,0,0,,because it appends the results\Nof the continuation calls.
+Dialogue: 0,0:17:55.44,0:17:58.32,Default,,0,0,0,,The handler of a fail also\Nhappens to expect a list
+Dialogue: 0,0:17:58.32,0:18:01.52,Default,,0,0,0,,because it immediately\Nanswers with the empty list.
+Dialogue: 0,0:18:02.40,0:18:07.16,Default,,0,0,0,,This is all so why we wrap the call\Nto choice into a singleton list.
+Dialogue: 0,0:18:08.32,0:18:10.08,Default,,0,0,0,,We call the list of answer types
+Dialogue: 0,0:18:10.08,0:18:13.72,Default,,0,0,0,,from outermost sender to\Ninnermost sender the stack shape.
+Dialogue: 0,0:18:14.12,0:18:16.52,Default,,0,0,0,,Let me illustrate\Nwhy with a picture.
+Dialogue: 0,0:18:16.84,0:18:19.60,Default,,0,0,0,,This is the caustic at\Nthe quarter choice.
+Dialogue: 0,0:18:20.00,0:18:22.36,Default,,0,0,0,,At the bottom, we have\Nthe handler for flip,
+Dialogue: 0,0:18:23.04,0:18:26.00,Default,,0,0,0,,which expects an answer\Nof type list of int.
+Dialogue: 0,0:18:26.56,0:18:28.56,Default,,0,0,0,,Above it, we have\Nthe handle for fail,
+Dialogue: 0,0:18:28.56,0:18:33.08,Default,,0,0,0,,which expects also\Nan answer type list of it.
+Dialogue: 0,0:18:33.08,0:18:38.08,Default,,0,0,0,,And then we have a frame which wraps\Nthings into the singleton list.
+Dialogue: 0,0:18:39.48,0:18:43.52,Default,,0,0,0,,Now, to approximate\Nthe shape of the stack,
+Dialogue: 0,0:18:43.84,0:18:46.36,Default,,0,0,0,,we have the list of answer types.
+Dialogue: 0,0:18:46.36,0:18:49.28,Default,,0,0,0,,In this case, it's\Na two-element list.
+Dialogue: 0,0:18:49.80,0:18:52.80,Default,,0,0,0,,The two elements are list\Nof int and list of int.
+Dialogue: 0,0:18:53.68,0:18:57.56,Default,,0,0,0,,Because we've created their\Ncapability flip at the outer handler
+Dialogue: 0,0:18:57.56,0:19:00.76,Default,,0,0,0,,in a context with a stack\Nshape with a single element,
+Dialogue: 0,0:19:00.76,0:19:03.32,Default,,0,0,0,,I want to use it inside\Nof the inner handler.
+Dialogue: 0,0:19:03.32,0:19:06.44,Default,,0,0,0,,We have to fix the mismatch\Non the type level here
+Dialogue: 0,0:19:06.44,0:19:09.24,Default,,0,0,0,,and explicitly lift the capability.
+Dialogue: 0,0:19:11.08,0:19:12.88,Default,,0,0,0,,Guided by the stack shape,
+Dialogue: 0,0:19:12.88,0:19:16.60,Default,,0,0,0,,we translate our program to iterate\Nit continuation passing style.
+Dialogue: 0,0:19:17.16,0:19:21.52,Default,,0,0,0,,It is like ordinary continuation\Npassing style, but with a twist.
+Dialogue: 0,0:19:22.28,0:19:24.80,Default,,0,0,0,,So, the translation looks like this.
+Dialogue: 0,0:19:25.52,0:19:27.12,Default,,0,0,0,,We have the effect\Nfor function choice,
+Dialogue: 0,0:19:27.12,0:19:30.56,Default,,0,0,0,,and it abstracts over\Ncapabilities flip and fail.
+Dialogue: 0,0:19:30.56,0:19:32.80,Default,,0,0,0,,This is ordinary Lambda abstraction.
+Dialogue: 0,0:19:32.80,0:19:35.20,Default,,0,0,0,,We then define\Na recursive function loop
+Dialogue: 0,0:19:35.20,0:19:38.16,Default,,0,0,0,,in iterated continuation\Npassing style.
+Dialogue: 0,0:19:38.16,0:19:42.52,Default,,0,0,0,,This means that it gets one\Nor more continuation arguments.
+Dialogue: 0,0:19:42.96,0:19:44.60,Default,,0,0,0,,The number of continuation arguments
+Dialogue: 0,0:19:44.60,0:19:47.72,Default,,0,0,0,,is determined by the number of\Nelements in the stack shape
+Dialogue: 0,0:19:47.72,0:19:51.40,Default,,0,0,0,,because we've used choice\Nhere under two handlers
+Dialogue: 0,0:19:51.40,0:19:54.56,Default,,0,0,0,,correspondingly in a stack\Nshape with two elements,
+Dialogue: 0,0:19:54.56,0:19:57.56,Default,,0,0,0,,it now gets two\Ncontinuation arguments.
+Dialogue: 0,0:19:57.76,0:20:00.84,Default,,0,0,0,,Capabilities are ordinary functions,
+Dialogue: 0,0:20:00.84,0:20:03.64,Default,,0,0,0,,also an iterated\Ncontinuation passing style.
+Dialogue: 0,0:20:03.64,0:20:07.52,Default,,0,0,0,,For example, failure gets\Ntwo continuation arguments.
+Dialogue: 0,0:20:08.00,0:20:09.40,Default,,0,0,0,,And also in the rest\Nof the function,
+Dialogue: 0,0:20:09.40,0:20:11.40,Default,,0,0,0,,for example, in\Nthe recourse of code to do
+Dialogue: 0,0:20:11.40,0:20:14.52,Default,,0,0,0,,we also supply two\Ncontinuation arguments.
+Dialogue: 0,0:20:15.60,0:20:20.60,Default,,0,0,0,,If we look at the handling side, we\Ndefine capabilities flip and fail.
+Dialogue: 0,0:20:21.80,0:20:24.32,Default,,0,0,0,,Flip is an iterator to CPS,
+Dialogue: 0,0:20:25.08,0:20:27.00,Default,,0,0,0,,but in a stack shape\Nwith a single element
+Dialogue: 0,0:20:27.00,0:20:29.96,Default,,0,0,0,,and consequently gets\Na single continuation.
+Dialogue: 0,0:20:30.20,0:20:35.12,Default,,0,0,0,,Fail is an iterated CPS, but in\Na stack shape with two elements.
+Dialogue: 0,0:20:35.12,0:20:37.52,Default,,0,0,0,,So it gets two continuations.
+Dialogue: 0,0:20:37.84,0:20:42.52,Default,,0,0,0,,Now, we also see that lifting\Nhas operational meaning
+Dialogue: 0,0:20:43.48,0:20:46.16,Default,,0,0,0,,because we want to use\Nthe flip capability
+Dialogue: 0,0:20:46.16,0:20:48.84,Default,,0,0,0,,in a context where we supplied\Nwith two continuation arguments.
+Dialogue: 0,0:20:48.84,0:20:50.88,Default,,0,0,0,,We somehow have to\Nfix this mismatch.
+Dialogue: 0,0:20:50.88,0:20:54.00,Default,,0,0,0,,So we defined a new\Ncapability, lifted flip,
+Dialogue: 0,0:20:54.24,0:20:56.64,Default,,0,0,0,,which abstracts over\Ntwo continuations,
+Dialogue: 0,0:20:56.64,0:21:00.92,Default,,0,0,0,,composes them and passes\Nthe composition to the capability flip.
+Dialogue: 0,0:21:01.52,0:21:04.40,Default,,0,0,0,,The Corta choice now\Ngets five arguments,
+Dialogue: 0,0:21:04.64,0:21:09.32,Default,,0,0,0,,two capabilities, the argument\Nn, and two continuations.
+Dialogue: 0,0:21:11.44,0:21:15.44,Default,,0,0,0,,So far, we've seen our\Nsource language Lambda cap
+Dialogue: 0,0:21:15.44,0:21:18.20,Default,,0,0,0,,and our translation to\Nsimply type Lambda calculus
+Dialogue: 0,0:21:18.44,0:21:20.96,Default,,0,0,0,,in iterated continuation\Npassing style.
+Dialogue: 0,0:21:20.96,0:21:24.08,Default,,0,0,0,,We've specialized effectful\Nfunctions to the number of handlers
+Dialogue: 0,0:21:24.08,0:21:25.56,Default,,0,0,0,,they are used under.
+Dialogue: 0,0:21:26.60,0:21:28.92,Default,,0,0,0,,We want to go further\Nand specialize functions
+Dialogue: 0,0:21:28.92,0:21:31.56,Default,,0,0,0,,to concrete handler implementations.
+Dialogue: 0,0:21:31.80,0:21:34.80,Default,,0,0,0,,As it happens, this\Nprogram is also typable
+Dialogue: 0,0:21:34.80,0:21:37.48,Default,,0,0,0,,under the rules of our second\Nlanguage, Lambda two cap.
+Dialogue: 0,0:21:37.48,0:21:42.04,Default,,0,0,0,,So we can use our second translation\Nto two level Lambda calculus.
+Dialogue: 0,0:21:43.52,0:21:46.00,Default,,0,0,0,,This will specialize\Neffectful functions
+Dialogue: 0,0:21:46.00,0:21:48.40,Default,,0,0,0,,to concrete handler implementations.
+Dialogue: 0,0:21:49.40,0:21:51.72,Default,,0,0,0,,It is the same as our\Nfirst translation,
+Dialogue: 0,0:21:51.72,0:21:55.64,Default,,0,0,0,,except that we mark some applications\Nand abstractions as static
+Dialogue: 0,0:21:55.64,0:21:57.56,Default,,0,0,0,,and others as dynamic.
+Dialogue: 0,0:21:57.56,0:22:02.56,Default,,0,0,0,,Specifically, we mark aesthetic\Ncapability abstraction,
+Dialogue: 0,0:22:03.36,0:22:07.44,Default,,0,0,0,,the use of capabilities,\Ncapability definitions,
+Dialogue: 0,0:22:07.44,0:22:12.16,Default,,0,0,0,,the lifting of capabilities\Nand passing of capabilities to functions.
+Dialogue: 0,0:22:12.84,0:22:16.08,Default,,0,0,0,,This program now reduces to this.
+Dialogue: 0,0:22:16.64,0:22:18.32,Default,,0,0,0,,All handlers are gone.
+Dialogue: 0,0:22:19.76,0:22:22.44,Default,,0,0,0,,We've specialized\Nthe effectful function choice
+Dialogue: 0,0:22:22.44,0:22:26.52,Default,,0,0,0,,to the concrete handler\Nimplementations of flip and fail.
+Dialogue: 0,0:22:27.12,0:22:30.92,Default,,0,0,0,,We call the result of\Nthe specialization choice flip fail.
+Dialogue: 0,0:22:30.92,0:22:35.56,Default,,0,0,0,,The handler implementations have\Nbeen inlined into the body of choice
+Dialogue: 0,0:22:35.56,0:22:37.52,Default,,0,0,0,,and the continuations\Nhave been inlined
+Dialogue: 0,0:22:37.76,0:22:39.60,Default,,0,0,0,,into the handle implementations.
+Dialogue: 0,0:22:39.60,0:22:42.60,Default,,0,0,0,,This enables optimizations\Nacross effect codes.
+Dialogue: 0,0:22:42.92,0:22:46.56,Default,,0,0,0,,We are not looking up dynamically\Nany handler implementations,
+Dialogue: 0,0:22:46.56,0:22:50.24,Default,,0,0,0,,and we're not searching for prompts\Non the stack or something either.
+Dialogue: 0,0:22:50.24,0:22:53.24,Default,,0,0,0,,We directly invoke\Nthe correct continuation.
+Dialogue: 0,0:22:53.72,0:22:58.72,Default,,0,0,0,,At the handing side, we see\Nthat the result is still
+Dialogue: 0,0:22:59.08,0:23:02.56,Default,,0,0,0,,an iterated continuation\Npassing style. This is OK.
+Dialogue: 0,0:23:03.04,0:23:06.40,Default,,0,0,0,,Now, let's look at those\Nbenchmark results again.
+Dialogue: 0,0:23:07.16,0:23:11.88,Default,,0,0,0,,We've benchmarked against different\Nlanguages abd different systems,
+Dialogue: 0,0:23:12.28,0:23:14.88,Default,,0,0,0,,the Kalka language\Nwith effect handlers
+Dialogue: 0,0:23:14.88,0:23:19.04,Default,,0,0,0,,and implementation of multi-pronged\Nlimited control, eg a scheme
+Dialogue: 0,0:23:19.04,0:23:22.80,Default,,0,0,0,,and effects as implemented\Nin multi(INAUDIBLE).
+Dialogue: 0,0:23:22.80,0:23:27.80,Default,,0,0,0,,In all of these, we see significant\Nspeed-ups sometimes very big.
+Dialogue: 0,0:23:29.08,0:23:31.40,Default,,0,0,0,,In this benchmark, we\Nsee a slight slowdown,
+Dialogue: 0,0:23:31.40,0:23:33.88,Default,,0,0,0,,but still competitive performance.
+Dialogue: 0,0:23:34.48,0:23:36.84,Default,,0,0,0,,Interestingly, in the case\Nof (INAUDIBLE) scheme,
+Dialogue: 0,0:23:36.84,0:23:39.68,Default,,0,0,0,,we don't see a difference\Nbetween our first translation
+Dialogue: 0,0:23:39.68,0:23:41.64,Default,,0,0,0,,and our second translation.
+Dialogue: 0,0:23:41.88,0:23:45.68,Default,,0,0,0,,This is because (INAUDIBLE) scheme\Ndoes all these reductions for us.
+Dialogue: 0,0:23:45.68,0:23:48.28,Default,,0,0,0,,We didn't have to extend\Nthe (INAUDIBLE) compiler
+Dialogue: 0,0:23:48.28,0:23:50.16,Default,,0,0,0,,or teach it any new tricks.
+Dialogue: 0,0:23:50.40,0:23:55.12,Default,,0,0,0,,It's just Lambdas\Ninlining data reduction.
+Dialogue: 0,0:23:56.64,0:23:58.44,Default,,0,0,0,,To wrap up, we've presented
+Dialogue: 0,0:23:58.44,0:24:01.16,Default,,0,0,0,,a compilation technique\Nfor effect handlers.
+Dialogue: 0,0:24:01.92,0:24:04.72,Default,,0,0,0,,Important concepts are explicit\Ncapability passing style
+Dialogue: 0,0:24:04.72,0:24:07.80,Default,,0,0,0,,and iterated continuation\Npassing style.
+Dialogue: 0,0:24:10.32,0:24:12.92,Default,,0,0,0,,We are translating to just\Nsimply type Lambda calculus.
+Dialogue: 0,0:24:12.92,0:24:15.12,Default,,0,0,0,,We don't need any\Nspecial run time system
+Dialogue: 0,0:24:15.36,0:24:18.40,Default,,0,0,0,,and we don't need any special\Noptimizations either.
+Dialogue: 0,0:24:19.16,0:24:22.48,Default,,0,0,0,,We have a theorem that\Nguarantees full elimination
+Dialogue: 0,0:24:22.48,0:24:25.68,Default,,0,0,0,,under certain conditions, which\Nwe formally state in the paper.
+Dialogue: 0,0:24:26.84,0:24:30.68,Default,,0,0,0,,We have benchmarks which\Nshow good speed-ups.
+Dialogue: 0,0:24:31.68,0:24:35.88,Default,,0,0,0,,And right now we're working on\Nintegrating this compilation technique
+Dialogue: 0,0:24:35.88,0:24:39.00,Default,,0,0,0,,in a new standard\Nor language called Effekt.
+Dialogue: 0,0:24:39.00,0:24:41.16,Default,,0,0,0,,You should go check it out.
+Dialogue: 0,0:24:42.96,0:24:44.84,Default,,0,0,0,,PHILIP: If you're interested\Nin Effekt Handlers
+Dialogue: 0,0:24:44.84,0:24:47.56,Default,,0,0,0,,and the implementation technique\Nof explicitly passing them,
+Dialogue: 0,0:24:47.56,0:24:49.68,Default,,0,0,0,,we invite you to read our paper.
+Dialogue: 0,0:24:49.68,0:24:53.04,Default,,0,0,0,,At the Hope Workshop, we will\Npresent our new language Effekt
+Dialogue: 0,0:24:53.04,0:24:55.08,Default,,0,0,0,,and discuss its design.
+Dialogue: 0,0:24:55.08,0:24:59.00,Default,,0,0,0,,In another ICFP talk, our\Ncollaborator (INAUDIBLE) presents
+Dialogue: 0,0:24:59.00,0:25:02.00,Default,,0,0,0,,the important missing link between\Ntraditional effect handlers
+Dialogue: 0,0:25:02.00,0:25:04.04,Default,,0,0,0,,and explicitly passing them.
+Dialogue: 0,0:25:04.04,0:25:07.12,Default,,0,0,0,,And finally, she also presents\Nher Haskell implementation
+Dialogue: 0,0:25:07.12,0:25:10.00,Default,,0,0,0,,at the Haskell symposium.\NSee you there.
+Dialogue: 0,0:25:13.96,0:25:18.96,Default,,0,0,0,,(APPLAUSE)
+Dialogue: 0,0:25:21.92,0:25:23.24,Default,,0,0,0,,SUKYOUNG: Thank you, Philip.
+Dialogue: 0,0:25:23.24,0:25:27.28,Default,,0,0,0,,If you're watching this talk\Nlive as an ICFP participant,
+Dialogue: 0,0:25:27.28,0:25:30.68,Default,,0,0,0,,please look to see\Nif there is a Q&A session
+Dialogue: 0,0:25:30.68,0:25:32.76,Default,,0,0,0,,available in your time band
+Dialogue: 0,0:25:32.76,0:25:37.04,Default,,0,0,0,,so that you can discuss this work\Nwith the author of the paper.
+Dialogue: 0,0:25:37.28,0:25:41.68,Default,,0,0,0,,We will now pause here to sync\Nup with the talk schedule.
+Dialogue: 0,0:28:00.68,0:28:03.92,Default,,0,0,0,,Our next talk addresses\Nthe challenge of extending
+Dialogue: 0,0:28:03.92,0:28:07.68,Default,,0,0,0,,the meta theory of\NScala's core type system.
+Dialogue: 0,0:28:07.68,0:28:10.96,Default,,0,0,0,,This talk will be presented\Nby Paolo Giarrusso
+Dialogue: 0,0:28:10.96,0:28:15.24,Default,,0,0,0,,and the paper is entitled,\NScala step-by-step
+Dialogue: 0,0:28:15.24,0:28:20.24,Default,,0,0,0,,Soundness for DOT with Step-Indexed\NLogical Relations in Iris.
+Dialogue: 0,0:28:21.28,0:28:23.76,Default,,0,0,0,,PAOLO GIARRUSSO: Hi everybody\Nand thanks for tuning in.
+Dialogue: 0,0:28:23.76,0:28:26.48,Default,,0,0,0,,Today I'll present joint\Nwork with Léo Stefanesco,
+Dialogue: 0,0:28:26.48,0:28:29.12,Default,,0,0,0,,Amin Timany, Lars Birkedal,\Nand Robbert Krebbers.
+Dialogue: 0,0:28:29.12,0:28:34.16,Default,,0,0,0,,A new approach to soundness\Nfor DOT (INAUDIBLE).
+Dialogue: 0,0:28:34.16,0:28:36.80,Default,,0,0,0,,Before we dive into these\Nstories you might task,
+Dialogue: 0,0:28:36.80,0:28:39.56,Default,,0,0,0,,what's interesting about\Nthe Scala type system?
+Dialogue: 0,0:28:39.56,0:28:42.60,Default,,0,0,0,,One might answer as\NScala unifies financial
+Dialogue: 0,0:28:42.60,0:28:44.68,Default,,0,0,0,,and object oriented programming,
+Dialogue: 0,0:28:44.68,0:28:46.68,Default,,0,0,0,,while also very expressive\Nmodular system.
+Dialogue: 0,0:28:46.68,0:28:48.24,Default,,0,0,0,,But what does that mean?
+Dialogue: 0,0:28:48.24,0:28:50.40,Default,,0,0,0,,In other functional\Nprogramming languages,
+Dialogue: 0,0:28:50.40,0:28:53.12,Default,,0,0,0,,software modules are equalized\Nto special constructs,
+Dialogue: 0,0:28:53.12,0:28:55.44,Default,,0,0,0,,such as type classes or modules,
+Dialogue: 0,0:28:55.44,0:28:59.72,Default,,0,0,0,,which are not first class and require\Na special abstraction making.
+Dialogue: 0,0:28:59.72,0:29:04.40,Default,,0,0,0,,Instead, Scala extends irregular\Nobjects without a planned member,
+Dialogue: 0,0:29:04.40,0:29:07.24,Default,,0,0,0,,allowing objects to serve\Nas first-class model,
+Dialogue: 0,0:29:07.24,0:29:09.80,Default,,0,0,0,,hence you can insensate\Nmodules on time
+Dialogue: 0,0:29:09.80,0:29:12.00,Default,,0,0,0,,and abstract code across\Nmodules you're using
+Dialogue: 0,0:29:12.00,0:29:14.40,Default,,0,0,0,,regularized kind of\Nstructural mechanisms,
+Dialogue: 0,0:29:14.40,0:29:17.92,Default,,0,0,0,,such as playing functions\Nor even mixing in (INAUDIBLE).
+Dialogue: 0,0:29:17.92,0:29:22.12,Default,,0,0,0,,Well, absolute types of (INAUDBLE)\Nsound type speed time systems
+Dialogue: 0,0:29:22.12,0:29:25.12,Default,,0,0,0,,scala are time members are\Na significant challenge
+Dialogue: 0,0:29:25.12,0:29:27.28,Default,,0,0,0,,for a type soundness
+Dialogue: 0,0:29:27.28,0:29:32.60,Default,,0,0,0,,because they gain (INAUDIBLE).
+Dialogue: 0,0:29:33.48,0:29:35.00,Default,,0,0,0,,Challenging\Nto prove sound.
+Dialogue: 0,0:29:35.00,0:29:39.92,Default,,0,0,0,,In a few slides, we will\Nsee a very small example.
+Dialogue: 0,0:29:39.92,0:29:42.04,Default,,0,0,0,,While Scala is interesting,
+Dialogue: 0,0:29:42.04,0:29:44.56,Default,,0,0,0,,it's type soundness has been\Nin fact an open question
+Dialogue: 0,0:29:44.56,0:29:47.52,Default,,0,0,0,,since Scala's introduction in 2003.
+Dialogue: 0,0:29:47.60,0:29:49.56,Default,,0,0,0,,Soundness proof has been\N(INAUDIBLE) checked
+Dialogue: 0,0:29:49.72,0:29:51.28,Default,,0,0,0,,for significant (INAUDIBLE),
+Dialogue: 0,0:29:51.40,0:29:54.52,Default,,0,0,0,,the DOT calculi, amazing success.
+Dialogue: 0,0:29:54.52,0:29:57.76,Default,,0,0,0,,However, we have no proof\Nthat abstract types are
+Dialogue: 0,0:29:57.76,0:30:00.40,Default,,0,0,0,,indeed abstract.
+Dialogue: 0,0:30:00.40,0:30:04.56,Default,,0,0,0,,And DOT calculi lags behind\NScala even on call features.
+Dialogue: 0,0:30:04.56,0:30:07.92,Default,,0,0,0,,In (INAUDIBLE) DOT is hard to extend
+Dialogue: 0,0:30:07.92,0:30:11.68,Default,,0,0,0,,while Scala revolution\Nis not slowing down.
+Dialogue: 0,0:30:11.68,0:30:13.92,Default,,0,0,0,,To create a more\Nsensible DOT calculus,
+Dialogue: 0,0:30:13.92,0:30:16.76,Default,,0,0,0,,our approach is to avoid\Nsyntactic rules which is
+Dialogue: 0,0:30:16.84,0:30:18.48,Default,,0,0,0,,preservation and progress.
+Dialogue: 0,0:30:18.48,0:30:22.92,Default,,0,0,0,,Instead, would be at\Nthe logical relations models
+Dialogue: 0,0:30:22.92,0:30:25.48,Default,,0,0,0,,to prove type soundness\Nand data abstraction.
+Dialogue: 0,0:30:25.48,0:30:29.00,Default,,0,0,0,,Then, a retrofit version\Nof DOT over model
+Dialogue: 0,0:30:29.00,0:30:31.24,Default,,0,0,0,,obtaining a more\Nsensible DOT variant
+Dialogue: 0,0:30:31.24,0:30:33.92,Default,,0,0,0,,called guarded DOT or gDOT.
+Dialogue: 0,0:30:33.92,0:30:38.80,Default,,0,0,0,,Unfortunately, guarded DOT adds\Ncertain guardedness restrictions.
+Dialogue: 0,0:30:38.80,0:30:41.20,Default,,0,0,0,,But in our evaluation,\Nit's more acceptable.
+Dialogue: 0,0:30:41.20,0:30:44.88,Default,,0,0,0,,In exchange, result is more\Nextensible as we show
+Dialogue: 0,0:30:44.88,0:30:48.88,Default,,0,0,0,,through some additional features\Nthat we'll mention later.
+Dialogue: 0,0:30:48.88,0:30:50.16,Default,,0,0,0,,To make things concrete,
+Dialogue: 0,0:30:50.16,0:30:53.92,Default,,0,0,0,,let's now look at\Nan example of Scala code.
+Dialogue: 0,0:30:53.92,0:30:56.60,Default,,0,0,0,,In these examples, we create\Nvalidator components
+Dialogue: 0,0:30:56.60,0:30:59.12,Default,,0,0,0,,to validate input from users.
+Dialogue: 0,0:30:59.12,0:31:02.44,Default,,0,0,0,,They provide an abstract\Nvalidator of valid inputs.
+Dialogue: 0,0:31:02.44,0:31:04.72,Default,,0,0,0,,And a corresponding smart\Nconstructor is made
+Dialogue: 0,0:31:04.72,0:31:09.28,Default,,0,0,0,,that validates its input and returns\Neither valid data or nothing.
+Dialogue: 0,0:31:09.28,0:31:12.24,Default,,0,0,0,,Up to this point, nothing too fancy.
+Dialogue: 0,0:31:12.24,0:31:17.04,Default,,0,0,0,,However, new validators\Ncan be created at runtime
+Dialogue: 0,0:31:17.04,0:31:20.32,Default,,0,0,0,,each with a distinct\Nabstract type valid.
+Dialogue: 0,0:31:20.32,0:31:21.88,Default,,0,0,0,,Simplified code.
+Dialogue: 0,0:31:21.88,0:31:24.96,Default,,0,0,0,,We had code that\Ninput type to the int.
+Dialogue: 0,0:31:24.96,0:31:27.16,Default,,0,0,0,,And we say that\Nan input n is valid if it
+Dialogue: 0,0:31:27.16,0:31:29.88,Default,,0,0,0,,is greater than some constant k.
+Dialogue: 0,0:31:29.88,0:31:32.64,Default,,0,0,0,,The solution is in the next slide.
+Dialogue: 0,0:31:32.64,0:31:35.96,Default,,0,0,0,,Our solution is an option to\Nthe client's type of validators.
+Dialogue: 0,0:31:35.96,0:31:39.44,Default,,0,0,0,,In evidence, a type validator\Ncontains two members,
+Dialogue: 0,0:31:39.44,0:31:41.28,Default,,0,0,0,,the type validator inputs, valid,
+Dialogue: 0,0:31:41.28,0:31:43.44,Default,,0,0,0,,and the smart constructor is made.
+Dialogue: 0,0:31:43.44,0:31:45.88,Default,,0,0,0,,Valid is to be a subtype of int,
+Dialogue: 0,0:31:45.88,0:31:47.48,Default,,0,0,0,,the type of all ints.
+Dialogue: 0,0:31:47.48,0:31:50.72,Default,,0,0,0,,That is type valid as int\N(INAUDIBLE) upper bound
+Dialogue: 0,0:31:50.72,0:31:55.56,Default,,0,0,0,,and implicitly (INAUDIBLE)\Ntype nothing as lower bound.
+Dialogue: 0,0:31:55.56,0:31:58.76,Default,,0,0,0,,These bounds encode\Nvalid as abstract.
+Dialogue: 0,0:31:58.76,0:32:03.24,Default,,0,0,0,,Hence, in evidence of valid can\Nonly be constructed through make.
+Dialogue: 0,0:32:03.24,0:32:06.48,Default,,0,0,0,,Function make validator maps input k
+Dialogue: 0,0:32:06.48,0:32:10.12,Default,,0,0,0,,to a validator that accepts\Nonly integers greater than k.
+Dialogue: 0,0:32:10.12,0:32:13.72,Default,,0,0,0,,For instance, here by\Ncalling make validator zero,
+Dialogue: 0,0:32:13.72,0:32:15.80,Default,,0,0,0,,we create a validator\Ncalled pos which
+Dialogue: 0,0:32:16.00,0:32:18.24,Default,,0,0,0,,only accepts positive ints
+Dialogue: 0,0:32:18.24,0:32:22.08,Default,,0,0,0,,as shown by fails and works.
+Dialogue: 0,0:32:22.32,0:32:25.24,Default,,0,0,0,,The type system rejects nope
+Dialogue: 0,0:32:25.24,0:32:28.44,Default,,0,0,0,,because positive valid is abstract
+Dialogue: 0,0:32:28.44,0:32:30.88,Default,,0,0,0,,even though it is\Nimplemented by int.
+Dialogue: 0,0:32:30.88,0:32:34.16,Default,,0,0,0,,Preventing users from bypassing\Nas smart constructors.
+Dialogue: 0,0:32:34.16,0:32:37.80,Default,,0,0,0,,Thanks to first-class models,\Nyou can also choose k at runtime
+Dialogue: 0,0:32:37.80,0:32:40.24,Default,,0,0,0,,as now when creating legal ages.
+Dialogue: 0,0:32:40.24,0:32:42.80,Default,,0,0,0,,As promised, type\Nlegal age is not valid
+Dialogue: 0,0:32:42.80,0:32:44.64,Default,,0,0,0,,as a distinct abstract type
+Dialogue: 0,0:32:44.64,0:32:46.92,Default,,0,0,0,,because legal ages is\Na different object
+Dialogue: 0,0:32:46.92,0:32:50.44,Default,,0,0,0,,with different\Nvalidation conditions.
+Dialogue: 0,0:32:50.44,0:32:54.56,Default,,0,0,0,,This is one example that\Nuses many Scala features.
+Dialogue: 0,0:32:54.56,0:32:57.00,Default,,0,0,0,,So we see that in Scala\Nfirst-class modules,
+Dialogue: 0,0:32:57.00,0:32:58.60,Default,,0,0,0,,the abstract types are\Nencoded as objects
+Dialogue: 0,0:32:58.68,0:33:00.76,Default,,0,0,0,,with bounded type members.
+Dialogue: 0,0:33:01.76,0:33:04.92,Default,,0,0,0,,We have used the type in view\Nfor type member interaction.
+Dialogue: 0,0:33:04.92,0:33:07.52,Default,,0,0,0,,Type definition type A equals T.
+Dialogue: 0,0:33:07.52,0:33:09.52,Default,,0,0,0,,And if it's a bounded\Ntype declaration,
+Dialogue: 0,0:33:09.52,0:33:12.28,Default,,0,0,0,,type A between bound,
+Dialogue: 0,0:33:12.28,0:33:14.40,Default,,0,0,0,,between bounds L and U
+Dialogue: 0,0:33:14.40,0:33:18.76,Default,,0,0,0,,if type T is indeed\Nbetween bounds L and U.
+Dialogue: 0,0:33:18.76,0:33:22.24,Default,,0,0,0,,We have even used\Nimpredicatively type members.
+Dialogue: 0,0:33:22.24,0:33:26.16,Default,,0,0,0,,Types like validator with\Nnested type members like valid
+Dialogue: 0,0:33:26.16,0:33:27.92,Default,,0,0,0,,are still regular types,
+Dialogue: 0,0:33:27.92,0:33:30.44,Default,,0,0,0,,not large types,
+Dialogue: 0,0:33:30.60,0:33:32.92,Default,,0,0,0,,and are subject to\Nregular abstraction.
+Dialogue: 0,0:33:33.04,0:33:38.24,Default,,0,0,0,,So, for instance, validator\Ncan in turn be a type member.
+Dialogue: 0,0:33:38.52,0:33:42.44,Default,,0,0,0,,Next, we sketched our\Nproof type soundness.
+Dialogue: 0,0:33:42.44,0:33:46.80,Default,,0,0,0,,We'll oversimplify in this talk\Nand leave the rest of the paper.
+Dialogue: 0,0:33:46.80,0:33:49.28,Default,,0,0,0,,Our model uses a logical relation.
+Dialogue: 0,0:33:49.28,0:33:51.56,Default,,0,0,0,,That is we map each type T
+Dialogue: 0,0:33:51.56,0:33:54.40,Default,,0,0,0,,for set V of T or values that behave
+Dialogue: 0,0:33:54.40,0:33:56.28,Default,,0,0,0,,as required by type T.
+Dialogue: 0,0:33:56.28,0:33:58.68,Default,,0,0,0,,For instance, intersection\Ntypes are in type
+Dialogue: 0,0:33:58.68,0:34:00.24,Default,,0,0,0,,(INAUDIBLE) intersection.
+Dialogue: 0,0:34:00.24,0:34:02.96,Default,,0,0,0,,The set V of S and T\Nis the intersection
+Dialogue: 0,0:34:02.96,0:34:05.68,Default,,0,0,0,,of V over S and V of T.
+Dialogue: 0,0:34:05.68,0:34:08.48,Default,,0,0,0,,Then, we map syntactic\Ntyping judgments
+Dialogue: 0,0:34:08.48,0:34:10.08,Default,,0,0,0,,to semantic typing judgments.
+Dialogue: 0,0:34:10.08,0:34:13.08,Default,,0,0,0,,For instance, S is a type of T
+Dialogue: 0,0:34:13.08,0:34:17.12,Default,,0,0,0,,if V of S is a subset of V of T.
+Dialogue: 0,0:34:17.12,0:34:21.36,Default,,0,0,0,,(INAUDIBLE) and expression\NE, a semantic type T
+Dialogue: 0,0:34:21.36,0:34:25.72,Default,,0,0,0,,if E runs safely\Nand result is in V of T.
+Dialogue: 0,0:34:25.72,0:34:28.08,Default,,0,0,0,,Hence, semantically type expressions
+Dialogue: 0,0:34:28.08,0:34:31.12,Default,,0,0,0,,are type-safe by definition.
+Dialogue: 0,0:34:31.12,0:34:33.76,Default,,0,0,0,,Then we map each typing\Nrule to a typing lemma
+Dialogue: 0,0:34:33.76,0:34:35.20,Default,,0,0,0,,semantic typing judgments
+Dialogue: 0,0:34:35.20,0:34:36.68,Default,,0,0,0,,that we masked for this.
+Dialogue: 0,0:34:36.68,0:34:41.68,Default,,0,0,0,,For instance, type S\Nand T is a subtype of S
+Dialogue: 0,0:34:41.92,0:34:44.36,Default,,0,0,0,,because V of S and T
+Dialogue: 0,0:34:44.36,0:34:47.56,Default,,0,0,0,,is a subset of V of S.
+Dialogue: 0,0:34:47.56,0:34:50.44,Default,,0,0,0,,We now have type soundness proofs
+Dialogue: 0,0:34:50.44,0:34:51.72,Default,,0,0,0,,that is extensible.
+Dialogue: 0,0:34:51.72,0:34:53.16,Default,,0,0,0,,Proving new typing lemmas
+Dialogue: 0,0:34:53.16,0:34:54.72,Default,,0,0,0,,cannot invalidate all at once
+Dialogue: 0,0:34:54.72,0:34:58.88,Default,,0,0,0,,because each lemma is\Nproved independently.
+Dialogue: 0,0:34:58.88,0:35:03.36,Default,,0,0,0,,Next, we show a naive model of\Nimpredicatively type members.
+Dialogue: 0,0:35:03.36,0:35:08.12,Default,,0,0,0,,We say that a type of object\NV as a type member A
+Dialogue: 0,0:35:08.12,0:35:10.16,Default,,0,0,0,,between bounds L and U
+Dialogue: 0,0:35:10.16,0:35:14.28,Default,,0,0,0,,if V dot A contains some type V
+Dialogue: 0,0:35:14.28,0:35:17.76,Default,,0,0,0,,which is indeed those\Nbounds L and U.
+Dialogue: 0,0:35:17.76,0:35:19.84,Default,,0,0,0,,Here are metavariables V and V
+Dialogue: 0,0:35:19.84,0:35:22.56,Default,,0,0,0,,arranged over sets of\Nsemantic types of values
+Dialogue: 0,0:35:22.56,0:35:24.64,Default,,0,0,0,,defined as false.
+Dialogue: 0,0:35:24.64,0:35:27.76,Default,,0,0,0,,Types as sets of values represented\Nas membership (INAUDIBLE)
+Dialogue: 0,0:35:27.80,0:35:31.36,Default,,0,0,0,,values can be among\Nother things objects.
+Dialogue: 0,0:35:31.36,0:35:35.48,Default,,0,0,0,,That is valid maps for field\Nlabels to values or types.
+Dialogue: 0,0:35:35.48,0:35:39.00,Default,,0,0,0,,However, this definition is illegal
+Dialogue: 0,0:35:39.00,0:35:42.24,Default,,0,0,0,,because in lining, some types shows
+Dialogue: 0,0:35:42.24,0:35:46.76,Default,,0,0,0,,that we are to find unsound\Nby a negative recursion
+Dialogue: 0,0:35:46.76,0:35:48.80,Default,,0,0,0,,which is illegal.
+Dialogue: 0,0:35:48.80,0:35:51.92,Default,,0,0,0,,This problem is exclusive to
+Dialogue: 0,0:35:51.92,0:35:54.28,Default,,0,0,0,,certainly where we have
+Dialogue: 0,0:35:54.28,0:35:58.68,Default,,0,0,0,,to model impredicative type members.
+Dialogue: 0,0:35:58.68,0:36:02.00,Default,,0,0,0,,Thankfully, abstract (INAUDIBLE)
+Dialogue: 0,0:36:02.00,0:36:05.64,Default,,0,0,0,,allows us to construct SemVal
+Dialogue: 0,0:36:05.64,0:36:08.44,Default,,0,0,0,,(INAUDIBLE).
+Dialogue: 0,0:36:08.44,0:36:10.24,Default,,0,0,0,,We must guard our recursion.
+Dialogue: 0,0:36:10.24,0:36:15.20,Default,,0,0,0,,That is storing types into\Nvalues must truncate types
+Dialogue: 0,0:36:15.20,0:36:18.92,Default,,0,0,0,,using the Iris later functor.
+Dialogue: 0,0:36:18.92,0:36:21.52,Default,,0,0,0,,I want to explain what\Nexactly that means.
+Dialogue: 0,0:36:21.52,0:36:24.04,Default,,0,0,0,,But we can ignore details\Nand reason about the solution
+Dialogue: 0,0:36:24.04,0:36:27.16,Default,,0,0,0,,to this question\Nusing the Iris logic.
+Dialogue: 0,0:36:27.16,0:36:29.80,Default,,0,0,0,,Most of the logical relation\Nwould be identical
+Dialogue: 0,0:36:29.80,0:36:31.32,Default,,0,0,0,,to the (INAUDIBLE) model
+Dialogue: 0,0:36:31.32,0:36:32.96,Default,,0,0,0,,except for type members
+Dialogue: 0,0:36:32.96,0:36:37.32,Default,,0,0,0,,since values only contain\Ntruncated type members.
+Dialogue: 0,0:36:37.32,0:36:38.88,Default,,0,0,0,,Assertions about type members
+Dialogue: 0,0:36:38.88,0:36:41.56,Default,,0,0,0,,must be weakened using\Nthe later modality
+Dialogue: 0,0:36:41.56,0:36:43.76,Default,,0,0,0,,as shown in this example.
+Dialogue: 0,0:36:43.76,0:36:48.12,Default,,0,0,0,,Here, a valid V as type\Nmember A between L and U.
+Dialogue: 0,0:36:48.12,0:36:52.28,Default,,0,0,0,,If V DOT A contains type V
+Dialogue: 0,0:36:52.28,0:36:57.28,Default,,0,0,0,,but later V in between\Nlater L and later U.
+Dialogue: 0,0:36:59.52,0:37:04.12,Default,,0,0,0,,At this point, we can\Nretrofit DOT over this model
+Dialogue: 0,0:37:04.12,0:37:05.96,Default,,0,0,0,,obtaining gDOT.
+Dialogue: 0,0:37:05.96,0:37:09.40,Default,,0,0,0,,So, we turn rules from\NpDOT and OOPSLA DOT
+Dialogue: 0,0:37:09.40,0:37:12.48,Default,,0,0,0,,into typing lemmas\Nappropriate to the model.
+Dialogue: 0,0:37:12.48,0:37:16.80,Default,,0,0,0,,Each proof is around two\Nto ten lines of Coq.
+Dialogue: 0,0:37:16.80,0:37:18.48,Default,,0,0,0,,We add a type later T
+Dialogue: 0,0:37:18.48,0:37:20.08,Default,,0,0,0,,reflecting the later modality
+Dialogue: 0,0:37:20.08,0:37:23.80,Default,,0,0,0,,and associated typing rules.
+Dialogue: 0,0:37:23.80,0:37:28.40,Default,,0,0,0,,In this process, we obtain some\Nstronger additional rules.
+Dialogue: 0,0:37:28.40,0:37:31.32,Default,,0,0,0,,In other cases, the restrictions\Nbecome more principled.
+Dialogue: 0,0:37:31.32,0:37:35.12,Default,,0,0,0,,For instance, abstract types\Nsupported also in nested objects
+Dialogue: 0,0:37:35.12,0:37:38.72,Default,,0,0,0,,as we have used in our example.
+Dialogue: 0,0:37:38.72,0:37:42.72,Default,,0,0,0,,Distributive, we obtain\Ndistributivity of n and all
+Dialogue: 0,0:37:42.72,0:37:43.96,Default,,0,0,0,,in our (INAUDIBLE).
+Dialogue: 0,0:37:43.96,0:37:46.28,Default,,0,0,0,,And we also obtain subtyping\Nfor recursive types
+Dialogue: 0,0:37:46.28,0:37:49.84,Default,,0,0,0,,even beyond the typing rules used in
+Dialogue: 0,0:37:49.84,0:37:53.84,Default,,0,0,0,,the OOPSLA DOT type.
+Dialogue: 0,0:37:53.84,0:37:58.12,Default,,0,0,0,,Here we show a few\Nselected typing rules.
+Dialogue: 0,0:37:58.12,0:38:01.04,Default,,0,0,0,,Rules subtype Sel,
+Dialogue: 0,0:38:01.04,0:38:06.04,Default,,0,0,0,,Sel subtype show that selecting
+Dialogue: 0,0:38:07.00,0:38:12.00,Default,,0,0,0,,a type member A from part B
+Dialogue: 0,0:38:12.44,0:38:16.76,Default,,0,0,0,,which is a certain type\Nmember between L and U.
+Dialogue: 0,0:38:16.76,0:38:21.80,Default,,0,0,0,,but gives us a type which is\Nbetween later L and later U.
+Dialogue: 0,0:38:21.80,0:38:26.04,Default,,0,0,0,,This reflects guardedness\Nrestriction on type members.
+Dialogue: 0,0:38:26.04,0:38:28.36,Default,,0,0,0,,Next, we will (INAUDIBLE)
+Dialogue: 0,0:38:28.36,0:38:31.08,Default,,0,0,0,,shows how we can eliminate\Nlater in many cases
+Dialogue: 0,0:38:31.08,0:38:35.20,Default,,0,0,0,,by adding no question to types.
+Dialogue: 0,0:38:35.20,0:38:38.68,Default,,0,0,0,,Next, UT (INAUDIBLE) I
+Dialogue: 0,0:38:38.68,0:38:41.52,Default,,0,0,0,,allows introducing\Nrecursive objects.
+Dialogue: 0,0:38:41.52,0:38:44.92,Default,,0,0,0,,To prevent certain circular\Ntype innovations,
+Dialogue: 0,0:38:44.92,0:38:47.56,Default,,0,0,0,,we avoided gDOT features\Nof other DOT calculi
+Dialogue: 0,0:38:47.56,0:38:50.16,Default,,0,0,0,,and guard against\Nrecursive Sel-references
+Dialogue: 0,0:38:50.16,0:38:52.80,Default,,0,0,0,,by adding later to\Nthe type of Sel-variable x.
+Dialogue: 0,0:38:52.84,0:38:55.72,Default,,0,0,0,,The rule says it creates an object
+Dialogue: 0,0:38:55.80,0:39:00.56,Default,,0,0,0,,with definition x and give\Nit type (INAUDIBLE) DOT T.
+Dialogue: 0,0:39:00.56,0:39:04.72,Default,,0,0,0,,We must check the definitions\N(INAUDIBLE) type T
+Dialogue: 0,0:39:04.76,0:39:08.00,Default,,0,0,0,,in a context with a Sel-variable x
+Dialogue: 0,0:39:08.00,0:39:11.76,Default,,0,0,0,,as type later T.
+Dialogue: 0,0:39:11.76,0:39:15.76,Default,,0,0,0,,Finally, U D-Val allows
+Dialogue: 0,0:39:15.76,0:39:17.92,Default,,0,0,0,,to nest objects inside other objects
+Dialogue: 0,0:39:17.92,0:39:19.76,Default,,0,0,0,,like in pDOT,
+Dialogue: 0,0:39:19.76,0:39:23.24,Default,,0,0,0,,nested objects support\Nabstract type members.
+Dialogue: 0,0:39:23.24,0:39:24.80,Default,,0,0,0,,And this is possible\Nbecause of the restriction
+Dialogue: 0,0:39:24.84,0:39:27.84,Default,,0,0,0,,we added today from (INAUDIBLE).
+Dialogue: 0,0:39:27.84,0:39:30.60,Default,,0,0,0,,In a paper, we give\Nmotivating examples
+Dialogue: 0,0:39:30.60,0:39:32.72,Default,,0,0,0,,for some of our novel features.
+Dialogue: 0,0:39:32.72,0:39:35.36,Default,,0,0,0,,We scaled these models to gDOT
+Dialogue: 0,0:39:35.36,0:39:38.08,Default,,0,0,0,,explaining how to deal with\Nu-types, singleton types,
+Dialogue: 0,0:39:38.12,0:39:40.04,Default,,0,0,0,,path-dependent functions,
+Dialogue: 0,0:39:40.12,0:39:41.84,Default,,0,0,0,,rule paths, and so on.
+Dialogue: 0,0:39:41.84,0:39:46.44,Default,,0,0,0,,We demonstrate expressivity by\Nthe restrictions to type members
+Dialogue: 0,0:39:46.44,0:39:49.48,Default,,0,0,0,,and we give proofs about\Ndata abstractions.
+Dialogue: 0,0:39:49.48,0:39:53.08,Default,,0,0,0,,And we mechanize\N(INAUDIBLE) Coq using Iris.
+Dialogue: 0,0:39:53.08,0:39:56.96,Default,,0,0,0,,Soundness proof is\Naround 9,000 lines.
+Dialogue: 0,0:39:56.96,0:40:01.96,Default,,0,0,0,,And our examples take\Naround 5,000 lines.
+Dialogue: 0,0:40:02.20,0:40:05.52,Default,,0,0,0,,For future work, we assign our model
+Dialogue: 0,0:40:05.52,0:40:08.40,Default,,0,0,0,,to deal with type projection\Nand higher kinds,
+Dialogue: 0,0:40:08.40,0:40:10.96,Default,,0,0,0,,additional Scala features\Nwhich have not been supported
+Dialogue: 0,0:40:10.96,0:40:14.84,Default,,0,0,0,,by (INAUDIBLE) calculi.
+Dialogue: 0,0:40:14.84,0:40:19.84,Default,,0,0,0,,We would like to find\Na way to elaborate
+Dialogue: 0,0:40:21.04,0:40:23.76,Default,,0,0,0,,to DOT from calculi closer to Scala
+Dialogue: 0,0:40:23.84,0:40:26.48,Default,,0,0,0,,and to inferences of later\Nwhich Scala uses currently
+Dialogue: 0,0:40:26.64,0:40:28.68,Default,,0,0,0,,do not have (INAUDIBLE).
+Dialogue: 0,0:40:29.24,0:40:32.92,Default,,0,0,0,,And we hope that these\Ntechniques can be extended
+Dialogue: 0,0:40:32.92,0:40:35.20,Default,,0,0,0,,for (INAUDIBLE) type systems
+Dialogue: 0,0:40:35.20,0:40:40.20,Default,,0,0,0,,with impredicative type\Nmembers or virtual classes.
+Dialogue: 0,0:40:41.24,0:40:44.80,Default,,0,0,0,,In conclusion, Scala's type system
+Dialogue: 0,0:40:44.80,0:40:48.52,Default,,0,0,0,,calls for extensible type-soundness.
+Dialogue: 0,0:40:48.52,0:40:52.04,Default,,0,0,0,,So we use, so we design\Nour type system
+Dialogue: 0,0:40:52.04,0:40:55.84,Default,,0,0,0,,using a semantics-first approach.
+Dialogue: 0,0:40:55.84,0:40:59.40,Default,,0,0,0,,The challenge or one\Nof the challenges
+Dialogue: 0,0:40:59.40,0:41:03.24,Default,,0,0,0,,was that impredicative\Ntype members are crucial
+Dialogue: 0,0:41:03.32,0:41:08.32,Default,,0,0,0,,for Scala's expressivity\Nbut are hard to support.
+Dialogue: 0,0:41:08.76,0:41:13.08,Default,,0,0,0,,But luckily, using Iris enabled\Nmachine-checking solution
+Dialogue: 0,0:41:13.08,0:41:16.88,Default,,0,0,0,,in a convenient way in Coq.
+Dialogue: 0,0:41:16.88,0:41:20.68,Default,,0,0,0,,Thank you very much\Nfor your attention.
+Dialogue: 0,0:41:20.68,0:41:25.68,Default,,0,0,0,,(AUDIENCE APPLAUDS)
+Dialogue: 0,0:41:28.80,0:41:30.12,Default,,0,0,0,,SUKYOUNG: Thank you, Paolo.
+Dialogue: 0,0:41:30.12,0:41:32.12,Default,,0,0,0,,If you are watching this talk live
+Dialogue: 0,0:41:32.12,0:41:34.80,Default,,0,0,0,,as an ICFP participant,
+Dialogue: 0,0:41:34.80,0:41:36.72,Default,,0,0,0,,please look to see if there
+Dialogue: 0,0:41:36.72,0:41:39.92,Default,,0,0,0,,is a Q&A session\Navailable in your time band
+Dialogue: 0,0:41:39.92,0:41:41.88,Default,,0,0,0,,so that you can discuss this work
+Dialogue: 0,0:41:41.88,0:41:46.88,Default,,0,0,0,,with the author of the paper.
+Dialogue: 0,0:43:02.32,0:43:04.32,Default,,0,0,0,,Our next talk is entitled
+Dialogue: 0,0:43:04.68,0:43:06.84,Default,,0,0,0,,A Dependently Typed Calculus with
+Dialogue: 0,0:43:06.84,0:43:10.00,Default,,0,0,0,,Pattern Matching\Nand Erasure Inference.
+Dialogue: 0,0:43:10.00,0:43:13.60,Default,,0,0,0,,This paper has been\Nwritten by Matus Tejsak.
+Dialogue: 0,0:43:13.60,0:43:17.68,Default,,0,0,0,,And he will tell us that\Nerasure in well-typed programs
+Dialogue: 0,0:43:17.68,0:43:22.68,Default,,0,0,0,,is sound in that it\Ncommutes with reduction.
+Dialogue: 0,0:43:23.52,0:43:25.08,Default,,0,0,0,,MATUS TEJSAK: Hello, thank you for
+Dialogue: 0,0:43:25.08,0:43:26.52,Default,,0,0,0,,coming to my talk.
+Dialogue: 0,0:43:26.52,0:43:28.24,Default,,0,0,0,,My name is Matus Tejsak\Nand I would like to
+Dialogue: 0,0:43:28.24,0:43:32.12,Default,,0,0,0,,talk about erasure\Nindependently type programming.
+Dialogue: 0,0:43:32.12,0:43:33.52,Default,,0,0,0,,Dependent types are great.
+Dialogue: 0,0:43:33.52,0:43:35.52,Default,,0,0,0,,They let us write specifications
+Dialogue: 0,0:43:35.52,0:43:37.68,Default,,0,0,0,,and formulate invariants
+Dialogue: 0,0:43:37.68,0:43:40.16,Default,,0,0,0,,and let the computer help us
+Dialogue: 0,0:43:40.16,0:43:43.76,Default,,0,0,0,,make sure that our programs\Nconform to those specifications.
+Dialogue: 0,0:43:43.76,0:43:46.12,Default,,0,0,0,,For example, here's\Na program that reads
+Dialogue: 0,0:43:46.12,0:43:48.04,Default,,0,0,0,,a binary number from the input,
+Dialogue: 0,0:43:48.04,0:43:51.16,Default,,0,0,0,,adds one to it,\Nand prints a result out.
+Dialogue: 0,0:43:51.16,0:43:55.52,Default,,0,0,0,,Where the type of binary\Nnumbers is indexed
+Dialogue: 0,0:43:55.52,0:43:58.76,Default,,0,0,0,,by its unary representation\Nwhich is easier to reason about
+Dialogue: 0,0:43:58.76,0:44:03.12,Default,,0,0,0,,which allows us to give\Nthe function add one a type
+Dialogue: 0,0:44:03.12,0:44:05.48,Default,,0,0,0,,that guarantees that add one indeed
+Dialogue: 0,0:44:05.48,0:44:10.32,Default,,0,0,0,,computes the successor of\Nthe given binary number.
+Dialogue: 0,0:44:10.32,0:44:14.40,Default,,0,0,0,,Unfortunately, just by\Nlooking at the types,
+Dialogue: 0,0:44:14.40,0:44:16.60,Default,,0,0,0,,we can already tell\Nthat this program
+Dialogue: 0,0:44:16.60,0:44:19.36,Default,,0,0,0,,will run in exponential time\Nand space with respect...
+Dialogue: 0,0:44:20.08,0:44:22.36,Default,,0,0,0,,MATUS: Do the number of\Nbits right from the input.
+Dialogue: 0,0:44:22.36,0:44:23.40,Default,,0,0,0,,Why is that?
+Dialogue: 0,0:44:23.40,0:44:27.24,Default,,0,0,0,,Well, if we look at\Nthe implicit arguments,
+Dialogue: 0,0:44:27.24,0:44:30.08,Default,,0,0,0,,which are usually hidden\Nand filled in by the elaborator,
+Dialogue: 0,0:44:30.08,0:44:33.56,Default,,0,0,0,,we can see that each binary number
+Dialogue: 0,0:44:33.56,0:44:36.60,Default,,0,0,0,,also contains\Nthe unit representation
+Dialogue: 0,0:44:37.32,0:44:41.00,Default,,0,0,0,,of the binary numbers\Ncontained within
+Dialogue: 0,0:44:41.00,0:44:43.04,Default,,0,0,0,,and the function adds one also,
+Dialogue: 0,0:44:43.84,0:44:47.92,Default,,0,0,0,,takes unit representation of\Nthe binary number it takes
+Dialogue: 0,0:44:48.60,0:44:53.48,Default,,0,0,0,,and those unit representations\Nare exponentially sized
+Dialogue: 0,0:44:53.48,0:44:55.08,Default,,0,0,0,,with respective number of bits.
+Dialogue: 0,0:44:55.08,0:44:58.56,Default,,0,0,0,,And therefore the representation of\Nmemory looks roughly like this.
+Dialogue: 0,0:44:58.56,0:45:03.56,Default,,0,0,0,,The useful bit on\Nthe left is dwarfed by the,
+Dialogue: 0,0:45:03.88,0:45:08.08,Default,,0,0,0,,compile-time only\Ninformation on the right.
+Dialogue: 0,0:45:10.04,0:45:12.08,Default,,0,0,0,,So, in this talk,\NI would like to convince
+Dialogue: 0,0:45:12.08,0:45:13.72,Default,,0,0,0,,you that this is real problem.
+Dialogue: 0,0:45:13.72,0:45:16.80,Default,,0,0,0,,That we should really address this
+Dialogue: 0,0:45:16.80,0:45:20.40,Default,,0,0,0,,and that by specifying our\Nprograms more precisely,
+Dialogue: 0,0:45:20.40,0:45:22.72,Default,,0,0,0,,we should not make them run slower
+Dialogue: 0,0:45:22.72,0:45:26.00,Default,,0,0,0,,and we should not make\Na linear program run
+Dialogue: 0,0:45:26.52,0:45:28.84,Default,,0,0,0,,in exponential time or worse,
+Dialogue: 0,0:45:28.88,0:45:31.56,Default,,0,0,0,,just by saying about it, that it,
+Dialogue: 0,0:45:32.04,0:45:34.92,Default,,0,0,0,,calculates the right answer.
+Dialogue: 0,0:45:34.92,0:45:36.84,Default,,0,0,0,,I'll sketch that,
+Dialogue: 0,0:45:36.84,0:45:41.64,Default,,0,0,0,,irrelevance erased\Nuniverses or laziness also-
+Dialogue: 0,0:45:41.64,0:45:43.48,Default,,0,0,0,,it's a slightly different problem.
+Dialogue: 0,0:45:43.48,0:45:47.84,Default,,0,0,0,,So, they are not always applicable\Nor not always the best choice.
+Dialogue: 0,0:45:47.84,0:45:51.76,Default,,0,0,0,,I'll sketch the gist of\Nhow we can discover,
+Dialogue: 0,0:45:52.24,0:45:54.24,Default,,0,0,0,,this compile-time only information,
+Dialogue: 0,0:45:55.00,0:45:58.16,Default,,0,0,0,,that might be too big
+Dialogue: 0,0:45:58.16,0:46:01.40,Default,,0,0,0,,and automatically discover it
+Dialogue: 0,0:46:01.40,0:46:04.48,Default,,0,0,0,,and remove it from the program,
+Dialogue: 0,0:46:04.48,0:46:09.48,Default,,0,0,0,,thus recovering the intended\Nrun time complexity.
+Dialogue: 0,0:46:11.60,0:46:16.00,Default,,0,0,0,,And I'll show this\Noptimization makes
+Dialogue: 0,0:46:16.00,0:46:18.32,Default,,0,0,0,,other optimizations more powerful,
+Dialogue: 0,0:46:18.32,0:46:21.12,Default,,0,0,0,,and also makes\Nthe compiler run faster,
+Dialogue: 0,0:46:21.12,0:46:23.44,Default,,0,0,0,,because there's less\Ncode to generate.
+Dialogue: 0,0:46:23.44,0:46:24.84,Default,,0,0,0,,In language like COKE.
+Dialogue: 0,0:46:24.84,0:46:28.72,Default,,0,0,0,,We might want-we\Nmight attempt to use,
+Dialogue: 0,0:46:28.72,0:46:32.36,Default,,0,0,0,,the erase universe of prop.
+Dialogue: 0,0:46:32.36,0:46:35.96,Default,,0,0,0,,However, while this is\Ngreat for erasing proofs,
+Dialogue: 0,0:46:35.96,0:46:38.56,Default,,0,0,0,,it's not so good at raising indices,
+Dialogue: 0,0:46:38.56,0:46:42.80,Default,,0,0,0,,as illustrated by\Nthe function natToBin.
+Dialogue: 0,0:46:42.80,0:46:44.96,Default,,0,0,0,,Because what should\Nbe the type of n,
+Dialogue: 0,0:46:44.96,0:46:48.56,Default,,0,0,0,,should the type of n be\Nerased or not erased,
+Dialogue: 0,0:46:48.56,0:46:53.56,Default,,0,0,0,,since function natToBin\Nrequires n to do its job
+Dialogue: 0,0:46:54.20,0:46:56.88,Default,,0,0,0,,n must have a non-erased type.
+Dialogue: 0,0:46:56.88,0:47:01.56,Default,,0,0,0,,However, because the same n\Nis used as an index of Bin,
+Dialogue: 0,0:47:01.56,0:47:03.36,Default,,0,0,0,,it must have an erased type.
+Dialogue: 0,0:47:03.36,0:47:06.80,Default,,0,0,0,,So, tying erasure to\Na type of variable,
+Dialogue: 0,0:47:06.80,0:47:10.60,Default,,0,0,0,,is not useful in this case.
+Dialogue: 0,0:47:10.60,0:47:15.60,Default,,0,0,0,,We might even try laziness,\Nthat works sometimes,
+Dialogue: 0,0:47:16.00,0:47:19.76,Default,,0,0,0,,but it's a dynamic\Nfix for a static problem.
+Dialogue: 0,0:47:19.76,0:47:23.00,Default,,0,0,0,,We can already tell at compile time,
+Dialogue: 0,0:47:23.00,0:47:28.08,Default,,0,0,0,,which bits can be erased\Nand which bits we need for runtime.
+Dialogue: 0,0:47:28.08,0:47:33.12,Default,,0,0,0,,So, we should not keep\Na runtime check,
+Dialogue: 0,0:47:33.12,0:47:36.72,Default,,0,0,0,,to prevent evaluation\Nof that information
+Dialogue: 0,0:47:36.72,0:47:38.76,Default,,0,0,0,,we should just erase it altogether.
+Dialogue: 0,0:47:38.76,0:47:43.24,Default,,0,0,0,,Laziness is not an option in\Neagerly evaluated languages.
+Dialogue: 0,0:47:43.24,0:47:47.64,Default,,0,0,0,,And as illustrated by\Nthe function serverLoop,
+Dialogue: 0,0:47:49.28,0:47:54.12,Default,,0,0,0,,we have a choice here between,
+Dialogue: 0,0:47:54.12,0:47:58.36,Default,,0,0,0,,accumulating thunks\Nin the variable n,
+Dialogue: 0,0:47:58.36,0:48:02.48,Default,,0,0,0,,if we do not evaluate it\Nand therefore leaking memory
+Dialogue: 0,0:48:02.48,0:48:07.48,Default,,0,0,0,,or evaluating it and having\Nn explode exponentially in size.
+Dialogue: 0,0:48:08.40,0:48:10.64,Default,,0,0,0,,Irrelevance can also be used,
+Dialogue: 0,0:48:12.00,0:48:15.12,Default,,0,0,0,,to achieve erasure,\Nirrelevance is too strong.
+Dialogue: 0,0:48:15.12,0:48:19.04,Default,,0,0,0,,By irrelevance I mean,\Nthe property of subexpressions
+Dialogue: 0,0:48:19.04,0:48:21.76,Default,,0,0,0,,ignored in definitional equality.
+Dialogue: 0,0:48:21.76,0:48:26.76,Default,,0,0,0,,This is a very strong property,
+Dialogue: 0,0:48:26.76,0:48:31.76,Default,,0,0,0,,and it's not necessary\Nfor erasure and runtime,
+Dialogue: 0,0:48:32.92,0:48:35.96,Default,,0,0,0,,in Agda...
+Dialogue: 0,0:48:35.96,0:48:40.00,Default,,0,0,0,,irrelevance does not help us\Nwith the binary number example,
+Dialogue: 0,0:48:40.60,0:48:45.28,Default,,0,0,0,,just because it's too powerful\Nand causes problems.
+Dialogue: 0,0:48:45.28,0:48:47.56,Default,,0,0,0,,Also inference of irrelevance is harder
+Dialogue: 0,0:48:47.56,0:48:49.84,Default,,0,0,0,,than just inference of erasure.
+Dialogue: 0,0:48:50.12,0:48:54.48,Default,,0,0,0,,So, there's-if we just need erasure,
+Dialogue: 0,0:48:54.48,0:48:59.48,Default,,0,0,0,,we do not need irrelevance with\Nall the consequences it brings.
+Dialogue: 0,0:49:01.20,0:49:02.76,Default,,0,0,0,,So, what do we do then?
+Dialogue: 0,0:49:02.84,0:49:04.24,Default,,0,0,0,,Well, here's a small example,
+Dialogue: 0,0:49:04.24,0:49:08.84,Default,,0,0,0,,function V-length that takes\Na vector and calculates its length.
+Dialogue: 0,0:49:08.84,0:49:10.32,Default,,0,0,0,,We can ask the question,
+Dialogue: 0,0:49:11.20,0:49:14.28,Default,,0,0,0,,can we erase the second\Nargument of V-length call n?
+Dialogue: 0,0:49:15.00,0:49:19.24,Default,,0,0,0,,Or does V-length need to look at\Nthis argument to do its job?
+Dialogue: 0,0:49:19.24,0:49:21.44,Default,,0,0,0,,Well in the first clause,
+Dialogue: 0,0:49:21.44,0:49:25.00,Default,,0,0,0,,the second argument is forced to\Nzero indicated by square brackets,
+Dialogue: 0,0:49:25.00,0:49:26.56,Default,,0,0,0,,because the vector is empty.
+Dialogue: 0,0:49:26.56,0:49:30.32,Default,,0,0,0,,So, since the types tell us that\Nthe second argument is zero.
+Dialogue: 0,0:49:30.32,0:49:33.88,Default,,0,0,0,,We need not look at it. We\Ndo not have to inspect it.
+Dialogue: 0,0:49:33.88,0:49:37.28,Default,,0,0,0,,In the second clause,\Nthe types tell us that
+Dialogue: 0,0:49:37.28,0:49:41.68,Default,,0,0,0,,the second argument is a successor\Nof a certain number called n.
+Dialogue: 0,0:49:41.68,0:49:44.88,Default,,0,0,0,,So, the types tell us\Nthe tag of the constructor.
+Dialogue: 0,0:49:48.28,0:49:51.12,Default,,0,0,0,,But they do not tell us what n is.
+Dialogue: 0,0:49:51.12,0:49:53.48,Default,,0,0,0,,However, on the right-hand side,
+Dialogue: 0,0:49:53.48,0:49:57.32,Default,,0,0,0,,n is used in the recursive call,
+Dialogue: 0,0:49:57.32,0:49:58.60,Default,,0,0,0,,as a second argument of V-length.
+Dialogue: 0,0:49:58.60,0:50:01.68,Default,,0,0,0,,So, if the recursive call,
+Dialogue: 0,0:50:01.68,0:50:05.84,Default,,0,0,0,,does not need the second argument,
+Dialogue: 0,0:50:05.84,0:50:08.60,Default,,0,0,0,,we do not need n\Nand since we know the tag
+Dialogue: 0,0:50:08.60,0:50:11.04,Default,,0,0,0,,and we do not need the n,
+Dialogue: 0,0:50:11.04,0:50:14.36,Default,,0,0,0,,we do not need the second\Nargument altogether.
+Dialogue: 0,0:50:14.36,0:50:17.40,Default,,0,0,0,,And it's consistent then to say that
+Dialogue: 0,0:50:17.40,0:50:20.16,Default,,0,0,0,,the second argument of\NV-length can be erased.
+Dialogue: 0,0:50:20.16,0:50:22.20,Default,,0,0,0,,To make this a little\Nbit more formal,
+Dialogue: 0,0:50:22.84,0:50:26.76,Default,,0,0,0,,we need to get a bit more explicit\Nabout the pattern variables,
+Dialogue: 0,0:50:26.76,0:50:29.72,Default,,0,0,0,,so we insert the two lines\Nstarting with where,
+Dialogue: 0,0:50:29.72,0:50:34.76,Default,,0,0,0,,that bind the pattern variables\Nexplicitly and give them types.
+Dialogue: 0,0:50:34.76,0:50:39.12,Default,,0,0,0,,Next, we number all colons and
+Dialogue: 0,0:50:39.12,0:50:41.52,Default,,0,0,0,,all applications in\Nthe whole program.
+Dialogue: 0,0:50:41.52,0:50:46.08,Default,,0,0,0,,So, all name bindings\Nare numbered now.
+Dialogue: 0,0:50:46.08,0:50:49.56,Default,,0,0,0,,Each of these numbers will be-
+Dialogue: 0,0:50:49.56,0:50:52.64,Default,,0,0,0,,will eventually be replaced\Nby a definite annotation
+Dialogue: 0,0:50:52.72,0:50:55.04,Default,,0,0,0,,R or E, retained or erased.
+Dialogue: 0,0:50:55.04,0:50:57.68,Default,,0,0,0,,But we cannot just fill in\Nany annotations we like,
+Dialogue: 0,0:50:57.68,0:51:02.08,Default,,0,0,0,,because they need to satisfy\Nsome consistency constraints.
+Dialogue: 0,0:51:02.08,0:51:05.28,Default,,0,0,0,,So, then we traverse\Nthe whole program
+Dialogue: 0,0:51:05.28,0:51:07.60,Default,,0,0,0,,and gather consistency constraints.
+Dialogue: 0,0:51:08.24,0:51:12.36,Default,,0,0,0,,For example, in this program,\Nwe can notice that-
+Dialogue: 0,0:51:12.40,0:51:14.48,Default,,0,0,0,,that the annotation number 19,
+Dialogue: 0,0:51:14.48,0:51:17.36,Default,,0,0,0,,has to be the same as\Nthe annotation number 30,
+Dialogue: 0,0:51:17.36,0:51:19.88,Default,,0,0,0,,because it's the same function
+Dialogue: 0,0:51:19.88,0:51:22.32,Default,,0,0,0,,as the first argument\Nof function V-length,
+Dialogue: 0,0:51:22.32,0:51:25.28,Default,,0,0,0,,so it has to have\Nthe same annotation.
+Dialogue: 0,0:51:25.28,0:51:27.76,Default,,0,0,0,,This is expressible in\Nthe horn-clause form.
+Dialogue: 0,0:51:28.48,0:51:31.76,Default,,0,0,0,,Then on the right-hand\Nside, we can observe that,
+Dialogue: 0,0:51:31.76,0:51:35.12,Default,,0,0,0,,if S uses its first\Nargument and vector length
+Dialogue: 0,0:51:35.12,0:51:36.84,Default,,0,0,0,,uses it's second argument,
+Dialogue: 0,0:51:36.84,0:51:41.48,Default,,0,0,0,,then the pattern variable\Nn needs to be available.
+Dialogue: 0,0:51:42.12,0:51:44.96,Default,,0,0,0,,This is also expressible\Nin the horn-clause form
+Dialogue: 0,0:51:44.96,0:51:47.72,Default,,0,0,0,,and we can see it in\Nthe second line of the table.
+Dialogue: 0,0:51:48.80,0:51:53.68,Default,,0,0,0,,Finally on the left-hand\Nside of this clause,
+Dialogue: 0,0:51:54.52,0:51:59.48,Default,,0,0,0,,we can observe that\Nif n has to be available,
+Dialogue: 0,0:51:59.48,0:52:04.20,Default,,0,0,0,,then S needs to remember\Nit's argument,
+Dialogue: 0,0:52:04.20,0:52:09.00,Default,,0,0,0,,which means number 32\Nhas to be retained
+Dialogue: 0,0:52:09.00,0:52:13.60,Default,,0,0,0,,and vector length has to\Nretain its second argument,
+Dialogue: 0,0:52:13.60,0:52:16.56,Default,,0,0,0,,which means number 31\Nhas to be retained.
+Dialogue: 0,0:52:16.56,0:52:21.56,Default,,0,0,0,,This is also expressible\Nas two horn-clauses.
+Dialogue: 0,0:52:21.96,0:52:26.96,Default,,0,0,0,,And in this manner, we go\Nthrough the whole program,
+Dialogue: 0,0:52:27.32,0:52:30.48,Default,,0,0,0,,gather the constraints\Nand then find a solution,
+Dialogue: 0,0:52:31.72,0:52:35.28,Default,,0,0,0,,that erases as much as possible,
+Dialogue: 0,0:52:35.28,0:52:38.96,Default,,0,0,0,,while being consistent\Nwith these constraints.
+Dialogue: 0,0:52:38.96,0:52:46.36,Default,,0,0,0,,This yields an annotated\Nprogram where every variable
+Dialogue: 0,0:52:46.80,0:52:51.56,Default,,0,0,0,,and every application has\Nbeen annotated with R or E.
+Dialogue: 0,0:52:51.56,0:52:55.76,Default,,0,0,0,,And with the annotations are\Nbuilt into of the type system,
+Dialogue: 0,0:52:55.76,0:52:58.00,Default,,0,0,0,,it's not something we\Nkeep on the side,
+Dialogue: 0,0:52:58.00,0:53:00.52,Default,,0,0,0,,it's really built into\Nthe type signatures.
+Dialogue: 0,0:53:00.52,0:53:05.52,Default,,0,0,0,,So, then we can erase everything\Nthat's annotated with E,
+Dialogue: 0,0:53:05.88,0:53:08.44,Default,,0,0,0,,obtaining the program that\Nwe actually wants to run.
+Dialogue: 0,0:53:08.44,0:53:13.12,Default,,0,0,0,,And that does not contain\Nany traces of overhead cost
+Dialogue: 0,0:53:13.12,0:53:16.32,Default,,0,0,0,,by dependent typing and indices.
+Dialogue: 0,0:53:16.32,0:53:19.80,Default,,0,0,0,,This erasure system has\Nsome nice properties.
+Dialogue: 0,0:53:19.80,0:53:22.84,Default,,0,0,0,,For example, the function subst,
+Dialogue: 0,0:53:22.84,0:53:26.16,Default,,0,0,0,,does not require-does not\Nretain its proof arguments.
+Dialogue: 0,0:53:26.16,0:53:27.92,Default,,0,0,0,,So, the proof can be erased.
+Dialogue: 0,0:53:28.00,0:53:30.28,Default,,0,0,0,,despite being matched on.
+Dialogue: 0,0:53:30.28,0:53:33.32,Default,,0,0,0,,The types tell us what\Nthe constructor tag must be.
+Dialogue: 0,0:53:33.32,0:53:36.52,Default,,0,0,0,,We know because there's only one\Nconstructor in the type family
+Dialogue: 0,0:53:36.52,0:53:41.16,Default,,0,0,0,,and the argument X is not\Nused on the right-hand side.
+Dialogue: 0,0:53:41.16,0:53:43.56,Default,,0,0,0,,Therefore the proof can\Nbe erased and subst
+Dialogue: 0,0:53:43.56,0:53:47.64,Default,,0,0,0,,becomes an identity\Nfunction after erasure.
+Dialogue: 0,0:53:47.64,0:53:50.72,Default,,0,0,0,,Of course, this is doable only\Nif the type system is sound
+Dialogue: 0,0:53:50.72,0:53:54.60,Default,,0,0,0,,and does not allow things\Nlike non-termination.
+Dialogue: 0,0:53:55.00,0:53:57.56,Default,,0,0,0,,Erasure also helps\Nthe newtype optimization,
+Dialogue: 0,0:53:57.56,0:54:03.92,Default,,0,0,0,,makes it more broadly applicable\Nand in combination with it,
+Dialogue: 0,0:54:04.16,0:54:09.04,Default,,0,0,0,,it can collapse large\Nrichly indexed structures,
+Dialogue: 0,0:54:09.04,0:54:11.60,Default,,0,0,0,,into just the bare\Nbones representation,
+Dialogue: 0,0:54:12.00,0:54:16.52,Default,,0,0,0,,the meat of the structure.
+Dialogue: 0,0:54:16.52,0:54:20.64,Default,,0,0,0,,Finally the identity optimization\Ngets more powerful with erasure,
+Dialogue: 0,0:54:20.64,0:54:25.52,Default,,0,0,0,,because it's much easier to\Nspot that something is.
+Dialogue: 0,0:54:25.52,0:54:30.52,Default,,0,0,0,,is an identity after it's\Nbeen erased so weaken E
+Dialogue: 0,0:54:30.80,0:54:35.72,Default,,0,0,0,,is more obviously\Nan identity than weaken.
+Dialogue: 0,0:54:35.72,0:54:39.88,Default,,0,0,0,,Finally, here are some benchmarks\Nof my prototype implementation.
+Dialogue: 0,0:54:41.00,0:54:43.60,Default,,0,0,0,,The times shown include the whole
+Dialogue: 0,0:54:43.60,0:54:46.32,Default,,0,0,0,,compiler pipeline from parsing,
+Dialogue: 0,0:54:46.32,0:54:49.56,Default,,0,0,0,,up to including native\Ncode degeneration.
+Dialogue: 0,0:54:49.56,0:54:53.96,Default,,0,0,0,,And we can see that\Nwith erasure enabled,
+Dialogue: 0,0:54:53.96,0:54:56.52,Default,,0,0,0,,the total compilation\Ntime, it's much shorter,
+Dialogue: 0,0:54:56.52,0:55:00.60,Default,,0,0,0,,because there's less\Ncode to generate.
+Dialogue: 0,0:55:00.60,0:55:03.60,Default,,0,0,0,,Given that we've shown that we can,
+Dialogue: 0,0:55:03.60,0:55:06.28,Default,,0,0,0,,distinguish between\Ncompile-time only information
+Dialogue: 0,0:55:06.28,0:55:11.04,Default,,0,0,0,,and runtime information\Nautomatically.
+Dialogue: 0,0:55:11.04,0:55:13.12,Default,,0,0,0,,We have shown that the commonly
+Dialogue: 0,0:55:13.12,0:55:15.04,Default,,0,0,0,,claimed lack of phase distinction
+Dialogue: 0,0:55:15.04,0:55:17.12,Default,,0,0,0,,in dependently type\Nprograms is a myth.
+Dialogue: 0,0:55:17.12,0:55:22.12,Default,,0,0,0,,And it's true that the phase\Ndistinction it no longer lines up
+Dialogue: 0,0:55:22.40,0:55:24.84,Default,,0,0,0,,with the distinction (INAUDIBLE)\Nterms and types, beginning,
+Dialogue: 0,0:55:24.84,0:55:28.92,Default,,0,0,0,,implicit and explicit (INAUDIBLE)\Nthere and we can make use of it.
+Dialogue: 0,0:55:28.92,0:55:32.36,Default,,0,0,0,,So, the main direction of further\Nresearch is unification with QTT,
+Dialogue: 0,0:55:32.36,0:55:36.60,Default,,0,0,0,,which is Bob (INAUDIBLE) extension\Nof Connor McBride's work,
+Dialogue: 0,0:55:36.60,0:55:39.68,Default,,0,0,0,,featuring linearity as\Nan additional quantity
+Dialogue: 0,0:55:39.68,0:55:42.68,Default,,0,0,0,,to erased and not erased.
+Dialogue: 0,0:55:42.68,0:55:45.44,Default,,0,0,0,,It would be nice to have\Na ratio polymorphism
+Dialogue: 0,0:55:45.44,0:55:47.00,Default,,0,0,0,,or quantity polymorphism,
+Dialogue: 0,0:55:47.00,0:55:52.00,Default,,0,0,0,,so that functions like apply can\Ntake erase and not erase functions.
+Dialogue: 0,0:55:53.04,0:55:55.84,Default,,0,0,0,,Finally, erasure can\Nbe inferred from
+Dialogue: 0,0:55:55.84,0:55:58.64,Default,,0,0,0,,a completely un-annotated program.
+Dialogue: 0,0:55:58.64,0:56:02.40,Default,,0,0,0,,However, these are\Nthe same drawbacks as Haskell
+Dialogue: 0,0:56:02.40,0:56:04.92,Default,,0,0,0,,or an ML program without\Ntype annotations.
+Dialogue: 0,0:56:04.92,0:56:06.68,Default,,0,0,0,,You make a mistake somewhere,
+Dialogue: 0,0:56:07.20,0:56:08.96,Default,,0,0,0,,the system infers the wrong type
+Dialogue: 0,0:56:08.96,0:56:11.20,Default,,0,0,0,,and then something\Nvery far away breaks
+Dialogue: 0,0:56:11.20,0:56:14.04,Default,,0,0,0,,and it's hard to find\Nthe real cause.
+Dialogue: 0,0:56:14.60,0:56:17.28,Default,,0,0,0,,Moreover explicit annotation would
+Dialogue: 0,0:56:17.28,0:56:18.76,Default,,0,0,0,,help with separate compilation.
+Dialogue: 0,0:56:18.76,0:56:21.36,Default,,0,0,0,,So, it would be good to\Nfind a convenient way-
+Dialogue: 0,0:56:21.36,0:56:26.36,Default,,0,0,0,,convenient rules for explicit\Nannotation that would help with both.
+Dialogue: 0,0:56:27.24,0:56:29.28,Default,,0,0,0,,Thank you for attention.
+Dialogue: 0,0:56:29.28,0:56:31.96,Default,,0,0,0,,Questions are very welcome.
+Dialogue: 0,0:56:31.96,0:56:36.96,Default,,0,0,0,,(APPLAUSE)
+Dialogue: 0,0:56:39.44,0:56:41.00,Default,,0,0,0,,SUKYOUNG: Thank you, Matus.
+Dialogue: 0,0:56:41.00,0:56:43.04,Default,,0,0,0,,If you're watching this talk live,
+Dialogue: 0,0:56:43.04,0:56:46.28,Default,,0,0,0,,please don't forget\Nabout a Q&A session,
+Dialogue: 0,0:56:46.28,0:56:51.28,Default,,0,0,0,,that may be available\Nin your time band.
+Dialogue: 0,0:58:00.88,0:58:05.88,Default,,0,0,0,,The first talk of this session is\Nentitled raising expectations,
+Dialogue: 0,0:58:05.88,0:58:09.96,Default,,0,0,0,,automating expected cost\Nanalysis with types.
+Dialogue: 0,0:58:09.96,0:58:13.48,Default,,0,0,0,,Di Wang and David Khan will\Npresent a talk together.
+Dialogue: 0,0:58:13.48,0:58:15.92,Default,,0,0,0,,And they will tell us\Nabout a type-based
+Dialogue: 0,0:58:15.92,0:58:18.72,Default,,0,0,0,,analysis of driving or (INAUDIBLE)
+Dialogue: 0,0:58:18.72,0:58:23.72,Default,,0,0,0,,on the expected exclusion cost\Nof probabilistic programs.
+Dialogue: 0,0:58:24.80,0:58:28.76,Default,,0,0,0,,DI WANG: Hello, SSP, and\Na future viewers of this video.
+Dialogue: 0,0:58:28.76,0:58:33.16,Default,,0,0,0,,My name is Di, a Ph.D. student\Nat Camagie Mellon University.
+Dialogue: 0,0:58:33.16,0:58:35.16,Default,,0,0,0,,And today my cohort, David and I
+Dialogue: 0,0:58:35.16,0:58:37.48,Default,,0,0,0,,are going to be presenting our work,
+Dialogue: 0,0:58:37.48,0:58:41.76,Default,,0,0,0,,on automatic probabilistic\Nresource analyzing language,
+Dialogue: 0,0:58:41.76,0:58:44.40,Default,,0,0,0,,from our paper raising expectations:
+Dialogue: 0,0:58:44.40,0:58:47.60,Default,,0,0,0,,automating expected cost\Nanalysis with types,
+Dialogue: 0,0:58:47.60,0:58:50.32,Default,,0,0,0,,(INAUDIBLE) accompanied\Nby any implementation,
+Dialogue: 0,0:58:50.32,0:58:55.32,Default,,0,0,0,,we call PRAML, standing for\Nprobabilistic resource-aware ML.
+Dialogue: 0,0:58:56.04,0:58:58.76,Default,,0,0,0,,Resource analysis of\Nprograms is something that
+Dialogue: 0,0:58:58.76,0:59:01.56,Default,,0,0,0,,is of renewed interest\Nin the modern-day.
+Dialogue: 0,0:59:01.56,0:59:04.20,Default,,0,0,0,,Not only does it fulfill\Nthe traditional role,
+Dialogue: 0,0:59:04.20,0:59:06.04,Default,,0,0,0,,of identifying performance\Nbottlenecks, but also
+Dialogue: 0,0:59:06.72,0:59:09.88,Default,,0,0,0,,so the following,\Nif you care about this security,
+Dialogue: 0,0:59:09.88,0:59:12.84,Default,,0,0,0,,you'll need timely analysis\Nto mitigate side channel
+Dialogue: 0,0:59:12.84,0:59:15.12,Default,,0,0,0,,timing attacks.\NIf you want to take advantage
+Dialogue: 0,0:59:15.12,0:59:18.28,Default,,0,0,0,,of the latest tech trends\Nin smart contracts,
+Dialogue: 0,0:59:18.28,0:59:21.12,Default,,0,0,0,,you will need to be able\Nto measure your past usage.
+Dialogue: 0,0:59:21.12,0:59:23.48,Default,,0,0,0,,And of course,\Nif you'll care about
+Dialogue: 0,0:59:23.48,0:59:26.24,Default,,0,0,0,,our real world,\Nit will sure help the climate
+Dialogue: 0,0:59:26.28,0:59:28.84,Default,,0,0,0,,to be able to consider\Nthe carbon footprint
+Dialogue: 0,0:59:28.92,0:59:31.84,Default,,0,0,0,,of the colored\Nrunning data centers.
+Dialogue: 0,0:59:31.92,0:59:34.52,Default,,0,0,0,,There are just\Nso many different resources,
+Dialogue: 0,0:59:34.52,0:59:38.48,Default,,0,0,0,,installment different programs.\NSo the problem is then nobody
+Dialogue: 0,0:59:38.48,0:59:42.28,Default,,0,0,0,,has the time to go through\Nand formally analyze all of them.
+Dialogue: 0,0:59:42.28,0:59:44.88,Default,,0,0,0,,For this reason,\Nall work builds upon
+Dialogue: 0,0:59:44.88,0:59:48.96,Default,,0,0,0,,an approach of language based\Nautomatic resource analysis.
+Dialogue: 0,0:59:48.96,0:59:51.80,Default,,0,0,0,,in PRAML a program\Nmay call as per your role,
+Dialogue: 0,0:59:51.80,0:59:54.76,Default,,0,0,0,,and just about type of inference\Nreceived verifiably
+Dialogue: 0,0:59:54.76,0:59:58.36,Default,,0,0,0,,sound resource analysis\Nat their fingertips.
+Dialogue: 0,0:59:58.36,1:00:01.44,Default,,0,0,0,,Now, so far, all of this\Nalready exists in
+Dialogue: 0,1:00:01.44,1:00:05.96,Default,,0,0,0,,PRAML's predecessor\Nresource ML, or RAML.
+Dialogue: 0,1:00:05.96,1:00:09.92,Default,,0,0,0,,However, PRAML can model\Nsomething that RaML cannot
+Dialogue: 0,1:00:09.92,1:00:13.28,Default,,0,0,0,,Probability, probability\Nis increasingly important
+Dialogue: 0,1:00:13.28,1:00:16.48,Default,,0,0,0,,in modern algorithm design,\Nrandom mice and
+Dialogue: 0,1:00:16.48,1:00:19.92,Default,,0,0,0,,statistical algorithms\Nare employed on mass data
+Dialogue: 0,1:00:19.92,1:00:23.40,Default,,0,0,0,,constantly to squeeze out\Nevery bit of efficiency.
+Dialogue: 0,1:00:23.44,1:00:26.04,Default,,0,0,0,,So it is crucial that\Nmodern resource analysis
+Dialogue: 0,1:00:26.04,1:00:29.28,Default,,0,0,0,,systems can cope\Nwith expected costs
+Dialogue: 0,1:00:29.28,1:00:32.72,Default,,0,0,0,,rather than just worst case.\NThis is where I'll work
+Dialogue: 0,1:00:32.72,1:00:35.92,Default,,0,0,0,,on CraML comes in,\NCraML extends the worst
+Dialogue: 0,1:00:35.92,1:00:38.72,Default,,0,0,0,,case resource analysis\Nor RaML to measure
+Dialogue: 0,1:00:38.72,1:00:42.96,Default,,0,0,0,,the worst case expected value.\NAnd it's always worth noting
+Dialogue: 0,1:00:42.96,1:00:45.40,Default,,0,0,0,,that the resulting man put\Nis also suitable
+Dialogue: 0,1:00:45.40,1:00:48.56,Default,,0,0,0,,for probabilistic modeling\Nand a way we'll discuss
+Dialogue: 0,1:00:48.56,1:00:51.88,Default,,0,0,0,,a couple of these\Napplications later on.
+Dialogue: 0,1:00:51.88,1:00:54.44,Default,,0,0,0,,Now, a little bit to David\Nto talk about more
+Dialogue: 0,1:00:54.44,1:00:58.08,Default,,0,0,0,,about the meat of the work.\NDAVID: Thank you Di.
+Dialogue: 0,1:00:58.16,1:01:01.36,Default,,0,0,0,,Let's start by quickly going over\Nhow type system based
+Dialogue: 0,1:01:01.36,1:01:05.68,Default,,0,0,0,,resource analysis works\Nin a non probabilistic setting.
+Dialogue: 0,1:01:05.68,1:01:08.64,Default,,0,0,0,,We will be using RAML's\Nautomatic amortized
+Dialogue: 0,1:01:08.64,1:01:14.60,Default,,0,0,0,,resource analysis type system,\Nor AARA, the idea of AARA
+Dialogue: 0,1:01:14.64,1:01:17.84,Default,,0,0,0,,is based on the potential method\Nof amortized analysis
+Dialogue: 0,1:01:17.84,1:01:21.04,Default,,0,0,0,,set out by Robert Tajin.\NWhat we're going to do
+Dialogue: 0,1:01:21.04,1:01:23.48,Default,,0,0,0,,is imbue the types\Nat each stage
+Dialogue: 0,1:01:23.48,1:01:25.84,Default,,0,0,0,,of a program environment\Nwith some notion
+Dialogue: 0,1:01:25.84,1:01:28.88,Default,,0,0,0,,of potential energy\Nand allow the energy
+Dialogue: 0,1:01:28.88,1:01:32.84,Default,,0,0,0,,to change over time,\Nbut changes in potential energy
+Dialogue: 0,1:01:32.84,1:01:36.04,Default,,0,0,0,,between each step\Nthen describes the energy
+Dialogue: 0,1:01:36.04,1:01:41.20,Default,,0,0,0,,discharged to pay for costs.\NThe key takeaway is this,
+Dialogue: 0,1:01:41.20,1:01:44.04,Default,,0,0,0,,the total potential\Nneeded at the beginning
+Dialogue: 0,1:01:44.12,1:01:47.44,Default,,0,0,0,,is an upper bound\Non the total cost.
+Dialogue: 0,1:01:47.44,1:01:50.12,Default,,0,0,0,,So, by typing the program\Nwith this notion
+Dialogue: 0,1:01:50.12,1:01:53.92,Default,,0,0,0,,of potential energy,\Nwe've bounded the cost,
+Dialogue: 0,1:01:53.92,1:01:57.48,Default,,0,0,0,,and AARA does this\Nwhile still maintaining
+Dialogue: 0,1:01:57.48,1:01:59.88,Default,,0,0,0,,the compositionality\Nof a type system.
+Dialogue: 0,1:01:59.88,1:02:02.72,Default,,0,0,0,,This technique even works\Nfor higher order functions
+Dialogue: 0,1:02:02.80,1:02:06.52,Default,,0,0,0,,and polynomial\Nor exponential cost bounds.
+Dialogue: 0,1:02:06.52,1:02:09.60,Default,,0,0,0,,However, let's start small\Nand make an example
+Dialogue: 0,1:02:09.60,1:02:12.56,Default,,0,0,0,,of the mem function\Nlike that from
+Dialogue: 0,1:02:12.56,1:02:15.92,Default,,0,0,0,,the Ocaml standard library\Nlist module,
+Dialogue: 0,1:02:15.92,1:02:20.48,Default,,0,0,0,,we will use AARA to bound\Nthe number of recursive calls.
+Dialogue: 0,1:02:20.48,1:02:23.88,Default,,0,0,0,,So here is a version\Nof the mem function.
+Dialogue: 0,1:02:24.24,1:02:27.04,Default,,0,0,0,,Now, the men function\Ntakes the naive approach
+Dialogue: 0,1:02:27.04,1:02:29.12,Default,,0,0,0,,of checking whether\Nthe argument X
+Dialogue: 0,1:02:29.12,1:02:32.88,Default,,0,0,0,,is in the given list,\Nit iterates over the list,
+Dialogue: 0,1:02:32.96,1:02:36.44,Default,,0,0,0,,checks each element for equality\Nand returns true
+Dialogue: 0,1:02:36.44,1:02:39.92,Default,,0,0,0,,if it ever finds one,\Nat worst we might need
+Dialogue: 0,1:02:39.92,1:02:42.36,Default,,0,0,0,,to check the whole list,\Nwhich means we could expect
+Dialogue: 0,1:02:42.36,1:02:45.48,Default,,0,0,0,,n recursive calls\Nin the worst case
+Dialogue: 0,1:02:45.48,1:02:47.64,Default,,0,0,0,,where n is the\Nlength of the list.
+Dialogue: 0,1:02:48.40,1:02:52.36,Default,,0,0,0,,We can show this using\Nthe potential method as follows.
+Dialogue: 0,1:02:52.36,1:02:54.52,Default,,0,0,0,,First, we explicitly\Nmark the costs
+Dialogue: 0,1:02:54.52,1:02:58.08,Default,,0,0,0,,where they occur\Nusing tick operations.
+Dialogue: 0,1:02:58.08,1:03:01.72,Default,,0,0,0,,That would occur right here\Nat the recursive call.
+Dialogue: 0,1:03:01.80,1:03:03.80,Default,,0,0,0,,Then we can type\Nthe list argument
+Dialogue: 0,1:03:03.80,1:03:06.80,Default,,0,0,0,,with one unit\Nof potential per element
+Dialogue: 0,1:03:06.80,1:03:09.84,Default,,0,0,0,,written like so,\Nwith a superscript one
+Dialogue: 0,1:03:09.84,1:03:13.64,Default,,0,0,0,,representing the amount\Nof potential per element.
+Dialogue: 0,1:03:13.64,1:03:15.72,Default,,0,0,0,,This aligns with\Nwhat we've just guessed.
+Dialogue: 0,1:03:15.72,1:03:19.92,Default,,0,0,0,,The worst case cost will be.\NThe length of the list.
+Dialogue: 0,1:03:20.72,1:03:23.08,Default,,0,0,0,,Then we can write\Nthe type of the whole function
+Dialogue: 0,1:03:23.08,1:03:26.64,Default,,0,0,0,,with this, where\Nthese numbers here
+Dialogue: 0,1:03:26.64,1:03:30.12,Default,,0,0,0,,on either side of the arrow\Nrepresent the resources present
+Dialogue: 0,1:03:30.12,1:03:32.92,Default,,0,0,0,,before and after\Nthe function call
+Dialogue: 0,1:03:32.92,1:03:35.88,Default,,0,0,0,,in this case, we can\Njust let them be zero.
+Dialogue: 0,1:03:36.52,1:03:38.84,Default,,0,0,0,,Now let's move on\Nto the interesting parts
+Dialogue: 0,1:03:38.84,1:03:41.28,Default,,0,0,0,,in the function body\Nand see how we use
+Dialogue: 0,1:03:41.28,1:03:44.28,Default,,0,0,0,,these types with potential\Nand how we match up
+Dialogue: 0,1:03:44.28,1:03:47.56,Default,,0,0,0,,with the function signature\Njust provided.
+Dialogue: 0,1:03:48.36,1:03:51.96,Default,,0,0,0,,We first deconstruct the list,\Ngaining the one unit
+Dialogue: 0,1:03:51.96,1:03:54.04,Default,,0,0,0,,of potential that was\Npreviously stored
+Dialogue: 0,1:03:54.04,1:03:57.16,Default,,0,0,0,,at the head\Nof the input list.
+Dialogue: 0,1:03:57.16,1:03:59.72,Default,,0,0,0,,Then if the head is the element\Nwe're looking for,
+Dialogue: 0,1:03:59.72,1:04:02.04,Default,,0,0,0,,we can just return true\Nand drop all
+Dialogue: 0,1:04:02.04,1:04:06.24,Default,,0,0,0,,the remaining potential.\NOtherwise we use
+Dialogue: 0,1:04:06.24,1:04:10.80,Default,,0,0,0,,that one free unit of potential\Nto pay for the ticket expression.
+Dialogue: 0,1:04:10.88,1:04:14.44,Default,,0,0,0,,And then Recurse on the tail\Nof the input list
+Dialogue: 0,1:04:14.44,1:04:16.36,Default,,0,0,0,,to perform\Nthis recursive call.
+Dialogue: 0,1:04:16.36,1:04:19.08,Default,,0,0,0,,We check the potential\Nin the current environment
+Dialogue: 0,1:04:19.08,1:04:23.20,Default,,0,0,0,,against the function signature\Nbecause the mem function
+Dialogue: 0,1:04:23.20,1:04:26.36,Default,,0,0,0,,requires one unit of potential\Nper element in the list.
+Dialogue: 0,1:04:26.36,1:04:29.68,Default,,0,0,0,,And the tail of the input list\Nstill has one unit
+Dialogue: 0,1:04:29.68,1:04:33.20,Default,,0,0,0,,of potential per element,\Nthis line type checks.
+Dialogue: 0,1:04:33.80,1:04:35.84,Default,,0,0,0,,And that's it.\NThe potential we guessed
+Dialogue: 0,1:04:35.84,1:04:38.64,Default,,0,0,0,,at the beginning,\None per element in the list
+Dialogue: 0,1:04:38.64,1:04:43.04,Default,,0,0,0,,is the worst case bound we guessed.\NThe length of the list.
+Dialogue: 0,1:04:44.08,1:04:46.44,Default,,0,0,0,,As a final note\Nabout this example,
+Dialogue: 0,1:04:46.44,1:04:48.28,Default,,0,0,0,,although we did it\Nby guessing check,
+Dialogue: 0,1:04:48.28,1:04:51.60,Default,,0,0,0,,these types actually\Ncan be inferred.
+Dialogue: 0,1:04:51.60,1:04:53.56,Default,,0,0,0,,This is because\Nall the relevant arithmetic
+Dialogue: 0,1:04:53.56,1:04:55.92,Default,,0,0,0,,we did to calculate\Nthese constants,
+Dialogue: 0,1:04:55.96,1:05:00.00,Default,,0,0,0,,can actually be given\Nvia linear constraints.
+Dialogue: 0,1:05:00.00,1:05:01.88,Default,,0,0,0,,If we collect\Nthe linear constraints
+Dialogue: 0,1:05:01.88,1:05:03.76,Default,,0,0,0,,and solve them,\Nwe get our desired
+Dialogue: 0,1:05:03.76,1:05:06.88,Default,,0,0,0,,resource bounding type.\NThis continues to hold
+Dialogue: 0,1:05:06.88,1:05:11.52,Default,,0,0,0,,for PraML in general as well.\NNow, the language we just saw
+Dialogue: 0,1:05:11.56,1:05:15.68,Default,,0,0,0,,is a subset of oCaml\Nand non probabilistic.
+Dialogue: 0,1:05:15.68,1:05:18.40,Default,,0,0,0,,So to make expected values\Nat all meaningful,
+Dialogue: 0,1:05:18.40,1:05:20.96,Default,,0,0,0,,we extended with what is probably\Nthe most primitive
+Dialogue: 0,1:05:20.96,1:05:24.60,Default,,0,0,0,,probabilistic operation possible.\NThe coin flip.
+Dialogue: 0,1:05:24.96,1:05:28.32,Default,,0,0,0,,Specifically, we flip a coin\Nto decide which
+Dialogue: 0,1:05:28.32,1:05:31.60,Default,,0,0,0,,branch of code to run.\NWe can slot this new behavior
+Dialogue: 0,1:05:31.60,1:05:36.12,Default,,0,0,0,,into the RaML type system\Nwith some pretty intuitive rules.
+Dialogue: 0,1:05:36.12,1:05:39.36,Default,,0,0,0,,The flip rule deals\Nwith coin flip expressions,
+Dialogue: 0,1:05:39.36,1:05:42.12,Default,,0,0,0,,where the coin bias\Nis a constant.
+Dialogue: 0,1:05:42.12,1:05:44.96,Default,,0,0,0,,In this rule.\NGamma is a typing context.
+Dialogue: 0,1:05:44.96,1:05:47.76,Default,,0,0,0,,Q is the initial\Namount of resources.
+Dialogue: 0,1:05:47.76,1:05:49.92,Default,,0,0,0,,A is the resource\Nannotated type
+Dialogue: 0,1:05:49.92,1:05:52.68,Default,,0,0,0,,of the expression.\NAnd of course, P
+Dialogue: 0,1:05:52.68,1:05:56.32,Default,,0,0,0,,is the coin flip bias.\NSo what this bottom part
+Dialogue: 0,1:05:56.32,1:05:58.44,Default,,0,0,0,,says is just that\Nthe flip expression
+Dialogue: 0,1:05:58.44,1:06:00.68,Default,,0,0,0,,type checks\Nis A under context
+Dialogue: 0,1:06:00.68,1:06:05.20,Default,,0,0,0,,gamma with Q extra resources.\NThe key idea
+Dialogue: 0,1:06:05.24,1:06:08.04,Default,,0,0,0,,of the flip rule\Nis that the expected cost
+Dialogue: 0,1:06:08.04,1:06:09.56,Default,,0,0,0,,between the two branches
+Dialogue: 0,1:06:09.56,1:06:14.56,Default,,0,0,0,,e1 and e2, can be calculated\Nas the weighted sum
+Dialogue: 0,1:06:14.64,1:06:17.36,Default,,0,0,0,,of their respective\Ntyping judgments.
+Dialogue: 0,1:06:17.36,1:06:19.36,Default,,0,0,0,,And you can see\Nhere and here
+Dialogue: 0,1:06:19.36,1:06:21.08,Default,,0,0,0,,that we perform\Nsome sort of weighting
+Dialogue: 0,1:06:21.08,1:06:25.00,Default,,0,0,0,,by the flip probability p.\NWe also allow for
+Dialogue: 0,1:06:25.00,1:06:27.24,Default,,0,0,0,,a more complicated case\Nwhere the coin bias
+Dialogue: 0,1:06:27.24,1:06:30.96,Default,,0,0,0,,is parameterized,\Nas if it were a program variable.
+Dialogue: 0,1:06:30.96,1:06:33.12,Default,,0,0,0,,It turns out in\Nour implementation
+Dialogue: 0,1:06:33.12,1:06:34.64,Default,,0,0,0,,that these two rules\Ncan be treated
+Dialogue: 0,1:06:34.64,1:06:38.00,Default,,0,0,0,,as special cases\Nof one more general rule.
+Dialogue: 0,1:06:38.76,1:06:41.84,Default,,0,0,0,,However, despite the intuition\Nbehind these rules,
+Dialogue: 0,1:06:41.84,1:06:44.56,Default,,0,0,0,,they posed a problem\Nwhile these type rules
+Dialogue: 0,1:06:44.56,1:06:46.60,Default,,0,0,0,,do indeed turn out\Nto be sound.
+Dialogue: 0,1:06:46.60,1:06:49.52,Default,,0,0,0,,The probabilistic nature\Nof the new flip operations
+Dialogue: 0,1:06:49.52,1:06:53.16,Default,,0,0,0,,are incompatible\Nwith the operational semantics
+Dialogue: 0,1:06:53.16,1:06:57.84,Default,,0,0,0,,used in RaML AARA\NHowever, we need
+Dialogue: 0,1:06:57.84,1:07:00.16,Default,,0,0,0,,an operational semantics\Nin order to show
+Dialogue: 0,1:07:00.16,1:07:04.08,Default,,0,0,0,,that the resource analysis is sound.\NTo overcome this.
+Dialogue: 0,1:07:04.08,1:07:07.04,Default,,0,0,0,,We created a whole\Nnew operational semantics for PRAML
+Dialogue: 0,1:07:07.04,1:07:09.68,Default,,0,0,0,,based on boards\Nfrom at all 2016's
+Dialogue: 0,1:07:09.68,1:07:14.68,Default,,0,0,0,,trace based and step index\Ndistribution based semantics.
+Dialogue: 0,1:07:14.80,1:07:16.76,Default,,0,0,0,,You can find the details\Nof this adaptation
+Dialogue: 0,1:07:16.76,1:07:20.68,Default,,0,0,0,,in the paper.\NWith operational semantics in hand,
+Dialogue: 0,1:07:20.68,1:07:23.88,Default,,0,0,0,,we can state\Nsoundness as follows.
+Dialogue: 0,1:07:23.88,1:07:27.28,Default,,0,0,0,,If expression E types as A\Nunder context gamma
+Dialogue: 0,1:07:27.28,1:07:30.60,Default,,0,0,0,,with Q units of initial potential.\NThen the expected
+Dialogue: 0,1:07:30.60,1:07:34.48,Default,,0,0,0,,cost of evaluating E\Nis bounded by Q
+Dialogue: 0,1:07:34.48,1:07:38.36,Default,,0,0,0,,plus the potential in gamma.\NThis soundness statement
+Dialogue: 0,1:07:38.36,1:07:42.20,Default,,0,0,0,,should seem familiar.\NIt is exactly the key takeaway
+Dialogue: 0,1:07:42.20,1:07:44.88,Default,,0,0,0,,of the potential method\Nmentioned earlier.
+Dialogue: 0,1:07:44.88,1:07:48.12,Default,,0,0,0,,The initial potential\Nbounds the cost,
+Dialogue: 0,1:07:48.12,1:07:52.08,Default,,0,0,0,,this holds even for programs\Nthat may not terminate.
+Dialogue: 0,1:07:52.08,1:07:53.96,Default,,0,0,0,,We can also say that\Nif the cost model
+Dialogue: 0,1:07:53.96,1:07:56.56,Default,,0,0,0,,counts evaluation steps,\Nthen the existence
+Dialogue: 0,1:07:56.56,1:07:59.24,Default,,0,0,0,,of any expected\Ncost bound at all.
+Dialogue: 0,1:07:59.24,1:08:04.12,Default,,0,0,0,,Implies almost sure termination.\NNow let's look at this
+Dialogue: 0,1:08:04.12,1:08:07.44,Default,,0,0,0,,new type system in action\Non a simple example.
+Dialogue: 0,1:08:07.44,1:08:10.44,Default,,0,0,0,,Here's the program bernoulli,\Nwhich performs a sequence
+Dialogue: 0,1:08:10.44,1:08:14.56,Default,,0,0,0,,of bernoulli trials,\Nwhen run, it has a 50% chance
+Dialogue: 0,1:08:14.56,1:08:17.92,Default,,0,0,0,,of re-cursing and a 50%\Nchance of terminating
+Dialogue: 0,1:08:18.28,1:08:20.32,Default,,0,0,0,,as many might remember\Nfrom their intro
+Dialogue: 0,1:08:20.32,1:08:22.56,Default,,0,0,0,,to probability course,\Nthis results in a
+Dialogue: 0,1:08:22.56,1:08:26.56,Default,,0,0,0,,geometric distribution\Nwith expected value too.
+Dialogue: 0,1:08:26.56,1:08:28.76,Default,,0,0,0,,Thus, while it\Ncould go on forever,
+Dialogue: 0,1:08:28.76,1:08:32.16,Default,,0,0,0,,we can actually give it\Na finite notion of cost.
+Dialogue: 0,1:08:32.16,1:08:34.84,Default,,0,0,0,,Let's check it now\Nusing PRAML.
+Dialogue: 0,1:08:34.84,1:08:39.88,Default,,0,0,0,,Now the only initial potential\Nthat bernoulli needs is two units.
+Dialogue: 0,1:08:39.88,1:08:43.92,Default,,0,0,0,,One unit of potential is spent\Nimmediately on the tick.
+Dialogue: 0,1:08:43.92,1:08:45.80,Default,,0,0,0,,After the coin flip,\Nwe assigned
+Dialogue: 0,1:08:45.80,1:08:49.68,Default,,0,0,0,,zero potential to the headcase\Nbecause it returns immediately.
+Dialogue: 0,1:08:49.68,1:08:52.88,Default,,0,0,0,,And two units of potential\Nto the tails case.
+Dialogue: 0,1:08:52.88,1:08:55.76,Default,,0,0,0,,Then in the tails case,\Nwe reuse the guests
+Dialogue: 0,1:08:55.76,1:08:58.88,Default,,0,0,0,,type of bernoulli,\Nand it all works out
+Dialogue: 0,1:08:58.88,1:09:01.80,Default,,0,0,0,,because the weighted sum\Nof the potential assigned
+Dialogue: 0,1:09:01.80,1:09:05.00,Default,,0,0,0,,to these two branches\Nis exactly one.
+Dialogue: 0,1:09:05.00,1:09:07.56,Default,,0,0,0,,The flip rule justifies\Nbilling into these branches
+Dialogue: 0,1:09:07.56,1:09:10.36,Default,,0,0,0,,with only one unit of potential,\Neven though
+Dialogue: 0,1:09:10.44,1:09:14.52,Default,,0,0,0,,the tails branch by itself\Nwould require two.
+Dialogue: 0,1:09:14.60,1:09:16.52,Default,,0,0,0,,In the paper\Nwe use this same
+Dialogue: 0,1:09:16.52,1:09:20.00,Default,,0,0,0,,automated technique on a variety\Nof more complicated functions
+Dialogue: 0,1:09:20.00,1:09:22.44,Default,,0,0,0,,with more interesting\Nresource bounds.
+Dialogue: 0,1:09:22.44,1:09:24.96,Default,,0,0,0,,For instance, we show\Nthat PRAML, can analyze
+Dialogue: 0,1:09:24.96,1:09:27.92,Default,,0,0,0,,the gambler's ruin\Nwhere in two players,
+Dialogue: 0,1:09:27.92,1:09:31.92,Default,,0,0,0,,Alison, Bob, continually bet\N$1 against each other
+Dialogue: 0,1:09:31.92,1:09:33.84,Default,,0,0,0,,on the results\Nof a coin flip
+Dialogue: 0,1:09:33.84,1:09:36.72,Default,,0,0,0,,until one player\Nruns out of money.
+Dialogue: 0,1:09:36.72,1:09:38.68,Default,,0,0,0,,In the program,\Nwe modeled the amount
+Dialogue: 0,1:09:38.68,1:09:41.08,Default,,0,0,0,,of money as\Nthe length of a list.
+Dialogue: 0,1:09:41.08,1:09:42.80,Default,,0,0,0,,If the coin is fair,\NAlice starts with
+Dialogue: 0,1:09:42.80,1:09:47.04,Default,,0,0,0,,$A and Bob starts with $B\NThen this series of bets
+Dialogue: 0,1:09:47.04,1:09:51.08,Default,,0,0,0,,is expected to take\NA times B rounds.
+Dialogue: 0,1:09:51.08,1:09:54.92,Default,,0,0,0,,Our implementation infer\Nthis bound exactly.
+Dialogue: 0,1:09:54.92,1:09:57.24,Default,,0,0,0,,PRAML can also infer\Nnon-trivial bounds
+Dialogue: 0,1:09:57.24,1:10:01.88,Default,,0,0,0,,with parameterized probabilities.\NThe Von Neumann function
+Dialogue: 0,1:10:01.88,1:10:04.52,Default,,0,0,0,,implements a mechanism\Nto make a fair coin
+Dialogue: 0,1:10:04.52,1:10:08.68,Default,,0,0,0,,from a biased one.\NWith some scaling trick PRAML
+Dialogue: 0,1:10:08.68,1:10:11.44,Default,,0,0,0,,derives that the function\Nis expected to take
+Dialogue: 0,1:10:11.52,1:10:15.60,Default,,0,0,0,,one over P times\None minus P steps,
+Dialogue: 0,1:10:15.60,1:10:18.12,Default,,0,0,0,,where P is the probability\Nfor the biased coin
+Dialogue: 0,1:10:18.12,1:10:21.08,Default,,0,0,0,,to show heads.\NBoth of these examples
+Dialogue: 0,1:10:21.08,1:10:22.80,Default,,0,0,0,,also show that PRAML\Ncan be of use
+Dialogue: 0,1:10:22.80,1:10:25.04,Default,,0,0,0,,in probabilistic modeling.\NAs these are
+Dialogue: 0,1:10:25.04,1:10:28.76,Default,,0,0,0,,both probabilistic models.\NHere are some tables
+Dialogue: 0,1:10:28.76,1:10:31.68,Default,,0,0,0,,of various other analyses\Nof probabilistic models
+Dialogue: 0,1:10:31.68,1:10:34.72,Default,,0,0,0,,from the paper.\NThe bounds themselves
+Dialogue: 0,1:10:34.72,1:10:37.88,Default,,0,0,0,,are a various complexities,\Nbut one nice takeaway
+Dialogue: 0,1:10:37.88,1:10:40.52,Default,,0,0,0,,is that the time taken\Nto analyze this programs
+Dialogue: 0,1:10:40.52,1:10:44.16,Default,,0,0,0,,automatically, is usually\Nwell under one second,
+Dialogue: 0,1:10:44.16,1:10:46.48,Default,,0,0,0,,this is good,\Nbecause real world analyses
+Dialogue: 0,1:10:46.48,1:10:50.40,Default,,0,0,0,,need to run in\Na practical timeframe.
+Dialogue: 0,1:10:50.40,1:10:54.48,Default,,0,0,0,,Now let's talk about some more\Nempirical probabilistic modeling.
+Dialogue: 0,1:10:54.48,1:10:58.12,Default,,0,0,0,,Look back quickly\Nat mem and bernoulli.
+Dialogue: 0,1:10:58.12,1:11:00.40,Default,,0,0,0,,If you squint a little,\Nyou might notice that
+Dialogue: 0,1:11:00.40,1:11:03.32,Default,,0,0,0,,mem behaves\Na lot like bernoulli,
+Dialogue: 0,1:11:03.32,1:11:06.00,Default,,0,0,0,,possibly terminating\Nat each iteration.
+Dialogue: 0,1:11:06.00,1:11:10.56,Default,,0,0,0,,In fact, if we say that\Nequality holds with 50% chance,
+Dialogue: 0,1:11:10.56,1:11:13.56,Default,,0,0,0,,then the runtime profiles\Nof these two programs
+Dialogue: 0,1:11:13.56,1:11:18.40,Default,,0,0,0,,are pretty much the same\Nand note the constant expected
+Dialogue: 0,1:11:18.40,1:11:22.04,Default,,0,0,0,,cost of two from bernoulli\Nis far better
+Dialogue: 0,1:11:22.08,1:11:25.52,Default,,0,0,0,,than the linear\Nworst-case cost of mem.
+Dialogue: 0,1:11:25.52,1:11:29.80,Default,,0,0,0,,This opens up another avenue\Nfor analysis using probability,
+Dialogue: 0,1:11:29.80,1:11:31.76,Default,,0,0,0,,approximating\Ndeterministic branches
+Dialogue: 0,1:11:31.76,1:11:35.60,Default,,0,0,0,,with probabilistic ones.\NIf we can impuricably determine
+Dialogue: 0,1:11:35.60,1:11:38.84,Default,,0,0,0,,that some code\Nbranches with a given probability,
+Dialogue: 0,1:11:38.92,1:11:41.52,Default,,0,0,0,,we can approximate it\Nwith a flip and use
+Dialogue: 0,1:11:41.52,1:11:43.60,Default,,0,0,0,,the PRAML type system\Nto get a better sense
+Dialogue: 0,1:11:43.60,1:11:46.04,Default,,0,0,0,,of the actual\Nresource usage
+Dialogue: 0,1:11:46.04,1:11:48.68,Default,,0,0,0,,in our implementation artifact.\NWe include a mode
+Dialogue: 0,1:11:48.68,1:11:51.76,Default,,0,0,0,,for doing this and we include\Nsome results of its application
+Dialogue: 0,1:11:51.76,1:11:55.56,Default,,0,0,0,,in our paper.\NFor instance, insertion sort
+Dialogue: 0,1:11:55.60,1:11:59.88,Default,,0,0,0,,achieves linear time complexity\Non nearly sorted data.
+Dialogue: 0,1:11:59.88,1:12:04.16,Default,,0,0,0,,That's all I have.\NI now leave it to Di for the close.
+Dialogue: 0,1:12:04.16,1:12:08.00,Default,,0,0,0,,DI: Thank you, David.\NIn summary in this paper
+Dialogue: 0,1:12:08.00,1:12:10.56,Default,,0,0,0,,we have developed\Na probabilistic attention
+Dialogue: 0,1:12:10.56,1:12:13.96,Default,,0,0,0,,to the ARA type system.\NWe overhauled the operation
+Dialogue: 0,1:12:13.96,1:12:17.88,Default,,0,0,0,,of semantics to provide sum.\NWe also implemented
+Dialogue: 0,1:12:17.88,1:12:21.52,Default,,0,0,0,,the result atleast back\Nto determination programs,
+Dialogue: 0,1:12:21.52,1:12:24.68,Default,,0,0,0,,which seemed pretty close\Nto statistical techniques.
+Dialogue: 0,1:12:24.68,1:12:28.04,Default,,0,0,0,,In the paper, we also give\None more application
+Dialogue: 0,1:12:28.12,1:12:32.44,Default,,0,0,0,,about automatic analysis\Nof sample complexity.
+Dialogue: 0,1:12:32.48,1:12:34.80,Default,,0,0,0,,That is all we have\Nthe time to talk about
+Dialogue: 0,1:12:34.80,1:12:37.32,Default,,0,0,0,,incentive for less than\Nimpure talk.
+Dialogue: 0,1:12:37.32,1:12:38.92,Default,,0,0,0,,Stay healthy\Nand hopefully
+Dialogue: 0,1:12:38.92,1:12:41.56,Default,,0,0,0,,we can talk in person\Nthe next year.
+Dialogue: 0,1:12:41.80,1:12:49.04,Default,,0,0,0,,(APPLAUSE)
+Dialogue: 0,1:12:49.36,1:12:51.56,Default,,0,0,0,,SUKYOUNG: Thank you,\NDee and David,
+Dialogue: 0,1:12:51.56,1:12:53.88,Default,,0,0,0,,if you are watching\Nthis talk live,
+Dialogue: 0,1:12:53.88,1:12:56.80,Default,,0,0,0,,please don't forget\Nabout a Q &A session
+Dialogue: 0,1:12:56.80,1:13:00.40,Default,,0,0,0,,that may be available\Nin your time band.
+Dialogue: 0,1:13:05.72,1:13:10.60,Default,,0,0,0,,Now our next talk is entitled,\N"Problem sketching with life
+Dialogue: 0,1:13:10.60,1:13:14.48,Default,,0,0,0,,by directional evaluation."\NJustin Lubin will present
+Dialogue: 0,1:13:14.48,1:13:17.68,Default,,0,0,0,,a talk and he will\Nintroduce Smith,
+Dialogue: 0,1:13:17.68,1:13:20.00,Default,,0,0,0,,an example based\Nprogram synthesizer
+Dialogue: 0,1:13:20.00,1:13:25.28,Default,,0,0,0,,with supper for sketching and no\Ntrace (INAUDIBLE) requirement.
+Dialogue: 0,1:13:25.88,1:13:27.88,Default,,0,0,0,,JUSTIN LUBIN: Hi everyone.\NMy name is Justin Lubin,
+Dialogue: 0,1:13:27.88,1:13:29.16,Default,,0,0,0,,and I'm gonna be\Npresenting programs
+Dialogue: 0,1:13:29.16,1:13:32.24,Default,,0,0,0,,sketching with live\Nbi-directional evaluation.
+Dialogue: 0,1:13:32.24,1:13:34.28,Default,,0,0,0,,So this is a program\Nsynthesis project.
+Dialogue: 0,1:13:34.28,1:13:36.64,Default,,0,0,0,,And by program synthesis,\NI mean computer generation
+Dialogue: 0,1:13:36.64,1:13:39.44,Default,,0,0,0,,of programs satisfying\Na specification.
+Dialogue: 0,1:13:39.44,1:13:41.08,Default,,0,0,0,,So the two key words\Nto take away here
+Dialogue: 0,1:13:41.08,1:13:43.60,Default,,0,0,0,,are satisfying\Nand specification.
+Dialogue: 0,1:13:43.60,1:13:44.60,Default,,0,0,0,,Let's take a look\Nat what I mean
+Dialogue: 0,1:13:44.60,1:13:47.44,Default,,0,0,0,,by those, by specification.\NI mean the user
+Dialogue: 0,1:13:47.44,1:13:50.20,Default,,0,0,0,,interface to a synthesizer.\NIt's how the user provides
+Dialogue: 0,1:13:50.20,1:13:52.72,Default,,0,0,0,,a notion of correctness\Nfor potential program.
+Dialogue: 0,1:13:53.40,1:13:55.32,Default,,0,0,0,,Satisfaction is\Nthen simply a program
+Dialogue: 0,1:13:55.32,1:13:58.00,Default,,0,0,0,,meeting the specification criteria.
+Dialogue: 0,1:13:58.00,1:14:01.00,Default,,0,0,0,,So let's take a look at two popular\Nuser interfaces, the synthesizers.
+Dialogue: 0,1:14:01.00,1:14:03.60,Default,,0,0,0,,The first of which is\Nlogic-based synthesis.
+Dialogue: 0,1:14:03.60,1:14:06.92,Default,,0,0,0,,In logic-based synthesis, we\Nprovide a logical formula
+Dialogue: 0,1:14:06.92,1:14:08.64,Default,,0,0,0,,as a means of specification.
+Dialogue: 0,1:14:08.64,1:14:11.36,Default,,0,0,0,,So for example, if we're trying\Nto specify the sole function,
+Dialogue: 0,1:14:11.36,1:14:15.12,Default,,0,0,0,,we might say that for all\Nindices i in array A,
+Dialogue: 0,1:14:15.12,1:14:18.68,Default,,0,0,0,,A(i) has to be less than\Nor equal to A(i+1).
+Dialogue: 0,1:14:18.68,1:14:20.40,Default,,0,0,0,,Satisfaction in\Nlogic-based synthesis
+Dialogue: 0,1:14:20.40,1:14:22.92,Default,,0,0,0,,is typically going to be\Nstatic verification.
+Dialogue: 0,1:14:22.92,1:14:25.80,Default,,0,0,0,,So for example, we might use\Ntools such as SMT solvers,
+Dialogue: 0,1:14:25.80,1:14:29.00,Default,,0,0,0,,dependent type-checking,\Nmodel checking, etcetera.
+Dialogue: 0,1:14:29.00,1:14:31.00,Default,,0,0,0,,Now, there have been many great\Nlogic-based synthesizers
+Dialogue: 0,1:14:31.00,1:14:32.48,Default,,0,0,0,,that have come out over the years.
+Dialogue: 0,1:14:32.48,1:14:36.48,Default,,0,0,0,,For example, Synquid,\NRosette, Sketch and Leon.
+Dialogue: 0,1:14:36.48,1:14:39.16,Default,,0,0,0,,These types of tools excel when we\Nneed to encode complex invariants
+Dialogue: 0,1:14:39.16,1:14:42.80,Default,,0,0,0,,about more complicated data\Nstructures, such as red-black trees.
+Dialogue: 0,1:14:42.80,1:14:45.28,Default,,0,0,0,,Let's take a look at another\Ninterface to program synthesis,
+Dialogue: 0,1:14:45.28,1:14:47.08,Default,,0,0,0,,example-based synthesis.
+Dialogue: 0,1:14:47.08,1:14:48.24,Default,,0,0,0,,In example-based synthesis,
+Dialogue: 0,1:14:48.24,1:14:50.92,Default,,0,0,0,,specification takes the form of\Ninput-output examples.
+Dialogue: 0,1:14:50.92,1:14:53.00,Default,,0,0,0,,Here, I've asserted\Nthe sort of the empty list
+Dialogue: 0,1:14:53.00,1:14:56.96,Default,,0,0,0,,as the empty list and that\Nsort of (3,1,2) is (1,2,3).
+Dialogue: 0,1:14:56.96,1:15:00.32,Default,,0,0,0,,Satisfaction will now take on\Nthe form of dynamic verification.
+Dialogue: 0,1:15:00.32,1:15:01.32,Default,,0,0,0,,What we'll need to do
+Dialogue: 0,1:15:01.32,1:15:03.36,Default,,0,0,0,,is we need to test each\Ninput-output pair.
+Dialogue: 0,1:15:03.36,1:15:05.40,Default,,0,0,0,,We'll need to evaluate and check.
+Dialogue: 0,1:15:05.40,1:15:08.08,Default,,0,0,0,,And the key words on this\Nslide are evaluate and check.
+Dialogue: 0,1:15:08.08,1:15:10.72,Default,,0,0,0,,We'll definitely be\Nreturning to that later.
+Dialogue: 0,1:15:10.72,1:15:12.36,Default,,0,0,0,,So, some really great\Nexample-base synthesizers
+Dialogue: 0,1:15:12.36,1:15:17.08,Default,,0,0,0,,that have come out include Myth,\NEscher and Lambda squared.
+Dialogue: 0,1:15:17.08,1:15:18.88,Default,,0,0,0,,For this project, we're gonna\Nbe working in the domain
+Dialogue: 0,1:15:18.88,1:15:21.00,Default,,0,0,0,,of example-based, richly-typed,
+Dialogue: 0,1:15:21.00,1:15:24.24,Default,,0,0,0,,general-purpose, functional,\Nprogram synthesis.
+Dialogue: 0,1:15:24.24,1:15:25.36,Default,,0,0,0,,Let's take a look at\Nthe current state
+Dialogue: 0,1:15:25.36,1:15:27.52,Default,,0,0,0,,of the art in this domain to\Nsee what we're up against.
+Dialogue: 0,1:15:27.52,1:15:29.84,Default,,0,0,0,,And that would be the Myth project.
+Dialogue: 0,1:15:29.84,1:15:32.12,Default,,0,0,0,,The way that Myth works is\Nyou give it a type signature
+Dialogue: 0,1:15:32.12,1:15:33.84,Default,,0,0,0,,instead of input-output examples.
+Dialogue: 0,1:15:33.84,1:15:36.32,Default,,0,0,0,,And as output, you get\Na function that when run,
+Dialogue: 0,1:15:36.32,1:15:39.32,Default,,0,0,0,,will satisfy those assertions.
+Dialogue: 0,1:15:39.32,1:15:40.56,Default,,0,0,0,,For the purposes of this talk,
+Dialogue: 0,1:15:40.56,1:15:43.08,Default,,0,0,0,,I'm more or less gonna be\Ntreating Myth as a blackbox.
+Dialogue: 0,1:15:43.08,1:15:47.76,Default,,0,0,0,,One, it will take in examples\Nand give us a solution as output.
+Dialogue: 0,1:15:47.76,1:15:49.80,Default,,0,0,0,,Myth is a powerful\Nprogram synthesizer,
+Dialogue: 0,1:15:49.80,1:15:52.56,Default,,0,0,0,,but it has two key limitations\Nthat we might like to address.
+Dialogue: 0,1:15:52.56,1:15:55.32,Default,,0,0,0,,Let's take a look at\Nthe first of these two.
+Dialogue: 0,1:15:55.32,1:15:56.84,Default,,0,0,0,,Given input-output examples,
+Dialogue: 0,1:15:56.84,1:16:00.28,Default,,0,0,0,,Myth will transform an empty\Nprogram into a full solution.
+Dialogue: 0,1:16:00.28,1:16:01.96,Default,,0,0,0,,What if we, as programmers,
+Dialogue: 0,1:16:01.96,1:16:04.08,Default,,0,0,0,,wanted to encode some\Ndomain-specific knowledge
+Dialogue: 0,1:16:04.08,1:16:06.16,Default,,0,0,0,,that we might have into\Na partial solution
+Dialogue: 0,1:16:06.16,1:16:07.88,Default,,0,0,0,,towards the program that\Nwe'd like to make.
+Dialogue: 0,1:16:07.88,1:16:09.60,Default,,0,0,0,,Then we'd like for Myth to transform
+Dialogue: 0,1:16:09.60,1:16:12.48,Default,,0,0,0,,this partial solution\Ninto a full solution.
+Dialogue: 0,1:16:12.48,1:16:15.40,Default,,0,0,0,,The idea here is known\Nas program sketching.
+Dialogue: 0,1:16:15.40,1:16:17.80,Default,,0,0,0,,And it already exists for\Nlogic-based synthesis
+Dialogue: 0,1:16:17.80,1:16:21.48,Default,,0,0,0,,in untyped languages via\Nthe Sketch and Rosette projects.
+Dialogue: 0,1:16:21.48,1:16:24.72,Default,,0,0,0,,But we want sketching for\Nexample-based synthesis
+Dialogue: 0,1:16:24.72,1:16:27.88,Default,,0,0,0,,and richly-typed language.
+Dialogue: 0,1:16:27.88,1:16:30.00,Default,,0,0,0,,So, to recap, program sketching
+Dialogue: 0,1:16:30.00,1:16:32.32,Default,,0,0,0,,is when you have a program\Nwith some holes in it,
+Dialogue: 0,1:16:32.32,1:16:35.04,Default,,0,0,0,,which might possibly\Nbe interdependent,
+Dialogue: 0,1:16:35.04,1:16:37.76,Default,,0,0,0,,and arbitrary assertions\Non this program,
+Dialogue: 0,1:16:37.76,1:16:39.96,Default,,0,0,0,,which is where we're gonna\Nderive our input-output examples.
+Dialogue: 0,1:16:39.96,1:16:42.12,Default,,0,0,0,,And what you get at\Nthe end of the day
+Dialogue: 0,1:16:42.12,1:16:45.40,Default,,0,0,0,,is a completed program.
+Dialogue: 0,1:16:45.40,1:16:47.68,Default,,0,0,0,,So let's take a look at,\NMyth's second limitation
+Dialogue: 0,1:16:47.68,1:16:50.76,Default,,0,0,0,,which is known as\Nthe trace-completeness requirement.
+Dialogue: 0,1:16:50.76,1:16:53.80,Default,,0,0,0,,To be fair, this isn't just Myth\Nthat suffers from this problem.
+Dialogue: 0,1:16:53.80,1:16:56.04,Default,,0,0,0,,A lot of the programs synthesizers\Nthat I mentioned earlier
+Dialogue: 0,1:16:56.04,1:16:58.76,Default,,0,0,0,,also have some sort of\Ntrace-completeness requirement.
+Dialogue: 0,1:16:58.76,1:17:01.64,Default,,0,0,0,,So, what is trace-completeness?
+Dialogue: 0,1:17:01.72,1:17:05.72,Default,,0,0,0,,Well, a set of examples for\Na function is trace-complete if
+Dialogue: 0,1:17:05.72,1:17:09.04,Default,,0,0,0,,when the function is called\Non each example in the set,
+Dialogue: 0,1:17:09.04,1:17:12.60,Default,,0,0,0,,all its recursive calls also\Nhave an example in the set.
+Dialogue: 0,1:17:12.60,1:17:14.32,Default,,0,0,0,,Let's take a look at\Na small example.
+Dialogue: 0,1:17:14.32,1:17:16.64,Default,,0,0,0,,Let's say I have the length\Nfunction as defined here.
+Dialogue: 0,1:17:16.64,1:17:18.60,Default,,0,0,0,,And I want to specify\Nthe example that
+Dialogue: 0,1:17:18.68,1:17:22.44,Default,,0,0,0,,length of (1,5,6,1) is 4.
+Dialogue: 0,1:17:22.44,1:17:25.04,Default,,0,0,0,,Well, the problem is\Nthat length actually makes
+Dialogue: 0,1:17:25.08,1:17:28.16,Default,,0,0,0,,a recursive call here\Non the tail of its input.
+Dialogue: 0,1:17:28.16,1:17:30.00,Default,,0,0,0,,So, I'm going to actually\Nneed to specify
+Dialogue: 0,1:17:30.00,1:17:32.52,Default,,0,0,0,,an example for length of (5,6,1).
+Dialogue: 0,1:17:32.52,1:17:34.64,Default,,0,0,0,,And similarly, I'm then\Ngoing to need to specify
+Dialogue: 0,1:17:34.64,1:17:36.48,Default,,0,0,0,,an example for length of (6,1)
+Dialogue: 0,1:17:36.48,1:17:41.04,Default,,0,0,0,,and length of (1)\Nand length of the empty list.
+Dialogue: 0,1:17:41.12,1:17:43.84,Default,,0,0,0,,So, to recap, here are\Ntwo limitations of Myth.
+Dialogue: 0,1:17:43.84,1:17:46.04,Default,,0,0,0,,First one is that it has\Nno support for sketching.
+Dialogue: 0,1:17:46.04,1:17:48.92,Default,,0,0,0,,And the second is that it has this\Ntrace-completeness requirement.
+Dialogue: 0,1:17:48.92,1:17:51.48,Default,,0,0,0,,But, instead of framing\Nthese as limitations,
+Dialogue: 0,1:17:51.48,1:17:53.16,Default,,0,0,0,,what if we treated them as goals?
+Dialogue: 0,1:17:53.16,1:17:55.12,Default,,0,0,0,,And instead saying that there is\Nno support for sketching,
+Dialogue: 0,1:17:55.12,1:17:56.80,Default,,0,0,0,,we wanted to add\Nsupport for sketching
+Dialogue: 0,1:17:56.80,1:17:59.12,Default,,0,0,0,,and remove\Nthe trace-completeness requirement.
+Dialogue: 0,1:17:59.12,1:18:02.68,Default,,0,0,0,,Then we could call our system Smyth.
+Dialogue: 0,1:18:02.68,1:18:05.04,Default,,0,0,0,,So what we'd like to do is\Nprovide Smyth a sketch,
+Dialogue: 0,1:18:05.04,1:18:06.44,Default,,0,0,0,,which would be our first goal,
+Dialogue: 0,1:18:06.44,1:18:08.08,Default,,0,0,0,,and some non-trace-complete\Nexamples,
+Dialogue: 0,1:18:08.08,1:18:09.44,Default,,0,0,0,,which would be our second goal,
+Dialogue: 0,1:18:09.44,1:18:11.72,Default,,0,0,0,,and get the same output as before.
+Dialogue: 0,1:18:11.72,1:18:14.00,Default,,0,0,0,,Let's take a look at how we\Ncan support this first goal,
+Dialogue: 0,1:18:14.00,1:18:16.20,Default,,0,0,0,,adding support for sketching.
+Dialogue: 0,1:18:16.20,1:18:17.80,Default,,0,0,0,,So here's how Smyth\Nis going to work.
+Dialogue: 0,1:18:17.80,1:18:20.04,Default,,0,0,0,,As a specification, we're\Ngoing to give it a sketch
+Dialogue: 0,1:18:20.04,1:18:21.44,Default,,0,0,0,,and some assertions.
+Dialogue: 0,1:18:21.44,1:18:23.36,Default,,0,0,0,,And because Smyth is example-based
+Dialogue: 0,1:18:23.36,1:18:25.56,Default,,0,0,0,,we're going to need to do\Ndynamic verification.
+Dialogue: 0,1:18:25.56,1:18:28.96,Default,,0,0,0,,As before, this means that we're\Ngoing to need to test each assertion.
+Dialogue: 0,1:18:28.96,1:18:31.52,Default,,0,0,0,,We're going to evaluate and check.
+Dialogue: 0,1:18:31.52,1:18:33.28,Default,,0,0,0,,But here is where it gets tricky.
+Dialogue: 0,1:18:33.28,1:18:36.52,Default,,0,0,0,,What exactly do evaluating\Nand checking mean
+Dialogue: 0,1:18:36.52,1:18:38.60,Default,,0,0,0,,when given a program sketch?
+Dialogue: 0,1:18:38.60,1:18:41.88,Default,,0,0,0,,Well, the answer to the first of\Nthese questions is live evaluation,
+Dialogue: 0,1:18:41.88,1:18:44.20,Default,,0,0,0,,which is a theory that we draw\Nfrom the Hazel project
+Dialogue: 0,1:18:44.20,1:18:46.68,Default,,0,0,0,,which you can find @hazel.org.
+Dialogue: 0,1:18:46.68,1:18:48.48,Default,,0,0,0,,Let's take a look at how it works.
+Dialogue: 0,1:18:48.48,1:18:50.84,Default,,0,0,0,,Say we are given\Nthe program e on the left,
+Dialogue: 0,1:18:50.84,1:18:52.60,Default,,0,0,0,,which computes 10+20
+Dialogue: 0,1:18:52.60,1:18:57.20,Default,,0,0,0,,plus the first of this pair\Nx, where x is 4, comma, a hole.
+Dialogue: 0,1:18:57.20,1:19:00.40,Default,,0,0,0,,Well, we can compute\Nthe 10+20 and get 30 just fine.
+Dialogue: 0,1:19:00.40,1:19:02.28,Default,,0,0,0,,And then we can also take\Nthe first of this pair,
+Dialogue: 0,1:19:02.28,1:19:04.24,Default,,0,0,0,,which we know is going to\Nbe the concrete value four.
+Dialogue: 0,1:19:04.24,1:19:07.64,Default,,0,0,0,,So we can get normal output 34.
+Dialogue: 0,1:19:07.64,1:19:09.80,Default,,0,0,0,,Notationally, we would say that\Nin the empty environment,
+Dialogue: 0,1:19:09.88,1:19:12.72,Default,,0,0,0,,e evaluates to 34.
+Dialogue: 0,1:19:12.72,1:19:15.60,Default,,0,0,0,,But what if we change\Nthe first of x to second of x.
+Dialogue: 0,1:19:15.60,1:19:18.24,Default,,0,0,0,,We can complete the 10+20\Njust fine as before,
+Dialogue: 0,1:19:18.24,1:19:21.16,Default,,0,0,0,,but now second of x is\Ngoing to give us a hole.
+Dialogue: 0,1:19:21.16,1:19:22.84,Default,,0,0,0,,In traditional programming systems,
+Dialogue: 0,1:19:22.84,1:19:24.04,Default,,0,0,0,,this would either\Nresult in an exception
+Dialogue: 0,1:19:24.04,1:19:26.16,Default,,0,0,0,,or a crash or some sort\Nof meaningless output.
+Dialogue: 0,1:19:26.16,1:19:27.84,Default,,0,0,0,,But the key instead\Nof live evaluation
+Dialogue: 0,1:19:27.84,1:19:30.56,Default,,0,0,0,,is that we can actually just\Nevaluate around this hole.
+Dialogue: 0,1:19:30.56,1:19:32.20,Default,,0,0,0,,So, because we have\Na hole in our input,
+Dialogue: 0,1:19:32.20,1:19:33.72,Default,,0,0,0,,we get a hole in our output.
+Dialogue: 0,1:19:33.72,1:19:35.92,Default,,0,0,0,,And we get 30 plus hole zero.
+Dialogue: 0,1:19:35.92,1:19:38.20,Default,,0,0,0,,Note that we also keep\Ntrack of the environment
+Dialogue: 0,1:19:38.20,1:19:40.64,Default,,0,0,0,,around the hole at\Nthe time of evaluation
+Dialogue: 0,1:19:40.64,1:19:43.36,Default,,0,0,0,,because that's gonna be really\Nuseful for synthesis later.
+Dialogue: 0,1:19:43.36,1:19:45.44,Default,,0,0,0,,Notationally, we would say that\Nin the empty environment,
+Dialogue: 0,1:19:45.44,1:19:49.80,Default,,0,0,0,,e live evaluates to 30 plus hole\Nzero with that environment.
+Dialogue: 0,1:19:49.80,1:19:51.76,Default,,0,0,0,,So that's how we can run\Nthese program sketches.
+Dialogue: 0,1:19:51.76,1:19:53.72,Default,,0,0,0,,But now how do we check\Nthese programs sketches
+Dialogue: 0,1:19:53.72,1:19:56.84,Default,,0,0,0,,against the arbitrary assertions\Nthat we might have on them?
+Dialogue: 0,1:19:56.84,1:19:59.24,Default,,0,0,0,,Our answer to that is\Na novel mechanism
+Dialogue: 0,1:19:59.24,1:20:01.96,Default,,0,0,0,,that we call live unevaluation.
+Dialogue: 0,1:20:01.96,1:20:05.64,Default,,0,0,0,,Let's take a look at how\Nlive unevaluation works.
+Dialogue: 0,1:20:05.64,1:20:07.84,Default,,0,0,0,,Let's say we are given\Nthe same program before, e,
+Dialogue: 0,1:20:07.92,1:20:11.68,Default,,0,0,0,,and evaluates to 30 plus that\Nwhole closure hole zero.
+Dialogue: 0,1:20:11.68,1:20:15.00,Default,,0,0,0,,Well, if we want the entire\Nprogram to be equal to 100,
+Dialogue: 0,1:20:15.00,1:20:17.04,Default,,0,0,0,,then we can actually transform\Nthis global constraint
+Dialogue: 0,1:20:17.04,1:20:19.88,Default,,0,0,0,,from an assertion onto\Na local constraint on the hole.
+Dialogue: 0,1:20:19.88,1:20:22.80,Default,,0,0,0,,Namely, that hole\Nzero needs to be 70.
+Dialogue: 0,1:20:22.80,1:20:24.68,Default,,0,0,0,,As a slightly more\Ncomplicated example,
+Dialogue: 0,1:20:24.68,1:20:26.20,Default,,0,0,0,,let's say we have\Na program e that evaluates
+Dialogue: 0,1:20:26.20,1:20:28.24,Default,,0,0,0,,the first of some hole or one.
+Dialogue: 0,1:20:28.24,1:20:31.00,Default,,0,0,0,,And we want the entire\Nprogram to evaluate to eight.
+Dialogue: 0,1:20:31.00,1:20:32.96,Default,,0,0,0,,You can transform this\Nglobal constraint
+Dialogue: 0,1:20:32.96,1:20:34.68,Default,,0,0,0,,onto a local constraint on the hole,
+Dialogue: 0,1:20:34.68,1:20:38.44,Default,,0,0,0,,namely, that hole one\Nneeds to be the pair eight, comma,
+Dialogue: 0,1:20:38.48,1:20:41.88,Default,,0,0,0,,top, where top is anything at all.
+Dialogue: 0,1:20:41.88,1:20:44.56,Default,,0,0,0,,Finally, let's take a look at\Nour max program from before.
+Dialogue: 0,1:20:44.56,1:20:46.24,Default,,0,0,0,,If we want to assert\Nthat max of (1,2)
+Dialogue: 0,1:20:46.24,1:20:48.36,Default,,0,0,0,,needs to be two with\Nthis program sketch,
+Dialogue: 0,1:20:48.36,1:20:50.52,Default,,0,0,0,,we can actually live evaluate it.
+Dialogue: 0,1:20:50.52,1:20:52.00,Default,,0,0,0,,So in the empty environment,
+Dialogue: 0,1:20:52.00,1:20:55.36,Default,,0,0,0,,we say that max (1,2)\Nlive evaluates to (4,2)
+Dialogue: 0,1:20:55.36,1:20:58.72,Default,,0,0,0,,with the environment\Nn=1, m=2 and n'=0.
+Dialogue: 0,1:20:58.72,1:21:02.72,Default,,0,0,0,,We live unevaluate\Nthe two onto this expression.
+Dialogue: 0,1:21:02.72,1:21:04.44,Default,,0,0,0,,And we get the whole\Nconstraint that hole two
+Dialogue: 0,1:21:04.44,1:21:07.84,Default,,0,0,0,,needs to be two in that environment\Nthat I mentioned earlier.
+Dialogue: 0,1:21:07.84,1:21:09.92,Default,,0,0,0,,So that's how live\Nunevaluation works.
+Dialogue: 0,1:21:09.92,1:21:13.40,Default,,0,0,0,,Plus satisfaction in Smyth\Nwill look like live evaluation
+Dialogue: 0,1:21:13.40,1:21:15.56,Default,,0,0,0,,followed by live unevaluation.
+Dialogue: 0,1:21:15.56,1:21:17.08,Default,,0,0,0,,And it's a combination\Nof these two concepts
+Dialogue: 0,1:21:17.08,1:21:20.56,Default,,0,0,0,,that we call live\Nbidirectional evaluation.
+Dialogue: 0,1:21:20.56,1:21:22.28,Default,,0,0,0,,But as a satisfaction mechanism,
+Dialogue: 0,1:21:22.28,1:21:24.40,Default,,0,0,0,,live bidirectional evaluation\Nactually introduces
+Dialogue: 0,1:21:24.40,1:21:27.16,Default,,0,0,0,,these new constraints x over\Nhere on the right hand side.
+Dialogue: 0,1:21:27.16,1:21:28.72,Default,,0,0,0,,So let's take a look,\Nat a high level,
+Dialogue: 0,1:21:28.72,1:21:32.48,Default,,0,0,0,,how this will fit into\Nthe program synthesis loop.
+Dialogue: 0,1:21:32.48,1:21:35.88,Default,,0,0,0,,In Smyth, we're gonna start\Nwith Myth as a blackbox.
+Dialogue: 0,1:21:35.88,1:21:37.92,Default,,0,0,0,,Then, when the user\Nprovides a sketch,
+Dialogue: 0,1:21:37.92,1:21:40.64,Default,,0,0,0,,we can live evaluate\Nit and get a result.
+Dialogue: 0,1:21:40.64,1:21:43.12,Default,,0,0,0,,We'll also collect these programming\Nsamples from the assertion
+Dialogue: 0,1:21:43.12,1:21:46.08,Default,,0,0,0,,and live unevaluate them onto\Nthe result that we get.
+Dialogue: 0,1:21:46.08,1:21:48.76,Default,,0,0,0,,This process, which we call\Nlive bidirectional evaluation,
+Dialogue: 0,1:21:48.76,1:21:51.36,Default,,0,0,0,,will result on constraints\Non individual holes
+Dialogue: 0,1:21:51.36,1:21:53.64,Default,,0,0,0,,that we can plug directly into Myth.
+Dialogue: 0,1:21:53.64,1:21:56.64,Default,,0,0,0,,Then if we augment Myth\Nwith some additional rules
+Dialogue: 0,1:21:56.64,1:21:59.44,Default,,0,0,0,,to handle the partial solutions\Nthat we're looking for,
+Dialogue: 0,1:21:59.44,1:22:01.60,Default,,0,0,0,,we can actually get\Na partial solution from Myth
+Dialogue: 0,1:22:01.60,1:22:03.68,Default,,0,0,0,,and some new program examples.
+Dialogue: 0,1:22:03.68,1:22:08.04,Default,,0,0,0,,Then we can iterate this process\Nuntil we arrive at a full solution.
+Dialogue: 0,1:22:08.04,1:22:09.72,Default,,0,0,0,,So if we look back at our goals,
+Dialogue: 0,1:22:09.72,1:22:11.64,Default,,0,0,0,,we can see that live\Nbidirectional evaluation
+Dialogue: 0,1:22:11.64,1:22:13.76,Default,,0,0,0,,enables us to add\Nsupport for sketching.
+Dialogue: 0,1:22:13.76,1:22:15.84,Default,,0,0,0,,What about this\Ntrace-completeness requirement?
+Dialogue: 0,1:22:15.84,1:22:18.24,Default,,0,0,0,,Well, it turns out that live\Nbidirectional evaluation
+Dialogue: 0,1:22:18.24,1:22:20.12,Default,,0,0,0,,also solves this problem.
+Dialogue: 0,1:22:20.12,1:22:23.00,Default,,0,0,0,,To see how, let's take a closer\Nlook at trace-completeness.
+Dialogue: 0,1:22:23.00,1:22:25.04,Default,,0,0,0,,Let's say we want to\Nspecify the function length
+Dialogue: 0,1:22:25.04,1:22:27.40,Default,,0,0,0,,using these two\Nnon-trace-complete examples
+Dialogue: 0,1:22:27.40,1:22:29.16,Default,,0,0,0,,as well as a blank sketch.
+Dialogue: 0,1:22:29.16,1:22:31.72,Default,,0,0,0,,The first step would be to live\Nunevaluate these assertions
+Dialogue: 0,1:22:31.72,1:22:33.36,Default,,0,0,0,,and get the two hole\Nconstraints that
+Dialogue: 0,1:22:33.36,1:22:35.88,Default,,0,0,0,,when x is the empty list,\Nwell, zero needs to be zero.
+Dialogue: 0,1:22:35.88,1:22:39.76,Default,,0,0,0,,And when x is (1,5,6,1),\Nwell, zero needs to be four.
+Dialogue: 0,1:22:39.76,1:22:41.32,Default,,0,0,0,,Because Smyth is not going to find
+Dialogue: 0,1:22:41.32,1:22:44.16,Default,,0,0,0,,a non-branching expression\Nto satisfy this hole,
+Dialogue: 0,1:22:44.16,1:22:48.16,Default,,0,0,0,,it's going to introduce a case\Nexpression that splits on x's.
+Dialogue: 0,1:22:48.16,1:22:50.64,Default,,0,0,0,,Now, we live unevaluate\Nthese assertions again
+Dialogue: 0,1:22:50.64,1:22:52.60,Default,,0,0,0,,and get two new hole constraints.
+Dialogue: 0,1:22:52.60,1:22:56.12,Default,,0,0,0,,Namely, that when x is the empty\Nlist, well, one needs to be zero.
+Dialogue: 0,1:22:56.12,1:23:00.24,Default,,0,0,0,,And when tail is (5,6,1), among\Nother things in the environment,
+Dialogue: 0,1:23:00.24,1:23:02.40,Default,,0,0,0,,well, two needs to be four.
+Dialogue: 0,1:23:02.40,1:23:03.92,Default,,0,0,0,,Now this first hole\Nconstraint is very easy
+Dialogue: 0,1:23:03.92,1:23:05.20,Default,,0,0,0,,for Smyth to solve.
+Dialogue: 0,1:23:05.20,1:23:08.04,Default,,0,0,0,,It can simply bind hole one\Nto be the constant zero.
+Dialogue: 0,1:23:08.04,1:23:09.48,Default,,0,0,0,,That will take care of\Nthis first constraint,
+Dialogue: 0,1:23:09.48,1:23:11.80,Default,,0,0,0,,so we no longer need\Nto worry about it.
+Dialogue: 0,1:23:11.80,1:23:14.08,Default,,0,0,0,,The second constraint could\Nbe handled similarly,
+Dialogue: 0,1:23:14.08,1:23:17.20,Default,,0,0,0,,but Smith avoids over specializing\Non large constants like four
+Dialogue: 0,1:23:17.20,1:23:18.92,Default,,0,0,0,,because they don't generalize well.
+Dialogue: 0,1:23:18.92,1:23:21.68,Default,,0,0,0,,So, instead, it might try to\Nsynthesize the expression
+Dialogue: 0,1:23:21.68,1:23:23.32,Default,,0,0,0,,one plus length tail.
+Dialogue: 0,1:23:23.32,1:23:25.00,Default,,0,0,0,,Well, we run into a dilemma here.
+Dialogue: 0,1:23:25.00,1:23:27.04,Default,,0,0,0,,How can we be calling length on tail
+Dialogue: 0,1:23:27.04,1:23:28.64,Default,,0,0,0,,when we don't even\Nknow what length is?
+Dialogue: 0,1:23:28.64,1:23:30.32,Default,,0,0,0,,Because that's the function that\Nwe're trying to synthesize
+Dialogue: 0,1:23:30.40,1:23:31.64,Default,,0,0,0,,in the first place.
+Dialogue: 0,1:23:31.64,1:23:33.12,Default,,0,0,0,,Here's where traditional\Nprogram synthesizers
+Dialogue: 0,1:23:33.12,1:23:35.28,Default,,0,0,0,,could leverage\Nthe trace-completeness requirement.
+Dialogue: 0,1:23:35.28,1:23:36.80,Default,,0,0,0,,If we were guaranteed\Nto have the example
+Dialogue: 0,1:23:36.80,1:23:38.84,Default,,0,0,0,,that when x is equal to (5,6,1),
+Dialogue: 0,1:23:38.84,1:23:40.80,Default,,0,0,0,,length of x is going to be three.
+Dialogue: 0,1:23:40.80,1:23:42.96,Default,,0,0,0,,And we could simply slot in\Nthree for length of tail
+Dialogue: 0,1:23:42.96,1:23:45.28,Default,,0,0,0,,and see that 1+3 is going\Nto satisfy our requirement
+Dialogue: 0,1:23:45.28,1:23:47.60,Default,,0,0,0,,that hole two needs\Nto be equal to four.
+Dialogue: 0,1:23:47.60,1:23:49.24,Default,,0,0,0,,But we don't have that example.
+Dialogue: 0,1:23:49.24,1:23:51.24,Default,,0,0,0,,So instead, the key\Ninsight is to realize
+Dialogue: 0,1:23:51.24,1:23:54.52,Default,,0,0,0,,that we actually do have\Na definition for length of x's.
+Dialogue: 0,1:23:54.52,1:23:57.56,Default,,0,0,0,,Length of x's is going to\Nbe equal to hole zero.
+Dialogue: 0,1:23:57.56,1:23:58.56,Default,,0,0,0,,In our partial solution,
+Dialogue: 0,1:23:58.56,1:23:59.84,Default,,0,0,0,,we see that hole zero is\Ngoing to be equal to
+Dialogue: 0,1:23:59.88,1:24:01.12,Default,,0,0,0,,this case expression right here,
+Dialogue: 0,1:24:01.12,1:24:03.64,Default,,0,0,0,,which depends on hole\None and hole two.
+Dialogue: 0,1:24:03.64,1:24:06.68,Default,,0,0,0,,But nonetheless, we can run\Nlive bidirectional evaluation
+Dialogue: 0,1:24:06.68,1:24:09.00,Default,,0,0,0,,from before as usual\Non these programs,
+Dialogue: 0,1:24:09.00,1:24:10.80,Default,,0,0,0,,because they're just\Nnormal sketches.
+Dialogue: 0,1:24:10.80,1:24:12.48,Default,,0,0,0,,Doing so will result\Nin a new set of
+Dialogue: 0,1:24:12.48,1:24:14.60,Default,,0,0,0,,live unevaluation problems\Nthat we can just perform
+Dialogue: 0,1:24:14.60,1:24:16.24,Default,,0,0,0,,to get a set of new constraints.
+Dialogue: 0,1:24:16.24,1:24:18.24,Default,,0,0,0,,And it turns out that this\Nprogram that we synthesized
+Dialogue: 0,1:24:18.24,1:24:20.68,Default,,0,0,0,,actually satisfies all these\Ngenerated constraints,
+Dialogue: 0,1:24:20.68,1:24:24.64,Default,,0,0,0,,as well as our original constraint\Nthat hole two needs to be four.
+Dialogue: 0,1:24:24.64,1:24:26.52,Default,,0,0,0,,Therefore, all of our constraints\Nhave been taken care of,
+Dialogue: 0,1:24:26.52,1:24:29.04,Default,,0,0,0,,so we have a full\Nsolution for length.
+Dialogue: 0,1:24:29.04,1:24:30.96,Default,,0,0,0,,So, that's how live\Nbidirectional evaluation
+Dialogue: 0,1:24:30.96,1:24:34.76,Default,,0,0,0,,can also take care of\Nthe trace-completeness requirement for Myth.
+Dialogue: 0,1:24:34.76,1:24:36.80,Default,,0,0,0,,So, to wrap up, let's talk\Nabout some of the experiments
+Dialogue: 0,1:24:36.80,1:24:38.44,Default,,0,0,0,,that we run to evaluate Smyth.
+Dialogue: 0,1:24:38.44,1:24:40.52,Default,,0,0,0,,Here, I'll be talking about\Nfour experiments that we run
+Dialogue: 0,1:24:40.52,1:24:42.80,Default,,0,0,0,,based on the Myth benchmark suite.
+Dialogue: 0,1:24:42.80,1:24:43.92,Default,,0,0,0,,In the first experiment,
+Dialogue: 0,1:24:43.92,1:24:46.36,Default,,0,0,0,,we took the trace-complete examples\Nfrom the Myth benchmark suite
+Dialogue: 0,1:24:46.36,1:24:48.52,Default,,0,0,0,,to specified various functions
+Dialogue: 0,1:24:48.52,1:24:51.40,Default,,0,0,0,,and provided no additional\Nsketching information to Smyth.
+Dialogue: 0,1:24:51.40,1:24:53.76,Default,,0,0,0,,With this information, we\Ncould successfully synthesize
+Dialogue: 0,1:24:53.76,1:24:57.28,Default,,0,0,0,,38 out of the 43 benchmarks\Nfrom the Myth benchmark suite.
+Dialogue: 0,1:24:57.28,1:24:58.88,Default,,0,0,0,,In the paper, we talk\Nabout some hypotheses
+Dialogue: 0,1:24:58.88,1:25:01.44,Default,,0,0,0,,why we couldn't get\Nthat number up to 43.
+Dialogue: 0,1:25:01.44,1:25:02.60,Default,,0,0,0,,In our second experiment,
+Dialogue: 0,1:25:02.60,1:25:03.88,Default,,0,0,0,,we took these\Ntrace-complete examples,
+Dialogue: 0,1:25:03.88,1:25:05.56,Default,,0,0,0,,but we removed as many as we could
+Dialogue: 0,1:25:05.56,1:25:08.68,Default,,0,0,0,,while still having Smyth\Nsynthesize a correct solution.
+Dialogue: 0,1:25:08.68,1:25:10.68,Default,,0,0,0,,We found that with these\Nnon-trace-complete examples,
+Dialogue: 0,1:25:10.68,1:25:12.80,Default,,0,0,0,,we could achieve a 61%\Nspecification size
+Dialogue: 0,1:25:12.80,1:25:15.64,Default,,0,0,0,,in Smyth as compared to Myth.
+Dialogue: 0,1:25:15.64,1:25:18.08,Default,,0,0,0,,In our third experiment, we took\Njust the recursive functions
+Dialogue: 0,1:25:18.08,1:25:19.76,Default,,0,0,0,,from the 38 that we could synthesize
+Dialogue: 0,1:25:19.76,1:25:22.52,Default,,0,0,0,,and provided a sketch of\Nthe base case Smyth.
+Dialogue: 0,1:25:22.52,1:25:25.20,Default,,0,0,0,,Then, like in experiment two, we\Ntook the trace-complete examples
+Dialogue: 0,1:25:25.20,1:25:27.76,Default,,0,0,0,,from experiment one, and paired\Nthem down to a minimal subset
+Dialogue: 0,1:25:27.76,1:25:30.72,Default,,0,0,0,,that Smyth needed to be able to\Nsynthesize the function correctly.
+Dialogue: 0,1:25:30.72,1:25:32.52,Default,,0,0,0,,Including the sketch\Nof the base case,
+Dialogue: 0,1:25:32.52,1:25:35.88,Default,,0,0,0,,we found that we needed approximately\Na 46% specification size
+Dialogue: 0,1:25:35.88,1:25:38.36,Default,,0,0,0,,as compared to Myth.
+Dialogue: 0,1:25:38.36,1:25:40.96,Default,,0,0,0,,In our fourth experiment, we\Nran experiments two and three
+Dialogue: 0,1:25:40.96,1:25:44.32,Default,,0,0,0,,in the popular logic-based\Nsynthesizers, Leon and Synquid.
+Dialogue: 0,1:25:44.32,1:25:46.16,Default,,0,0,0,,It's commonly said that\Nlogic-based synthesizers
+Dialogue: 0,1:25:46.16,1:25:48.88,Default,,0,0,0,,are strictly superior to\Nexample-based synthesizers
+Dialogue: 0,1:25:48.88,1:25:50.88,Default,,0,0,0,,because you can simply\Nencode examples and logic
+Dialogue: 0,1:25:50.88,1:25:52.84,Default,,0,0,0,,as a conjunction of implications.
+Dialogue: 0,1:25:52.84,1:25:54.64,Default,,0,0,0,,Well, there is some\Ntruth to that sentiment.
+Dialogue: 0,1:25:54.64,1:25:56.68,Default,,0,0,0,,It's also true that many\Nlogic-based synthesizers
+Dialogue: 0,1:25:56.68,1:25:59.36,Default,,0,0,0,,are not well equipped to handle\Nthat kind of specification.
+Dialogue: 0,1:25:59.36,1:26:02.36,Default,,0,0,0,,And in fact, this experiment showed\Nthat while there are many tasks
+Dialogue: 0,1:26:02.36,1:26:04.68,Default,,0,0,0,,on which Leon and Synquid\Nperformed quite well,
+Dialogue: 0,1:26:04.68,1:26:06.76,Default,,0,0,0,,there are also many tasks\Non which they did not,
+Dialogue: 0,1:26:06.76,1:26:09.84,Default,,0,0,0,,particularly relating to\Nnon-trace-complete examples.
+Dialogue: 0,1:26:09.84,1:26:11.68,Default,,0,0,0,,We hypothesize that\Ncombining the insights
+Dialogue: 0,1:26:11.68,1:26:14.72,Default,,0,0,0,,of live bidirectional evaluation\Nwith logic-based program synthesis
+Dialogue: 0,1:26:14.72,1:26:17.08,Default,,0,0,0,,could result in a system that\Nhas the power to specify
+Dialogue: 0,1:26:17.08,1:26:18.88,Default,,0,0,0,,complex data structure and variance,
+Dialogue: 0,1:26:18.88,1:26:21.20,Default,,0,0,0,,while also having the ease of\Nuse of not having to specify
+Dialogue: 0,1:26:21.20,1:26:23.40,Default,,0,0,0,,trace-complete examples.
+Dialogue: 0,1:26:23.40,1:26:25.44,Default,,0,0,0,,The last thing that I'd like to\Nsay is that these four experiments
+Dialogue: 0,1:26:25.44,1:26:27.12,Default,,0,0,0,,are a measure of expressivity.
+Dialogue: 0,1:26:27.12,1:26:30.00,Default,,0,0,0,,But we also ran experiments that\Ntested the robustness of Smyth.
+Dialogue: 0,1:26:30.00,1:26:32.28,Default,,0,0,0,,And these are described\Nmore in the paper.
+Dialogue: 0,1:26:32.28,1:26:35.00,Default,,0,0,0,,So that's Smyth, an example-based\Nprogram synthesizer
+Dialogue: 0,1:26:35.00,1:26:38.40,Default,,0,0,0,,with support for sketching and no\Ntrace-completeness requirement.
+Dialogue: 0,1:26:38.40,1:26:40.16,Default,,0,0,0,,Here's an overview of what\Nthe system looks like.
+Dialogue: 0,1:26:40.16,1:26:42.32,Default,,0,0,0,,And here's a link to where\Nyou can find it on GitHub.
+Dialogue: 0,1:26:42.32,1:26:45.68,Default,,0,0,0,,You can also find me\N@jplubin on Twitter.
+Dialogue: 0,1:26:45.68,1:26:48.76,Default,,0,0,0,,I'd like to give a huge thanks to\Nmy collaborators Nick Collins,
+Dialogue: 0,1:26:48.76,1:26:51.84,Default,,0,0,0,,Cyrus Omar and Ravi Chugh for\Nhelping me with this project,
+Dialogue: 0,1:26:51.84,1:26:54.04,Default,,0,0,0,,as well as the ICFP\Norganizers and volunteers
+Dialogue: 0,1:26:54.04,1:26:56.20,Default,,0,0,0,,for making this conference possible.
+Dialogue: 0,1:26:56.20,1:26:57.76,Default,,0,0,0,,Lastly, I'd like to give\Na shout out to an event
+Dialogue: 0,1:26:57.76,1:27:02.52,Default,,0,0,0,,that I'm helping organize\NICFP,  #ShutdownPL@ICFP.
+Dialogue: 0,1:27:02.52,1:27:05.92,Default,,0,0,0,,There will be an anti-racism event\Noccurring on Thursday, August 27,
+Dialogue: 0,1:27:05.92,1:27:08.12,Default,,0,0,0,,from 2pm to 6pm Eastern time.
+Dialogue: 0,1:27:08.12,1:27:12.40,Default,,0,0,0,,I hope to see you there.\NAnd thanks for watching.
+Dialogue: 0,1:27:12.40,1:27:17.40,Default,,0,0,0,,(AUDIENCE APPLAUDS)
+Dialogue: 0,1:27:20.00,1:27:21.24,Default,,0,0,0,,SUKYOUNG: Thank you, Justin.
+Dialogue: 0,1:27:21.24,1:27:24.76,Default,,0,0,0,,And thanks (INAUDIBLE) for organizing\Nthe anti-racism event,
+Dialogue: 0,1:27:24.76,1:27:28.40,Default,,0,0,0,,#ShutdownPL@ICFP.
+Dialogue: 0,1:27:28.40,1:27:30.32,Default,,0,0,0,,If you are watching this talk live,
+Dialogue: 0,1:27:30.32,1:27:33.00,Default,,0,0,0,,please don't forget\Nabout a Q&A session
+Dialogue: 0,1:27:33.00,1:27:39.68,Default,,0,0,0,,that may be available\Nin your time band.
+Dialogue: 0,1:28:00.92,1:28:03.24,Default,,0,0,0,,Our next talk is entitled
+Dialogue: 0,1:28:03.24,1:28:06.96,Default,,0,0,0,,Elaboration with First-Class\NImplicit Function Types.
+Dialogue: 0,1:28:06.96,1:28:11.56,Default,,0,0,0,,Andras Kovacs will be\Npresenting the talk.
+Dialogue: 0,1:28:11.56,1:28:13.44,Default,,0,0,0,,ANDRAS KOVACS: Hello everyone,\Nthis is Andras Kovacs.
+Dialogue: 0,1:28:13.44,1:28:14.44,Default,,0,0,0,,And I will talk about
+Dialogue: 0,1:28:14.44,1:28:17.76,Default,,0,0,0,,elaboration with first-class\Nimplicit function types.
+Dialogue: 0,1:28:17.76,1:28:20.68,Default,,0,0,0,,In this talk, I will only give\Na rough overview of the paper.
+Dialogue: 0,1:28:20.68,1:28:23.32,Default,,0,0,0,,And you can look at\Nthe paper for details.
+Dialogue: 0,1:28:23.32,1:28:25.76,Default,,0,0,0,,Let's explain the title\Nof the talk a bit.
+Dialogue: 0,1:28:25.76,1:28:27.64,Default,,0,0,0,,First, what is elaboration?
+Dialogue: 0,1:28:27.64,1:28:30.92,Default,,0,0,0,,It is a translation from\Nsurface syntax to core syntax.
+Dialogue: 0,1:28:30.92,1:28:33.72,Default,,0,0,0,,Surface syntax is a parsed\Nrepresentation of what programmers
+Dialogue: 0,1:28:33.72,1:28:35.56,Default,,0,0,0,,actually see in a source file.
+Dialogue: 0,1:28:35.56,1:28:38.32,Default,,0,0,0,,It is usually compact\Nand convenient to read and write,
+Dialogue: 0,1:28:38.40,1:28:39.40,Default,,0,0,0,,but omits a lot of\Ntyping information.
+Dialogue: 0,1:28:40.08,1:28:42.24,Default,,0,0,0,,and it is not\Nnecessarily (INAUDIBLE)
+Dialogue: 0,1:28:42.76,1:28:45.52,Default,,0,0,0,,the core syntax is used\Ninternally by the compiler.
+Dialogue: 0,1:28:45.52,1:28:47.88,Default,,0,0,0,,It is simple (INAUDIBLE)
+Dialogue: 0,1:28:47.88,1:28:48.92,Default,,0,0,0,,and explicitly annotated
+Dialogue: 0,1:28:48.92,1:28:52.08,Default,,0,0,0,,but it is much more (INAUDIBLE)\Ninto surface syntax.
+Dialogue: 0,1:28:52.80,1:28:55.20,Default,,0,0,0,,Elaboration can include\Ninference, desugaring,
+Dialogue: 0,1:28:55.20,1:28:57.12,Default,,0,0,0,,instance resolution and other things
+Dialogue: 0,1:28:57.60,1:28:59.52,Default,,0,0,0,,but this talk mostly\Nfocuses on inference.
+Dialogue: 0,1:29:00.00,1:29:01.60,Default,,0,0,0,,in certain independent types
+Dialogue: 0,1:29:01.60,1:29:04.40,Default,,0,0,0,,people often use the term elaboration\Ninstead of type inference.
+Dialogue: 0,1:29:05.12,1:29:07.40,Default,,0,0,0,,Because inference necessarily\Ninvolves term inferences
+Dialogue: 0,1:29:07.40,1:29:09.92,Default,,0,0,0,,while the type inference\Nis a bit too specific.
+Dialogue: 0,1:29:10.44,1:29:12.08,Default,,0,0,0,,Second, what are implicit functions?
+Dialogue: 0,1:29:12.60,1:29:15.24,Default,,0,0,0,,These are functions such that\Narguments are given by inference
+Dialogue: 0,1:29:15.24,1:29:17.00,Default,,0,0,0,,by default and not\Nby the programmer.
+Dialogue: 0,1:29:17.76,1:29:19.80,Default,,0,0,0,,IN GHC Haskell forall\Ntypes are an example.
+Dialogue: 0,1:29:20.80,1:29:22.76,Default,,0,0,0,,These are functions\Nabstracting over types
+Dialogue: 0,1:29:23.24,1:29:24.80,Default,,0,0,0,,or other types that are data.
+Dialogue: 0,1:29:25.04,1:29:28.80,Default,,0,0,0,,The arguments for Forall abstraction\Nare inferred by default as here
+Dialogue: 0,1:29:29.56,1:29:31.44,Default,,0,0,0,,but you can all see these\Nvisible type application
+Dialogue: 0,1:29:31.44,1:29:34.12,Default,,0,0,0,,to fall back to explicit\Narguments as here.
+Dialogue: 0,1:29:34.64,1:29:37.48,Default,,0,0,0,,In GHC type level abstraction\Nin all this implicit
+Dialogue: 0,1:29:37.48,1:29:39.64,Default,,0,0,0,,and value other functions\Nare all these explicit.
+Dialogue: 0,1:29:40.36,1:29:42.84,Default,,0,0,0,,But this restriction\Nis specific to GHC
+Dialogue: 0,1:29:42.84,1:29:44.48,Default,,0,0,0,,and it is not something fundamental.
+Dialogue: 0,1:29:45.72,1:29:48.76,Default,,0,0,0,,In Agda, (INAUDIBLE) having\Nimplicit functions types
+Dialogue: 0,1:29:48.76,1:29:51.08,Default,,0,0,0,,but you are free to make any\Nfunction implicit or explicit
+Dialogue: 0,1:29:51.08,1:29:53.84,Default,,0,0,0,,and type abstraction is\Njust a special case
+Dialogue: 0,1:29:53.84,1:29:55.44,Default,,0,0,0,,of general independent functions.
+Dialogue: 0,1:29:56.44,1:29:59.92,Default,,0,0,0,,Both in GHC and Agda, implicit\Nfunction types control elaboration
+Dialogue: 0,1:29:59.92,1:30:02.24,Default,,0,0,0,,by signalling varying\Ninput applications
+Dialogue: 0,1:30:02.24,1:30:03.48,Default,,0,0,0,,should be inserted.
+Dialogue: 0,1:30:04.00,1:30:06.92,Default,,0,0,0,,After elaboration, implicit functions\Nare not that important any more
+Dialogue: 0,1:30:06.92,1:30:10.08,Default,,0,0,0,,because everything is fully\Nexplicit in the core syntax.
+Dialogue: 0,1:30:11.04,1:30:13.84,Default,,0,0,0,,Implicit function types are\Nfirst class if they can be used
+Dialogue: 0,1:30:13.84,1:30:15.52,Default,,0,0,0,,as (INAUDIBLE) as any other type.
+Dialogue: 0,1:30:15.52,1:30:18.08,Default,,0,0,0,,In GHC with RankNTypes\Nin enabled
+Dialogue: 0,1:30:18.08,1:30:20.56,Default,,0,0,0,,we can use an implicit function\Nas a function argument type
+Dialogue: 0,1:30:21.04,1:30:23.88,Default,,0,0,0,,and in this case type inference\Nalso goes fairly well.
+Dialogue: 0,1:30:24.40,1:30:26.48,Default,,0,0,0,,But what if you want to\Nuse implicit function
+Dialogue: 0,1:30:26.48,1:30:28.48,Default,,0,0,0,,in some other (INAUDIBLE) data type?
+Dialogue: 0,1:30:28.48,1:30:31.20,Default,,0,0,0,,Such as Maybe as in this\Nparticular example.
+Dialogue: 0,1:30:32.48,1:30:35.00,Default,,0,0,0,,This is not really\Npossible in current GHC.
+Dialogue: 0,1:30:35.28,1:30:37.76,Default,,0,0,0,,There is a language extension\Ncalled inpredicative times
+Dialogue: 0,1:30:37.76,1:30:40.08,Default,,0,0,0,,which technically allows\Nwriting down this type
+Dialogue: 0,1:30:40.08,1:30:42.88,Default,,0,0,0,,that is deprecated and doesn't\Nlet you work in practice.
+Dialogue: 0,1:30:43.64,1:30:46.80,Default,,0,0,0,,There is another talk at\Nthe current ICF which introduces a new
+Dialogue: 0,1:30:46.80,1:30:50.04,Default,,0,0,0,,and practical usable implementation\Nof this language extension.
+Dialogue: 0,1:30:50.80,1:30:53.08,Default,,0,0,0,,As a side note, users\Nof lens libraries
+Dialogue: 0,1:30:53.08,1:30:55.64,Default,,0,0,0,,may be familiar with\Nthe examples on this slide.
+Dialogue: 0,1:30:56.16,1:30:57.64,Default,,0,0,0,,Lenses are polymorphic functions
+Dialogue: 0,1:30:57.64,1:30:59.68,Default,,0,0,0,,so they can be used in\Nhigh order functions
+Dialogue: 0,1:30:59.68,1:31:01.76,Default,,0,0,0,,but if you want to store\Nthem in data structures
+Dialogue: 0,1:31:01.76,1:31:04.08,Default,,0,0,0,,then you have to use some\Nnew type records
+Dialogue: 0,1:31:04.84,1:31:06.16,Default,,0,0,0,,What happens in Agda.
+Dialogue: 0,1:31:06.24,1:31:08.64,Default,,0,0,0,,Here we can use implicit\Nfunctions times any variance
+Dialogue: 0,1:31:08.64,1:31:10.40,Default,,0,0,0,,so this type signature\Nis completely fine.
+Dialogue: 0,1:31:11.40,1:31:13.52,Default,,0,0,0,,However elaboration is not\Nas smart as it could be
+Dialogue: 0,1:31:13.52,1:31:15.28,Default,,0,0,0,,and the next line\Ndoes not elaborate.
+Dialogue: 0,1:31:16.28,1:31:18.80,Default,,0,0,0,,Here we have to write out\Nan emphasis lambda abstraction
+Dialogue: 0,1:31:18.80,1:31:20.48,Default,,0,0,0,,in order to make Agda happy.
+Dialogue: 0,1:31:20.96,1:31:23.92,Default,,0,0,0,,The main contribution of this\Ntalk is a generous solution
+Dialogue: 0,1:31:23.92,1:31:26.72,Default,,0,0,0,,which triggers such insertions\Nof implicit lambdas.
+Dialogue: 0,1:31:27.72,1:31:30.80,Default,,0,0,0,,At this point some people may know\Nthat the previous Agda example
+Dialogue: 0,1:31:30.80,1:31:33.56,Default,,0,0,0,,is an instance of something\Ncalled impredicative inference.
+Dialogue: 0,1:31:34.08,1:31:36.00,Default,,0,0,0,,Or impredicative polymorphism
+Dialogue: 0,1:31:36.00,1:31:38.68,Default,,0,0,0,,which is a topic in divider\Nfield of type inference.
+Dialogue: 0,1:31:39.40,1:31:42.20,Default,,0,0,0,,In the main point of this work\Nis to provide a solution for
+Dialogue: 0,1:31:42.20,1:31:43.48,Default,,0,0,0,,impredicative inference.
+Dialogue: 0,1:31:44.24,1:31:48.04,Default,,0,0,0,,However impredicativity means\Nmostly orthogonal things
+Dialogue: 0,1:31:48.04,1:31:50.08,Default,,0,0,0,,in the type theory and in\Nthe type inference literature.
+Dialogue: 0,1:31:50.56,1:31:53.96,Default,,0,0,0,,You can look at the paper for how\Nexactly the two notions differ.
+Dialogue: 0,1:31:54.48,1:31:57.16,Default,,0,0,0,,I personally prefer to use\Nthe term impredicative
+Dialogue: 0,1:31:57.16,1:31:59.12,Default,,0,0,0,,in the technical type\Ntheoretic sense
+Dialogue: 0,1:31:59.12,1:32:01.68,Default,,0,0,0,,and talk instead about\Nimplicit functions
+Dialogue: 0,1:32:01.68,1:32:03.48,Default,,0,0,0,,in the context of type inference.
+Dialogue: 0,1:32:04.24,1:32:07.16,Default,,0,0,0,,With that said, to summarise\Nthe contributions of the current work
+Dialogue: 0,1:32:07.16,1:32:09.24,Default,,0,0,0,,we have an elaboration algorithm
+Dialogue: 0,1:32:10.24,1:32:13.36,Default,,0,0,0,,which supports strong inference for\Nfirst class implicit function types
+Dialogue: 0,1:32:13.36,1:32:15.00,Default,,0,0,0,,or impredicative inference
+Dialogue: 0,1:32:15.52,1:32:19.84,Default,,0,0,0,,and it also supports dependent\Ntypes and global inference
+Dialogue: 0,1:32:19.84,1:32:22.52,Default,,0,0,0,,which means that\Nthe whole module of program
+Dialogue: 0,1:32:22.56,1:32:24.24,Default,,0,0,0,,can be considered in inference
+Dialogue: 0,1:32:24.24,1:32:26.48,Default,,0,0,0,,and not just a particular\Nfunction applications
+Dialogue: 0,1:32:26.48,1:32:27.84,Default,,0,0,0,,as in some previous works.
+Dialogue: 0,1:32:28.60,1:32:30.16,Default,,0,0,0,,The algorithm is also efficient
+Dialogue: 0,1:32:30.16,1:32:32.40,Default,,0,0,0,,it uses no backtracking or iteration
+Dialogue: 0,1:32:32.40,1:32:35.92,Default,,0,0,0,,and it actually traverses\Nthe pre-syntax exactly once.
+Dialogue: 0,1:32:36.64,1:32:39.08,Default,,0,0,0,,And lastly the algorithm\Nis the modest extension
+Dialogue: 0,1:32:39.08,1:32:42.24,Default,,0,0,0,,of bidirectional elaboration\Nas implemented in Agda.
+Dialogue: 0,1:32:43.00,1:32:46.48,Default,,0,0,0,,Since the paper algorithm is\Nthe extension of bidirectional elaboration
+Dialogue: 0,1:32:46.96,1:32:49.96,Default,,0,0,0,,first we shall briefly talk about it\Nand then look at the short comings
+Dialogue: 0,1:32:49.96,1:32:52.44,Default,,0,0,0,,with respect to handling first\Nclass implicit functions
+Dialogue: 0,1:32:52.44,1:32:55.32,Default,,0,0,0,,and finally look at the solution\Npresented in the paper.
+Dialogue: 0,1:32:55.80,1:32:58.64,Default,,0,0,0,,Bidirectional elaboration\Nconsists of two functions
+Dialogue: 0,1:32:58.64,1:33:01.08,Default,,0,0,0,,defined by (INAUDIBLE)\Nrecursions and surface syntax
+Dialogue: 0,1:33:01.56,1:33:04.16,Default,,0,0,0,,Let us assume a service expression T
+Dialogue: 0,1:33:04.16,1:33:05.24,Default,,0,0,0,,and a core context gamma.
+Dialogue: 0,1:33:05.76,1:33:08.80,Default,,0,0,0,,The purpose of elaboration\Nis to create something
+Dialogue: 0,1:33:08.80,1:33:11.04,Default,,0,0,0,,in the core syntax from\Nthe service expression.
+Dialogue: 0,1:33:11.56,1:33:15.68,Default,,0,0,0,,First we have the info function\Nwhich takes as input a core context
+Dialogue: 0,1:33:16.16,1:33:20.60,Default,,0,0,0,,and a surface expression\Nand return a core expression together
+Dialogue: 0,1:33:20.60,1:33:21.60,Default,,0,0,0,,with this core type.
+Dialogue: 0,1:33:21.84,1:33:25.08,Default,,0,0,0,,the check function addition takes\Nan input an expected core type
+Dialogue: 0,1:33:25.08,1:33:27.80,Default,,0,0,0,,and returns a core\Nterm with that type.
+Dialogue: 0,1:33:28.32,1:33:30.80,Default,,0,0,0,,And the expected type of\Nthe expression is already known,
+Dialogue: 0,1:33:30.80,1:33:33.88,Default,,0,0,0,,we use a check function,\Notherwise we use infer.
+Dialogue: 0,1:33:34.40,1:33:36.72,Default,,0,0,0,,This is similar to\Nbidirectional type checking
+Dialogue: 0,1:33:36.72,1:33:39.04,Default,,0,0,0,,but here each function\Nalso returns a quarter.
+Dialogue: 0,1:33:40.28,1:33:43.12,Default,,0,0,0,,Let's look at the short\Nexample of how checking works.
+Dialogue: 0,1:33:43.88,1:33:46.28,Default,,0,0,0,,We use an informal\N(INAUDIBLE) notation
+Dialogue: 0,1:33:46.28,1:33:48.84,Default,,0,0,0,,as we have as side effect\Npossibility of failure
+Dialogue: 0,1:33:49.36,1:33:52.88,Default,,0,0,0,,and we also carry around a state\Ncontext of meta variables.
+Dialogue: 0,1:33:53.40,1:33:56.48,Default,,0,0,0,,Here we are checking a lambda\Nexpression with the function type.
+Dialogue: 0,1:33:56.48,1:33:59.36,Default,,0,0,0,,So what we do is to expand\Nthe context with the variable
+Dialogue: 0,1:33:59.60,1:34:02.80,Default,,0,0,0,,and check the function body\N(INAUDIBLE) mean type.
+Dialogue: 0,1:34:03.32,1:34:05.92,Default,,0,0,0,,After this return of our\Nfirst lambda expression.
+Dialogue: 0,1:34:06.68,1:34:10.40,Default,,0,0,0,,In general the check function tries\Nto push types inside constructors
+Dialogue: 0,1:34:10.64,1:34:13.60,Default,,0,0,0,,which is beneficial for\Nperformance elaboration
+Dialogue: 0,1:34:13.60,1:34:15.68,Default,,0,0,0,,and also for the locality\Nof error messages.
+Dialogue: 0,1:34:16.16,1:34:19.00,Default,,0,0,0,,In the paper the only change\Nthe elaborator can make
+Dialogue: 0,1:34:19.00,1:34:20.60,Default,,0,0,0,,on the input surface syntax
+Dialogue: 0,1:34:20.60,1:34:23.00,Default,,0,0,0,,is that it can insert\Nimplicit lambdas
+Dialogue: 0,1:34:23.00,1:34:24.36,Default,,0,0,0,,and implicit applications.
+Dialogue: 0,1:34:24.84,1:34:26.12,Default,,0,0,0,,As we will shortly see,
+Dialogue: 0,1:34:26.12,1:34:29.80,Default,,0,0,0,,this implicit insertion relies\Ncrucially on the bidirectional style.
+Dialogue: 0,1:34:30.32,1:34:32.84,Default,,0,0,0,,We want to look at the exact\Nrules of the elaborations here
+Dialogue: 0,1:34:32.84,1:34:34.72,Default,,0,0,0,,and then look at some examples.
+Dialogue: 0,1:34:34.96,1:34:37.88,Default,,0,0,0,,First let's look at an example\Nfor application insertion.
+Dialogue: 0,1:34:38.36,1:34:41.56,Default,,0,0,0,,Assume that we have the usual\Npolymorphic identity function
+Dialogue: 0,1:34:41.56,1:34:45.44,Default,,0,0,0,,and we want to infer time for ID\Napplying for the Boolean tree
+Dialogue: 0,1:34:45.68,1:34:48.16,Default,,0,0,0,,This expression is\Nfunctional application.
+Dialogue: 0,1:34:48.16,1:34:52.00,Default,,0,0,0,,So first we are in for a type for\Nthe function involved which is ID.
+Dialogue: 0,1:34:52.48,1:34:55.88,Default,,0,0,0,,Then we noticed that infer type\Nis an implicit function type.
+Dialogue: 0,1:34:56.40,1:34:58.60,Default,,0,0,0,,So we insert an implicit\Napplication here.
+Dialogue: 0,1:34:59.36,1:35:02.56,Default,,0,0,0,,First create a fresh meta\Nvariable named alpha,
+Dialogue: 0,1:35:03.04,1:35:06.72,Default,,0,0,0,,then we apply the new elaborated\NID expression into it.
+Dialogue: 0,1:35:07.44,1:35:10.76,Default,,0,0,0,,In the following link, we will name\Nmeta variables using Greek letters.
+Dialogue: 0,1:35:11.00,1:35:13.52,Default,,0,0,0,,Now we have a function\Nfrom alpha to alpha.
+Dialogue: 0,1:35:14.00,1:35:16.52,Default,,0,0,0,,This is good because we started\Nelaborating an explicit
+Dialogue: 0,1:35:16.60,1:35:17.68,Default,,0,0,0,,function application
+Dialogue: 0,1:35:17.68,1:35:20.28,Default,,0,0,0,,and now we have an inferred\Nexplicit function type
+Dialogue: 0,1:35:20.32,1:35:22.28,Default,,0,0,0,,for of next sub\Nterm the application.
+Dialogue: 0,1:35:23.28,1:35:25.64,Default,,0,0,0,,What remains is to\Ncheck the right subterm
+Dialogue: 0,1:35:25.64,1:35:27.04,Default,,0,0,0,,with the function domain type.
+Dialogue: 0,1:35:27.80,1:35:30.36,Default,,0,0,0,,Here we don't have any\Nspecific checking rule
+Dialogue: 0,1:35:30.36,1:35:33.32,Default,,0,0,0,,so we change from\Nchecking to inference
+Dialogue: 0,1:35:33.32,1:35:35.64,Default,,0,0,0,,and infer type bool for true.
+Dialogue: 0,1:35:36.36,1:35:40.44,Default,,0,0,0,,Then the unified expected\Nother type inferred bool type.
+Dialogue: 0,1:35:40.92,1:35:44.36,Default,,0,0,0,,Now we can return the whole\Napplication as elaboration output
+Dialogue: 0,1:35:44.36,1:35:45.72,Default,,0,0,0,,together with the bool type.
+Dialogue: 0,1:35:46.20,1:35:49.40,Default,,0,0,0,,In general whether we have\Na bound or defined variable
+Dialogue: 0,1:35:49.40,1:35:51.24,Default,,0,0,0,,named with an implicit function type
+Dialogue: 0,1:35:51.24,1:35:53.52,Default,,0,0,0,,when we use the name\Nimplicit applications
+Dialogue: 0,1:35:53.52,1:35:55.56,Default,,0,0,0,,are inserted for\Nthe implicit arguments.
+Dialogue: 0,1:35:56.08,1:35:59.28,Default,,0,0,0,,Now let's look at an example for\Ninserting an implicit lambda.
+Dialogue: 0,1:35:59.80,1:36:01.60,Default,,0,0,0,,We want to check this\Nlambda expression
+Dialogue: 0,1:36:01.60,1:36:04.28,Default,,0,0,0,,with the usual polymorphic\Nidentity function type.
+Dialogue: 0,1:36:04.76,1:36:08.08,Default,,0,0,0,,First we noticed that expression\Nis not an implicit lambda
+Dialogue: 0,1:36:08.08,1:36:09.76,Default,,0,0,0,,much rather an explicit lambda.
+Dialogue: 0,1:36:10.52,1:36:12.60,Default,,0,0,0,,So the expression as\Nit is definitely
+Dialogue: 0,1:36:12.60,1:36:14.84,Default,,0,0,0,,does not have\Nthe expected checking type.
+Dialogue: 0,1:36:15.60,1:36:17.48,Default,,0,0,0,,However we can rub the expression
+Dialogue: 0,1:36:17.48,1:36:19.40,Default,,0,0,0,,in the newly inserted\Nimplicit lambda
+Dialogue: 0,1:36:19.88,1:36:21.44,Default,,0,0,0,,so that's what we are going to do.
+Dialogue: 0,1:36:21.68,1:36:24.04,Default,,0,0,0,,We assume the implicit argument\Nin the typing context
+Dialogue: 0,1:36:24.04,1:36:27.44,Default,,0,0,0,,and check the expression with\Nthe code name of the checking type
+Dialogue: 0,1:36:27.44,1:36:29.76,Default,,0,0,0,,which happens to be\Nan explicit function type here.
+Dialogue: 0,1:36:30.28,1:36:31.92,Default,,0,0,0,,Now the types march up
+Dialogue: 0,1:36:31.92,1:36:34.80,Default,,0,0,0,,so the checkings succeeds\Nand return the expression
+Dialogue: 0,1:36:35.32,1:36:36.76,Default,,0,0,0,,with the inserted lambda.
+Dialogue: 0,1:36:37.76,1:36:39.52,Default,,0,0,0,,To summarize implicit insertion
+Dialogue: 0,1:36:39.52,1:36:41.64,Default,,0,0,0,,when we infer\Nan implicit function type
+Dialogue: 0,1:36:41.64,1:36:44.08,Default,,0,0,0,,we may insert\Nan implicit application
+Dialogue: 0,1:36:44.08,1:36:46.52,Default,,0,0,0,,and when we check with\Nan implicit function type
+Dialogue: 0,1:36:46.52,1:36:48.28,Default,,0,0,0,,we may insert an implicit lambda.
+Dialogue: 0,1:36:49.00,1:36:51.04,Default,,0,0,0,,This has a nice symmetry\Nand it performs
+Dialogue: 0,1:36:51.04,1:36:54.20,Default,,0,0,0,,in a fairly convenient\Nand (INAUDIBLE) way in practice.
+Dialogue: 0,1:36:54.96,1:36:59.52,Default,,0,0,0,,Note that we don't always perform\Ninsertion in these two cases.
+Dialogue: 0,1:37:00.04,1:37:02.32,Default,,0,0,0,,For example when we\Ncheck an implicit lambda
+Dialogue: 0,1:37:02.36,1:37:05.40,Default,,0,0,0,,with an implicit function type\Nthere is no need to do insertion.
+Dialogue: 0,1:37:06.12,1:37:08.80,Default,,0,0,0,,Again for the exact rules\Nyou can look at the paper.
+Dialogue: 0,1:37:09.04,1:37:10.96,Default,,0,0,0,,What can go wrong with the solution?
+Dialogue: 0,1:37:10.96,1:37:13.36,Default,,0,0,0,,Let's go back to\Nthe failing and the example.
+Dialogue: 0,1:37:13.88,1:37:16.32,Default,,0,0,0,,We also assume that\Nwe do not have rule
+Dialogue: 0,1:37:16.36,1:37:18.20,Default,,0,0,0,,for checking the constructor\Nof the Maybe type.
+Dialogue: 0,1:37:18.20,1:37:20.40,Default,,0,0,0,,This is not necessarily\Nalways the case
+Dialogue: 0,1:37:20.40,1:37:22.72,Default,,0,0,0,,and actually the most\Nrecent version of Agda
+Dialogue: 0,1:37:22.80,1:37:24.28,Default,,0,0,0,,can handle this example fine
+Dialogue: 0,1:37:24.28,1:37:27.28,Default,,0,0,0,,but to stick from this example\Nfor the sake of simplicity.
+Dialogue: 0,1:37:27.76,1:37:29.88,Default,,0,0,0,,Because we don't have\Na checking rule for just
+Dialogue: 0,1:37:29.88,1:37:32.04,Default,,0,0,0,,the first infer type\Nfor this expression
+Dialogue: 0,1:37:32.04,1:37:35.28,Default,,0,0,0,,then you find an infer type\Nwith the given annotation.
+Dialogue: 0,1:37:35.80,1:37:39.68,Default,,0,0,0,,The just constructor is polymorphic\Nso it has implicit type argument
+Dialogue: 0,1:37:39.68,1:37:42.72,Default,,0,0,0,,and they insert an application\Nto a fresh matter variable.
+Dialogue: 0,1:37:43.24,1:37:46.60,Default,,0,0,0,,Next we have to check\Nthe lambda x expression
+Dialogue: 0,1:37:46.60,1:37:48.64,Default,,0,0,0,,with the (INAUDIBLE) alpha type.
+Dialogue: 0,1:37:49.16,1:37:50.76,Default,,0,0,0,,This is the key point of failure.
+Dialogue: 0,1:37:50.76,1:37:53.76,Default,,0,0,0,,The problem is that we cannot do\Nlambda insertion at this point
+Dialogue: 0,1:37:53.76,1:37:55.56,Default,,0,0,0,,because the checking\Ntime is unknown.
+Dialogue: 0,1:37:56.04,1:37:59.16,Default,,0,0,0,,The only thing we can do is to\Ninfer an explicit function type
+Dialogue: 0,1:37:59.16,1:38:01.36,Default,,0,0,0,,for the lambda XX expression
+Dialogue: 0,1:38:01.36,1:38:04.48,Default,,0,0,0,,but to first unify\Nthe given type annotation.
+Dialogue: 0,1:38:04.72,1:38:07.68,Default,,0,0,0,,Likewise we have dual\Nversion of this problem.
+Dialogue: 0,1:38:07.92,1:38:11.80,Default,,0,0,0,,When the infer type is unknown we\Ncannot do application insertion.
+Dialogue: 0,1:38:12.32,1:38:15.96,Default,,0,0,0,,The solution is to represent unknown\Ninsertions in the core theory.
+Dialogue: 0,1:38:15.96,1:38:18.60,Default,,0,0,0,,With meta variables, we\Nalready have the ability
+Dialogue: 0,1:38:18.60,1:38:20.08,Default,,0,0,0,,to represent unknown terms
+Dialogue: 0,1:38:20.08,1:38:23.12,Default,,0,0,0,,so we extend this to all\Ncover unknown insertions.
+Dialogue: 0,1:38:23.64,1:38:26.12,Default,,0,0,0,,We had a strictly\Ncurried funtion type.
+Dialogue: 0,1:38:26.12,1:38:29.76,Default,,0,0,0,,This is a function type such that\Nthe domain is always a record time
+Dialogue: 0,1:38:29.76,1:38:31.68,Default,,0,0,0,,and curried codes by definition.
+Dialogue: 0,1:38:32.16,1:38:36.00,Default,,0,0,0,,Here we have an example of how curried\Ncomputes for this function type.
+Dialogue: 0,1:38:36.48,1:38:39.56,Default,,0,0,0,,The type in the left side has\Nan empty record type as domain
+Dialogue: 0,1:38:40.04,1:38:41.72,Default,,0,0,0,,we denote the record type as a rec
+Dialogue: 0,1:38:41.72,1:38:43.24,Default,,0,0,0,,followed by a list of types.
+Dialogue: 0,1:38:43.76,1:38:46.04,Default,,0,0,0,,Here the list is empty so we\Nget the empty record type.
+Dialogue: 0,1:38:46.56,1:38:49.24,Default,,0,0,0,,This function type computes\Nto just (INAUDIBLE)
+Dialogue: 0,1:38:49.48,1:38:51.48,Default,,0,0,0,,so the trivial function\Nargument disappears.
+Dialogue: 0,1:38:51.96,1:38:55.48,Default,,0,0,0,,For another example, if the domain\Nis record type with two fields
+Dialogue: 0,1:38:55.48,1:38:58.20,Default,,0,0,0,,the function type computes\Nfor a function type
+Dialogue: 0,1:38:58.20,1:38:59.88,Default,,0,0,0,,for two implicit arguments.
+Dialogue: 0,1:38:59.88,1:39:02.48,Default,,0,0,0,,In general a curried\Nfunction type computes
+Dialogue: 0,1:39:02.48,1:39:04.40,Default,,0,0,0,,to an iterated implicit\Nfunction type.
+Dialogue: 0,1:39:04.40,1:39:07.92,Default,,0,0,0,,The are also appropriate computation\Nrules for term constructors
+Dialogue: 0,1:39:07.92,1:39:09.64,Default,,0,0,0,,which follow the rules for times.
+Dialogue: 0,1:39:10.16,1:39:13.24,Default,,0,0,0,,Now we can represent an unknown\Nnumber of implicit arguments
+Dialogue: 0,1:39:13.24,1:39:15.56,Default,,0,0,0,,by putting the meta\Nvariables in the domain.
+Dialogue: 0,1:39:16.08,1:39:18.44,Default,,0,0,0,,We use this to improve\Non the elaboration.
+Dialogue: 0,1:39:18.44,1:39:22.04,Default,,0,0,0,,Previously, unknown types always\Nprevented the implicit insertion.
+Dialogue: 0,1:39:22.76,1:39:23.76,Default,,0,0,0,,We change this as follows.
+Dialogue: 0,1:39:24.12,1:39:26.32,Default,,0,0,0,,We check with an unknown type
+Dialogue: 0,1:39:26.32,1:39:27.96,Default,,0,0,0,,we insert with an unknown\Nnumber of lambdas
+Dialogue: 0,1:39:28.04,1:39:30.04,Default,,0,0,0,,using strictly curried\Nfunction type.
+Dialogue: 0,1:39:30.52,1:39:33.04,Default,,0,0,0,,Concretely we enter\Nstrictly curried lambda
+Dialogue: 0,1:39:33.04,1:39:36.32,Default,,0,0,0,,which may compute later to zero\Nor more implicit lambdas.
+Dialogue: 0,1:39:37.08,1:39:39.80,Default,,0,0,0,,Changing lambda insertion this\Nway is easy to implement
+Dialogue: 0,1:39:39.80,1:39:41.84,Default,,0,0,0,,and improve inference\Nin a large number
+Dialogue: 0,1:39:41.84,1:39:43.52,Default,,0,0,0,,of practically interesting cases.
+Dialogue: 0,1:39:43.52,1:39:46.60,Default,,0,0,0,,However we don't enhance\Napplication insertion
+Dialogue: 0,1:39:46.60,1:39:48.12,Default,,0,0,0,,and live that to future work.
+Dialogue: 0,1:39:48.64,1:39:51.12,Default,,0,0,0,,The reason is that unknown\Napplication insertion
+Dialogue: 0,1:39:51.12,1:39:53.32,Default,,0,0,0,,yields rather complex\Nunification problems
+Dialogue: 0,1:39:53.60,1:39:55.60,Default,,0,0,0,,which could be a line of\Nresearch on it's own.
+Dialogue: 0,1:39:56.36,1:39:59.36,Default,,0,0,0,,Now the running example is\Nelaborated without issues.
+Dialogue: 0,1:39:59.84,1:40:02.24,Default,,0,0,0,,In the inferred time\Nfor the expression
+Dialogue: 0,1:40:02.24,1:40:05.52,Default,,0,0,0,,the Rec alpha stands for an unknown\Nnumber of implicit arguments.
+Dialogue: 0,1:40:05.52,1:40:08.88,Default,,0,0,0,,Also the unknown data types can\Nnow depend on the argument.
+Dialogue: 0,1:40:09.40,1:40:12.80,Default,,0,0,0,,Then being defined inferred\Nand expected types.
+Dialogue: 0,1:40:12.92,1:40:14.48,Default,,0,0,0,,For strictly curried function
+Dialogue: 0,1:40:14.48,1:40:17.40,Default,,0,0,0,,unification tries to measure\Ntwo sides of the equation
+Dialogue: 0,1:40:17.40,1:40:19.48,Default,,0,0,0,,by solving current function domains.
+Dialogue: 0,1:40:19.48,1:40:22.92,Default,,0,0,0,,In this case the domain is\Nsolved (INAUDIBLE) record
+Dialogue: 0,1:40:22.92,1:40:24.32,Default,,0,0,0,,which contains a set.
+Dialogue: 0,1:40:24.84,1:40:28.76,Default,,0,0,0,,So unification succeeds and we get\Nthe expected elaboration output.
+Dialogue: 0,1:40:29.24,1:40:31.08,Default,,0,0,0,,We are nearing the end of the talk
+Dialogue: 0,1:40:31.08,1:40:34.72,Default,,0,0,0,,so let's revisit this picture about\Nelaboration to provide the summary.
+Dialogue: 0,1:40:35.48,1:40:37.56,Default,,0,0,0,,This picture is actually\Nnot quite correct.
+Dialogue: 0,1:40:37.80,1:40:39.32,Default,,0,0,0,,In practical implementation,
+Dialogue: 0,1:40:40.04,1:40:42.20,Default,,0,0,0,,the core syntax which is\Nused for optimizations
+Dialogue: 0,1:40:42.20,1:40:46.00,Default,,0,0,0,,and further compilations is not\Nthe same as the core syntax used
+Dialogue: 0,1:40:46.00,1:40:49.60,Default,,0,0,0,,in elaboration, we used to\Nhave a picture like this.
+Dialogue: 0,1:40:50.60,1:40:53.88,Default,,0,0,0,,We used slightly larger\Nand more complicated core theory
+Dialogue: 0,1:40:53.88,1:40:55.24,Default,,0,0,0,,for the purpose of elaboration.
+Dialogue: 0,1:40:55.76,1:40:59.20,Default,,0,0,0,,Implicit function types provides\Ncontrol over implicit insertions
+Dialogue: 0,1:40:59.20,1:41:02.24,Default,,0,0,0,,and meta variables allowing\Nrepresenting unknown terms.
+Dialogue: 0,1:41:03.00,1:41:06.84,Default,,0,0,0,,However this core theory is also\Nnice and well behaved type theory.
+Dialogue: 0,1:41:07.32,1:41:10.60,Default,,0,0,0,,This is infact a model type\Ntheory since meta variables
+Dialogue: 0,1:41:10.60,1:41:13.80,Default,,0,0,0,,and meta context form\Nthe so called crisp modality
+Dialogue: 0,1:41:14.04,1:41:16.64,Default,,0,0,0,,or alternatively,\Ncontextual modality.
+Dialogue: 0,1:41:17.16,1:41:18.72,Default,,0,0,0,,If you don't use meta variable
+Dialogue: 0,1:41:18.72,1:41:20.88,Default,,0,0,0,,and we only use\Nbidirectional type checking,
+Dialogue: 0,1:41:20.88,1:41:23.32,Default,,0,0,0,,the inference becomes\Nrather limited.
+Dialogue: 0,1:41:23.56,1:41:27.16,Default,,0,0,0,,Meta variables are the natural solutions\Nfor representing unknown terms
+Dialogue: 0,1:41:27.16,1:41:28.96,Default,,0,0,0,,and they are a basic ingredient
+Dialogue: 0,1:41:28.96,1:41:31.44,Default,,0,0,0,,in implementing more\Nsophisticated inference.
+Dialogue: 0,1:41:32.44,1:41:36.36,Default,,0,0,0,,It is also important to not that\Nif you successfully finish elaboration
+Dialogue: 0,1:41:36.36,1:41:38.16,Default,,0,0,0,,all meta variables are solved.
+Dialogue: 0,1:41:38.64,1:41:42.84,Default,,0,0,0,,And we can also just ignore or translate\Na very implicit function types
+Dialogue: 0,1:41:43.36,1:41:46.84,Default,,0,0,0,,So the extra features don't\Naffect down stream compilation.
+Dialogue: 0,1:41:47.84,1:41:50.40,Default,,0,0,0,,If we allow first class\Nimplicit functions types
+Dialogue: 0,1:41:50.40,1:41:53.20,Default,,0,0,0,,that causes implicit\Ninsertion to be more dynamic
+Dialogue: 0,1:41:53.20,1:41:55.80,Default,,0,0,0,,and more interlude in\Nthe elaboration algorithm.
+Dialogue: 0,1:41:56.32,1:41:58.56,Default,,0,0,0,,Therefore if you want to\Nhave robust inference
+Dialogue: 0,1:41:58.56,1:42:00.56,Default,,0,0,0,,with first class\Nimplicit function types
+Dialogue: 0,1:42:01.04,1:42:03.56,Default,,0,0,0,,we need to represent unknown\Nimplicit insertions.
+Dialogue: 0,1:42:04.32,1:42:06.64,Default,,0,0,0,,Strictly curried function\Ntypes provide a natural
+Dialogue: 0,1:42:06.64,1:42:07.96,Default,,0,0,0,,and tight representation.
+Dialogue: 0,1:42:08.96,1:42:11.08,Default,,0,0,0,,Additionally strictly\Ncurried functions
+Dialogue: 0,1:42:11.08,1:42:12.96,Default,,0,0,0,,are a modest extension\Nof type theory
+Dialogue: 0,1:42:12.96,1:42:14.60,Default,,0,0,0,,so we still have a well behaved
+Dialogue: 0,1:42:14.60,1:42:16.56,Default,,0,0,0,,and computationally\Nadequate core theory.
+Dialogue: 0,1:42:17.32,1:42:19.00,Default,,0,0,0,,Unlike the other extra features,
+Dialogue: 0,1:42:19.00,1:42:22.68,Default,,0,0,0,,strictly curried features also\Ndisappear after elaboration.
+Dialogue: 0,1:42:23.20,1:42:25.20,Default,,0,0,0,,My impression is that\Nif you want to have
+Dialogue: 0,1:42:25.20,1:42:26.80,Default,,0,0,0,,robust impredicative inference
+Dialogue: 0,1:42:27.08,1:42:29.76,Default,,0,0,0,,strictly curried functions\Nare a basic ingredient
+Dialogue: 0,1:42:29.76,1:42:32.88,Default,,0,0,0,,similar to how meta variables\Nare a basic ingredient
+Dialogue: 0,1:42:32.88,1:42:34.24,Default,,0,0,0,,for general inference.
+Dialogue: 0,1:42:34.72,1:42:37.80,Default,,0,0,0,,Without those basic building\Nblock potential solutions
+Dialogue: 0,1:42:37.80,1:42:40.64,Default,,0,0,0,,are significantly limited\Nin other end efficiency.
+Dialogue: 0,1:42:41.64,1:42:46.64,Default,,0,0,0,,(APPLAUSE)
+Dialogue: 0,1:42:49.04,1:42:50.36,Default,,0,0,0,,SUKYOUNG: Thank you Andreas.
+Dialogue: 0,1:42:50.36,1:42:52.36,Default,,0,0,0,,If you are watching this talk live
+Dialogue: 0,1:42:52.36,1:42:56.04,Default,,0,0,0,,be sure to join the Q&A\Nsession with the author
+Dialogue: 0,1:42:56.04,1:42:58.36,Default,,0,0,0,,if it is available\Nin your time zone.
+Dialogue: 0,1:43:05.12,1:43:08.24,Default,,0,0,0,,The last talk of this\Nsession is entitled
+Dialogue: 0,1:43:08.24,1:43:10.20,Default,,0,0,0,,Kinds are Calling Conventions.
+Dialogue: 0,1:43:10.96,1:43:12.96,Default,,0,0,0,,Paul Downen will present the talk.
+Dialogue: 0,1:43:13.72,1:43:15.68,Default,,0,0,0,,PAUL DOWNEN: Hi, I'm Paul Downen
+Dialogue: 0,1:43:15.68,1:43:17.12,Default,,0,0,0,,and I'll be telling\Nyou about how kinds
+Dialogue: 0,1:43:17.12,1:43:19.60,Default,,0,0,0,,can express calling conventions\Nin programing languages.
+Dialogue: 0,1:43:20.12,1:43:22.72,Default,,0,0,0,,Functional languages making\Ncalling function simple and easy.
+Dialogue: 0,1:43:22.96,1:43:24.84,Default,,0,0,0,,But there are many different\Nparameter passing techniques
+Dialogue: 0,1:43:24.96,1:43:26.08,Default,,0,0,0,,which impact the performance of
+Dialogue: 0,1:43:26.76,1:43:27.76,Default,,0,0,0,,PAUL:.. function calls.
+Dialogue: 0,1:43:27.76,1:43:30.04,Default,,0,0,0,,Because this is a pervasive\Nfunction languages,
+Dialogue: 0,1:43:30.04,1:43:31.92,Default,,0,0,0,,it's important to\Nmake them efficient.
+Dialogue: 0,1:43:31.92,1:43:33.32,Default,,0,0,0,,To implement a function call,
+Dialogue: 0,1:43:33.32,1:43:36.52,Default,,0,0,0,,we need to be able to answer some\Nbasic questions about its arguments.
+Dialogue: 0,1:43:36.88,1:43:39.40,Default,,0,0,0,,First, what is the arguments\Nfor a representation runtime?
+Dialogue: 0,1:43:39.40,1:43:40.80,Default,,0,0,0,,It could be an address, a character,
+Dialogue: 0,1:43:40.80,1:43:42.28,Default,,0,0,0,,a floating point number etcetera.
+Dialogue: 0,1:43:42.28,1:43:43.68,Default,,0,0,0,,And how big is it?
+Dialogue: 0,1:43:43.68,1:43:47.32,Default,,0,0,0,,For example, it could be just\N1 byte or a 64-bit word.
+Dialogue: 0,1:43:47.32,1:43:49.28,Default,,0,0,0,,We also need to know\Nwhere is it stored.
+Dialogue: 0,1:43:49.28,1:43:51.92,Default,,0,0,0,,It might be in a specialized\Nfloating point register
+Dialogue: 0,1:43:51.92,1:43:54.60,Default,,0,0,0,,or it could be\Na pointer into the heap.
+Dialogue: 0,1:43:55.68,1:43:58.32,Default,,0,0,0,,For the function main call,\Nwe need to know its arity
+Dialogue: 0,1:43:58.32,1:44:00.32,Default,,0,0,0,,which is how many\Narguments are needed
+Dialogue: 0,1:44:00.32,1:44:02.72,Default,,0,0,0,,before its code can be\Nproperly executed.
+Dialogue: 0,1:44:02.72,1:44:04.04,Default,,0,0,0,,We also need to know
+Dialogue: 0,1:44:04.04,1:44:06.32,Default,,0,0,0,,how many arguments\Ncan be passed simultaneously.
+Dialogue: 0,1:44:06.32,1:44:08.56,Default,,0,0,0,,Should it be passed all at\Nonce in multiple chunks?
+Dialogue: 0,1:44:08.56,1:44:10.36,Default,,0,0,0,,Or individually, one at a time?
+Dialogue: 0,1:44:10.72,1:44:12.36,Default,,0,0,0,,Lastly, we need to know the levity
+Dialogue: 0,1:44:12.36,1:44:14.00,Default,,0,0,0,,by which I mean to say
+Dialogue: 0,1:44:14.00,1:44:16.16,Default,,0,0,0,,the evaluation\Nstrategy of the argument.
+Dialogue: 0,1:44:16.16,1:44:19.08,Default,,0,0,0,,For example, eager\Nlanguages use call-by-value
+Dialogue: 0,1:44:19.08,1:44:21.76,Default,,0,0,0,,and lazy languages use\Ncall-by-need evaluation.
+Dialogue: 0,1:44:21.76,1:44:23.84,Default,,0,0,0,,Laziness in particular\Nhas an overhead
+Dialogue: 0,1:44:23.84,1:44:26.68,Default,,0,0,0,,that might not be necessary\Nfor a script function.
+Dialogue: 0,1:44:27.04,1:44:30.08,Default,,0,0,0,,Moreover, we will see that evaluation\Nstrategy interacts with arity
+Dialogue: 0,1:44:30.08,1:44:31.68,Default,,0,0,0,,as well as representation.
+Dialogue: 0,1:44:32.04,1:44:34.56,Default,,0,0,0,,Since it's probably the least\Nunderstood of these three topics,
+Dialogue: 0,1:44:34.56,1:44:37.48,Default,,0,0,0,,I will focus primarily\Non arity in this talk.
+Dialogue: 0,1:44:37.92,1:44:40.00,Default,,0,0,0,,Arity is not always\Nso simple to see.
+Dialogue: 0,1:44:40.00,1:44:42.52,Default,,0,0,0,,Consider these four\Nfunctions of the same type.
+Dialogue: 0,1:44:42.52,1:44:44.72,Default,,0,0,0,,The type suggests they have arity 2.
+Dialogue: 0,1:44:44.72,1:44:47.20,Default,,0,0,0,,They need two arguments before\Nthey produce a result.
+Dialogue: 0,1:44:47.20,1:44:49.80,Default,,0,0,0,,But this type might leave out\Nimportant operational details
+Dialogue: 0,1:44:49.80,1:44:52.08,Default,,0,0,0,,that we only learn from\Nthe function definitions.
+Dialogue: 0,1:44:52.60,1:44:54.76,Default,,0,0,0,,Look at the definition of f1.
+Dialogue: 0,1:44:54.76,1:44:58.20,Default,,0,0,0,,It starts with two lambas,\Nso it requires two arguments
+Dialogue: 0,1:44:58.20,1:44:59.64,Default,,0,0,0,,before doing any interesting part.
+Dialogue: 0,1:44:59.64,1:45:02.36,Default,,0,0,0,,So, f1 definitely has arity 2.
+Dialogue: 0,1:45:03.28,1:45:05.28,Default,,0,0,0,,Now, look at f2.
+Dialogue: 0,1:45:05.28,1:45:06.80,Default,,0,0,0,,It normally starts with one lambda,
+Dialogue: 0,1:45:06.80,1:45:09.04,Default,,0,0,0,,however, all it does is call f1.
+Dialogue: 0,1:45:09.04,1:45:12.68,Default,,0,0,0,,So, it also requires two\Narguments before doing any work.
+Dialogue: 0,1:45:12.68,1:45:16.80,Default,,0,0,0,,In fact, we can either expand f2 and
+Dialogue: 0,1:45:16.88,1:45:20.32,Default,,0,0,0,,doing so does not change its\Nmeaning or runtime behavior.
+Dialogue: 0,1:45:20.32,1:45:25.24,Default,,0,0,0,,This sound eta expansion makes it\Nclear that f2 also has arity 2.
+Dialogue: 0,1:45:25.24,1:45:28.96,Default,,0,0,0,,F3 is very similar to f1, both\Nan important difference -
+Dialogue: 0,1:45:28.96,1:45:32.20,Default,,0,0,0,,f3 starts with only one\Nlambda for binding x
+Dialogue: 0,1:45:32.20,1:45:36.40,Default,,0,0,0,,then it does some work on x before\Nrequesting the next argument y.
+Dialogue: 0,1:45:36.40,1:45:39.08,Default,,0,0,0,,So, what is f3's arity?
+Dialogue: 0,1:45:39.08,1:45:43.00,Default,,0,0,0,,As a hint, consider that expensive\Nof x might be costly to compute
+Dialogue: 0,1:45:43.00,1:45:44.76,Default,,0,0,0,,as an (INAUDIBLE) suggests.
+Dialogue: 0,1:45:44.76,1:45:48.56,Default,,0,0,0,,And it might even cause side\Neffects in a language like Opal.
+Dialogue: 0,1:45:48.56,1:45:51.60,Default,,0,0,0,,For this reason, f3\Nonly has arity 1.
+Dialogue: 0,1:45:52.48,1:45:56.12,Default,,0,0,0,,F4 is defined similarly to\Nf2, however this time,
+Dialogue: 0,1:45:56.12,1:45:58.52,Default,,0,0,0,,the eta expansion is not sound.
+Dialogue: 0,1:45:58.52,1:46:02.76,Default,,0,0,0,,That's because f3 can do some\Nserious work with only one argument.
+Dialogue: 0,1:46:02.76,1:46:05.76,Default,,0,0,0,,So, f4 also has arity 1.
+Dialogue: 0,1:46:06.72,1:46:09.08,Default,,0,0,0,,Based on those examples,\Nlet's pair to come up
+Dialogue: 0,1:46:09.08,1:46:11.04,Default,,0,0,0,,with some informal\Nintuitive definitions
+Dialogue: 0,1:46:11.04,1:46:13.24,Default,,0,0,0,,about what arity is\Nmeant to capture.
+Dialogue: 0,1:46:13.60,1:46:16.40,Default,,0,0,0,,First, we already used\Nthe intuition of 'serious work'
+Dialogue: 0,1:46:16.40,1:46:18.40,Default,,0,0,0,,when analyzing\Nthe arity of a function.
+Dialogue: 0,1:46:18.40,1:46:22.80,Default,,0,0,0,,For example, if f applied to\N1, 2, and 3 does work,
+Dialogue: 0,1:46:22.80,1:46:25.20,Default,,0,0,0,,but f applied to only\N1 and 2 does not,
+Dialogue: 0,1:46:25.20,1:46:28.24,Default,,0,0,0,,then arity has... f has arity 3.
+Dialogue: 0,1:46:28.24,1:46:32.08,Default,,0,0,0,,Second, we sometimes need\Nto use eta expansion
+Dialogue: 0,1:46:32.08,1:46:35.68,Default,,0,0,0,,to see the full arity of eta\Nreduced function definitions.
+Dialogue: 0,1:46:35.72,1:46:40.00,Default,,0,0,0,,So, if f is equivalent to its\N(INAUDIBLE) eta expanded form
+Dialogue: 0,1:46:40.00,1:46:42.96,Default,,0,0,0,,as shown here, then f has arity 3.
+Dialogue: 0,1:46:42.96,1:46:44.52,Default,,0,0,0,,Note that we need to be careful.
+Dialogue: 0,1:46:44.52,1:46:47.04,Default,,0,0,0,,Sometimes this eta expansion\Nmight not be sound
+Dialogue: 0,1:46:47.04,1:46:50.28,Default,,0,0,0,,because it could change behavior\Nor the cost of a function.
+Dialogue: 0,1:46:50.28,1:46:52.64,Default,,0,0,0,,This is especially true in\Nlanguages with effects,
+Dialogue: 0,1:46:52.64,1:46:55.64,Default,,0,0,0,,but even pure languages like\NHaskell care about efficiency,
+Dialogue: 0,1:46:55.64,1:46:57.64,Default,,0,0,0,,so we have to be careful there too.
+Dialogue: 0,1:46:57.64,1:47:02.40,Default,,0,0,0,,Third, in operational sense, arity\Ntells us a number of arguments
+Dialogue: 0,1:47:02.40,1:47:06.00,Default,,0,0,0,,that may pass to a function\Nsimultaneously in a single call.
+Dialogue: 0,1:47:06.00,1:47:10.88,Default,,0,0,0,,For example, if f has arity 3,\Nthen f applied to 1, 2 and 3
+Dialogue: 0,1:47:10.88,1:47:13.44,Default,,0,0,0,,can be compiled into\Na single function call
+Dialogue: 0,1:47:13.44,1:47:15.96,Default,,0,0,0,,rather than a chain of\Nthree partial applications.
+Dialogue: 0,1:47:15.96,1:47:18.96,Default,,0,0,0,,Now, focus on definitions 2 and 3.
+Dialogue: 0,1:47:18.96,1:47:21.44,Default,,0,0,0,,They serve as the main\Nbackbone for our idea.
+Dialogue: 0,1:47:21.44,1:47:25.32,Default,,0,0,0,,Definition 3 suggests that arity\Nis important for performance.
+Dialogue: 0,1:47:25.32,1:47:28.44,Default,,0,0,0,,There's reduced cost for calling\Nfunctions of higher arity
+Dialogue: 0,1:47:28.44,1:47:31.24,Default,,0,0,0,,whereas definition 2 says\Nthat arity can be seen
+Dialogue: 0,1:47:31.24,1:47:33.80,Default,,0,0,0,,in terms of the eta law\Nof the lambda calculus.
+Dialogue: 0,1:47:33.80,1:47:35.68,Default,,0,0,0,,The arity of a function corresponds
+Dialogue: 0,1:47:35.68,1:47:37.88,Default,,0,0,0,,to the number of\Nvalid eta expansions.
+Dialogue: 0,1:47:37.88,1:47:39.00,Default,,0,0,0,,Taking together,
+Dialogue: 0,1:47:39.00,1:47:42.68,Default,,0,0,0,,making more eta expansions\Nvalid can improve the arity
+Dialogue: 0,1:47:42.68,1:47:45.76,Default,,0,0,0,,and thus, performance of\Nfunction calls in a language.
+Dialogue: 0,1:47:46.08,1:47:49.24,Default,,0,0,0,,This link sets up our goal in\Nthe context of an intermediate language
+Dialogue: 0,1:47:49.24,1:47:50.80,Default,,0,0,0,,for an optimizing compiler.
+Dialogue: 0,1:47:50.80,1:47:53.08,Default,,0,0,0,,However arity analysis is done,
+Dialogue: 0,1:47:53.08,1:47:57.40,Default,,0,0,0,,that information must somehow be\Nexpressed inside of the internal code
+Dialogue: 0,1:47:57.40,1:47:59.32,Default,,0,0,0,,used in the compiler.
+Dialogue: 0,1:48:00.08,1:48:01.92,Default,,0,0,0,,We can do this with an ultimatum.
+Dialogue: 0,1:48:01.92,1:48:04.24,Default,,0,0,0,,Eta expansion is always valid.
+Dialogue: 0,1:48:04.24,1:48:07.36,Default,,0,0,0,,In that way, there are no more\N(INAUDIBLE) cases to worry about
+Dialogue: 0,1:48:07.36,1:48:09.56,Default,,0,0,0,,and so, arity is always\Nthe largest number
+Dialogue: 0,1:48:09.56,1:48:11.60,Default,,0,0,0,,that makes sense for any function.
+Dialogue: 0,1:48:11.96,1:48:14.12,Default,,0,0,0,,However, we can't lose\Nwhat we already have.
+Dialogue: 0,1:48:14.12,1:48:16.76,Default,,0,0,0,,Practical compilers place\Nrestrictions of beta reduction
+Dialogue: 0,1:48:16.76,1:48:19.68,Default,,0,0,0,,they are crucial for\Nalgorithmic complexity.
+Dialogue: 0,1:48:19.68,1:48:22.16,Default,,0,0,0,,Therefore, our goal is to have\Nan intermediate language
+Dialogue: 0,1:48:22.16,1:48:24.92,Default,,0,0,0,,with unrestricted eta\Nexpansion for functions
+Dialogue: 0,1:48:24.92,1:48:27.84,Default,,0,0,0,,but alongside with\Nrestricted beta reduction
+Dialogue: 0,1:48:27.84,1:48:29.40,Default,,0,0,0,,for arguments of other types.
+Dialogue: 0,1:48:29.92,1:48:32.24,Default,,0,0,0,,Here is our general\Napproach to the design
+Dialogue: 0,1:48:32.24,1:48:34.92,Default,,0,0,0,,of an arity aware\Nintermediate language.
+Dialogue: 0,1:48:35.36,1:48:38.24,Default,,0,0,0,,First, we add a new type\Nfor primitive functions
+Dialogue: 0,1:48:38.24,1:48:41.72,Default,,0,0,0,,denoted by this squiggly arrow, rather\Nthan this normal straight arrow
+Dialogue: 0,1:48:41.72,1:48:42.84,Default,,0,0,0,,to help distinguish them
+Dialogue: 0,1:48:42.84,1:48:44.96,Default,,0,0,0,,from functions in the source\Nprogramming language
+Dialogue: 0,1:48:44.96,1:48:46.76,Default,,0,0,0,,that have a slightly\Ndifferent semantics.
+Dialogue: 0,1:48:46.76,1:48:49.84,Default,,0,0,0,,In particular, primitive\Nfunctions are fully extensional
+Dialogue: 0,1:48:49.84,1:48:52.16,Default,,0,0,0,,and this is different\Nfrom the functions in
+Dialogue: 0,1:48:52.16,1:48:55.20,Default,,0,0,0,,normal programming languages\Nlike Haskell and OCaml
+Dialogue: 0,1:48:55.20,1:48:57.36,Default,,0,0,0,,where the eta law might not apply
+Dialogue: 0,1:48:57.36,1:48:59.40,Default,,0,0,0,,to all expressions\Nof a function type.
+Dialogue: 0,1:48:59.92,1:49:03.60,Default,,0,0,0,,However, application may still\Nbe restricted for efficiency
+Dialogue: 0,1:49:03.60,1:49:07.52,Default,,0,0,0,,and for the purposes of\Nlanguages semantics.
+Dialogue: 0,1:49:07.52,1:49:11.92,Default,,0,0,0,,So, for example, in the case where\Na paremeter is used more than once.
+Dialogue: 0,1:49:12.64,1:49:14.88,Default,,0,0,0,,If you apply the function lambda x,
+Dialogue: 0,1:49:14.88,1:49:17.24,Default,,0,0,0,,x applied to x to\Nan expensive argument,
+Dialogue: 0,1:49:17.24,1:49:20.24,Default,,0,0,0,,it doesn't need to be\Nrecomputed for both uses of x.
+Dialogue: 0,1:49:21.32,1:49:22.76,Default,,0,0,0,,Because of unrestricted eta,
+Dialogue: 0,1:49:22.76,1:49:25.16,Default,,0,0,0,,types can now express\Nthe arity of functions.
+Dialogue: 0,1:49:25.16,1:49:27.20,Default,,0,0,0,,All we have to do is\Ncount the arrows.
+Dialogue: 0,1:49:27.20,1:49:30.76,Default,,0,0,0,,For example, if f is to\Ntype into bool to string,
+Dialogue: 0,1:49:30.76,1:49:32.92,Default,,0,0,0,,we know that it has arity 2 already
+Dialogue: 0,1:49:32.92,1:49:35.00,Default,,0,0,0,,without even looking\Nat f's definition.
+Dialogue: 0,1:49:35.00,1:49:38.00,Default,,0,0,0,,But just having unrestricted eta
+Dialogue: 0,1:49:38.00,1:49:40.32,Default,,0,0,0,,isn't enough for\Npractical compilation
+Dialogue: 0,1:49:40.32,1:49:42.24,Default,,0,0,0,,that's because there\Nare some instances
+Dialogue: 0,1:49:42.24,1:49:44.60,Default,,0,0,0,,where we intentionally\Nwant to lower the arity
+Dialogue: 0,1:49:44.60,1:49:47.60,Default,,0,0,0,,for a different behavior or\Na better algorithmic complexity.
+Dialogue: 0,1:49:47.72,1:49:50.44,Default,,0,0,0,,For example, we call f3 from before.
+Dialogue: 0,1:49:50.44,1:49:54.12,Default,,0,0,0,,Its definition was conspicuously\Nwritten as an arity 1 function
+Dialogue: 0,1:49:54.12,1:49:56.68,Default,,0,0,0,,just so that the expensive\Ncomputation of z
+Dialogue: 0,1:49:56.68,1:49:59.64,Default,,0,0,0,,can be shared or used for\Nmany different values of y.
+Dialogue: 0,1:50:00.08,1:50:01.60,Default,,0,0,0,,But applying eta expansion,
+Dialogue: 0,1:50:01.60,1:50:03.20,Default,,0,0,0,,which is now always allowed,
+Dialogue: 0,1:50:03.20,1:50:05.92,Default,,0,0,0,,means that f3 has arity 2, not 1.
+Dialogue: 0,1:50:06.44,1:50:09.76,Default,,0,0,0,,If we use a partial\Napplication of f3 many times,
+Dialogue: 0,1:50:09.76,1:50:12.40,Default,,0,0,0,,like mapping over a large list here,
+Dialogue: 0,1:50:12.40,1:50:15.84,Default,,0,0,0,,it will recompute expensive\Nof 100 over and over.
+Dialogue: 0,1:50:15.84,1:50:16.84,Default,,0,0,0,,That's bad.
+Dialogue: 0,1:50:16.84,1:50:19.84,Default,,0,0,0,,We solve this problem\Nby adding another type
+Dialogue: 0,1:50:19.84,1:50:22.40,Default,,0,0,0,,for representing explicit closures.
+Dialogue: 0,1:50:22.40,1:50:25.76,Default,,0,0,0,,Here, we can note the closure\Nof a type with curly braces.
+Dialogue: 0,1:50:25.76,1:50:28.64,Default,,0,0,0,,They're introduce with\Nthe Clos constructor
+Dialogue: 0,1:50:28.64,1:50:32.28,Default,,0,0,0,,and that lets us wrap up\Na unary function from Int to Int
+Dialogue: 0,1:50:32.28,1:50:34.40,Default,,0,0,0,,inside of a closure\Nof the same type.
+Dialogue: 0,1:50:35.16,1:50:38.44,Default,,0,0,0,,Including closures in\Nthe results of a function
+Dialogue: 0,1:50:38.44,1:50:41.20,Default,,0,0,0,,let us intentionally\Nbreak up as arity
+Dialogue: 0,1:50:41.20,1:50:42.56,Default,,0,0,0,,when partial applications matter
+Dialogue: 0,1:50:42.56,1:50:43.56,Default,,0,0,0,,like an f3 prime.
+Dialogue: 0,1:50:43.56,1:50:46.56,Default,,0,0,0,,This is an arity 1 function\Ntaking the first argument
+Dialogue: 0,1:50:46.60,1:50:49.20,Default,,0,0,0,,and returning a closure of\Nanother arity 1 function,
+Dialogue: 0,1:50:49.20,1:50:50.52,Default,,0,0,0,,that takes the second argument.
+Dialogue: 0,1:50:50.52,1:50:54.44,Default,,0,0,0,,This closure is then later used\Nwith an explicit App operation.
+Dialogue: 0,1:50:54.44,1:50:59.08,Default,,0,0,0,,So, you can take the closure\Nwe turned by f3 prime of 100
+Dialogue: 0,1:50:59.08,1:51:02.28,Default,,0,0,0,,and then, apply it to the second\Nargument to get a result.
+Dialogue: 0,1:51:02.28,1:51:05.52,Default,,0,0,0,,Now, the partial\Napplication of f3 prime
+Dialogue: 0,1:51:05.52,1:51:08.08,Default,,0,0,0,,computes expensive of 100 only once
+Dialogue: 0,1:51:08.08,1:51:12.04,Default,,0,0,0,,even though the reclosure it\Nreturns is reused many times.
+Dialogue: 0,1:51:12.56,1:51:13.88,Default,,0,0,0,,But there's a subtle impact
+Dialogue: 0,1:51:13.88,1:51:15.92,Default,,0,0,0,,of allowing all of these\Nextra eta expansions.
+Dialogue: 0,1:51:15.92,1:51:19.08,Default,,0,0,0,,For example, consider\Nthis definition -
+Dialogue: 0,1:51:19.08,1:51:23.56,Default,,0,0,0,,defines a function f to the apparent\Ncomputation expensive of 100.
+Dialogue: 0,1:51:23.56,1:51:25.84,Default,,0,0,0,,F is used several times\Nwithin its scope,
+Dialogue: 0,1:51:25.84,1:51:28.80,Default,,0,0,0,,so when exactly is\Nexpensive of 100 evaluated?
+Dialogue: 0,1:51:28.80,1:51:32.56,Default,,0,0,0,,That depends on the evaluation\Nstrategy of this (INAUDIBLE) binding.
+Dialogue: 0,1:51:32.56,1:51:35.48,Default,,0,0,0,,Under call-by-value,\Nthe right-hand side expensive of 100
+Dialogue: 0,1:51:35.48,1:51:39.40,Default,,0,0,0,,must be computed first before\Na value can be bound to f.
+Dialogue: 0,1:51:39.48,1:51:42.32,Default,,0,0,0,,Instead, under\Ncall-by-need evaluation,
+Dialogue: 0,1:51:42.32,1:51:45.96,Default,,0,0,0,,the right-hand side is evaluated\Nlater only when f is first needed,
+Dialogue: 0,1:51:45.96,1:51:48.04,Default,,0,0,0,,but its value is remembered
+Dialogue: 0,1:51:48.04,1:51:51.76,Default,,0,0,0,,so it never gets re-evaluated\Non future uses of f.
+Dialogue: 0,1:51:52.64,1:51:55.36,Default,,0,0,0,,Slightly different is\Ncall-by-name evaluation -
+Dialogue: 0,1:51:55.36,1:51:59.04,Default,,0,0,0,,there the right-hand side is still\Nevaluated later when f is used
+Dialogue: 0,1:51:59.04,1:52:03.28,Default,,0,0,0,,but it's also re-evaluated every\Nsingle time that f is used.
+Dialogue: 0,1:52:03.72,1:52:07.32,Default,,0,0,0,,But remember, in this language,\Neta expansion is always valid.
+Dialogue: 0,1:52:07.32,1:52:12.20,Default,,0,0,0,,So, the definition of x above is\Nactually the same as x prime here.
+Dialogue: 0,1:52:12.20,1:52:14.28,Default,,0,0,0,,But look at x prime,
+Dialogue: 0,1:52:14.28,1:52:17.84,Default,,0,0,0,,the evaluation of f definitely\Nfollows a call-by-name order
+Dialogue: 0,1:52:17.84,1:52:22.24,Default,,0,0,0,,because the eta expanded right-hand\Nside is manifesting a value.
+Dialogue: 0,1:52:22.24,1:52:25.72,Default,,0,0,0,,That means that expensive\N100 will be recomputed
+Dialogue: 0,1:52:25.72,1:52:27.76,Default,,0,0,0,,every single time f is called.
+Dialogue: 0,1:52:27.76,1:52:31.56,Default,,0,0,0,,Therefore,\Nthe operational consequence
+Dialogue: 0,1:52:31.56,1:52:34.00,Default,,0,0,0,,of allowing unrestricted\Neta for primitive functions
+Dialogue: 0,1:52:34.00,1:52:37.56,Default,,0,0,0,,means that they cannot be evaluated\Nfor any (INAUDIBLE) reason
+Dialogue: 0,1:52:37.56,1:52:39.96,Default,,0,0,0,,like in a restrict\Nbut binding here or the
+Dialogue: 0,1:52:39.96,1:52:41.92,Default,,0,0,0,,(INAUDIBLE) operation in Haskell.
+Dialogue: 0,1:52:41.92,1:52:43.96,Default,,0,0,0,,Primitive functions\Ncan only be evaluated
+Dialogue: 0,1:52:43.96,1:52:46.28,Default,,0,0,0,,when they are called with\Nall of their arguments.
+Dialogue: 0,1:52:47.04,1:52:50.52,Default,,0,0,0,,Knowing link up the high level\Nnotion of arity about eta expansion
+Dialogue: 0,1:52:50.52,1:52:53.64,Default,,0,0,0,,with the low level notion about\Nsimultaneous parameter passing,
+Dialogue: 0,1:52:53.64,1:52:56.12,Default,,0,0,0,,we need to be careful\Nabout polymorphism.
+Dialogue: 0,1:52:56.12,1:52:58.32,Default,,0,0,0,,Consider this\Npolymorphic definition.
+Dialogue: 0,1:52:58.32,1:52:59.88,Default,,0,0,0,,It takes a function f
+Dialogue: 0,1:52:59.88,1:53:03.20,Default,,0,0,0,,that returns an arbitrary\Ntype a and applies it twice.
+Dialogue: 0,1:53:03.20,1:53:06.88,Default,,0,0,0,,This is done through\Nthe local definition of g
+Dialogue: 0,1:53:06.88,1:53:09.60,Default,,0,0,0,,which is the partial\Napplication of f to 3.
+Dialogue: 0,1:53:10.12,1:53:12.40,Default,,0,0,0,,Now, what are\Nthe arities of f and g?
+Dialogue: 0,1:53:12.40,1:53:15.32,Default,,0,0,0,,Well, I said we could just count\Nthe arrows in the types so,
+Dialogue: 0,1:53:15.32,1:53:17.00,Default,,0,0,0,,f's type has two arrows in it,
+Dialogue: 0,1:53:17.00,1:53:18.40,Default,,0,0,0,,so it has arity 2.
+Dialogue: 0,1:53:18.40,1:53:21.72,Default,,0,0,0,,And g's type is Int to\Na, so it has arity 1.
+Dialogue: 0,1:53:21.72,1:53:23.16,Default,,0,0,0,,This seems sensible at first,
+Dialogue: 0,1:53:23.16,1:53:25.00,Default,,0,0,0,,but what happens when\Nthe polymorphic a
+Dialogue: 0,1:53:25.00,1:53:27.32,Default,,0,0,0,,gets instantiated with\Na concrete type?
+Dialogue: 0,1:53:27.32,1:53:30.60,Default,,0,0,0,,For example, a might be instantiated\Nwith another function type
+Dialogue: 0,1:53:30.60,1:53:31.84,Default,,0,0,0,,like Bool to Bool.
+Dialogue: 0,1:53:31.84,1:53:35.80,Default,,0,0,0,,While when we do this, now f's\Ntype suddenly has 3 arrows in it.
+Dialogue: 0,1:53:35.80,1:53:38.72,Default,,0,0,0,,So, its arity has changed to 3
+Dialogue: 0,1:53:38.72,1:53:42.24,Default,,0,0,0,,and g's type becomes\NInt to Bool to Bool
+Dialogue: 0,1:53:42.24,1:53:46.56,Default,,0,0,0,,so now, the arity is 2\Ninstead of the original 1.
+Dialogue: 0,1:53:46.56,1:53:48.68,Default,,0,0,0,,This is a big problem.
+Dialogue: 0,1:53:48.68,1:53:51.32,Default,,0,0,0,,We want to be able to statically\Ncompile a function calls
+Dialogue: 0,1:53:51.32,1:53:54.76,Default,,0,0,0,,as passing multiple arguments\Nand jumping to the code of the function.
+Dialogue: 0,1:53:54.76,1:53:59.28,Default,,0,0,0,,If we look at the application\Nof g to 5 and g to 4,
+Dialogue: 0,1:53:59.28,1:54:01.76,Default,,0,0,0,,how do we compile those calls?
+Dialogue: 0,1:54:01.76,1:54:05.48,Default,,0,0,0,,If g's arity is 1, then this\Nis a complete function call.
+Dialogue: 0,1:54:05.48,1:54:08.12,Default,,0,0,0,,But if it's arity\Nsomehow becomes 2, then
+Dialogue: 0,1:54:08.12,1:54:11.00,Default,,0,0,0,,there suddenly aren't\Nenough arguments
+Dialogue: 0,1:54:11.00,1:54:13.20,Default,,0,0,0,,to correctly execute the body of g.
+Dialogue: 0,1:54:13.20,1:54:16.60,Default,,0,0,0,,How can we possibly statially\Ncompile multiargument function calls
+Dialogue: 0,1:54:16.60,1:54:19.64,Default,,0,0,0,,when the arity of functions\Nisn't even stable?
+Dialogue: 0,1:54:19.64,1:54:24.04,Default,,0,0,0,,These shortcomings can be\Novercome with polymorphism -
+Dialogue: 0,1:54:24.04,1:54:27.24,Default,,0,0,0,,the ideas to encode\Nthe intentional details of types
+Dialogue: 0,1:54:27.24,1:54:30.04,Default,,0,0,0,,like the runtime representations\Nand calling conventions
+Dialogue: 0,1:54:30.04,1:54:31.28,Default,,0,0,0,,into their kind.
+Dialogue: 0,1:54:31.72,1:54:34.64,Default,,0,0,0,,First, we can generalize\Nthe basic kind of types,
+Dialogue: 0,1:54:34.64,1:54:38.48,Default,,0,0,0,,usually written as star, to\Nthe more detailed form TYPE r c -
+Dialogue: 0,1:54:38.48,1:54:41.48,Default,,0,0,0,,r stands for the runtime\Nrepresentation of the type a.
+Dialogue: 0,1:54:41.48,1:54:44.96,Default,,0,0,0,,It could be a primitive representation\Nlike a pointer or an integer.
+Dialogue: 0,1:54:44.96,1:54:47.80,Default,,0,0,0,,or it could be something\Ncompound like an unboxed tuple.
+Dialogue: 0,1:54:47.80,1:54:50.80,Default,,0,0,0,,C stands for\Nthe calling convention of a
+Dialogue: 0,1:54:50.80,1:54:53.04,Default,,0,0,0,,which spells out how those\Nvalues can be in vote.
+Dialogue: 0,1:54:53.04,1:54:56.36,Default,,0,0,0,,So, for example if we have\Nan unknown type variable a,
+Dialogue: 0,1:54:56.36,1:54:59.92,Default,,0,0,0,,we can give it a kind like\NTYPE Pointer Call of n -
+Dialogue: 0,1:54:59.92,1:55:03.12,Default,,0,0,0,,this says that the values\Nof type a are represented
+Dialogue: 0,1:55:03.12,1:55:04.60,Default,,0,0,0,,as pointers at runtime
+Dialogue: 0,1:55:04.60,1:55:07.16,Default,,0,0,0,,and that those values can be\Ncalled with n arguments.
+Dialogue: 0,1:55:07.92,1:55:10.96,Default,,0,0,0,,Note that representing\Nthe arity as a single number
+Dialogue: 0,1:55:10.96,1:55:13.08,Default,,0,0,0,,is slightly simplified from\Nthe full system in the paper
+Dialogue: 0,1:55:13.08,1:55:14.72,Default,,0,0,0,,which presents all the details.
+Dialogue: 0,1:55:14.72,1:55:17.72,Default,,0,0,0,,Now that the arity appears\Nexplicitly in the types,
+Dialogue: 0,1:55:17.72,1:55:19.96,Default,,0,0,0,,it can be used to\Nresolve the ambiguity
+Dialogue: 0,1:55:19.96,1:55:21.64,Default,,0,0,0,,that came from polymorphism.
+Dialogue: 0,1:55:21.64,1:55:23.44,Default,,0,0,0,,For example, let's return
+Dialogue: 0,1:55:23.44,1:55:25.92,Default,,0,0,0,,to the troublesome poly\Ndefinition from before.
+Dialogue: 0,1:55:25.92,1:55:28.40,Default,,0,0,0,,We can now pin down a specific arity
+Dialogue: 0,1:55:28.40,1:55:31.52,Default,,0,0,0,,for the generic type variable\Na introduced by the flaw.
+Dialogue: 0,1:55:31.52,1:55:35.40,Default,,0,0,0,,Here we say that the generic type\Na is called with two arguments.
+Dialogue: 0,1:55:35.40,1:55:38.28,Default,,0,0,0,,Even though that\Nthe type of a is abstract,
+Dialogue: 0,1:55:38.28,1:55:41.12,Default,,0,0,0,,it's kind makes it clear\Nthat f has arity 4.
+Dialogue: 0,1:55:41.12,1:55:45.68,Default,,0,0,0,,That's counting for the two\Nknown integers in the type of f
+Dialogue: 0,1:55:45.68,1:55:48.80,Default,,0,0,0,,plus two more from\Nthe return type a.
+Dialogue: 0,1:55:49.28,1:55:53.96,Default,,0,0,0,,Also, g has the type Int to a,\Nbut we know it has arity 3,
+Dialogue: 0,1:55:53.96,1:55:56.56,Default,,0,0,0,,so it takes one known\Ninteger argument
+Dialogue: 0,1:55:56.56,1:55:59.80,Default,,0,0,0,,plus two more arguments\Nfrom the return type a.
+Dialogue: 0,1:56:00.56,1:56:04.40,Default,,0,0,0,,Furthermore, since the calling\Nconvention appears in the types,
+Dialogue: 0,1:56:04.40,1:56:06.04,Default,,0,0,0,,we can also abstract over them.
+Dialogue: 0,1:56:06.04,1:56:09.60,Default,,0,0,0,,For example, the revapp function\Nhere supplies an argument x
+Dialogue: 0,1:56:09.60,1:56:12.92,Default,,0,0,0,,to a function f. Does\Nthis type make sense?
+Dialogue: 0,1:56:12.92,1:56:16.96,Default,,0,0,0,,The function f has the type a to b
+Dialogue: 0,1:56:16.96,1:56:20.72,Default,,0,0,0,,and to generate the code for calling\Nf, we need to know its arity.
+Dialogue: 0,1:56:20.72,1:56:23.88,Default,,0,0,0,,Since f takes an argument a
+Dialogue: 0,1:56:25.36,1:56:30.20,Default,,0,0,0,,and b already has arity 1, this\Nadds up to an arity of 2.
+Dialogue: 0,1:56:31.44,1:56:35.72,Default,,0,0,0,,The argument x has the type a.
+Dialogue: 0,1:56:35.72,1:56:38.40,Default,,0,0,0,,To pass it around, we need\Nto know its representation.
+Dialogue: 0,1:56:38.40,1:56:41.24,Default,,0,0,0,,The kind of a is TYPE Pointer c.
+Dialogue: 0,1:56:41.24,1:56:43.36,Default,,0,0,0,,So, we know that x is\Nrepresented as a pointer,
+Dialogue: 0,1:56:43.36,1:56:45.64,Default,,0,0,0,,but we don't know\Nthe calling convention of x.
+Dialogue: 0,1:56:45.64,1:56:47.92,Default,,0,0,0,,That's fine because revapp\Ndoesn't call itself,
+Dialogue: 0,1:56:47.92,1:56:49.52,Default,,0,0,0,,it just passes x around.
+Dialogue: 0,1:56:50.76,1:56:52.80,Default,,0,0,0,,If we found this type interesting,
+Dialogue: 0,1:56:52.80,1:56:55.12,Default,,0,0,0,,here is even more\Nmaterial in the paper.
+Dialogue: 0,1:56:55.12,1:56:58.28,Default,,0,0,0,,I was only able to talk\Nabout calling conventions
+Dialogue: 0,1:56:58.28,1:57:00.08,Default,,0,0,0,,and a little bit about\Nrepresentations,
+Dialogue: 0,1:57:00.08,1:57:03.04,Default,,0,0,0,,but we expressed levity\Nin this kind system too.
+Dialogue: 0,1:57:03.04,1:57:07.12,Default,,0,0,0,,This lets us accommodate both eager\Nand lazy functional languages
+Dialogue: 0,1:57:07.12,1:57:09.88,Default,,0,0,0,,with the exact same shared\Nintermediate language.
+Dialogue: 0,1:57:09.88,1:57:12.68,Default,,0,0,0,,We also described\Na compiler pipeline
+Dialogue: 0,1:57:12.68,1:57:15.28,Default,,0,0,0,,along with its correctness from a
+Dialogue: 0,1:57:16.04,1:57:19.60,Default,,0,0,0,,simple source language to\Nthe intermediate language
+Dialogue: 0,1:57:19.60,1:57:22.16,Default,,0,0,0,,and finally, to a well-level\Ntarget language.
+Dialogue: 0,1:57:22.16,1:57:24.44,Default,,0,0,0,,This compilation depends\Non types and kinds.
+Dialogue: 0,1:57:24.44,1:57:26.12,Default,,0,0,0,,So, we used a type system to ensure
+Dialogue: 0,1:57:26.12,1:57:28.44,Default,,0,0,0,,that (INAUDIBLE) compilation\Nis always possible
+Dialogue: 0,1:57:28.44,1:57:30.68,Default,,0,0,0,,for every single well type program.
+Dialogue: 0,1:57:31.24,1:57:33.76,Default,,0,0,0,,In the end, we can say that kinds
+Dialogue: 0,1:57:33.76,1:57:36.56,Default,,0,0,0,,give us a formal and high-level\Nlanguage for capturing the details
+Dialogue: 0,1:57:36.56,1:57:39.64,Default,,0,0,0,,of efficient calling\Nconventions for functions.
+Dialogue: 0,1:57:39.64,1:57:41.20,Default,,0,0,0,,Thank you for your attention.
+Dialogue: 0,1:57:41.88,1:57:46.88,Default,,0,0,0,,(AUDIENCE CLAPPING)
+Dialogue: 0,1:57:49.48,1:57:50.84,Default,,0,0,0,,SUKYOUNG: Thank you Paul.
+Dialogue: 0,1:57:50.84,1:57:52.44,Default,,0,0,0,,If you are watching this talk live,
+Dialogue: 0,1:57:52.44,1:57:55.52,Default,,0,0,0,,please don't forget\Nabout a Q&A session
+Dialogue: 0,1:57:55.52,1:57:58.08,Default,,0,0,0,,that may be available\Nin your time band.
+Dialogue: 0,1:57:58.32,1:58:01.16,Default,,0,0,0,,This is the last\Npaper in session six.
+Dialogue: 0,1:58:01.16,1:58:03.32,Default,,0,0,0,,Thank you for attending.
