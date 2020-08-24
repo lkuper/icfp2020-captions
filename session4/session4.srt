@@ -8908,7 +8908,7 @@ indeed in the case of GHC
 
 1912
 01:43:53,920 --> 01:43:55,320
-it does run about it.
+it does warn about it.
 
 1913
 01:43:56,320 --> 01:43:59,520
@@ -8936,7 +8936,7 @@ been able to produce
 
 1918
 01:44:11,520 --> 01:44:13,280
-these kinds of warning
+these kinds of warnings
 for a long time.
 
 1919
@@ -8951,7 +8951,7 @@ I picked up maintenance
 
 1921
 01:44:20,800 --> 01:44:25,040
-of GHC pattern match checker as
+of GHC's pattern match checker as
 a side project about a year ago.
 
 1922
@@ -9069,7 +9069,7 @@ So not redundant.
 1946
 01:45:44,000 --> 01:45:46,400
 But on the other end we
-can never return to
+can never return two
 
 1947
 01:45:46,400 --> 01:45:50,120
@@ -9115,7 +9115,7 @@ So bottom is only inhabitant.
 
 1956
 01:46:16,600 --> 01:46:19,400
-This examples here introduce
+These examples here introduce
 bindings of type void
 
 1957
@@ -9126,7 +9126,7 @@ and runtime errors.
 1958
 01:46:24,040 --> 01:46:26,720
 F here matches on them in
-a lazy world cup match
+a lazy wild card match
 
 1959
 01:46:26,720 --> 01:46:29,760
@@ -9140,13 +9140,13 @@ combine it with strict fields.
 
 1961
 01:46:37,400 --> 01:46:40,080
-There is a strict maybe
+Here is a strict maybe
 data type as you can tell
 
 1962
 01:46:40,080 --> 01:46:43,840
 by the strictness annotation
-of Sjust yield here.
+of Sjust field here.
 
 1963
 01:46:44,560 --> 01:46:46,080
@@ -9154,7 +9154,7 @@ Whenever SJust is constructed
 
 1964
 01:46:46,080 --> 01:46:48,440
-it's field needs to
+its field needs to
 be evaluated first.
 
 1965
@@ -9223,7 +9223,7 @@ pattern language feature of Haskell
 
 1979
 01:47:36,880 --> 01:47:38,680
-Does hind have any
+Does sign have any
 redundant clauses,
 
 1980
@@ -9332,7 +9332,7 @@ information in particular.
 
 2002
 01:48:54,600 --> 01:48:58,120
-But having beet battle tested
+But having been battle tested
 over the last couple of years
 
 2003
@@ -9342,7 +9342,7 @@ in being too buggy and slow.
 
 2004
 01:49:03,120 --> 01:49:09,920
-Also it was pretty complicated in
+Also it was pretty complicated. In
 trying to improve on what we had,
 
 2005
@@ -9352,16 +9352,16 @@ we iterated a couple of times
 2006
 01:49:11,240 --> 01:49:14,440
 and came out with the new approach
-we called lower your guard.
+we called lower your guards.
 
 2007
 01:49:16,920 --> 01:49:18,360
-As the name suggests that
+As the name suggests,
 
 2008
 01:49:18,360 --> 01:49:22,120
 we abandoned all structural
-pattern matching like an F here
+pattern matching like if f here
 
 2009
 01:49:22,120 --> 01:49:25,560
@@ -9398,7 +9398,7 @@ I encourage you to read the paper.
 
 2016
 01:49:48,400 --> 01:49:52,240
-You compute the set of values that
+U computes the set of values that
 weren't covered by any clause
 
 2017
@@ -9412,7 +9412,7 @@ report the inhabitants of theta
 
 2019
 01:49:58,480 --> 01:50:01,200
-as uncurrent patterns
+as uncovered patterns
 of the definition.
 
 2020
@@ -9422,7 +9422,7 @@ fancy example function.
 
 2021
 01:50:07,840 --> 01:50:09,840
-Re indicates source index.
+Green indicates source syntax.
 
 2022
 01:50:09,840 --> 01:50:13,040
@@ -9474,7 +9474,7 @@ the function definition
 
 2032
 01:50:43,240 --> 01:50:44,440
-modelling for through semantics.
+modelling fall through semantics.
 
 2033
 01:50:45,160 --> 01:50:47,320
@@ -9521,7 +9521,7 @@ which stands for the first argument.
 2042
 01:51:19,760 --> 01:51:21,760
 Pattern guards can only
-match in variables
+match on variables
 
 2043
 01:51:21,760 --> 01:51:23,480
@@ -9578,7 +9578,7 @@ generation involved.
 2054
 01:52:03,200 --> 01:52:08,080
 Alright, next up characterizing
-the set of uncover values
+the set of uncovered values
 
 2055
 01:52:08,080 --> 01:52:10,440
@@ -9592,7 +9592,7 @@ refining the set of possible values
 
 2057
 01:52:17,160 --> 01:52:21,040
-as a fraction of them fought through
+as a fraction of them fall through
 from one clause to the next.
 
 2058
@@ -9617,7 +9617,7 @@ they denote in orange.
 
 2062
 01:52:38,040 --> 01:52:42,360
-Rose is the unsatisfiable
+Cross is the unsatisfiable
 refinement predicate.
 
 2063
@@ -9731,17 +9731,17 @@ match the guard tree t.
 
 2087
 01:54:02,320 --> 01:54:05,600
-When we reach the right handside,
+When we reach the right hand side,
 every incoming value is covered.
 
 2088
 01:54:05,600 --> 01:54:07,960
-So we would turn
+So we return
 the empty refinement type.
 
 2089
 01:54:08,960 --> 01:54:11,160
-Ranches model fall
+Branches model fall
 through semantics.
 
 2090
@@ -9755,8 +9755,8 @@ and fall through the second branch.
 
 2092
 01:54:17,920 --> 01:54:21,400
-A bang guard on x hence
-the constraint that x can bottom
+A bang guard on x adds
+the constraint that x can't be bottom
 
 2093
 01:54:21,400 --> 01:54:23,320
@@ -9783,7 +9783,7 @@ by the subtree is uncovered
 
 2098
 01:54:39,440 --> 01:54:43,080
-so we join the two refinement types.
+so we adjoin the two refinement types.
 
 2099
 01:54:44,080 --> 01:54:45,840
@@ -9816,11 +9816,11 @@ For our particular running example
 2105
 01:55:03,400 --> 01:55:06,000
 the inhabitants are easy
-to find, just two and
+to find, just true and
 
 2106
 01:55:07,320 --> 01:55:09,320
-just faults which are
+just false which are
 already in a suitable form
 
 2107
@@ -9848,7 +9848,7 @@ But we didn't do that, because
 2112
 01:55:22,520 --> 01:55:27,200
 reflecting GHC's type
-constraints over into SMT logic,
+constraint solver into SMT logic,
 
 2113
 01:55:27,200 --> 01:55:29,080
@@ -9861,7 +9861,7 @@ and serialization affects
 
 2115
 01:55:33,520 --> 01:55:35,840
-and queues too much overhead.
+induce too much overhead.
 
 2116
 01:55:35,840 --> 01:55:37,440
