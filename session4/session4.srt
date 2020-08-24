@@ -1664,7 +1664,7 @@ vulnerabilities,
 
 359
 00:29:16,840 --> 00:29:18,920
-encrypted graphic code.
+in cryptographic codes.
 
 360
 00:29:18,920 --> 00:29:21,200
@@ -1788,11 +1788,11 @@ formally describe
 385
 00:30:23,560 --> 00:30:26,240
 and also automatically
-verify such a complex,
+verify such complex,
 
 386
 00:30:26,240 --> 00:30:28,800
-value-dependent resource bands?
+value-dependent resource bounds?
 
 387
 00:30:28,800 --> 00:30:30,600
@@ -1800,7 +1800,7 @@ To achieve this, our work follows
 
 388
 00:30:30,600 --> 00:30:32,520
-a line fork on liquid types,
+a (INAUDIBLE) on liquid types,
 
 389
 00:30:32,520 --> 00:30:34,280
@@ -1817,15 +1817,15 @@ returns the absolute value
 
 392
 00:30:38,600 --> 00:30:41,080
-of its input, recent arguments
+of its input. Recent augments
 
 393
 00:30:41,080 --> 00:30:42,920
-and existing liquid type system.
+of existing liquid type system.
 
 394
 00:30:42,920 --> 00:30:44,720
-With a simple construct,
+with a simple construct,
 
 395
 00:30:44,720 --> 00:30:47,440
@@ -1857,7 +1857,7 @@ in the list.
 
 401
 00:30:58,760 --> 00:31:01,600
-The cost band is linear in
+The cost bound is linear in
 the length of the list.
 
 402
@@ -1868,7 +1868,7 @@ recent type system
 403
 00:31:03,760 --> 00:31:06,360
 is that it only
-supports linear bands.
+supports linear bounds.
 
 404
 00:31:06,360 --> 00:31:09,320
@@ -1882,7 +1882,7 @@ with the ability to express
 406
 00:31:10,840 --> 00:31:13,320
 a lot more nontrivial
-resource bands.
+resource bounds.
 
 407
 00:31:13,320 --> 00:31:16,120
@@ -1911,15 +1911,15 @@ types provide a mechanism
 412
 00:31:27,600 --> 00:31:30,280
 for expressing
-and verifying super linear,
+and verifying super-linear,
 
 413
 00:31:30,280 --> 00:31:32,240
-value-dependent resource bands.
+value-dependent resource bounds.
 
 414
 00:31:32,240 --> 00:31:34,480
-We formalize to improve
+We formalize and prove
 the type soundness
 
 415
@@ -1938,7 +1938,7 @@ for liquid resource types.
 418
 00:31:40,960 --> 00:31:44,240
 And we validate on a suite
-of talented examples.
+of challenging examples.
 
 419
 00:31:44,240 --> 00:31:47,480
@@ -2008,7 +2008,7 @@ as a refined type with integers.
 433
 00:32:19,040 --> 00:32:21,280
 The predicate can measure
-special variable B,
+special variable v,
 
 434
 00:32:21,280 --> 00:32:23,680
@@ -2017,12 +2017,12 @@ of its inhabitants.
 
 435
 00:32:23,680 --> 00:32:26,080
-In addition, our types
+In addition, arrow types
 can be dependent
 
 436
 00:32:26,080 --> 00:32:28,120
-and our type can be annotated
+and result type can be annotated
 
 437
 00:32:28,120 --> 00:32:31,440
@@ -2032,11 +2032,11 @@ references the arguments.
 438
 00:32:31,440 --> 00:32:33,480
 For example, the type
-showed on the slide,
+shown on the slide,
 
 439
 00:32:33,480 --> 00:32:34,840
-specify that function
+specifies that function
 
 440
 00:32:34,840 --> 00:32:37,520
@@ -2063,33 +2063,33 @@ which can be dated back to 1985.
 
 445
 00:32:48,080 --> 00:32:50,800
-The high lift idea to
+The highlight idea is to
 treat a program execution
 
 446
 00:32:50,800 --> 00:32:52,640
-as a translation graph
-on non program states.
+as a transition graph
+on program states.
 
 447
 00:32:53,320 --> 00:32:54,680
-And each arc
-on the graph
+And each edge
+of the graph
 
 448
 00:32:54,680 --> 00:32:56,760
 contains the actual
-transitional cost
+transition cost
 
 449
 00:32:56,760 --> 00:32:59,760
-between two states to analyze
+between two states. To analyze
 the resource consumption,
 
 450
 00:32:59,760 --> 00:33:01,680
 we devise a potential
-function five
+function phi
 
 451
 00:33:01,680 --> 00:33:05,360
@@ -2139,31 +2139,31 @@ to automatically
 460
 00:33:24,160 --> 00:33:26,680
 verify resource bonds
-of function programs.
+of functional programs.
 
 461
 00:33:26,680 --> 00:33:29,840
-The tiers to annotate
-types of potentials.
+The idea is to annotate
+types with potentials.
 
 462
 00:33:29,840 --> 00:33:31,440
 The potential annotation
-that the logical
+and the logical
 
 463
 00:33:31,440 --> 00:33:34,040
 predicates are in
-RESYN refinement language.
+thre same refinement language.
 
 464
 00:33:34,040 --> 00:33:36,160
-The difference that's
-potentially numeric
+The difference is that
+potentials are numeric
 
 465
 00:33:36,160 --> 00:33:39,280
-that's predicates a Boolean.
+while predicates are Boolean.
 The potential annotations
 
 466
@@ -2198,7 +2198,7 @@ carries one unit of potential.
 
 472
 00:33:59,160 --> 00:34:01,800
-What's this construct,
+With this construct,
 RESYN is able to express
 
 473
@@ -2214,31 +2214,31 @@ the functional program on the slide.
 475
 00:34:07,880 --> 00:34:10,760
 The insertion function
-as a set routine of insertion sorts
+as a subroutine of insertion sort
 
 476
 00:34:10,760 --> 00:34:13,400
-in certain elements X
+inserting element X
 to a proper place
 
 477
 00:34:13,400 --> 00:34:16,800
 in the list Xs.
-Where you stick expressions,
+We use tick expressions,
 
 478
 00:34:16,800 --> 00:34:20,000
-marked in blue
-specify as resource metric.
+marked in blue to
+specify a resource metric.
 
 479
 00:34:20,000 --> 00:34:22,200
 In this program,
-we use text to count the number
+we use ticks to count the number
 
 480
 00:34:22,200 --> 00:34:24,720
-of recursive cost.
+of recursive calls.
 RESYN can verify
 
 481
@@ -2254,7 +2254,7 @@ however, they can
 483
 00:34:29,080 --> 00:34:31,360
 not express a type
-for insertion types
+for insertion sort
 
 484
 00:34:31,360 --> 00:34:35,600
@@ -2268,22 +2268,22 @@ request a mechanism
 
 486
 00:34:37,840 --> 00:34:41,240
-to display pairs
+to describe pairs
 of elements in the list.
 
 487
 00:34:41,240 --> 00:34:43,800
-OK, Now I have introduced
-a two important
+OK, now I have introduced
+two important
 
 488
 00:34:43,800 --> 00:34:47,720
 building blocks of our work
-liquid types as a potential message.
+liquid types as the potential method.
 
 489
 00:34:47,720 --> 00:34:50,320
-No, we have show
+Now, we have show
 how our work extends prior work,
 
 490
@@ -2294,7 +2294,7 @@ and how to reduce
 491
 00:34:53,560 --> 00:34:56,160
 type verification
-to constant solving
+to constraint solving
 
 492
 00:34:56,160 --> 00:34:59,440
@@ -2323,18 +2323,18 @@ shows that definition of Q list
 
 497
 00:35:10,800 --> 00:35:14,520
-available in list types
+a variant of list types
 with quadratic potentials.
 
 498
 00:35:14,520 --> 00:35:18,160
-Here, the Q curse constructor
-maintains as a tail of list
+Here, the QCons constructor
+maintains that the tail of the list
 
 499
 00:35:18,160 --> 00:35:22,280
 carries one more unit of potential
-in each element and the head
+in each element than the head
 
 500
 00:35:22,280 --> 00:35:25,480
@@ -2354,7 +2354,7 @@ quadratic potential function?
 503
 00:35:31,600 --> 00:35:35,120
 Well, let's do a calculation,
-supposed to list a elements
+supposed a list of elements
 
 504
 00:35:35,120 --> 00:35:38,680
@@ -2374,7 +2374,7 @@ of BI in your list,
 507
 00:35:45,640 --> 00:35:49,920
 it carries P units of potential
-and a definition of queue comes.
+and by definition of QCons.
 
 508
 00:35:49,920 --> 00:35:53,600
@@ -2384,11 +2384,11 @@ equal to the number of elements
 509
 00:35:53,600 --> 00:35:56,640
 to the right of Vi.
-Therefore, those
+Therefore, the
 
 510
 00:35:56,640 --> 00:36:00,720
-10 potential function is quadratic
+potential function is quadratic
 in the length of the list.
 
 511
@@ -2398,23 +2398,23 @@ we can use a value
 
 512
 00:36:02,520 --> 00:36:06,280
-dependent in that potential
-to express fine green bonds,
+dependent inductive potential
+to express fine grained bounds.
 
 513
 00:36:06,280 --> 00:36:08,680
-the type of ISList
-showed on a slide.
+The type of ISList
+showed on the slide
 
 514
 00:36:08,680 --> 00:36:11,120
-It's almost identical
-except that IQList
+is almost identical
+to the type QList
 
 515
 00:36:11,120 --> 00:36:15,080
 except that extra potential required by
-the IS course constructor
+the ISCons constructor
 
 516
 00:36:15,080 --> 00:36:18,240
@@ -2423,13 +2423,13 @@ but a conditioner expression
 
 517
 00:36:18,240 --> 00:36:21,040
-does evaluate to one.
-Even only if element
+that evaluates to one.
+if and only if the element
 
 518
 00:36:21,040 --> 00:36:23,720
 in the tail is less than
-the head elements,
+the head element,
 
 519
 00:36:23,720 --> 00:36:25,600
@@ -2439,17 +2439,17 @@ the potential specified
 520
 00:36:25,600 --> 00:36:30,560
 by ISList is exactly the number
-of out of order repairs in the list.
+of out of order pairs in the list.
 
 521
 00:36:30,560 --> 00:36:33,000
 In this way, we formally express
-a fine grade
+the fine-grained
 
 522
 00:36:33,000 --> 00:36:36,600
-time complexity of insertion sorts
-in your type system.
+time complexity of insertion sort
+in our type system.
 
 523
 00:36:37,240 --> 00:36:41,640
@@ -2468,12 +2468,12 @@ in the analysis
 
 526
 00:36:47,120 --> 00:36:49,760
-or resource metric,
-request redefining
+or the resource metric,
+requires defining
 
 527
 00:36:49,760 --> 00:36:52,440
-a nucleotide type.
+a new data type.
 To address this issues,
 
 528
@@ -2509,11 +2509,11 @@ by numerical function Q,
 534
 00:37:12,040 --> 00:37:14,920
 which takes two
-of this element as arguments.
+elements as arguments.
 
 535
 00:37:14,920 --> 00:37:17,800
-Then is the curse constructor
+Then the Cons constructor
 will use the function Q
 
 536
@@ -2528,28 +2528,28 @@ What's this abstract type?
 
 538
 00:37:23,280 --> 00:37:26,040
-QList list can be defined
-as list with Q
+QList can be defined
+as List with Q
 
 539
 00:37:26,040 --> 00:37:28,720
-inserted with
+instantiated with
 a constant one function
 
 540
 00:37:28,720 --> 00:37:32,360
-while ISList can be fine as list
-with Q inserted.
+while ISList can be defined as List
+with Q instantiated
 
 541
 00:37:32,360 --> 00:37:36,240
-Where's that conditional expression
+with the conditional expression
 that compares two elements.
 
 542
 00:37:36,240 --> 00:37:38,760
 Now you may wonder
-where's this new construct,
+with this new construct,
 
 543
 00:37:38,760 --> 00:37:40,480
@@ -2558,7 +2558,7 @@ your type system
 
 544
 00:37:40,480 --> 00:37:42,840
-be automated.
+be automated?
 Let's use the insertion
 
 545
@@ -2569,26 +2569,26 @@ to illustrate a reduction
 546
 00:37:45,520 --> 00:37:48,280
 from type checking
-to constant solving.
+to constraint solving.
 
 547
 00:37:48,280 --> 00:37:52,920
-The program uses insert (INAUDIBLE)
-plus elements to the right place.
+The program uses insert to itertatively
+add elements to the right place.
 
 548
 00:37:52,920 --> 00:37:55,560
 Our system does not infer types.
-So we assumed that
+So assume that
 
 549
 00:37:55,560 --> 00:37:58,160
-we have the types signature
-for recursive functions.
+we have a type signature
+for recursive functions
 
 550
 00:37:58,160 --> 00:38:00,320
-Insert and sort,
+insert and sort.
 Our type checker
 
 551
@@ -2599,36 +2599,36 @@ in a top down manner
 552
 00:38:02,520 --> 00:38:04,480
 and generates
-constraints on the flight.
+constraints on the fly.
 
 553
 00:38:04,480 --> 00:38:06,440
-For a sort of function.
-Initially, the content
+For a sort function
+initially, the constraint
 
 554
 00:38:06,440 --> 00:38:08,880
-only sometimes
-the argument X's
+only contains
+the argument Xs.
 
 555
 00:38:08,880 --> 00:38:11,600
-after the pattern match.
-If Xs is an empty list,
+After the pattern match
+if Xs is an empty list,
 
 556
 00:38:11,600 --> 00:38:14,960
-then it caries zero potential.
+then it carries zero potential.
 But because it is also free
 
 557
 00:38:14,960 --> 00:38:18,360
 to create a new empty list,
-the new case is verified.
+the nil case is verified.
 
 558
 00:38:18,360 --> 00:38:21,720
-Otherwise, if Xs is not emptied,
+Otherwise, if Xs is not empty,
 then the potential of Xs
 
 559
@@ -2639,17 +2639,17 @@ to the variables,
 560
 00:38:23,600 --> 00:38:27,200
 head and tail.
-The component of con's constructor.
+The component of Cons constructor.
 
 561
 00:38:27,200 --> 00:38:30,960
-Use the definition of Cons,
+Using the definition of Cons,
 we can unfold the type signature
 
 562
 00:38:30,960 --> 00:38:34,800
 and obtain the potential
-story head, head and tail.
+stored in head and in tail.
 
 563
 00:38:34,800 --> 00:38:36,560
@@ -2658,7 +2658,7 @@ of the program.
 
 564
 00:38:36,560 --> 00:38:39,360
-There are two function cause.
+There are two function calls.
 At this point, we need
 
 565
@@ -2673,27 +2673,27 @@ to pay for the cost
 
 567
 00:38:44,480 --> 00:38:47,200
-of one function call
-and the top down phase.
+of one function call.
+In the top down phase
 
 568
 00:38:47,200 --> 00:38:50,280
-We don't really know
+we don't really know
 how to split the potential.
 
 569
 00:38:50,280 --> 00:38:51,800
 So it creates
-symbolic potentials,
+symbolic potential,
 
 570
 00:38:51,800 --> 00:38:55,000
-annotations, and generous
+annotations, and generates
 constraints among the symbols.
 
 571
 00:38:55,000 --> 00:38:59,600
-No doubt for the culture of sorts,
+(INAUDIBLE) for the call to sort,
 it's wrapped by a tick expression.
 
 572
@@ -2709,22 +2709,22 @@ let's assume that
 574
 00:39:04,280 --> 00:39:06,120
 the type checker
-uses a potential
+uses the potential
 
 575
 00:39:06,120 --> 00:39:08,920
-sorting head to pay for the tick,
-something in the context
+stored in head to pay for the tick,
+stored in the context
 
 576
 00:39:08,920 --> 00:39:11,000
 for type checking
-the cons to sort,
+the call to sort,
 
 577
 00:39:11,000 --> 00:39:14,840
-the annotation ahead
-to complete two minus one.
+the annotation of head
+becomes P2 minus one.
 
 578
 00:39:14,840 --> 00:39:16,080
@@ -2734,21 +2734,21 @@ at the constraints
 579
 00:39:16,080 --> 00:39:18,640
 generated by our type checker.
-They concentrate our search,
+These constraints (INAUDIBLE)
 
 580
 00:39:18,640 --> 00:39:23,280
-the predictions of P1, P2, Q1, Q2.
+(INAUDIBLE) P1, P2, Q1, Q2.
 First of all, there are constraints
 
 581
 00:39:23,280 --> 00:39:26,960
 specifying the potential split.
-The potential in different parts.
+The potential in different parts
 
 582
 00:39:26,960 --> 00:39:30,680
-So sum up to the original potential
+should sum up to the original potential
 in the context, then for the tick,
 
 583
@@ -2773,28 +2773,28 @@ Finally the type checker
 
 587
 00:39:39,880 --> 00:39:42,320
-generates the constraint
-for function cost
+generates the constraints
+for function calls
 
 588
 00:39:42,320 --> 00:39:44,480
-for the culture of sorts
-with assume that
+for the call to sort
+which assume that
 
 589
 00:39:44,480 --> 00:39:47,000
-there's a type of parameter a,
-instantiated away
+the type parameter a
+is instantiated away
 
 590
 00:39:47,000 --> 00:39:49,640
-and unknown potential
+with some unknown potential
 annotation S
 
 591
 00:39:49,640 --> 00:39:51,520
-which is so used
-to stress on potential
+which is used
+to (INAUDIBLE) on potential
 
 592
 00:39:51,520 --> 00:39:54,800
@@ -2803,8 +2803,8 @@ call to insert.
 
 593
 00:39:54,800 --> 00:39:56,640
-Similarly, we'll use
-the signature insert
+Similarly, we use
+the signature of insert
 
 594
 00:39:56,640 --> 00:40:01,000
@@ -2818,13 +2818,13 @@ it tries to solve
 
 596
 00:40:03,400 --> 00:40:05,920
-the constraints by fighting
+the constraints by finding
 proper instances
 
 597
 00:40:05,920 --> 00:40:09,480
 of P1, P2 and Q1, Q2.
-this cons are essentially
+These (INAUDIBLE)
 
 598
 00:40:09,480 --> 00:40:12,320
@@ -2843,7 +2843,7 @@ So in this way,
 
 601
 00:40:17,320 --> 00:40:22,120
-we are an automatic type checker
+we built an automatic type checker
 for the liquid resource types.
 
 602
@@ -2853,28 +2853,28 @@ we've formalized
 
 603
 00:40:24,560 --> 00:40:26,960
-and improve the standards,
+and proved the soundness of
 liquid resource types,
 
 604
 00:40:26,960 --> 00:40:30,000
-with respect to our cost,
-to aware small step
+with respect to a cost-
+aware small step
 
 605
 00:40:30,000 --> 00:40:33,680
-operational semantics
-are some new shorts
+operational semantics.
+Our soundness theorem
 
 606
 00:40:33,680 --> 00:40:35,080
-that are weld
-have close program.
+ensures that a well-typed
+closed program
 
 607
 00:40:35,080 --> 00:40:38,200
-We'll never run out of resources.
-If it starts with
+will never run out of resources
+if it starts with
 
 608
 00:40:38,200 --> 00:40:41,080
@@ -2883,8 +2883,8 @@ equal to the initial potential
 
 609
 00:40:41,080 --> 00:40:44,560
-specified by the types,
-details of the theoretical results
+specified by the types.
+Details of the theoretical results
 
 610
 00:40:44,560 --> 00:40:47,640
@@ -2893,7 +2893,7 @@ and the technical reports.
 
 611
 00:40:47,640 --> 00:40:49,840
-As I explain
+As I explained
 how our type system
 
 612
@@ -2903,7 +2903,7 @@ and automatically
 
 613
 00:40:52,160 --> 00:40:54,880
-verified resource banks
+verifies resource bounds
 with liquid resource types.
 
 614
@@ -2914,7 +2914,7 @@ is effective in practice or not.
 615
 00:40:58,560 --> 00:41:00,880
 Let's first take a look at some
-reuse support resource
+reusable support resource
 
 616
 00:41:00,880 --> 00:41:03,560
@@ -2924,12 +2924,12 @@ which we'll use to specify
 617
 00:41:03,560 --> 00:41:06,520
 the type signature
-for (INAUDIBLE) programs.
+for benchmark programs.
 
 618
 00:41:06,520 --> 00:41:09,000
 The first one for
-quadratic potential over list.
+quadratic potential over lists.
 
 619
 00:41:09,000 --> 00:41:11,560
@@ -2938,8 +2938,8 @@ during the presentation.
 
 620
 00:41:11,560 --> 00:41:15,080
-The second, they were specified
-explanation potential over list,
+The second, one for
+exponential potential over list,
 
 621
 00:41:15,080 --> 00:41:17,880
@@ -2948,43 +2948,43 @@ in each element of the tail
 
 622
 00:41:17,880 --> 00:41:20,960
-and ECOS constructor,
-the sub one to find
+in the ECons constructor.
+The third one defines
 
 623
 00:41:20,960 --> 00:41:24,160
 binary trees, to capture
-tree hiding the potential.
+tree height in the potential.
 
 624
 00:41:24,160 --> 00:41:26,960
-Then not constructor
-asks Q more unit for potentials
+The node constructor
+adds Q more units of potential
 
 625
 00:41:26,960 --> 00:41:30,280
-to the element, the structure.
+to the element in the subtree.
 So basically an element
 
 626
 00:41:30,280 --> 00:41:33,640
-at a list caries Q times H,
+at a leaf carries Q times H,
 units of potential
 
 627
 00:41:33,640 --> 00:41:37,120
-where H is the depth of the lists.
+where H is the depth of the leaf.
 In this way, we can express
 
 628
 00:41:37,120 --> 00:41:39,160
-our resource path
-like O and like M.
+our resource bound
+like O(n log n).
 
 629
 00:41:39,160 --> 00:41:41,200
-It's a binary tree
-it's balanced.
+when the binary tree
+is balanced.
 
 630
 00:41:41,200 --> 00:41:44,080
@@ -2993,41 +2993,41 @@ also defines binary trees.
 
 631
 00:41:44,080 --> 00:41:46,640
-Pathed data science potential,
-proceeds to the
+(INAUDIBLE)
+specific root to
 
 632
 00:41:46,640 --> 00:41:49,480
-to lift pass on a tree.
+leaf pass on a tree.
 This is achieved
 
 633
 00:41:49,480 --> 00:41:51,200
-by primary rights
-in the pipe,
+by parameterizing
+the type
 
 634
 00:41:51,200 --> 00:41:55,200
-biological predicate,
-as a guide to a specific list.
+by  logical predicate,
+as a guide to a specific leaf.
 
 635
 00:41:55,200 --> 00:41:56,440
-What is this data types?
+With these data types
 
 636
 00:41:56,440 --> 00:41:59,080
-We are able to extract
-and verify the type complexities
+we are able to extract
+and verify the time complexities
 
 637
 00:41:59,080 --> 00:42:01,720
-of type challenging
+of 12 challenging
 benchmark programs.
 
 638
 00:42:01,720 --> 00:42:03,760
-As a table shows
+As the table shows
 the resource bounds
 
 639
@@ -3037,13 +3037,13 @@ non-polynomial or value dependent,
 
 640
 00:42:07,040 --> 00:42:10,480
-or prototype implementation
-is written globally efficient,
+our prototype implementation
+is reasonably globally efficient,
 
 641
 00:42:10,480 --> 00:42:13,200
-and a non-automated
-resource announcing system
+and (INAUDIBLE)
+resource analysis system
 
 642
 00:42:13,200 --> 00:42:15,880
@@ -3058,7 +3058,7 @@ can be found in our paper
 644
 00:42:18,920 --> 00:42:22,160
 and the technical reports.
-In summary what propels
+In summary we propose
 
 645
 00:42:22,160 --> 00:42:24,280
@@ -3072,12 +3072,12 @@ and automatically
 
 647
 00:42:26,480 --> 00:42:29,840
-verify value-dependent.
+verify value-dependent
 super-linear resource bounds
 
 648
 00:42:29,840 --> 00:42:32,040
-or functional programs.
+of functional programs.
 We formally prove
 
 649
@@ -3107,17 +3107,17 @@ inductively defined potentials.
 
 654
 00:42:45,960 --> 00:42:49,760
-Does not allow multi-variate
-bounds like m times m.
+Does not allow multi-variant
+bounds like n times m.
 
 655
 00:42:49,760 --> 00:42:52,360
 And we don't have
-a type inference algorithms yet.
+type inference algorithms yet.
 
 656
 00:42:52,360 --> 00:42:55,440
-This is the limitations
+These limitations
 are interesting research directions.
 
 657
