@@ -20,67 +20,67 @@ Dialogue: 0,0:13:15.92,0:13:19.68,Default,,0,0,0,,I'd like to welcome you\Nto Se
 Dialogue: 0,0:13:19.68,0:13:21.88,Default,,0,0,0,,The first talk is entitled
 Dialogue: 0,0:13:21.88,0:13:26.00,Default,,0,0,0,,'Compiling Effect Handlers in\NCapability-Passing Style'.
 Dialogue: 0,0:13:26.00,0:13:29.16,Default,,0,0,0,,This paper will be presented\Nby Philipp Schuster
-Dialogue: 0,0:13:29.16,0:13:32.72,Default,,0,0,0,,and he will tell us about\Na language for Effect Handlers
-Dialogue: 0,0:13:32.72,0:13:36.68,Default,,0,0,0,,in Capability-Passing Style\Nand implementation of the language
+Dialogue: 0,0:13:29.16,0:13:32.72,Default,,0,0,0,,and he will tell us about\Na language for effect handlers
+Dialogue: 0,0:13:32.72,0:13:36.68,Default,,0,0,0,,in capability-passing style\Nand implementation of the language
 Dialogue: 0,0:13:36.68,0:13:40.36,Default,,0,0,0,,as a translation to\Nsimply-typed lambda calculus
 Dialogue: 0,0:13:40.36,0:13:44.36,Default,,0,0,0,,in iterated\Ncontinuation-passing style.
-Dialogue: 0,0:13:46.72,0:13:50.92,Default,,0,0,0,,PHILIPP: Hi. I'm Philipp\Nand I present out ICFP 20 paper,
+Dialogue: 0,0:13:46.72,0:13:50.92,Default,,0,0,0,,PHILIPP: Hi. I'm Philipp\Nand I present our ICFP 20 paper,
 Dialogue: 0,0:13:50.92,0:13:55.04,Default,,0,0,0,,'Compiling Effect Handlers in\NCapability-Passing Style'
 Dialogue: 0,0:13:55.04,0:13:58.08,Default,,0,0,0,,This is joint work with\NJonathan Immanuel Brachthäuser
 Dialogue: 0,0:13:58.08,0:14:00.64,Default,,0,0,0,,and Klaus Ostermann.
-Dialogue: 0,0:14:01.08,0:14:03.80,Default,,0,0,0,,Effect Handlers are great\Nand more and more languages
+Dialogue: 0,0:14:01.08,0:14:03.80,Default,,0,0,0,,Effect handlers are great\Nand more and more languages
 Dialogue: 0,0:14:03.80,0:14:06.32,Default,,0,0,0,,are getting support for Effect\NHandlers in more and more libraries
-Dialogue: 0,0:14:06.32,0:14:08.96,Default,,0,0,0,,where Effect Handlers emerge.
+Dialogue: 0,0:14:06.32,0:14:08.96,Default,,0,0,0,,where effect handlers emerge.
 Dialogue: 0,0:14:08.96,0:14:11.84,Default,,0,0,0,,Still, performance is lacking.
-Dialogue: 0,0:14:11.84,0:14:15.56,Default,,0,0,0,,So, this is about\Nthe performance of Effect Handlers.
+Dialogue: 0,0:14:11.84,0:14:15.56,Default,,0,0,0,,So, this is about\Nthe performance of effect handlers.
 Dialogue: 0,0:14:15.56,0:14:17.68,Default,,0,0,0,,Now, there are two separate\Naspects to the performance
 Dialogue: 0,0:14:17.68,0:14:19.12,Default,,0,0,0,,of effect handlers.
 Dialogue: 0,0:14:19.36,0:14:22.08,Default,,0,0,0,,One, enabling compile-time\Noptimizations
 Dialogue: 0,0:14:22.08,0:14:25.56,Default,,0,0,0,,and two, having efficient\Nrun-time operations.
 Dialogue: 0,0:14:25.56,0:14:29.40,Default,,0,0,0,,This work is strictly\Nabout the former.
-Dialogue: 0,0:14:29.40,0:14:33.16,Default,,0,0,0,,Effect Handlers allow you to\Nabstract over complex patterns
+Dialogue: 0,0:14:29.40,0:14:33.16,Default,,0,0,0,,Effect handlers allow you to\Nabstract over complex patterns
 Dialogue: 0,0:14:33.16,0:14:38.16,Default,,0,0,0,,of control flow. Yet, this\Nabstraction comes at a cost.
 Dialogue: 0,0:14:38.88,0:14:41.56,Default,,0,0,0,,To this end, our first\Nresult is a theorem.
 Dialogue: 0,0:14:41.56,0:14:43.20,Default,,0,0,0,,I'll read it out for you.
-Dialogue: 0,0:14:43.20,0:14:46.00,Default,,0,0,0,,Full elimination - the translations\Nof capability-abstraction.
-Dialogue: 0,0:14:46.68,0:14:49.64,Default,,0,0,0,,The ability\Napplication do handle and so on.
-Dialogue: 0,0:14:49.64,0:14:53.04,Default,,0,0,0,,Do not introduce any residual Lambda\Nabstractions or applications,
-Dialogue: 0,0:14:53.04,0:14:56.12,Default,,0,0,0,,except for those in\Nthe translation of the subterms.
+Dialogue: 0,0:14:43.20,0:14:46.00,Default,,0,0,0,,Full elimination - the translations\Nof capability abstraction,
+Dialogue: 0,0:14:46.68,0:14:49.64,Default,,0,0,0,,capability\Napplication, do, handle and so on,
+Dialogue: 0,0:14:49.64,0:14:53.04,Default,,0,0,0,,do not introduce any residual lambda\Nabstractions or applications,
+Dialogue: 0,0:14:53.04,0:14:56.12,Default,,0,0,0,,except for those in\Nthe translation of their subterms.
 Dialogue: 0,0:14:56.12,0:14:58.12,Default,,0,0,0,,What this means intuitively
 Dialogue: 0,0:14:58.12,0:15:01.40,Default,,0,0,0,,is that we fully eliminate\Nall handler abstraction.
-Dialogue: 0,0:15:01.40,0:15:04.84,Default,,0,0,0,,Of course, this is only possible\Nunder certain conditions
+Dialogue: 0,0:15:01.40,0:15:04.84,Default,,0,0,0,,Of course, this is only possible\Nunder certain conditions,
 Dialogue: 0,0:15:04.84,0:15:07.48,Default,,0,0,0,,and in the paper, we formally\Nstate those conditions.
 Dialogue: 0,0:15:07.48,0:15:09.08,Default,,0,0,0,,When those conditions are met,
 Dialogue: 0,0:15:09.08,0:15:12.84,Default,,0,0,0,,we guarantee full elimination\Nas per this theorem.
 Dialogue: 0,0:15:13.80,0:15:17.04,Default,,0,0,0,,A theoretical result is great,\Nbut what about practice?
 Dialogue: 0,0:15:17.04,0:15:21.56,Default,,0,0,0,,Well, we've conducted some benchmarks\Nand they look generally good.
-Dialogue: 0,0:15:21.56,0:15:25.12,Default,,0,0,0,,And in one case, for\Nexample, versus Kalka,
+Dialogue: 0,0:15:21.56,0:15:25.12,Default,,0,0,0,,And in one case, for\Nexample, versus Koka,
 Dialogue: 0,0:15:25.12,0:15:27.68,Default,,0,0,0,,we see a speed of 409x.
 Dialogue: 0,0:15:27.68,0:15:30.56,Default,,0,0,0,,Whoa. So what do we do?
-Dialogue: 0,0:15:31.76,0:15:34.56,Default,,0,0,0,,We define the source\Nlanguage, Lamda Cap,
+Dialogue: 0,0:15:31.76,0:15:34.56,Default,,0,0,0,,We define the source\Nlanguage, lambda cap,
 Dialogue: 0,0:15:34.56,0:15:37.00,Default,,0,0,0,,in explicit capability\Npassing style.
 Dialogue: 0,0:15:37.00,0:15:39.64,Default,,0,0,0,,And we will see what\Nthat is in a moment.
-Dialogue: 0,0:15:39.96,0:15:43.20,Default,,0,0,0,,We then translate this language\Nto simply type Lambda calculus
+Dialogue: 0,0:15:39.96,0:15:43.20,Default,,0,0,0,,We then translate this language\Nto simply typed lambda calculus
 Dialogue: 0,0:15:43.20,0:15:45.64,Default,,0,0,0,,in iterated continuation\Npassing style.
 Dialogue: 0,0:15:45.64,0:15:48.52,Default,,0,0,0,,We will also see what\Nthat is in a moment.
 Dialogue: 0,0:15:48.52,0:15:50.76,Default,,0,0,0,,This translation specializes\Neffectful functions
 Dialogue: 0,0:15:50.76,0:15:53.64,Default,,0,0,0,,to the number of handlers\Nthey are used under.
-Dialogue: 0,0:15:55.00,0:15:58.40,Default,,0,0,0,,We then go on to define a second\Nlanguage, Lambda two cap.
-Dialogue: 0,0:15:58.40,0:16:01.04,Default,,0,0,0,,It has exactly the same\Nsyntax as Lambda cap,
-Dialogue: 0,0:16:01.04,0:16:02.92,Default,,0,0,0,,but the different system.
+Dialogue: 0,0:15:55.00,0:15:58.40,Default,,0,0,0,,We then go on to define a second\Nlanguage, lambda two cap.
+Dialogue: 0,0:15:58.40,0:16:01.04,Default,,0,0,0,,It has exactly the same\Nsyntax as lambda cap,
+Dialogue: 0,0:16:01.04,0:16:02.92,Default,,0,0,0,,but a different type system.
 Dialogue: 0,0:16:03.48,0:16:05.68,Default,,0,0,0,,We go on to define\Nthe second translation,
-Dialogue: 0,0:16:05.68,0:16:08.28,Default,,0,0,0,,this time to two level\NLambda calculus.
+Dialogue: 0,0:16:05.68,0:16:08.28,Default,,0,0,0,,this time to two-level\Nlambda calculus.
 Dialogue: 0,0:16:10.20,0:16:14.16,Default,,0,0,0,,This specialized translation\Nspecializes effectful functions
 Dialogue: 0,0:16:14.16,0:16:16.72,Default,,0,0,0,,to concrete handler implementations.
 Dialogue: 0,0:16:17.08,0:16:20.44,Default,,0,0,0,,So the important keywords are\Nexplicit capability passing style
 Dialogue: 0,0:16:20.44,0:16:23.00,Default,,0,0,0,,and iterated continuation\Npassing style.
 Dialogue: 0,0:16:23.44,0:16:25.24,Default,,0,0,0,,Let's look at an example.
 Dialogue: 0,0:16:25.52,0:16:27.60,Default,,0,0,0,,I'll show you a little magic trick.
-Dialogue: 0,0:16:27.60,0:16:29.96,Default,,0,0,0,,I make all handlers disappear,
+Dialogue: 0,0:16:27.60,0:16:29.96,Default,,0,0,0,,I'll make all handlers disappear,
 Dialogue: 0,0:16:29.96,0:16:33.56,Default,,0,0,0,,and this will go in two steps\Ncorresponding to the two translations.
-Dialogue: 0,0:16:33.84,0:16:37.56,Default,,0,0,0,,Now this is an effectful\Nfunction choice
-Dialogue: 0,0:16:37.76,0:16:40.52,Default,,0,0,0,,written in our source\Nlanguage, Lambda cap.
-Dialogue: 0,0:16:40.88,0:16:44.52,Default,,0,0,0,,It chooses a number between\Nits argument, n and one.
+Dialogue: 0,0:16:33.84,0:16:37.56,Default,,0,0,0,,Now this is an effectful\Nfunction, choice,
+Dialogue: 0,0:16:37.76,0:16:40.52,Default,,0,0,0,,written in our source\Nlanguage, lambda cap.
+Dialogue: 0,0:16:40.88,0:16:44.52,Default,,0,0,0,,It chooses a number between\Nits argument n and one.
 Dialogue: 0,0:16:44.72,0:16:48.44,Default,,0,0,0,,It uses two effects, flip for\Nnon-deterministic choice,
 Dialogue: 0,0:16:48.44,0:16:51.56,Default,,0,0,0,,and fail for aborting\Nthe current continuation.
 Dialogue: 0,0:16:51.56,0:16:54.24,Default,,0,0,0,,It is written in explicit\Ncapability passing style,
@@ -92,45 +92,45 @@ Dialogue: 0,0:17:07.72,0:17:09.32,Default,,0,0,0,,And if the result is true,
 Dialogue: 0,0:17:09.32,0:17:14.00,Default,,0,0,0,,we return n or else we recurse\Nand choose a smaller number.
 Dialogue: 0,0:17:14.40,0:17:16.16,Default,,0,0,0,,Let's look at the n inside.
 Dialogue: 0,0:17:17.00,0:17:20.40,Default,,0,0,0,,Here, we first install\Na handler for a flip.
-Dialogue: 0,0:17:20.64,0:17:23.72,Default,,0,0,0,,Handler for flip uses is\Ncontinuation k twice,
+Dialogue: 0,0:17:20.64,0:17:23.72,Default,,0,0,0,,Handler for flip uses its\Ncontinuation k twice,
 Dialogue: 0,0:17:23.72,0:17:25.48,Default,,0,0,0,,and appends the results.
 Dialogue: 0,0:17:26.48,0:17:28.64,Default,,0,0,0,,Then we install a handler for fail,
-Dialogue: 0,0:17:28.88,0:17:30.76,Default,,0,0,0,,which its cards has continuation k
+Dialogue: 0,0:17:28.88,0:17:30.76,Default,,0,0,0,,which discards its continuation k
 Dialogue: 0,0:17:30.76,0:17:33.28,Default,,0,0,0,,and immediately answers\Nwith the empty list.
 Dialogue: 0,0:17:33.28,0:17:37.16,Default,,0,0,0,,Both handlers introduce capabilities,\Nlower case flip and fail.
-Dialogue: 0,0:17:37.76,0:17:42.48,Default,,0,0,0,,In the cons or choice here, we\Nexplicitly pass those capabilities
-Dialogue: 0,0:17:42.76,0:17:44.64,Default,,0,0,0,,to the effect for function choice.
+Dialogue: 0,0:17:37.76,0:17:42.48,Default,,0,0,0,,In the call to choice here, we\Nexplicitly pass those capabilities
+Dialogue: 0,0:17:42.76,0:17:44.64,Default,,0,0,0,,to the effectful function choice.
 Dialogue: 0,0:17:45.68,0:17:49.36,Default,,0,0,0,,Each handler expects\Na specific answer type.
 Dialogue: 0,0:17:49.72,0:17:51.68,Default,,0,0,0,,The handler for flip expects a list
-Dialogue: 0,0:17:51.68,0:17:55.44,Default,,0,0,0,,because it appends the results\Nof the continuation calls.
+Dialogue: 0,0:17:51.68,0:17:55.44,Default,,0,0,0,,because it appends the result\Nof the continuation calls.
 Dialogue: 0,0:17:55.44,0:17:58.32,Default,,0,0,0,,The handler of a fail also\Nhappens to expect a list
 Dialogue: 0,0:17:58.32,0:18:01.52,Default,,0,0,0,,because it immediately\Nanswers with the empty list.
-Dialogue: 0,0:18:02.40,0:18:07.16,Default,,0,0,0,,This is all so why we wrap the call\Nto choice into a singleton list.
+Dialogue: 0,0:18:02.40,0:18:07.16,Default,,0,0,0,,This is also why we wrap the call\Nto choice into a singleton list.
 Dialogue: 0,0:18:08.32,0:18:10.08,Default,,0,0,0,,We call the list of answer types
 Dialogue: 0,0:18:10.08,0:18:13.72,Default,,0,0,0,,from outermost sender to\Ninnermost sender the stack shape.
 Dialogue: 0,0:18:14.12,0:18:16.52,Default,,0,0,0,,Let me illustrate\Nwhy with a picture.
-Dialogue: 0,0:18:16.84,0:18:19.60,Default,,0,0,0,,This is the caustic at\Nthe quarter choice.
+Dialogue: 0,0:18:16.84,0:18:19.60,Default,,0,0,0,,This is the call stack at\Nthe call to choice.
 Dialogue: 0,0:18:20.00,0:18:22.36,Default,,0,0,0,,At the bottom, we have\Nthe handler for flip,
 Dialogue: 0,0:18:23.04,0:18:26.00,Default,,0,0,0,,which expects an answer\Nof type list of int.
 Dialogue: 0,0:18:26.56,0:18:28.56,Default,,0,0,0,,Above it, we have\Nthe handle for fail,
-Dialogue: 0,0:18:28.56,0:18:33.08,Default,,0,0,0,,which expects also\Nan answer type list of it.
+Dialogue: 0,0:18:28.56,0:18:33.08,Default,,0,0,0,,which expects also\Nan answer type list of int.
 Dialogue: 0,0:18:33.08,0:18:38.08,Default,,0,0,0,,And then we have a frame which wraps\Nthings into the singleton list.
 Dialogue: 0,0:18:39.48,0:18:43.52,Default,,0,0,0,,Now, to approximate\Nthe shape of the stack,
 Dialogue: 0,0:18:43.84,0:18:46.36,Default,,0,0,0,,we have the list of answer types.
 Dialogue: 0,0:18:46.36,0:18:49.28,Default,,0,0,0,,In this case, it's\Na two-element list.
 Dialogue: 0,0:18:49.80,0:18:52.80,Default,,0,0,0,,The two elements are list\Nof int and list of int.
-Dialogue: 0,0:18:53.68,0:18:57.56,Default,,0,0,0,,Because we've created their\Ncapability flip at the outer handler
+Dialogue: 0,0:18:53.68,0:18:57.56,Default,,0,0,0,,Because we've created the\Ncapability flip at the outer handler
 Dialogue: 0,0:18:57.56,0:19:00.76,Default,,0,0,0,,in a context with a stack\Nshape with a single element,
 Dialogue: 0,0:19:00.76,0:19:03.32,Default,,0,0,0,,I want to use it inside\Nof the inner handler.
 Dialogue: 0,0:19:03.32,0:19:06.44,Default,,0,0,0,,We have to fix the mismatch\Non the type level here
 Dialogue: 0,0:19:06.44,0:19:09.24,Default,,0,0,0,,and explicitly lift the capability.
 Dialogue: 0,0:19:11.08,0:19:12.88,Default,,0,0,0,,Guided by the stack shape,
-Dialogue: 0,0:19:12.88,0:19:16.60,Default,,0,0,0,,we translate our program to iterate\Nit continuation passing style.
+Dialogue: 0,0:19:12.88,0:19:16.60,Default,,0,0,0,,we translate our program to iterated\Ncontinuation passing style.
 Dialogue: 0,0:19:17.16,0:19:21.52,Default,,0,0,0,,It is like ordinary continuation\Npassing style, but with a twist.
 Dialogue: 0,0:19:22.28,0:19:24.80,Default,,0,0,0,,So, the translation looks like this.
-Dialogue: 0,0:19:25.52,0:19:27.12,Default,,0,0,0,,We have the effect\Nfor function choice,
+Dialogue: 0,0:19:25.52,0:19:27.12,Default,,0,0,0,,We have the effectful\Nfunction choice,
 Dialogue: 0,0:19:27.12,0:19:30.56,Default,,0,0,0,,and it abstracts over\Ncapabilities flip and fail.
-Dialogue: 0,0:19:30.56,0:19:32.80,Default,,0,0,0,,This is ordinary Lambda abstraction.
+Dialogue: 0,0:19:30.56,0:19:32.80,Default,,0,0,0,,This is ordinary lambda abstraction.
 Dialogue: 0,0:19:32.80,0:19:35.20,Default,,0,0,0,,We then define\Na recursive function loop
 Dialogue: 0,0:19:35.20,0:19:38.16,Default,,0,0,0,,in iterated continuation\Npassing style.
 Dialogue: 0,0:19:38.16,0:19:42.52,Default,,0,0,0,,This means that it gets one\Nor more continuation arguments.
@@ -140,13 +140,13 @@ Dialogue: 0,0:19:47.72,0:19:51.40,Default,,0,0,0,,because we've used choice\Nher
 Dialogue: 0,0:19:51.40,0:19:54.56,Default,,0,0,0,,correspondingly in a stack\Nshape with two elements,
 Dialogue: 0,0:19:54.56,0:19:57.56,Default,,0,0,0,,it now gets two\Ncontinuation arguments.
 Dialogue: 0,0:19:57.76,0:20:00.84,Default,,0,0,0,,Capabilities are ordinary functions,
-Dialogue: 0,0:20:00.84,0:20:03.64,Default,,0,0,0,,also an iterated\Ncontinuation passing style.
+Dialogue: 0,0:20:00.84,0:20:03.64,Default,,0,0,0,,also in iterated\Ncontinuation passing style.
 Dialogue: 0,0:20:03.64,0:20:07.52,Default,,0,0,0,,For example, failure gets\Ntwo continuation arguments.
 Dialogue: 0,0:20:08.00,0:20:09.40,Default,,0,0,0,,And also in the rest\Nof the function,
-Dialogue: 0,0:20:09.40,0:20:11.40,Default,,0,0,0,,for example, in\Nthe recourse of code to do
+Dialogue: 0,0:20:09.40,0:20:11.40,Default,,0,0,0,,for example, in\Nthe recursive code to loop
 Dialogue: 0,0:20:11.40,0:20:14.52,Default,,0,0,0,,we also supply two\Ncontinuation arguments.
 Dialogue: 0,0:20:15.60,0:20:20.60,Default,,0,0,0,,If we look at the handling side, we\Ndefine capabilities flip and fail.
-Dialogue: 0,0:20:21.80,0:20:24.32,Default,,0,0,0,,Flip is an iterator to CPS,
+Dialogue: 0,0:20:21.80,0:20:24.32,Default,,0,0,0,,Flip is an iterated CPS,
 Dialogue: 0,0:20:25.08,0:20:27.00,Default,,0,0,0,,but in a stack shape\Nwith a single element
 Dialogue: 0,0:20:27.00,0:20:29.96,Default,,0,0,0,,and consequently gets\Na single continuation.
 Dialogue: 0,0:20:30.20,0:20:35.12,Default,,0,0,0,,Fail is an iterated CPS, but in\Na stack shape with two elements.
@@ -158,78 +158,78 @@ Dialogue: 0,0:20:48.84,0:20:50.88,Default,,0,0,0,,We somehow have to\Nfix this m
 Dialogue: 0,0:20:50.88,0:20:54.00,Default,,0,0,0,,So we defined a new\Ncapability, lifted flip,
 Dialogue: 0,0:20:54.24,0:20:56.64,Default,,0,0,0,,which abstracts over\Ntwo continuations,
 Dialogue: 0,0:20:56.64,0:21:00.92,Default,,0,0,0,,composes them and passes\Nthe composition to the capability flip.
-Dialogue: 0,0:21:01.52,0:21:04.40,Default,,0,0,0,,The Corta choice now\Ngets five arguments,
+Dialogue: 0,0:21:01.52,0:21:04.40,Default,,0,0,0,,The call to choice now\Ngets five arguments,
 Dialogue: 0,0:21:04.64,0:21:09.32,Default,,0,0,0,,two capabilities, the argument\Nn, and two continuations.
-Dialogue: 0,0:21:11.44,0:21:15.44,Default,,0,0,0,,So far, we've seen our\Nsource language Lambda cap
-Dialogue: 0,0:21:15.44,0:21:18.20,Default,,0,0,0,,and our translation to\Nsimply type Lambda calculus
+Dialogue: 0,0:21:11.44,0:21:15.44,Default,,0,0,0,,So far, we've seen our\Nsource language lambda cap
+Dialogue: 0,0:21:15.44,0:21:18.20,Default,,0,0,0,,and our translation to\Nsimply typed lambda calculus
 Dialogue: 0,0:21:18.44,0:21:20.96,Default,,0,0,0,,in iterated continuation\Npassing style.
 Dialogue: 0,0:21:20.96,0:21:24.08,Default,,0,0,0,,We've specialized effectful\Nfunctions to the number of handlers
 Dialogue: 0,0:21:24.08,0:21:25.56,Default,,0,0,0,,they are used under.
 Dialogue: 0,0:21:26.60,0:21:28.92,Default,,0,0,0,,We want to go further\Nand specialize functions
 Dialogue: 0,0:21:28.92,0:21:31.56,Default,,0,0,0,,to concrete handler implementations.
 Dialogue: 0,0:21:31.80,0:21:34.80,Default,,0,0,0,,As it happens, this\Nprogram is also typable
-Dialogue: 0,0:21:34.80,0:21:37.48,Default,,0,0,0,,under the rules of our second\Nlanguage, Lambda two cap.
-Dialogue: 0,0:21:37.48,0:21:42.04,Default,,0,0,0,,So we can use our second translation\Nto two level Lambda calculus.
+Dialogue: 0,0:21:34.80,0:21:37.48,Default,,0,0,0,,under the rules of our second\Nlanguage, lambda two cap.
+Dialogue: 0,0:21:37.48,0:21:42.04,Default,,0,0,0,,So we can use our second translation\Nto two level lambda calculus.
 Dialogue: 0,0:21:43.52,0:21:46.00,Default,,0,0,0,,This will specialize\Neffectful functions
 Dialogue: 0,0:21:46.00,0:21:48.40,Default,,0,0,0,,to concrete handler implementations.
 Dialogue: 0,0:21:49.40,0:21:51.72,Default,,0,0,0,,It is the same as our\Nfirst translation,
 Dialogue: 0,0:21:51.72,0:21:55.64,Default,,0,0,0,,except that we mark some applications\Nand abstractions as static
 Dialogue: 0,0:21:55.64,0:21:57.56,Default,,0,0,0,,and others as dynamic.
-Dialogue: 0,0:21:57.56,0:22:02.56,Default,,0,0,0,,Specifically, we mark aesthetic\Ncapability abstraction,
+Dialogue: 0,0:21:57.56,0:22:02.56,Default,,0,0,0,,Specifically, we mark as static\Ncapability abstraction,
 Dialogue: 0,0:22:03.36,0:22:07.44,Default,,0,0,0,,the use of capabilities,\Ncapability definitions,
 Dialogue: 0,0:22:07.44,0:22:12.16,Default,,0,0,0,,the lifting of capabilities\Nand passing of capabilities to functions.
 Dialogue: 0,0:22:12.84,0:22:16.08,Default,,0,0,0,,This program now reduces to this.
 Dialogue: 0,0:22:16.64,0:22:18.32,Default,,0,0,0,,All handlers are gone.
 Dialogue: 0,0:22:19.76,0:22:22.44,Default,,0,0,0,,We've specialized\Nthe effectful function choice
 Dialogue: 0,0:22:22.44,0:22:26.52,Default,,0,0,0,,to the concrete handler\Nimplementations of flip and fail.
-Dialogue: 0,0:22:27.12,0:22:30.92,Default,,0,0,0,,We call the result of\Nthe specialization choice flip fail.
+Dialogue: 0,0:22:27.12,0:22:30.92,Default,,0,0,0,,We call the result of\Nthe specialization choiceFlipFail.
 Dialogue: 0,0:22:30.92,0:22:35.56,Default,,0,0,0,,The handler implementations have\Nbeen inlined into the body of choice
 Dialogue: 0,0:22:35.56,0:22:37.52,Default,,0,0,0,,and the continuations\Nhave been inlined
-Dialogue: 0,0:22:37.76,0:22:39.60,Default,,0,0,0,,into the handle implementations.
-Dialogue: 0,0:22:39.60,0:22:42.60,Default,,0,0,0,,This enables optimizations\Nacross effect codes.
+Dialogue: 0,0:22:37.76,0:22:39.60,Default,,0,0,0,,into the handler implementations.
+Dialogue: 0,0:22:39.60,0:22:42.60,Default,,0,0,0,,This enables optimizations\Nacross effect calls.
 Dialogue: 0,0:22:42.92,0:22:46.56,Default,,0,0,0,,We are not looking up dynamically\Nany handler implementations,
 Dialogue: 0,0:22:46.56,0:22:50.24,Default,,0,0,0,,and we're not searching for prompts\Non the stack or something either.
 Dialogue: 0,0:22:50.24,0:22:53.24,Default,,0,0,0,,We directly invoke\Nthe correct continuation.
-Dialogue: 0,0:22:53.72,0:22:58.72,Default,,0,0,0,,At the handing side, we see\Nthat the result is still
-Dialogue: 0,0:22:59.08,0:23:02.56,Default,,0,0,0,,an iterated continuation\Npassing style. This is OK.
+Dialogue: 0,0:22:53.72,0:22:58.72,Default,,0,0,0,,At the handling side, we see\Nthat the result is still
+Dialogue: 0,0:22:59.08,0:23:02.56,Default,,0,0,0,,in iterated continuation\Npassing style. This is OK.
 Dialogue: 0,0:23:03.04,0:23:06.40,Default,,0,0,0,,Now, let's look at those\Nbenchmark results again.
-Dialogue: 0,0:23:07.16,0:23:11.88,Default,,0,0,0,,We've benchmarked against different\Nlanguages abd different systems,
-Dialogue: 0,0:23:12.28,0:23:14.88,Default,,0,0,0,,the Kalka language\Nwith effect handlers
-Dialogue: 0,0:23:14.88,0:23:19.04,Default,,0,0,0,,and implementation of multi-pronged\Nlimited control, eg a scheme
-Dialogue: 0,0:23:19.04,0:23:22.80,Default,,0,0,0,,and effects as implemented\Nin multi(INAUDIBLE).
-Dialogue: 0,0:23:22.80,0:23:27.80,Default,,0,0,0,,In all of these, we see significant\Nspeed-ups sometimes very big.
+Dialogue: 0,0:23:07.16,0:23:11.88,Default,,0,0,0,,We've benchmarked against different\Nlanguages and different systems:
+Dialogue: 0,0:23:12.28,0:23:14.88,Default,,0,0,0,,the Koka language\Nwith effect handlers
+Dialogue: 0,0:23:14.88,0:23:19.04,Default,,0,0,0,,an implementation of multicore \Ndelimited control, in Chez Scheme,
+Dialogue: 0,0:23:19.04,0:23:22.80,Default,,0,0,0,,and effects as implemented\Nin multicore OCaml.
+Dialogue: 0,0:23:22.80,0:23:27.80,Default,,0,0,0,,In all of these, we see significant\Nspeed-ups, sometimes very big.
 Dialogue: 0,0:23:29.08,0:23:31.40,Default,,0,0,0,,In this benchmark, we\Nsee a slight slowdown,
 Dialogue: 0,0:23:31.40,0:23:33.88,Default,,0,0,0,,but still competitive performance.
-Dialogue: 0,0:23:34.48,0:23:36.84,Default,,0,0,0,,Interestingly, in the case\Nof (INAUDIBLE) scheme,
+Dialogue: 0,0:23:34.48,0:23:36.84,Default,,0,0,0,,Interestingly, in the case\Nof Chez Scheme,
 Dialogue: 0,0:23:36.84,0:23:39.68,Default,,0,0,0,,we don't see a difference\Nbetween our first translation
 Dialogue: 0,0:23:39.68,0:23:41.64,Default,,0,0,0,,and our second translation.
-Dialogue: 0,0:23:41.88,0:23:45.68,Default,,0,0,0,,This is because (INAUDIBLE) scheme\Ndoes all these reductions for us.
-Dialogue: 0,0:23:45.68,0:23:48.28,Default,,0,0,0,,We didn't have to extend\Nthe (INAUDIBLE) compiler
+Dialogue: 0,0:23:41.88,0:23:45.68,Default,,0,0,0,,This is because Chez Scheme\Ndoes all these reductions for us.
+Dialogue: 0,0:23:45.68,0:23:48.28,Default,,0,0,0,,We didn't have to extend\Nthe Chez Scheme compiler
 Dialogue: 0,0:23:48.28,0:23:50.16,Default,,0,0,0,,or teach it any new tricks.
-Dialogue: 0,0:23:50.40,0:23:55.12,Default,,0,0,0,,It's just Lambdas\Ninlining data reduction.
+Dialogue: 0,0:23:50.40,0:23:55.12,Default,,0,0,0,,It's just lambdas,\Ninlining, beta reduction.
 Dialogue: 0,0:23:56.64,0:23:58.44,Default,,0,0,0,,To wrap up, we've presented
 Dialogue: 0,0:23:58.44,0:24:01.16,Default,,0,0,0,,a compilation technique\Nfor effect handlers.
 Dialogue: 0,0:24:01.92,0:24:04.72,Default,,0,0,0,,Important concepts are explicit\Ncapability passing style
 Dialogue: 0,0:24:04.72,0:24:07.80,Default,,0,0,0,,and iterated continuation\Npassing style.
-Dialogue: 0,0:24:10.32,0:24:12.92,Default,,0,0,0,,We are translating to just\Nsimply type Lambda calculus.
-Dialogue: 0,0:24:12.92,0:24:15.12,Default,,0,0,0,,We don't need any\Nspecial run time system
+Dialogue: 0,0:24:10.32,0:24:12.92,Default,,0,0,0,,We are translating to just\Nsimply typed lambda calculus.
+Dialogue: 0,0:24:12.92,0:24:15.12,Default,,0,0,0,,We don't need any\Nspecial run-time system
 Dialogue: 0,0:24:15.36,0:24:18.40,Default,,0,0,0,,and we don't need any special\Noptimizations either.
 Dialogue: 0,0:24:19.16,0:24:22.48,Default,,0,0,0,,We have a theorem that\Nguarantees full elimination
 Dialogue: 0,0:24:22.48,0:24:25.68,Default,,0,0,0,,under certain conditions, which\Nwe formally state in the paper.
 Dialogue: 0,0:24:26.84,0:24:30.68,Default,,0,0,0,,We have benchmarks which\Nshow good speed-ups.
 Dialogue: 0,0:24:31.68,0:24:35.88,Default,,0,0,0,,And right now we're working on\Nintegrating this compilation technique
-Dialogue: 0,0:24:35.88,0:24:39.00,Default,,0,0,0,,in a new standard\Nor language called Effekt.
+Dialogue: 0,0:24:35.88,0:24:39.00,Default,,0,0,0,,in a new stand-alone\N language called Effekt.
 Dialogue: 0,0:24:39.00,0:24:41.16,Default,,0,0,0,,You should go check it out.
-Dialogue: 0,0:24:42.96,0:24:44.84,Default,,0,0,0,,PHILIP: If you're interested\Nin Effekt Handlers
+Dialogue: 0,0:24:42.96,0:24:44.84,Default,,0,0,0,,PHILIP: If you're interested\Nin effect handlers
 Dialogue: 0,0:24:44.84,0:24:47.56,Default,,0,0,0,,and the implementation technique\Nof explicitly passing them,
 Dialogue: 0,0:24:47.56,0:24:49.68,Default,,0,0,0,,we invite you to read our paper.
-Dialogue: 0,0:24:49.68,0:24:53.04,Default,,0,0,0,,At the Hope Workshop, we will\Npresent our new language Effekt
+Dialogue: 0,0:24:49.68,0:24:53.04,Default,,0,0,0,,At the HOPE Workshop, we will\Npresent our new language Effekt
 Dialogue: 0,0:24:53.04,0:24:55.08,Default,,0,0,0,,and discuss its design.
-Dialogue: 0,0:24:55.08,0:24:59.00,Default,,0,0,0,,In another ICFP talk, our\Ncollaborator (INAUDIBLE) presents
+Dialogue: 0,0:24:55.08,0:24:59.00,Default,,0,0,0,,In another ICFP talk, our\Ncollaborator Ningning presents
 Dialogue: 0,0:24:59.00,0:25:02.00,Default,,0,0,0,,the important missing link between\Ntraditional effect handlers
 Dialogue: 0,0:25:02.00,0:25:04.04,Default,,0,0,0,,and explicitly passing them.
 Dialogue: 0,0:25:04.04,0:25:07.12,Default,,0,0,0,,And finally, she also presents\Nher Haskell implementation
-Dialogue: 0,0:25:07.12,0:25:10.00,Default,,0,0,0,,at the Haskell symposium.\NSee you there.
+Dialogue: 0,0:25:07.12,0:25:10.00,Default,,0,0,0,,at the Haskell Symposium.\NSee you there.
 Dialogue: 0,0:25:13.96,0:25:18.96,Default,,0,0,0,,(APPLAUSE)
 Dialogue: 0,0:25:21.92,0:25:23.24,Default,,0,0,0,,SUKYOUNG: Thank you, Philip.
 Dialogue: 0,0:25:23.24,0:25:27.28,Default,,0,0,0,,If you're watching this talk\Nlive as an ICFP participant,
@@ -1065,7 +1065,7 @@ Dialogue: 0,1:15:03.36,1:15:05.40,Default,,0,0,0,,We'll need to evaluate and che
 Dialogue: 0,1:15:05.40,1:15:08.08,Default,,0,0,0,,And the key words on this\Nslide are evaluate and check.
 Dialogue: 0,1:15:08.08,1:15:10.72,Default,,0,0,0,,We'll definitely be\Nreturning to that later.
 Dialogue: 0,1:15:10.72,1:15:12.36,Default,,0,0,0,,So, some really great\Nexample-base synthesizers
-Dialogue: 0,1:15:12.36,1:15:17.08,Default,,0,0,0,,that have come out include Myth,\NEscher and Lambda squared.
+Dialogue: 0,1:15:12.36,1:15:17.08,Default,,0,0,0,,that have come out include Myth,\NEscher and lambda squared.
 Dialogue: 0,1:15:17.08,1:15:18.88,Default,,0,0,0,,For this project, we're gonna\Nbe working in the domain
 Dialogue: 0,1:15:18.88,1:15:21.00,Default,,0,0,0,,of example-based, richly-typed,
 Dialogue: 0,1:15:21.00,1:15:24.24,Default,,0,0,0,,general-purpose, functional,\Nprogram synthesis.

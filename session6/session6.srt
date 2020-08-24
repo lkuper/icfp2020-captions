@@ -43,11 +43,11 @@ by Philipp Schuster
 10
 00:13:29,160 --> 00:13:32,720
 and he will tell us about
-a language for Effect Handlers
+a language for effect handlers
 
 11
 00:13:32,720 --> 00:13:36,680
-in Capability-Passing Style
+in capability-passing style
 and implementation of the language
 
 12
@@ -63,7 +63,7 @@ continuation-passing style.
 14
 00:13:46,720 --> 00:13:50,920
 PHILIPP: Hi. I'm Philipp
-and I present out ICFP 20 paper,
+and I present our ICFP 20 paper,
 
 15
 00:13:50,920 --> 00:13:55,040
@@ -81,7 +81,7 @@ and Klaus Ostermann.
 
 18
 00:14:01,080 --> 00:14:03,800
-Effect Handlers are great
+Effect handlers are great
 and more and more languages
 
 19
@@ -91,7 +91,7 @@ Handlers in more and more libraries
 
 20
 00:14:06,320 --> 00:14:08,960
-where Effect Handlers emerge.
+where effect handlers emerge.
 
 21
 00:14:08,960 --> 00:14:11,840
@@ -100,7 +100,7 @@ Still, performance is lacking.
 22
 00:14:11,840 --> 00:14:15,560
 So, this is about
-the performance of Effect Handlers.
+the performance of effect handlers.
 
 23
 00:14:15,560 --> 00:14:17,680
@@ -128,7 +128,7 @@ about the former.
 
 28
 00:14:29,400 --> 00:14:33,160
-Effect Handlers allow you to
+Effect handlers allow you to
 abstract over complex patterns
 
 29
@@ -148,22 +148,22 @@ I'll read it out for you.
 32
 00:14:43,200 --> 00:14:46,000
 Full elimination - the translations
-of capability-abstraction.
+of capability abstraction,
 
 33
 00:14:46,680 --> 00:14:49,640
-The ability
-application do handle and so on.
+capability
+application, do, handle and so on,
 
 34
 00:14:49,640 --> 00:14:53,040
-Do not introduce any residual Lambda
+do not introduce any residual lambda
 abstractions or applications,
 
 35
 00:14:53,040 --> 00:14:56,120
 except for those in
-the translation of the subterms.
+the translation of their subterms.
 
 36
 00:14:56,120 --> 00:14:58,120
@@ -177,7 +177,7 @@ all handler abstraction.
 38
 00:15:01,400 --> 00:15:04,840
 Of course, this is only possible
-under certain conditions
+under certain conditions,
 
 39
 00:15:04,840 --> 00:15:07,480
@@ -206,7 +206,7 @@ and they look generally good.
 44
 00:15:21,560 --> 00:15:25,120
 And in one case, for
-example, versus Kalka,
+example, versus Koka,
 
 45
 00:15:25,120 --> 00:15:27,680
@@ -219,7 +219,7 @@ Whoa. So what do we do?
 47
 00:15:31,760 --> 00:15:34,560
 We define the source
-language, Lamda Cap,
+language, lambda cap,
 
 48
 00:15:34,560 --> 00:15:37,000
@@ -234,7 +234,7 @@ that is in a moment.
 50
 00:15:39,960 --> 00:15:43,200
 We then translate this language
-to simply type Lambda calculus
+to simply typed lambda calculus
 
 51
 00:15:43,200 --> 00:15:45,640
@@ -259,16 +259,16 @@ they are used under.
 55
 00:15:55,000 --> 00:15:58,400
 We then go on to define a second
-language, Lambda two cap.
+language, lambda two cap.
 
 56
 00:15:58,400 --> 00:16:01,040
 It has exactly the same
-syntax as Lambda cap,
+syntax as lambda cap,
 
 57
 00:16:01,040 --> 00:16:02,920
-but the different system.
+but a different type system.
 
 58
 00:16:03,480 --> 00:16:05,680
@@ -277,8 +277,8 @@ the second translation,
 
 59
 00:16:05,680 --> 00:16:08,280
-this time to two level
-Lambda calculus.
+this time to two-level
+lambda calculus.
 
 60
 00:16:10,200 --> 00:16:14,160
@@ -309,7 +309,7 @@ I'll show you a little magic trick.
 
 66
 00:16:27,600 --> 00:16:29,960
-I make all handlers disappear,
+I'll make all handlers disappear,
 
 67
 00:16:29,960 --> 00:16:33,560
@@ -319,17 +319,17 @@ corresponding to the two translations.
 68
 00:16:33,840 --> 00:16:37,560
 Now this is an effectful
-function choice
+function, choice,
 
 69
 00:16:37,760 --> 00:16:40,520
 written in our source
-language, Lambda cap.
+language, lambda cap.
 
 70
 00:16:40,880 --> 00:16:44,520
 It chooses a number between
-its argument, n and one.
+its argument n and one.
 
 71
 00:16:44,720 --> 00:16:48,440
@@ -384,7 +384,7 @@ a handler for a flip.
 
 82
 00:17:20,640 --> 00:17:23,720
-Handler for flip uses is
+Handler for flip uses its
 continuation k twice,
 
 83
@@ -397,7 +397,7 @@ Then we install a handler for fail,
 
 85
 00:17:28,880 --> 00:17:30,760
-which its cards has continuation k
+which discards its continuation k
 
 86
 00:17:30,760 --> 00:17:33,280
@@ -411,12 +411,12 @@ lower case flip and fail.
 
 88
 00:17:37,760 --> 00:17:42,480
-In the cons or choice here, we
+In the call to choice here, we
 explicitly pass those capabilities
 
 89
 00:17:42,760 --> 00:17:44,640
-to the effect for function choice.
+to the effectful function choice.
 
 90
 00:17:45,680 --> 00:17:49,360
@@ -429,7 +429,7 @@ The handler for flip expects a list
 
 92
 00:17:51,680 --> 00:17:55,440
-because it appends the results
+because it appends the result
 of the continuation calls.
 
 93
@@ -444,7 +444,7 @@ answers with the empty list.
 
 95
 00:18:02,400 --> 00:18:07,160
-This is all so why we wrap the call
+This is also why we wrap the call
 to choice into a singleton list.
 
 96
@@ -463,8 +463,8 @@ why with a picture.
 
 99
 00:18:16,840 --> 00:18:19,600
-This is the caustic at
-the quarter choice.
+This is the call stack at
+the call to choice.
 
 100
 00:18:20,000 --> 00:18:22,360
@@ -484,7 +484,7 @@ the handle for fail,
 103
 00:18:28,560 --> 00:18:33,080
 which expects also
-an answer type list of it.
+an answer type list of int.
 
 104
 00:18:33,080 --> 00:18:38,080
@@ -512,7 +512,7 @@ of int and list of int.
 
 109
 00:18:53,680 --> 00:18:57,560
-Because we've created their
+Because we've created the
 capability flip at the outer handler
 
 110
@@ -540,8 +540,8 @@ Guided by the stack shape,
 
 115
 00:19:12,880 --> 00:19:16,600
-we translate our program to iterate
-it continuation passing style.
+we translate our program to iterated
+continuation passing style.
 
 116
 00:19:17,160 --> 00:19:21,520
@@ -554,8 +554,8 @@ So, the translation looks like this.
 
 118
 00:19:25,520 --> 00:19:27,120
-We have the effect
-for function choice,
+We have the effectful
+function choice,
 
 119
 00:19:27,120 --> 00:19:30,560
@@ -564,7 +564,7 @@ capabilities flip and fail.
 
 120
 00:19:30,560 --> 00:19:32,800
-This is ordinary Lambda abstraction.
+This is ordinary lambda abstraction.
 
 121
 00:19:32,800 --> 00:19:35,200
@@ -611,7 +611,7 @@ Capabilities are ordinary functions,
 
 130
 00:20:00,840 --> 00:20:03,640
-also an iterated
+also in iterated
 continuation passing style.
 
 131
@@ -627,7 +627,7 @@ of the function,
 133
 00:20:09,400 --> 00:20:11,400
 for example, in
-the recourse of code to do
+the recursive code to loop
 
 134
 00:20:11,400 --> 00:20:14,520
@@ -641,7 +641,7 @@ define capabilities flip and fail.
 
 136
 00:20:21,800 --> 00:20:24,320
-Flip is an iterator to CPS,
+Flip is an iterated CPS,
 
 137
 00:20:25,080 --> 00:20:27,000
@@ -699,7 +699,7 @@ the composition to the capability flip.
 
 148
 00:21:01,520 --> 00:21:04,400
-The Corta choice now
+The call to choice now
 gets five arguments,
 
 149
@@ -710,12 +710,12 @@ n, and two continuations.
 150
 00:21:11,440 --> 00:21:15,440
 So far, we've seen our
-source language Lambda cap
+source language lambda cap
 
 151
 00:21:15,440 --> 00:21:18,200
 and our translation to
-simply type Lambda calculus
+simply typed lambda calculus
 
 152
 00:21:18,440 --> 00:21:20,960
@@ -748,12 +748,12 @@ program is also typable
 158
 00:21:34,800 --> 00:21:37,480
 under the rules of our second
-language, Lambda two cap.
+language, lambda two cap.
 
 159
 00:21:37,480 --> 00:21:42,040
 So we can use our second translation
-to two level Lambda calculus.
+to two level lambda calculus.
 
 160
 00:21:43,520 --> 00:21:46,000
@@ -780,7 +780,7 @@ and others as dynamic.
 
 165
 00:21:57,560 --> 00:22:02,560
-Specifically, we mark aesthetic
+Specifically, we mark as static
 capability abstraction,
 
 166
@@ -814,7 +814,7 @@ implementations of flip and fail.
 172
 00:22:27,120 --> 00:22:30,920
 We call the result of
-the specialization choice flip fail.
+the specialization choiceFlipFail.
 
 173
 00:22:30,920 --> 00:22:35,560
@@ -828,12 +828,12 @@ have been inlined
 
 175
 00:22:37,760 --> 00:22:39,600
-into the handle implementations.
+into the handler implementations.
 
 176
 00:22:39,600 --> 00:22:42,600
 This enables optimizations
-across effect codes.
+across effect calls.
 
 177
 00:22:42,920 --> 00:22:46,560
@@ -852,12 +852,12 @@ the correct continuation.
 
 180
 00:22:53,720 --> 00:22:58,720
-At the handing side, we see
+At the handling side, we see
 that the result is still
 
 181
 00:22:59,080 --> 00:23:02,560
-an iterated continuation
+in iterated continuation
 passing style. This is OK.
 
 182
@@ -868,27 +868,27 @@ benchmark results again.
 183
 00:23:07,160 --> 00:23:11,880
 We've benchmarked against different
-languages abd different systems,
+languages and different systems:
 
 184
 00:23:12,280 --> 00:23:14,880
-the Kalka language
+the Koka language
 with effect handlers
 
 185
 00:23:14,880 --> 00:23:19,040
-and implementation of multi-pronged
-limited control, eg a scheme
+an implementation of multicore 
+delimited control, in Chez Scheme,
 
 186
 00:23:19,040 --> 00:23:22,800
 and effects as implemented
-in multi(INAUDIBLE).
+in multicore OCaml.
 
 187
 00:23:22,800 --> 00:23:27,800
 In all of these, we see significant
-speed-ups sometimes very big.
+speed-ups, sometimes very big.
 
 188
 00:23:29,080 --> 00:23:31,400
@@ -902,7 +902,7 @@ but still competitive performance.
 190
 00:23:34,480 --> 00:23:36,840
 Interestingly, in the case
-of (INAUDIBLE) scheme,
+of Chez Scheme,
 
 191
 00:23:36,840 --> 00:23:39,680
@@ -915,13 +915,13 @@ and our second translation.
 
 193
 00:23:41,880 --> 00:23:45,680
-This is because (INAUDIBLE) scheme
+This is because Chez Scheme
 does all these reductions for us.
 
 194
 00:23:45,680 --> 00:23:48,280
 We didn't have to extend
-the (INAUDIBLE) compiler
+the Chez Scheme compiler
 
 195
 00:23:48,280 --> 00:23:50,160
@@ -929,8 +929,8 @@ or teach it any new tricks.
 
 196
 00:23:50,400 --> 00:23:55,120
-It's just Lambdas
-inlining data reduction.
+It's just lambdas,
+inlining, beta reduction.
 
 197
 00:23:56,640 --> 00:23:58,440
@@ -954,12 +954,12 @@ passing style.
 201
 00:24:10,320 --> 00:24:12,920
 We are translating to just
-simply type Lambda calculus.
+simply typed lambda calculus.
 
 202
 00:24:12,920 --> 00:24:15,120
 We don't need any
-special run time system
+special run-time system
 
 203
 00:24:15,360 --> 00:24:18,400
@@ -988,8 +988,8 @@ integrating this compilation technique
 
 208
 00:24:35,880 --> 00:24:39,000
-in a new standard
-or language called Effekt.
+in a new stand-alone
+ language called Effekt.
 
 209
 00:24:39,000 --> 00:24:41,160
@@ -998,7 +998,7 @@ You should go check it out.
 210
 00:24:42,960 --> 00:24:44,840
 PHILIP: If you're interested
-in Effekt Handlers
+in effect handlers
 
 211
 00:24:44,840 --> 00:24:47,560
@@ -1011,7 +1011,7 @@ we invite you to read our paper.
 
 213
 00:24:49,680 --> 00:24:53,040
-At the Hope Workshop, we will
+At the HOPE Workshop, we will
 present our new language Effekt
 
 214
@@ -1021,7 +1021,7 @@ and discuss its design.
 215
 00:24:55,080 --> 00:24:59,000
 In another ICFP talk, our
-collaborator (INAUDIBLE) presents
+collaborator Ningning presents
 
 216
 00:24:59,000 --> 00:25:02,000
@@ -1039,7 +1039,7 @@ her Haskell implementation
 
 219
 00:25:07,120 --> 00:25:10,000
-at the Haskell symposium.
+at the Haskell Symposium.
 See you there.
 
 220
@@ -5002,7 +5002,7 @@ example-base synthesizers
 1055
 01:15:12,360 --> 01:15:17,080
 that have come out include Myth,
-Escher and Lambda squared.
+Escher and lambda squared.
 
 1056
 01:15:17,080 --> 01:15:18,880
