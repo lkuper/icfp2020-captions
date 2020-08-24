@@ -98,7 +98,7 @@ Dialogue: 0,0:16:34.28,0:16:35.76,Default,,0,0,0,,Otherwise all of this is no be
 Dialogue: 0,0:16:35.76,0:16:38.84,Default,,0,0,0,,than just extracting recurrences\Nthe old informal way.
 Dialogue: 0,0:16:39.64,0:16:42.80,Default,,0,0,0,,So, the first step here is to fix\Nan operational semantics
 Dialogue: 0,0:16:42.80,0:16:45.92,Default,,0,0,0,,from the source language which\Nis indexed by execution cost.
-Dialogue: 0,0:16:45.92,0:16:49.88,Default,,0,0,0,,You can read this judgement as\NM evaluates in n steps to V.
+Dialogue: 0,0:16:45.92,0:16:49.88,Default,,0,0,0,,You can read this judgment as\NM evaluates in n steps to V.
 Dialogue: 0,0:16:50.68,0:16:54.04,Default,,0,0,0,,And then we prove this following\Ntheorem using a logical relation.
 Dialogue: 0,0:16:54.04,0:16:59.00,Default,,0,0,0,,So, for any closed term m of type A,\Nif m evaluates in n steps to v,
 Dialogue: 0,0:16:59.00,0:17:03.28,Default,,0,0,0,,then the extracted cost of running\NM is an upper bound on n,
@@ -107,17 +107,17 @@ Dialogue: 0,0:17:06.88,0:17:10.28,Default,,0,0,0,,But anyway, this theorem is th
 Dialogue: 0,0:17:10.28,0:17:13.64,Default,,0,0,0,,the operational cost model\Nto the extracted recurrences.
 Dialogue: 0,0:17:14.88,0:17:17.52,Default,,0,0,0,,One important piece of the\Ninformal analysis
 Dialogue: 0,0:17:17.52,0:17:20.80,Default,,0,0,0,,that this translation doesn't take\Ninto account is size abstraction,
-Dialogue: 0,0:17:20.80,0:17:24.00,Default,,0,0,0,,like say, analysing a function\Nwhich takes a list in terms
+Dialogue: 0,0:17:20.80,0:17:24.00,Default,,0,0,0,,like say, analyzing a function\Nwhich takes a list in terms
 Dialogue: 0,0:17:24.00,0:17:27.12,Default,,0,0,0,,of its length or a tree function\Nby depth or something like that.
 Dialogue: 0,0:17:27.12,0:17:30.44,Default,,0,0,0,,Now, we do this abstraction\Nusing a denotational semantics
 Dialogue: 0,0:17:30.44,0:17:32.52,Default,,0,0,0,,from lambda c into\Npartially ordered sets.
 Dialogue: 0,0:17:32.52,0:17:35.00,Default,,0,0,0,,And this means that the\Nobjects that we get out
-Dialogue: 0,0:17:35.00,0:17:38.04,Default,,0,0,0,,are the standard objects you'd\Nrecognise as recurrences.
+Dialogue: 0,0:17:35.00,0:17:38.04,Default,,0,0,0,,are the standard objects you'd\Nrecognize as recurrences.
 Dialogue: 0,0:17:38.04,0:17:41.40,Default,,0,0,0,,You can compute closed forms and\Nasymptotics and stuff like that.
 Dialogue: 0,0:17:42.16,0:17:45.12,Default,,0,0,0,,OK, that was a lot of technical\Ndetail, I acknowledge that
 Dialogue: 0,0:17:45.12,0:17:48.04,Default,,0,0,0,,but luckily all this has all\Nbeen done before.
 Dialogue: 0,0:17:48.04,0:17:50.24,Default,,0,0,0,,And in the year since this\Ntechnique was developed,
-Dialogue: 0,0:17:50.24,0:17:53.08,Default,,0,0,0,,it's been employed to formalise\Nrecurrence extraction
+Dialogue: 0,0:17:50.24,0:17:53.08,Default,,0,0,0,,it's been employed to formalize\Nrecurrence extraction
 Dialogue: 0,0:17:53.08,0:17:55.88,Default,,0,0,0,,for increasingly realistic languages\Nfrom the simply typed
 Dialogue: 0,0:17:55.88,0:17:59.60,Default,,0,0,0,,lambda calculus to inductive\Ntypes all the way up to PCF
 Dialogue: 0,0:17:59.60,0:18:03.76,Default,,0,0,0,,and ML-style let polymorphism.\NBut all this prior work
@@ -193,7 +193,7 @@ Dialogue: 0,0:21:13.96,0:21:16.60,Default,,0,0,0,,for those of you who've forgot
 Dialogue: 0,0:21:16.60,0:21:17.92,Default,,0,0,0,,since you last\Nlearned about it.
 Dialogue: 0,0:21:17.92,0:21:20.56,Default,,0,0,0,,So, amortized analysis comes\Nin a few different forms
 Dialogue: 0,0:21:20.56,0:21:24.12,Default,,0,0,0,,but all of them boil down\Nto essentially smoothing out cost
-Dialogue: 0,0:21:24.12,0:21:26.08,Default,,0,0,0,,across programme execution.
+Dialogue: 0,0:21:24.12,0:21:26.08,Default,,0,0,0,,across program execution.
 Dialogue: 0,0:21:26.08,0:21:29.32,Default,,0,0,0,,So, that when you analyse repeated\Nexecutions of the same function,
 Dialogue: 0,0:21:29.32,0:21:32.20,Default,,0,0,0,,they don't all look like\Nthe most costly one
 Dialogue: 0,0:21:32.20,0:21:34.96,Default,,0,0,0,,and instead look like say\Nthe average one.
@@ -215,21 +215,21 @@ Dialogue: 0,0:22:15.64,0:22:18.88,Default,,0,0,0,,And then the next call to\Ninc
 Dialogue: 0,0:22:18.88,0:22:21.12,Default,,0,0,0,,from one to zero and the\Nsecond bit from zero to one.
 Dialogue: 0,0:22:21.12,0:22:23.68,Default,,0,0,0,,And then to reestablish the credit\Ninvariant we spawn a credit
 Dialogue: 0,0:22:23.68,0:22:26.08,Default,,0,0,0,,to put on the new one bit,\Nwhich incurs a cost of one
-Dialogue: 0,0:22:26.08,0:22:29.04,Default,,0,0,0,,but then that's cancelled out by\Nspending the credit which used
+Dialogue: 0,0:22:26.08,0:22:29.04,Default,,0,0,0,,but then that's canceled out by\Nspending the credit which used
 Dialogue: 0,0:22:29.04,0:22:32.44,Default,,0,0,0,,to be on the least significant bit.\NAgain total two amortized costs.
 Dialogue: 0,0:22:33.48,0:22:36.20,Default,,0,0,0,,This is the essence of the analysis\Nand you can convince yourself
-Dialogue: 0,0:22:36.20,0:22:40.00,Default,,0,0,0,,that in every case, the amortised\Ncost of increment is two.
+Dialogue: 0,0:22:36.20,0:22:40.00,Default,,0,0,0,,that in every case, the amortized\Ncost of increment is two.
 Dialogue: 0,0:22:40.00,0:22:43.92,Default,,0,0,0,,So, in order to do this kind of\Nanalysis by recurrence extraction,
 Dialogue: 0,0:22:43.92,0:22:46.04,Default,,0,0,0,,we need to make\Nthese credit policies
 Dialogue: 0,0:22:46.04,0:22:48.48,Default,,0,0,0,,expressible in the\Nsource language.
 Dialogue: 0,0:22:48.48,0:22:50.92,Default,,0,0,0,,So, to that end, we extend\Nour source language
 Dialogue: 0,0:22:50.92,0:22:53.64,Default,,0,0,0,,with credits to make a language\Nthat we called lambda A.
-Dialogue: 0,0:22:54.28,0:22:57.52,Default,,0,0,0,,So, lambda A internalises\Neverything you need to
+Dialogue: 0,0:22:54.28,0:22:57.52,Default,,0,0,0,,So, lambda A internalizes\Neverything you need to
 Dialogue: 0,0:22:57.52,0:22:59.84,Default,,0,0,0,,express credit invariants\Nin your code,
 Dialogue: 0,0:22:59.84,0:23:01.68,Default,,0,0,0,,and it comes in\Nthree main parts.
 Dialogue: 0,0:23:01.68,0:23:03.84,Default,,0,0,0,,So, first we need\Nto be able to track
 Dialogue: 0,0:23:03.84,0:23:05.80,Default,,0,0,0,,the credits using\Nthe type system.
-Dialogue: 0,0:23:05.80,0:23:09.48,Default,,0,0,0,,So, this new typing judgement\Nsays that m is a term of Type A
+Dialogue: 0,0:23:05.80,0:23:09.48,Default,,0,0,0,,So, this new typing judgment\Nsays that m is a term of Type A
 Dialogue: 0,0:23:09.48,0:23:12.76,Default,,0,0,0,,and context gamma, which\Ncan use up to C credits.
 Dialogue: 0,0:23:12.76,0:23:15.52,Default,,0,0,0,,Now, since we don't want\Ncredits to be duplicated
 Dialogue: 0,0:23:15.52,0:23:18.52,Default,,0,0,0,,and then the same credit\Nspent twice, the type system
@@ -265,7 +265,7 @@ Dialogue: 0,0:24:42.00,0:24:46.60,Default,,0,0,0,,So, in lambda a, we redefine t
 Dialogue: 0,0:24:46.60,0:24:50.04,Default,,0,0,0,,unit, a bit is either in-left of\Na unit which represents a zero,
 Dialogue: 0,0:24:50.04,0:24:52.56,Default,,0,0,0,,or in-right of a unit\Nwith one credit attached,
 Dialogue: 0,0:24:52.56,0:24:55.44,Default,,0,0,0,,which represents one. And\Nthen the code for increment
-Dialogue: 0,0:24:55.44,0:24:57.20,Default,,0,0,0,,is the exact same\Nbehaviour as before,
+Dialogue: 0,0:24:55.44,0:24:57.20,Default,,0,0,0,,is the exact same\Nbehavior as before,
 Dialogue: 0,0:24:57.20,0:25:01.04,Default,,0,0,0,,it just maintains the credit policy.\NIf the list is empty or has zeros,
 Dialogue: 0,0:25:01.04,0:25:03.80,Default,,0,0,0,,in the least significant bit,\Nwe create a credit and make
 Dialogue: 0,0:25:03.80,0:25:06.44,Default,,0,0,0,,a one bit value by attaching\Nthat credit to a unit value
@@ -315,18 +315,18 @@ Dialogue: 0,0:27:05.60,0:27:07.36,Default,,0,0,0,,like the bounding theorem\Nfor
 Dialogue: 0,0:27:07.36,0:27:10.36,Default,,0,0,0,,which connects these recurrences\Nto the operational semantics.
 Dialogue: 0,0:27:10.88,0:27:13.12,Default,,0,0,0,,And similar to how we\Ndid it in prior work.
 Dialogue: 0,0:27:13.12,0:27:16.56,Default,,0,0,0,,We first define a big step\Noperational semantics for lambda a,
-Dialogue: 0,0:27:16.56,0:27:20.08,Default,,0,0,0,,but this time indexed by amortized\Ncost. So, this judgement reads
+Dialogue: 0,0:27:16.56,0:27:20.08,Default,,0,0,0,,but this time indexed by amortized\Ncost. So, this judgment reads
 Dialogue: 0,0:27:20.08,0:27:24.16,Default,,0,0,0,,that M evaluates to V\Nwith an amortized cost.
 Dialogue: 0,0:27:24.16,0:27:27.00,Default,,0,0,0,,Then we use a logical relation to\Nprove the same bounding theorem
 Dialogue: 0,0:27:27.00,0:27:30.64,Default,,0,0,0,,as before but this time the cost\Nper bounding is an amortized cost.
 Dialogue: 0,0:27:31.20,0:27:33.16,Default,,0,0,0,,But the crucial consequence\Nof this theorem
 Dialogue: 0,0:27:33.16,0:27:36.36,Default,,0,0,0,,is that for closed terms, the\Namortized cost that we get
 Dialogue: 0,0:27:36.36,0:27:39.92,Default,,0,0,0,,for the recurrence is a bound on\Nthe actual execution cost.
-Dialogue: 0,0:27:39.92,0:27:42.80,Default,,0,0,0,,And so for example, the set\Nprogramme isn't just linear
+Dialogue: 0,0:27:39.92,0:27:42.80,Default,,0,0,0,,And so for example, the set\Nprogram isn't just linear
 Dialogue: 0,0:27:42.80,0:27:45.40,Default,,0,0,0,,in this strange cost metric\Nwhere we can subtract
 Dialogue: 0,0:27:45.40,0:27:46.84,Default,,0,0,0,,and add arbitrary costs.
 Dialogue: 0,0:27:46.84,0:27:50.00,Default,,0,0,0,,It actually does a linear amount\Nof cons operations.
-Dialogue: 0,0:27:50.52,0:27:52.64,Default,,0,0,0,,So, in summary,\Nwe formalise the process
+Dialogue: 0,0:27:50.52,0:27:52.64,Default,,0,0,0,,So, in summary,\Nwe formalize the process
 Dialogue: 0,0:27:52.64,0:27:55.48,Default,,0,0,0,,of doing amortized analysis\Nby recurrence extraction.
 Dialogue: 0,0:27:55.48,0:27:57.60,Default,,0,0,0,,Given an amortized analysis\Nof a data structure
 Dialogue: 0,0:27:57.60,0:28:00.76,Default,,0,0,0,,such as a binary counter\Nor splay tree written in lambda a,
@@ -344,7 +344,7 @@ Dialogue: 0,0:28:38.60,0:28:42.92,Default,,0,0,0,,OK, our next talk is featuring
 Dialogue: 0,0:28:42.92,0:28:46.08,Default,,0,0,0,,about separation logic for\Nsequential programs.
 Dialogue: 0,0:28:49.04,0:28:50.08,Default,,0,0,0,,ARTHUR CHARGUERAUD: Separation logic
 Dialogue: 0,0:28:50.08,0:28:52.12,Default,,0,0,0,,was introduced in\Nthe early 2000s.
-Dialogue: 0,0:28:52.12,0:28:55.76,Default,,0,0,0,,Since then, it has had tremendous\Nsuccess at programme verification.
+Dialogue: 0,0:28:52.12,0:28:55.76,Default,,0,0,0,,Since then, it has had tremendous\Nsuccess at program verification.
 Dialogue: 0,0:28:56.88,0:29:00.40,Default,,0,0,0,,I believe that today, the ideas\Nof separation logic deserve
 Dialogue: 0,0:29:00.40,0:29:02.24,Default,,0,0,0,,to be taught much more widely.
 Dialogue: 0,0:29:03.76,0:29:06.68,Default,,0,0,0,,For this reason, I've been working\Non a course on separation logic.
@@ -352,7 +352,7 @@ Dialogue: 0,0:29:08.16,0:29:10.68,Default,,0,0,0,,The course focuses on\Nsequent
 Dialogue: 0,0:29:10.68,0:29:12.48,Default,,0,0,0,,Concurrency is interesting\Nbut it's much harder.
 Dialogue: 0,0:29:13.52,0:29:17.52,Default,,0,0,0,,Course is written in the style of\Nthe Software Foundations series,
 Dialogue: 0,0:29:17.52,0:29:19.76,Default,,0,0,0,,where every definition\Nevery lemma,
-Dialogue: 0,0:29:19.76,0:29:23.20,Default,,0,0,0,,and every exercise is formalised\Nusing the Coq proof assistant.
+Dialogue: 0,0:29:19.76,0:29:23.20,Default,,0,0,0,,and every exercise is formalized\Nusing the Coq proof assistant.
 Dialogue: 0,0:29:24.80,0:29:27.72,Default,,0,0,0,,The course covers modern\Nfeatures of Separation logic.
 Dialogue: 0,0:29:27.72,0:29:30.60,Default,,0,0,0,,These are features that will not\Npresent in the original papers
 Dialogue: 0,0:29:30.60,0:29:34.00,Default,,0,0,0,,in separation logic, but have\Nsince then proved very useful
@@ -361,10 +361,10 @@ Dialogue: 0,0:29:38.40,0:29:40.40,Default,,0,0,0,,is an extensive\Nrelated work 
 Dialogue: 0,0:29:40.88,0:29:44.20,Default,,0,0,0,,which I believe nicely completes\N'Peter O'Hearn's' survey,
 Dialogue: 0,0:29:44.20,0:29:47.28,Default,,0,0,0,,which was published last year\Nby focusing specifically
 Dialogue: 0,0:29:47.28,0:29:51.96,Default,,0,0,0,,on the contributions to make a nice\Npresentations of separation logic.
-Dialogue: 0,0:29:54.00,0:29:55.92,Default,,0,0,0,,The course is organised\Nin 10 chapters.
+Dialogue: 0,0:29:54.00,0:29:55.92,Default,,0,0,0,,The course is organized\Nin 10 chapters.
 Dialogue: 0,0:29:56.40,0:29:58.12,Default,,0,0,0,,So, the first three\Nchapters focus on
 Dialogue: 0,0:29:58.12,0:30:00.16,Default,,0,0,0,,basic features of\Nseparation logic,
-Dialogue: 0,0:30:00.16,0:30:03.32,Default,,0,0,0,,such as heap predicates,\Ntriples, entailement.
+Dialogue: 0,0:30:00.16,0:30:03.32,Default,,0,0,0,,such as heap predicates,\Ntriples, entailment.
 Dialogue: 0,0:30:04.72,0:30:05.84,Default,,0,0,0,,The next few chapters focus
 Dialogue: 0,0:30:05.84,0:30:07.88,Default,,0,0,0,,on the presentation\Nof reasoning rules,
 Dialogue: 0,0:30:07.88,0:30:11.04,Default,,0,0,0,,either in the form of triples in the\Nform of weakest preconditions,
@@ -554,7 +554,7 @@ Dialogue: 0,0:40:19.20,0:40:23.88,Default,,0,0,0,,with the state at\Nthe last it
 Dialogue: 0,0:40:23.88,0:40:27.28,Default,,0,0,0,,And such a specification\Ncan be established
 Dialogue: 0,0:40:27.28,0:40:32.32,Default,,0,0,0,,by induction using Coq's\Ninduction mechanism
 Dialogue: 0,0:40:32.32,0:40:34.76,Default,,0,0,0,,by applying the following\Nunrolling rule,
-Dialogue: 0,0:40:34.76,0:40:39.84,Default,,0,0,0,,which essentially unfolds\Nthe whie loop one iteration.
+Dialogue: 0,0:40:34.76,0:40:39.84,Default,,0,0,0,,which essentially unfolds\Nthe while loop one iteration.
 Dialogue: 0,0:40:39.84,0:40:42.60,Default,,0,0,0,,This rule introduces\Na conditional sequence
 Dialogue: 0,0:40:42.60,0:40:47.04,Default,,0,0,0,,and a recursive occurrence\Nof the while loop.
 Dialogue: 0,0:40:47.04,0:40:48.88,Default,,0,0,0,,When reasoning about this\Nrecursive occurrence
@@ -564,7 +564,7 @@ Dialogue: 0,0:40:56.00,0:41:01.00,Default,,0,0,0,,that we are stepping over.
 Dialogue: 0,0:41:01.00,0:41:03.08,Default,,0,0,0,,So in the course,\NI described an example
 Dialogue: 0,0:41:03.08,0:41:06.40,Default,,0,0,0,,illustrating this proof technique
 Dialogue: 0,0:41:06.40,0:41:12.00,Default,,0,0,0,,and compare it with the proof\Nbased on the loop environment.
-Dialogue: 0,0:41:12.00,0:41:15.12,Default,,0,0,0,,In conclusion, you can\Nfind on my webpage
+Dialogue: 0,0:41:12.00,0:41:15.12,Default,,0,0,0,,In conclusion, you can\Nfind on my web page
 Dialogue: 0,0:41:15.12,0:41:18.44,Default,,0,0,0,,the paper, including\Nits eight page appendix
 Dialogue: 0,0:41:18.44,0:41:21.68,Default,,0,0,0,,on all the course material,\Nboth in Coq format
 Dialogue: 0,0:41:21.68,0:41:24.64,Default,,0,0,0,,and HTML format.
@@ -701,7 +701,7 @@ Dialogue: 0,0:47:04.60,0:47:05.80,Default,,0,0,0,,or something like this.
 Dialogue: 0,0:47:05.80,0:47:08.92,Default,,0,0,0,,And, in fact, previous works\Nthe tackled termination
 Dialogue: 0,0:47:08.92,0:47:10.72,Default,,0,0,0,,of Harper's\Nregular-expression matcher,
 Dialogue: 0,0:47:10.72,0:47:11.84,Default,,0,0,0,,some of them anyway,
-Dialogue: 0,0:47:11.84,0:47:14.52,Default,,0,0,0,,used dependantly typed continuations.
+Dialogue: 0,0:47:11.84,0:47:14.52,Default,,0,0,0,,used dependently typed continuations.
 Dialogue: 0,0:47:14.52,0:47:16.88,Default,,0,0,0,,And, in fact, one of these papers,
 Dialogue: 0,0:47:16.88,0:47:18.56,Default,,0,0,0,,a very nice paper\NI highly recommend,
 Dialogue: 0,0:47:18.56,0:47:20.40,Default,,0,0,0,,by Bove, Krauss, and Sozeau,
@@ -721,7 +721,7 @@ Dialogue: 0,0:47:44.88,0:47:47.80,Default,,0,0,0,,the types of regular old\Nfunc
 Dialogue: 0,0:47:47.80,0:47:50.64,Default,,0,0,0,,Just polymorphic types.
 Dialogue: 0,0:47:50.64,0:47:52.12,Default,,0,0,0,,You can't use dependent types.
 Dialogue: 0,0:47:52.12,0:47:53.28,Default,,0,0,0,,You can't use sized types.
-Dialogue: 0,0:47:53.28,0:47:55.08,Default,,0,0,0,,You're not allowed to use\Ntetermination proofs,
+Dialogue: 0,0:47:53.28,0:47:55.08,Default,,0,0,0,,You're not allowed to use\Ntermination proofs,
 Dialogue: 0,0:47:55.08,0:47:57.12,Default,,0,0,0,,or variants, or metrics,\Nor well-founded orders.
 Dialogue: 0,0:47:57.12,0:48:01.44,Default,,0,0,0,,All that heavy duty machinery\Nof termination is not allowed,
 Dialogue: 0,0:48:01.44,0:48:04.24,Default,,0,0,0,,in the regime of strong\Nfunctional programming.
@@ -762,7 +762,7 @@ Dialogue: 0,0:49:20.00,0:49:22.00,Default,,0,0,0,,that hide\Na lot of the machin
 Dialogue: 0,0:49:22.00,0:49:24.32,Default,,0,0,0,,and make it feel\Na quite idiomatic,
 Dialogue: 0,0:49:24.32,0:49:26.40,Default,,0,0,0,,way of writing\Nrecursive functions.
 Dialogue: 0,0:49:26.40,0:49:29.00,Default,,0,0,0,,So, I want to emphasize\Neven though Cedille
-Dialogue: 0,0:49:29.00,0:49:31.04,Default,,0,0,0,,is this type threory\Nthat lets you do proofs
+Dialogue: 0,0:49:29.00,0:49:31.04,Default,,0,0,0,,is this type theory\Nthat lets you do proofs
 Dialogue: 0,0:49:31.04,0:49:34.00,Default,,0,0,0,,and things like that,\Ndependently typed programs
 Dialogue: 0,0:49:34.00,0:49:35.68,Default,,0,0,0,,here we're not using\Nany dependent types
 Dialogue: 0,0:49:35.68,0:49:36.96,Default,,0,0,0,,or any of that\Nkind of machinery,
@@ -963,7 +963,7 @@ Dialogue: 0,0:58:54.84,0:58:57.32,Default,,0,0,0,,Ideally, we'd like\Na single b
 Dialogue: 0,0:58:57.32,0:59:00.76,Default,,0,0,0,,and eight bytes of data.\NSo how do we get there?
 Dialogue: 0,0:59:00.76,0:59:03.24,Default,,0,0,0,,We can write a lot of code,\Npossibly fiddling with bits
 Dialogue: 0,0:59:03.24,0:59:04.92,Default,,0,0,0,,and express the type\Nin Ocaml.
-Dialogue: 0,0:59:04.92,0:59:08.16,Default,,0,0,0,,However, the solution\Nis unlikely to be elegent.
+Dialogue: 0,0:59:04.92,0:59:08.16,Default,,0,0,0,,However, the solution\Nis unlikely to be elegant.
 Dialogue: 0,0:59:08.16,0:59:11.04,Default,,0,0,0,,We could also change\Nthe runtime or the compiler.
 Dialogue: 0,0:59:11.04,0:59:13.32,Default,,0,0,0,,However, this is not\Npractical nor scalable,
 Dialogue: 0,0:59:13.32,0:59:15.80,Default,,0,0,0,,and could become\Na maintenance nightmare.
@@ -1038,7 +1038,7 @@ Dialogue: 0,1:02:28.32,1:02:31.12,Default,,0,0,0,,LLVM IR is more\Nabstract than
 Dialogue: 0,1:02:31.12,1:02:33.52,Default,,0,0,0,,We need to lower it\Na bit in LLVM.
 Dialogue: 0,1:02:33.52,1:02:38.52,Default,,0,0,0,,Conveniently, we defined LLIR\Nto be almost like machine code.
 Dialogue: 0,1:02:38.52,1:02:41.64,Default,,0,0,0,,We lower LLVM IR\Nto LLIR to the target
-Dialogue: 0,1:02:41.64,1:02:44.04,Default,,0,0,0,,specific backend of LLVM\Npassing through
+Dialogue: 0,1:02:41.64,1:02:44.04,Default,,0,0,0,,specific back end of LLVM\Npassing through
 Dialogue: 0,1:02:44.04,1:02:47.56,Default,,0,0,0,,selection DAG and LLIR\Nspecific machine IR.
 Dialogue: 0,1:02:47.56,1:02:49.96,Default,,0,0,0,,On the Ocaml side.\NWe generate LLIR
 Dialogue: 0,1:02:49.96,1:02:52.64,Default,,0,0,0,,from linear as the mapping\Nis almost one to one.
@@ -1058,7 +1058,7 @@ Dialogue: 0,1:03:22.52,1:03:24.36,Default,,0,0,0,,We have added\Ncustom instruct
 Dialogue: 0,1:03:24.36,1:03:27.32,Default,,0,0,0,,required by the Ocaml GC\Nwe're using the entirety
 Dialogue: 0,1:03:27.32,1:03:30.52,Default,,0,0,0,,of the target-specific\Nmachine IR pipeline.
 Dialogue: 0,1:03:31.08,1:03:34.16,Default,,0,0,0,,Since we cross compile C to LLIR,\Nwe have a mapping
-Dialogue: 0,1:03:34.16,1:03:37.36,Default,,0,0,0,,from a selection DAG to LLIR,\Nin our backend,
+Dialogue: 0,1:03:34.16,1:03:37.36,Default,,0,0,0,,from a selection DAG to LLIR,\Nin our back end,
 Dialogue: 0,1:03:37.36,1:03:41.96,Default,,0,0,0,,we map LLIR to selection DAG\Ndue to the circular dependency.
 Dialogue: 0,1:03:41.96,1:03:44.72,Default,,0,0,0,,Most of the LLIR instructions\Nhave a direct correspondent
 Dialogue: 0,1:03:44.72,1:03:46.76,Default,,0,0,0,,in selection DAG\Nwith the exception
@@ -1067,10 +1067,10 @@ Dialogue: 0,1:03:48.48,1:03:51.24,Default,,0,0,0,,such as function calls\Nand 80
 Dialogue: 0,1:03:51.24,1:03:56.20,Default,,0,0,0,,Simple instructions such as\Nadd, subtract, multiply, and so on.
 Dialogue: 0,1:03:56.20,1:03:57.88,Default,,0,0,0,,Do not really warrant\Na custom mapping
 Dialogue: 0,1:03:57.88,1:04:00.12,Default,,0,0,0,,from selection DAG\Nto LLIR, nor from
-Dialogue: 0,1:04:00.12,1:04:04.76,Default,,0,0,0,,LILR to selection DAG.\NSo, we simply map selection DAG,
+Dialogue: 0,1:04:00.12,1:04:04.76,Default,,0,0,0,,LLIR to selection DAG.\NSo, we simply map selection DAG,
 Dialogue: 0,1:04:04.76,1:04:07.80,Default,,0,0,0,,to LLIR instruction,\Nand LLIR instruction
 Dialogue: 0,1:04:07.80,1:04:10.52,Default,,0,0,0,,back to selection DAG\Nbut function calls
-Dialogue: 0,1:04:10.52,1:04:16.20,Default,,0,0,0,,are specific to each target.\NAnd even in all of LLVMs backends,
+Dialogue: 0,1:04:10.52,1:04:16.20,Default,,0,0,0,,are specific to each target.\NAnd even in all of LLVM's back end,
 Dialogue: 0,1:04:16.20,1:04:20.44,Default,,0,0,0,,they require a custom mapping\Nfrom LLVM IR to selection DAG,
 Dialogue: 0,1:04:20.44,1:04:23.44,Default,,0,0,0,,and we have that mapping\Nfor LLIR as well.
 Dialogue: 0,1:04:23.44,1:04:25.40,Default,,0,0,0,,And because\Nof these constraints,
@@ -1133,12 +1133,12 @@ Dialogue: 0,1:06:49.48,1:06:51.48,Default,,0,0,0,,we actually create\Na bigger O
 Dialogue: 0,1:06:51.48,1:06:53.28,Default,,0,0,0,,and push the trampolines down.
 Dialogue: 0,1:06:53.28,1:06:56.08,Default,,0,0,0,,Even though G initially called\NF without a trampoline,
 Dialogue: 0,1:06:56.08,1:07:00.28,Default,,0,0,0,,after in-lining, it requires\None, each kind of allocation,
-Dialogue: 0,1:07:00.28,1:07:03.12,Default,,0,0,0,,doesn't need one, in Carmel FF,
+Dialogue: 0,1:07:00.28,1:07:03.12,Default,,0,0,0,,doesn't need one, in Ocaml FF,
 Dialogue: 0,1:07:03.12,1:07:04.48,Default,,0,0,0,,we are left with a mess.
-Dialogue: 0,1:07:04.48,1:07:07.08,Default,,0,0,0,,The function now tracks heap\Nroots using both Carmel values
+Dialogue: 0,1:07:04.48,1:07:07.08,Default,,0,0,0,,The function now tracks heap\Nroots using both Ocaml values
 Dialogue: 0,1:07:07.08,1:07:12.08,Default,,0,0,0,,and the specific root measurement\Nmechanism specific to C.
 Dialogue: 0,1:07:12.08,1:07:14.24,Default,,0,0,0,,In the future, we aim to\Naddress this problem
-Dialogue: 0,1:07:14.24,1:07:16.68,Default,,0,0,0,,by moving roots over to\Nthe Carmel value mechanism.
+Dialogue: 0,1:07:14.24,1:07:16.68,Default,,0,0,0,,by moving roots over to\Nthe Ocaml value mechanism.
 Dialogue: 0,1:07:16.68,1:07:18.44,Default,,0,0,0,,This is a great improvement
 Dialogue: 0,1:07:18.44,1:07:21.56,Default,,0,0,0,,since it eliminates the upfront\Ncost of root management,
 Dialogue: 0,1:07:21.56,1:07:24.40,Default,,0,0,0,,that's necessary in C.
@@ -1155,7 +1155,7 @@ Dialogue: 0,1:07:46.28,1:07:48.88,Default,,0,0,0,,between the two heaps.
 Dialogue: 0,1:07:48.88,1:07:50.20,Default,,0,0,0,,To illustrate some more problems,
 Dialogue: 0,1:07:50.20,1:07:52.60,Default,,0,0,0,,we consider a function that\Nincrements of double,
 Dialogue: 0,1:07:52.60,1:07:56.08,Default,,0,0,0,,unboxing a value, adding one\Nto it and boxing it back,
-Dialogue: 0,1:07:56.08,1:07:58.56,Default,,0,0,0,,sending it back to the OCaml heap.
+Dialogue: 0,1:07:56.08,1:07:58.56,Default,,0,0,0,,sending it back to the Ocaml heap.
 Dialogue: 0,1:07:58.56,1:07:59.76,Default,,0,0,0,,After in-lining,
 Dialogue: 0,1:07:59.76,1:08:02.64,Default,,0,0,0,,we see that the boxing\NOcaml copy double call
 Dialogue: 0,1:08:02.64,1:08:06.44,Default,,0,0,0,,is now annotated,\Nand it has a trampoline.
@@ -1168,7 +1168,7 @@ Dialogue: 0,1:08:22.92,1:08:25.16,Default,,0,0,0,,to perform even\Na simple tran
 Dialogue: 0,1:08:25.16,1:08:29.12,Default,,0,0,0,,such as constant propagation.
 Dialogue: 0,1:08:29.12,1:08:31.68,Default,,0,0,0,,And the stage we are at in\Nthe pipeline does not help,
 Dialogue: 0,1:08:31.68,1:08:32.84,Default,,0,0,0,,the common ground between C
-Dialogue: 0,1:08:32.84,1:08:34.40,Default,,0,0,0,,and OCaml memory\Nrepresentations
+Dialogue: 0,1:08:32.84,1:08:34.40,Default,,0,0,0,,and Ocaml memory\Nrepresentations
 Dialogue: 0,1:08:34.40,1:08:36.36,Default,,0,0,0,,is not particularly verbose.
 Dialogue: 0,1:08:36.36,1:08:38.72,Default,,0,0,0,,We can work only with the assumption
 Dialogue: 0,1:08:38.72,1:08:40.20,Default,,0,0,0,,that pointers have stored
@@ -1183,12 +1183,12 @@ Dialogue: 0,1:09:02.48,1:09:06.12,Default,,0,0,0,,which allows us to model\Nthe 
 Dialogue: 0,1:09:06.12,1:09:08.96,Default,,0,0,0,,aligned as specific addresses.
 Dialogue: 0,1:09:08.96,1:09:11.80,Default,,0,0,0,,As a proof of concept, we have\Nbuilt two transformations
 Dialogue: 0,1:09:11.80,1:09:13.08,Default,,0,0,0,,working with pointers.
-Dialogue: 0,1:09:13.08,1:09:17.20,Default,,0,0,0,,A local analisys to propagate\Nvalue store to memory
+Dialogue: 0,1:09:13.08,1:09:17.20,Default,,0,0,0,,A local analysis to propagate\Nvalue store to memory
 Dialogue: 0,1:09:17.20,1:09:18.68,Default,,0,0,0,,to loads reading them
 Dialogue: 0,1:09:18.68,1:09:21.64,Default,,0,0,0,,and a global analysis to\Nidentify indirect call targets
 Dialogue: 0,1:09:21.64,1:09:25.20,Default,,0,0,0,,essential for dead code elimination.
 Dialogue: 0,1:09:25.20,1:09:27.44,Default,,0,0,0,,Presently, our optimizer\Nimplements a number
-Dialogue: 0,1:09:27.44,1:09:29.40,Default,,0,0,0,,of classic transformations\Nwhich are recquired
+Dialogue: 0,1:09:27.44,1:09:29.40,Default,,0,0,0,,of classic transformations\Nwhich are required
 Dialogue: 0,1:09:29.40,1:09:31.68,Default,,0,0,0,,mostly to eliminate inefficiencies
 Dialogue: 0,1:09:31.68,1:09:35.52,Default,,0,0,0,,in the C, OCaml, LLIR lowering.
 Dialogue: 0,1:09:35.52,1:09:38.00,Default,,0,0,0,,While we have exposed\Nmany new opportunities,
@@ -1218,7 +1218,7 @@ Dialogue: 0,1:10:30.76,1:10:32.72,Default,,0,0,0,,we can change the calling\Ncon
 Dialogue: 0,1:10:32.72,1:10:34.32,Default,,0,0,0,,to the OCaml one,
 Dialogue: 0,1:10:34.32,1:10:37.72,Default,,0,0,0,,completely eliminating\Nthese trampolines.
 Dialogue: 0,1:10:37.72,1:10:38.84,Default,,0,0,0,,These transformations,
-Dialogue: 0,1:10:38.84,1:10:42.60,Default,,0,0,0,,along with the LLVM cde generator\Nprovide some benefit.
+Dialogue: 0,1:10:38.84,1:10:42.60,Default,,0,0,0,,along with the LLVM code generator\Nprovide some benefit.
 Dialogue: 0,1:10:42.60,1:10:44.76,Default,,0,0,0,,We benchmarked our optimizer\Non a subset of benchmarks
 Dialogue: 0,1:10:44.76,1:10:47.16,Default,,0,0,0,,from operf-macro\Nand operf-micro.
 Dialogue: 0,1:10:47.16,1:10:49.72,Default,,0,0,0,,Unfortunately, we did not yet\Nimplement some optimizations
@@ -1243,7 +1243,7 @@ Dialogue: 0,1:11:29.00,1:11:30.44,Default,,0,0,0,,are quite primitive.
 Dialogue: 0,1:11:30.44,1:11:33.36,Default,,0,0,0,,As an example, we currently\Ninline aggressively functions
 Dialogue: 0,1:11:33.36,1:11:35.04,Default,,0,0,0,,which box or\Ndeconstruct arguments
 Dialogue: 0,1:11:35.04,1:11:38.64,Default,,0,0,0,,in the hope of propagating\Nconstants through them.
-Dialogue: 0,1:11:38.64,1:11:41.12,Default,,0,0,0,,In the future, we have to\Nbuild better huristics
+Dialogue: 0,1:11:38.64,1:11:41.12,Default,,0,0,0,,In the future, we have to\Nbuild better heuristics
 Dialogue: 0,1:11:41.12,1:11:42.72,Default,,0,0,0,,to base our inline decision on how,
 Dialogue: 0,1:11:42.72,1:11:44.60,Default,,0,0,0,,for the purpose of this project,
 Dialogue: 0,1:11:44.60,1:11:46.56,Default,,0,0,0,,the difficultly was in figuring out
@@ -1429,7 +1429,7 @@ Dialogue: 0,1:22:30.48,1:22:32.92,Default,,0,0,0,,is a comonad.
 Dialogue: 0,1:22:32.92,1:22:37.64,Default,,0,0,0,,It has a co-unit,\Nand it has a co-multiplication.
 Dialogue: 0,1:22:37.64,1:22:40.48,Default,,0,0,0,,And in fact, our syntax\Nfor adding comonads
 Dialogue: 0,1:22:40.48,1:22:44.80,Default,,0,0,0,,to our type theory is inspired\Nby the classic Pfenning Davies
-Dialogue: 0,1:22:44.80,1:22:51.00,Default,,0,0,0,,paper on the judgemental\Nreconstruction of S4 modal logic.
+Dialogue: 0,1:22:44.80,1:22:51.00,Default,,0,0,0,,paper on the judgmental\Nreconstruction of S4 modal logic.
 Dialogue: 0,1:22:51.00,1:22:53.04,Default,,0,0,0,,Instead of a dual context,
 Dialogue: 0,1:22:53.04,1:22:56.44,Default,,0,0,0,,we use annotations on our variables.
 Dialogue: 0,1:22:56.44,1:23:03.28,Default,,0,0,0,,And for more details on\Nthe syntax, see our paper.
@@ -1464,7 +1464,7 @@ Dialogue: 0,1:24:52.44,1:24:57.00,Default,,0,0,0,,with a safety modality and we\
 Dialogue: 0,1:24:57.00,1:25:00.12,Default,,0,0,0,,and so on.
 Dialogue: 0,1:25:00.12,1:25:04.68,Default,,0,0,0,,We show how to recover purity\Nfrom capability safety.
 Dialogue: 0,1:25:04.68,1:25:09.24,Default,,0,0,0,,And we also discussed how\Nto do capability taming.
-Dialogue: 0,1:25:09.24,1:25:13.00,Default,,0,0,0,,That is, how to implementally\Nadd safety to an already
+Dialogue: 0,1:25:09.24,1:25:13.00,Default,,0,0,0,,That is, how to incrementally\Nadd safety to an already
 Dialogue: 0,1:25:13.00,1:25:17.24,Default,,0,0,0,,impure language or a library.
 Dialogue: 0,1:25:17.24,1:25:21.08,Default,,0,0,0,,We give a categorical\Nsemantics for this language.
 Dialogue: 0,1:25:21.08,1:25:24.32,Default,,0,0,0,,It is given by a cartesian\Nclosed category
@@ -1812,7 +1812,7 @@ Dialogue: 0,1:43:38.56,1:43:40.48,Default,,0,0,0,,Our resulting algorithm\Nis si
 Dialogue: 0,1:43:40.48,1:43:42.48,Default,,0,0,0,,than the original\NPwD implementation,
 Dialogue: 0,1:43:42.48,1:43:45.08,Default,,0,0,0,,measurably faster than\Nthe optimized PwD implementation
 Dialogue: 0,1:43:45.08,1:43:46.92,Default,,0,0,0,,of Adams et al in 2015
-Dialogue: 0,1:43:46.92,1:43:51.72,Default,,0,0,0,,and it is only around 100 lines of\NOCami cord when fully implemented.
+Dialogue: 0,1:43:46.92,1:43:51.72,Default,,0,0,0,,and it is only around 100 lines of\NOCaml cord when fully implemented.
 Dialogue: 0,1:43:51.72,1:43:54.12,Default,,0,0,0,,The primary contribution of\Nparsing with derivatives
 Dialogue: 0,1:43:54.12,1:43:55.80,Default,,0,0,0,,was the generalized\NBrzozowski's derivatives
 Dialogue: 0,1:43:55.80,1:43:58.44,Default,,0,0,0,,from regular expressions\Nto context free grammars.
@@ -1919,7 +1919,7 @@ Dialogue: 0,1:48:06.60,1:48:10.24,Default,,0,0,0,,with the path back at\Nthe roo
 Dialogue: 0,1:48:10.24,1:48:14.44,Default,,0,0,0,,This brings us to parsing with\Nzippers or PwZ for short.
 Dialogue: 0,1:48:14.44,1:48:16.16,Default,,0,0,0,,We use zippers to save the location
 Dialogue: 0,1:48:16.16,1:48:18.32,Default,,0,0,0,,where the derivative\Nwas successfully taken.
-Dialogue: 0,1:48:18.32,1:48:21.08,Default,,0,0,0,,By doing this we eliminate\Nalmost all of the retraversals
+Dialogue: 0,1:48:18.32,1:48:21.08,Default,,0,0,0,,By doing this we eliminate\Nalmost all of the traversals
 Dialogue: 0,1:48:21.08,1:48:24.20,Default,,0,0,0,,in the original parsing\Nwith derivatives algorithm.
 Dialogue: 0,1:48:24.20,1:48:27.68,Default,,0,0,0,,We use a slightly modified zipper\Ndefinition compared to the original.
 Dialogue: 0,1:48:27.68,1:48:29.88,Default,,0,0,0,,For one, we actually call\Nit a zipper in the code
@@ -1939,7 +1939,7 @@ Dialogue: 0,1:49:01.16,1:49:03.40,Default,,0,0,0,,First, we look at supporting\N
 Dialogue: 0,1:49:03.40,1:49:06.48,Default,,0,0,0,,This requires adding an alternate\Nconstructor to the exp type
 Dialogue: 0,1:49:06.48,1:49:10.96,Default,,0,0,0,,and a corresponding alternate\Ncontext constructor to the cxt type.
 Dialogue: 0,1:49:10.96,1:49:13.00,Default,,0,0,0,,Here we have a simple grammar.
-Dialogue: 0,1:49:13.00,1:49:15.40,Default,,0,0,0,,The inverted triangle labelled\Na1 is an alternate node
+Dialogue: 0,1:49:13.00,1:49:15.40,Default,,0,0,0,,The inverted triangle labeled\Na1 is an alternate node
 Dialogue: 0,1:49:15.40,1:49:17.76,Default,,0,0,0,,and t1 and t2 are its children.
 Dialogue: 0,1:49:17.76,1:49:20.72,Default,,0,0,0,,They should be processed\Nindependently of one another.
 Dialogue: 0,1:49:20.72,1:49:23.88,Default,,0,0,0,,When the zipper moves through\Nthe alternate node a1 it splits.
@@ -1964,8 +1964,8 @@ Dialogue: 0,1:50:07.04,1:50:09.96,Default,,0,0,0,,and the child expression t2.
 Dialogue: 0,1:50:09.96,1:50:13.08,Default,,0,0,0,,Parsing with the second zipper\Ncreates an identical context and zipper
 Dialogue: 0,1:50:13.08,1:50:14.84,Default,,0,0,0,,but they are separate\Nfrom the first ones
 Dialogue: 0,1:50:14.84,1:50:17.56,Default,,0,0,0,,and the third zipper\Nwill do the same.
-Dialogue: 0,1:50:17.56,1:50:20.88,Default,,0,0,0,,We now have three identical\Ncontexts all labelled c4
-Dialogue: 0,1:50:20.88,1:50:23.64,Default,,0,0,0,,and three identical\Nzippers all labelled z4.
+Dialogue: 0,1:50:17.56,1:50:20.88,Default,,0,0,0,,We now have three identical\Ncontexts all labeled c4
+Dialogue: 0,1:50:20.88,1:50:23.64,Default,,0,0,0,,and three identical\Nzippers all labeled z4.
 Dialogue: 0,1:50:23.64,1:50:25.28,Default,,0,0,0,,This is wasted effort.
 Dialogue: 0,1:50:25.28,1:50:28.08,Default,,0,0,0,,Not only that but if we were to add\Nsupport for cycles at this point
 Dialogue: 0,1:50:28.08,1:50:29.72,Default,,0,0,0,,the inefficiency could compound
@@ -2129,7 +2129,7 @@ Dialogue: 0,1:56:54.56,1:56:57.44,Default,,0,0,0,,So we have introduced\Nparsing
 Dialogue: 0,1:56:57.44,1:56:58.84,Default,,0,0,0,,a new general parsing algorithm
 Dialogue: 0,1:56:58.84,1:56:59.84,Default,,0,0,0,,that is simple to implement,
 Dialogue: 0,1:56:59.84,1:57:01.32,Default,,0,0,0,,it provides surprisingly\Ngood performance.
-Dialogue: 0,1:57:02.56,1:57:04.92,Default,,0,0,0,,Parsing with derivatives generalise\Nthe Bruzewski derivative
+Dialogue: 0,1:57:02.56,1:57:04.92,Default,,0,0,0,,Parsing with derivatives generalize\Nthe Bruzewski derivative
 Dialogue: 0,1:57:04.92,1:57:07.04,Default,,0,0,0,,from regular expressions to\Ncontext free grammars.
 Dialogue: 0,1:57:07.56,1:57:09.84,Default,,0,0,0,,We have generalized\Nthe zipper from tree structures
 Dialogue: 0,1:57:09.84,1:57:11.04,Default,,0,0,0,,to context free grammars.
@@ -2233,7 +2233,7 @@ Dialogue: 0,2:01:52.96,2:01:54.40,Default,,0,0,0,,invariant learning techniques.
 Dialogue: 0,2:01:55.40,2:01:58.00,Default,,0,0,0,,Before I detail this type\Ninference technique
 Dialogue: 0,2:01:58.00,2:02:02.40,Default,,0,0,0,,let's start by an introduction\Nof our theoretical frameworks.
 Dialogue: 0,2:02:03.16,2:02:05.60,Default,,0,0,0,,Terms, language and rewriting systems.
-Dialogue: 0,2:02:06.36,2:02:10.04,Default,,0,0,0,,The term is a labelled tree that we\Nusually represent like this.
+Dialogue: 0,2:02:06.36,2:02:10.04,Default,,0,0,0,,The term is a labeled tree that we\Nusually represent like this.
 Dialogue: 0,2:02:10.52,2:02:14.44,Default,,0,0,0,,It is composed of a symbol f\Nliving in a ranked alphabet
 Dialogue: 0,2:02:14.44,2:02:17.08,Default,,0,0,0,,and n subterms t1 to tn.
 Dialogue: 0,2:02:17.56,2:02:20.08,Default,,0,0,0,,Where n is the arity of the symbol f.
@@ -2274,7 +2274,7 @@ Dialogue: 0,2:04:00.08,2:04:03.72,Default,,0,0,0,,is translated into the one or 
 Dialogue: 0,2:04:04.24,2:04:06.68,Default,,0,0,0,,Rewriting system can also\Nbe used to describe
 Dialogue: 0,2:04:06.68,2:04:09.60,Default,,0,0,0,,a regular language of\Nterms as tree automata.
 Dialogue: 0,2:04:10.32,2:04:12.64,Default,,0,0,0,,Here is for instance on the right.
-Dialogue: 0,2:04:12.64,2:04:15.80,Default,,0,0,0,,The tree automaton\Nrecognising every natural number
+Dialogue: 0,2:04:12.64,2:04:15.80,Default,,0,0,0,,The tree automaton\Nrecognizing every natural number
 Dialogue: 0,2:04:15.80,2:04:19.96,Default,,0,0,0,,which can be used to partially\Nrepresent the int type in OCaml.
 Dialogue: 0,2:04:20.44,2:04:25.64,Default,,0,0,0,,So rewriting rule defines\Nthat 0 rewrites into int
 Dialogue: 0,2:04:25.64,2:04:27.08,Default,,0,0,0,,because it is int
@@ -2285,7 +2285,7 @@ Dialogue: 0,2:04:38.68,2:04:41.68,Default,,0,0,0,,It defines two more\Nrules for
 Dialogue: 0,2:04:41.68,2:04:44.56,Default,,0,0,0,,that closely match\Nthe OCaml type definition.
 Dialogue: 0,2:04:44.56,2:04:47.12,Default,,0,0,0,,Tree automata can even\Nrepresent regular language
 Dialogue: 0,2:04:47.12,2:04:49.60,Default,,0,0,0,,that are not possible\Nto define in OCaml.
-Dialogue: 0,2:04:49.60,2:04:53.56,Default,,0,0,0,,For instance, here is tree automata\Nrecognising even numbers.
+Dialogue: 0,2:04:49.60,2:04:53.56,Default,,0,0,0,,For instance, here is tree automata\Nrecognizing even numbers.
 Dialogue: 0,2:04:54.08,2:04:56.60,Default,,0,0,0,,This can be seen as\Nthe subtype of int.
 Dialogue: 0,2:04:56.60,2:05:00.32,Default,,0,0,0,,In our case we call it\Na regular language type.
 Dialogue: 0,2:05:00.32,2:05:03.72,Default,,0,0,0,,Now that we are familiarized\Nwith rewriting systems
@@ -2329,7 +2329,7 @@ Dialogue: 0,2:06:52.52,2:06:56.40,Default,,0,0,0,,the list must be sorted which 
 Dialogue: 0,2:06:56.40,2:06:57.40,Default,,0,0,0,,named sorted.
 Dialogue: 0,2:06:57.88,2:06:59.88,Default,,0,0,0,,We propagate back what we have found
 Dialogue: 0,2:06:59.88,2:07:02.84,Default,,0,0,0,,and check that it matches\Nthe initial type information
-Dialogue: 0,2:07:03.36,2:07:05.04,Default,,0,0,0,,and then we reapeat,\Nthe same procedure
+Dialogue: 0,2:07:03.36,2:07:05.04,Default,,0,0,0,,and then we repeat,\Nthe same procedure
 Dialogue: 0,2:07:05.04,2:07:06.60,Default,,0,0,0,,with the subterm.
 Dialogue: 0,2:07:06.60,2:07:08.44,Default,,0,0,0,,Here we need to check, sort l.
 Dialogue: 0,2:07:08.96,2:07:11.20,Default,,0,0,0,,We again extract the template\Nsignature for sort.
@@ -2346,7 +2346,7 @@ Dialogue: 0,2:07:39.60,2:07:42.36,Default,,0,0,0,,and an output regular\Nlanguag
 Dialogue: 0,2:07:42.36,2:07:46.00,Default,,0,0,0,,We want to find every\Ninput type A1 to An
 Dialogue: 0,2:07:46.00,2:07:50.36,Default,,0,0,0,,such that every term f(t1)\Nto tn is typed with O
 Dialogue: 0,2:07:50.88,2:07:53.36,Default,,0,0,0,,when each ti is typed with AI.
-Dialogue: 0,2:07:53.36,2:07:56.00,Default,,0,0,0,,This can be summarised with\Nthe following abstract
+Dialogue: 0,2:07:53.36,2:07:56.00,Default,,0,0,0,,This can be summarized with\Nthe following abstract
 Dialogue: 0,2:07:56.00,2:07:57.60,Default,,0,0,0,,writing rule for f.
 Dialogue: 0,2:07:57.60,2:08:00.76,Default,,0,0,0,,For instance let's consider\Nthe following rewriting system
 Dialogue: 0,2:08:00.76,2:08:02.72,Default,,0,0,0,,defining the recursive function
@@ -2368,7 +2368,7 @@ Dialogue: 0,2:08:46.12,2:08:47.92,Default,,0,0,0,,It consists in repeating four 
 Dialogue: 0,2:08:48.40,2:08:50.84,Default,,0,0,0,,until it finds a solution\Nor a counter-example.
 Dialogue: 0,2:08:51.32,2:08:52.96,Default,,0,0,0,,Step one we experiment.
 Dialogue: 0,2:08:53.44,2:08:56.60,Default,,0,0,0,,We evaluate some terms of\Nthe form of f of t1 to tn
-Dialogue: 0,2:08:56.60,2:09:01.96,Default,,0,0,0,,where f is an analysed symbol and t1\Nto tn some random input values.
+Dialogue: 0,2:08:56.60,2:09:01.96,Default,,0,0,0,,where f is an analyzed symbol and t1\Nto tn some random input values.
 Dialogue: 0,2:09:01.96,2:09:05.36,Default,,0,0,0,,We do that efficiently using\Nthe tree automaton completion algorithm.
 Dialogue: 0,2:09:05.88,2:09:08.60,Default,,0,0,0,,We then observe the result\Nof our experiments
 Dialogue: 0,2:09:08.60,2:09:12.52,Default,,0,0,0,,and deduce some constraints on\Nthe language we are learning.
@@ -2384,7 +2384,7 @@ Dialogue: 0,2:09:32.48,2:09:35.44,Default,,0,0,0,,and if it isn't we continue\Nb
 Dialogue: 0,2:09:36.44,2:09:37.84,Default,,0,0,0,,To illustrate the procedure,
 Dialogue: 0,2:09:37.84,2:09:40.00,Default,,0,0,0,,let's take back\Nthe even function example.
 Dialogue: 0,2:09:40.76,2:09:44.12,Default,,0,0,0,,First we experiment with\Nthe values 0, 1 and 2
-Dialogue: 0,2:09:44.12,2:09:49.08,Default,,0,0,0,,that are recognised in this\Nautomata by this state X0, X1, X2.
+Dialogue: 0,2:09:44.12,2:09:49.08,Default,,0,0,0,,that are recognized in this\Nautomata by this state X0, X1, X2.
 Dialogue: 0,2:09:49.08,2:09:51.20,Default,,0,0,0,,Using the tree automaton completion
 Dialogue: 0,2:09:51.20,2:09:54.88,Default,,0,0,0,,we know that Even of 0\Nand Even of 2 rewrites to true.
 Dialogue: 0,2:09:55.36,2:09:57.36,Default,,0,0,0,,This is encoded by\Nthe following rules.

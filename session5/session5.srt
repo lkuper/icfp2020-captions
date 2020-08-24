@@ -405,7 +405,7 @@ is indexed by execution cost.
 
 88
 00:16:45,920 --> 00:16:49,880
-You can read this judgement as
+You can read this judgment as
 M evaluates in n steps to V.
 
 89
@@ -450,7 +450,7 @@ into account is size abstraction,
 
 97
 00:17:20,800 --> 00:17:24,000
-like say, analysing a function
+like say, analyzing a function
 which takes a list in terms
 
 98
@@ -476,7 +476,7 @@ objects that we get out
 102
 00:17:35,000 --> 00:17:38,040
 are the standard objects you'd
-recognise as recurrences.
+recognize as recurrences.
 
 103
 00:17:38,040 --> 00:17:41,400
@@ -500,7 +500,7 @@ technique was developed,
 
 107
 00:17:50,240 --> 00:17:53,080
-it's been employed to formalise
+it's been employed to formalize
 recurrence extraction
 
 108
@@ -877,7 +877,7 @@ to essentially smoothing out cost
 
 183
 00:21:24,120 --> 00:21:26,080
-across programme execution.
+across program execution.
 
 184
 00:21:26,080 --> 00:21:29,320
@@ -985,7 +985,7 @@ which incurs a cost of one
 
 205
 00:22:26,080 --> 00:22:29,040
-but then that's cancelled out by
+but then that's canceled out by
 spending the credit which used
 
 206
@@ -1000,7 +1000,7 @@ and you can convince yourself
 
 208
 00:22:36,200 --> 00:22:40,000
-that in every case, the amortised
+that in every case, the amortized
 cost of increment is two.
 
 209
@@ -1030,7 +1030,7 @@ that we called lambda A.
 
 214
 00:22:54,280 --> 00:22:57,520
-So, lambda A internalises
+So, lambda A internalizes
 everything you need to
 
 215
@@ -1055,7 +1055,7 @@ the type system.
 
 219
 00:23:05,800 --> 00:23:09,480
-So, this new typing judgement
+So, this new typing judgment
 says that m is a term of Type A
 
 220
@@ -1234,7 +1234,7 @@ then the code for increment
 255
 00:24:55,440 --> 00:24:57,200
 is the exact same
-behaviour as before,
+behavior as before,
 
 256
 00:24:57,200 --> 00:25:01,040
@@ -1483,7 +1483,7 @@ operational semantics for lambda a,
 305
 00:27:16,560 --> 00:27:20,080
 but this time indexed by amortized
-cost. So, this judgement reads
+cost. So, this judgment reads
 
 306
 00:27:20,080 --> 00:27:24,160
@@ -1518,7 +1518,7 @@ the actual execution cost.
 312
 00:27:39,920 --> 00:27:42,800
 And so for example, the set
-programme isn't just linear
+program isn't just linear
 
 313
 00:27:42,800 --> 00:27:45,400
@@ -1537,7 +1537,7 @@ of cons operations.
 316
 00:27:50,520 --> 00:27:52,640
 So, in summary,
-we formalise the process
+we formalize the process
 
 317
 00:27:52,640 --> 00:27:55,480
@@ -1623,7 +1623,7 @@ the early 2000s.
 334
 00:28:52,120 --> 00:28:55,760
 Since then, it has had tremendous
-success at programme verification.
+success at program verification.
 
 335
 00:28:56,880 --> 00:29:00,400
@@ -1661,7 +1661,7 @@ every lemma,
 
 342
 00:29:19,760 --> 00:29:23,200
-and every exercise is formalised
+and every exercise is formalized
 using the Coq proof assistant.
 
 343
@@ -1706,7 +1706,7 @@ presentations of separation logic.
 
 351
 00:29:54,000 --> 00:29:55,920
-The course is organised
+The course is organized
 in 10 chapters.
 
 352
@@ -1722,7 +1722,7 @@ separation logic,
 354
 00:30:00,160 --> 00:30:03,320
 such as heap predicates,
-triples, entailement.
+triples, entailment.
 
 355
 00:30:04,720 --> 00:30:05,840
@@ -2636,7 +2636,7 @@ unrolling rule,
 544
 00:40:34,760 --> 00:40:39,840
 which essentially unfolds
-the whie loop one iteration.
+the while loop one iteration.
 
 545
 00:40:39,840 --> 00:40:42,600
@@ -2684,7 +2684,7 @@ based on the loop environment.
 554
 00:41:12,000 --> 00:41:15,120
 In conclusion, you can
-find on my webpage
+find on my web page
 
 555
 00:41:15,120 --> 00:41:18,440
@@ -3306,7 +3306,7 @@ some of them anyway,
 
 691
 00:47:11,840 --> 00:47:14,520
-used dependantly typed continuations.
+used dependently typed continuations.
 
 692
 00:47:14,520 --> 00:47:16,880
@@ -3391,7 +3391,7 @@ You can't use sized types.
 711
 00:47:53,280 --> 00:47:55,080
 You're not allowed to use
-tetermination proofs,
+termination proofs,
 
 712
 00:47:55,080 --> 00:47:57,120
@@ -3577,7 +3577,7 @@ even though Cedille
 
 752
 00:49:29,000 --> 00:49:31,040
-is this type threory
+is this type theory
 that lets you do proofs
 
 753
@@ -4578,7 +4578,7 @@ in Ocaml.
 953
 00:59:04,920 --> 00:59:08,160
 However, the solution
-is unlikely to be elegent.
+is unlikely to be elegant.
 
 954
 00:59:08,160 --> 00:59:11,040
@@ -4950,7 +4950,7 @@ to LLIR to the target
 
 1028
 01:02:41,640 --> 01:02:44,040
-specific backend of LLVM
+specific back end of LLVM
 passing through
 
 1029
@@ -5050,7 +5050,7 @@ we have a mapping
 1048
 01:03:34,160 --> 01:03:37,360
 from a selection DAG to LLIR,
-in our backend,
+in our back end,
 
 1049
 01:03:37,360 --> 01:03:41,960
@@ -5094,7 +5094,7 @@ to LLIR, nor from
 
 1057
 01:04:00,120 --> 01:04:04,760
-LILR to selection DAG.
+LLIR to selection DAG.
 So, we simply map selection DAG,
 
 1058
@@ -5110,7 +5110,7 @@ but function calls
 1060
 01:04:10,520 --> 01:04:16,200
 are specific to each target.
-And even in all of LLVMs backends,
+And even in all of LLVM's back end,
 
 1061
 01:04:16,200 --> 01:04:20,440
@@ -5410,7 +5410,7 @@ one, each kind of allocation,
 
 1123
 01:07:00,280 --> 01:07:03,120
-doesn't need one, in Carmel FF,
+doesn't need one, in Ocaml FF,
 
 1124
 01:07:03,120 --> 01:07:04,480
@@ -5419,7 +5419,7 @@ we are left with a mess.
 1125
 01:07:04,480 --> 01:07:07,080
 The function now tracks heap
-roots using both Carmel values
+roots using both Ocaml values
 
 1126
 01:07:07,080 --> 01:07:12,080
@@ -5434,7 +5434,7 @@ address this problem
 1128
 01:07:14,240 --> 01:07:16,680
 by moving roots over to
-the Carmel value mechanism.
+the Ocaml value mechanism.
 
 1129
 01:07:16,680 --> 01:07:18,440
@@ -5513,7 +5513,7 @@ to it and boxing it back,
 
 1145
 01:07:56,080 --> 01:07:58,560
-sending it back to the OCaml heap.
+sending it back to the Ocaml heap.
 
 1146
 01:07:58,560 --> 01:07:59,760
@@ -5574,7 +5574,7 @@ the common ground between C
 
 1158
 01:08:32,840 --> 01:08:34,400
-and OCaml memory
+and Ocaml memory
 representations
 
 1159
@@ -5642,7 +5642,7 @@ working with pointers.
 
 1173
 01:09:13,080 --> 01:09:17,200
-A local analisys to propagate
+A local analysis to propagate
 value store to memory
 
 1174
@@ -5666,7 +5666,7 @@ implements a number
 1178
 01:09:27,440 --> 01:09:29,400
 of classic transformations
-which are recquired
+which are required
 
 1179
 01:09:29,400 --> 01:09:31,680
@@ -5800,7 +5800,7 @@ These transformations,
 
 1208
 01:10:38,840 --> 01:10:42,600
-along with the LLVM cde generator
+along with the LLVM code generator
 provide some benefit.
 
 1209
@@ -5917,7 +5917,7 @@ constants through them.
 1233
 01:11:38,640 --> 01:11:41,120
 In the future, we have to
-build better huristics
+build better heuristics
 
 1234
 01:11:41,120 --> 01:11:42,720
@@ -6760,7 +6760,7 @@ by the classic Pfenning Davies
 
 1419
 01:22:44,800 --> 01:22:51,000
-paper on the judgemental
+paper on the judgmental
 reconstruction of S4 modal logic.
 
 1420
@@ -6925,7 +6925,7 @@ to do capability taming.
 
 1454
 01:25:09,240 --> 01:25:13,000
-That is, how to implementally
+That is, how to incrementally
 add safety to an already
 
 1455
@@ -8535,7 +8535,7 @@ of Adams et al in 2015
 1802
 01:43:46,920 --> 01:43:51,720
 and it is only around 100 lines of
-OCami cord when fully implemented.
+OCaml cord when fully implemented.
 
 1803
 01:43:51,720 --> 01:43:54,120
@@ -9040,7 +9040,7 @@ was successfully taken.
 1909
 01:48:18,320 --> 01:48:21,080
 By doing this we eliminate
-almost all of the retraversals
+almost all of the traversals
 
 1910
 01:48:21,080 --> 01:48:24,200
@@ -9133,7 +9133,7 @@ Here we have a simple grammar.
 
 1929
 01:49:13,000 --> 01:49:15,400
-The inverted triangle labelled
+The inverted triangle labeled
 a1 is an alternate node
 
 1930
@@ -9253,12 +9253,12 @@ will do the same.
 1954
 01:50:17,560 --> 01:50:20,880
 We now have three identical
-contexts all labelled c4
+contexts all labeled c4
 
 1955
 01:50:20,880 --> 01:50:23,640
 and three identical
-zippers all labelled z4.
+zippers all labeled z4.
 
 1956
 01:50:23,640 --> 01:50:25,280
@@ -10031,7 +10031,7 @@ good performance.
 
 2119
 01:57:02,560 --> 01:57:04,920
-Parsing with derivatives generalise
+Parsing with derivatives generalize
 the Bruzewski derivative
 
 2120
@@ -10515,7 +10515,7 @@ Terms, language and rewriting systems.
 
 2223
 02:02:06,360 --> 02:02:10,040
-The term is a labelled tree that we
+The term is a labeled tree that we
 usually represent like this.
 
 2224
@@ -10708,7 +10708,7 @@ Here is for instance on the right.
 2264
 02:04:12,640 --> 02:04:15,800
 The tree automaton
-recognising every natural number
+recognizing every natural number
 
 2265
 02:04:15,800 --> 02:04:19,960
@@ -10761,7 +10761,7 @@ to define in OCaml.
 2275
 02:04:49,600 --> 02:04:53,560
 For instance, here is tree automata
-recognising even numbers.
+recognizing even numbers.
 
 2276
 02:04:54,080 --> 02:04:56,600
@@ -10959,7 +10959,7 @@ the initial type information
 
 2319
 02:07:03,360 --> 02:07:05,040
-and then we reapeat,
+and then we repeat,
 the same procedure
 
 2320
@@ -11038,7 +11038,7 @@ when each ti is typed with AI.
 
 2336
 02:07:53,360 --> 02:07:56,000
-This can be summarised with
+This can be summarized with
 the following abstract
 
 2337
@@ -11141,7 +11141,7 @@ the form of f of t1 to tn
 
 2358
 02:08:56,600 --> 02:09:01,960
-where f is an analysed symbol and t1
+where f is an analyzed symbol and t1
 to tn some random input values.
 
 2359
@@ -11217,7 +11217,7 @@ the values 0, 1 and 2
 
 2374
 02:09:44,120 --> 02:09:49,080
-that are recognised in this
+that are recognized in this
 automata by this state X0, X1, X2.
 
 2375
