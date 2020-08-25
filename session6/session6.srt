@@ -1081,7 +1081,7 @@ the challenge of extending
 
 228
 00:28:03,920 --> 00:28:07,680
-the meta theory of
+the metatheory of
 Scala's core type system.
 
 229
@@ -1092,7 +1092,7 @@ by Paolo Giarrusso
 230
 00:28:10,960 --> 00:28:15,240
 and the paper is entitled,
-Scala step-by-step
+Scala Step-by-Step:
 
 231
 00:28:15,240 --> 00:28:20,240
@@ -1116,13 +1116,13 @@ and Robbert Krebbers.
 
 235
 00:28:29,120 --> 00:28:34,160
-A new approach to soundness
-for DOT (INAUDIBLE).
+A new approach to soundness proofs for the DOT calculus,
+the core of the Scala programming language.
 
 236
 00:28:34,160 --> 00:28:36,800
-Before we dive into these
-stories you might task,
+Before we dive into this
+talk, you might ask,
 
 237
 00:28:36,800 --> 00:28:39,560
@@ -1132,16 +1132,16 @@ the Scala type system?
 238
 00:28:39,560 --> 00:28:42,600
 One might answer as
-Scala unifies financial
+Scala unifies functional
 
 239
 00:28:42,600 --> 00:28:44,680
-and object oriented programming,
+and object-oriented programming,
 
 240
 00:28:44,680 --> 00:28:46,680
-while also very expressive
-modular system.
+or has a very expressive
+module system.
 
 241
 00:28:46,680 --> 00:28:48,240
@@ -1154,69 +1154,70 @@ programming languages,
 
 243
 00:28:50,400 --> 00:28:53,120
-software modules are equalized
-to special constructs,
+software modules are expressed
+as special constructs,
 
 244
 00:28:53,120 --> 00:28:55,440
-such as type classes or modules,
+such as type classes or ML modules,
 
 245
 00:28:55,440 --> 00:28:59,720
-which are not first class and require
-a special abstraction making.
+which are not first-class and require
+a special abstraction mechanism.
 
 246
 00:28:59,720 --> 00:29:04,400
-Instead, Scala extends irregular
-objects without a planned member,
+Instead, Scala extends regular
+objects with abstract type members,
 
 247
 00:29:04,400 --> 00:29:07,240
 allowing objects to serve
-as first-class model,
+as first-class modules,
 
 248
 00:29:07,240 --> 00:29:09,800
-hence you can insensate
-modules on time
+hence you can instantiate
+modules at run-time
 
 249
 00:29:09,800 --> 00:29:12,000
 and abstract code across
-modules you're using
+modules using
 
 250
 00:29:12,000 --> 00:29:14,400
-regularized kind of
-structural mechanisms,
+regular Scala
+abstraction mechanisms,
 
 251
 00:29:14,400 --> 00:29:17,920
-such as playing functions
-or even mixing in (INAUDIBLE).
+such as plain functions
+or even mix-in inheritance.
 
 252
 00:29:17,920 --> 00:29:22,120
-Well, absolute types of (INAUDBLE)
-sound type speed time systems
+While abstract types appear in other
+sound type (INAUDIBLE) systems,
 
 253
 00:29:22,120 --> 00:29:25,120
-scala are time members are
+Scala abstract type members are
 a significant challenge
 
 254
 00:29:25,120 --> 00:29:27,280
-for a type soundness
+for a type soundness proof
 
 255
 00:29:27,280 --> 00:29:32,600
-because they gain (INAUDIBLE).
+because they gain impredicative type members,
+which are relatives of Type colon Type
 
 256
 00:29:33,480 --> 00:29:35,000
-Challenging
+and are challenging
 to prove sound.
 
 257
@@ -1230,7 +1231,7 @@ While Scala is interesting,
 
 259
 00:29:42,040 --> 00:29:44,560
-it's type soundness has been
+its type soundness has been
 in fact an open question
 
 260
@@ -1239,12 +1240,12 @@ since Scala's introduction in 2003.
 
 261
 00:29:47,600 --> 00:29:49,560
-Soundness proof has been
-(INAUDIBLE) checked
+Soundness proofs has been
+machine-checked
 
 262
 00:29:49,720 --> 00:29:51,280
-for significant (INAUDIBLE),
+for significant Scala fragments:
 
 263
 00:29:51,400 --> 00:29:54,520
@@ -1261,12 +1262,13 @@ indeed abstract.
 
 266
 00:30:00,400 --> 00:30:04,560
-And DOT calculi lags behind
-Scala even on call features.
+And DOT calculi lag behind
+Scala even on core features.
 
 267
 00:30:04,560 --> 00:30:07,920
-In (INAUDIBLE) DOT is hard to extend
+And are not catching up.
+DOT is hard to extend
 
 268
 00:30:07,920 --> 00:30:11,680
@@ -1281,7 +1283,7 @@ sensible DOT calculus,
 270
 00:30:13,920 --> 00:30:16,760
 our approach is to avoid
-syntactic rules which is
+syntactic proofs, which is
 
 271
 00:30:16,840 --> 00:30:18,480
@@ -1289,8 +1291,8 @@ preservation and progress.
 
 272
 00:30:18,480 --> 00:30:22,920
-Instead, would be at
-the logical relations models
+Instead, we build
+logical relations models
 
 273
 00:30:22,920 --> 00:30:25,480
@@ -1299,8 +1301,8 @@ and data abstraction.
 
 274
 00:30:25,480 --> 00:30:29,000
-Then, a retrofit version
-of DOT over model
+Then, retrofitted a version
+of DOT over this model,
 
 275
 00:30:29,000 --> 00:30:31,240
@@ -1342,16 +1344,16 @@ an example of Scala code.
 
 283
 00:30:53,920 --> 00:30:56,600
-In these examples, we create
+In this example, we create
 validator components
 
 284
 00:30:56,600 --> 00:30:59,120
-to validate input from users.
+to validate inputs from users.
 
 285
 00:30:59,120 --> 00:31:02,440
-They provide an abstract
+They provide an abstract type
 validator of valid inputs.
 
 286
@@ -1362,7 +1364,7 @@ constructor is made
 287
 00:31:04,720 --> 00:31:09,280
 that validates its input and returns
-either valid data or nothing.
+either a validator or nothing.
 
 288
 00:31:09,280 --> 00:31:12,240
@@ -1380,12 +1382,12 @@ abstract type valid.
 
 291
 00:31:20,320 --> 00:31:21,880
-Simplified code.
+Simplify the code.
 
 292
 00:31:21,880 --> 00:31:24,960
-We had code that
-input type to the int.
+We had called the
+input type to be int.
 
 293
 00:31:24,960 --> 00:31:27,160
@@ -1402,25 +1404,25 @@ The solution is in the next slide.
 
 296
 00:31:32,640 --> 00:31:35,960
-Our solution is an option to
-the client's type of validators.
+Our solution is an object that
+defines the type of validators.
 
 297
 00:31:35,960 --> 00:31:39,440
-In evidence, a type validator
-contains two members,
+Inhabitants of type validator
+contain two members,
 
 298
 00:31:39,440 --> 00:31:41,280
-the type validator inputs, valid,
+the type of valid inputs, valid,
 
 299
 00:31:41,280 --> 00:31:43,440
-and the smart constructor is made.
+and the smart constructor is make.
 
 300
 00:31:43,440 --> 00:31:45,880
-Valid is to be a subtype of int,
+Valid is declared to be a subtype of int,
 
 301
 00:31:45,880 --> 00:31:47,480
@@ -1428,27 +1430,27 @@ the type of all ints.
 
 302
 00:31:47,480 --> 00:31:50,720
-That is type valid as int
-(INAUDIBLE) upper bound
+That is type valid has int
+as upper bound
 
 303
 00:31:50,720 --> 00:31:55,560
-and implicitly (INAUDIBLE)
+and implicitly the empty
 type nothing as lower bound.
 
 304
 00:31:55,560 --> 00:31:58,760
-These bounds encode
-valid as abstract.
+These bounds encode that
+valid is abstract.
 
 305
 00:31:58,760 --> 00:32:03,240
-Hence, in evidence of valid can
+Hence, inhabitants of valid can
 only be constructed through make.
 
 306
 00:32:03,240 --> 00:32:06,480
-Function make validator maps input k
+Function mkValidator maps input k
 
 307
 00:32:06,480 --> 00:32:10,120
@@ -1458,7 +1460,7 @@ only integers greater than k.
 308
 00:32:10,120 --> 00:32:13,720
 For instance, here by
-calling make validator zero,
+calling mkValidator zero,
 
 309
 00:32:13,720 --> 00:32:15,800
@@ -1467,7 +1469,7 @@ called pos which
 
 310
 00:32:16,000 --> 00:32:18,240
-only accepts positive ints
+only accepts positive integers
 
 311
 00:32:18,240 --> 00:32:22,080
@@ -1484,16 +1486,16 @@ because positive valid is abstract
 314
 00:32:28,440 --> 00:32:30,880
 even though it is
-implemented by int.
+implemented by int,
 
 315
 00:32:30,880 --> 00:32:34,160
-Preventing users from bypassing
-as smart constructors.
+preventing users from bypassing
+our smart constructors.
 
 316
 00:32:34,160 --> 00:32:37,800
-Thanks to first-class models,
+Thanks to first-class modules,
 you can also choose k at runtime
 
 317
@@ -1521,17 +1523,17 @@ validation conditions.
 
 322
 00:32:50,440 --> 00:32:54,560
-This is one example that
+This small example already
 uses many Scala features.
 
 323
 00:32:54,560 --> 00:32:57,000
 So we see that in Scala
-first-class modules,
+first-class modules
 
 324
 00:32:57,000 --> 00:32:58,600
-the abstract types are
+with abstract types are
 encoded as objects
 
 325
@@ -1540,17 +1542,17 @@ with bounded type members.
 
 326
 00:33:01,760 --> 00:33:04,920
-We have used the type in view
-for type member interaction.
+We have used the typing rule
+for type member introduction.
 
 327
 00:33:04,920 --> 00:33:07,520
-Type definition type A equals T.
+The type definition type A equal T
 
 328
 00:33:07,520 --> 00:33:09,520
-And if it's a bounded
-type declaration,
+inhabits a bounded
+type declaration
 
 329
 00:33:09,520 --> 00:33:12,280
@@ -1568,7 +1570,7 @@ between bounds L and U.
 332
 00:33:18,760 --> 00:33:22,240
 We have even used
-impredicatively type members.
+impredicative type members.
 
 333
 00:33:22,240 --> 00:33:26,160
@@ -1595,13 +1597,13 @@ can in turn be a type member.
 
 338
 00:33:38,520 --> 00:33:42,440
-Next, we sketched our
-proof type soundness.
+Next, we sketch how we
+prove type soundness.
 
 339
 00:33:42,440 --> 00:33:46,800
 We'll oversimplify in this talk
-and leave the rest of the paper.
+and leave the rest for the paper.
 
 340
 00:33:46,800 --> 00:33:49,280
@@ -1609,11 +1611,11 @@ Our model uses a logical relation.
 
 341
 00:33:49,280 --> 00:33:51,560
-That is we map each type T
+That is, we map each type T
 
 342
 00:33:51,560 --> 00:33:54,400
-for set V of T or values that behave
+to a set V of T of values that behave
 
 343
 00:33:54,400 --> 00:33:56,280
@@ -1622,11 +1624,11 @@ as required by type T.
 344
 00:33:56,280 --> 00:33:58,680
 For instance, intersection
-types are in type
+types are interpreted
 
 345
 00:33:58,680 --> 00:34:00,240
-(INAUDIBLE) intersection.
+using set intersection.
 
 346
 00:34:00,240 --> 00:34:02,960
@@ -1635,7 +1637,7 @@ is the intersection
 
 347
 00:34:02,960 --> 00:34:05,680
-of V over S and V of T.
+of V of S and V of T.
 
 348
 00:34:05,680 --> 00:34:08,480
@@ -1648,7 +1650,7 @@ to semantic typing judgments.
 
 350
 00:34:10,080 --> 00:34:13,080
-For instance, S is a type of T
+For instance, S is a subtype of T
 
 351
 00:34:13,080 --> 00:34:17,120
@@ -1656,17 +1658,17 @@ if V of S is a subset of V of T.
 
 352
 00:34:17,120 --> 00:34:21,360
-(INAUDIBLE) and expression
-E, a semantic type T
+Crucially, an expression
+e has semantic type T
 
 353
 00:34:21,360 --> 00:34:25,720
-if E runs safely
-and result is in V of T.
+if e runs safely
+and any result is in V of T.
 
 354
 00:34:25,720 --> 00:34:28,080
-Hence, semantically type expressions
+Hence, semantically typed expressions
 
 355
 00:34:28,080 --> 00:34:31,120
@@ -1679,16 +1681,16 @@ rule to a typing lemma
 
 357
 00:34:33,760 --> 00:34:35,200
-semantic typing judgments
+about semantic typing judgments
 
 358
 00:34:35,200 --> 00:34:36,680
-that we masked for this.
+that we must prove.
 
 359
 00:34:36,680 --> 00:34:41,680
-For instance, type S
-and T is a subtype of S
+For instance, type S and T
+is a subtype of type S
 
 360
 00:34:41,920 --> 00:34:44,360
@@ -1712,7 +1714,7 @@ Proving new typing lemmas
 
 365
 00:34:53,160 --> 00:34:54,720
-cannot invalidate all at once
+cannot invalidate old ones
 
 366
 00:34:54,720 --> 00:34:58,880
@@ -1722,52 +1724,52 @@ proved independently.
 367
 00:34:58,880 --> 00:35:03,360
 Next, we show a naive model of
-impredicatively type members.
+impredicative type members.
 
 368
 00:35:03,360 --> 00:35:08,120
-We say that a type of object
-V as a type member A
+We say that a type, if an object
+V has a type member A
 
 369
 00:35:08,120 --> 00:35:10,160
-between bounds L and U
+between bounds L and U,
 
 370
 00:35:10,160 --> 00:35:14,280
-if V dot A contains some type V
+if V dot A contains some type phi
 
 371
 00:35:14,280 --> 00:35:17,760
-which is indeed those
-bounds L and U.
+which is indeed between those
+bounds of L and U.
 
 372
 00:35:17,760 --> 00:35:19,840
-Here are metavariables V and V
+Here, metavariables V and v
 
 373
 00:35:19,840 --> 00:35:22,560
-arranged over sets of
-semantic types of values
+range over sets of
+semantic types and values
 
 374
 00:35:22,560 --> 00:35:24,640
-defined as false.
+defined as follows:
 
 375
 00:35:24,640 --> 00:35:27,760
-Types as sets of values represented
-as membership (INAUDIBLE)
+types are sets of values represented
+as membership predicates,
 
 376
 00:35:27,800 --> 00:35:31,360
-values can be among
-other things objects.
+and values can be, among
+other things, objects,
 
 377
 00:35:31,360 --> 00:35:35,480
-That is valid maps for field
+that is, finite maps for field
 labels to values or types.
 
 378
@@ -1776,12 +1778,12 @@ However, this definition is illegal
 
 379
 00:35:39,000 --> 00:35:42,240
-because in lining, some types shows
+because inlining some types shows
 
 380
 00:35:42,240 --> 00:35:46,760
-that we are to find unsound
-by a negative recursion
+that we are defining SemVal
+by a negative recursion,
 
 381
 00:35:46,760 --> 00:35:48,800
@@ -1793,7 +1795,7 @@ This problem is exclusive to
 
 383
 00:35:51,920 --> 00:35:54,280
-certainly where we have
+something where we have
 
 384
 00:35:54,280 --> 00:35:58,680
@@ -1801,7 +1803,7 @@ to model impredicative type members.
 
 385
 00:35:58,680 --> 00:36:02,000
-Thankfully, abstract (INAUDIBLE)
+Thankfully, abstract step-indexing
 
 386
 00:36:02,000 --> 00:36:05,640
@@ -1809,7 +1811,7 @@ allows us to construct SemVal
 
 387
 00:36:05,640 --> 00:36:08,440
-(INAUDIBLE).
+with a small change to our recursive equation.
 
 388
 00:36:08,440 --> 00:36:10,240
@@ -1846,20 +1848,20 @@ would be identical
 
 395
 00:36:29,800 --> 00:36:31,320
-to the (INAUDIBLE) model
+to the naive model
 
 396
 00:36:31,320 --> 00:36:32,960
-except for type members
+except for type members.
 
 397
 00:36:32,960 --> 00:36:37,320
-since values only contain
-truncated type members.
+Since values only contain
+truncated type members,
 
 398
 00:36:37,320 --> 00:36:38,880
-Assertions about type members
+assertions about type members
 
 399
 00:36:38,880 --> 00:36:41,560
@@ -1872,16 +1874,16 @@ as shown in this example.
 
 401
 00:36:43,760 --> 00:36:48,120
-Here, a valid V as type
-member A between L and U.
+Here, a value v has type
+member A between L and U
 
 402
 00:36:48,120 --> 00:36:52,280
-If V DOT A contains type V
+if v dot A contains type phi
 
 403
 00:36:52,280 --> 00:36:57,280
-but later V in between
+but later phi between
 later L and later U.
 
 404
@@ -1933,7 +1935,7 @@ become more principled.
 414
 00:37:31,320 --> 00:37:35,120
 For instance, abstract types
-supported also in nested objects
+are supported also in nested objects
 
 415
 00:37:35,120 --> 00:37:38,720
@@ -1941,12 +1943,12 @@ as we have used in our example.
 
 416
 00:37:38,720 --> 00:37:42,720
-Distributive, we obtain
-distributivity of n and all
+Distributivity, we obtain
+distributivity of and and or
 
 417
 00:37:42,720 --> 00:37:43,960
-in our (INAUDIBLE).
+and other connectives.
 
 418
 00:37:43,960 --> 00:37:46,280
@@ -1959,7 +1961,7 @@ even beyond the typing rules used in
 
 420
 00:37:49,840 --> 00:37:53,840
-the OOPSLA DOT type.
+the OOPSLA DOT.
 
 421
 00:37:53,840 --> 00:37:58,120
@@ -1968,24 +1970,24 @@ selected typing rules.
 
 422
 00:37:58,120 --> 00:38:01,040
-Rules subtype Sel,
+Rules <:-Sel,
 
 423
 00:38:01,040 --> 00:38:06,040
-Sel subtype show that selecting
+Sel-<: show that selecting
 
 424
 00:38:07,000 --> 00:38:12,000
-a type member A from part B
+a type member A from path p
 
 425
 00:38:12,440 --> 00:38:16,760
-which is a certain type
-member between L and U.
+which is a certain type,
+which is a type member between L and U.
 
 426
 00:38:16,760 --> 00:38:21,800
-but gives us a type which is
+gives us a type which is
 between later L and later U.
 
 427
@@ -1995,7 +1997,7 @@ restriction on type members.
 
 428
 00:38:26,040 --> 00:38:28,360
-Next, we will (INAUDIBLE)
+Next, rule T-Coerce
 
 429
 00:38:28,360 --> 00:38:31,080
@@ -2004,11 +2006,11 @@ later in many cases
 
 430
 00:38:31,080 --> 00:38:35,200
-by adding no question to types.
+by adding now coercion to types.
 
 431
 00:38:35,200 --> 00:38:38,680
-Next, UT (INAUDIBLE) I
+Next, rule T-{}-I
 
 432
 00:38:38,680 --> 00:38:41,520
@@ -2018,40 +2020,40 @@ recursive objects.
 433
 00:38:41,520 --> 00:38:44,920
 To prevent certain circular
-type innovations,
+type derivations,
 
 434
 00:38:44,920 --> 00:38:47,560
-we avoided gDOT features
+we avoided (INAUDIBLE)
 of other DOT calculi
 
 435
 00:38:47,560 --> 00:38:50,160
 and guard against
-recursive Sel-references
+recursive self-references
 
 436
 00:38:50,160 --> 00:38:52,800
 by adding later to
-the type of Sel-variable x.
+the type of self variable x.
 
 437
 00:38:52,840 --> 00:38:55,720
-The rule says it creates an object
+This rule says if you create an object
 
 438
 00:38:55,800 --> 00:39:00,560
 with definition x and give
-it type (INAUDIBLE) DOT T.
+it type mu x dot  T,
 
 439
 00:39:00,560 --> 00:39:04,720
 We must check the definitions
-(INAUDIBLE) type T
+of type T
 
 440
 00:39:04,760 --> 00:39:08,000
-in a context with a Sel-variable x
+in a context with the self variable x
 
 441
 00:39:08,000 --> 00:39:11,760
@@ -2059,15 +2061,15 @@ as type later T.
 
 442
 00:39:11,760 --> 00:39:15,760
-Finally, U D-Val allows
+Finally, rule D-Val allows
 
 443
 00:39:15,760 --> 00:39:17,920
-to nest objects inside other objects
+to nest objects inside other objects.
 
 444
 00:39:17,920 --> 00:39:19,760
-like in pDOT,
+Like in pDOT,
 
 445
 00:39:19,760 --> 00:39:23,240
@@ -2081,11 +2083,11 @@ because of the restriction
 
 447
 00:39:24,840 --> 00:39:27,840
-we added today from (INAUDIBLE).
+we added to the rule for object introduction.
 
 448
 00:39:27,840 --> 00:39:30,600
-In a paper, we give
+In the paper, we give
 motivating examples
 
 449
@@ -2094,12 +2096,12 @@ for some of our novel features.
 
 450
 00:39:32,720 --> 00:39:35,360
-We scaled these models to gDOT
+We scale this model to gDOT
 
 451
 00:39:35,360 --> 00:39:38,080
 explaining how to deal with
-u-types, singleton types,
+mu types, singleton types,
 
 452
 00:39:38,120 --> 00:39:40,040
@@ -2107,11 +2109,11 @@ path-dependent functions,
 
 453
 00:39:40,120 --> 00:39:41,840
-rule paths, and so on.
+paths, and so on.
 
 454
 00:39:41,840 --> 00:39:46,440
-We demonstrate expressivity by
+We demonstrate expressivity despite
 the restrictions to type members
 
 455
@@ -2122,11 +2124,11 @@ data abstractions.
 456
 00:39:49,480 --> 00:39:53,080
 And we mechanize
-(INAUDIBLE) Coq using Iris.
+everything in Coq using Iris.
 
 457
 00:39:53,080 --> 00:39:56,960
-Soundness proof is
+And our soundness proof is
 around 9,000 lines.
 
 458
@@ -2136,11 +2138,11 @@ around 5,000 lines.
 
 459
 00:40:02,200 --> 00:40:05,520
-For future work, we assign our model
+For future work, we are extending our model
 
 460
 00:40:05,520 --> 00:40:08,400
-to deal with type projection
+to deal with type projections
 and higher kinds,
 
 461
@@ -2150,7 +2152,7 @@ which have not been supported
 
 462
 00:40:10,960 --> 00:40:14,840
-by (INAUDIBLE) calculi.
+by past DOT calculi.
 
 463
 00:40:14,840 --> 00:40:19,840
@@ -2163,12 +2165,12 @@ to DOT from calculi closer to Scala
 
 465
 00:40:23,840 --> 00:40:26,480
-and to inferences of later
-which Scala uses currently
+and to infer occurrences of later
+which Scala users currently
 
 466
 00:40:26,640 --> 00:40:28,680
-do not have (INAUDIBLE).
+do not have to write.
 
 467
 00:40:29,240 --> 00:40:32,920
@@ -2177,11 +2179,11 @@ techniques can be extended
 
 468
 00:40:32,920 --> 00:40:35,200
-for (INAUDIBLE) type systems
+to other object-oriented type systems
 
 469
 00:40:35,200 --> 00:40:40,200
-with impredicative type
+which support impredicative type
 members or virtual classes.
 
 470
@@ -2190,7 +2192,7 @@ In conclusion, Scala's type system
 
 471
 00:40:44,800 --> 00:40:48,520
-calls for extensible type-soundness.
+calls for extensible type-soundness proofs.
 
 472
 00:40:48,520 --> 00:40:52,040
@@ -2203,8 +2205,8 @@ using a semantics-first approach.
 
 474
 00:40:55,840 --> 00:40:59,400
-The challenge or one
-of the challenges
+The challenge, or one
+of the challenges,
 
 475
 00:40:59,400 --> 00:41:03,240
@@ -2219,7 +2221,7 @@ but are hard to support.
 477
 00:41:08,760 --> 00:41:13,080
 But luckily, using Iris enabled
-machine-checking solution
+machine-checking a solution
 
 478
 00:41:13,080 --> 00:41:16,880

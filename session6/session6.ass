@@ -238,53 +238,53 @@ Dialogue: 0,0:25:30.68,0:25:32.76,Default,,0,0,0,,available in your time band
 Dialogue: 0,0:25:32.76,0:25:37.04,Default,,0,0,0,,so that you can discuss this work\Nwith the author of the paper.
 Dialogue: 0,0:25:37.28,0:25:41.68,Default,,0,0,0,,We will now pause here to sync\Nup with the talk schedule.
 Dialogue: 0,0:28:00.68,0:28:03.92,Default,,0,0,0,,Our next talk addresses\Nthe challenge of extending
-Dialogue: 0,0:28:03.92,0:28:07.68,Default,,0,0,0,,the meta theory of\NScala's core type system.
+Dialogue: 0,0:28:03.92,0:28:07.68,Default,,0,0,0,,the metatheory of\NScala's core type system.
 Dialogue: 0,0:28:07.68,0:28:10.96,Default,,0,0,0,,This talk will be presented\Nby Paolo Giarrusso
-Dialogue: 0,0:28:10.96,0:28:15.24,Default,,0,0,0,,and the paper is entitled,\NScala step-by-step
+Dialogue: 0,0:28:10.96,0:28:15.24,Default,,0,0,0,,and the paper is entitled,\NScala Step-by-Step:
 Dialogue: 0,0:28:15.24,0:28:20.24,Default,,0,0,0,,Soundness for DOT with Step-Indexed\NLogical Relations in Iris.
 Dialogue: 0,0:28:21.28,0:28:23.76,Default,,0,0,0,,PAOLO GIARRUSSO: Hi everybody\Nand thanks for tuning in.
 Dialogue: 0,0:28:23.76,0:28:26.48,Default,,0,0,0,,Today I'll present joint\Nwork with Léo Stefanesco,
 Dialogue: 0,0:28:26.48,0:28:29.12,Default,,0,0,0,,Amin Timany, Lars Birkedal,\Nand Robbert Krebbers.
-Dialogue: 0,0:28:29.12,0:28:34.16,Default,,0,0,0,,A new approach to soundness\Nfor DOT (INAUDIBLE).
-Dialogue: 0,0:28:34.16,0:28:36.80,Default,,0,0,0,,Before we dive into these\Nstories you might task,
+Dialogue: 0,0:28:29.12,0:28:34.16,Default,,0,0,0,,A new approach to soundness proofs for the DOT calculus,\Nthe core of the Scala programming language.
+Dialogue: 0,0:28:34.16,0:28:36.80,Default,,0,0,0,,Before we dive into this\Ntalk, you might ask,
 Dialogue: 0,0:28:36.80,0:28:39.56,Default,,0,0,0,,what's interesting about\Nthe Scala type system?
-Dialogue: 0,0:28:39.56,0:28:42.60,Default,,0,0,0,,One might answer as\NScala unifies financial
-Dialogue: 0,0:28:42.60,0:28:44.68,Default,,0,0,0,,and object oriented programming,
-Dialogue: 0,0:28:44.68,0:28:46.68,Default,,0,0,0,,while also very expressive\Nmodular system.
+Dialogue: 0,0:28:39.56,0:28:42.60,Default,,0,0,0,,One might answer as\NScala unifies functional
+Dialogue: 0,0:28:42.60,0:28:44.68,Default,,0,0,0,,and object-oriented programming,
+Dialogue: 0,0:28:44.68,0:28:46.68,Default,,0,0,0,,or has a very expressive\Nmodule system.
 Dialogue: 0,0:28:46.68,0:28:48.24,Default,,0,0,0,,But what does that mean?
 Dialogue: 0,0:28:48.24,0:28:50.40,Default,,0,0,0,,In other functional\Nprogramming languages,
-Dialogue: 0,0:28:50.40,0:28:53.12,Default,,0,0,0,,software modules are equalized\Nto special constructs,
-Dialogue: 0,0:28:53.12,0:28:55.44,Default,,0,0,0,,such as type classes or modules,
-Dialogue: 0,0:28:55.44,0:28:59.72,Default,,0,0,0,,which are not first class and require\Na special abstraction making.
-Dialogue: 0,0:28:59.72,0:29:04.40,Default,,0,0,0,,Instead, Scala extends irregular\Nobjects without a planned member,
-Dialogue: 0,0:29:04.40,0:29:07.24,Default,,0,0,0,,allowing objects to serve\Nas first-class model,
-Dialogue: 0,0:29:07.24,0:29:09.80,Default,,0,0,0,,hence you can insensate\Nmodules on time
-Dialogue: 0,0:29:09.80,0:29:12.00,Default,,0,0,0,,and abstract code across\Nmodules you're using
-Dialogue: 0,0:29:12.00,0:29:14.40,Default,,0,0,0,,regularized kind of\Nstructural mechanisms,
-Dialogue: 0,0:29:14.40,0:29:17.92,Default,,0,0,0,,such as playing functions\Nor even mixing in (INAUDIBLE).
-Dialogue: 0,0:29:17.92,0:29:22.12,Default,,0,0,0,,Well, absolute types of (INAUDBLE)\Nsound type speed time systems
-Dialogue: 0,0:29:22.12,0:29:25.12,Default,,0,0,0,,scala are time members are\Na significant challenge
-Dialogue: 0,0:29:25.12,0:29:27.28,Default,,0,0,0,,for a type soundness
-Dialogue: 0,0:29:27.28,0:29:32.60,Default,,0,0,0,,because they gain (INAUDIBLE).
-Dialogue: 0,0:29:33.48,0:29:35.00,Default,,0,0,0,,Challenging\Nto prove sound.
+Dialogue: 0,0:28:50.40,0:28:53.12,Default,,0,0,0,,software modules are expressed\Nas special constructs,
+Dialogue: 0,0:28:53.12,0:28:55.44,Default,,0,0,0,,such as type classes or ML modules,
+Dialogue: 0,0:28:55.44,0:28:59.72,Default,,0,0,0,,which are not first-class and require\Na special abstraction mechanism.
+Dialogue: 0,0:28:59.72,0:29:04.40,Default,,0,0,0,,Instead, Scala extends regular\Nobjects with abstract type members,
+Dialogue: 0,0:29:04.40,0:29:07.24,Default,,0,0,0,,allowing objects to serve\Nas first-class modules,
+Dialogue: 0,0:29:07.24,0:29:09.80,Default,,0,0,0,,hence you can instantiate\Nmodules at run-time
+Dialogue: 0,0:29:09.80,0:29:12.00,Default,,0,0,0,,and abstract code across\Nmodules using
+Dialogue: 0,0:29:12.00,0:29:14.40,Default,,0,0,0,,regular Scala\Nabstraction mechanisms,
+Dialogue: 0,0:29:14.40,0:29:17.92,Default,,0,0,0,,such as plain functions\Nor even mix-in inheritance.
+Dialogue: 0,0:29:17.92,0:29:22.12,Default,,0,0,0,,While abstract types appear in other\Nsound type (INAUDIBLE) systems,
+Dialogue: 0,0:29:22.12,0:29:25.12,Default,,0,0,0,,Scala abstract type members are\Na significant challenge
+Dialogue: 0,0:29:25.12,0:29:27.28,Default,,0,0,0,,for a type soundness proof
+Dialogue: 0,0:29:27.28,0:29:32.60,Default,,0,0,0,,because they gain impredicative type members,\Nwhich are relatives of Type colon Type
+Dialogue: 0,0:29:33.48,0:29:35.00,Default,,0,0,0,,and are challenging\Nto prove sound.
 Dialogue: 0,0:29:35.00,0:29:39.92,Default,,0,0,0,,In a few slides, we will\Nsee a very small example.
 Dialogue: 0,0:29:39.92,0:29:42.04,Default,,0,0,0,,While Scala is interesting,
-Dialogue: 0,0:29:42.04,0:29:44.56,Default,,0,0,0,,it's type soundness has been\Nin fact an open question
+Dialogue: 0,0:29:42.04,0:29:44.56,Default,,0,0,0,,its type soundness has been\Nin fact an open question
 Dialogue: 0,0:29:44.56,0:29:47.52,Default,,0,0,0,,since Scala's introduction in 2003.
-Dialogue: 0,0:29:47.60,0:29:49.56,Default,,0,0,0,,Soundness proof has been\N(INAUDIBLE) checked
-Dialogue: 0,0:29:49.72,0:29:51.28,Default,,0,0,0,,for significant (INAUDIBLE),
+Dialogue: 0,0:29:47.60,0:29:49.56,Default,,0,0,0,,Soundness proofs has been\Nmachine-checked
+Dialogue: 0,0:29:49.72,0:29:51.28,Default,,0,0,0,,for significant Scala fragments:
 Dialogue: 0,0:29:51.40,0:29:54.52,Default,,0,0,0,,the DOT calculi, amazing success.
 Dialogue: 0,0:29:54.52,0:29:57.76,Default,,0,0,0,,However, we have no proof\Nthat abstract types are
 Dialogue: 0,0:29:57.76,0:30:00.40,Default,,0,0,0,,indeed abstract.
-Dialogue: 0,0:30:00.40,0:30:04.56,Default,,0,0,0,,And DOT calculi lags behind\NScala even on call features.
-Dialogue: 0,0:30:04.56,0:30:07.92,Default,,0,0,0,,In (INAUDIBLE) DOT is hard to extend
+Dialogue: 0,0:30:00.40,0:30:04.56,Default,,0,0,0,,And DOT calculi lag behind\NScala even on core features.
+Dialogue: 0,0:30:04.56,0:30:07.92,Default,,0,0,0,,And are not catching up.\NDOT is hard to extend
 Dialogue: 0,0:30:07.92,0:30:11.68,Default,,0,0,0,,while Scala revolution\Nis not slowing down.
 Dialogue: 0,0:30:11.68,0:30:13.92,Default,,0,0,0,,To create a more\Nsensible DOT calculus,
-Dialogue: 0,0:30:13.92,0:30:16.76,Default,,0,0,0,,our approach is to avoid\Nsyntactic rules which is
+Dialogue: 0,0:30:13.92,0:30:16.76,Default,,0,0,0,,our approach is to avoid\Nsyntactic proofs, which is
 Dialogue: 0,0:30:16.84,0:30:18.48,Default,,0,0,0,,preservation and progress.
-Dialogue: 0,0:30:18.48,0:30:22.92,Default,,0,0,0,,Instead, would be at\Nthe logical relations models
+Dialogue: 0,0:30:18.48,0:30:22.92,Default,,0,0,0,,Instead, we build\Nlogical relations models
 Dialogue: 0,0:30:22.92,0:30:25.48,Default,,0,0,0,,to prove type soundness\Nand data abstraction.
-Dialogue: 0,0:30:25.48,0:30:29.00,Default,,0,0,0,,Then, a retrofit version\Nof DOT over model
+Dialogue: 0,0:30:25.48,0:30:29.00,Default,,0,0,0,,Then, retrofitted a version\Nof DOT over this model,
 Dialogue: 0,0:30:29.00,0:30:31.24,Default,,0,0,0,,obtaining a more\Nsensible DOT variant
 Dialogue: 0,0:30:31.24,0:30:33.92,Default,,0,0,0,,called guarded DOT or gDOT.
 Dialogue: 0,0:30:33.92,0:30:38.80,Default,,0,0,0,,Unfortunately, guarded DOT adds\Ncertain guardedness restrictions.
@@ -293,111 +293,111 @@ Dialogue: 0,0:30:41.20,0:30:44.88,Default,,0,0,0,,In exchange, result is more\Ne
 Dialogue: 0,0:30:44.88,0:30:48.88,Default,,0,0,0,,through some additional features\Nthat we'll mention later.
 Dialogue: 0,0:30:48.88,0:30:50.16,Default,,0,0,0,,To make things concrete,
 Dialogue: 0,0:30:50.16,0:30:53.92,Default,,0,0,0,,let's now look at\Nan example of Scala code.
-Dialogue: 0,0:30:53.92,0:30:56.60,Default,,0,0,0,,In these examples, we create\Nvalidator components
-Dialogue: 0,0:30:56.60,0:30:59.12,Default,,0,0,0,,to validate input from users.
-Dialogue: 0,0:30:59.12,0:31:02.44,Default,,0,0,0,,They provide an abstract\Nvalidator of valid inputs.
+Dialogue: 0,0:30:53.92,0:30:56.60,Default,,0,0,0,,In this example, we create\Nvalidator components
+Dialogue: 0,0:30:56.60,0:30:59.12,Default,,0,0,0,,to validate inputs from users.
+Dialogue: 0,0:30:59.12,0:31:02.44,Default,,0,0,0,,They provide an abstract type\Nvalidator of valid inputs.
 Dialogue: 0,0:31:02.44,0:31:04.72,Default,,0,0,0,,And a corresponding smart\Nconstructor is made
-Dialogue: 0,0:31:04.72,0:31:09.28,Default,,0,0,0,,that validates its input and returns\Neither valid data or nothing.
+Dialogue: 0,0:31:04.72,0:31:09.28,Default,,0,0,0,,that validates its input and returns\Neither a validator or nothing.
 Dialogue: 0,0:31:09.28,0:31:12.24,Default,,0,0,0,,Up to this point, nothing too fancy.
 Dialogue: 0,0:31:12.24,0:31:17.04,Default,,0,0,0,,However, new validators\Ncan be created at runtime
 Dialogue: 0,0:31:17.04,0:31:20.32,Default,,0,0,0,,each with a distinct\Nabstract type valid.
-Dialogue: 0,0:31:20.32,0:31:21.88,Default,,0,0,0,,Simplified code.
-Dialogue: 0,0:31:21.88,0:31:24.96,Default,,0,0,0,,We had code that\Ninput type to the int.
+Dialogue: 0,0:31:20.32,0:31:21.88,Default,,0,0,0,,Simplify the code.
+Dialogue: 0,0:31:21.88,0:31:24.96,Default,,0,0,0,,We had called the\Ninput type to be int.
 Dialogue: 0,0:31:24.96,0:31:27.16,Default,,0,0,0,,And we say that\Nan input n is valid if it
 Dialogue: 0,0:31:27.16,0:31:29.88,Default,,0,0,0,,is greater than some constant k.
 Dialogue: 0,0:31:29.88,0:31:32.64,Default,,0,0,0,,The solution is in the next slide.
-Dialogue: 0,0:31:32.64,0:31:35.96,Default,,0,0,0,,Our solution is an option to\Nthe client's type of validators.
-Dialogue: 0,0:31:35.96,0:31:39.44,Default,,0,0,0,,In evidence, a type validator\Ncontains two members,
-Dialogue: 0,0:31:39.44,0:31:41.28,Default,,0,0,0,,the type validator inputs, valid,
-Dialogue: 0,0:31:41.28,0:31:43.44,Default,,0,0,0,,and the smart constructor is made.
-Dialogue: 0,0:31:43.44,0:31:45.88,Default,,0,0,0,,Valid is to be a subtype of int,
+Dialogue: 0,0:31:32.64,0:31:35.96,Default,,0,0,0,,Our solution is an object that\Ndefines the type of validators.
+Dialogue: 0,0:31:35.96,0:31:39.44,Default,,0,0,0,,Inhabitants of type validator\Ncontain two members,
+Dialogue: 0,0:31:39.44,0:31:41.28,Default,,0,0,0,,the type of valid inputs, valid,
+Dialogue: 0,0:31:41.28,0:31:43.44,Default,,0,0,0,,and the smart constructor is make.
+Dialogue: 0,0:31:43.44,0:31:45.88,Default,,0,0,0,,Valid is declared to be a subtype of int,
 Dialogue: 0,0:31:45.88,0:31:47.48,Default,,0,0,0,,the type of all ints.
-Dialogue: 0,0:31:47.48,0:31:50.72,Default,,0,0,0,,That is type valid as int\N(INAUDIBLE) upper bound
-Dialogue: 0,0:31:50.72,0:31:55.56,Default,,0,0,0,,and implicitly (INAUDIBLE)\Ntype nothing as lower bound.
-Dialogue: 0,0:31:55.56,0:31:58.76,Default,,0,0,0,,These bounds encode\Nvalid as abstract.
-Dialogue: 0,0:31:58.76,0:32:03.24,Default,,0,0,0,,Hence, in evidence of valid can\Nonly be constructed through make.
-Dialogue: 0,0:32:03.24,0:32:06.48,Default,,0,0,0,,Function make validator maps input k
+Dialogue: 0,0:31:47.48,0:31:50.72,Default,,0,0,0,,That is type valid has int\Nas upper bound
+Dialogue: 0,0:31:50.72,0:31:55.56,Default,,0,0,0,,and implicitly the empty\Ntype nothing as lower bound.
+Dialogue: 0,0:31:55.56,0:31:58.76,Default,,0,0,0,,These bounds encode that\Nvalid is abstract.
+Dialogue: 0,0:31:58.76,0:32:03.24,Default,,0,0,0,,Hence, inhabitants of valid can\Nonly be constructed through make.
+Dialogue: 0,0:32:03.24,0:32:06.48,Default,,0,0,0,,Function mkValidator maps input k
 Dialogue: 0,0:32:06.48,0:32:10.12,Default,,0,0,0,,to a validator that accepts\Nonly integers greater than k.
-Dialogue: 0,0:32:10.12,0:32:13.72,Default,,0,0,0,,For instance, here by\Ncalling make validator zero,
+Dialogue: 0,0:32:10.12,0:32:13.72,Default,,0,0,0,,For instance, here by\Ncalling mkValidator zero,
 Dialogue: 0,0:32:13.72,0:32:15.80,Default,,0,0,0,,we create a validator\Ncalled pos which
-Dialogue: 0,0:32:16.00,0:32:18.24,Default,,0,0,0,,only accepts positive ints
+Dialogue: 0,0:32:16.00,0:32:18.24,Default,,0,0,0,,only accepts positive integers
 Dialogue: 0,0:32:18.24,0:32:22.08,Default,,0,0,0,,as shown by fails and works.
 Dialogue: 0,0:32:22.32,0:32:25.24,Default,,0,0,0,,The type system rejects nope
 Dialogue: 0,0:32:25.24,0:32:28.44,Default,,0,0,0,,because positive valid is abstract
-Dialogue: 0,0:32:28.44,0:32:30.88,Default,,0,0,0,,even though it is\Nimplemented by int.
-Dialogue: 0,0:32:30.88,0:32:34.16,Default,,0,0,0,,Preventing users from bypassing\Nas smart constructors.
-Dialogue: 0,0:32:34.16,0:32:37.80,Default,,0,0,0,,Thanks to first-class models,\Nyou can also choose k at runtime
+Dialogue: 0,0:32:28.44,0:32:30.88,Default,,0,0,0,,even though it is\Nimplemented by int,
+Dialogue: 0,0:32:30.88,0:32:34.16,Default,,0,0,0,,preventing users from bypassing\Nour smart constructors.
+Dialogue: 0,0:32:34.16,0:32:37.80,Default,,0,0,0,,Thanks to first-class modules,\Nyou can also choose k at runtime
 Dialogue: 0,0:32:37.80,0:32:40.24,Default,,0,0,0,,as now when creating legal ages.
 Dialogue: 0,0:32:40.24,0:32:42.80,Default,,0,0,0,,As promised, type\Nlegal age is not valid
 Dialogue: 0,0:32:42.80,0:32:44.64,Default,,0,0,0,,as a distinct abstract type
 Dialogue: 0,0:32:44.64,0:32:46.92,Default,,0,0,0,,because legal ages is\Na different object
 Dialogue: 0,0:32:46.92,0:32:50.44,Default,,0,0,0,,with different\Nvalidation conditions.
-Dialogue: 0,0:32:50.44,0:32:54.56,Default,,0,0,0,,This is one example that\Nuses many Scala features.
-Dialogue: 0,0:32:54.56,0:32:57.00,Default,,0,0,0,,So we see that in Scala\Nfirst-class modules,
-Dialogue: 0,0:32:57.00,0:32:58.60,Default,,0,0,0,,the abstract types are\Nencoded as objects
+Dialogue: 0,0:32:50.44,0:32:54.56,Default,,0,0,0,,This small example already\Nuses many Scala features.
+Dialogue: 0,0:32:54.56,0:32:57.00,Default,,0,0,0,,So we see that in Scala\Nfirst-class modules
+Dialogue: 0,0:32:57.00,0:32:58.60,Default,,0,0,0,,with abstract types are\Nencoded as objects
 Dialogue: 0,0:32:58.68,0:33:00.76,Default,,0,0,0,,with bounded type members.
-Dialogue: 0,0:33:01.76,0:33:04.92,Default,,0,0,0,,We have used the type in view\Nfor type member interaction.
-Dialogue: 0,0:33:04.92,0:33:07.52,Default,,0,0,0,,Type definition type A equals T.
-Dialogue: 0,0:33:07.52,0:33:09.52,Default,,0,0,0,,And if it's a bounded\Ntype declaration,
+Dialogue: 0,0:33:01.76,0:33:04.92,Default,,0,0,0,,We have used the typing rule\Nfor type member introduction.
+Dialogue: 0,0:33:04.92,0:33:07.52,Default,,0,0,0,,The type definition type A equal T
+Dialogue: 0,0:33:07.52,0:33:09.52,Default,,0,0,0,,inhabits a bounded\Ntype declaration
 Dialogue: 0,0:33:09.52,0:33:12.28,Default,,0,0,0,,type A between bound,
 Dialogue: 0,0:33:12.28,0:33:14.40,Default,,0,0,0,,between bounds L and U
 Dialogue: 0,0:33:14.40,0:33:18.76,Default,,0,0,0,,if type T is indeed\Nbetween bounds L and U.
-Dialogue: 0,0:33:18.76,0:33:22.24,Default,,0,0,0,,We have even used\Nimpredicatively type members.
+Dialogue: 0,0:33:18.76,0:33:22.24,Default,,0,0,0,,We have even used\Nimpredicative type members.
 Dialogue: 0,0:33:22.24,0:33:26.16,Default,,0,0,0,,Types like validator with\Nnested type members like valid
 Dialogue: 0,0:33:26.16,0:33:27.92,Default,,0,0,0,,are still regular types,
 Dialogue: 0,0:33:27.92,0:33:30.44,Default,,0,0,0,,not large types,
 Dialogue: 0,0:33:30.60,0:33:32.92,Default,,0,0,0,,and are subject to\Nregular abstraction.
 Dialogue: 0,0:33:33.04,0:33:38.24,Default,,0,0,0,,So, for instance, validator\Ncan in turn be a type member.
-Dialogue: 0,0:33:38.52,0:33:42.44,Default,,0,0,0,,Next, we sketched our\Nproof type soundness.
-Dialogue: 0,0:33:42.44,0:33:46.80,Default,,0,0,0,,We'll oversimplify in this talk\Nand leave the rest of the paper.
+Dialogue: 0,0:33:38.52,0:33:42.44,Default,,0,0,0,,Next, we sketch how we\Nprove type soundness.
+Dialogue: 0,0:33:42.44,0:33:46.80,Default,,0,0,0,,We'll oversimplify in this talk\Nand leave the rest for the paper.
 Dialogue: 0,0:33:46.80,0:33:49.28,Default,,0,0,0,,Our model uses a logical relation.
-Dialogue: 0,0:33:49.28,0:33:51.56,Default,,0,0,0,,That is we map each type T
-Dialogue: 0,0:33:51.56,0:33:54.40,Default,,0,0,0,,for set V of T or values that behave
+Dialogue: 0,0:33:49.28,0:33:51.56,Default,,0,0,0,,That is, we map each type T
+Dialogue: 0,0:33:51.56,0:33:54.40,Default,,0,0,0,,to a set V of T of values that behave
 Dialogue: 0,0:33:54.40,0:33:56.28,Default,,0,0,0,,as required by type T.
-Dialogue: 0,0:33:56.28,0:33:58.68,Default,,0,0,0,,For instance, intersection\Ntypes are in type
-Dialogue: 0,0:33:58.68,0:34:00.24,Default,,0,0,0,,(INAUDIBLE) intersection.
+Dialogue: 0,0:33:56.28,0:33:58.68,Default,,0,0,0,,For instance, intersection\Ntypes are interpreted
+Dialogue: 0,0:33:58.68,0:34:00.24,Default,,0,0,0,,using set intersection.
 Dialogue: 0,0:34:00.24,0:34:02.96,Default,,0,0,0,,The set V of S and T\Nis the intersection
-Dialogue: 0,0:34:02.96,0:34:05.68,Default,,0,0,0,,of V over S and V of T.
+Dialogue: 0,0:34:02.96,0:34:05.68,Default,,0,0,0,,of V of S and V of T.
 Dialogue: 0,0:34:05.68,0:34:08.48,Default,,0,0,0,,Then, we map syntactic\Ntyping judgments
 Dialogue: 0,0:34:08.48,0:34:10.08,Default,,0,0,0,,to semantic typing judgments.
-Dialogue: 0,0:34:10.08,0:34:13.08,Default,,0,0,0,,For instance, S is a type of T
+Dialogue: 0,0:34:10.08,0:34:13.08,Default,,0,0,0,,For instance, S is a subtype of T
 Dialogue: 0,0:34:13.08,0:34:17.12,Default,,0,0,0,,if V of S is a subset of V of T.
-Dialogue: 0,0:34:17.12,0:34:21.36,Default,,0,0,0,,(INAUDIBLE) and expression\NE, a semantic type T
-Dialogue: 0,0:34:21.36,0:34:25.72,Default,,0,0,0,,if E runs safely\Nand result is in V of T.
-Dialogue: 0,0:34:25.72,0:34:28.08,Default,,0,0,0,,Hence, semantically type expressions
+Dialogue: 0,0:34:17.12,0:34:21.36,Default,,0,0,0,,Crucially, an expression\Ne has semantic type T
+Dialogue: 0,0:34:21.36,0:34:25.72,Default,,0,0,0,,if e runs safely\Nand any result is in V of T.
+Dialogue: 0,0:34:25.72,0:34:28.08,Default,,0,0,0,,Hence, semantically typed expressions
 Dialogue: 0,0:34:28.08,0:34:31.12,Default,,0,0,0,,are type-safe by definition.
 Dialogue: 0,0:34:31.12,0:34:33.76,Default,,0,0,0,,Then we map each typing\Nrule to a typing lemma
-Dialogue: 0,0:34:33.76,0:34:35.20,Default,,0,0,0,,semantic typing judgments
-Dialogue: 0,0:34:35.20,0:34:36.68,Default,,0,0,0,,that we masked for this.
-Dialogue: 0,0:34:36.68,0:34:41.68,Default,,0,0,0,,For instance, type S\Nand T is a subtype of S
+Dialogue: 0,0:34:33.76,0:34:35.20,Default,,0,0,0,,about semantic typing judgments
+Dialogue: 0,0:34:35.20,0:34:36.68,Default,,0,0,0,,that we must prove.
+Dialogue: 0,0:34:36.68,0:34:41.68,Default,,0,0,0,,For instance, type S and T\Nis a subtype of type S
 Dialogue: 0,0:34:41.92,0:34:44.36,Default,,0,0,0,,because V of S and T
 Dialogue: 0,0:34:44.36,0:34:47.56,Default,,0,0,0,,is a subset of V of S.
 Dialogue: 0,0:34:47.56,0:34:50.44,Default,,0,0,0,,We now have type soundness proofs
 Dialogue: 0,0:34:50.44,0:34:51.72,Default,,0,0,0,,that is extensible.
 Dialogue: 0,0:34:51.72,0:34:53.16,Default,,0,0,0,,Proving new typing lemmas
-Dialogue: 0,0:34:53.16,0:34:54.72,Default,,0,0,0,,cannot invalidate all at once
+Dialogue: 0,0:34:53.16,0:34:54.72,Default,,0,0,0,,cannot invalidate old ones
 Dialogue: 0,0:34:54.72,0:34:58.88,Default,,0,0,0,,because each lemma is\Nproved independently.
-Dialogue: 0,0:34:58.88,0:35:03.36,Default,,0,0,0,,Next, we show a naive model of\Nimpredicatively type members.
-Dialogue: 0,0:35:03.36,0:35:08.12,Default,,0,0,0,,We say that a type of object\NV as a type member A
-Dialogue: 0,0:35:08.12,0:35:10.16,Default,,0,0,0,,between bounds L and U
-Dialogue: 0,0:35:10.16,0:35:14.28,Default,,0,0,0,,if V dot A contains some type V
-Dialogue: 0,0:35:14.28,0:35:17.76,Default,,0,0,0,,which is indeed those\Nbounds L and U.
-Dialogue: 0,0:35:17.76,0:35:19.84,Default,,0,0,0,,Here are metavariables V and V
-Dialogue: 0,0:35:19.84,0:35:22.56,Default,,0,0,0,,arranged over sets of\Nsemantic types of values
-Dialogue: 0,0:35:22.56,0:35:24.64,Default,,0,0,0,,defined as false.
-Dialogue: 0,0:35:24.64,0:35:27.76,Default,,0,0,0,,Types as sets of values represented\Nas membership (INAUDIBLE)
-Dialogue: 0,0:35:27.80,0:35:31.36,Default,,0,0,0,,values can be among\Nother things objects.
-Dialogue: 0,0:35:31.36,0:35:35.48,Default,,0,0,0,,That is valid maps for field\Nlabels to values or types.
+Dialogue: 0,0:34:58.88,0:35:03.36,Default,,0,0,0,,Next, we show a naive model of\Nimpredicative type members.
+Dialogue: 0,0:35:03.36,0:35:08.12,Default,,0,0,0,,We say that a type, if an object\NV has a type member A
+Dialogue: 0,0:35:08.12,0:35:10.16,Default,,0,0,0,,between bounds L and U,
+Dialogue: 0,0:35:10.16,0:35:14.28,Default,,0,0,0,,if V dot A contains some type phi
+Dialogue: 0,0:35:14.28,0:35:17.76,Default,,0,0,0,,which is indeed between those\Nbounds of L and U.
+Dialogue: 0,0:35:17.76,0:35:19.84,Default,,0,0,0,,Here, metavariables V and v
+Dialogue: 0,0:35:19.84,0:35:22.56,Default,,0,0,0,,range over sets of\Nsemantic types and values
+Dialogue: 0,0:35:22.56,0:35:24.64,Default,,0,0,0,,defined as follows:
+Dialogue: 0,0:35:24.64,0:35:27.76,Default,,0,0,0,,types are sets of values represented\Nas membership predicates,
+Dialogue: 0,0:35:27.80,0:35:31.36,Default,,0,0,0,,and values can be, among\Nother things, objects,
+Dialogue: 0,0:35:31.36,0:35:35.48,Default,,0,0,0,,that is, finite maps for field\Nlabels to values or types.
 Dialogue: 0,0:35:35.48,0:35:39.00,Default,,0,0,0,,However, this definition is illegal
-Dialogue: 0,0:35:39.00,0:35:42.24,Default,,0,0,0,,because in lining, some types shows
-Dialogue: 0,0:35:42.24,0:35:46.76,Default,,0,0,0,,that we are to find unsound\Nby a negative recursion
+Dialogue: 0,0:35:39.00,0:35:42.24,Default,,0,0,0,,because inlining some types shows
+Dialogue: 0,0:35:42.24,0:35:46.76,Default,,0,0,0,,that we are defining SemVal\Nby a negative recursion,
 Dialogue: 0,0:35:46.76,0:35:48.80,Default,,0,0,0,,which is illegal.
 Dialogue: 0,0:35:48.80,0:35:51.92,Default,,0,0,0,,This problem is exclusive to
-Dialogue: 0,0:35:51.92,0:35:54.28,Default,,0,0,0,,certainly where we have
+Dialogue: 0,0:35:51.92,0:35:54.28,Default,,0,0,0,,something where we have
 Dialogue: 0,0:35:54.28,0:35:58.68,Default,,0,0,0,,to model impredicative type members.
-Dialogue: 0,0:35:58.68,0:36:02.00,Default,,0,0,0,,Thankfully, abstract (INAUDIBLE)
+Dialogue: 0,0:35:58.68,0:36:02.00,Default,,0,0,0,,Thankfully, abstract step-indexing
 Dialogue: 0,0:36:02.00,0:36:05.64,Default,,0,0,0,,allows us to construct SemVal
-Dialogue: 0,0:36:05.64,0:36:08.44,Default,,0,0,0,,(INAUDIBLE).
+Dialogue: 0,0:36:05.64,0:36:08.44,Default,,0,0,0,,with a small change to our recursive equation.
 Dialogue: 0,0:36:08.44,0:36:10.24,Default,,0,0,0,,We must guard our recursion.
 Dialogue: 0,0:36:10.24,0:36:15.20,Default,,0,0,0,,That is storing types into\Nvalues must truncate types
 Dialogue: 0,0:36:15.20,0:36:18.92,Default,,0,0,0,,using the Iris later functor.
@@ -405,15 +405,15 @@ Dialogue: 0,0:36:18.92,0:36:21.52,Default,,0,0,0,,I want to explain what\Nexactl
 Dialogue: 0,0:36:21.52,0:36:24.04,Default,,0,0,0,,But we can ignore details\Nand reason about the solution
 Dialogue: 0,0:36:24.04,0:36:27.16,Default,,0,0,0,,to this question\Nusing the Iris logic.
 Dialogue: 0,0:36:27.16,0:36:29.80,Default,,0,0,0,,Most of the logical relation\Nwould be identical
-Dialogue: 0,0:36:29.80,0:36:31.32,Default,,0,0,0,,to the (INAUDIBLE) model
-Dialogue: 0,0:36:31.32,0:36:32.96,Default,,0,0,0,,except for type members
-Dialogue: 0,0:36:32.96,0:36:37.32,Default,,0,0,0,,since values only contain\Ntruncated type members.
-Dialogue: 0,0:36:37.32,0:36:38.88,Default,,0,0,0,,Assertions about type members
+Dialogue: 0,0:36:29.80,0:36:31.32,Default,,0,0,0,,to the naive model
+Dialogue: 0,0:36:31.32,0:36:32.96,Default,,0,0,0,,except for type members.
+Dialogue: 0,0:36:32.96,0:36:37.32,Default,,0,0,0,,Since values only contain\Ntruncated type members,
+Dialogue: 0,0:36:37.32,0:36:38.88,Default,,0,0,0,,assertions about type members
 Dialogue: 0,0:36:38.88,0:36:41.56,Default,,0,0,0,,must be weakened using\Nthe later modality
 Dialogue: 0,0:36:41.56,0:36:43.76,Default,,0,0,0,,as shown in this example.
-Dialogue: 0,0:36:43.76,0:36:48.12,Default,,0,0,0,,Here, a valid V as type\Nmember A between L and U.
-Dialogue: 0,0:36:48.12,0:36:52.28,Default,,0,0,0,,If V DOT A contains type V
-Dialogue: 0,0:36:52.28,0:36:57.28,Default,,0,0,0,,but later V in between\Nlater L and later U.
+Dialogue: 0,0:36:43.76,0:36:48.12,Default,,0,0,0,,Here, a value v has type\Nmember A between L and U
+Dialogue: 0,0:36:48.12,0:36:52.28,Default,,0,0,0,,if v dot A contains type phi
+Dialogue: 0,0:36:52.28,0:36:57.28,Default,,0,0,0,,but later phi between\Nlater L and later U.
 Dialogue: 0,0:36:59.52,0:37:04.12,Default,,0,0,0,,At this point, we can\Nretrofit DOT over this model
 Dialogue: 0,0:37:04.12,0:37:05.96,Default,,0,0,0,,obtaining gDOT.
 Dialogue: 0,0:37:05.96,0:37:09.40,Default,,0,0,0,,So, we turn rules from\NpDOT and OOPSLA DOT
@@ -424,70 +424,70 @@ Dialogue: 0,0:37:18.48,0:37:20.08,Default,,0,0,0,,reflecting the later modality
 Dialogue: 0,0:37:20.08,0:37:23.80,Default,,0,0,0,,and associated typing rules.
 Dialogue: 0,0:37:23.80,0:37:28.40,Default,,0,0,0,,In this process, we obtain some\Nstronger additional rules.
 Dialogue: 0,0:37:28.40,0:37:31.32,Default,,0,0,0,,In other cases, the restrictions\Nbecome more principled.
-Dialogue: 0,0:37:31.32,0:37:35.12,Default,,0,0,0,,For instance, abstract types\Nsupported also in nested objects
+Dialogue: 0,0:37:31.32,0:37:35.12,Default,,0,0,0,,For instance, abstract types\Nare supported also in nested objects
 Dialogue: 0,0:37:35.12,0:37:38.72,Default,,0,0,0,,as we have used in our example.
-Dialogue: 0,0:37:38.72,0:37:42.72,Default,,0,0,0,,Distributive, we obtain\Ndistributivity of n and all
-Dialogue: 0,0:37:42.72,0:37:43.96,Default,,0,0,0,,in our (INAUDIBLE).
+Dialogue: 0,0:37:38.72,0:37:42.72,Default,,0,0,0,,Distributivity, we obtain\Ndistributivity of and and or
+Dialogue: 0,0:37:42.72,0:37:43.96,Default,,0,0,0,,and other connectives.
 Dialogue: 0,0:37:43.96,0:37:46.28,Default,,0,0,0,,And we also obtain subtyping\Nfor recursive types
 Dialogue: 0,0:37:46.28,0:37:49.84,Default,,0,0,0,,even beyond the typing rules used in
-Dialogue: 0,0:37:49.84,0:37:53.84,Default,,0,0,0,,the OOPSLA DOT type.
+Dialogue: 0,0:37:49.84,0:37:53.84,Default,,0,0,0,,the OOPSLA DOT.
 Dialogue: 0,0:37:53.84,0:37:58.12,Default,,0,0,0,,Here we show a few\Nselected typing rules.
-Dialogue: 0,0:37:58.12,0:38:01.04,Default,,0,0,0,,Rules subtype Sel,
-Dialogue: 0,0:38:01.04,0:38:06.04,Default,,0,0,0,,Sel subtype show that selecting
-Dialogue: 0,0:38:07.00,0:38:12.00,Default,,0,0,0,,a type member A from part B
-Dialogue: 0,0:38:12.44,0:38:16.76,Default,,0,0,0,,which is a certain type\Nmember between L and U.
-Dialogue: 0,0:38:16.76,0:38:21.80,Default,,0,0,0,,but gives us a type which is\Nbetween later L and later U.
+Dialogue: 0,0:37:58.12,0:38:01.04,Default,,0,0,0,,Rules <:-Sel,
+Dialogue: 0,0:38:01.04,0:38:06.04,Default,,0,0,0,,Sel-<: show that selecting
+Dialogue: 0,0:38:07.00,0:38:12.00,Default,,0,0,0,,a type member A from path p
+Dialogue: 0,0:38:12.44,0:38:16.76,Default,,0,0,0,,which is a certain type,\Nwhich is a type member between L and U.
+Dialogue: 0,0:38:16.76,0:38:21.80,Default,,0,0,0,,gives us a type which is\Nbetween later L and later U.
 Dialogue: 0,0:38:21.80,0:38:26.04,Default,,0,0,0,,This reflects guardedness\Nrestriction on type members.
-Dialogue: 0,0:38:26.04,0:38:28.36,Default,,0,0,0,,Next, we will (INAUDIBLE)
+Dialogue: 0,0:38:26.04,0:38:28.36,Default,,0,0,0,,Next, rule T-Coerce
 Dialogue: 0,0:38:28.36,0:38:31.08,Default,,0,0,0,,shows how we can eliminate\Nlater in many cases
-Dialogue: 0,0:38:31.08,0:38:35.20,Default,,0,0,0,,by adding no question to types.
-Dialogue: 0,0:38:35.20,0:38:38.68,Default,,0,0,0,,Next, UT (INAUDIBLE) I
+Dialogue: 0,0:38:31.08,0:38:35.20,Default,,0,0,0,,by adding now coercion to types.
+Dialogue: 0,0:38:35.20,0:38:38.68,Default,,0,0,0,,Next, rule T-{}-I
 Dialogue: 0,0:38:38.68,0:38:41.52,Default,,0,0,0,,allows introducing\Nrecursive objects.
-Dialogue: 0,0:38:41.52,0:38:44.92,Default,,0,0,0,,To prevent certain circular\Ntype innovations,
-Dialogue: 0,0:38:44.92,0:38:47.56,Default,,0,0,0,,we avoided gDOT features\Nof other DOT calculi
-Dialogue: 0,0:38:47.56,0:38:50.16,Default,,0,0,0,,and guard against\Nrecursive Sel-references
-Dialogue: 0,0:38:50.16,0:38:52.80,Default,,0,0,0,,by adding later to\Nthe type of Sel-variable x.
-Dialogue: 0,0:38:52.84,0:38:55.72,Default,,0,0,0,,The rule says it creates an object
-Dialogue: 0,0:38:55.80,0:39:00.56,Default,,0,0,0,,with definition x and give\Nit type (INAUDIBLE) DOT T.
-Dialogue: 0,0:39:00.56,0:39:04.72,Default,,0,0,0,,We must check the definitions\N(INAUDIBLE) type T
-Dialogue: 0,0:39:04.76,0:39:08.00,Default,,0,0,0,,in a context with a Sel-variable x
+Dialogue: 0,0:38:41.52,0:38:44.92,Default,,0,0,0,,To prevent certain circular\Ntype derivations,
+Dialogue: 0,0:38:44.92,0:38:47.56,Default,,0,0,0,,we avoided (INAUDIBLE)\Nof other DOT calculi
+Dialogue: 0,0:38:47.56,0:38:50.16,Default,,0,0,0,,and guard against\Nrecursive self-references
+Dialogue: 0,0:38:50.16,0:38:52.80,Default,,0,0,0,,by adding later to\Nthe type of self variable x.
+Dialogue: 0,0:38:52.84,0:38:55.72,Default,,0,0,0,,This rule says if you create an object
+Dialogue: 0,0:38:55.80,0:39:00.56,Default,,0,0,0,,with definition x and give\Nit type mu x dot  T,
+Dialogue: 0,0:39:00.56,0:39:04.72,Default,,0,0,0,,We must check the definitions\Nof type T
+Dialogue: 0,0:39:04.76,0:39:08.00,Default,,0,0,0,,in a context with the self variable x
 Dialogue: 0,0:39:08.00,0:39:11.76,Default,,0,0,0,,as type later T.
-Dialogue: 0,0:39:11.76,0:39:15.76,Default,,0,0,0,,Finally, U D-Val allows
-Dialogue: 0,0:39:15.76,0:39:17.92,Default,,0,0,0,,to nest objects inside other objects
-Dialogue: 0,0:39:17.92,0:39:19.76,Default,,0,0,0,,like in pDOT,
+Dialogue: 0,0:39:11.76,0:39:15.76,Default,,0,0,0,,Finally, rule D-Val allows
+Dialogue: 0,0:39:15.76,0:39:17.92,Default,,0,0,0,,to nest objects inside other objects.
+Dialogue: 0,0:39:17.92,0:39:19.76,Default,,0,0,0,,Like in pDOT,
 Dialogue: 0,0:39:19.76,0:39:23.24,Default,,0,0,0,,nested objects support\Nabstract type members.
 Dialogue: 0,0:39:23.24,0:39:24.80,Default,,0,0,0,,And this is possible\Nbecause of the restriction
-Dialogue: 0,0:39:24.84,0:39:27.84,Default,,0,0,0,,we added today from (INAUDIBLE).
-Dialogue: 0,0:39:27.84,0:39:30.60,Default,,0,0,0,,In a paper, we give\Nmotivating examples
+Dialogue: 0,0:39:24.84,0:39:27.84,Default,,0,0,0,,we added to the rule for object introduction.
+Dialogue: 0,0:39:27.84,0:39:30.60,Default,,0,0,0,,In the paper, we give\Nmotivating examples
 Dialogue: 0,0:39:30.60,0:39:32.72,Default,,0,0,0,,for some of our novel features.
-Dialogue: 0,0:39:32.72,0:39:35.36,Default,,0,0,0,,We scaled these models to gDOT
-Dialogue: 0,0:39:35.36,0:39:38.08,Default,,0,0,0,,explaining how to deal with\Nu-types, singleton types,
+Dialogue: 0,0:39:32.72,0:39:35.36,Default,,0,0,0,,We scale this model to gDOT
+Dialogue: 0,0:39:35.36,0:39:38.08,Default,,0,0,0,,explaining how to deal with\Nmu types, singleton types,
 Dialogue: 0,0:39:38.12,0:39:40.04,Default,,0,0,0,,path-dependent functions,
-Dialogue: 0,0:39:40.12,0:39:41.84,Default,,0,0,0,,rule paths, and so on.
-Dialogue: 0,0:39:41.84,0:39:46.44,Default,,0,0,0,,We demonstrate expressivity by\Nthe restrictions to type members
+Dialogue: 0,0:39:40.12,0:39:41.84,Default,,0,0,0,,paths, and so on.
+Dialogue: 0,0:39:41.84,0:39:46.44,Default,,0,0,0,,We demonstrate expressivity despite\Nthe restrictions to type members
 Dialogue: 0,0:39:46.44,0:39:49.48,Default,,0,0,0,,and we give proofs about\Ndata abstractions.
-Dialogue: 0,0:39:49.48,0:39:53.08,Default,,0,0,0,,And we mechanize\N(INAUDIBLE) Coq using Iris.
-Dialogue: 0,0:39:53.08,0:39:56.96,Default,,0,0,0,,Soundness proof is\Naround 9,000 lines.
+Dialogue: 0,0:39:49.48,0:39:53.08,Default,,0,0,0,,And we mechanize\Neverything in Coq using Iris.
+Dialogue: 0,0:39:53.08,0:39:56.96,Default,,0,0,0,,And our soundness proof is\Naround 9,000 lines.
 Dialogue: 0,0:39:56.96,0:40:01.96,Default,,0,0,0,,And our examples take\Naround 5,000 lines.
-Dialogue: 0,0:40:02.20,0:40:05.52,Default,,0,0,0,,For future work, we assign our model
-Dialogue: 0,0:40:05.52,0:40:08.40,Default,,0,0,0,,to deal with type projection\Nand higher kinds,
+Dialogue: 0,0:40:02.20,0:40:05.52,Default,,0,0,0,,For future work, we are extending our model
+Dialogue: 0,0:40:05.52,0:40:08.40,Default,,0,0,0,,to deal with type projections\Nand higher kinds,
 Dialogue: 0,0:40:08.40,0:40:10.96,Default,,0,0,0,,additional Scala features\Nwhich have not been supported
-Dialogue: 0,0:40:10.96,0:40:14.84,Default,,0,0,0,,by (INAUDIBLE) calculi.
+Dialogue: 0,0:40:10.96,0:40:14.84,Default,,0,0,0,,by past DOT calculi.
 Dialogue: 0,0:40:14.84,0:40:19.84,Default,,0,0,0,,We would like to find\Na way to elaborate
 Dialogue: 0,0:40:21.04,0:40:23.76,Default,,0,0,0,,to DOT from calculi closer to Scala
-Dialogue: 0,0:40:23.84,0:40:26.48,Default,,0,0,0,,and to inferences of later\Nwhich Scala uses currently
-Dialogue: 0,0:40:26.64,0:40:28.68,Default,,0,0,0,,do not have (INAUDIBLE).
+Dialogue: 0,0:40:23.84,0:40:26.48,Default,,0,0,0,,and to infer occurrences of later\Nwhich Scala users currently
+Dialogue: 0,0:40:26.64,0:40:28.68,Default,,0,0,0,,do not have to write.
 Dialogue: 0,0:40:29.24,0:40:32.92,Default,,0,0,0,,And we hope that these\Ntechniques can be extended
-Dialogue: 0,0:40:32.92,0:40:35.20,Default,,0,0,0,,for (INAUDIBLE) type systems
-Dialogue: 0,0:40:35.20,0:40:40.20,Default,,0,0,0,,with impredicative type\Nmembers or virtual classes.
+Dialogue: 0,0:40:32.92,0:40:35.20,Default,,0,0,0,,to other object-oriented type systems
+Dialogue: 0,0:40:35.20,0:40:40.20,Default,,0,0,0,,which support impredicative type\Nmembers or virtual classes.
 Dialogue: 0,0:40:41.24,0:40:44.80,Default,,0,0,0,,In conclusion, Scala's type system
-Dialogue: 0,0:40:44.80,0:40:48.52,Default,,0,0,0,,calls for extensible type-soundness.
+Dialogue: 0,0:40:44.80,0:40:48.52,Default,,0,0,0,,calls for extensible type-soundness proofs.
 Dialogue: 0,0:40:48.52,0:40:52.04,Default,,0,0,0,,So we use, so we design\Nour type system
 Dialogue: 0,0:40:52.04,0:40:55.84,Default,,0,0,0,,using a semantics-first approach.
-Dialogue: 0,0:40:55.84,0:40:59.40,Default,,0,0,0,,The challenge or one\Nof the challenges
+Dialogue: 0,0:40:55.84,0:40:59.40,Default,,0,0,0,,The challenge, or one\Nof the challenges,
 Dialogue: 0,0:40:59.40,0:41:03.24,Default,,0,0,0,,was that impredicative\Ntype members are crucial
 Dialogue: 0,0:41:03.32,0:41:08.32,Default,,0,0,0,,for Scala's expressivity\Nbut are hard to support.
-Dialogue: 0,0:41:08.76,0:41:13.08,Default,,0,0,0,,But luckily, using Iris enabled\Nmachine-checking solution
+Dialogue: 0,0:41:08.76,0:41:13.08,Default,,0,0,0,,But luckily, using Iris enabled\Nmachine-checking a solution
 Dialogue: 0,0:41:13.08,0:41:16.88,Default,,0,0,0,,in a convenient way in Coq.
 Dialogue: 0,0:41:16.88,0:41:20.68,Default,,0,0,0,,Thank you very much\Nfor your attention.
 Dialogue: 0,0:41:20.68,0:41:25.68,Default,,0,0,0,,(AUDIENCE APPLAUDS)
