@@ -1015,13 +1015,13 @@ Dialogue: 0,1:12:38.92,1:12:41.56,Default,,0,0,0,,we can talk in person\Nnext ye
 Dialogue: 0,1:12:41.80,1:12:49.04,Default,,0,0,0,,(APPLAUSE)
 Dialogue: 0,1:12:49.36,1:12:51.56,Default,,0,0,0,,SUKYOUNG: Thank you,\NDee and David,
 Dialogue: 0,1:12:51.56,1:12:53.88,Default,,0,0,0,,if you are watching\Nthis talk live,
-Dialogue: 0,1:12:53.88,1:12:56.80,Default,,0,0,0,,please don't forget\Nabout a Q &A session
+Dialogue: 0,1:12:53.88,1:12:56.80,Default,,0,0,0,,please don't forget\Nabout a Q&A session
 Dialogue: 0,1:12:56.80,1:13:00.40,Default,,0,0,0,,that may be available\Nin your time band.
-Dialogue: 0,1:13:05.72,1:13:10.60,Default,,0,0,0,,Now our next talk is entitled,\N"Problem sketching with life
-Dialogue: 0,1:13:10.60,1:13:14.48,Default,,0,0,0,,by directional evaluation."\NJustin Lubin will present
+Dialogue: 0,1:13:05.72,1:13:10.60,Default,,0,0,0,,Now our next talk is entitled,\N"Problem sketching with live
+Dialogue: 0,1:13:10.60,1:13:14.48,Default,,0,0,0,,bidirectional evaluation."\NJustin Lubin will present
 Dialogue: 0,1:13:14.48,1:13:17.68,Default,,0,0,0,,a talk and he will\Nintroduce Smith,
 Dialogue: 0,1:13:17.68,1:13:20.00,Default,,0,0,0,,an example based\Nprogram synthesizer
-Dialogue: 0,1:13:20.00,1:13:25.28,Default,,0,0,0,,with supper for sketching and no\Ntrace (INAUDIBLE) requirement.
+Dialogue: 0,1:13:20.00,1:13:25.28,Default,,0,0,0,,with support for sketching and no\Ntrace completeness requirement.
 Dialogue: 0,1:13:25.88,1:13:27.88,Default,,0,0,0,,JUSTIN LUBIN: Hi everyone.\NMy name is Justin Lubin,
 Dialogue: 0,1:13:27.88,1:13:29.16,Default,,0,0,0,,and I'm gonna be\Npresenting programs
 Dialogue: 0,1:13:29.16,1:13:32.24,Default,,0,0,0,,sketching with live\Nbi-directional evaluation.
@@ -1036,11 +1036,11 @@ Dialogue: 0,1:13:47.44,1:13:50.20,Default,,0,0,0,,interface to a synthesizer.\NI
 Dialogue: 0,1:13:50.20,1:13:52.72,Default,,0,0,0,,a notion of correctness\Nfor potential program.
 Dialogue: 0,1:13:53.40,1:13:55.32,Default,,0,0,0,,Satisfaction is\Nthen simply a program
 Dialogue: 0,1:13:55.32,1:13:58.00,Default,,0,0,0,,meeting the specification criteria.
-Dialogue: 0,1:13:58.00,1:14:01.00,Default,,0,0,0,,So let's take a look at two popular\Nuser interfaces, the synthesizers.
+Dialogue: 0,1:13:58.00,1:14:01.00,Default,,0,0,0,,So let's take a look at two popular\Nuser interfaces for synthesizers.
 Dialogue: 0,1:14:01.00,1:14:03.60,Default,,0,0,0,,The first of which is\Nlogic-based synthesis.
 Dialogue: 0,1:14:03.60,1:14:06.92,Default,,0,0,0,,In logic-based synthesis, we\Nprovide a logical formula
 Dialogue: 0,1:14:06.92,1:14:08.64,Default,,0,0,0,,as a means of specification.
-Dialogue: 0,1:14:08.64,1:14:11.36,Default,,0,0,0,,So for example, if we're trying\Nto specify the sole function,
+Dialogue: 0,1:14:08.64,1:14:11.36,Default,,0,0,0,,So for example, if we're trying\Nto specify the sort function,
 Dialogue: 0,1:14:11.36,1:14:15.12,Default,,0,0,0,,we might say that for all\Nindices i in array A,
 Dialogue: 0,1:14:15.12,1:14:18.68,Default,,0,0,0,,A(i) has to be less than\Nor equal to A(i+1).
 Dialogue: 0,1:14:18.68,1:14:20.40,Default,,0,0,0,,Satisfaction in\Nlogic-based synthesis
@@ -1087,7 +1087,7 @@ Dialogue: 0,1:15:56.84,1:16:00.28,Default,,0,0,0,,Myth will transform an empty\N
 Dialogue: 0,1:16:00.28,1:16:01.96,Default,,0,0,0,,What if we, as programmers,
 Dialogue: 0,1:16:01.96,1:16:04.08,Default,,0,0,0,,wanted to encode some\Ndomain-specific knowledge
 Dialogue: 0,1:16:04.08,1:16:06.16,Default,,0,0,0,,that we might have into\Na partial solution
-Dialogue: 0,1:16:06.16,1:16:07.88,Default,,0,0,0,,towards the program that\Nwe'd like to make.
+Dialogue: 0,1:16:06.16,1:16:07.88,Default,,0,0,0,,for the program that\Nwe'd like to make.
 Dialogue: 0,1:16:07.88,1:16:09.60,Default,,0,0,0,,Then we'd like for Myth to transform
 Dialogue: 0,1:16:09.60,1:16:12.48,Default,,0,0,0,,this partial solution\Ninto a full solution.
 Dialogue: 0,1:16:12.48,1:16:15.40,Default,,0,0,0,,The idea here is known\Nas program sketching.
@@ -1150,7 +1150,7 @@ Dialogue: 0,1:18:33.28,1:18:36.52,Default,,0,0,0,,What exactly do evaluating\Nan
 Dialogue: 0,1:18:36.52,1:18:38.60,Default,,0,0,0,,when given a program sketch?
 Dialogue: 0,1:18:38.60,1:18:41.88,Default,,0,0,0,,Well, the answer to the first of\Nthese questions is live evaluation,
 Dialogue: 0,1:18:41.88,1:18:44.20,Default,,0,0,0,,which is a theory that we draw\Nfrom the Hazel project
-Dialogue: 0,1:18:44.20,1:18:46.68,Default,,0,0,0,,which you can find @hazel.org.
+Dialogue: 0,1:18:44.20,1:18:46.68,Default,,0,0,0,,which you can find at hazel.org.
 Dialogue: 0,1:18:46.68,1:18:48.48,Default,,0,0,0,,Let's take a look at how it works.
 Dialogue: 0,1:18:48.48,1:18:50.84,Default,,0,0,0,,Say we are given\Nthe program e on the left,
 Dialogue: 0,1:18:50.84,1:18:52.60,Default,,0,0,0,,which computes 10+20
@@ -1202,7 +1202,7 @@ Dialogue: 0,1:20:44.56,1:20:46.24,Default,,0,0,0,,If we want to assert\Nthat max
 Dialogue: 0,1:20:46.24,1:20:48.36,Default,,0,0,0,,needs to be two with\Nthis program sketch,
 Dialogue: 0,1:20:48.36,1:20:50.52,Default,,0,0,0,,we can actually live evaluate it.
 Dialogue: 0,1:20:50.52,1:20:52.00,Default,,0,0,0,,So in the empty environment,
-Dialogue: 0,1:20:52.00,1:20:55.36,Default,,0,0,0,,we say that max (1,2)\Nlive evaluates to (4,2)
+Dialogue: 0,1:20:52.00,1:20:55.36,Default,,0,0,0,,we say that max (1,2)\Nlive evaluates to (HOLE,2)
 Dialogue: 0,1:20:55.36,1:20:58.72,Default,,0,0,0,,with the environment\Nn=1, m=2 and n'=0.
 Dialogue: 0,1:20:58.72,1:21:02.72,Default,,0,0,0,,We live unevaluate\Nthe two onto this expression.
 Dialogue: 0,1:21:02.72,1:21:04.44,Default,,0,0,0,,And we get the whole\Nconstraint that hole two
@@ -1220,7 +1220,7 @@ Dialogue: 0,1:21:28.72,1:21:32.48,Default,,0,0,0,,how this will fit into\Nthe pr
 Dialogue: 0,1:21:32.48,1:21:35.88,Default,,0,0,0,,In Smyth, we're gonna start\Nwith Myth as a blackbox.
 Dialogue: 0,1:21:35.88,1:21:37.92,Default,,0,0,0,,Then, when the user\Nprovides a sketch,
 Dialogue: 0,1:21:37.92,1:21:40.64,Default,,0,0,0,,we can live evaluate\Nit and get a result.
-Dialogue: 0,1:21:40.64,1:21:43.12,Default,,0,0,0,,We'll also collect these programming\Nsamples from the assertion
+Dialogue: 0,1:21:40.64,1:21:43.12,Default,,0,0,0,,We'll also collect these programming\Nexamples from the assertion
 Dialogue: 0,1:21:43.12,1:21:46.08,Default,,0,0,0,,and live unevaluate them onto\Nthe result that we get.
 Dialogue: 0,1:21:46.08,1:21:48.76,Default,,0,0,0,,This process, which we call\Nlive bidirectional evaluation,
 Dialogue: 0,1:21:48.76,1:21:51.36,Default,,0,0,0,,will result on constraints\Non individual holes
@@ -1251,7 +1251,7 @@ Dialogue: 0,1:22:48.16,1:22:50.64,Default,,0,0,0,,Now, we live unevaluate\Nthese
 Dialogue: 0,1:22:50.64,1:22:52.60,Default,,0,0,0,,and get two new hole constraints.
 Dialogue: 0,1:22:52.60,1:22:56.12,Default,,0,0,0,,Namely, that when x is the empty\Nlist, well, one needs to be zero.
 Dialogue: 0,1:22:56.12,1:23:00.24,Default,,0,0,0,,And when tail is (5,6,1), among\Nother things in the environment,
-Dialogue: 0,1:23:00.24,1:23:02.40,Default,,0,0,0,,well, two needs to be four.
+Dialogue: 0,1:23:00.24,1:23:02.40,Default,,0,0,0,,well, hole two needs to be four.
 Dialogue: 0,1:23:02.40,1:23:03.92,Default,,0,0,0,,Now this first hole\Nconstraint is very easy
 Dialogue: 0,1:23:03.92,1:23:05.20,Default,,0,0,0,,for Smyth to solve.
 Dialogue: 0,1:23:05.20,1:23:08.04,Default,,0,0,0,,It can simply bind hole one\Nto be the constant zero.
@@ -1298,11 +1298,11 @@ Dialogue: 0,1:24:29.04,1:24:30.96,Default,,0,0,0,,So, that's how live\Nbidirecti
 Dialogue: 0,1:24:30.96,1:24:34.76,Default,,0,0,0,,can also take care of\Nthe trace-completeness requirement for Myth.
 Dialogue: 0,1:24:34.76,1:24:36.80,Default,,0,0,0,,So, to wrap up, let's talk\Nabout some of the experiments
 Dialogue: 0,1:24:36.80,1:24:38.44,Default,,0,0,0,,that we run to evaluate Smyth.
-Dialogue: 0,1:24:38.44,1:24:40.52,Default,,0,0,0,,Here, I'll be talking about\Nfour experiments that we run
+Dialogue: 0,1:24:38.44,1:24:40.52,Default,,0,0,0,,Here, I'll be talking about\Nfour experiments that we ran
 Dialogue: 0,1:24:40.52,1:24:42.80,Default,,0,0,0,,based on the Myth benchmark suite.
 Dialogue: 0,1:24:42.80,1:24:43.92,Default,,0,0,0,,In the first experiment,
 Dialogue: 0,1:24:43.92,1:24:46.36,Default,,0,0,0,,we took the trace-complete examples\Nfrom the Myth benchmark suite
-Dialogue: 0,1:24:46.36,1:24:48.52,Default,,0,0,0,,to specified various functions
+Dialogue: 0,1:24:46.36,1:24:48.52,Default,,0,0,0,,to specify various functions
 Dialogue: 0,1:24:48.52,1:24:51.40,Default,,0,0,0,,and provided no additional\Nsketching information to Smyth.
 Dialogue: 0,1:24:51.40,1:24:53.76,Default,,0,0,0,,With this information, we\Ncould successfully synthesize
 Dialogue: 0,1:24:53.76,1:24:57.28,Default,,0,0,0,,38 out of the 43 benchmarks\Nfrom the Myth benchmark suite.
@@ -1328,7 +1328,7 @@ Dialogue: 0,1:25:38.36,1:25:40.96,Default,,0,0,0,,In our fourth experiment, we\N
 Dialogue: 0,1:25:40.96,1:25:44.32,Default,,0,0,0,,in the popular logic-based\Nsynthesizers, Leon and Synquid.
 Dialogue: 0,1:25:44.32,1:25:46.16,Default,,0,0,0,,It's commonly said that\Nlogic-based synthesizers
 Dialogue: 0,1:25:46.16,1:25:48.88,Default,,0,0,0,,are strictly superior to\Nexample-based synthesizers
-Dialogue: 0,1:25:48.88,1:25:50.88,Default,,0,0,0,,because you can simply\Nencode examples and logic
+Dialogue: 0,1:25:48.88,1:25:50.88,Default,,0,0,0,,because you can simply\Nencode examples in logic
 Dialogue: 0,1:25:50.88,1:25:52.84,Default,,0,0,0,,as a conjunction of implications.
 Dialogue: 0,1:25:52.84,1:25:54.64,Default,,0,0,0,,Well, there is some\Ntruth to that sentiment.
 Dialogue: 0,1:25:54.64,1:25:56.68,Default,,0,0,0,,It's also true that many\Nlogic-based synthesizers
@@ -1340,7 +1340,7 @@ Dialogue: 0,1:26:06.76,1:26:09.84,Default,,0,0,0,,particularly relating to\Nnon-
 Dialogue: 0,1:26:09.84,1:26:11.68,Default,,0,0,0,,We hypothesize that\Ncombining the insights
 Dialogue: 0,1:26:11.68,1:26:14.72,Default,,0,0,0,,of live bidirectional evaluation\Nwith logic-based program synthesis
 Dialogue: 0,1:26:14.72,1:26:17.08,Default,,0,0,0,,could result in a system that\Nhas the power to specify
-Dialogue: 0,1:26:17.08,1:26:18.88,Default,,0,0,0,,complex data structure and variance,
+Dialogue: 0,1:26:17.08,1:26:18.88,Default,,0,0,0,,complex data structure invariants,
 Dialogue: 0,1:26:18.88,1:26:21.20,Default,,0,0,0,,while also having the ease of\Nuse of not having to specify
 Dialogue: 0,1:26:21.20,1:26:23.40,Default,,0,0,0,,trace-complete examples.
 Dialogue: 0,1:26:23.40,1:26:25.44,Default,,0,0,0,,The last thing that I'd like to\Nsay is that these four experiments
@@ -1357,13 +1357,13 @@ Dialogue: 0,1:26:48.76,1:26:51.84,Default,,0,0,0,,Cyrus Omar and Ravi Chugh for\
 Dialogue: 0,1:26:51.84,1:26:54.04,Default,,0,0,0,,as well as the ICFP\Norganizers and volunteers
 Dialogue: 0,1:26:54.04,1:26:56.20,Default,,0,0,0,,for making this conference possible.
 Dialogue: 0,1:26:56.20,1:26:57.76,Default,,0,0,0,,Lastly, I'd like to give\Na shout out to an event
-Dialogue: 0,1:26:57.76,1:27:02.52,Default,,0,0,0,,that I'm helping organize\NICFP,  #ShutdownPL@ICFP.
-Dialogue: 0,1:27:02.52,1:27:05.92,Default,,0,0,0,,There will be an anti-racism event\Noccurring on Thursday, August 27,
+Dialogue: 0,1:26:57.76,1:27:02.52,Default,,0,0,0,,that I'm helping organize\Nat ICFP,  #ShutdownPL@ICFP.
+Dialogue: 0,1:27:02.52,1:27:05.92,Default,,0,0,0,,It will be an anti-racism event\Noccurring on Thursday, August 27,
 Dialogue: 0,1:27:05.92,1:27:08.12,Default,,0,0,0,,from 2pm to 6pm Eastern time.
 Dialogue: 0,1:27:08.12,1:27:12.40,Default,,0,0,0,,I hope to see you there.\NAnd thanks for watching.
 Dialogue: 0,1:27:12.40,1:27:17.40,Default,,0,0,0,,(AUDIENCE APPLAUDS)
 Dialogue: 0,1:27:20.00,1:27:21.24,Default,,0,0,0,,SUKYOUNG: Thank you, Justin.
-Dialogue: 0,1:27:21.24,1:27:24.76,Default,,0,0,0,,And thanks (INAUDIBLE) for organizing\Nthe anti-racism event,
+Dialogue: 0,1:27:21.24,1:27:24.76,Default,,0,0,0,,And thanks a lot for organizing\Nthe anti-racism event,
 Dialogue: 0,1:27:24.76,1:27:28.40,Default,,0,0,0,,#ShutdownPL@ICFP.
 Dialogue: 0,1:27:28.40,1:27:30.32,Default,,0,0,0,,If you are watching this talk live,
 Dialogue: 0,1:27:30.32,1:27:33.00,Default,,0,0,0,,please don't forget\Nabout a Q&A session

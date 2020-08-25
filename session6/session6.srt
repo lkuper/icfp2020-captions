@@ -4761,7 +4761,7 @@ this talk live,
 1005
 01:12:53,880 --> 01:12:56,800
 please don't forget
-about a Q &A session
+about a Q&A session
 
 1006
 01:12:56,800 --> 01:13:00,400
@@ -4771,11 +4771,11 @@ in your time band.
 1007
 01:13:05,720 --> 01:13:10,600
 Now our next talk is entitled,
-"Problem sketching with life
+"Problem sketching with live
 
 1008
 01:13:10,600 --> 01:13:14,480
-by directional evaluation."
+bidirectional evaluation."
 Justin Lubin will present
 
 1009
@@ -4790,8 +4790,8 @@ program synthesizer
 
 1011
 01:13:20,000 --> 01:13:25,280
-with supper for sketching and no
-trace (INAUDIBLE) requirement.
+with support for sketching and no
+trace completeness requirement.
 
 1012
 01:13:25,880 --> 01:13:27,880
@@ -4865,7 +4865,7 @@ meeting the specification criteria.
 1026
 01:13:58,000 --> 01:14:01,000
 So let's take a look at two popular
-user interfaces, the synthesizers.
+user interfaces for synthesizers.
 
 1027
 01:14:01,000 --> 01:14:03,600
@@ -4884,7 +4884,7 @@ as a means of specification.
 1030
 01:14:08,640 --> 01:14:11,360
 So for example, if we're trying
-to specify the sole function,
+to specify the sort function,
 
 1031
 01:14:11,360 --> 01:14:15,120
@@ -5106,7 +5106,7 @@ a partial solution
 
 1077
 01:16:06,160 --> 01:16:07,880
-towards the program that
+for the program that
 we'd like to make.
 
 1078
@@ -5402,7 +5402,7 @@ from the Hazel project
 
 1140
 01:18:44,200 --> 01:18:46,680
-which you can find @hazel.org.
+which you can find at hazel.org.
 
 1141
 01:18:46,680 --> 01:18:48,480
@@ -5649,7 +5649,7 @@ So in the empty environment,
 1192
 01:20:52,000 --> 01:20:55,360
 we say that max (1,2)
-live evaluates to (4,2)
+live evaluates to (HOLE,2)
 
 1193
 01:20:55,360 --> 01:20:58,720
@@ -5737,7 +5737,7 @@ it and get a result.
 1210
 01:21:40,640 --> 01:21:43,120
 We'll also collect these programming
-samples from the assertion
+examples from the assertion
 
 1211
 01:21:43,120 --> 01:21:46,080
@@ -5884,7 +5884,7 @@ other things in the environment,
 
 1241
 01:23:00,240 --> 01:23:02,400
-well, two needs to be four.
+well, hole two needs to be four.
 
 1242
 01:23:02,400 --> 01:23:03,920
@@ -6106,7 +6106,7 @@ that we run to evaluate Smyth.
 1288
 01:24:38,440 --> 01:24:40,520
 Here, I'll be talking about
-four experiments that we run
+four experiments that we ran
 
 1289
 01:24:40,520 --> 01:24:42,800
@@ -6123,7 +6123,7 @@ from the Myth benchmark suite
 
 1292
 01:24:46,360 --> 01:24:48,520
-to specified various functions
+to specify various functions
 
 1293
 01:24:48,520 --> 01:24:51,400
@@ -6248,7 +6248,7 @@ example-based synthesizers
 1318
 01:25:48,880 --> 01:25:50,880
 because you can simply
-encode examples and logic
+encode examples in logic
 
 1319
 01:25:50,880 --> 01:25:52,840
@@ -6306,7 +6306,7 @@ has the power to specify
 
 1330
 01:26:17,080 --> 01:26:18,880
-complex data structure and variance,
+complex data structure invariants,
 
 1331
 01:26:18,880 --> 01:26:21,200
@@ -6388,11 +6388,11 @@ a shout out to an event
 1347
 01:26:57,760 --> 01:27:02,520
 that I'm helping organize
-ICFP,  #ShutdownPL@ICFP.
+at ICFP,  #ShutdownPL@ICFP.
 
 1348
 01:27:02,520 --> 01:27:05,920
-There will be an anti-racism event
+It will be an anti-racism event
 occurring on Thursday, August 27,
 
 1349
@@ -6414,7 +6414,7 @@ SUKYOUNG: Thank you, Justin.
 
 1353
 01:27:21,240 --> 01:27:24,760
-And thanks (INAUDIBLE) for organizing
+And thanks a lot for organizing
 the anti-racism event,
 
 1354
