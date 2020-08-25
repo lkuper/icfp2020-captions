@@ -6509,7 +6509,7 @@ typing information.
 1373
 01:28:40,080 --> 01:28:42,240
 and it is not
-necessarily (INAUDIBLE)
+necessarily well-typed.
 
 1374
 01:28:42,760 --> 01:28:45,520
@@ -6518,7 +6518,7 @@ internally by the compiler.
 
 1375
 01:28:45,520 --> 01:28:47,880
-It is simple (INAUDIBLE)
+It is simple, well-typed,
 
 1376
 01:28:47,880 --> 01:28:48,920
@@ -6526,8 +6526,8 @@ and explicitly annotated
 
 1377
 01:28:48,920 --> 01:28:52,080
-but it is much more (INAUDIBLE)
-into surface syntax.
+but it is much more verbose
+than the surface syntax.
 
 1378
 01:28:52,800 --> 01:28:55,200
@@ -6545,7 +6545,7 @@ focuses on inference.
 
 1381
 01:29:00,000 --> 01:29:01,600
-in certain independent types
+In a setting with dependent types
 
 1382
 01:29:01,600 --> 01:29:04,400
@@ -6608,11 +6608,11 @@ arguments as here.
 1394
 01:29:34,640 --> 01:29:37,480
 In GHC type level abstraction
-in all this implicit
+in always implicit
 
 1395
 01:29:37,480 --> 01:29:39,640
-and value other functions
+and value-level functions
 are all these explicit.
 
 1396
@@ -6626,7 +6626,7 @@ and it is not something fundamental.
 
 1398
 01:29:45,720 --> 01:29:48,760
-In Agda, (INAUDIBLE) having
+In Agda, likewise having
 implicit functions types
 
 1399
@@ -6641,7 +6641,7 @@ just a special case
 
 1401
 01:29:53,840 --> 01:29:55,440
-of general independent functions.
+of general dependent functions.
 
 1402
 01:29:56,440 --> 01:29:59,920
@@ -6650,8 +6650,8 @@ function types control elaboration
 
 1403
 01:29:59,920 --> 01:30:02,240
-by signalling varying
-input applications
+by signalling where
+implicit applications
 
 1404
 01:30:02,240 --> 01:30:03,480
@@ -6674,7 +6674,7 @@ first class if they can be used
 
 1408
 01:30:13,840 --> 01:30:15,520
-as (INAUDIBLE) as any other type.
+as simply as any other type.
 
 1409
 01:30:15,520 --> 01:30:18,080
@@ -6694,11 +6694,11 @@ also goes fairly well.
 1412
 01:30:24,400 --> 01:30:26,480
 But what if you want to
-use implicit function
+use an implicit function
 
 1413
 01:30:26,480 --> 01:30:28,480
-in some other (INAUDIBLE) data type?
+in some other parameterized data type?
 
 1414
 01:30:28,480 --> 01:30:31,200
@@ -6713,7 +6713,7 @@ possible in current GHC.
 1416
 01:30:35,280 --> 01:30:37,760
 There is a language extension
-called inpredicative times
+called inpredicative types
 
 1417
 01:30:37,760 --> 01:30:40,080
@@ -6728,7 +6728,7 @@ let you work in practice.
 1419
 01:30:43,640 --> 01:30:46,800
 There is another talk at
-the current ICF which introduces a new
+the current ICFP which introduces a new
 
 1420
 01:30:46,800 --> 01:30:50,040
@@ -6752,7 +6752,7 @@ Lenses are polymorphic functions
 1424
 01:30:57,640 --> 01:30:59,680
 so they can be used in
-high order functions
+higher order functions
 
 1425
 01:30:59,680 --> 01:31:01,760
@@ -6771,7 +6771,7 @@ What happens in Agda.
 1428
 01:31:06,240 --> 01:31:08,640
 Here we can use implicit
-functions times any variance
+functions times anywhere
 
 1429
 01:31:08,640 --> 01:31:10,400
@@ -6791,7 +6791,7 @@ does not elaborate.
 1432
 01:31:16,280 --> 01:31:18,800
 Here we have to write out
-an emphasis lambda abstraction
+an implicit lambda abstraction
 
 1433
 01:31:18,800 --> 01:31:20,480
@@ -6800,16 +6800,16 @@ in order to make Agda happy.
 1434
 01:31:20,960 --> 01:31:23,920
 The main contribution of this
-talk is a generous solution
+talk is a general solution
 
 1435
 01:31:23,920 --> 01:31:26,720
-which triggers such insertions
+which figures out such insertions
 of implicit lambdas.
 
 1436
 01:31:27,720 --> 01:31:30,800
-At this point some people may know
+At this point some people may note
 that the previous Agda example
 
 1437
@@ -6823,12 +6823,12 @@ Or impredicative polymorphism
 
 1439
 01:31:36,000 --> 01:31:38,680
-which is a topic in divider
+which is a topic in the wider
 field of type inference.
 
 1440
 01:31:39,400 --> 01:31:42,200
-In the main point of this work
+And the main point of this work
 is to provide a solution for
 
 1441
@@ -6904,7 +6904,7 @@ can be considered in inference
 1456
 01:32:24,240 --> 01:32:26,480
 and not just a particular
-function applications
+function application
 
 1457
 01:32:26,480 --> 01:32:27,840
@@ -6926,7 +6926,7 @@ the pre-syntax exactly once.
 1461
 01:32:36,640 --> 01:32:39,080
 And lastly the algorithm
-is the modest extension
+a the modest extension
 
 1462
 01:32:39,080 --> 01:32:42,240
@@ -6935,8 +6935,8 @@ as implemented in Agda.
 
 1463
 01:32:43,000 --> 01:32:46,480
-Since the paper algorithm is
-the extension of bidirectional elaboration
+Since the paper's algorithm is
+an extension of bidirectional elaboration
 
 1464
 01:32:46,960 --> 01:32:49,960
@@ -6960,12 +6960,12 @@ consists of two functions
 
 1468
 01:32:58,640 --> 01:33:01,080
-defined by (INAUDIBLE)
-recursions and surface syntax
+defined by mutual
+recursion on surface syntax
 
 1469
 01:33:01,560 --> 01:33:04,160
-Let us assume a service expression T
+Let us assume a surface expression T
 
 1470
 01:33:04,160 --> 01:33:05,240
@@ -6979,11 +6979,11 @@ is to create something
 1472
 01:33:08,800 --> 01:33:11,040
 in the core syntax from
-the service expression.
+the surface expression.
 
 1473
 01:33:11,560 --> 01:33:15,680
-First we have the info function
+First we have the infer function
 which takes as input a core context
 
 1474
@@ -6993,11 +6993,11 @@ and return a core expression together
 
 1475
 01:33:20,600 --> 01:33:21,600
-with this core type.
+with its core type.
 
 1476
 01:33:21,840 --> 01:33:25,080
-the check function addition takes
+the check function additionly takes
 an input an expected core type
 
 1477
@@ -7007,7 +7007,7 @@ term with that type.
 
 1478
 01:33:28,320 --> 01:33:30,800
-And the expected type of
+When the expected type of
 the expression is already known,
 
 1479
@@ -7023,17 +7023,17 @@ bidirectional type checking
 1481
 01:33:36,720 --> 01:33:39,040
 but here each function
-also returns a quarter.
+also returns a core term.
 
 1482
 01:33:40,280 --> 01:33:43,120
-Let's look at the short
+Let's look at a short
 example of how checking works.
 
 1483
 01:33:43,880 --> 01:33:46,280
 We use an informal
-(INAUDIBLE) notation
+monadic notation
 
 1484
 01:33:46,280 --> 01:33:48,840
@@ -7048,7 +7048,7 @@ context of meta variables.
 1486
 01:33:53,400 --> 01:33:56,480
 Here we are checking a lambda
-expression with the function type.
+expression with a function type.
 
 1487
 01:33:56,480 --> 01:33:59,360
@@ -7058,12 +7058,12 @@ the context with the variable
 1488
 01:33:59,600 --> 01:34:02,800
 and check the function body
-(INAUDIBLE) mean type.
+with the codomain type.
 
 1489
 01:34:03,320 --> 01:34:05,920
-After this return of our
-first lambda expression.
+After this return of a
+core lambda expression.
 
 1490
 01:34:06,680 --> 01:34:10,400
@@ -7109,7 +7109,7 @@ crucially on the bidirectional style.
 
 1499
 01:34:30,320 --> 01:34:32,840
-We want to look at the exact
+We won't look at the exact
 rules of the elaborations here
 
 1500
@@ -7128,22 +7128,22 @@ polymorphic identity function
 
 1503
 01:34:41,560 --> 01:34:45,440
-and we want to infer time for ID
-applying for the Boolean tree
+and we want to infer a type for ID
+applied to the Boolean true
 
 1504
 01:34:45,680 --> 01:34:48,160
 This expression is
-functional application.
+a functional application.
 
 1505
 01:34:48,160 --> 01:34:52,000
-So first we are in for a type for
-the function involved which is ID.
+So first we are infer a type for
+the function argument which is ID.
 
 1506
 01:34:52,480 --> 01:34:55,880
-Then we noticed that infer type
+Then we noticed thatthe inferred type
 is an implicit function type.
 
 1507
@@ -7163,7 +7163,7 @@ ID expression into it.
 
 1510
 01:35:07,440 --> 01:35:10,760
-In the following link, we will name
+In the following, we will name
 meta variables using Greek letters.
 
 1511
@@ -7188,7 +7188,7 @@ explicit function type
 1515
 01:35:20,320 --> 01:35:22,280
 for of next sub
-term the application.
+term of the application.
 
 1516
 01:35:23,280 --> 01:35:25,640
@@ -7215,8 +7215,8 @@ and infer type bool for true.
 
 1521
 01:35:36,360 --> 01:35:40,440
-Then the unified expected
-other type inferred bool type.
+Then we unify the expected
+alpha type with the bool type.
 
 1522
 01:35:40,920 --> 01:35:44,360
@@ -7234,7 +7234,7 @@ a bound or defined variable
 
 1525
 01:35:49,400 --> 01:35:51,240
-named with an implicit function type
+name with an implicit function type
 
 1526
 01:35:51,240 --> 01:35:53,520
@@ -7282,7 +7282,7 @@ the expected checking type.
 
 1535
 01:36:15,600 --> 01:36:17,480
-However we can rub the expression
+However we can wrap the expression
 
 1536
 01:36:17,480 --> 01:36:19,400
@@ -7301,7 +7301,7 @@ in the typing context
 1539
 01:36:24,040 --> 01:36:27,440
 and check the expression with
-the code name of the checking type
+the codomain of the checking type
 
 1540
 01:36:27,440 --> 01:36:29,760
@@ -7352,7 +7352,7 @@ and it performs
 1550
 01:36:51,040 --> 01:36:54,200
 in a fairly convenient
-and (INAUDIBLE) way in practice.
+and intuitive way in practice.
 
 1551
 01:36:54,960 --> 01:36:59,520
@@ -7381,7 +7381,7 @@ What can go wrong with the solution?
 1556
 01:37:10,960 --> 01:37:13,360
 Let's go back to
-the failing and the example.
+the failing counterexample.
 
 1557
 01:37:13,880 --> 01:37:16,320
@@ -7419,7 +7419,7 @@ a checking rule for just
 
 1564
 01:37:29,880 --> 01:37:32,040
-the first infer type
+we first infer a type
 for this expression
 
 1565
@@ -7430,21 +7430,21 @@ with the given annotation.
 1566
 01:37:35,800 --> 01:37:39,680
 The just constructor is polymorphic
-so it has implicit type argument
+so it has an implicit type argument
 
 1567
 01:37:39,680 --> 01:37:42,720
-and they insert an application
-to a fresh matter variable.
+and we insert an application
+to a fresh meta variable.
 
 1568
 01:37:43,240 --> 01:37:46,600
 Next we have to check
-the lambda x expression
+the lambda x x expression
 
 1569
 01:37:46,600 --> 01:37:48,640
-with the (INAUDIBLE) alpha type.
+with the unknown alpha type.
 
 1570
 01:37:49,160 --> 01:37:50,760
@@ -7458,7 +7458,7 @@ lambda insertion at this point
 1572
 01:37:53,760 --> 01:37:55,560
 because the checking
-time is unknown.
+type is unknown.
 
 1573
 01:37:56,040 --> 01:37:59,160
@@ -7467,7 +7467,7 @@ infer an explicit function type
 
 1574
 01:37:59,160 --> 01:38:01,360
-for the lambda XX expression
+for the lambda X X expression
 
 1575
 01:38:01,360 --> 01:38:04,480
@@ -7505,21 +7505,21 @@ cover unknown insertions.
 
 1582
 01:38:23,640 --> 01:38:26,120
-We had a strictly
-curried funtion type.
+We add a strictly
+curried function type.
 
 1583
 01:38:26,120 --> 01:38:29,760
 This is a function type such that
-the domain is always a record time
+the domain is always a record type
 
 1584
 01:38:29,760 --> 01:38:31,680
-and curried codes by definition.
+and currying holds by definition.
 
 1585
 01:38:32,160 --> 01:38:36,000
-Here we have an example of how curried
+Here we have an example of how currying
 computes for this function type.
 
 1586
@@ -7543,7 +7543,7 @@ get the empty record type.
 1590
 01:38:46,560 --> 01:38:49,240
 This function type computes
-to just (INAUDIBLE)
+to just codomain type,
 
 1591
 01:38:49,480 --> 01:38:51,480
@@ -7581,7 +7581,7 @@ rules for term constructors
 
 1598
 01:39:07,920 --> 01:39:09,640
-which follow the rules for times.
+which follow the rules for types.
 
 1599
 01:39:10,160 --> 01:39:13,240
@@ -7676,7 +7676,7 @@ elaborated without issues.
 
 1618
 01:39:59,840 --> 01:40:02,240
-In the inferred time
+In the inferred type
 for the expression
 
 1619
@@ -7686,7 +7686,7 @@ number of implicit arguments.
 
 1620
 01:40:05,520 --> 01:40:08,880
-Also the unknown data types can
+Also the unknown beta type can
 now depend on the argument.
 
 1621
@@ -7705,12 +7705,12 @@ two sides of the equation
 
 1624
 01:40:17,400 --> 01:40:19,480
-by solving current function domains.
+by solving curried function domains.
 
 1625
 01:40:19,480 --> 01:40:22,920
 In this case the domain is
-solved (INAUDIBLE) record
+solved to a unary record
 
 1626
 01:40:22,920 --> 01:40:24,320
@@ -7737,7 +7737,7 @@ not quite correct.
 
 1631
 01:40:37,800 --> 01:40:39,320
-In practical implementation,
+In practical implementations,
 
 1632
 01:40:40,040 --> 01:40:42,200
@@ -7780,7 +7780,7 @@ nice and well behaved type theory.
 
 1640
 01:41:07,320 --> 01:41:10,600
-This is infact a model type
+This is infact a modal type
 theory since meta variables
 
 1641
@@ -7791,11 +7791,11 @@ the so called crisp modality
 1642
 01:41:14,040 --> 01:41:16,640
 or alternatively,
-contextual modality.
+a contextual modality.
 
 1643
 01:41:17,160 --> 01:41:18,720
-If you don't use meta variable
+If you don't use meta variables
 
 1644
 01:41:18,720 --> 01:41:20,880
@@ -7833,7 +7833,7 @@ all meta variables are solved.
 1651
 01:41:38,640 --> 01:41:42,840
 And we can also just ignore or translate
-a very implicit function types
+away implicit function types
 
 1652
 01:41:43,360 --> 01:41:46,840
@@ -7852,7 +7852,7 @@ insertion to be more dynamic
 
 1655
 01:41:53,200 --> 01:41:55,800
-and more interlude in
+and more interleaved in
 the elaboration algorithm.
 
 1656
@@ -7938,7 +7938,7 @@ block potential solutions
 1673
 01:42:37,800 --> 01:42:40,640
 are significantly limited
-in other end efficiency.
+in power and efficiency.
 
 1674
 01:42:41,640 --> 01:42:46,640
