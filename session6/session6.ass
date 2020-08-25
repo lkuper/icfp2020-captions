@@ -507,7 +507,7 @@ Dialogue: 0,0:43:17.68,0:43:22.68,Default,,0,0,0,,is sound in that it\Ncommutes 
 Dialogue: 0,0:43:23.52,0:43:25.08,Default,,0,0,0,,MATUS TEJSAK: Hello, thank you for
 Dialogue: 0,0:43:25.08,0:43:26.52,Default,,0,0,0,,coming to my talk.
 Dialogue: 0,0:43:26.52,0:43:28.24,Default,,0,0,0,,My name is Matus Tejsak\Nand I would like to
-Dialogue: 0,0:43:28.24,0:43:32.12,Default,,0,0,0,,talk about erasure\Nindependently type programming.
+Dialogue: 0,0:43:28.24,0:43:32.12,Default,,0,0,0,,talk about erasure\Nin dependently typed programming.
 Dialogue: 0,0:43:32.12,0:43:33.52,Default,,0,0,0,,Dependent types are great.
 Dialogue: 0,0:43:33.52,0:43:35.52,Default,,0,0,0,,They let us write specifications
 Dialogue: 0,0:43:35.52,0:43:37.68,Default,,0,0,0,,and formulate invariants
@@ -518,58 +518,58 @@ Dialogue: 0,0:43:46.12,0:43:48.04,Default,,0,0,0,,a binary number from the input
 Dialogue: 0,0:43:48.04,0:43:51.16,Default,,0,0,0,,adds one to it,\Nand prints a result out.
 Dialogue: 0,0:43:51.16,0:43:55.52,Default,,0,0,0,,Where the type of binary\Nnumbers is indexed
 Dialogue: 0,0:43:55.52,0:43:58.76,Default,,0,0,0,,by its unary representation\Nwhich is easier to reason about
-Dialogue: 0,0:43:58.76,0:44:03.12,Default,,0,0,0,,which allows us to give\Nthe function add one a type
-Dialogue: 0,0:44:03.12,0:44:05.48,Default,,0,0,0,,that guarantees that add one indeed
+Dialogue: 0,0:43:58.76,0:44:03.12,Default,,0,0,0,,which allows us to give\Nthe function add1 a type
+Dialogue: 0,0:44:03.12,0:44:05.48,Default,,0,0,0,,that guarantees that add1 indeed
 Dialogue: 0,0:44:05.48,0:44:10.32,Default,,0,0,0,,computes the successor of\Nthe given binary number.
 Dialogue: 0,0:44:10.32,0:44:14.40,Default,,0,0,0,,Unfortunately, just by\Nlooking at the types,
 Dialogue: 0,0:44:14.40,0:44:16.60,Default,,0,0,0,,we can already tell\Nthat this program
-Dialogue: 0,0:44:16.60,0:44:19.36,Default,,0,0,0,,will run in exponential time\Nand space with respect...
-Dialogue: 0,0:44:20.08,0:44:22.36,Default,,0,0,0,,MATUS: Do the number of\Nbits right from the input.
+Dialogue: 0,0:44:16.60,0:44:19.36,Default,,0,0,0,,will run in exponential time\Nand space with respect
+Dialogue: 0,0:44:20.08,0:44:22.36,Default,,0,0,0,,to the number of\Nbits right from the input.
 Dialogue: 0,0:44:22.36,0:44:23.40,Default,,0,0,0,,Why is that?
 Dialogue: 0,0:44:23.40,0:44:27.24,Default,,0,0,0,,Well, if we look at\Nthe implicit arguments,
 Dialogue: 0,0:44:27.24,0:44:30.08,Default,,0,0,0,,which are usually hidden\Nand filled in by the elaborator,
 Dialogue: 0,0:44:30.08,0:44:33.56,Default,,0,0,0,,we can see that each binary number
 Dialogue: 0,0:44:33.56,0:44:36.60,Default,,0,0,0,,also contains\Nthe unit representation
 Dialogue: 0,0:44:37.32,0:44:41.00,Default,,0,0,0,,of the binary numbers\Ncontained within
-Dialogue: 0,0:44:41.00,0:44:43.04,Default,,0,0,0,,and the function adds one also,
-Dialogue: 0,0:44:43.84,0:44:47.92,Default,,0,0,0,,takes unit representation of\Nthe binary number it takes
-Dialogue: 0,0:44:48.60,0:44:53.48,Default,,0,0,0,,and those unit representations\Nare exponentially sized
-Dialogue: 0,0:44:53.48,0:44:55.08,Default,,0,0,0,,with respective number of bits.
+Dialogue: 0,0:44:41.00,0:44:43.04,Default,,0,0,0,,and the function add1 also
+Dialogue: 0,0:44:43.84,0:44:47.92,Default,,0,0,0,,takes a unary representation of\Nthe binary number it takes
+Dialogue: 0,0:44:48.60,0:44:53.48,Default,,0,0,0,,and those unary representations\Nare exponentially sized
+Dialogue: 0,0:44:53.48,0:44:55.08,Default,,0,0,0,,with respect to the number of bits.
 Dialogue: 0,0:44:55.08,0:44:58.56,Default,,0,0,0,,And therefore the representation of\Nmemory looks roughly like this.
-Dialogue: 0,0:44:58.56,0:45:03.56,Default,,0,0,0,,The useful bit on\Nthe left is dwarfed by the,
+Dialogue: 0,0:44:58.56,0:45:03.56,Default,,0,0,0,,The useful bit on\Nthe left is dwarfed by the
 Dialogue: 0,0:45:03.88,0:45:08.08,Default,,0,0,0,,compile-time only\Ninformation on the right.
 Dialogue: 0,0:45:10.04,0:45:12.08,Default,,0,0,0,,So, in this talk,\NI would like to convince
-Dialogue: 0,0:45:12.08,0:45:13.72,Default,,0,0,0,,you that this is real problem.
+Dialogue: 0,0:45:12.08,0:45:13.72,Default,,0,0,0,,you that this is a real problem.
 Dialogue: 0,0:45:13.72,0:45:16.80,Default,,0,0,0,,That we should really address this
 Dialogue: 0,0:45:16.80,0:45:20.40,Default,,0,0,0,,and that by specifying our\Nprograms more precisely,
 Dialogue: 0,0:45:20.40,0:45:22.72,Default,,0,0,0,,we should not make them run slower
 Dialogue: 0,0:45:22.72,0:45:26.00,Default,,0,0,0,,and we should not make\Na linear program run
 Dialogue: 0,0:45:26.52,0:45:28.84,Default,,0,0,0,,in exponential time or worse,
-Dialogue: 0,0:45:28.88,0:45:31.56,Default,,0,0,0,,just by saying about it, that it,
+Dialogue: 0,0:45:28.88,0:45:31.56,Default,,0,0,0,,just by saying about it that it
 Dialogue: 0,0:45:32.04,0:45:34.92,Default,,0,0,0,,calculates the right answer.
 Dialogue: 0,0:45:34.92,0:45:36.84,Default,,0,0,0,,I'll sketch that,
-Dialogue: 0,0:45:36.84,0:45:41.64,Default,,0,0,0,,irrelevance erased\Nuniverses or laziness also-
-Dialogue: 0,0:45:41.64,0:45:43.48,Default,,0,0,0,,it's a slightly different problem.
+Dialogue: 0,0:45:36.84,0:45:41.64,Default,,0,0,0,,irrelevance, erased\Nuniverses or laziness all
+Dialogue: 0,0:45:41.64,0:45:43.48,Default,,0,0,0,,solve a slightly different problem.
 Dialogue: 0,0:45:43.48,0:45:47.84,Default,,0,0,0,,So, they are not always applicable\Nor not always the best choice.
-Dialogue: 0,0:45:47.84,0:45:51.76,Default,,0,0,0,,I'll sketch the gist of\Nhow we can discover,
-Dialogue: 0,0:45:52.24,0:45:54.24,Default,,0,0,0,,this compile-time only information,
+Dialogue: 0,0:45:47.84,0:45:51.76,Default,,0,0,0,,I'll sketch the gist of\Nhow we can discover
+Dialogue: 0,0:45:52.24,0:45:54.24,Default,,0,0,0,,this compile-time only information
 Dialogue: 0,0:45:55.00,0:45:58.16,Default,,0,0,0,,that might be too big
 Dialogue: 0,0:45:58.16,0:46:01.40,Default,,0,0,0,,and automatically discover it
 Dialogue: 0,0:46:01.40,0:46:04.48,Default,,0,0,0,,and remove it from the program,
-Dialogue: 0,0:46:04.48,0:46:09.48,Default,,0,0,0,,thus recovering the intended\Nrun time complexity.
+Dialogue: 0,0:46:04.48,0:46:09.48,Default,,0,0,0,,thus recovering the intended\Nrun-time complexity.
 Dialogue: 0,0:46:11.60,0:46:16.00,Default,,0,0,0,,And I'll show this\Noptimization makes
 Dialogue: 0,0:46:16.00,0:46:18.32,Default,,0,0,0,,other optimizations more powerful,
 Dialogue: 0,0:46:18.32,0:46:21.12,Default,,0,0,0,,and also makes\Nthe compiler run faster,
 Dialogue: 0,0:46:21.12,0:46:23.44,Default,,0,0,0,,because there's less\Ncode to generate.
-Dialogue: 0,0:46:23.44,0:46:24.84,Default,,0,0,0,,In language like COKE.
+Dialogue: 0,0:46:23.44,0:46:24.84,Default,,0,0,0,,In language like Coq,
 Dialogue: 0,0:46:24.84,0:46:28.72,Default,,0,0,0,,We might want-we\Nmight attempt to use,
-Dialogue: 0,0:46:28.72,0:46:32.36,Default,,0,0,0,,the erase universe of prop.
+Dialogue: 0,0:46:28.72,0:46:32.36,Default,,0,0,0,,the erased universe of Prop.
 Dialogue: 0,0:46:32.36,0:46:35.96,Default,,0,0,0,,However, while this is\Ngreat for erasing proofs,
 Dialogue: 0,0:46:35.96,0:46:38.56,Default,,0,0,0,,it's not so good at raising indices,
 Dialogue: 0,0:46:38.56,0:46:42.80,Default,,0,0,0,,as illustrated by\Nthe function natToBin.
-Dialogue: 0,0:46:42.80,0:46:44.96,Default,,0,0,0,,Because what should\Nbe the type of n,
-Dialogue: 0,0:46:44.96,0:46:48.56,Default,,0,0,0,,should the type of n be\Nerased or not erased,
-Dialogue: 0,0:46:48.56,0:46:53.56,Default,,0,0,0,,since function natToBin\Nrequires n to do its job
+Dialogue: 0,0:46:42.80,0:46:44.96,Default,,0,0,0,,Because what should\Nbe the type of n?
+Dialogue: 0,0:46:44.96,0:46:48.56,Default,,0,0,0,,Should the type of n be\Nerased or not erased?
+Dialogue: 0,0:46:48.56,0:46:53.56,Default,,0,0,0,,since function natToBin\Nrequires n to do its job,
 Dialogue: 0,0:46:54.20,0:46:56.88,Default,,0,0,0,,n must have a non-erased type.
 Dialogue: 0,0:46:56.88,0:47:01.56,Default,,0,0,0,,However, because the same n\Nis used as an index of Bin,
 Dialogue: 0,0:47:01.56,0:47:03.36,Default,,0,0,0,,it must have an erased type.
@@ -577,24 +577,24 @@ Dialogue: 0,0:47:03.36,0:47:06.80,Default,,0,0,0,,So, tying erasure to\Na type o
 Dialogue: 0,0:47:06.80,0:47:10.60,Default,,0,0,0,,is not useful in this case.
 Dialogue: 0,0:47:10.60,0:47:15.60,Default,,0,0,0,,We might even try laziness,\Nthat works sometimes,
 Dialogue: 0,0:47:16.00,0:47:19.76,Default,,0,0,0,,but it's a dynamic\Nfix for a static problem.
-Dialogue: 0,0:47:19.76,0:47:23.00,Default,,0,0,0,,We can already tell at compile time,
+Dialogue: 0,0:47:19.76,0:47:23.00,Default,,0,0,0,,We can already tell at compile time
 Dialogue: 0,0:47:23.00,0:47:28.08,Default,,0,0,0,,which bits can be erased\Nand which bits we need for runtime.
 Dialogue: 0,0:47:28.08,0:47:33.12,Default,,0,0,0,,So, we should not keep\Na runtime check,
-Dialogue: 0,0:47:33.12,0:47:36.72,Default,,0,0,0,,to prevent evaluation\Nof that information
-Dialogue: 0,0:47:36.72,0:47:38.76,Default,,0,0,0,,we should just erase it altogether.
+Dialogue: 0,0:47:33.12,0:47:36.72,Default,,0,0,0,,to prevent evaluation\Nof that information.
+Dialogue: 0,0:47:36.72,0:47:38.76,Default,,0,0,0,,We should just erase it altogether.
 Dialogue: 0,0:47:38.76,0:47:43.24,Default,,0,0,0,,Laziness is not an option in\Neagerly evaluated languages.
 Dialogue: 0,0:47:43.24,0:47:47.64,Default,,0,0,0,,And as illustrated by\Nthe function serverLoop,
-Dialogue: 0,0:47:49.28,0:47:54.12,Default,,0,0,0,,we have a choice here between,
+Dialogue: 0,0:47:49.28,0:47:54.12,Default,,0,0,0,,we have a choice here between
 Dialogue: 0,0:47:54.12,0:47:58.36,Default,,0,0,0,,accumulating thunks\Nin the variable n,
-Dialogue: 0,0:47:58.36,0:48:02.48,Default,,0,0,0,,if we do not evaluate it\Nand therefore leaking memory
+Dialogue: 0,0:47:58.36,0:48:02.48,Default,,0,0,0,,if we do not evaluate it\Nand therefore leaking memory,
 Dialogue: 0,0:48:02.48,0:48:07.48,Default,,0,0,0,,or evaluating it and having\Nn explode exponentially in size.
 Dialogue: 0,0:48:08.40,0:48:10.64,Default,,0,0,0,,Irrelevance can also be used,
-Dialogue: 0,0:48:12.00,0:48:15.12,Default,,0,0,0,,to achieve erasure,\Nirrelevance is too strong.
+Dialogue: 0,0:48:12.00,0:48:15.12,Default,,0,0,0,,to achieve erasure,\Nhowever, irrelevance is too strong.
 Dialogue: 0,0:48:15.12,0:48:19.04,Default,,0,0,0,,By irrelevance I mean,\Nthe property of subexpressions
 Dialogue: 0,0:48:19.04,0:48:21.76,Default,,0,0,0,,ignored in definitional equality.
 Dialogue: 0,0:48:21.76,0:48:26.76,Default,,0,0,0,,This is a very strong property,
-Dialogue: 0,0:48:26.76,0:48:31.76,Default,,0,0,0,,and it's not necessary\Nfor erasure and runtime,
-Dialogue: 0,0:48:32.92,0:48:35.96,Default,,0,0,0,,in Agda...
+Dialogue: 0,0:48:26.76,0:48:31.76,Default,,0,0,0,,and it's not necessary\Nfor erasure at runtime.
+Dialogue: 0,0:48:32.92,0:48:35.96,Default,,0,0,0,,In Agda,
 Dialogue: 0,0:48:35.96,0:48:40.00,Default,,0,0,0,,irrelevance does not help us\Nwith the binary number example,
 Dialogue: 0,0:48:40.60,0:48:45.28,Default,,0,0,0,,just because it's too powerful\Nand causes problems.
 Dialogue: 0,0:48:45.28,0:48:47.56,Default,,0,0,0,,Also inference of irrelevance is harder
@@ -603,29 +603,29 @@ Dialogue: 0,0:48:50.12,0:48:54.48,Default,,0,0,0,,So, there's-if we just need er
 Dialogue: 0,0:48:54.48,0:48:59.48,Default,,0,0,0,,we do not need irrelevance with\Nall the consequences it brings.
 Dialogue: 0,0:49:01.20,0:49:02.76,Default,,0,0,0,,So, what do we do then?
 Dialogue: 0,0:49:02.84,0:49:04.24,Default,,0,0,0,,Well, here's a small example,
-Dialogue: 0,0:49:04.24,0:49:08.84,Default,,0,0,0,,function V-length that takes\Na vector and calculates its length.
+Dialogue: 0,0:49:04.24,0:49:08.84,Default,,0,0,0,,function vlen that takes\Na vector and calculates its length.
 Dialogue: 0,0:49:08.84,0:49:10.32,Default,,0,0,0,,We can ask the question,
-Dialogue: 0,0:49:11.20,0:49:14.28,Default,,0,0,0,,can we erase the second\Nargument of V-length call n?
-Dialogue: 0,0:49:15.00,0:49:19.24,Default,,0,0,0,,Or does V-length need to look at\Nthis argument to do its job?
+Dialogue: 0,0:49:11.20,0:49:14.28,Default,,0,0,0,,can we erase the second\Nargument of vlen called n?
+Dialogue: 0,0:49:15.00,0:49:19.24,Default,,0,0,0,,Or does vlen need to look at\Nthis argument to do its job?
 Dialogue: 0,0:49:19.24,0:49:21.44,Default,,0,0,0,,Well in the first clause,
 Dialogue: 0,0:49:21.44,0:49:25.00,Default,,0,0,0,,the second argument is forced to\Nzero indicated by square brackets,
 Dialogue: 0,0:49:25.00,0:49:26.56,Default,,0,0,0,,because the vector is empty.
-Dialogue: 0,0:49:26.56,0:49:30.32,Default,,0,0,0,,So, since the types tell us that\Nthe second argument is zero.
-Dialogue: 0,0:49:30.32,0:49:33.88,Default,,0,0,0,,We need not look at it. We\Ndo not have to inspect it.
+Dialogue: 0,0:49:26.56,0:49:30.32,Default,,0,0,0,,So, since the types tell us that\Nthe second argument is zero,
+Dialogue: 0,0:49:30.32,0:49:33.88,Default,,0,0,0,,we need not look at it. We\Ndo not have to inspect it.
 Dialogue: 0,0:49:33.88,0:49:37.28,Default,,0,0,0,,In the second clause,\Nthe types tell us that
 Dialogue: 0,0:49:37.28,0:49:41.68,Default,,0,0,0,,the second argument is a successor\Nof a certain number called n.
 Dialogue: 0,0:49:41.68,0:49:44.88,Default,,0,0,0,,So, the types tell us\Nthe tag of the constructor.
 Dialogue: 0,0:49:48.28,0:49:51.12,Default,,0,0,0,,But they do not tell us what n is.
 Dialogue: 0,0:49:51.12,0:49:53.48,Default,,0,0,0,,However, on the right-hand side,
 Dialogue: 0,0:49:53.48,0:49:57.32,Default,,0,0,0,,n is used in the recursive call,
-Dialogue: 0,0:49:57.32,0:49:58.60,Default,,0,0,0,,as a second argument of V-length.
-Dialogue: 0,0:49:58.60,0:50:01.68,Default,,0,0,0,,So, if the recursive call,
+Dialogue: 0,0:49:57.32,0:49:58.60,Default,,0,0,0,,as a second argument of vlen.
+Dialogue: 0,0:49:58.60,0:50:01.68,Default,,0,0,0,,So, if the recursive call
 Dialogue: 0,0:50:01.68,0:50:05.84,Default,,0,0,0,,does not need the second argument,
 Dialogue: 0,0:50:05.84,0:50:08.60,Default,,0,0,0,,we do not need n\Nand since we know the tag
 Dialogue: 0,0:50:08.60,0:50:11.04,Default,,0,0,0,,and we do not need the n,
 Dialogue: 0,0:50:11.04,0:50:14.36,Default,,0,0,0,,we do not need the second\Nargument altogether.
 Dialogue: 0,0:50:14.36,0:50:17.40,Default,,0,0,0,,And it's consistent then to say that
-Dialogue: 0,0:50:17.40,0:50:20.16,Default,,0,0,0,,the second argument of\NV-length can be erased.
+Dialogue: 0,0:50:17.40,0:50:20.16,Default,,0,0,0,,the second argument of\Nvlen can be erased.
 Dialogue: 0,0:50:20.16,0:50:22.20,Default,,0,0,0,,To make this a little\Nbit more formal,
 Dialogue: 0,0:50:22.84,0:50:26.76,Default,,0,0,0,,we need to get a bit more explicit\Nabout the pattern variables,
 Dialogue: 0,0:50:26.76,0:50:29.72,Default,,0,0,0,,so we insert the two lines\Nstarting with where,
@@ -644,77 +644,77 @@ Dialogue: 0,0:51:08.24,0:51:12.36,Default,,0,0,0,,For example, in this program,\
 Dialogue: 0,0:51:12.40,0:51:14.48,Default,,0,0,0,,that the annotation number 19,
 Dialogue: 0,0:51:14.48,0:51:17.36,Default,,0,0,0,,has to be the same as\Nthe annotation number 30,
 Dialogue: 0,0:51:17.36,0:51:19.88,Default,,0,0,0,,because it's the same function
-Dialogue: 0,0:51:19.88,0:51:22.32,Default,,0,0,0,,as the first argument\Nof function V-length,
+Dialogue: 0,0:51:19.88,0:51:22.32,Default,,0,0,0,,as the first argument\Nof function vlen,
 Dialogue: 0,0:51:22.32,0:51:25.28,Default,,0,0,0,,so it has to have\Nthe same annotation.
-Dialogue: 0,0:51:25.28,0:51:27.76,Default,,0,0,0,,This is expressible in\Nthe horn-clause form.
+Dialogue: 0,0:51:25.28,0:51:27.76,Default,,0,0,0,,This is expressible in\Nthe Horn clause form.
 Dialogue: 0,0:51:28.48,0:51:31.76,Default,,0,0,0,,Then on the right-hand\Nside, we can observe that,
 Dialogue: 0,0:51:31.76,0:51:35.12,Default,,0,0,0,,if S uses its first\Nargument and vector length
-Dialogue: 0,0:51:35.12,0:51:36.84,Default,,0,0,0,,uses it's second argument,
+Dialogue: 0,0:51:35.12,0:51:36.84,Default,,0,0,0,,uses its second argument,
 Dialogue: 0,0:51:36.84,0:51:41.48,Default,,0,0,0,,then the pattern variable\Nn needs to be available.
-Dialogue: 0,0:51:42.12,0:51:44.96,Default,,0,0,0,,This is also expressible\Nin the horn-clause form
+Dialogue: 0,0:51:42.12,0:51:44.96,Default,,0,0,0,,This is also expressible\Nin the Horn clause form
 Dialogue: 0,0:51:44.96,0:51:47.72,Default,,0,0,0,,and we can see it in\Nthe second line of the table.
 Dialogue: 0,0:51:48.80,0:51:53.68,Default,,0,0,0,,Finally on the left-hand\Nside of this clause,
 Dialogue: 0,0:51:54.52,0:51:59.48,Default,,0,0,0,,we can observe that\Nif n has to be available,
-Dialogue: 0,0:51:59.48,0:52:04.20,Default,,0,0,0,,then S needs to remember\Nit's argument,
+Dialogue: 0,0:51:59.48,0:52:04.20,Default,,0,0,0,,then S needs to remember\Nits argument,
 Dialogue: 0,0:52:04.20,0:52:09.00,Default,,0,0,0,,which means number 32\Nhas to be retained
 Dialogue: 0,0:52:09.00,0:52:13.60,Default,,0,0,0,,and vector length has to\Nretain its second argument,
 Dialogue: 0,0:52:13.60,0:52:16.56,Default,,0,0,0,,which means number 31\Nhas to be retained.
-Dialogue: 0,0:52:16.56,0:52:21.56,Default,,0,0,0,,This is also expressible\Nas two horn-clauses.
+Dialogue: 0,0:52:16.56,0:52:21.56,Default,,0,0,0,,This is also expressible\Nas two Horn clauses.
 Dialogue: 0,0:52:21.96,0:52:26.96,Default,,0,0,0,,And in this manner, we go\Nthrough the whole program,
-Dialogue: 0,0:52:27.32,0:52:30.48,Default,,0,0,0,,gather the constraints\Nand then find a solution,
+Dialogue: 0,0:52:27.32,0:52:30.48,Default,,0,0,0,,gather the constraints\Nand then find a solution
 Dialogue: 0,0:52:31.72,0:52:35.28,Default,,0,0,0,,that erases as much as possible,
 Dialogue: 0,0:52:35.28,0:52:38.96,Default,,0,0,0,,while being consistent\Nwith these constraints.
 Dialogue: 0,0:52:38.96,0:52:46.36,Default,,0,0,0,,This yields an annotated\Nprogram where every variable
 Dialogue: 0,0:52:46.80,0:52:51.56,Default,,0,0,0,,and every application has\Nbeen annotated with R or E.
-Dialogue: 0,0:52:51.56,0:52:55.76,Default,,0,0,0,,And with the annotations are\Nbuilt into of the type system,
-Dialogue: 0,0:52:55.76,0:52:58.00,Default,,0,0,0,,it's not something we\Nkeep on the side,
+Dialogue: 0,0:52:51.56,0:52:55.76,Default,,0,0,0,,And the annotations are\Nbuilt into the type system.
+Dialogue: 0,0:52:55.76,0:52:58.00,Default,,0,0,0,,It's not something we\Nkeep on the side,
 Dialogue: 0,0:52:58.00,0:53:00.52,Default,,0,0,0,,it's really built into\Nthe type signatures.
 Dialogue: 0,0:53:00.52,0:53:05.52,Default,,0,0,0,,So, then we can erase everything\Nthat's annotated with E,
-Dialogue: 0,0:53:05.88,0:53:08.44,Default,,0,0,0,,obtaining the program that\Nwe actually wants to run.
-Dialogue: 0,0:53:08.44,0:53:13.12,Default,,0,0,0,,And that does not contain\Nany traces of overhead cost
+Dialogue: 0,0:53:05.88,0:53:08.44,Default,,0,0,0,,obtaining the program that\Nwe actually want to run.
+Dialogue: 0,0:53:08.44,0:53:13.12,Default,,0,0,0,,And that does not contain\Nany traces of overhead caused
 Dialogue: 0,0:53:13.12,0:53:16.32,Default,,0,0,0,,by dependent typing and indices.
 Dialogue: 0,0:53:16.32,0:53:19.80,Default,,0,0,0,,This erasure system has\Nsome nice properties.
 Dialogue: 0,0:53:19.80,0:53:22.84,Default,,0,0,0,,For example, the function subst,
 Dialogue: 0,0:53:22.84,0:53:26.16,Default,,0,0,0,,does not require-does not\Nretain its proof arguments.
-Dialogue: 0,0:53:26.16,0:53:27.92,Default,,0,0,0,,So, the proof can be erased.
+Dialogue: 0,0:53:26.16,0:53:27.92,Default,,0,0,0,,So, the proof can be erased,
 Dialogue: 0,0:53:28.00,0:53:30.28,Default,,0,0,0,,despite being matched on.
 Dialogue: 0,0:53:30.28,0:53:33.32,Default,,0,0,0,,The types tell us what\Nthe constructor tag must be.
 Dialogue: 0,0:53:33.32,0:53:36.52,Default,,0,0,0,,We know because there's only one\Nconstructor in the type family
-Dialogue: 0,0:53:36.52,0:53:41.16,Default,,0,0,0,,and the argument X is not\Nused on the right-hand side.
+Dialogue: 0,0:53:36.52,0:53:41.16,Default,,0,0,0,,and the argument x is not\Nused on the right-hand side.
 Dialogue: 0,0:53:41.16,0:53:43.56,Default,,0,0,0,,Therefore the proof can\Nbe erased and subst
 Dialogue: 0,0:53:43.56,0:53:47.64,Default,,0,0,0,,becomes an identity\Nfunction after erasure.
 Dialogue: 0,0:53:47.64,0:53:50.72,Default,,0,0,0,,Of course, this is doable only\Nif the type system is sound
 Dialogue: 0,0:53:50.72,0:53:54.60,Default,,0,0,0,,and does not allow things\Nlike non-termination.
 Dialogue: 0,0:53:55.00,0:53:57.56,Default,,0,0,0,,Erasure also helps\Nthe newtype optimization,
 Dialogue: 0,0:53:57.56,0:54:03.92,Default,,0,0,0,,makes it more broadly applicable\Nand in combination with it,
-Dialogue: 0,0:54:04.16,0:54:09.04,Default,,0,0,0,,it can collapse large\Nrichly indexed structures,
+Dialogue: 0,0:54:04.16,0:54:09.04,Default,,0,0,0,,it can collapse large\Nrichly indexed structures
 Dialogue: 0,0:54:09.04,0:54:11.60,Default,,0,0,0,,into just the bare\Nbones representation,
 Dialogue: 0,0:54:12.00,0:54:16.52,Default,,0,0,0,,the meat of the structure.
 Dialogue: 0,0:54:16.52,0:54:20.64,Default,,0,0,0,,Finally the identity optimization\Ngets more powerful with erasure,
-Dialogue: 0,0:54:20.64,0:54:25.52,Default,,0,0,0,,because it's much easier to\Nspot that something is.
+Dialogue: 0,0:54:20.64,0:54:25.52,Default,,0,0,0,,because it's much easier to\Nspot that something is,
 Dialogue: 0,0:54:25.52,0:54:30.52,Default,,0,0,0,,is an identity after it's\Nbeen erased so weaken E
 Dialogue: 0,0:54:30.80,0:54:35.72,Default,,0,0,0,,is more obviously\Nan identity than weaken.
 Dialogue: 0,0:54:35.72,0:54:39.88,Default,,0,0,0,,Finally, here are some benchmarks\Nof my prototype implementation.
 Dialogue: 0,0:54:41.00,0:54:43.60,Default,,0,0,0,,The times shown include the whole
 Dialogue: 0,0:54:43.60,0:54:46.32,Default,,0,0,0,,compiler pipeline from parsing,
-Dialogue: 0,0:54:46.32,0:54:49.56,Default,,0,0,0,,up to including native\Ncode degeneration.
+Dialogue: 0,0:54:46.32,0:54:49.56,Default,,0,0,0,,up to and including native\Ncode degeneration.
 Dialogue: 0,0:54:49.56,0:54:53.96,Default,,0,0,0,,And we can see that\Nwith erasure enabled,
-Dialogue: 0,0:54:53.96,0:54:56.52,Default,,0,0,0,,the total compilation\Ntime, it's much shorter,
+Dialogue: 0,0:54:53.96,0:54:56.52,Default,,0,0,0,,the total compilation\Ntime is much shorter,
 Dialogue: 0,0:54:56.52,0:55:00.60,Default,,0,0,0,,because there's less\Ncode to generate.
-Dialogue: 0,0:55:00.60,0:55:03.60,Default,,0,0,0,,Given that we've shown that we can,
+Dialogue: 0,0:55:00.60,0:55:03.60,Default,,0,0,0,,Given that we've shown that we can
 Dialogue: 0,0:55:03.60,0:55:06.28,Default,,0,0,0,,distinguish between\Ncompile-time only information
-Dialogue: 0,0:55:06.28,0:55:11.04,Default,,0,0,0,,and runtime information\Nautomatically.
-Dialogue: 0,0:55:11.04,0:55:13.12,Default,,0,0,0,,We have shown that the commonly
+Dialogue: 0,0:55:06.28,0:55:11.04,Default,,0,0,0,,and runtime information\Nautomatically,
+Dialogue: 0,0:55:11.04,0:55:13.12,Default,,0,0,0,,we have shown that the commonly
 Dialogue: 0,0:55:13.12,0:55:15.04,Default,,0,0,0,,claimed lack of phase distinction
-Dialogue: 0,0:55:15.04,0:55:17.12,Default,,0,0,0,,in dependently type\Nprograms is a myth.
-Dialogue: 0,0:55:17.12,0:55:22.12,Default,,0,0,0,,And it's true that the phase\Ndistinction it no longer lines up
-Dialogue: 0,0:55:22.40,0:55:24.84,Default,,0,0,0,,with the distinction (INAUDIBLE)\Nterms and types, beginning,
-Dialogue: 0,0:55:24.84,0:55:28.92,Default,,0,0,0,,implicit and explicit (INAUDIBLE)\Nthere and we can make use of it.
+Dialogue: 0,0:55:15.04,0:55:17.12,Default,,0,0,0,,in dependently typed\Nprograms is a myth.
+Dialogue: 0,0:55:17.12,0:55:22.12,Default,,0,0,0,,And it's true that the phase\Ndistinction no longer lines up
+Dialogue: 0,0:55:22.40,0:55:24.84,Default,,0,0,0,,with the distinction (INAUDIBLE)\Nterms and types, between
+Dialogue: 0,0:55:24.84,0:55:28.92,Default,,0,0,0,,implicit and explicit, but it's\Nthere and we can make use of it.
 Dialogue: 0,0:55:28.92,0:55:32.36,Default,,0,0,0,,So, the main direction of further\Nresearch is unification with QTT,
-Dialogue: 0,0:55:32.36,0:55:36.60,Default,,0,0,0,,which is Bob (INAUDIBLE) extension\Nof Connor McBride's work,
+Dialogue: 0,0:55:32.36,0:55:36.60,Default,,0,0,0,,which is Bob Atkey's extension\Nof Conor McBride's work,
 Dialogue: 0,0:55:36.60,0:55:39.68,Default,,0,0,0,,featuring linearity as\Nan additional quantity
 Dialogue: 0,0:55:39.68,0:55:42.68,Default,,0,0,0,,to erased and not erased.
-Dialogue: 0,0:55:42.68,0:55:45.44,Default,,0,0,0,,It would be nice to have\Na ratio polymorphism
+Dialogue: 0,0:55:42.68,0:55:45.44,Default,,0,0,0,,It would be nice to have\Nerasure polymorphism
 Dialogue: 0,0:55:45.44,0:55:47.00,Default,,0,0,0,,or quantity polymorphism,
 Dialogue: 0,0:55:47.00,0:55:52.00,Default,,0,0,0,,so that functions like apply can\Ntake erase and not erase functions.
 Dialogue: 0,0:55:53.04,0:55:55.84,Default,,0,0,0,,Finally, erasure can\Nbe inferred from
@@ -725,7 +725,7 @@ Dialogue: 0,0:56:04.92,0:56:06.68,Default,,0,0,0,,You make a mistake somewhere,
 Dialogue: 0,0:56:07.20,0:56:08.96,Default,,0,0,0,,the system infers the wrong type
 Dialogue: 0,0:56:08.96,0:56:11.20,Default,,0,0,0,,and then something\Nvery far away breaks
 Dialogue: 0,0:56:11.20,0:56:14.04,Default,,0,0,0,,and it's hard to find\Nthe real cause.
-Dialogue: 0,0:56:14.60,0:56:17.28,Default,,0,0,0,,Moreover explicit annotation would
+Dialogue: 0,0:56:14.60,0:56:17.28,Default,,0,0,0,,Moreover, explicit annotation would
 Dialogue: 0,0:56:17.28,0:56:18.76,Default,,0,0,0,,help with separate compilation.
 Dialogue: 0,0:56:18.76,0:56:21.36,Default,,0,0,0,,So, it would be good to\Nfind a convenient way-
 Dialogue: 0,0:56:21.36,0:56:26.36,Default,,0,0,0,,convenient rules for explicit\Nannotation that would help with both.

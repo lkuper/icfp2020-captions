@@ -2309,7 +2309,7 @@ and I would like to
 497
 00:43:28,240 --> 00:43:32,120
 talk about erasure
-independently type programming.
+in dependently typed programming.
 
 498
 00:43:32,120 --> 00:43:33,520
@@ -2359,11 +2359,11 @@ which is easier to reason about
 508
 00:43:58,760 --> 00:44:03,120
 which allows us to give
-the function add one a type
+the function add1 a type
 
 509
 00:44:03,120 --> 00:44:05,480
-that guarantees that add one indeed
+that guarantees that add1 indeed
 
 510
 00:44:05,480 --> 00:44:10,320
@@ -2383,11 +2383,11 @@ that this program
 513
 00:44:16,600 --> 00:44:19,360
 will run in exponential time
-and space with respect...
+and space with respect
 
 514
 00:44:20,080 --> 00:44:22,360
-MATUS: Do the number of
+to the number of
 bits right from the input.
 
 515
@@ -2420,21 +2420,21 @@ contained within
 
 521
 00:44:41,000 --> 00:44:43,040
-and the function adds one also,
+and the function add1 also
 
 522
 00:44:43,840 --> 00:44:47,920
-takes unit representation of
+takes a unary representation of
 the binary number it takes
 
 523
 00:44:48,600 --> 00:44:53,480
-and those unit representations
+and those unary representations
 are exponentially sized
 
 524
 00:44:53,480 --> 00:44:55,080
-with respective number of bits.
+with respect to the number of bits.
 
 525
 00:44:55,080 --> 00:44:58,560
@@ -2444,7 +2444,7 @@ memory looks roughly like this.
 526
 00:44:58,560 --> 00:45:03,560
 The useful bit on
-the left is dwarfed by the,
+the left is dwarfed by the
 
 527
 00:45:03,880 --> 00:45:08,080
@@ -2458,7 +2458,7 @@ I would like to convince
 
 529
 00:45:12,080 --> 00:45:13,720
-you that this is real problem.
+you that this is a real problem.
 
 530
 00:45:13,720 --> 00:45:16,800
@@ -2484,7 +2484,7 @@ in exponential time or worse,
 
 535
 00:45:28,880 --> 00:45:31,560
-just by saying about it, that it,
+just by saying about it that it
 
 536
 00:45:32,040 --> 00:45:34,920
@@ -2496,12 +2496,12 @@ I'll sketch that,
 
 538
 00:45:36,840 --> 00:45:41,640
-irrelevance erased
-universes or laziness also-
+irrelevance, erased
+universes or laziness all
 
 539
 00:45:41,640 --> 00:45:43,480
-it's a slightly different problem.
+solve a slightly different problem.
 
 540
 00:45:43,480 --> 00:45:47,840
@@ -2511,11 +2511,11 @@ or not always the best choice.
 541
 00:45:47,840 --> 00:45:51,760
 I'll sketch the gist of
-how we can discover,
+how we can discover
 
 542
 00:45:52,240 --> 00:45:54,240
-this compile-time only information,
+this compile-time only information
 
 543
 00:45:55,000 --> 00:45:58,160
@@ -2532,7 +2532,7 @@ and remove it from the program,
 546
 00:46:04,480 --> 00:46:09,480
 thus recovering the intended
-run time complexity.
+run-time complexity.
 
 547
 00:46:11,600 --> 00:46:16,000
@@ -2555,7 +2555,7 @@ code to generate.
 
 551
 00:46:23,440 --> 00:46:24,840
-In language like COKE.
+In language like Coq,
 
 552
 00:46:24,840 --> 00:46:28,720
@@ -2564,7 +2564,7 @@ might attempt to use,
 
 553
 00:46:28,720 --> 00:46:32,360
-the erase universe of prop.
+the erased universe of Prop.
 
 554
 00:46:32,360 --> 00:46:35,960
@@ -2583,17 +2583,17 @@ the function natToBin.
 557
 00:46:42,800 --> 00:46:44,960
 Because what should
-be the type of n,
+be the type of n?
 
 558
 00:46:44,960 --> 00:46:48,560
-should the type of n be
-erased or not erased,
+Should the type of n be
+erased or not erased?
 
 559
 00:46:48,560 --> 00:46:53,560
 since function natToBin
-requires n to do its job
+requires n to do its job,
 
 560
 00:46:54,200 --> 00:46:56,880
@@ -2629,7 +2629,7 @@ fix for a static problem.
 
 567
 00:47:19,760 --> 00:47:23,000
-We can already tell at compile time,
+We can already tell at compile time
 
 568
 00:47:23,000 --> 00:47:28,080
@@ -2644,11 +2644,11 @@ a runtime check,
 570
 00:47:33,120 --> 00:47:36,720
 to prevent evaluation
-of that information
+of that information.
 
 571
 00:47:36,720 --> 00:47:38,760
-we should just erase it altogether.
+We should just erase it altogether.
 
 572
 00:47:38,760 --> 00:47:43,240
@@ -2662,7 +2662,7 @@ the function serverLoop,
 
 574
 00:47:49,280 --> 00:47:54,120
-we have a choice here between,
+we have a choice here between
 
 575
 00:47:54,120 --> 00:47:58,360
@@ -2672,7 +2672,7 @@ in the variable n,
 576
 00:47:58,360 --> 00:48:02,480
 if we do not evaluate it
-and therefore leaking memory
+and therefore leaking memory,
 
 577
 00:48:02,480 --> 00:48:07,480
@@ -2686,7 +2686,7 @@ Irrelevance can also be used,
 579
 00:48:12,000 --> 00:48:15,120
 to achieve erasure,
-irrelevance is too strong.
+however, irrelevance is too strong.
 
 580
 00:48:15,120 --> 00:48:19,040
@@ -2704,11 +2704,11 @@ This is a very strong property,
 583
 00:48:26,760 --> 00:48:31,760
 and it's not necessary
-for erasure and runtime,
+for erasure at runtime.
 
 584
 00:48:32,920 --> 00:48:35,960
-in Agda...
+In Agda,
 
 585
 00:48:35,960 --> 00:48:40,000
@@ -2747,7 +2747,7 @@ Well, here's a small example,
 
 593
 00:49:04,240 --> 00:49:08,840
-function V-length that takes
+function vlen that takes
 a vector and calculates its length.
 
 594
@@ -2757,11 +2757,11 @@ We can ask the question,
 595
 00:49:11,200 --> 00:49:14,280
 can we erase the second
-argument of V-length call n?
+argument of vlen called n?
 
 596
 00:49:15,000 --> 00:49:19,240
-Or does V-length need to look at
+Or does vlen need to look at
 this argument to do its job?
 
 597
@@ -2780,11 +2780,11 @@ because the vector is empty.
 600
 00:49:26,560 --> 00:49:30,320
 So, since the types tell us that
-the second argument is zero.
+the second argument is zero,
 
 601
 00:49:30,320 --> 00:49:33,880
-We need not look at it. We
+we need not look at it. We
 do not have to inspect it.
 
 602
@@ -2816,11 +2816,11 @@ n is used in the recursive call,
 
 608
 00:49:57,320 --> 00:49:58,600
-as a second argument of V-length.
+as a second argument of vlen.
 
 609
 00:49:58,600 --> 00:50:01,680
-So, if the recursive call,
+So, if the recursive call
 
 610
 00:50:01,680 --> 00:50:05,840
@@ -2847,7 +2847,7 @@ And it's consistent then to say that
 615
 00:50:17,400 --> 00:50:20,160
 the second argument of
-V-length can be erased.
+vlen can be erased.
 
 616
 00:50:20,160 --> 00:50:22,200
@@ -2936,7 +2936,7 @@ because it's the same function
 634
 00:51:19,880 --> 00:51:22,320
 as the first argument
-of function V-length,
+of function vlen,
 
 635
 00:51:22,320 --> 00:51:25,280
@@ -2946,7 +2946,7 @@ the same annotation.
 636
 00:51:25,280 --> 00:51:27,760
 This is expressible in
-the horn-clause form.
+the Horn clause form.
 
 637
 00:51:28,480 --> 00:51:31,760
@@ -2960,7 +2960,7 @@ argument and vector length
 
 639
 00:51:35,120 --> 00:51:36,840
-uses it's second argument,
+uses its second argument,
 
 640
 00:51:36,840 --> 00:51:41,480
@@ -2970,7 +2970,7 @@ n needs to be available.
 641
 00:51:42,120 --> 00:51:44,960
 This is also expressible
-in the horn-clause form
+in the Horn clause form
 
 642
 00:51:44,960 --> 00:51:47,720
@@ -2990,7 +2990,7 @@ if n has to be available,
 645
 00:51:59,480 --> 00:52:04,200
 then S needs to remember
-it's argument,
+its argument,
 
 646
 00:52:04,200 --> 00:52:09,000
@@ -3010,7 +3010,7 @@ has to be retained.
 649
 00:52:16,560 --> 00:52:21,560
 This is also expressible
-as two horn-clauses.
+as two Horn clauses.
 
 650
 00:52:21,960 --> 00:52:26,960
@@ -3020,7 +3020,7 @@ through the whole program,
 651
 00:52:27,320 --> 00:52:30,480
 gather the constraints
-and then find a solution,
+and then find a solution
 
 652
 00:52:31,720 --> 00:52:35,280
@@ -3043,12 +3043,12 @@ been annotated with R or E.
 
 656
 00:52:51,560 --> 00:52:55,760
-And with the annotations are
-built into of the type system,
+And the annotations are
+built into the type system.
 
 657
 00:52:55,760 --> 00:52:58,000
-it's not something we
+It's not something we
 keep on the side,
 
 658
@@ -3064,12 +3064,12 @@ that's annotated with E,
 660
 00:53:05,880 --> 00:53:08,440
 obtaining the program that
-we actually wants to run.
+we actually want to run.
 
 661
 00:53:08,440 --> 00:53:13,120
 And that does not contain
-any traces of overhead cost
+any traces of overhead caused
 
 662
 00:53:13,120 --> 00:53:16,320
@@ -3091,7 +3091,7 @@ retain its proof arguments.
 
 666
 00:53:26,160 --> 00:53:27,920
-So, the proof can be erased.
+So, the proof can be erased,
 
 667
 00:53:28,000 --> 00:53:30,280
@@ -3109,7 +3109,7 @@ constructor in the type family
 
 670
 00:53:36,520 --> 00:53:41,160
-and the argument X is not
+and the argument x is not
 used on the right-hand side.
 
 671
@@ -3145,7 +3145,7 @@ and in combination with it,
 677
 00:54:04,160 --> 00:54:09,040
 it can collapse large
-richly indexed structures,
+richly indexed structures
 
 678
 00:54:09,040 --> 00:54:11,600
@@ -3164,7 +3164,7 @@ gets more powerful with erasure,
 681
 00:54:20,640 --> 00:54:25,520
 because it's much easier to
-spot that something is.
+spot that something is,
 
 682
 00:54:25,520 --> 00:54:30,520
@@ -3191,7 +3191,7 @@ compiler pipeline from parsing,
 
 687
 00:54:46,320 --> 00:54:49,560
-up to including native
+up to and including native
 code degeneration.
 
 688
@@ -3202,7 +3202,7 @@ with erasure enabled,
 689
 00:54:53,960 --> 00:54:56,520
 the total compilation
-time, it's much shorter,
+time is much shorter,
 
 690
 00:54:56,520 --> 00:55:00,600
@@ -3211,7 +3211,7 @@ code to generate.
 
 691
 00:55:00,600 --> 00:55:03,600
-Given that we've shown that we can,
+Given that we've shown that we can
 
 692
 00:55:03,600 --> 00:55:06,280
@@ -3221,11 +3221,11 @@ compile-time only information
 693
 00:55:06,280 --> 00:55:11,040
 and runtime information
-automatically.
+automatically,
 
 694
 00:55:11,040 --> 00:55:13,120
-We have shown that the commonly
+we have shown that the commonly
 
 695
 00:55:13,120 --> 00:55:15,040
@@ -3233,22 +3233,22 @@ claimed lack of phase distinction
 
 696
 00:55:15,040 --> 00:55:17,120
-in dependently type
+in dependently typed
 programs is a myth.
 
 697
 00:55:17,120 --> 00:55:22,120
 And it's true that the phase
-distinction it no longer lines up
+distinction no longer lines up
 
 698
 00:55:22,400 --> 00:55:24,840
 with the distinction (INAUDIBLE)
-terms and types, beginning,
+terms and types, between
 
 699
 00:55:24,840 --> 00:55:28,920
-implicit and explicit (INAUDIBLE)
+implicit and explicit, but it's
 there and we can make use of it.
 
 700
@@ -3258,8 +3258,8 @@ research is unification with QTT,
 
 701
 00:55:32,360 --> 00:55:36,600
-which is Bob (INAUDIBLE) extension
-of Connor McBride's work,
+which is Bob Atkey's extension
+of Conor McBride's work,
 
 702
 00:55:36,600 --> 00:55:39,680
@@ -3273,7 +3273,7 @@ to erased and not erased.
 704
 00:55:42,680 --> 00:55:45,440
 It would be nice to have
-a ratio polymorphism
+erasure polymorphism
 
 705
 00:55:45,440 --> 00:55:47,000
@@ -3323,7 +3323,7 @@ the real cause.
 
 715
 00:56:14,600 --> 00:56:17,280
-Moreover explicit annotation would
+Moreover, explicit annotation would
 
 716
 00:56:17,280 --> 00:56:18,760
