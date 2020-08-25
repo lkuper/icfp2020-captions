@@ -6650,7 +6650,7 @@ function types control elaboration
 
 1403
 01:29:59,920 --> 01:30:02,240
-by signalling where
+by signaling where
 implicit applications
 
 1404
@@ -6713,7 +6713,7 @@ possible in current GHC.
 1416
 01:30:35,280 --> 01:30:37,760
 There is a language extension
-called inpredicative types
+called impredicative types
 
 1417
 01:30:37,760 --> 01:30:40,080
@@ -6871,7 +6871,7 @@ in the context of type inference.
 
 1449
 01:32:04,240 --> 01:32:07,160
-With that said, to summarise
+With that said, to summarize
 the contributions of the current work
 
 1450
@@ -6997,7 +6997,7 @@ with its core type.
 
 1476
 01:33:21,840 --> 01:33:25,080
-the check function additionly takes
+the check function additionally takes
 an input an expected core type
 
 1477
@@ -7143,7 +7143,7 @@ the function argument which is ID.
 
 1506
 01:34:52,480 --> 01:34:55,880
-Then we noticed thatthe inferred type
+Then we noticed that the inferred type
 is an implicit function type.
 
 1507
@@ -7314,7 +7314,7 @@ Now the types march up
 
 1542
 01:36:31,920 --> 01:36:34,800
-so the checkings succeeds
+so the checking succeeds
 and return the expression
 
 1543
@@ -7780,7 +7780,7 @@ nice and well behaved type theory.
 
 1640
 01:41:07,320 --> 01:41:10,600
-This is infact a modal type
+This is in fact a modal type
 theory since meta variables
 
 1641
@@ -8183,7 +8183,7 @@ Look at the definition of f1.
 
 1726
 01:44:54,760 --> 01:44:58,200
-It starts with two lambas,
+It starts with two lambdas,
 so it requires two arguments
 
 1727
@@ -8592,7 +8592,7 @@ languages semantics.
 1813
 01:49:07,520 --> 01:49:11,920
 So, for example, in the case where
-a paremeter is used more than once.
+a parameter is used more than once.
 
 1814
 01:49:12,640 --> 01:49:14,880
@@ -9055,7 +9055,7 @@ This is a big problem.
 1911
 01:53:48,680 --> 01:53:51,320
 We want to be able to statically
-compile a fu nction calls
+compile a function calls
 
 1912
 01:53:51,320 --> 01:53:54,760
@@ -9092,7 +9092,7 @@ to correctly execute the body of g.
 
 1919
 01:54:13,200 --> 01:54:16,600
-How can we possibly statially
+How can we possibly statically
 compile multiargument function calls
 
 1920

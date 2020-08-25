@@ -1413,7 +1413,7 @@ Dialogue: 0,1:29:48.76,1:29:51.08,Default,,0,0,0,,but you are free to make any\N
 Dialogue: 0,1:29:51.08,1:29:53.84,Default,,0,0,0,,and type abstraction is\Njust a special case
 Dialogue: 0,1:29:53.84,1:29:55.44,Default,,0,0,0,,of general dependent functions.
 Dialogue: 0,1:29:56.44,1:29:59.92,Default,,0,0,0,,Both in GHC and Agda, implicit\Nfunction types control elaboration
-Dialogue: 0,1:29:59.92,1:30:02.24,Default,,0,0,0,,by signalling where\Nimplicit applications
+Dialogue: 0,1:29:59.92,1:30:02.24,Default,,0,0,0,,by signaling where\Nimplicit applications
 Dialogue: 0,1:30:02.24,1:30:03.48,Default,,0,0,0,,should be inserted.
 Dialogue: 0,1:30:04.00,1:30:06.92,Default,,0,0,0,,After elaboration, implicit functions\Nare not that important any more
 Dialogue: 0,1:30:06.92,1:30:10.08,Default,,0,0,0,,because everything is fully\Nexplicit in the core syntax.
@@ -1426,7 +1426,7 @@ Dialogue: 0,1:30:24.40,1:30:26.48,Default,,0,0,0,,But what if you want to\Nuse a
 Dialogue: 0,1:30:26.48,1:30:28.48,Default,,0,0,0,,in some other parameterized data type?
 Dialogue: 0,1:30:28.48,1:30:31.20,Default,,0,0,0,,Such as Maybe as in this\Nparticular example.
 Dialogue: 0,1:30:32.48,1:30:35.00,Default,,0,0,0,,This is not really\Npossible in current GHC.
-Dialogue: 0,1:30:35.28,1:30:37.76,Default,,0,0,0,,There is a language extension\Ncalled inpredicative types
+Dialogue: 0,1:30:35.28,1:30:37.76,Default,,0,0,0,,There is a language extension\Ncalled impredicative types
 Dialogue: 0,1:30:37.76,1:30:40.08,Default,,0,0,0,,which technically allows\Nwriting down this type
 Dialogue: 0,1:30:40.08,1:30:42.88,Default,,0,0,0,,that is deprecated and doesn't\Nlet you work in practice.
 Dialogue: 0,1:30:43.64,1:30:46.80,Default,,0,0,0,,There is another talk at\Nthe current ICFP which introduces a new
@@ -1459,7 +1459,7 @@ Dialogue: 0,1:31:54.48,1:31:57.16,Default,,0,0,0,,I personally prefer to use\Nth
 Dialogue: 0,1:31:57.16,1:31:59.12,Default,,0,0,0,,in the technical type\Ntheoretic sense
 Dialogue: 0,1:31:59.12,1:32:01.68,Default,,0,0,0,,and talk instead about\Nimplicit functions
 Dialogue: 0,1:32:01.68,1:32:03.48,Default,,0,0,0,,in the context of type inference.
-Dialogue: 0,1:32:04.24,1:32:07.16,Default,,0,0,0,,With that said, to summarise\Nthe contributions of the current work
+Dialogue: 0,1:32:04.24,1:32:07.16,Default,,0,0,0,,With that said, to summarize\Nthe contributions of the current work
 Dialogue: 0,1:32:07.16,1:32:09.24,Default,,0,0,0,,we have an elaboration algorithm
 Dialogue: 0,1:32:10.24,1:32:13.36,Default,,0,0,0,,which supports strong inference for\Nfirst class implicit function types
 Dialogue: 0,1:32:13.36,1:32:15.00,Default,,0,0,0,,or impredicative inference
@@ -1486,7 +1486,7 @@ Dialogue: 0,1:33:08.80,1:33:11.04,Default,,0,0,0,,in the core syntax from\Nthe s
 Dialogue: 0,1:33:11.56,1:33:15.68,Default,,0,0,0,,First we have the infer function\Nwhich takes as input a core context
 Dialogue: 0,1:33:16.16,1:33:20.60,Default,,0,0,0,,and a surface expression\Nand return a core expression together
 Dialogue: 0,1:33:20.60,1:33:21.60,Default,,0,0,0,,with its core type.
-Dialogue: 0,1:33:21.84,1:33:25.08,Default,,0,0,0,,the check function additionly takes\Nan input an expected core type
+Dialogue: 0,1:33:21.84,1:33:25.08,Default,,0,0,0,,the check function additionally takes\Nan input an expected core type
 Dialogue: 0,1:33:25.08,1:33:27.80,Default,,0,0,0,,and returns a core\Nterm with that type.
 Dialogue: 0,1:33:28.32,1:33:30.80,Default,,0,0,0,,When the expected type of\Nthe expression is already known,
 Dialogue: 0,1:33:30.80,1:33:33.88,Default,,0,0,0,,we use a check function,\Notherwise we use infer.
@@ -1516,7 +1516,7 @@ Dialogue: 0,1:34:38.36,1:34:41.56,Default,,0,0,0,,Assume that we have the usual\
 Dialogue: 0,1:34:41.56,1:34:45.44,Default,,0,0,0,,and we want to infer a type for ID\Napplied to the Boolean true
 Dialogue: 0,1:34:45.68,1:34:48.16,Default,,0,0,0,,This expression is\Na functional application.
 Dialogue: 0,1:34:48.16,1:34:52.00,Default,,0,0,0,,So first we are infer a type for\Nthe function argument which is ID.
-Dialogue: 0,1:34:52.48,1:34:55.88,Default,,0,0,0,,Then we noticed thatthe inferred type\Nis an implicit function type.
+Dialogue: 0,1:34:52.48,1:34:55.88,Default,,0,0,0,,Then we noticed that the inferred type\Nis an implicit function type.
 Dialogue: 0,1:34:56.40,1:34:58.60,Default,,0,0,0,,So we insert an implicit\Napplication here.
 Dialogue: 0,1:34:59.36,1:35:02.56,Default,,0,0,0,,First create a fresh meta\Nvariable named alpha,
 Dialogue: 0,1:35:03.04,1:35:06.72,Default,,0,0,0,,then we apply the new elaborated\NID expression into it.
@@ -1552,7 +1552,7 @@ Dialogue: 0,1:36:21.68,1:36:24.04,Default,,0,0,0,,We assume the implicit argumen
 Dialogue: 0,1:36:24.04,1:36:27.44,Default,,0,0,0,,and check the expression with\Nthe codomain of the checking type
 Dialogue: 0,1:36:27.44,1:36:29.76,Default,,0,0,0,,which happens to be\Nan explicit function type here.
 Dialogue: 0,1:36:30.28,1:36:31.92,Default,,0,0,0,,Now the types march up
-Dialogue: 0,1:36:31.92,1:36:34.80,Default,,0,0,0,,so the checkings succeeds\Nand return the expression
+Dialogue: 0,1:36:31.92,1:36:34.80,Default,,0,0,0,,so the checking succeeds\Nand return the expression
 Dialogue: 0,1:36:35.32,1:36:36.76,Default,,0,0,0,,with the inserted lambda.
 Dialogue: 0,1:36:37.76,1:36:39.52,Default,,0,0,0,,To summarize implicit insertion
 Dialogue: 0,1:36:39.52,1:36:41.64,Default,,0,0,0,,when we infer\Nan implicit function type
@@ -1650,7 +1650,7 @@ Dialogue: 0,1:40:53.88,1:40:55.24,Default,,0,0,0,,for the purpose of elaboration
 Dialogue: 0,1:40:55.76,1:40:59.20,Default,,0,0,0,,Implicit function types provides\Ncontrol over implicit insertions
 Dialogue: 0,1:40:59.20,1:41:02.24,Default,,0,0,0,,and meta variables allowing\Nrepresenting unknown terms.
 Dialogue: 0,1:41:03.00,1:41:06.84,Default,,0,0,0,,However this core theory is also\Nnice and well behaved type theory.
-Dialogue: 0,1:41:07.32,1:41:10.60,Default,,0,0,0,,This is infact a modal type\Ntheory since meta variables
+Dialogue: 0,1:41:07.32,1:41:10.60,Default,,0,0,0,,This is in fact a modal type\Ntheory since meta variables
 Dialogue: 0,1:41:10.60,1:41:13.80,Default,,0,0,0,,and meta context form\Nthe so called crisp modality
 Dialogue: 0,1:41:14.04,1:41:16.64,Default,,0,0,0,,or alternatively,\Na contextual modality.
 Dialogue: 0,1:41:17.16,1:41:18.72,Default,,0,0,0,,If you don't use meta variables
@@ -1736,7 +1736,7 @@ Dialogue: 0,1:44:44.72,1:44:47.20,Default,,0,0,0,,They need two arguments before
 Dialogue: 0,1:44:47.20,1:44:49.80,Default,,0,0,0,,But this type might leave out\Nimportant operational details
 Dialogue: 0,1:44:49.80,1:44:52.08,Default,,0,0,0,,that we only learn from\Nthe function definitions.
 Dialogue: 0,1:44:52.60,1:44:54.76,Default,,0,0,0,,Look at the definition of f1.
-Dialogue: 0,1:44:54.76,1:44:58.20,Default,,0,0,0,,It starts with two lambas,\Nso it requires two arguments
+Dialogue: 0,1:44:54.76,1:44:58.20,Default,,0,0,0,,It starts with two lambdas,\Nso it requires two arguments
 Dialogue: 0,1:44:58.20,1:44:59.64,Default,,0,0,0,,before doing any interesting work.
 Dialogue: 0,1:44:59.64,1:45:02.36,Default,,0,0,0,,So, f1 definitely has arity 2.
 Dialogue: 0,1:45:03.28,1:45:05.28,Default,,0,0,0,,Now, look at f2.
@@ -1823,7 +1823,7 @@ Dialogue: 0,1:48:55.20,1:48:57.36,Default,,0,0,0,,where the eta law might not ap
 Dialogue: 0,1:48:57.36,1:48:59.40,Default,,0,0,0,,to all expressions\Nof a function type.
 Dialogue: 0,1:48:59.92,1:49:03.60,Default,,0,0,0,,However, application may still\Nbe restricted for efficiency
 Dialogue: 0,1:49:03.60,1:49:07.52,Default,,0,0,0,,and for the purposes of\Nlanguages semantics.
-Dialogue: 0,1:49:07.52,1:49:11.92,Default,,0,0,0,,So, for example, in the case where\Na paremeter is used more than once.
+Dialogue: 0,1:49:07.52,1:49:11.92,Default,,0,0,0,,So, for example, in the case where\Na parameter is used more than once.
 Dialogue: 0,1:49:12.64,1:49:14.88,Default,,0,0,0,,If you apply the function lambda x,
 Dialogue: 0,1:49:14.88,1:49:17.24,Default,,0,0,0,,x applied to x to\Nan expensive argument,
 Dialogue: 0,1:49:17.24,1:49:20.24,Default,,0,0,0,,it doesn't need to be\Nrecomputed for both uses of x.
@@ -1921,7 +1921,7 @@ Dialogue: 0,1:53:35.80,1:53:38.72,Default,,0,0,0,,So, its arity has changed to 3
 Dialogue: 0,1:53:38.72,1:53:42.24,Default,,0,0,0,,and g's type becomes\NInt to Bool to Bool
 Dialogue: 0,1:53:42.24,1:53:46.56,Default,,0,0,0,,so now, the arity is 2\Ninstead of the original 1.
 Dialogue: 0,1:53:46.56,1:53:48.68,Default,,0,0,0,,This is a big problem.
-Dialogue: 0,1:53:48.68,1:53:51.32,Default,,0,0,0,,We want to be able to statically\Ncompile a fu nction calls
+Dialogue: 0,1:53:48.68,1:53:51.32,Default,,0,0,0,,We want to be able to statically\Ncompile a function calls
 Dialogue: 0,1:53:51.32,1:53:54.76,Default,,0,0,0,,as passing multiple arguments\Nand jumping to the code of the function.
 Dialogue: 0,1:53:54.76,1:53:59.28,Default,,0,0,0,,If we look at the application\Nof g to 5 and g to 4,
 Dialogue: 0,1:53:59.28,1:54:01.76,Default,,0,0,0,,how do we compile those calls?
@@ -1929,7 +1929,7 @@ Dialogue: 0,1:54:01.76,1:54:05.48,Default,,0,0,0,,If g's arity is 1, then this\N
 Dialogue: 0,1:54:05.48,1:54:08.12,Default,,0,0,0,,But if it's arity\Nsomehow becomes 2, then
 Dialogue: 0,1:54:08.12,1:54:11.00,Default,,0,0,0,,there suddenly aren't\Nenough arguments
 Dialogue: 0,1:54:11.00,1:54:13.20,Default,,0,0,0,,to correctly execute the body of g.
-Dialogue: 0,1:54:13.20,1:54:16.60,Default,,0,0,0,,How can we possibly statially\Ncompile multiargument function calls
+Dialogue: 0,1:54:13.20,1:54:16.60,Default,,0,0,0,,How can we possibly statically\Ncompile multiargument function calls
 Dialogue: 0,1:54:16.60,1:54:19.64,Default,,0,0,0,,when the arity of functions\Nisn't even stable?
 Dialogue: 0,1:54:19.64,1:54:24.04,Default,,0,0,0,,These shortcomings can be\Novercome with more polymorphism.
 Dialogue: 0,1:54:24.04,1:54:27.24,Default,,0,0,0,,The idea is to encode\Nthe intentional details of types
