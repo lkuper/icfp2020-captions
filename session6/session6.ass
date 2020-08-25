@@ -1699,11 +1699,11 @@ Dialogue: 0,1:43:20.12,1:43:22.72,Default,,0,0,0,,Functional languages making\Nc
 Dialogue: 0,1:43:22.96,1:43:24.84,Default,,0,0,0,,But there are many different\Nparameter passing techniques
 Dialogue: 0,1:43:24.96,1:43:26.08,Default,,0,0,0,,which impact the performance of
 Dialogue: 0,1:43:26.76,1:43:27.76,Default,,0,0,0,,PAUL:.. function calls.
-Dialogue: 0,1:43:27.76,1:43:30.04,Default,,0,0,0,,Because this is a pervasive\Nfunction languages,
+Dialogue: 0,1:43:27.76,1:43:30.04,Default,,0,0,0,,Because this is pervasive\Nin function languages,
 Dialogue: 0,1:43:30.04,1:43:31.92,Default,,0,0,0,,it's important to\Nmake them efficient.
 Dialogue: 0,1:43:31.92,1:43:33.32,Default,,0,0,0,,To implement a function call,
 Dialogue: 0,1:43:33.32,1:43:36.52,Default,,0,0,0,,we need to be able to answer some\Nbasic questions about its arguments.
-Dialogue: 0,1:43:36.88,1:43:39.40,Default,,0,0,0,,First, what is the arguments\Nfor a representation runtime?
+Dialogue: 0,1:43:36.88,1:43:39.40,Default,,0,0,0,,First, what is the arguments'\Nrepresentation at runtime?
 Dialogue: 0,1:43:39.40,1:43:40.80,Default,,0,0,0,,It could be an address, a character,
 Dialogue: 0,1:43:40.80,1:43:42.28,Default,,0,0,0,,a floating point number etcetera.
 Dialogue: 0,1:43:42.28,1:43:43.68,Default,,0,0,0,,And how big is it?
@@ -1724,7 +1724,7 @@ Dialogue: 0,1:44:14.00,1:44:16.16,Default,,0,0,0,,the evaluation\Nstrategy of th
 Dialogue: 0,1:44:16.16,1:44:19.08,Default,,0,0,0,,For example, eager\Nlanguages use call-by-value
 Dialogue: 0,1:44:19.08,1:44:21.76,Default,,0,0,0,,and lazy languages use\Ncall-by-need evaluation.
 Dialogue: 0,1:44:21.76,1:44:23.84,Default,,0,0,0,,Laziness in particular\Nhas an overhead
-Dialogue: 0,1:44:23.84,1:44:26.68,Default,,0,0,0,,that might not be necessary\Nfor a script function.
+Dialogue: 0,1:44:23.84,1:44:26.68,Default,,0,0,0,,that might not be necessary\Nfor a strict function.
 Dialogue: 0,1:44:27.04,1:44:30.08,Default,,0,0,0,,Moreover, we will see that evaluation\Nstrategy interacts with arity
 Dialogue: 0,1:44:30.08,1:44:31.68,Default,,0,0,0,,as well as representation.
 Dialogue: 0,1:44:32.04,1:44:34.56,Default,,0,0,0,,Since it's probably the least\Nunderstood of these three topics,
@@ -1737,13 +1737,13 @@ Dialogue: 0,1:44:47.20,1:44:49.80,Default,,0,0,0,,But this type might leave out\
 Dialogue: 0,1:44:49.80,1:44:52.08,Default,,0,0,0,,that we only learn from\Nthe function definitions.
 Dialogue: 0,1:44:52.60,1:44:54.76,Default,,0,0,0,,Look at the definition of f1.
 Dialogue: 0,1:44:54.76,1:44:58.20,Default,,0,0,0,,It starts with two lambas,\Nso it requires two arguments
-Dialogue: 0,1:44:58.20,1:44:59.64,Default,,0,0,0,,before doing any interesting part.
+Dialogue: 0,1:44:58.20,1:44:59.64,Default,,0,0,0,,before doing any interesting work.
 Dialogue: 0,1:44:59.64,1:45:02.36,Default,,0,0,0,,So, f1 definitely has arity 2.
 Dialogue: 0,1:45:03.28,1:45:05.28,Default,,0,0,0,,Now, look at f2.
-Dialogue: 0,1:45:05.28,1:45:06.80,Default,,0,0,0,,It normally starts with one lambda,
+Dialogue: 0,1:45:05.28,1:45:06.80,Default,,0,0,0,,It only starts with one lambda,
 Dialogue: 0,1:45:06.80,1:45:09.04,Default,,0,0,0,,however, all it does is call f1.
 Dialogue: 0,1:45:09.04,1:45:12.68,Default,,0,0,0,,So, it also requires two\Narguments before doing any work.
-Dialogue: 0,1:45:12.68,1:45:16.80,Default,,0,0,0,,In fact, we can either expand f2 and
+Dialogue: 0,1:45:12.68,1:45:16.80,Default,,0,0,0,,In fact, we can eta expand f2 and
 Dialogue: 0,1:45:16.88,1:45:20.32,Default,,0,0,0,,doing so does not change its\Nmeaning or runtime behavior.
 Dialogue: 0,1:45:20.32,1:45:25.24,Default,,0,0,0,,This sound eta expansion makes it\Nclear that f2 also has arity 2.
 Dialogue: 0,1:45:25.24,1:45:28.96,Default,,0,0,0,,F3 is very similar to f1, both\Nan important difference -
@@ -1751,14 +1751,14 @@ Dialogue: 0,1:45:28.96,1:45:32.20,Default,,0,0,0,,f3 starts with only one\Nlambd
 Dialogue: 0,1:45:32.20,1:45:36.40,Default,,0,0,0,,then it does some work on x before\Nrequesting the next argument y.
 Dialogue: 0,1:45:36.40,1:45:39.08,Default,,0,0,0,,So, what is f3's arity?
 Dialogue: 0,1:45:39.08,1:45:43.00,Default,,0,0,0,,As a hint, consider that expensive\Nof x might be costly to compute
-Dialogue: 0,1:45:43.00,1:45:44.76,Default,,0,0,0,,as an (INAUDIBLE) suggests.
-Dialogue: 0,1:45:44.76,1:45:48.56,Default,,0,0,0,,And it might even cause side\Neffects in a language like Opal.
+Dialogue: 0,1:45:43.00,1:45:44.76,Default,,0,0,0,,as the name suggests.
+Dialogue: 0,1:45:44.76,1:45:48.56,Default,,0,0,0,,And it might even cause side\Neffects in a language like OCaml.
 Dialogue: 0,1:45:48.56,1:45:51.60,Default,,0,0,0,,For this reason, f3\Nonly has arity 1.
 Dialogue: 0,1:45:52.48,1:45:56.12,Default,,0,0,0,,F4 is defined similarly to\Nf2, however this time,
 Dialogue: 0,1:45:56.12,1:45:58.52,Default,,0,0,0,,the eta expansion is not sound.
 Dialogue: 0,1:45:58.52,1:46:02.76,Default,,0,0,0,,That's because f3 can do some\Nserious work with only one argument.
 Dialogue: 0,1:46:02.76,1:46:05.76,Default,,0,0,0,,So, f4 also has arity 1.
-Dialogue: 0,1:46:06.72,1:46:09.08,Default,,0,0,0,,Based on those examples,\Nlet's pair to come up
+Dialogue: 0,1:46:06.72,1:46:09.08,Default,,0,0,0,,Based on those examples,\Nlet's try to come up
 Dialogue: 0,1:46:09.08,1:46:11.04,Default,,0,0,0,,with some informal\Nintuitive definitions
 Dialogue: 0,1:46:11.04,1:46:13.24,Default,,0,0,0,,about what arity is\Nmeant to capture.
 Dialogue: 0,1:46:13.60,1:46:16.40,Default,,0,0,0,,First, we already used\Nthe intuition of 'serious work'
@@ -1768,7 +1768,7 @@ Dialogue: 0,1:46:22.80,1:46:25.20,Default,,0,0,0,,but f applied to only\N1 and 2
 Dialogue: 0,1:46:25.20,1:46:28.24,Default,,0,0,0,,then arity has... f has arity 3.
 Dialogue: 0,1:46:28.24,1:46:32.08,Default,,0,0,0,,Second, we sometimes need\Nto use eta expansion
 Dialogue: 0,1:46:32.08,1:46:35.68,Default,,0,0,0,,to see the full arity of eta\Nreduced function definitions.
-Dialogue: 0,1:46:35.72,1:46:40.00,Default,,0,0,0,,So, if f is equivalent to its\N(INAUDIBLE) eta expanded form
+Dialogue: 0,1:46:35.72,1:46:40.00,Default,,0,0,0,,So, if f is equivalent to its thrice-eta expanded form
 Dialogue: 0,1:46:40.00,1:46:42.96,Default,,0,0,0,,as shown here, then f has arity 3.
 Dialogue: 0,1:46:42.96,1:46:44.52,Default,,0,0,0,,Note that we need to be careful.
 Dialogue: 0,1:46:44.52,1:46:47.04,Default,,0,0,0,,Sometimes this eta expansion\Nmight not be sound
@@ -1776,7 +1776,7 @@ Dialogue: 0,1:46:47.04,1:46:50.28,Default,,0,0,0,,because it could change behavi
 Dialogue: 0,1:46:50.28,1:46:52.64,Default,,0,0,0,,This is especially true in\Nlanguages with effects,
 Dialogue: 0,1:46:52.64,1:46:55.64,Default,,0,0,0,,but even pure languages like\NHaskell care about efficiency,
 Dialogue: 0,1:46:55.64,1:46:57.64,Default,,0,0,0,,so we have to be careful there too.
-Dialogue: 0,1:46:57.64,1:47:02.40,Default,,0,0,0,,Third, in operational sense, arity\Ntells us a number of arguments
+Dialogue: 0,1:46:57.64,1:47:02.40,Default,,0,0,0,,Third, in an operational sense, arity\Ntells us a number of arguments
 Dialogue: 0,1:47:02.40,1:47:06.00,Default,,0,0,0,,that may pass to a function\Nsimultaneously in a single call.
 Dialogue: 0,1:47:06.00,1:47:10.88,Default,,0,0,0,,For example, if f has arity 3,\Nthen f applied to 1, 2 and 3
 Dialogue: 0,1:47:10.88,1:47:13.44,Default,,0,0,0,,can be compiled into\Na single function call
@@ -1799,7 +1799,7 @@ Dialogue: 0,1:47:53.08,1:47:57.40,Default,,0,0,0,,that information must somehow 
 Dialogue: 0,1:47:57.40,1:47:59.32,Default,,0,0,0,,used in the compiler.
 Dialogue: 0,1:48:00.08,1:48:01.92,Default,,0,0,0,,We can do this with an ultimatum.
 Dialogue: 0,1:48:01.92,1:48:04.24,Default,,0,0,0,,Eta expansion is always valid.
-Dialogue: 0,1:48:04.24,1:48:07.36,Default,,0,0,0,,In that way, there are no more\N(INAUDIBLE) cases to worry about
+Dialogue: 0,1:48:04.24,1:48:07.36,Default,,0,0,0,,That way, there are no more\Ncorner cases to worry about
 Dialogue: 0,1:48:07.36,1:48:09.56,Default,,0,0,0,,and so, arity is always\Nthe largest number
 Dialogue: 0,1:48:09.56,1:48:11.60,Default,,0,0,0,,that makes sense for any function.
 Dialogue: 0,1:48:11.96,1:48:14.12,Default,,0,0,0,,However, we can't lose\Nwhat we already have.
@@ -1830,7 +1830,7 @@ Dialogue: 0,1:49:17.24,1:49:20.24,Default,,0,0,0,,it doesn't need to be\Nrecompu
 Dialogue: 0,1:49:21.32,1:49:22.76,Default,,0,0,0,,Because of unrestricted eta,
 Dialogue: 0,1:49:22.76,1:49:25.16,Default,,0,0,0,,types can now express\Nthe arity of functions.
 Dialogue: 0,1:49:25.16,1:49:27.20,Default,,0,0,0,,All we have to do is\Ncount the arrows.
-Dialogue: 0,1:49:27.20,1:49:30.76,Default,,0,0,0,,For example, if f is to\Ntype into bool to string,
+Dialogue: 0,1:49:27.20,1:49:30.76,Default,,0,0,0,,For example, if f is to\Ntype int to bool to string,
 Dialogue: 0,1:49:30.76,1:49:32.92,Default,,0,0,0,,we know that it has arity 2 already
 Dialogue: 0,1:49:32.92,1:49:35.00,Default,,0,0,0,,without even looking\Nat f's definition.
 Dialogue: 0,1:49:35.00,1:49:38.00,Default,,0,0,0,,But just having unrestricted eta
@@ -1852,13 +1852,13 @@ Dialogue: 0,1:50:15.84,1:50:16.84,Default,,0,0,0,,That's bad.
 Dialogue: 0,1:50:16.84,1:50:19.84,Default,,0,0,0,,We solve this problem\Nby adding another type
 Dialogue: 0,1:50:19.84,1:50:22.40,Default,,0,0,0,,for representing explicit closures.
 Dialogue: 0,1:50:22.40,1:50:25.76,Default,,0,0,0,,Here, we can note the closure\Nof a type with curly braces.
-Dialogue: 0,1:50:25.76,1:50:28.64,Default,,0,0,0,,They're introduce with\Nthe Clos constructor
+Dialogue: 0,1:50:25.76,1:50:28.64,Default,,0,0,0,,They're introduced with\Nthe Clos constructor
 Dialogue: 0,1:50:28.64,1:50:32.28,Default,,0,0,0,,and that lets us wrap up\Na unary function from Int to Int
 Dialogue: 0,1:50:32.28,1:50:34.40,Default,,0,0,0,,inside of a closure\Nof the same type.
 Dialogue: 0,1:50:35.16,1:50:38.44,Default,,0,0,0,,Including closures in\Nthe results of a function
-Dialogue: 0,1:50:38.44,1:50:41.20,Default,,0,0,0,,let us intentionally\Nbreak up as arity
+Dialogue: 0,1:50:38.44,1:50:41.20,Default,,0,0,0,,let us intentionally\Nbreak up its arity
 Dialogue: 0,1:50:41.20,1:50:42.56,Default,,0,0,0,,when partial applications matter
-Dialogue: 0,1:50:42.56,1:50:43.56,Default,,0,0,0,,like an f3 prime.
+Dialogue: 0,1:50:42.56,1:50:43.56,Default,,0,0,0,,like in f3 prime.
 Dialogue: 0,1:50:43.56,1:50:46.56,Default,,0,0,0,,This is an arity 1 function\Ntaking the first argument
 Dialogue: 0,1:50:46.60,1:50:49.20,Default,,0,0,0,,and returning a closure of\Nanother arity 1 function,
 Dialogue: 0,1:50:49.20,1:50:50.52,Default,,0,0,0,,that takes the second argument.
@@ -1867,14 +1867,14 @@ Dialogue: 0,1:50:54.44,1:50:59.08,Default,,0,0,0,,So, you can take the closure\N
 Dialogue: 0,1:50:59.08,1:51:02.28,Default,,0,0,0,,and then, apply it to the second\Nargument to get a result.
 Dialogue: 0,1:51:02.28,1:51:05.52,Default,,0,0,0,,Now, the partial\Napplication of f3 prime
 Dialogue: 0,1:51:05.52,1:51:08.08,Default,,0,0,0,,computes expensive of 100 only once
-Dialogue: 0,1:51:08.08,1:51:12.04,Default,,0,0,0,,even though the reclosure it\Nreturns is reused many times.
+Dialogue: 0,1:51:08.08,1:51:12.04,Default,,0,0,0,,even though the closure it\Nreturns is reused many times.
 Dialogue: 0,1:51:12.56,1:51:13.88,Default,,0,0,0,,But there's a subtle impact
 Dialogue: 0,1:51:13.88,1:51:15.92,Default,,0,0,0,,of allowing all of these\Nextra eta expansions.
 Dialogue: 0,1:51:15.92,1:51:19.08,Default,,0,0,0,,For example, consider\Nthis definition -
 Dialogue: 0,1:51:19.08,1:51:23.56,Default,,0,0,0,,defines a function f to the apparent\Ncomputation expensive of 100.
 Dialogue: 0,1:51:23.56,1:51:25.84,Default,,0,0,0,,F is used several times\Nwithin its scope,
 Dialogue: 0,1:51:25.84,1:51:28.80,Default,,0,0,0,,so when exactly is\Nexpensive of 100 evaluated?
-Dialogue: 0,1:51:28.80,1:51:32.56,Default,,0,0,0,,That depends on the evaluation\Nstrategy of this (INAUDIBLE) binding.
+Dialogue: 0,1:51:28.80,1:51:32.56,Default,,0,0,0,,That depends on the evaluation\Nstrategy of this let binding.
 Dialogue: 0,1:51:32.56,1:51:35.48,Default,,0,0,0,,Under call-by-value,\Nthe right-hand side expensive of 100
 Dialogue: 0,1:51:35.48,1:51:39.40,Default,,0,0,0,,must be computed first before\Na value can be bound to f.
 Dialogue: 0,1:51:39.48,1:51:42.32,Default,,0,0,0,,Instead, under\Ncall-by-need evaluation,
@@ -1893,12 +1893,12 @@ Dialogue: 0,1:52:22.24,1:52:25.72,Default,,0,0,0,,That means that expensive\N100
 Dialogue: 0,1:52:25.72,1:52:27.76,Default,,0,0,0,,every single time f is called.
 Dialogue: 0,1:52:27.76,1:52:31.56,Default,,0,0,0,,Therefore,\Nthe operational consequence
 Dialogue: 0,1:52:31.56,1:52:34.00,Default,,0,0,0,,of allowing unrestricted\Neta for primitive functions
-Dialogue: 0,1:52:34.00,1:52:37.56,Default,,0,0,0,,means that they cannot be evaluated\Nfor any (INAUDIBLE) reason
-Dialogue: 0,1:52:37.56,1:52:39.96,Default,,0,0,0,,like in a restrict\Nbut binding here or the
-Dialogue: 0,1:52:39.96,1:52:41.92,Default,,0,0,0,,(INAUDIBLE) operation in Haskell.
+Dialogue: 0,1:52:34.00,1:52:37.56,Default,,0,0,0,,means that they cannot be evaluated\Nfor any old reason
+Dialogue: 0,1:52:37.56,1:52:39.96,Default,,0,0,0,,like in a strict\Nlet binding here or the
+Dialogue: 0,1:52:39.96,1:52:41.92,Default,,0,0,0,,seq operation in Haskell.
 Dialogue: 0,1:52:41.92,1:52:43.96,Default,,0,0,0,,Primitive functions\Ncan only be evaluated
 Dialogue: 0,1:52:43.96,1:52:46.28,Default,,0,0,0,,when they are called with\Nall of their arguments.
-Dialogue: 0,1:52:47.04,1:52:50.52,Default,,0,0,0,,Knowing link up the high level\Nnotion of arity about eta expansion
+Dialogue: 0,1:52:47.04,1:52:50.52,Default,,0,0,0,,When we link up the high level\Nnotion of arity about eta expansion
 Dialogue: 0,1:52:50.52,1:52:53.64,Default,,0,0,0,,with the low level notion about\Nsimultaneous parameter passing,
 Dialogue: 0,1:52:53.64,1:52:56.12,Default,,0,0,0,,we need to be careful\Nabout polymorphism.
 Dialogue: 0,1:52:56.12,1:52:58.32,Default,,0,0,0,,Consider this\Npolymorphic definition.
@@ -1921,7 +1921,7 @@ Dialogue: 0,1:53:35.80,1:53:38.72,Default,,0,0,0,,So, its arity has changed to 3
 Dialogue: 0,1:53:38.72,1:53:42.24,Default,,0,0,0,,and g's type becomes\NInt to Bool to Bool
 Dialogue: 0,1:53:42.24,1:53:46.56,Default,,0,0,0,,so now, the arity is 2\Ninstead of the original 1.
 Dialogue: 0,1:53:46.56,1:53:48.68,Default,,0,0,0,,This is a big problem.
-Dialogue: 0,1:53:48.68,1:53:51.32,Default,,0,0,0,,We want to be able to statically\Ncompile a function calls
+Dialogue: 0,1:53:48.68,1:53:51.32,Default,,0,0,0,,We want to be able to statically\Ncompile a fu nction calls
 Dialogue: 0,1:53:51.32,1:53:54.76,Default,,0,0,0,,as passing multiple arguments\Nand jumping to the code of the function.
 Dialogue: 0,1:53:54.76,1:53:59.28,Default,,0,0,0,,If we look at the application\Nof g to 5 and g to 4,
 Dialogue: 0,1:53:59.28,1:54:01.76,Default,,0,0,0,,how do we compile those calls?
@@ -1931,8 +1931,8 @@ Dialogue: 0,1:54:08.12,1:54:11.00,Default,,0,0,0,,there suddenly aren't\Nenough 
 Dialogue: 0,1:54:11.00,1:54:13.20,Default,,0,0,0,,to correctly execute the body of g.
 Dialogue: 0,1:54:13.20,1:54:16.60,Default,,0,0,0,,How can we possibly statially\Ncompile multiargument function calls
 Dialogue: 0,1:54:16.60,1:54:19.64,Default,,0,0,0,,when the arity of functions\Nisn't even stable?
-Dialogue: 0,1:54:19.64,1:54:24.04,Default,,0,0,0,,These shortcomings can be\Novercome with polymorphism -
-Dialogue: 0,1:54:24.04,1:54:27.24,Default,,0,0,0,,the ideas to encode\Nthe intentional details of types
+Dialogue: 0,1:54:19.64,1:54:24.04,Default,,0,0,0,,These shortcomings can be\Novercome with more polymorphism.
+Dialogue: 0,1:54:24.04,1:54:27.24,Default,,0,0,0,,The idea is to encode\Nthe intentional details of types
 Dialogue: 0,1:54:27.24,1:54:30.04,Default,,0,0,0,,like the runtime representations\Nand calling conventions
 Dialogue: 0,1:54:30.04,1:54:31.28,Default,,0,0,0,,into their kind.
 Dialogue: 0,1:54:31.72,1:54:34.64,Default,,0,0,0,,First, we can generalize\Nthe basic kind of types,
@@ -1941,7 +1941,7 @@ Dialogue: 0,1:54:38.48,1:54:41.48,Default,,0,0,0,,r stands for the runtime\Nrepr
 Dialogue: 0,1:54:41.48,1:54:44.96,Default,,0,0,0,,It could be a primitive representation\Nlike a pointer or an integer.
 Dialogue: 0,1:54:44.96,1:54:47.80,Default,,0,0,0,,or it could be something\Ncompound like an unboxed tuple.
 Dialogue: 0,1:54:47.80,1:54:50.80,Default,,0,0,0,,C stands for\Nthe calling convention of a
-Dialogue: 0,1:54:50.80,1:54:53.04,Default,,0,0,0,,which spells out how those\Nvalues can be in vote.
+Dialogue: 0,1:54:50.80,1:54:53.04,Default,,0,0,0,,which spells out how those\Nvalues can be invoked.
 Dialogue: 0,1:54:53.04,1:54:56.36,Default,,0,0,0,,So, for example if we have\Nan unknown type variable a,
 Dialogue: 0,1:54:56.36,1:54:59.92,Default,,0,0,0,,we can give it a kind like\NTYPE Pointer Call of n -
 Dialogue: 0,1:54:59.92,1:55:03.12,Default,,0,0,0,,this says that the values\Nof type a are represented
@@ -1956,7 +1956,7 @@ Dialogue: 0,1:55:19.96,1:55:21.64,Default,,0,0,0,,that came from polymorphism.
 Dialogue: 0,1:55:21.64,1:55:23.44,Default,,0,0,0,,For example, let's return
 Dialogue: 0,1:55:23.44,1:55:25.92,Default,,0,0,0,,to the troublesome poly\Ndefinition from before.
 Dialogue: 0,1:55:25.92,1:55:28.40,Default,,0,0,0,,We can now pin down a specific arity
-Dialogue: 0,1:55:28.40,1:55:31.52,Default,,0,0,0,,for the generic type variable\Na introduced by the flaw.
+Dialogue: 0,1:55:28.40,1:55:31.52,Default,,0,0,0,,for the generic type variable\Na introduced by the forall.
 Dialogue: 0,1:55:31.52,1:55:35.40,Default,,0,0,0,,Here we say that the generic type\Na is called with two arguments.
 Dialogue: 0,1:55:35.40,1:55:38.28,Default,,0,0,0,,Even though that\Nthe type of a is abstract,
 Dialogue: 0,1:55:38.28,1:55:41.12,Default,,0,0,0,,it's kind makes it clear\Nthat f has arity 4.
@@ -1978,10 +1978,10 @@ Dialogue: 0,1:56:35.72,1:56:38.40,Default,,0,0,0,,To pass it around, we need\Nto
 Dialogue: 0,1:56:38.40,1:56:41.24,Default,,0,0,0,,The kind of a is TYPE Pointer c.
 Dialogue: 0,1:56:41.24,1:56:43.36,Default,,0,0,0,,So, we know that x is\Nrepresented as a pointer,
 Dialogue: 0,1:56:43.36,1:56:45.64,Default,,0,0,0,,but we don't know\Nthe calling convention of x.
-Dialogue: 0,1:56:45.64,1:56:47.92,Default,,0,0,0,,That's fine because revapp\Ndoesn't call itself,
+Dialogue: 0,1:56:45.64,1:56:47.92,Default,,0,0,0,,That's fine because revapp\Ndoesn't call x itself,
 Dialogue: 0,1:56:47.92,1:56:49.52,Default,,0,0,0,,it just passes x around.
-Dialogue: 0,1:56:50.76,1:56:52.80,Default,,0,0,0,,If we found this type interesting,
-Dialogue: 0,1:56:52.80,1:56:55.12,Default,,0,0,0,,here is even more\Nmaterial in the paper.
+Dialogue: 0,1:56:50.76,1:56:52.80,Default,,0,0,0,,If you found this talk interesting,
+Dialogue: 0,1:56:52.80,1:56:55.12,Default,,0,0,0,,there is even more\Nmaterial in the paper.
 Dialogue: 0,1:56:55.12,1:56:58.28,Default,,0,0,0,,I was only able to talk\Nabout calling conventions
 Dialogue: 0,1:56:58.28,1:57:00.08,Default,,0,0,0,,and a little bit about\Nrepresentations,
 Dialogue: 0,1:57:00.08,1:57:03.04,Default,,0,0,0,,but we expressed levity\Nin this kind system too.
@@ -1990,10 +1990,10 @@ Dialogue: 0,1:57:07.12,1:57:09.88,Default,,0,0,0,,with the exact same shared\Nin
 Dialogue: 0,1:57:09.88,1:57:12.68,Default,,0,0,0,,We also described\Na compiler pipeline
 Dialogue: 0,1:57:12.68,1:57:15.28,Default,,0,0,0,,along with its correctness from a
 Dialogue: 0,1:57:16.04,1:57:19.60,Default,,0,0,0,,simple source language to\Nthe intermediate language
-Dialogue: 0,1:57:19.60,1:57:22.16,Default,,0,0,0,,and finally, to a well-level\Ntarget language.
+Dialogue: 0,1:57:19.60,1:57:22.16,Default,,0,0,0,,and finally, to a low-level\Ntarget language.
 Dialogue: 0,1:57:22.16,1:57:24.44,Default,,0,0,0,,This compilation depends\Non types and kinds.
 Dialogue: 0,1:57:24.44,1:57:26.12,Default,,0,0,0,,So, we used a type system to ensure
-Dialogue: 0,1:57:26.12,1:57:28.44,Default,,0,0,0,,that (INAUDIBLE) compilation\Nis always possible
+Dialogue: 0,1:57:26.12,1:57:28.44,Default,,0,0,0,,that static compilation\Nis always possible
 Dialogue: 0,1:57:28.44,1:57:30.68,Default,,0,0,0,,for every single well type program.
 Dialogue: 0,1:57:31.24,1:57:33.76,Default,,0,0,0,,In the end, we can say that kinds
 Dialogue: 0,1:57:33.76,1:57:36.56,Default,,0,0,0,,give us a formal and high-level\Nlanguage for capturing the details

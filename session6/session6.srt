@@ -8009,8 +8009,8 @@ PAUL:.. function calls.
 
 1689
 01:43:27,760 --> 01:43:30,040
-Because this is a pervasive
-function languages,
+Because this is pervasive
+in function languages,
 
 1690
 01:43:30,040 --> 01:43:31,920
@@ -8028,8 +8028,8 @@ basic questions about its arguments.
 
 1693
 01:43:36,880 --> 01:43:39,400
-First, what is the arguments
-for a representation runtime?
+First, what is the arguments'
+representation at runtime?
 
 1694
 01:43:39,400 --> 01:43:40,800
@@ -8127,7 +8127,7 @@ has an overhead
 1714
 01:44:23,840 --> 01:44:26,680
 that might not be necessary
-for a script function.
+for a strict function.
 
 1715
 01:44:27,040 --> 01:44:30,080
@@ -8188,7 +8188,7 @@ so it requires two arguments
 
 1727
 01:44:58,200 --> 01:44:59,640
-before doing any interesting part.
+before doing any interesting work.
 
 1728
 01:44:59,640 --> 01:45:02,360
@@ -8200,7 +8200,7 @@ Now, look at f2.
 
 1730
 01:45:05,280 --> 01:45:06,800
-It normally starts with one lambda,
+It only starts with one lambda,
 
 1731
 01:45:06,800 --> 01:45:09,040
@@ -8213,7 +8213,7 @@ arguments before doing any work.
 
 1733
 01:45:12,680 --> 01:45:16,800
-In fact, we can either expand f2 and
+In fact, we can eta expand f2 and
 
 1734
 01:45:16,880 --> 01:45:20,320
@@ -8251,12 +8251,12 @@ of x might be costly to compute
 
 1741
 01:45:43,000 --> 01:45:44,760
-as an (INAUDIBLE) suggests.
+as the name suggests.
 
 1742
 01:45:44,760 --> 01:45:48,560
 And it might even cause side
-effects in a language like Opal.
+effects in a language like OCaml.
 
 1743
 01:45:48,560 --> 01:45:51,600
@@ -8284,7 +8284,7 @@ So, f4 also has arity 1.
 1748
 01:46:06,720 --> 01:46:09,080
 Based on those examples,
-let's pair to come up
+let's try to come up
 
 1749
 01:46:09,080 --> 01:46:11,040
@@ -8332,8 +8332,7 @@ reduced function definitions.
 
 1758
 01:46:35,720 --> 01:46:40,000
-So, if f is equivalent to its
-(INAUDIBLE) eta expanded form
+So, if f is equivalent to its thrice-eta expanded form
 
 1759
 01:46:40,000 --> 01:46:42,960
@@ -8369,7 +8368,7 @@ so we have to be careful there too.
 
 1766
 01:46:57,640 --> 01:47:02,400
-Third, in operational sense, arity
+Third, in an operational sense, arity
 tells us a number of arguments
 
 1767
@@ -8476,8 +8475,8 @@ Eta expansion is always valid.
 
 1789
 01:48:04,240 --> 01:48:07,360
-In that way, there are no more
-(INAUDIBLE) cases to worry about
+That way, there are no more
+corner cases to worry about
 
 1790
 01:48:07,360 --> 01:48:09,560
@@ -8626,7 +8625,7 @@ count the arrows.
 1820
 01:49:27,200 --> 01:49:30,760
 For example, if f is to
-type into bool to string,
+type int to bool to string,
 
 1821
 01:49:30,760 --> 01:49:32,920
@@ -8726,7 +8725,7 @@ of a type with curly braces.
 
 1842
 01:50:25,760 --> 01:50:28,640
-They're introduce with
+They're introduced with
 the Clos constructor
 
 1843
@@ -8747,7 +8746,7 @@ the results of a function
 1846
 01:50:38,440 --> 01:50:41,200
 let us intentionally
-break up as arity
+break up its arity
 
 1847
 01:50:41,200 --> 01:50:42,560
@@ -8755,7 +8754,7 @@ when partial applications matter
 
 1848
 01:50:42,560 --> 01:50:43,560
-like an f3 prime.
+like in f3 prime.
 
 1849
 01:50:43,560 --> 01:50:46,560
@@ -8797,7 +8796,7 @@ computes expensive of 100 only once
 
 1857
 01:51:08,080 --> 01:51:12,040
-even though the reclosure it
+even though the closure it
 returns is reused many times.
 
 1858
@@ -8832,7 +8831,7 @@ expensive of 100 evaluated?
 1864
 01:51:28,800 --> 01:51:32,560
 That depends on the evaluation
-strategy of this (INAUDIBLE) binding.
+strategy of this let binding.
 
 1865
 01:51:32,560 --> 01:51:35,480
@@ -8924,16 +8923,16 @@ eta for primitive functions
 1883
 01:52:34,000 --> 01:52:37,560
 means that they cannot be evaluated
-for any (INAUDIBLE) reason
+for any old reason
 
 1884
 01:52:37,560 --> 01:52:39,960
-like in a restrict
-but binding here or the
+like in a strict
+let binding here or the
 
 1885
 01:52:39,960 --> 01:52:41,920
-(INAUDIBLE) operation in Haskell.
+seq operation in Haskell.
 
 1886
 01:52:41,920 --> 01:52:43,960
@@ -8947,7 +8946,7 @@ all of their arguments.
 
 1888
 01:52:47,040 --> 01:52:50,520
-Knowing link up the high level
+When we link up the high level
 notion of arity about eta expansion
 
 1889
@@ -9056,7 +9055,7 @@ This is a big problem.
 1911
 01:53:48,680 --> 01:53:51,320
 We want to be able to statically
-compile a function calls
+compile a fu nction calls
 
 1912
 01:53:51,320 --> 01:53:54,760
@@ -9104,11 +9103,11 @@ isn't even stable?
 1921
 01:54:19,640 --> 01:54:24,040
 These shortcomings can be
-overcome with polymorphism -
+overcome with more polymorphism.
 
 1922
 01:54:24,040 --> 01:54:27,240
-the ideas to encode
+The idea is to encode
 the intentional details of types
 
 1923
@@ -9153,7 +9152,7 @@ the calling convention of a
 1931
 01:54:50,800 --> 01:54:53,040
 which spells out how those
-values can be in vote.
+values can be invoked.
 
 1932
 01:54:53,040 --> 01:54:56,360
@@ -9223,7 +9222,7 @@ We can now pin down a specific arity
 1946
 01:55:28,400 --> 01:55:31,520
 for the generic type variable
-a introduced by the flaw.
+a introduced by the forall.
 
 1947
 01:55:31,520 --> 01:55:35,400
@@ -9328,7 +9327,7 @@ the calling convention of x.
 1968
 01:56:45,640 --> 01:56:47,920
 That's fine because revapp
-doesn't call itself,
+doesn't call x itself,
 
 1969
 01:56:47,920 --> 01:56:49,520
@@ -9336,11 +9335,11 @@ it just passes x around.
 
 1970
 01:56:50,760 --> 01:56:52,800
-If we found this type interesting,
+If you found this talk interesting,
 
 1971
 01:56:52,800 --> 01:56:55,120
-here is even more
+there is even more
 material in the paper.
 
 1972
@@ -9384,7 +9383,7 @@ the intermediate language
 
 1980
 01:57:19,600 --> 01:57:22,160
-and finally, to a well-level
+and finally, to a low-level
 target language.
 
 1981
@@ -9398,7 +9397,7 @@ So, we used a type system to ensure
 
 1983
 01:57:26,120 --> 01:57:28,440
-that (INAUDIBLE) compilation
+that static compilation
 is always possible
 
 1984
