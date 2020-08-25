@@ -3372,17 +3372,17 @@ in your time band.
 726
 00:58:00,880 --> 00:58:05,880
 The first talk of this session is
-entitled raising expectations,
+entitled "Raising expectations:
 
 727
 00:58:05,880 --> 00:58:09,960
 automating expected cost
-analysis with types.
+analysis with types."
 
 728
 00:58:09,960 --> 00:58:13,480
 Di Wang and David Khan will
-present a talk together.
+present the talk together.
 
 729
 00:58:13,480 --> 00:58:15,920
@@ -3391,26 +3391,26 @@ about a type-based
 
 730
 00:58:15,920 --> 00:58:18,720
-analysis of driving or (INAUDIBLE)
+analysis of deriving upper bounds
 
 731
 00:58:18,720 --> 00:58:23,720
-on the expected exclusion cost
+on the expected execution cost
 of probabilistic programs.
 
 732
 00:58:24,800 --> 00:58:28,760
-DI WANG: Hello, SSP, and
-a future viewers of this video.
+DI WANG: Hello, ICFP, and
+future viewers of this video.
 
 733
 00:58:28,760 --> 00:58:33,160
 My name is Di, a Ph.D. student
-at Camagie Mellon University.
+at Carnegie Mellon University.
 
 734
 00:58:33,160 --> 00:58:35,160
-And today my cohort, David and I
+And today my co-author David and I
 
 735
 00:58:35,160 --> 00:58:37,480
@@ -3423,21 +3423,21 @@ resource analyzing language,
 
 737
 00:58:41,760 --> 00:58:44,400
-from our paper raising expectations:
+from our paper "Raising expectations:
 
 738
 00:58:44,400 --> 00:58:47,600
 automating expected cost
-analysis with types,
+analysis with types",
 
 739
 00:58:47,600 --> 00:58:50,320
-(INAUDIBLE) accompanied
+which is accompanied
 by any implementation,
 
 740
 00:58:50,320 --> 00:58:55,320
-we call PRAML, standing for
+we call PRaML, standing for
 probabilistic resource-aware ML.
 
 741
@@ -3462,12 +3462,12 @@ bottlenecks, but also
 
 745
 00:59:06,720 --> 00:59:09,880
-so the following,
-if you care about this security,
+the following,
+if you care about digital security,
 
 746
 00:59:09,880 --> 00:59:12,840
-you'll need timely analysis
+you'll need timing analysis
 to mitigate side channel
 
 747
@@ -3488,7 +3488,7 @@ to measure your past usage.
 750
 00:59:21,120 --> 00:59:23,480
 And of course,
-if you'll care about
+if you care about
 
 751
 00:59:23,480 --> 00:59:26,240
@@ -3502,8 +3502,8 @@ the carbon footprint
 
 753
 00:59:28,920 --> 00:59:31,840
-of the colored
-running data centers.
+of the code
+run in data centers.
 
 754
 00:59:31,920 --> 00:59:34,520
@@ -3512,7 +3512,7 @@ so many different resources,
 
 755
 00:59:34,520 --> 00:59:38,480
-installment different programs.
+in so many different programs.
 So the problem is then nobody
 
 756
@@ -3523,22 +3523,22 @@ and formally analyze all of them.
 757
 00:59:42,280 --> 00:59:44,880
 For this reason,
-all work builds upon
+our work builds upon
 
 758
 00:59:44,880 --> 00:59:48,960
-an approach of language based
+an approach of language-based
 automatic resource analysis.
 
 759
 00:59:48,960 --> 00:59:51,800
-in PRAML a program
-may call as per your role,
+in PRaML a programmer
+may code a (INAUDIBLE)
 
 760
 00:59:51,800 --> 00:59:54,760
-and just about type of inference
-received verifiably
+and just by type inference
+receive verifiably
 
 761
 00:59:54,760 --> 00:59:58,360
@@ -3552,23 +3552,23 @@ already exists in
 
 763
 01:00:01,440 --> 01:00:05,960
-PRAML's predecessor
-resource ML, or RAML.
+PRaML's predecessor
+resource-aware ML, or RaML.
 
 764
 01:00:05,960 --> 01:00:09,920
-However, PRAML can model
-something that RaML cannot
+However, PRaML can model
+something that RaML cannot:
 
 765
 01:00:09,920 --> 01:00:13,280
-Probability, probability
+probability. Probability
 is increasingly important
 
 766
 01:00:13,280 --> 01:00:16,480
 in modern algorithm design,
-random mice and
+randomness and
 
 767
 01:00:16,480 --> 01:00:19,920
@@ -3593,17 +3593,17 @@ with expected costs
 771
 01:00:29,280 --> 01:00:32,720
 rather than just worst case.
-This is where I'll work
+This is where our work
 
 772
 01:00:32,720 --> 01:00:35,920
-on CraML comes in,
-CraML extends the worst
+on PraML comes in,
+RraML extends the worst
 
 773
 01:00:35,920 --> 01:00:38,720
 case resource analysis
-or RaML to measure
+of RaML to measure
 
 774
 01:00:38,720 --> 01:00:42,960
@@ -3627,7 +3627,7 @@ applications later on.
 
 778
 01:00:51,880 --> 01:00:54,440
-Now, a little bit to David
+Now, I leave it to David
 to talk about more
 
 779
@@ -3643,11 +3643,11 @@ how type system based
 781
 01:01:01,360 --> 01:01:05,680
 resource analysis works
-in a non probabilistic setting.
+in a non-probabilistic setting.
 
 782
 01:01:05,680 --> 01:01:08,640
-We will be using RAML's
+We will be using RaML's
 automatic amortized
 
 783
@@ -3662,7 +3662,7 @@ of amortized analysis
 
 785
 01:01:17,840 --> 01:01:21,040
-set out by Robert Tajin.
+set out by Robert Tarjan.
 What we're going to do
 
 786
@@ -3693,7 +3693,7 @@ then describes the energy
 791
 01:01:36,040 --> 01:01:41,200
 discharged to pay for costs.
-The key takeaway is this,
+The key takeaway is this:
 
 792
 01:01:41,200 --> 01:01:44,040
@@ -3728,7 +3728,7 @@ of a type system.
 798
 01:01:59,880 --> 01:02:02,720
 This technique even works
-for higher order functions
+for higher-order functions
 
 799
 01:02:02,800 --> 01:02:06,520
@@ -3748,11 +3748,11 @@ like that from
 802
 01:02:12,560 --> 01:02:15,920
 the Ocaml standard library
-list module,
+list module.
 
 803
 01:02:15,920 --> 01:02:20,480
-we will use AARA to bound
+We will use AARA to bound
 the number of recursive calls.
 
 804
@@ -3768,12 +3768,12 @@ takes the naive approach
 806
 01:02:27,040 --> 01:02:29,120
 of checking whether
-the argument X
+the argument x
 
 807
 01:02:29,120 --> 01:02:32,880
-is in the given list,
-it iterates over the list,
+is in the given list.
+It iterates over the list,
 
 808
 01:02:32,960 --> 01:02:36,440
@@ -3782,8 +3782,8 @@ and returns true
 
 809
 01:02:36,440 --> 01:02:39,920
-if it ever finds one,
-at worst we might need
+if it ever finds one.
+At worst we might need
 
 810
 01:02:39,920 --> 01:02:42,360
@@ -3843,12 +3843,12 @@ of potential per element.
 821
 01:03:13,640 --> 01:03:15,720
 This aligns with
-what we've just guessed.
+what we've just guessed
 
 822
 01:03:15,720 --> 01:03:19,920
-The worst case cost will be.
-The length of the list.
+The worst case cost will be:
+the length of the list.
 
 823
 01:03:20,720 --> 01:03:23,080
@@ -3868,11 +3868,11 @@ represent the resources present
 826
 01:03:30,120 --> 01:03:32,920
 before and after
-the function call
+the function call.
 
 827
 01:03:32,920 --> 01:03:35,880
-in this case, we can
+In this case, we can
 just let them be zero.
 
 828
@@ -3928,36 +3928,36 @@ Otherwise we use
 838
 01:04:06,240 --> 01:04:10,800
 that one free unit of potential
-to pay for the ticket expression.
+to pay for the tick expression.
 
 839
 01:04:10,880 --> 01:04:14,440
-And then Recurse on the tail
-of the input list
+And then recurse on the tail
+of the input list.
 
 840
 01:04:14,440 --> 01:04:16,360
-to perform
-this recursive call.
+To perform
+this recursive call,
 
 841
 01:04:16,360 --> 01:04:19,080
-We check the potential
+we check the potential
 in the current environment
 
 842
 01:04:19,080 --> 01:04:23,200
-against the function signature
-because the mem function
+against the function signature.
+Because the mem function
 
 843
 01:04:23,200 --> 01:04:26,360
 requires one unit of potential
-per element in the list.
+per element in the list,
 
 844
 01:04:26,360 --> 01:04:29,680
-And the tail of the input list
+and the tail of the input list
 still has one unit
 
 845
@@ -3973,7 +3973,7 @@ The potential we guessed
 847
 01:04:35,840 --> 01:04:38,640
 at the beginning,
-one per element in the list
+one per element in the list,
 
 848
 01:04:38,640 --> 01:04:43,040
@@ -3988,7 +3988,7 @@ about this example,
 850
 01:04:46,440 --> 01:04:48,280
 although we did it
-by guessing check,
+by guess and check,
 
 851
 01:04:48,280 --> 01:04:51,600
@@ -4032,8 +4032,8 @@ Now, the language we just saw
 
 859
 01:05:11,560 --> 01:05:15,680
-is a subset of oCaml
-and non probabilistic.
+is a subset of OCaml
+and non-probabilistic.
 
 860
 01:05:15,680 --> 01:05:18,400
@@ -4042,7 +4042,7 @@ at all meaningful,
 
 861
 01:05:18,400 --> 01:05:20,960
-we extended with what is probably
+we extend it with what is probably
 the most primitive
 
 862
@@ -4077,13 +4077,13 @@ is a constant.
 
 868
 01:05:42,120 --> 01:05:44,960
-In this rule.
-Gamma is a typing context.
+In this rule,
+Gamma is a typing context,
 
 869
 01:05:44,960 --> 01:05:47,760
 Q is the initial
-amount of resources.
+amount of resources,
 
 870
 01:05:47,760 --> 01:05:49,920
@@ -4108,11 +4108,11 @@ the flip expression
 874
 01:05:58,440 --> 01:06:00,680
 type checks
-is A under context
+as A under context
 
 875
 01:06:00,680 --> 01:06:05,200
-gamma with Q extra resources.
+Gamma with Q extra resources.
 The key idea
 
 876
@@ -4122,7 +4122,7 @@ is that the expected cost
 
 877
 01:06:08,040 --> 01:06:09,560
-between the two branches
+between the two branches,
 
 878
 01:06:09,560 --> 01:06:14,560
@@ -4181,17 +4181,17 @@ behind these rules,
 
 889
 01:06:41,840 --> 01:06:44,560
-they posed a problem
-while these type rules
+they posed a problem.
+While these type rules
 
 890
 01:06:44,560 --> 01:06:46,600
 do indeed turn out
-to be sound.
+to be sound,
 
 891
 01:06:46,600 --> 01:06:49,520
-The probabilistic nature
+the probabilistic nature
 of the new flip operations
 
 892
@@ -4201,7 +4201,7 @@ with the operational semantics
 
 893
 01:06:53,160 --> 01:06:57,840
-used in RaML AARA
+used in RaML's AARA.
 However, we need
 
 894
@@ -4217,16 +4217,16 @@ To overcome this.
 896
 01:07:04,080 --> 01:07:07,040
 We created a whole
-new operational semantics for PRAML
+new operational semantics for PRaML
 
 897
 01:07:07,040 --> 01:07:09,680
-based on boards
-from at all 2016's
+based on
+Borgstrom et al. 2016's
 
 898
 01:07:09,680 --> 01:07:14,680
-trace based and step index
+trace based and step-indexed
 distribution based semantics.
 
 899
@@ -4247,12 +4247,12 @@ soundness as follows.
 902
 01:07:23,880 --> 01:07:27,280
 If expression E types as A
-under context gamma
+under context Gamma
 
 903
 01:07:27,280 --> 01:07:30,600
-with Q units of initial potential.
-Then the expected
+with Q units of initial potential,
+then the expected
 
 904
 01:07:30,600 --> 01:07:34,480
@@ -4261,7 +4261,7 @@ is bounded by Q
 
 905
 01:07:34,480 --> 01:07:38,360
-plus the potential in gamma.
+plus the potential in Gamma.
 This soundness statement
 
 906
@@ -4277,11 +4277,11 @@ mentioned earlier.
 908
 01:07:44,880 --> 01:07:48,120
 The initial potential
-bounds the cost,
+bounds the cost.
 
 909
 01:07:48,120 --> 01:07:52,080
-this holds even for programs
+This holds even for programs
 that may not terminate.
 
 910
@@ -4297,11 +4297,11 @@ then the existence
 912
 01:07:56,560 --> 01:07:59,240
 of any expected
-cost bound at all.
+cost bound at all
 
 913
 01:07:59,240 --> 01:08:04,120
-Implies almost sure termination.
+implies almost sure termination.
 Now let's look at this
 
 914
@@ -4316,17 +4316,17 @@ which performs a sequence
 
 916
 01:08:10,440 --> 01:08:14,560
-of bernoulli trials,
-when run, it has a 50% chance
+of Bernoulli trials.
+When run, it has a 50% chance
 
 917
 01:08:14,560 --> 01:08:17,920
-of re-cursing and a 50%
-chance of terminating
+of recursing and a 50%
+chance of terminating.
 
 918
 01:08:18,280 --> 01:08:20,320
-as many might remember
+As many might remember
 from their intro
 
 919
@@ -4337,7 +4337,7 @@ this results in a
 920
 01:08:22,560 --> 01:08:26,560
 geometric distribution
-with expected value too.
+with expected value two.
 
 921
 01:08:26,560 --> 01:08:28,760
@@ -4352,7 +4352,7 @@ a finite notion of cost.
 923
 01:08:32,160 --> 01:08:34,840
 Let's check it now
-using PRAML.
+using PRaML.
 
 924
 01:08:34,840 --> 01:08:39,880
@@ -4367,11 +4367,11 @@ immediately on the tick.
 926
 01:08:43,920 --> 01:08:45,800
 After the coin flip,
-we assigned
+we assign
 
 927
 01:08:45,800 --> 01:08:49,680
-zero potential to the headcase
+zero potential to the head case
 because it returns immediately.
 
 928
@@ -4382,16 +4382,16 @@ to the tails case.
 929
 01:08:52,880 --> 01:08:55,760
 Then in the tails case,
-we reuse the guests
+we reuse the guessed
 
 930
 01:08:55,760 --> 01:08:58,880
 type of bernoulli,
-and it all works out
+and it all works out.
 
 931
 01:08:58,880 --> 01:09:01,800
-because the weighted sum
+Because the weighted sum
 of the potential assigned
 
 932
@@ -4432,17 +4432,17 @@ resource bounds.
 939
 01:09:22,440 --> 01:09:24,960
 For instance, we show
-that PRAML, can analyze
+that PRaML can analyze
 
 940
 01:09:24,960 --> 01:09:27,920
-the gambler's ruin
-where in two players,
+the "gambler's ruin"
+wherein two players,
 
 941
 01:09:27,920 --> 01:09:31,920
-Alison, Bob, continually bet
-$1 against each other
+Alice and Bob, continually bet
+one dollar against each other
 
 942
 01:09:31,920 --> 01:09:33,840
@@ -4471,8 +4471,8 @@ Alice starts with
 
 947
 01:09:42,800 --> 01:09:47,040
-$A and Bob starts with $B
-Then this series of bets
+A dollars and Bob starts with B dollars,
+then this series of bets
 
 948
 01:09:47,040 --> 01:09:51,080
@@ -4481,12 +4481,12 @@ A times B rounds.
 
 949
 01:09:51,080 --> 01:09:54,920
-Our implementation infer
+Our implementation infers
 this bound exactly.
 
 950
 01:09:54,920 --> 01:09:57,240
-PRAML can also infer
+PRaML can also infer
 non-trivial bounds
 
 951
@@ -4502,7 +4502,7 @@ to make a fair coin
 953
 01:10:04,520 --> 01:10:08,680
 from a biased one.
-With some scaling trick PRAML
+With some scaling trick, PRaML
 
 954
 01:10:08,680 --> 01:10:11,440
@@ -4526,12 +4526,12 @@ Both of these examples
 
 958
 01:10:21,080 --> 01:10:22,800
-also show that PRAML
+also show that PRaML
 can be of use
 
 959
 01:10:22,800 --> 01:10:25,040
-in probabilistic modeling.
+in probabilistic modeling,
 As these are
 
 960
@@ -4551,22 +4551,22 @@ The bounds themselves
 
 963
 01:10:34,720 --> 01:10:37,880
-are a various complexities,
+are of various complexities,
 but one nice takeaway
 
 964
 01:10:37,880 --> 01:10:40,520
 is that the time taken
-to analyze this programs
+to analyze these programs
 
 965
 01:10:40,520 --> 01:10:44,160
 automatically, is usually
-well under one second,
+well under one second.
 
 966
 01:10:44,160 --> 01:10:46,480
-this is good,
+This is good,
 because real world analyses
 
 967
@@ -4611,7 +4611,7 @@ of these two programs
 
 975
 01:11:13,560 --> 01:11:18,400
-are pretty much the same
+are pretty much the same,
 and note the constant expected
 
 976
@@ -4627,7 +4627,7 @@ worst-case cost of mem.
 978
 01:11:25,520 --> 01:11:29,800
 This opens up another avenue
-for analysis using probability,
+for analysis using probability:
 
 979
 01:11:29,800 --> 01:11:31,760
@@ -4637,7 +4637,7 @@ deterministic branches
 980
 01:11:31,760 --> 01:11:35,600
 with probabilistic ones.
-If we can impuricably determine
+If we can empirically determine
 
 981
 01:11:35,600 --> 01:11:38,840
@@ -4651,18 +4651,18 @@ with a flip and use
 
 983
 01:11:41,520 --> 01:11:43,600
-the PRAML type system
+the PRaML type system
 to get a better sense
 
 984
 01:11:43,600 --> 01:11:46,040
 of the actual
-resource usage
+resource usage.
 
 985
 01:11:46,040 --> 01:11:48,680
-in our implementation artifact.
-We include a mode
+In our implementation artifact,
+we include a mode
 
 986
 01:11:48,680 --> 01:11:51,760
@@ -4677,7 +4677,7 @@ For instance, insertion sort
 988
 01:11:55,600 --> 01:11:59,880
 achieves linear time complexity
-on nearly sorted data.
+on nearly-sorted data.
 
 989
 01:11:59,880 --> 01:12:04,160
@@ -4687,32 +4687,32 @@ I now leave it to Di for the close.
 990
 01:12:04,160 --> 01:12:08,000
 DI: Thank you, David.
-In summary in this paper
+In summary, in this paper
 
 991
 01:12:08,000 --> 01:12:10,560
 we have developed
-a probabilistic attention
+a probabilistic extension
 
 992
 01:12:10,560 --> 01:12:13,960
-to the ARA type system.
-We overhauled the operation
+to the AARA type system.
+We overhauled the operational
 
 993
 01:12:13,960 --> 01:12:17,880
-of semantics to provide sum.
+semantics to prove it sound.
 We also implemented
 
 994
 01:12:17,880 --> 01:12:21,520
-the result atleast back
+the result at least back
 to determination programs,
 
 995
 01:12:21,520 --> 01:12:24,680
-which seemed pretty close
-to statistical techniques.
+with empirical
+statistical techniques.
 
 996
 01:12:24,680 --> 01:12:28,040
@@ -4731,8 +4731,8 @@ the time to talk about
 
 999
 01:12:34,800 --> 01:12:37,320
-incentive for less than
-impure talk.
+and thank you for listening to
+our talk.
 
 1000
 01:12:37,320 --> 01:12:38,920
@@ -4742,7 +4742,7 @@ and hopefully
 1001
 01:12:38,920 --> 01:12:41,560
 we can talk in person
-the next year.
+next year.
 
 1002
 01:12:41,800 --> 01:12:49,040
