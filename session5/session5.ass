@@ -675,7 +675,7 @@ Dialogue: 0,0:46:07.68,0:46:10.08,Default,,0,0,0,,So, that's what I've got\Nhigh
 Dialogue: 0,0:46:10.08,0:46:11.52,Default,,0,0,0,,And the interesting thing\Nabout that, of course,
 Dialogue: 0,0:46:11.52,0:46:13.36,Default,,0,0,0,,is that the regular expression
 Dialogue: 0,0:46:13.36,0:46:15.52,Default,,0,0,0,,is exactly the same\Nas we started with.
-Dialogue: 0,0:46:15.52,0:46:17.72,Default,,0,0,0,,Plus r, we just make\Nour criss-cross plus r.
+Dialogue: 0,0:46:15.52,0:46:17.72,Default,,0,0,0,,Plus r, we just make\Nour recursive call with plus r.
 Dialogue: 0,0:46:17.72,0:46:19.36,Default,,0,0,0,,So, there's been no\Nstructural decrease here,
 Dialogue: 0,0:46:19.36,0:46:23.44,Default,,0,0,0,,which is quite worrisome for\Na termination situation.
 Dialogue: 0,0:46:23.44,0:46:24.68,Default,,0,0,0,,And then, concat,
@@ -794,7 +794,7 @@ Dialogue: 0,0:50:37.68,0:50:39.48,Default,,0,0,0,,you gotta call eval,\Nbut you 
 Dialogue: 0,0:50:39.48,0:50:40.92,Default,,0,0,0,,on an R thing.\NYou can't call it
 Dialogue: 0,0:50:40.92,0:50:43.44,Default,,0,0,0,,on just some random\Nother D thing.
 Dialogue: 0,0:50:43.44,0:50:45.88,Default,,0,0,0,,And you're also given\Na substructure, sub data structure
-Dialogue: 0,0:50:45.88,0:50:49.92,Default,,0,0,0,,of type fr, in other words,\Nyou're given this little package
+Dialogue: 0,0:50:45.88,0:50:49.92,Default,,0,0,0,,of type F R, in other words,\Nyou're given this little package
 Dialogue: 0,0:50:49.92,0:50:53.40,Default,,0,0,0,,That is presenting you,\Nthe data that you have,
 Dialogue: 0,0:50:53.40,0:50:57.84,Default,,0,0,0,,except at the sort\Nof factorial position it's got
 Dialogue: 0,0:50:57.84,0:51:01.84,Default,,0,0,0,,The abstract type R.\NAnd so the key thing
@@ -836,8 +836,8 @@ Dialogue: 0,0:52:32.04,0:52:34.40,Default,,0,0,0,,Now finally, what we need\Nfor
 Dialogue: 0,0:52:34.40,0:52:36.68,Default,,0,0,0,,regular expression matcher\Nis we need support
 Dialogue: 0,0:52:36.68,0:52:39.44,Default,,0,0,0,,for nested recursion.\NSo you have all the same stuff
 Dialogue: 0,0:52:39.44,0:52:41.68,Default,,0,0,0,,we had before,\Nexcept we change a little bit,
-Dialogue: 0,0:52:41.68,0:52:44.20,Default,,0,0,0,,the return type\Nof your function.
-Dialogue: 0,0:52:44.20,0:52:49.16,Default,,0,0,0,,Now couldn't is now\Ncould depend on D.
+Dialogue: 0,0:52:41.68,0:52:44.20,Default,,0,0,0,,the return type\Nof your function
+Dialogue: 0,0:52:44.20,0:52:49.16,Default,,0,0,0,,now couldn't- is now-\Ncould depend on D.
 Dialogue: 0,0:52:49.16,0:52:52.56,Default,,0,0,0,,So you compute X of D\Nfrom a data type D
 Dialogue: 0,0:52:52.56,0:52:55.20,Default,,0,0,0,,and the, the reason\Nthat's really important to shift,
 Dialogue: 0,0:52:55.20,0:52:57.48,Default,,0,0,0,,as I see it say below\Nmy bullet points there
@@ -848,7 +848,7 @@ Dialogue: 0,0:53:06.96,0:53:09.36,Default,,0,0,0,,the possibility of seeing\Nwhe
 Dialogue: 0,0:53:09.36,0:53:12.16,Default,,0,0,0,,from your recursive call,\Nthat it also has
 Dialogue: 0,0:53:12.16,0:53:13.68,Default,,0,0,0,,type R and hence,\Nyou could make
 Dialogue: 0,0:53:13.68,0:53:18.64,Default,,0,0,0,,a recursive call again on that.\NSo a recursion is then allowed
-Dialogue: 0,0:53:18.64,0:53:21.00,Default,,0,0,0,,on values that\NVal has returned.
+Dialogue: 0,0:53:18.64,0:53:21.00,Default,,0,0,0,,on values that\Neval has returned.
 Dialogue: 0,0:53:21.00,0:53:22.72,Default,,0,0,0,,So that enables a form\Nof nested recursion,
 Dialogue: 0,0:53:22.72,0:53:25.36,Default,,0,0,0,,and the continuations\Nare basically hiding
 Dialogue: 0,0:53:25.36,0:53:28.52,Default,,0,0,0,,a form of nested recursion.\NOK. So let's take
@@ -866,7 +866,7 @@ Dialogue: 0,0:54:01.00,0:54:03.08,Default,,0,0,0,,has to be given explicitly\NCe
 Dialogue: 0,0:54:03.08,0:54:07.12,Default,,0,0,0,,infer this for you.\NAnd it can mention this R,
 Dialogue: 0,0:54:07.12,0:54:10.40,Default,,0,0,0,,and that's just like XR, XD.\NNow we have
 Dialogue: 0,0:54:10.40,0:54:13.56,Default,,0,0,0,,a way of mentioning\Nwe're indicating
-Dialogue: 0,0:54:13.56,0:54:17.60,Default,,0,0,0,,the functionality of X\Nand X does have to be
+Dialogue: 0,0:54:13.56,0:54:17.60,Default,,0,0,0,,the functoriality of X\Nand X does have to be
 Dialogue: 0,0:54:17.60,0:54:21.76,Default,,0,0,0,,positive for this to work.\NAnd finally where
 Dialogue: 0,0:54:21.76,0:54:24.80,Default,,0,0,0,,the eval function\Nis conveniently called match.
 Dialogue: 0,0:54:24.80,0:54:26.28,Default,,0,0,0,,And so it looks,\Nthis looks very much like
