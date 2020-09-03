@@ -8854,7 +8854,7 @@ SEBASTIAN GRAF: Hi, I'm Sebastian
 1900
 01:43:19,120 --> 01:43:22,840
 and I'm here to talk to you about
- pattern match coverage checking.
+ pattern-match coverage checking.
 
 1901
 01:43:23,360 --> 01:43:25,840
@@ -8868,7 +8868,7 @@ like 40 years ago,
 1903
 01:43:26,920 --> 01:43:29,920
 well lower your guard
- and hold back on your jet
+ and hold back on your judgment
 
 1904
 01:43:29,920 --> 01:43:31,200
@@ -8877,7 +8877,7 @@ just for a few more minutes.
 1905
 01:43:32,960 --> 01:43:36,080
 Let's start with a quick recap
- of our pattern match warnings.
+ about pattern-match warnings.
 
 1906
 01:43:36,800 --> 01:43:39,520
@@ -8886,25 +8886,25 @@ This incomplete definition
 
 1907
 01:43:40,240 --> 01:43:42,040
-will crush when called with nothing
+will crash when called with Nothing
 
 1908
 01:43:43,040 --> 01:43:44,880
-because it lucks a covering clause.
+because it lacks a covering clause.
 
 1909
 01:43:45,640 --> 01:43:47,640
-Now run time crushes are
+Now, runtime crushes are
 
 1910
 01:43:47,640 --> 01:43:49,840
-annoying especially such
+annoying, especially for such
  an obvious oversight.
 
 1911
 01:43:50,320 --> 01:43:53,920
-So the compiler should end
- indeed in the case of GHC
+So the compiler should and
+ indeed, in the case of GHC,
 
 1912
 01:43:53,920 --> 01:43:55,320
@@ -8913,12 +8913,12 @@ it does warn about it.
 1913
 01:43:56,320 --> 01:43:59,520
 I'll talk about how GHC
- figures out this missing cases
+ figures out these missing cases.
 
 1914
 01:44:01,000 --> 01:44:04,720
-apart from such missing
- equations like nothing here,
+Apart from such missing
+ equations like Nothing here,
 
 1915
 01:44:05,200 --> 01:44:07,240
@@ -8946,12 +8946,12 @@ So you might think there is
 
 1920
 01:44:17,720 --> 01:44:20,800
-And I thought so to for
+And I thought so too before
  I picked up maintenance
 
 1921
 01:44:20,800 --> 01:44:25,040
-of GHC's pattern match checker as
+of GHC's pattern-match checker as
  a side project about a year ago.
 
 1922
@@ -8961,7 +8961,7 @@ As of recently there are
 
 1923
 01:44:29,200 --> 01:44:30,680
-for the pattern match checker
+for the pattern-match checker,
 
 1924
 01:44:30,680 --> 01:44:33,760
@@ -8980,12 +8980,12 @@ So how exactly can something
 
 1927
 01:44:43,480 --> 01:44:44,880
-give us so many headaches.
+give us so many headaches?
 
 1928
 01:44:46,880 --> 01:44:49,320
 Let's start with a little
- warm up exercise.
+ warm-up exercise.
 
 1929
 01:44:50,040 --> 01:44:51,480
@@ -9020,7 +9020,7 @@ but 16 different combinations
 
 1936
 01:45:08,880 --> 01:45:12,520
-Clearly a scalable automated
+Clearly a scalable, automated
  checker needs to know when
 
 1937
@@ -9030,13 +9030,13 @@ and how to bail out of this
 
 1938
 01:45:17,640 --> 01:45:21,080
-Now Haskell is
+Now, Haskell is
  lazy but not total.
 
 1939
 01:45:21,080 --> 01:45:23,400
-That also reflects in it's
- pattern matching semantics.
+That also reflects in its
+ pattern-matching semantics.
 
 1940
 01:45:24,160 --> 01:45:26,320
@@ -9046,7 +9046,7 @@ Take this function
 1941
 01:45:27,600 --> 01:45:30,800
 It might be tempting to think that
- the second equation is redundant
+ the second equation is redundant,
 
 1942
 01:45:31,280 --> 01:45:32,640
@@ -9054,22 +9054,22 @@ but in fact it isn't.
 
 1943
 01:45:34,120 --> 01:45:37,160
-Deleting equation two would
- alter the semantics of function
+Deleting equation 2 would
+ alter the semantics of the function
 
 1944
 01:45:37,160 --> 01:45:41,360
-from crushing to return
- three in this call here.
+from crashing to returning
+ 3 in this call here.
 
 1945
 01:45:41,360 --> 01:45:42,480
-So not redundant.
+So, not redundant.
 
 1946
 01:45:44,000 --> 01:45:46,400
-But on the other end we
- can never return two
+But on the other hand, we
+ can never return 2,
 
 1947
 01:45:46,400 --> 01:45:50,120
@@ -9079,17 +9079,17 @@ which definitely smells like
 1948
 01:45:51,360 --> 01:45:54,960
 We say that the equation has
- an inaccessible right hand side.
+ an inaccessible right-hand side.
 
 1949
 01:45:55,720 --> 01:45:57,880
-Of course when we call
- a clause redundant
+Of course, when we call
+ a clause redundant,
 
 1950
 01:45:57,880 --> 01:46:01,120
-that always implies it's right
- hand side it's inaccessible.
+that always implies its right-
+ hand side is inaccessible.
 
 1951
 01:46:03,360 --> 01:46:05,480
@@ -9102,21 +9102,21 @@ that we have bottom
 
 1953
 01:46:08,840 --> 01:46:10,560
-That includes the data type void
+That includes the data type Void,
 
 1954
 01:46:10,560 --> 01:46:12,800
 which doesn't have any
- data constructors.
+ data constructors,
 
 1955
 01:46:12,800 --> 01:46:15,120
-So bottom is only inhabitant.
+so bottom is its only inhabitant.
 
 1956
 01:46:16,600 --> 01:46:19,400
 These examples here introduce
- bindings of type void
+ bindings of type Void
 
 1957
 01:46:19,920 --> 01:46:23,040
@@ -9125,32 +9125,32 @@ by resorting to divergence
 
 1958
 01:46:24,040 --> 01:46:26,720
-F here matches on them in
- a lazy wild card match
+f here matches on them in
+ a lazy wildcard match
 
 1959
 01:46:26,720 --> 01:46:29,760
-and it's just regular exhaustive
+and it's just a regular, exhaustive
  function definition.
 
 1960
 01:46:32,520 --> 01:46:36,400
-Now that we have void, we can
+Now that we have Void, we can
  combine it with strict fields.
 
 1961
 01:46:37,400 --> 01:46:40,080
-Here is a strict maybe
- data type as you can tell
+Here is a strict Maybe
+ data type, as you can tell
 
 1962
 01:46:40,080 --> 01:46:43,840
 by the strictness annotation
- of Sjust field here.
+ on SJust's field here.
 
 1963
 01:46:44,560 --> 01:46:46,080
-Whenever SJust is constructed
+Whenever SJust is constructed,
 
 1964
 01:46:46,080 --> 01:46:48,440
@@ -9159,16 +9159,16 @@ its field needs to
 
 1965
 01:46:49,920 --> 01:46:51,080
-The function F here
+The function f here
 
 1966
 01:46:51,080 --> 01:46:52,960
-matches on SMaybe of Void.
+matches on SMaybe Void.
 
 1967
 01:46:53,720 --> 01:46:57,520
-Question, is the second clause
- of F redundant or not.
+Question: is the second clause
+ of f redundant or not?
 
 1968
 01:46:58,760 --> 01:47:00,280
@@ -9182,7 +9182,7 @@ by enumerating
 1970
 01:47:03,840 --> 01:47:06,760
 and see which equations
- of F match them.
+ of f match them.
 
 1971
 01:47:08,240 --> 01:47:11,440
@@ -9192,7 +9192,7 @@ The only two inhabitants
 1972
 01:47:12,960 --> 01:47:14,720
 SJust of bottom is
- just an inhabitant
+ not an inhabitant
 
 1973
 01:47:14,720 --> 01:47:16,440
@@ -9201,15 +9201,15 @@ because of the strict field.
 1974
 01:47:17,200 --> 01:47:19,720
 The first equation of
- F diverges on bottom
+ f diverges on bottom
 
 1975
 01:47:20,480 --> 01:47:22,160
-and matches on nothing.
+and matches on Nothing.
 
 1976
 01:47:24,160 --> 01:47:25,200
-So yes redundant.
+So yes: redundant.
 
 1977
 01:47:25,200 --> 01:47:28,040
@@ -9224,20 +9224,20 @@ Guards are another very basic
 1979
 01:47:36,880 --> 01:47:38,680
 Does sign have any
- redundant clauses,
+ redundant clauses?
 
 1980
 01:47:39,680 --> 01:47:42,120
-in general it's hard to tell
+In general, it's hard to tell
  without knowing the definition
 
 1981
 01:47:42,120 --> 01:47:44,800
-of less than EQ and so on.
+of (<), (==), and so on.
 
 1982
 01:47:45,320 --> 01:47:48,600
-Also would quickly become undecidable
+Also we quickly become undecidable
  if we just reasoned about
 
 1983
@@ -9247,13 +9247,13 @@ every function we know
 
 1984
 01:47:52,520 --> 01:47:56,320
-So apparently guards are quite
- rich semantically speaking.
+So apparently, guards are quite
+ rich, semantically speaking.
 
 1985
 01:47:57,320 --> 01:48:00,280
 Here you can see how it's even
- possible to pattern matching
+ possible to do pattern matching
 
 1986
 01:48:00,280 --> 01:48:01,400
@@ -9261,7 +9261,7 @@ with pattern guards.
 
 1987
 01:48:01,880 --> 01:48:06,600
-And get here, even mixes both
+And get here even mixes both
  structural pattern matching
 
 1988
@@ -9275,7 +9275,7 @@ This definition is exhaustive
 
 1990
 01:48:13,320 --> 01:48:14,360
-as non exhaustive.
+as non-exhaustive.
 
 1991
 01:48:16,360 --> 01:48:18,320
@@ -9288,7 +9288,7 @@ there are a lot of
 
 1993
 01:48:20,840 --> 01:48:24,160
-that the pattern match checker
+that the pattern-match checker
  has to cope with efficiently.
 
 1994
@@ -9299,15 +9299,15 @@ Also many of these features
 1995
 01:48:28,600 --> 01:48:31,080
 I won't have time to talk
- about the ones in parenthesis
+ about the ones in parentheses
 
 1996
 01:48:31,080 --> 01:48:32,920
-like long distance information.
+like long distance information,
 
 1997
 01:48:33,440 --> 01:48:36,120
-So please do ask
+so please do ask
  questions afterwards
 
 1998
@@ -9323,17 +9323,17 @@ The status quo in GHC was
 2000
 01:48:46,520 --> 01:48:50,120
 that handles most of the language
- features in the previous list
+ features in the previous list,
 
 2001
 01:48:50,120 --> 01:48:53,600
-including GADTs and type level
+including GADTs and type-level
  information in particular.
 
 2002
 01:48:54,600 --> 01:48:58,120
-But having been battle tested
- over the last couple of years
+But having been battle-tested
+ over the last couple of years,
 
 2003
 01:48:59,120 --> 01:49:02,600
@@ -9342,7 +9342,7 @@ the implementation revealed shortcomings
 
 2004
 01:49:03,120 --> 01:49:09,920
-Also it was pretty complicated. In
+Also, it was pretty complicated. In
  trying to improve on what we had,
 
 2005
@@ -9352,7 +9352,7 @@ we iterated a couple of times
 2006
 01:49:11,240 --> 01:49:14,440
 and came out with the new approach
- we called lower your guards.
+ we called Lower Your Guards.
 
 2007
 01:49:16,920 --> 01:49:18,360
@@ -9361,7 +9361,7 @@ As the name suggests,
 2008
 01:49:18,360 --> 01:49:22,120
 we abandoned all structural
- pattern matching like if f here
+ pattern matching like in f here
 
 2009
 01:49:22,120 --> 01:49:25,560
@@ -9385,12 +9385,12 @@ A returns an annotated tree
 
 2013
 01:49:39,320 --> 01:49:42,320
-that capture redundancies
+that capture redundancy
  and inaccessibility information.
 
 2014
 01:49:43,320 --> 01:49:45,240
-If you want to know about these part
+If you want to know more about this part,
 
 2015
 01:49:45,240 --> 01:49:46,880
@@ -9403,12 +9403,12 @@ U computes the set of values that
 
 2017
 01:49:52,240 --> 01:49:53,640
-as a refinement type theta.
+as a refinement type Θ,
 
 2018
 01:49:54,400 --> 01:49:58,480
-And then all we have to do is
- report the inhabitants of theta
+and then all we have to do is
+ report the inhabitants of Θ
 
 2019
 01:49:58,480 --> 01:50:01,200
@@ -9417,7 +9417,7 @@ as uncovered patterns
 
 2020
 01:50:04,920 --> 01:50:07,120
-Let's Desugar this
+Let's desugar this
  fancy example function.
 
 2021
@@ -9431,31 +9431,31 @@ You can see that fancy makes
 
 2023
 01:50:13,040 --> 01:50:14,680
-and even to language extensions
+and even two language extensions:
 
 2024
 01:50:15,400 --> 01:50:17,680
 a bang pattern that
- forces the match thing
+ forces the matched thing,
 
 2025
 01:50:18,440 --> 01:50:21,960
 and a view pattern that
- applies the match thing to g
+ applies g to the matched thing
 
 2026
 01:50:23,440 --> 01:50:25,640
 and matches
- the results against True.
+ the result against True.
 
 2027
 01:50:29,120 --> 01:50:32,040
-In yellow you see fancy
+In yellow you see fancy's
  desugaring to guard trees.
 
 2028
 01:50:33,280 --> 01:50:35,240
-Here is the syntax
+Here is their syntax
  definition for reference.
 
 2029
@@ -9470,16 +9470,16 @@ There is one branch
 2031
 01:50:40,600 --> 01:50:42,760
 for each clause in
- the function definition
+ the function definition,
 
 2032
 01:50:43,240 --> 01:50:44,440
-modeling fall through semantics.
+modeling fall-through semantics.
 
 2033
 01:50:45,160 --> 01:50:47,320
-There is also a bunch of
- guards on each branch
+There are also a bunch of
+ guards on each branch,
 
 2034
 01:50:47,320 --> 01:50:51,080
@@ -9499,20 +9499,20 @@ Looking at guards, we can see
 2037
 01:51:00,040 --> 01:51:03,840
 was completely decomposed into
- multiple flat pattern guards
+ multiple flat pattern guards,
 
 2038
 01:51:03,840 --> 01:51:05,320
-like unjust here.
+like on Just here.
 
 2039
 01:51:08,320 --> 01:51:10,120
-Pattern guards are considered lazy
+Pattern guards are considered lazy,
 
 2040
 01:51:10,120 --> 01:51:15,160
 and evaluation is forced by
- bang guards such as x1 here
+ bang guards such as on x1 here,
 
 2041
 01:51:15,160 --> 01:51:17,000
@@ -9535,12 +9535,12 @@ We give names to more
 2045
 01:51:27,200 --> 01:51:29,920
 like this function application
- with a let binding
+ with a let binding,
 
 2046
 01:51:30,680 --> 01:51:35,080
-which also allows us Desugar
- the view pattern here for example.
+which also allows us to desugar
+ the view pattern here, for example.
 
 2047
 01:51:36,320 --> 01:51:40,280
@@ -9549,17 +9549,17 @@ Desugaring also introduces
 
 2048
 01:51:41,040 --> 01:51:42,480
-that fix up naming differences
+that fix up naming differences,
 
 2049
 01:51:42,480 --> 01:51:45,880
-like the one binding Xs to
+like the one binding xs to
  the temporary t2 here.
 
 2050
 01:51:49,880 --> 01:51:53,280
-We found similar Desugaring for
- all the pattern match syntax
+We found similar desugarings for
+ all the pattern-match syntax
 
 2051
 01:51:53,280 --> 01:51:54,280
@@ -9577,7 +9577,7 @@ There is no code
 
 2054
 01:52:03,200 --> 01:52:08,080
-Alright, next up characterizing
+Alright, next up: characterizing
  the set of uncovered values
 
 2055
@@ -9592,7 +9592,7 @@ We compute the set by gradually
 
 2057
 01:52:17,160 --> 01:52:21,040
-as a fraction of them fall through
+as a fraction of them falls through
  from one clause to the next.
 
 2058
@@ -9602,13 +9602,13 @@ How do we represent such a set with
 
 2059
 01:52:28,840 --> 01:52:30,520
-We pick refinement
+We picked refinement
  types for the job.
 
 2060
 01:52:31,520 --> 01:52:34,040
 Here are a few example
- refinement types in blue
+ refinement types in blue,
 
 2061
 01:52:34,040 --> 01:52:37,040
@@ -9618,21 +9618,21 @@ as well as the sets
 2062
 01:52:38,040 --> 01:52:42,360
 Cross is the unsatisfiable
- refinement predicate.
+ refinement predicate,
 
 2063
 01:52:42,360 --> 01:52:44,120
-So there are no inhabitants.
+so there are no inhabitants.
 
 2064
 01:52:45,400 --> 01:52:49,160
-Check mark is the trivial
+Check mark is the trivially
  satisfiable refinement predicate
 
 2065
 01:52:49,160 --> 01:52:51,680
 which means we have all
- the inhabitants of bool.
+ the inhabitants of Bool.
 
 2066
 01:52:53,440 --> 01:52:56,400
@@ -9641,7 +9641,7 @@ This is the type of
 
 2067
 01:52:56,400 --> 01:52:58,720
-and this one also rules out false.
+and this one also rules out False.
 
 2068
 01:53:00,440 --> 01:53:04,280
@@ -9654,7 +9654,7 @@ It has a pattern guard on mx
 
 2070
 01:53:07,840 --> 01:53:10,960
-that brings Just field X into scope
+that brings Just's field x into scope,
 
 2071
 01:53:11,960 --> 01:53:15,240
@@ -9664,7 +9664,7 @@ which then scopes over the conjunct
 2072
 01:53:19,240 --> 01:53:21,840
 For some reasonably simple
- end to end example,
+ end-to-end example,
 
 2073
 01:53:21,840 --> 01:53:23,400
@@ -9672,7 +9672,7 @@ consider this source program.
 
 2074
 01:53:24,160 --> 01:53:25,880
-It will desugar to this guard tree
+It will desugar to this guard tree,
 
 2075
 01:53:25,880 --> 01:53:29,120
@@ -9686,7 +9686,7 @@ Note that the resulting
 
 2077
 01:53:33,120 --> 01:53:35,120
-as a disjunction in it's predicate
+has a disjunction in its predicate
 
 2078
 01:53:35,880 --> 01:53:38,560
@@ -9699,8 +9699,8 @@ in two different ways.
 
 2080
 01:53:40,120 --> 01:53:42,040
-First the match on Just
- could have failed
+First, the match on Just
+ could have failed,
 
 2081
 01:53:42,040 --> 01:53:44,360
@@ -9709,11 +9709,11 @@ and even if the match
 
 2082
 01:53:45,080 --> 01:53:46,800
-the match on true could have failed.
+the match on True could have failed.
 
 2083
 01:53:47,280 --> 01:53:50,040
-Question, how do we
+Question now: how do we
  do this in general?
 
 2084
@@ -9722,7 +9722,7 @@ With a function like this,
 
 2085
 01:53:55,040 --> 01:53:57,280
-you compute the subset of theta
+U computes the subset of Θ
 
 2086
 01:53:57,280 --> 01:54:00,320
@@ -9731,7 +9731,7 @@ whose values do not
 
 2087
 01:54:02,320 --> 01:54:05,600
-When we reach the right hand side,
+When we reach the right-hand side,
  every incoming value is covered.
 
 2088
@@ -9741,7 +9741,7 @@ So we return
 
 2089
 01:54:08,960 --> 01:54:11,160
-Branches model fall
+Branches model fall-
  through semantics.
 
 2090
@@ -9751,7 +9751,7 @@ Only values that fall
 
 2091
 01:54:14,480 --> 01:54:16,400
-and fall through the second branch.
+can fall through the second branch.
 
 2092
 01:54:17,920 --> 01:54:21,400
@@ -9761,7 +9761,7 @@ A bang guard on x adds
 2093
 01:54:21,400 --> 01:54:23,320
 to the incoming values
- of the subtree
+ of the subtree;
 
 2094
 01:54:24,320 --> 01:54:25,560
@@ -9769,17 +9769,17 @@ likewise for let bindings.
 
 2095
 01:54:27,320 --> 01:54:30,680
-The pattern guard matching
- against constructor k
+A pattern guard matching
+ against constructor K
 
 2096
 01:54:30,680 --> 01:54:33,320
-will fall through when x is not k.
+will fall through when x is not K.
 
 2097
 01:54:35,560 --> 01:54:39,440
 Also everything not covered
- by the subtree is uncovered
+ by the subtree is uncovered,
 
 2098
 01:54:39,440 --> 01:54:43,080
@@ -9787,13 +9787,13 @@ so we adjoin the two refinement types.
 
 2099
 01:54:44,080 --> 01:54:45,840
-And that is all there is
+And that's all there is
  to coverage checking.
 
 2100
 01:54:47,320 --> 01:54:51,800
 The next step is to generate
- inhabitants of the refinement types
+ inhabitants of the refinement type
 
 2101
 01:54:51,800 --> 01:54:53,160
@@ -9811,16 +9811,16 @@ If it's empty, then
 
 2104
 01:55:01,240 --> 01:55:03,400
-For our particular running example
+For our particular running example,
 
 2105
 01:55:03,400 --> 01:55:06,000
 the inhabitants are easy
- to find, just true and
+ to find: Just True and
 
 2106
 01:55:07,320 --> 01:55:09,320
-just false which are
+Just False, which are
  already in a suitable form
 
 2107
@@ -9838,7 +9838,7 @@ Liquid Haskell's embedding
 
 2110
 01:55:16,680 --> 01:55:19,680
-or an SMT solver directly
+or an SMT solver directly,
  to generate inhabitants.
 
 2111
@@ -9847,30 +9847,30 @@ But we didn't do that, because
 
 2112
 01:55:22,520 --> 01:55:27,200
-reflecting GHC's type
- constraint solver into SMT logic,
+reflecting GHC's type-
+ constraint solver into SMT logic
 
 2113
 01:55:27,200 --> 01:55:29,080
-it's quite an undertaking.
+is quite an undertaking.
 
 2114
 01:55:29,080 --> 01:55:33,520
 And we think that FFI calls
- and serialization affects
+ and serialization of facts
 
 2115
 01:55:33,520 --> 01:55:35,840
-induce too much overhead.
+incur too much overhead.
 
 2116
 01:55:35,840 --> 01:55:37,440
-So, we bit the bullet,
+So, we bit the bullet
 
 2117
 01:55:37,440 --> 01:55:40,760
-and just wrote our own ad
- hoc generator function.
+and just wrote our own 
+ ad-hoc generator function.
 
 2118
 01:55:40,760 --> 01:55:42,880
@@ -9890,11 +9890,11 @@ Now, for an uncovered
 2121
 01:55:50,120 --> 01:55:53,040
 an obviously exhaustive
- definition, like H here,
+ definition like h here,
 
 2122
 01:55:53,040 --> 01:55:55,440
-we find that we can
+we find that we can't
  produce any inhabitants.
 
 2123
@@ -9904,7 +9904,7 @@ So, no values to represent,
 
 2124
 01:55:59,440 --> 01:56:01,560
-H is found to be exhaustive.
+h is found to be exhaustive.
 
 2125
 01:56:03,800 --> 01:56:07,560
@@ -9923,7 +9923,7 @@ It took us many
 
 2128
 01:56:12,600 --> 01:56:14,400
-but, in the end, it paid off.
+but in the end, it paid off.
 
 2129
 01:56:14,400 --> 01:56:17,280
@@ -9953,7 +9953,7 @@ in strict or even mostly
 2134
 01:56:29,480 --> 01:56:31,480
 Just write your own
- de-sugaring function.
+ desugaring function.
 
 2135
 01:56:31,480 --> 01:56:33,680

@@ -1910,35 +1910,35 @@ Dialogue: 0,1:43:07.92,1:43:11.88,Default,,0,0,0,,It is based on work by Sebasti
 Dialogue: 0,1:43:11.88,1:43:12.88,Default,,0,0,0,,and Ryan Scott.
 Dialogue: 0,1:43:13.36,1:43:15.72,Default,,0,0,0,,The talk will be\N presented by Sebastian.
 Dialogue: 0,1:43:17.48,1:43:19.12,Default,,0,0,0,,SEBASTIAN GRAF: Hi, I'm Sebastian
-Dialogue: 0,1:43:19.12,1:43:22.84,Default,,0,0,0,,and I'm here to talk to you about\N pattern match coverage checking.
+Dialogue: 0,1:43:19.12,1:43:22.84,Default,,0,0,0,,and I'm here to talk to you about\N pattern-match coverage checking.
 Dialogue: 0,1:43:23.36,1:43:25.84,Default,,0,0,0,,In case you are wondering how\N this problem hasn't been solved
 Dialogue: 0,1:43:25.84,1:43:26.92,Default,,0,0,0,,like 40 years ago,
-Dialogue: 0,1:43:26.92,1:43:29.92,Default,,0,0,0,,well lower your guard\N and hold back on your jet
+Dialogue: 0,1:43:26.92,1:43:29.92,Default,,0,0,0,,well lower your guard\N and hold back on your judgment
 Dialogue: 0,1:43:29.92,1:43:31.20,Default,,0,0,0,,just for a few more minutes.
-Dialogue: 0,1:43:32.96,1:43:36.08,Default,,0,0,0,,Let's start with a quick recap\N of our pattern match warnings.
+Dialogue: 0,1:43:32.96,1:43:36.08,Default,,0,0,0,,Let's start with a quick recap\N about pattern-match warnings.
 Dialogue: 0,1:43:36.80,1:43:39.52,Default,,0,0,0,,This incomplete definition\N of isJust in Haskell here
-Dialogue: 0,1:43:40.24,1:43:42.04,Default,,0,0,0,,will crush when called with nothing
-Dialogue: 0,1:43:43.04,1:43:44.88,Default,,0,0,0,,because it lucks a covering clause.
-Dialogue: 0,1:43:45.64,1:43:47.64,Default,,0,0,0,,Now run time crushes are
-Dialogue: 0,1:43:47.64,1:43:49.84,Default,,0,0,0,,annoying especially such\N an obvious oversight.
-Dialogue: 0,1:43:50.32,1:43:53.92,Default,,0,0,0,,So the compiler should end\N indeed in the case of GHC
+Dialogue: 0,1:43:40.24,1:43:42.04,Default,,0,0,0,,will crash when called with Nothing
+Dialogue: 0,1:43:43.04,1:43:44.88,Default,,0,0,0,,because it lacks a covering clause.
+Dialogue: 0,1:43:45.64,1:43:47.64,Default,,0,0,0,,Now, runtime crushes are
+Dialogue: 0,1:43:47.64,1:43:49.84,Default,,0,0,0,,annoying, especially for such\N an obvious oversight.
+Dialogue: 0,1:43:50.32,1:43:53.92,Default,,0,0,0,,So the compiler should and\N indeed, in the case of GHC,
 Dialogue: 0,1:43:53.92,1:43:55.32,Default,,0,0,0,,it does warn about it.
-Dialogue: 0,1:43:56.32,1:43:59.52,Default,,0,0,0,,I'll talk about how GHC\N figures out this missing cases
-Dialogue: 0,1:44:01.00,1:44:04.72,Default,,0,0,0,,apart from such missing\N equations like nothing here,
+Dialogue: 0,1:43:56.32,1:43:59.52,Default,,0,0,0,,I'll talk about how GHC\N figures out these missing cases.
+Dialogue: 0,1:44:01.00,1:44:04.72,Default,,0,0,0,,Apart from such missing\N equations like Nothing here,
 Dialogue: 0,1:44:05.20,1:44:07.24,Default,,0,0,0,,compilers can also find\N redundant equations
 Dialogue: 0,1:44:07.24,1:44:08.60,Default,,0,0,0,,like the third one here.
 Dialogue: 0,1:44:09.36,1:44:11.52,Default,,0,0,0,,In fact compilers have\N been able to produce
 Dialogue: 0,1:44:11.52,1:44:13.28,Default,,0,0,0,,these kinds of warnings\N for a long time.
 Dialogue: 0,1:44:14.00,1:44:16.24,Default,,0,0,0,,So you might think there is\N nothing new to find here.
-Dialogue: 0,1:44:17.72,1:44:20.80,Default,,0,0,0,,And I thought so to for\N I picked up maintenance
-Dialogue: 0,1:44:20.80,1:44:25.04,Default,,0,0,0,,of GHC's pattern match checker as\N a side project about a year ago.
+Dialogue: 0,1:44:17.72,1:44:20.80,Default,,0,0,0,,And I thought so too before\N I picked up maintenance
+Dialogue: 0,1:44:20.80,1:44:25.04,Default,,0,0,0,,of GHC's pattern-match checker as\N a side project about a year ago.
 Dialogue: 0,1:44:26.56,1:44:29.20,Default,,0,0,0,,As of recently there are\N over 28 open tickets
-Dialogue: 0,1:44:29.20,1:44:30.68,Default,,0,0,0,,for the pattern match checker
+Dialogue: 0,1:44:29.20,1:44:30.68,Default,,0,0,0,,for the pattern-match checker,
 Dialogue: 0,1:44:30.68,1:44:33.76,Default,,0,0,0,,most of them related to\N performance and incorrect handling
 Dialogue: 0,1:44:33.76,1:44:37.24,Default,,0,0,0,,of some subtle interaction\N of source syntax features.
 Dialogue: 0,1:44:39.72,1:44:43.48,Default,,0,0,0,,So how exactly can something\N that looks so simple
-Dialogue: 0,1:44:43.48,1:44:44.88,Default,,0,0,0,,give us so many headaches.
-Dialogue: 0,1:44:46.88,1:44:49.32,Default,,0,0,0,,Let's start with a little\N warm up exercise.
+Dialogue: 0,1:44:43.48,1:44:44.88,Default,,0,0,0,,give us so many headaches?
+Dialogue: 0,1:44:46.88,1:44:49.32,Default,,0,0,0,,Let's start with a little\N warm-up exercise.
 Dialogue: 0,1:44:50.04,1:44:51.48,Default,,0,0,0,,Is this function exhaustive?
 Dialogue: 0,1:44:52.20,1:44:54.36,Default,,0,0,0,,Well that's a pretty\N suggestive question
 Dialogue: 0,1:44:54.36,1:44:56.20,Default,,0,0,0,,and since this isn't a live talk,
@@ -1946,205 +1946,211 @@ Dialogue: 0,1:44:56.92,1:44:58.00,Default,,0,0,0,,I won't be waiting for you.
 Dialogue: 0,1:44:58.48,1:45:01.16,Default,,0,0,0,,The answer is no and these are\N values that it failed to cover.
 Dialogue: 0,1:45:02.40,1:45:04.36,Default,,0,0,0,,There are only four pattern matches
 Dialogue: 0,1:45:04.36,1:45:07.88,Default,,0,0,0,,but 16 different combinations\N of arguments to consider.
-Dialogue: 0,1:45:08.88,1:45:12.52,Default,,0,0,0,,Clearly a scalable automated\N checker needs to know when
+Dialogue: 0,1:45:08.88,1:45:12.52,Default,,0,0,0,,Clearly a scalable, automated\N checker needs to know when
 Dialogue: 0,1:45:12.52,1:45:15.64,Default,,0,0,0,,and how to bail out of this\N exponential behavior.
-Dialogue: 0,1:45:17.64,1:45:21.08,Default,,0,0,0,,Now Haskell is\N lazy but not total.
-Dialogue: 0,1:45:21.08,1:45:23.40,Default,,0,0,0,,That also reflects in it's\N pattern matching semantics.
+Dialogue: 0,1:45:17.64,1:45:21.08,Default,,0,0,0,,Now, Haskell is\N lazy but not total.
+Dialogue: 0,1:45:21.08,1:45:23.40,Default,,0,0,0,,That also reflects in its\N pattern-matching semantics.
 Dialogue: 0,1:45:24.16,1:45:26.32,Default,,0,0,0,,Take this function\N here as an example.
-Dialogue: 0,1:45:27.60,1:45:30.80,Default,,0,0,0,,It might be tempting to think that\N the second equation is redundant
+Dialogue: 0,1:45:27.60,1:45:30.80,Default,,0,0,0,,It might be tempting to think that\N the second equation is redundant,
 Dialogue: 0,1:45:31.28,1:45:32.64,Default,,0,0,0,,but in fact it isn't.
-Dialogue: 0,1:45:34.12,1:45:37.16,Default,,0,0,0,,Deleting equation two would\N alter the semantics of function
-Dialogue: 0,1:45:37.16,1:45:41.36,Default,,0,0,0,,from crushing to return\N three in this call here.
-Dialogue: 0,1:45:41.36,1:45:42.48,Default,,0,0,0,,So not redundant.
-Dialogue: 0,1:45:44.00,1:45:46.40,Default,,0,0,0,,But on the other end we\N can never return two
+Dialogue: 0,1:45:34.12,1:45:37.16,Default,,0,0,0,,Deleting equation 2 would\N alter the semantics of the function
+Dialogue: 0,1:45:37.16,1:45:41.36,Default,,0,0,0,,from crashing to returning\N 3 in this call here.
+Dialogue: 0,1:45:41.36,1:45:42.48,Default,,0,0,0,,So, not redundant.
+Dialogue: 0,1:45:44.00,1:45:46.40,Default,,0,0,0,,But on the other hand, we\N can never return 2,
 Dialogue: 0,1:45:46.40,1:45:50.12,Default,,0,0,0,,which definitely smells like\N a bug worth reporting to the user.
-Dialogue: 0,1:45:51.36,1:45:54.96,Default,,0,0,0,,We say that the equation has\N an inaccessible right hand side.
-Dialogue: 0,1:45:55.72,1:45:57.88,Default,,0,0,0,,Of course when we call\N a clause redundant
-Dialogue: 0,1:45:57.88,1:46:01.12,Default,,0,0,0,,that always implies it's right\N hand side it's inaccessible.
+Dialogue: 0,1:45:51.36,1:45:54.96,Default,,0,0,0,,We say that the equation has\N an inaccessible right-hand side.
+Dialogue: 0,1:45:55.72,1:45:57.88,Default,,0,0,0,,Of course, when we call\N a clause redundant,
+Dialogue: 0,1:45:57.88,1:46:01.12,Default,,0,0,0,,that always implies its right-\N hand side is inaccessible.
 Dialogue: 0,1:46:03.36,1:46:05.48,Default,,0,0,0,,Lazy but not total also means
 Dialogue: 0,1:46:05.48,1:46:08.32,Default,,0,0,0,,that we have bottom\N inhabiting every data type.
-Dialogue: 0,1:46:08.84,1:46:10.56,Default,,0,0,0,,That includes the data type void
-Dialogue: 0,1:46:10.56,1:46:12.80,Default,,0,0,0,,which doesn't have any\N data constructors.
-Dialogue: 0,1:46:12.80,1:46:15.12,Default,,0,0,0,,So bottom is only inhabitant.
-Dialogue: 0,1:46:16.60,1:46:19.40,Default,,0,0,0,,These examples here introduce\N bindings of type void
+Dialogue: 0,1:46:08.84,1:46:10.56,Default,,0,0,0,,That includes the data type Void,
+Dialogue: 0,1:46:10.56,1:46:12.80,Default,,0,0,0,,which doesn't have any\N data constructors,
+Dialogue: 0,1:46:12.80,1:46:15.12,Default,,0,0,0,,so bottom is its only inhabitant.
+Dialogue: 0,1:46:16.60,1:46:19.40,Default,,0,0,0,,These examples here introduce\N bindings of type Void
 Dialogue: 0,1:46:19.92,1:46:23.04,Default,,0,0,0,,by resorting to divergence\N and runtime errors.
-Dialogue: 0,1:46:24.04,1:46:26.72,Default,,0,0,0,,F here matches on them in\N a lazy wild card match
-Dialogue: 0,1:46:26.72,1:46:29.76,Default,,0,0,0,,and it's just regular exhaustive\N function definition.
-Dialogue: 0,1:46:32.52,1:46:36.40,Default,,0,0,0,,Now that we have void, we can\N combine it with strict fields.
-Dialogue: 0,1:46:37.40,1:46:40.08,Default,,0,0,0,,Here is a strict maybe\N data type as you can tell
-Dialogue: 0,1:46:40.08,1:46:43.84,Default,,0,0,0,,by the strictness annotation\N of Sjust field here.
-Dialogue: 0,1:46:44.56,1:46:46.08,Default,,0,0,0,,Whenever SJust is constructed
+Dialogue: 0,1:46:24.04,1:46:26.72,Default,,0,0,0,,f here matches on them in\N a lazy wildcard match
+Dialogue: 0,1:46:26.72,1:46:29.76,Default,,0,0,0,,and it's just a regular, exhaustive\N function definition.
+Dialogue: 0,1:46:32.52,1:46:36.40,Default,,0,0,0,,Now that we have Void, we can\N combine it with strict fields.
+Dialogue: 0,1:46:37.40,1:46:40.08,Default,,0,0,0,,Here is a strict Maybe\N data type, as you can tell
+Dialogue: 0,1:46:40.08,1:46:43.84,Default,,0,0,0,,by the strictness annotation\N on SJust's field here.
+Dialogue: 0,1:46:44.56,1:46:46.08,Default,,0,0,0,,Whenever SJust is constructed,
 Dialogue: 0,1:46:46.08,1:46:48.44,Default,,0,0,0,,its field needs to\N be evaluated first.
-Dialogue: 0,1:46:49.92,1:46:51.08,Default,,0,0,0,,The function F here
-Dialogue: 0,1:46:51.08,1:46:52.96,Default,,0,0,0,,matches on SMaybe of Void.
-Dialogue: 0,1:46:53.72,1:46:57.52,Default,,0,0,0,,Question, is the second clause\N of F redundant or not.
+Dialogue: 0,1:46:49.92,1:46:51.08,Default,,0,0,0,,The function f here
+Dialogue: 0,1:46:51.08,1:46:52.96,Default,,0,0,0,,matches on SMaybe Void.
+Dialogue: 0,1:46:53.72,1:46:57.52,Default,,0,0,0,,Question: is the second clause\N of f redundant or not?
 Dialogue: 0,1:46:58.76,1:47:00.28,Default,,0,0,0,,We can answer this systematically
 Dialogue: 0,1:47:00.28,1:47:03.84,Default,,0,0,0,,by enumerating\N the inhabitants of SMaybe Void
-Dialogue: 0,1:47:03.84,1:47:06.76,Default,,0,0,0,,and see which equations\N of F match them.
+Dialogue: 0,1:47:03.84,1:47:06.76,Default,,0,0,0,,and see which equations\N of f match them.
 Dialogue: 0,1:47:08.24,1:47:11.44,Default,,0,0,0,,The only two inhabitants\N are bottom and SNothing.
-Dialogue: 0,1:47:12.96,1:47:14.72,Default,,0,0,0,,SJust of bottom is\N just an inhabitant
+Dialogue: 0,1:47:12.96,1:47:14.72,Default,,0,0,0,,SJust of bottom is\N not an inhabitant
 Dialogue: 0,1:47:14.72,1:47:16.44,Default,,0,0,0,,because of the strict field.
-Dialogue: 0,1:47:17.20,1:47:19.72,Default,,0,0,0,,The first equation of\N F diverges on bottom
-Dialogue: 0,1:47:20.48,1:47:22.16,Default,,0,0,0,,and matches on nothing.
-Dialogue: 0,1:47:24.16,1:47:25.20,Default,,0,0,0,,So yes redundant.
+Dialogue: 0,1:47:17.20,1:47:19.72,Default,,0,0,0,,The first equation of\N f diverges on bottom
+Dialogue: 0,1:47:20.48,1:47:22.16,Default,,0,0,0,,and matches on Nothing.
+Dialogue: 0,1:47:24.16,1:47:25.20,Default,,0,0,0,,So yes: redundant.
 Dialogue: 0,1:47:25.20,1:47:28.04,Default,,0,0,0,,There is no value possibly\N reaching the second equation.
 Dialogue: 0,1:47:31.80,1:47:35.36,Default,,0,0,0,,Guards are another very basic\N pattern language feature of Haskell
-Dialogue: 0,1:47:36.88,1:47:38.68,Default,,0,0,0,,Does sign have any\N redundant clauses,
-Dialogue: 0,1:47:39.68,1:47:42.12,Default,,0,0,0,,in general it's hard to tell\N without knowing the definition
-Dialogue: 0,1:47:42.12,1:47:44.80,Default,,0,0,0,,of less than EQ and so on.
-Dialogue: 0,1:47:45.32,1:47:48.60,Default,,0,0,0,,Also would quickly become undecidable\N if we just reasoned about
+Dialogue: 0,1:47:36.88,1:47:38.68,Default,,0,0,0,,Does sign have any\N redundant clauses?
+Dialogue: 0,1:47:39.68,1:47:42.12,Default,,0,0,0,,In general, it's hard to tell\N without knowing the definition
+Dialogue: 0,1:47:42.12,1:47:44.80,Default,,0,0,0,,of (<), (==), and so on.
+Dialogue: 0,1:47:45.32,1:47:48.60,Default,,0,0,0,,Also we quickly become undecidable\N if we just reasoned about
 Dialogue: 0,1:47:48.60,1:47:50.28,Default,,0,0,0,,every function we know\N the definition of.
-Dialogue: 0,1:47:52.52,1:47:56.32,Default,,0,0,0,,So apparently guards are quite\N rich semantically speaking.
-Dialogue: 0,1:47:57.32,1:48:00.28,Default,,0,0,0,,Here you can see how it's even\N possible to pattern matching
+Dialogue: 0,1:47:52.52,1:47:56.32,Default,,0,0,0,,So apparently, guards are quite\N rich, semantically speaking.
+Dialogue: 0,1:47:57.32,1:48:00.28,Default,,0,0,0,,Here you can see how it's even\N possible to do pattern matching
 Dialogue: 0,1:48:00.28,1:48:01.40,Default,,0,0,0,,with pattern guards.
-Dialogue: 0,1:48:01.88,1:48:06.60,Default,,0,0,0,,And get here, even mixes both\N structural pattern matching
+Dialogue: 0,1:48:01.88,1:48:06.60,Default,,0,0,0,,And get here even mixes both\N structural pattern matching
 Dialogue: 0,1:48:07.60,1:48:08.76,Default,,0,0,0,,and pattern guards.
 Dialogue: 0,1:48:09.76,1:48:13.32,Default,,0,0,0,,This definition is exhaustive\N and the compiler should not flag it
-Dialogue: 0,1:48:13.32,1:48:14.36,Default,,0,0,0,,as non exhaustive.
+Dialogue: 0,1:48:13.32,1:48:14.36,Default,,0,0,0,,as non-exhaustive.
 Dialogue: 0,1:48:16.36,1:48:18.32,Default,,0,0,0,,I hope it has become clearer that
 Dialogue: 0,1:48:18.32,1:48:20.84,Default,,0,0,0,,there are a lot of\N surface language features
-Dialogue: 0,1:48:20.84,1:48:24.16,Default,,0,0,0,,that the pattern match checker\N has to cope with efficiently.
+Dialogue: 0,1:48:20.84,1:48:24.16,Default,,0,0,0,,that the pattern-match checker\N has to cope with efficiently.
 Dialogue: 0,1:48:24.88,1:48:27.84,Default,,0,0,0,,Also many of these features\N interact with each other.
-Dialogue: 0,1:48:28.60,1:48:31.08,Default,,0,0,0,,I won't have time to talk\N about the ones in parenthesis
-Dialogue: 0,1:48:31.08,1:48:32.92,Default,,0,0,0,,like long distance information.
-Dialogue: 0,1:48:33.44,1:48:36.12,Default,,0,0,0,,So please do ask\N questions afterwards
+Dialogue: 0,1:48:28.60,1:48:31.08,Default,,0,0,0,,I won't have time to talk\N about the ones in parentheses
+Dialogue: 0,1:48:31.08,1:48:32.92,Default,,0,0,0,,like long distance information,
+Dialogue: 0,1:48:33.44,1:48:36.12,Default,,0,0,0,,so please do ask\N questions afterwards
 Dialogue: 0,1:48:36.12,1:48:38.12,Default,,0,0,0,,and read the paper\N if you are interested.
 Dialogue: 0,1:48:40.84,1:48:46.52,Default,,0,0,0,,The status quo in GHC was\N based on a 2015 ICFP paper
-Dialogue: 0,1:48:46.52,1:48:50.12,Default,,0,0,0,,that handles most of the language\N features in the previous list
-Dialogue: 0,1:48:50.12,1:48:53.60,Default,,0,0,0,,including GADTs and type level\N information in particular.
-Dialogue: 0,1:48:54.60,1:48:58.12,Default,,0,0,0,,But having been battle tested\N over the last couple of years
+Dialogue: 0,1:48:46.52,1:48:50.12,Default,,0,0,0,,that handles most of the language\N features in the previous list,
+Dialogue: 0,1:48:50.12,1:48:53.60,Default,,0,0,0,,including GADTs and type-level\N information in particular.
+Dialogue: 0,1:48:54.60,1:48:58.12,Default,,0,0,0,,But having been battle-tested\N over the last couple of years,
 Dialogue: 0,1:48:59.12,1:49:02.60,Default,,0,0,0,,the implementation revealed shortcomings\N in being too buggy and slow.
-Dialogue: 0,1:49:03.12,1:49:09.92,Default,,0,0,0,,Also it was pretty complicated. In\N trying to improve on what we had,
+Dialogue: 0,1:49:03.12,1:49:09.92,Default,,0,0,0,,Also, it was pretty complicated. In\N trying to improve on what we had,
 Dialogue: 0,1:49:09.92,1:49:11.24,Default,,0,0,0,,we iterated a couple of times
-Dialogue: 0,1:49:11.24,1:49:14.44,Default,,0,0,0,,and came out with the new approach\N we called lower your guards.
+Dialogue: 0,1:49:11.24,1:49:14.44,Default,,0,0,0,,and came out with the new approach\N we called Lower Your Guards.
 Dialogue: 0,1:49:16.92,1:49:18.36,Default,,0,0,0,,As the name suggests,
-Dialogue: 0,1:49:18.36,1:49:22.12,Default,,0,0,0,,we abandoned all structural\N pattern matching like if f here
+Dialogue: 0,1:49:18.36,1:49:22.12,Default,,0,0,0,,we abandoned all structural\N pattern matching like in f here
 Dialogue: 0,1:49:22.12,1:49:25.56,Default,,0,0,0,,and desugar function\N definitions into guard trees.
 Dialogue: 0,1:49:27.08,1:49:29.40,Default,,0,0,0,,Then we do coverage checking\N on these guard trees
 Dialogue: 0,1:49:29.40,1:49:34.08,Default,,0,0,0,,which is split in two\N simple functions A and U.
 Dialogue: 0,1:49:35.56,1:49:39.32,Default,,0,0,0,,A returns an annotated tree\N decorated with refinement types
-Dialogue: 0,1:49:39.32,1:49:42.32,Default,,0,0,0,,that capture redundancies\N and inaccessibility information.
-Dialogue: 0,1:49:43.32,1:49:45.24,Default,,0,0,0,,If you want to know about these part
+Dialogue: 0,1:49:39.32,1:49:42.32,Default,,0,0,0,,that capture redundancy\N and inaccessibility information.
+Dialogue: 0,1:49:43.32,1:49:45.24,Default,,0,0,0,,If you want to know more about this part,
 Dialogue: 0,1:49:45.24,1:49:46.88,Default,,0,0,0,,I encourage you to read the paper.
 Dialogue: 0,1:49:48.40,1:49:52.24,Default,,0,0,0,,U computes the set of values that\N weren't covered by any clause
-Dialogue: 0,1:49:52.24,1:49:53.64,Default,,0,0,0,,as a refinement type theta.
-Dialogue: 0,1:49:54.40,1:49:58.48,Default,,0,0,0,,And then all we have to do is\N report the inhabitants of theta
+Dialogue: 0,1:49:52.24,1:49:53.64,Default,,0,0,0,,as a refinement type Θ,
+Dialogue: 0,1:49:54.40,1:49:58.48,Default,,0,0,0,,and then all we have to do is\N report the inhabitants of Θ
 Dialogue: 0,1:49:58.48,1:50:01.20,Default,,0,0,0,,as uncovered patterns\N of the definition.
-Dialogue: 0,1:50:04.92,1:50:07.12,Default,,0,0,0,,Let's Desugar this\N fancy example function.
+Dialogue: 0,1:50:04.92,1:50:07.12,Default,,0,0,0,,Let's desugar this\N fancy example function.
 Dialogue: 0,1:50:07.84,1:50:09.84,Default,,0,0,0,,Green indicates source syntax.
 Dialogue: 0,1:50:09.84,1:50:13.04,Default,,0,0,0,,You can see that fancy makes\N use of constructor patterns
-Dialogue: 0,1:50:13.04,1:50:14.68,Default,,0,0,0,,and even to language extensions
-Dialogue: 0,1:50:15.40,1:50:17.68,Default,,0,0,0,,a bang pattern that\N forces the match thing
-Dialogue: 0,1:50:18.44,1:50:21.96,Default,,0,0,0,,and a view pattern that\N applies the match thing to g
-Dialogue: 0,1:50:23.44,1:50:25.64,Default,,0,0,0,,and matches\N the results against True.
-Dialogue: 0,1:50:29.12,1:50:32.04,Default,,0,0,0,,In yellow you see fancy\N desugaring to guard trees.
-Dialogue: 0,1:50:33.28,1:50:35.24,Default,,0,0,0,,Here is the syntax\N definition for reference.
+Dialogue: 0,1:50:13.04,1:50:14.68,Default,,0,0,0,,and even two language extensions:
+Dialogue: 0,1:50:15.40,1:50:17.68,Default,,0,0,0,,a bang pattern that\N forces the matched thing,
+Dialogue: 0,1:50:18.44,1:50:21.96,Default,,0,0,0,,and a view pattern that\N applies g to the matched thing
+Dialogue: 0,1:50:23.44,1:50:25.64,Default,,0,0,0,,and matches\N the result against True.
+Dialogue: 0,1:50:29.12,1:50:32.04,Default,,0,0,0,,In yellow you see fancy's\N desugaring to guard trees.
+Dialogue: 0,1:50:33.28,1:50:35.24,Default,,0,0,0,,Here is their syntax\N definition for reference.
 Dialogue: 0,1:50:36.00,1:50:37.80,Default,,0,0,0,,Let's focus on tree syntax first.
 Dialogue: 0,1:50:38.80,1:50:40.60,Default,,0,0,0,,There is one branch\N in the guard tree
-Dialogue: 0,1:50:40.60,1:50:42.76,Default,,0,0,0,,for each clause in\N the function definition
-Dialogue: 0,1:50:43.24,1:50:44.44,Default,,0,0,0,,modeling fall through semantics.
-Dialogue: 0,1:50:45.16,1:50:47.32,Default,,0,0,0,,There is also a bunch of\N guards on each branch
+Dialogue: 0,1:50:40.60,1:50:42.76,Default,,0,0,0,,for each clause in\N the function definition,
+Dialogue: 0,1:50:43.24,1:50:44.44,Default,,0,0,0,,modeling fall-through semantics.
+Dialogue: 0,1:50:45.16,1:50:47.32,Default,,0,0,0,,There are also a bunch of\N guards on each branch,
 Dialogue: 0,1:50:47.32,1:50:51.08,Default,,0,0,0,,and each branch ends in\N an ordinal that identifies
 Dialogue: 0,1:50:51.08,1:50:54.08,Default,,0,0,0,,a particular clause in\N the original program.
 Dialogue: 0,1:50:56.56,1:51:00.04,Default,,0,0,0,,Looking at guards, we can see\N that nested pattern matching
-Dialogue: 0,1:51:00.04,1:51:03.84,Default,,0,0,0,,was completely decomposed into\N multiple flat pattern guards
-Dialogue: 0,1:51:03.84,1:51:05.32,Default,,0,0,0,,like unjust here.
-Dialogue: 0,1:51:08.32,1:51:10.12,Default,,0,0,0,,Pattern guards are considered lazy
-Dialogue: 0,1:51:10.12,1:51:15.16,Default,,0,0,0,,and evaluation is forced by\N bang guards such as x1 here
+Dialogue: 0,1:51:00.04,1:51:03.84,Default,,0,0,0,,was completely decomposed into\N multiple flat pattern guards,
+Dialogue: 0,1:51:03.84,1:51:05.32,Default,,0,0,0,,like on Just here.
+Dialogue: 0,1:51:08.32,1:51:10.12,Default,,0,0,0,,Pattern guards are considered lazy,
+Dialogue: 0,1:51:10.12,1:51:15.16,Default,,0,0,0,,and evaluation is forced by\N bang guards such as on x1 here,
 Dialogue: 0,1:51:15.16,1:51:17.00,Default,,0,0,0,,which stands for the first argument.
 Dialogue: 0,1:51:19.76,1:51:21.76,Default,,0,0,0,,Pattern guards can only\N match on variables
 Dialogue: 0,1:51:21.76,1:51:23.48,Default,,0,0,0,,and only one level deep at a time.
 Dialogue: 0,1:51:24.76,1:51:27.20,Default,,0,0,0,,We give names to more\N complex expressions
-Dialogue: 0,1:51:27.20,1:51:29.92,Default,,0,0,0,,like this function application\N with a let binding
-Dialogue: 0,1:51:30.68,1:51:35.08,Default,,0,0,0,,which also allows us Desugar\N the view pattern here for example.
+Dialogue: 0,1:51:27.20,1:51:29.92,Default,,0,0,0,,like this function application\N with a let binding,
+Dialogue: 0,1:51:30.68,1:51:35.08,Default,,0,0,0,,which also allows us to desugar\N the view pattern here, for example.
 Dialogue: 0,1:51:36.32,1:51:40.28,Default,,0,0,0,,Desugaring also introduces\N a few administrative lets
-Dialogue: 0,1:51:41.04,1:51:42.48,Default,,0,0,0,,that fix up naming differences
-Dialogue: 0,1:51:42.48,1:51:45.88,Default,,0,0,0,,like the one binding Xs to\N the temporary t2 here.
-Dialogue: 0,1:51:49.88,1:51:53.28,Default,,0,0,0,,We found similar Desugaring for\N all the pattern match syntax
+Dialogue: 0,1:51:41.04,1:51:42.48,Default,,0,0,0,,that fix up naming differences,
+Dialogue: 0,1:51:42.48,1:51:45.88,Default,,0,0,0,,like the one binding xs to\N the temporary t2 here.
+Dialogue: 0,1:51:49.88,1:51:53.28,Default,,0,0,0,,We found similar desugarings for\N all the pattern-match syntax
 Dialogue: 0,1:51:53.28,1:51:54.28,Default,,0,0,0,,of modern Haskell.
 Dialogue: 0,1:51:55.00,1:51:58.04,Default,,0,0,0,,Also note that desugaring is\N for coverage checking only.
 Dialogue: 0,1:51:58.04,1:51:59.44,Default,,0,0,0,,There is no code\N generation involved.
-Dialogue: 0,1:52:03.20,1:52:08.08,Default,,0,0,0,,Alright, next up characterizing\N the set of uncovered values
+Dialogue: 0,1:52:03.20,1:52:08.08,Default,,0,0,0,,Alright, next up: characterizing\N the set of uncovered values
 Dialogue: 0,1:52:08.08,1:52:10.44,Default,,0,0,0,,that we can report\N uncovered patterns for.
 Dialogue: 0,1:52:11.68,1:52:16.16,Default,,0,0,0,,We compute the set by gradually\N refining the set of possible values
-Dialogue: 0,1:52:17.16,1:52:21.04,Default,,0,0,0,,as a fraction of them fall through\N from one clause to the next.
+Dialogue: 0,1:52:17.16,1:52:21.04,Default,,0,0,0,,as a fraction of them falls through\N from one clause to the next.
+
 Dialogue: 0,1:52:23.04,1:52:27.36,Default,,0,0,0,,How do we represent such a set with\N possibly infinitely many values?
-Dialogue: 0,1:52:28.84,1:52:30.52,Default,,0,0,0,,We pick refinement\N types for the job.
-Dialogue: 0,1:52:31.52,1:52:34.04,Default,,0,0,0,,Here are a few example\N refinement types in blue
+Dialogue: 0,1:52:28.84,1:52:30.52,Default,,0,0,0,,We picked refinement\N types for the job.
+
+Dialogue: 0,1:52:31.52,1:52:34.04,Default,,0,0,0,,Here are a few example\N refinement types in blue,
 Dialogue: 0,1:52:34.04,1:52:37.04,Default,,0,0,0,,as well as the sets\N they denote in orange.
-Dialogue: 0,1:52:38.04,1:52:42.36,Default,,0,0,0,,Cross is the unsatisfiable\N refinement predicate.
-Dialogue: 0,1:52:42.36,1:52:44.12,Default,,0,0,0,,So there are no inhabitants.
-Dialogue: 0,1:52:45.40,1:52:49.16,Default,,0,0,0,,Check mark is the trivial\N satisfiable refinement predicate
-Dialogue: 0,1:52:49.16,1:52:51.68,Default,,0,0,0,,which means we have all\N the inhabitants of bool.
+Dialogue: 0,1:52:38.04,1:52:42.36,Default,,0,0,0,,Cross is the unsatisfiable\N refinement predicate,
+Dialogue: 0,1:52:42.36,1:52:44.12,Default,,0,0,0,,so there are no inhabitants.
+Dialogue: 0,1:52:45.40,1:52:49.16,Default,,0,0,0,,Check mark is the trivially\N satisfiable refinement predicate
+Dialogue: 0,1:52:49.16,1:52:51.68,Default,,0,0,0,,which means we have all\N the inhabitants of Bool.
 Dialogue: 0,1:52:53.44,1:52:56.40,Default,,0,0,0,,This is the type of\N unlifted Booleans
-Dialogue: 0,1:52:56.40,1:52:58.72,Default,,0,0,0,,and this one also rules out false.
+Dialogue: 0,1:52:56.40,1:52:58.72,Default,,0,0,0,,and this one also rules out False.
 Dialogue: 0,1:53:00.44,1:53:04.28,Default,,0,0,0,,This last one here shows what's\N unusual about our refinement types.
 Dialogue: 0,1:53:04.28,1:53:06.84,Default,,0,0,0,,It has a pattern guard on mx
-Dialogue: 0,1:53:07.84,1:53:10.96,Default,,0,0,0,,that brings Just field X into scope
+Dialogue: 0,1:53:07.84,1:53:10.96,Default,,0,0,0,,that brings Just's field x into scope,
 Dialogue: 0,1:53:11.96,1:53:15.24,Default,,0,0,0,,which then scopes over the conjunct\N to the right of the pattern guard.
-Dialogue: 0,1:53:19.24,1:53:21.84,Default,,0,0,0,,For some reasonably simple\N end to end example,
+Dialogue: 0,1:53:19.24,1:53:21.84,Default,,0,0,0,,For some reasonably simple\N end-to-end example,
 Dialogue: 0,1:53:21.84,1:53:23.40,Default,,0,0,0,,consider this source program.
-Dialogue: 0,1:53:24.16,1:53:25.88,Default,,0,0,0,,It will desugar to this guard tree
+Dialogue: 0,1:53:24.16,1:53:25.88,Default,,0,0,0,,It will desugar to this guard tree,
 Dialogue: 0,1:53:25.88,1:53:29.12,Default,,0,0,0,,which in turn we can compute\N the uncovered set for.
 Dialogue: 0,1:53:31.12,1:53:33.12,Default,,0,0,0,,Note that the resulting\N refinement type
-Dialogue: 0,1:53:33.12,1:53:35.12,Default,,0,0,0,,as a disjunction in it's predicate
+Dialogue: 0,1:53:33.12,1:53:35.12,Default,,0,0,0,,has a disjunction in its predicate
 Dialogue: 0,1:53:35.88,1:53:38.56,Default,,0,0,0,,because we can fall through\N from this clause here
 Dialogue: 0,1:53:38.56,1:53:39.60,Default,,0,0,0,,in two different ways.
-Dialogue: 0,1:53:40.12,1:53:42.04,Default,,0,0,0,,First the match on Just\N could have failed
+Dialogue: 0,1:53:40.12,1:53:42.04,Default,,0,0,0,,First, the match on Just\N could have failed,
 Dialogue: 0,1:53:42.04,1:53:44.36,Default,,0,0,0,,and even if the match\N on Just succeeded,
-Dialogue: 0,1:53:45.08,1:53:46.80,Default,,0,0,0,,the match on true could have failed.
-Dialogue: 0,1:53:47.28,1:53:50.04,Default,,0,0,0,,Question, how do we\N do this in general?
+Dialogue: 0,1:53:45.08,1:53:46.80,Default,,0,0,0,,the match on True could have failed.
+Dialogue: 0,1:53:47.28,1:53:50.04,Default,,0,0,0,,Question now: how do we\N do this in general?
 Dialogue: 0,1:53:52.56,1:53:53.76,Default,,0,0,0,,With a function like this,
-Dialogue: 0,1:53:55.04,1:53:57.28,Default,,0,0,0,,you compute the subset of theta
+Dialogue: 0,1:53:55.04,1:53:57.28,Default,,0,0,0,,U computes the subset of Θ
 Dialogue: 0,1:53:57.28,1:54:00.32,Default,,0,0,0,,whose values do not\N match the guard tree t.
-Dialogue: 0,1:54:02.32,1:54:05.60,Default,,0,0,0,,When we reach the right hand side,\N every incoming value is covered.
+Dialogue: 0,1:54:02.32,1:54:05.60,Default,,0,0,0,,When we reach the right-hand side,\N every incoming value is covered.
 Dialogue: 0,1:54:05.60,1:54:07.96,Default,,0,0,0,,So we return\N the empty refinement type.
-Dialogue: 0,1:54:08.96,1:54:11.16,Default,,0,0,0,,Branches model fall\N through semantics.
+Dialogue: 0,1:54:08.96,1:54:11.16,Default,,0,0,0,,Branches model fall-\N through semantics.
 Dialogue: 0,1:54:11.16,1:54:13.48,Default,,0,0,0,,Only values that fall\N through the first branch
-Dialogue: 0,1:54:14.48,1:54:16.40,Default,,0,0,0,,and fall through the second branch.
+Dialogue: 0,1:54:14.48,1:54:16.40,Default,,0,0,0,,can fall through the second branch.
+
 Dialogue: 0,1:54:17.92,1:54:21.40,Default,,0,0,0,,A bang guard on x adds\N the constraint that x can't be bottom
-Dialogue: 0,1:54:21.40,1:54:23.32,Default,,0,0,0,,to the incoming values\N of the subtree
+Dialogue: 0,1:54:21.40,1:54:23.32,Default,,0,0,0,,to the incoming values\N of the subtree;
 Dialogue: 0,1:54:24.32,1:54:25.56,Default,,0,0,0,,likewise for let bindings.
-Dialogue: 0,1:54:27.32,1:54:30.68,Default,,0,0,0,,The pattern guard matching\N against constructor k
-Dialogue: 0,1:54:30.68,1:54:33.32,Default,,0,0,0,,will fall through when x is not k.
-Dialogue: 0,1:54:35.56,1:54:39.44,Default,,0,0,0,,Also everything not covered\N by the subtree is uncovered
+Dialogue: 0,1:54:27.32,1:54:30.68,Default,,0,0,0,,A pattern guard matching\N against constructor K
+Dialogue: 0,1:54:30.68,1:54:33.32,Default,,0,0,0,,will fall through when x is not K.
+Dialogue: 0,1:54:35.56,1:54:39.44,Default,,0,0,0,,Also everything not covered\N by the subtree is uncovered,
 Dialogue: 0,1:54:39.44,1:54:43.08,Default,,0,0,0,,so we adjoin the two refinement types.
-Dialogue: 0,1:54:44.08,1:54:45.84,Default,,0,0,0,,And that is all there is\N to coverage checking.
-Dialogue: 0,1:54:47.32,1:54:51.80,Default,,0,0,0,,The next step is to generate\N inhabitants of the refinement types
+Dialogue: 0,1:54:44.08,1:54:45.84,Default,,0,0,0,,And that's all there is\N to coverage checking.
+
+Dialogue: 0,1:54:47.32,1:54:51.80,Default,,0,0,0,,The next step is to generate\N inhabitants of the refinement type
 Dialogue: 0,1:54:51.80,1:54:53.16,Default,,0,0,0,,falling out at the bottom.
 Dialogue: 0,1:54:53.64,1:54:57.16,Default,,0,0,0,,These are the uncovered clauses\N which we want to report to the user.
 Dialogue: 0,1:54:57.16,1:55:00.00,Default,,0,0,0,,If it's empty, then\N the pattern match was exhaustive.
-Dialogue: 0,1:55:01.24,1:55:03.40,Default,,0,0,0,,For our particular running example
-Dialogue: 0,1:55:03.40,1:55:06.00,Default,,0,0,0,,the inhabitants are easy\N to find, just true and
-Dialogue: 0,1:55:07.32,1:55:09.32,Default,,0,0,0,,just false which are\N already in a suitable form
+Dialogue: 0,1:55:01.24,1:55:03.40,Default,,0,0,0,,For our particular running example,
+Dialogue: 0,1:55:03.40,1:55:06.00,Default,,0,0,0,,the inhabitants are easy\N to find: Just True and
+Dialogue: 0,1:55:07.32,1:55:09.32,Default,,0,0,0,,Just False, which are\N already in a suitable form
 Dialogue: 0,1:55:09.32,1:55:12.00,Default,,0,0,0,,to be presented to the user.
 Dialogue: 0,1:55:12.52,1:55:14.12,Default,,0,0,0,,Algorithmically, we could use
 Dialogue: 0,1:55:14.12,1:55:16.68,Default,,0,0,0,,Liquid Haskell's embedding\N of refinement types,
-Dialogue: 0,1:55:16.68,1:55:19.68,Default,,0,0,0,,or an SMT solver directly\N to generate inhabitants.
+Dialogue: 0,1:55:16.68,1:55:19.68,Default,,0,0,0,,or an SMT solver directly,\N to generate inhabitants.
 Dialogue: 0,1:55:19.68,1:55:22.52,Default,,0,0,0,,But we didn't do that, because
-Dialogue: 0,1:55:22.52,1:55:27.20,Default,,0,0,0,,reflecting GHC's type\N constraint solver into SMT logic,
-Dialogue: 0,1:55:27.20,1:55:29.08,Default,,0,0,0,,it's quite an undertaking.
-Dialogue: 0,1:55:29.08,1:55:33.52,Default,,0,0,0,,And we think that FFI calls\N and serialization affects
-Dialogue: 0,1:55:33.52,1:55:35.84,Default,,0,0,0,,induce too much overhead.
-Dialogue: 0,1:55:35.84,1:55:37.44,Default,,0,0,0,,So, we bit the bullet,
-Dialogue: 0,1:55:37.44,1:55:40.76,Default,,0,0,0,,and just wrote our own ad\N hoc generator function.
+Dialogue: 0,1:55:22.52,1:55:27.20,Default,,0,0,0,,reflecting GHC's type-\N constraint solver into SMT logic
+Dialogue: 0,1:55:27.20,1:55:29.08,Default,,0,0,0,,is quite an undertaking.
+Dialogue: 0,1:55:29.08,1:55:33.52,Default,,0,0,0,,And we think that FFI calls\N and serialization of facts
+
+Dialogue: 0,1:55:33.52,1:55:35.84,Default,,0,0,0,,incur too much overhead.
+Dialogue: 0,1:55:35.84,1:55:37.44,Default,,0,0,0,,So, we bit the bullet
+Dialogue: 0,1:55:37.44,1:55:40.76,Default,,0,0,0,,and just wrote our own \N ad-hoc generator function.
+
 Dialogue: 0,1:55:40.76,1:55:42.88,Default,,0,0,0,,You can read more about\N its implementation
 Dialogue: 0,1:55:42.88,1:55:46.16,Default,,0,0,0,,and its completeness\N properties in the paper.
 Dialogue: 0,1:55:46.68,1:55:50.12,Default,,0,0,0,,Now, for an uncovered\N set coming from
-Dialogue: 0,1:55:50.12,1:55:53.04,Default,,0,0,0,,an obviously exhaustive\N definition, like H here,
-Dialogue: 0,1:55:53.04,1:55:55.44,Default,,0,0,0,,we find that we can\N produce any inhabitants.
+Dialogue: 0,1:55:50.12,1:55:53.04,Default,,0,0,0,,an obviously exhaustive\N definition like h here,
+Dialogue: 0,1:55:53.04,1:55:55.44,Default,,0,0,0,,we find that we can't\N produce any inhabitants.
 Dialogue: 0,1:55:55.44,1:55:59.44,Default,,0,0,0,,So, no values to represent,\N hence no warnings to emit.
-Dialogue: 0,1:55:59.44,1:56:01.56,Default,,0,0,0,,H is found to be exhaustive.
+Dialogue: 0,1:55:59.44,1:56:01.56,Default,,0,0,0,,h is found to be exhaustive.
 Dialogue: 0,1:56:03.80,1:56:07.56,Default,,0,0,0,,In conclusion, we came up\N with what we find to be
 Dialogue: 0,1:56:07.56,1:56:11.24,Default,,0,0,0,,quite a nice solution to\N pattern-match coverage checking.
 Dialogue: 0,1:56:11.24,1:56:12.60,Default,,0,0,0,,It took us many\N iterations to get there,
-Dialogue: 0,1:56:12.60,1:56:14.40,Default,,0,0,0,,but, in the end, it paid off.
+Dialogue: 0,1:56:12.60,1:56:14.40,Default,,0,0,0,,but in the end, it paid off.
 Dialogue: 0,1:56:14.40,1:56:17.28,Default,,0,0,0,,The end result is, at the same\N time, simpler to think about;
 Dialogue: 0,1:56:17.28,1:56:20.92,Default,,0,0,0,,simpler to implement;\N and executes much faster.
 Dialogue: 0,1:56:22.32,1:56:24.40,Default,,0,0,0,,The fact that we invented\N it for a lazy language
 Dialogue: 0,1:56:24.40,1:56:26.52,Default,,0,0,0,,shouldn't stop you from\N lowering your guards
 Dialogue: 0,1:56:26.52,1:56:29.48,Default,,0,0,0,,in strict or even mostly\N imperative languages.
-Dialogue: 0,1:56:29.48,1:56:31.48,Default,,0,0,0,,Just write your own\N de-sugaring function.
+Dialogue: 0,1:56:29.48,1:56:31.48,Default,,0,0,0,,Just write your own\N desugaring function.
 Dialogue: 0,1:56:31.48,1:56:33.68,Default,,0,0,0,,And if you're in the process\N of writing a coverage checker
 Dialogue: 0,1:56:33.68,1:56:36.12,Default,,0,0,0,,and don't want to make\N the same mistakes,
 Dialogue: 0,1:56:36.12,1:56:38.32,Default,,0,0,0,,I can only encourage\N you to read the paper.
