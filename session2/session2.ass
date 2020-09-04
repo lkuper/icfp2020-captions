@@ -669,110 +669,110 @@ Dialogue: 0,0:43:57.36,0:44:01.20,Default,,0,0,0,,we write a grade database of g
 Dialogue: 0,0:44:01.48,0:44:05.00,Default,,0,0,0,,we write some grade into\Nthe database so that's great,
 Dialogue: 0,0:44:05.20,0:44:07.04,Default,,0,0,0,,we close the database, then we try
 Dialogue: 0,0:44:07.12,0:44:11.16,Default,,0,0,0,,to read the literature\Ngrade, and print it.
-Dialogue: 0,0:44:11.68,0:44:16.80,Default,,0,0,0,,So the OCaml type checker\Nwill happily type check
+Dialogue: 0,0:44:11.68,0:44:16.80,Default,,0,0,0,,The OCaml type checker\Nwill happily type check
 Dialogue: 0,0:44:16.80,0:44:18.72,Default,,0,0,0,,and compile this program,
 Dialogue: 0,0:44:18.96,0:44:22.32,Default,,0,0,0,,and later on we'll have\Nruntime error. So,
 Dialogue: 0,0:44:24.84,0:44:29.36,Default,,0,0,0,,there are various ways to, deal with\Nthis kind of errors,
 Dialogue: 0,0:44:29.56,0:44:32.12,Default,,0,0,0,,and today I'm going to present Affe,
-Dialogue: 0,0:44:32.20,0:44:34.20,Default,,0,0,0,,which is an ML like language
-Dialogue: 0,0:44:34.52,0:44:37.52,Default,,0,0,0,,that prevent precisely\Nthis kind of error.
-Dialogue: 0,0:44:38.00,0:44:40.52,Default,,0,0,0,,So here is the same program\Nwritten in Affe.
+Dialogue: 0,0:44:32.20,0:44:34.20,Default,,0,0,0,,which is an ML-like language
+Dialogue: 0,0:44:34.52,0:44:37.52,Default,,0,0,0,,that prevents precisely\Nthis kind of error.
+Dialogue: 0,0:44:38.00,0:44:40.52,Default,,0,0,0,,Here is the same program\Nwritten in Affe.
 Dialogue: 0,0:44:41.56,0:44:44.04,Default,,0,0,0,,It looks very much like the ML program
 Dialogue: 0,0:44:44.04,0:44:45.76,Default,,0,0,0,,the program from before,
 Dialogue: 0,0:44:46.04,0:44:48.16,Default,,0,0,0,,except this time when we\Nreach the last line
-Dialogue: 0,0:44:48.24,0:44:53.04,Default,,0,0,0,,and the type checker will refuse\Nat compile time, this program.
-Dialogue: 0,0:44:53.48,0:44:56.60,Default,,0,0,0,,So we have a few\Nspecificity in Affe.
+Dialogue: 0,0:44:48.24,0:44:53.04,Default,,0,0,0,,the type checker will refuse\Nthis program at compile time.
+Dialogue: 0,0:44:53.48,0:44:56.60,Default,,0,0,0,,We have a few\Nspecialties in Affe.
 Dialogue: 0,0:44:56.72,0:45:02.68,Default,,0,0,0,,The first one is that we use\Nkinds, to determine usage.
-Dialogue: 0,0:45:02.76,0:45:07.00,Default,,0,0,0,,So, here is a grade database\Nis of type database,
-Dialogue: 0,0:45:07.28,0:45:09.96,Default,,0,0,0,,and the database is kind of linear.
-Dialogue: 0,0:45:10.04,0:45:13.36,Default,,0,0,0,,And so this resource\Nmust be use linearly,
+Dialogue: 0,0:45:02.76,0:45:07.00,Default,,0,0,0,,Here is a grade database\Nof type database,
+Dialogue: 0,0:45:07.28,0:45:09.96,Default,,0,0,0,,the database is kind of linear.
+Dialogue: 0,0:45:10.04,0:45:13.36,Default,,0,0,0,,So this resource\Nmust be used linearly,
 Dialogue: 0,0:45:13.52,0:45:15.96,Default,,0,0,0,,and when it's closed, you\Ndon't use it anymore.
 Dialogue: 0,0:45:17.24,0:45:20.72,Default,,0,0,0,,On the contrary, here we\Nhave the math string
-Dialogue: 0,0:45:20.84,0:45:22.56,Default,,0,0,0,,and string are unrestricted.
+Dialogue: 0,0:45:20.84,0:45:22.56,Default,,0,0,0,,and strings are unrestricted.
 Dialogue: 0,0:45:22.72,0:45:26.40,Default,,0,0,0,,And so you can you can use them\Nin unrestricted fashions.
-Dialogue: 0,0:45:29.44,0:45:34.28,Default,,0,0,0,,Furthermore, we have borrows,\Nso as present in rust
-Dialogue: 0,0:45:34.44,0:45:36.28,Default,,0,0,0,,and other languages\Nborrows allows
+Dialogue: 0,0:45:29.44,0:45:34.28,Default,,0,0,0,,Furthermore, we have borrows,\Nas present in Rust
+Dialogue: 0,0:45:34.44,0:45:36.28,Default,,0,0,0,,and other languages.\NBorrows allow
 Dialogue: 0,0:45:36.36,0:45:39.04,Default,,0,0,0,,to do imperative programming\Nvery conveniently
 Dialogue: 0,0:45:39.04,0:45:40.96,Default,,0,0,0,,and that's why we use them here.
-Dialogue: 0,0:45:41.48,0:45:44.76,Default,,0,0,0,,Finally, the final\Nspecificity of affe
+Dialogue: 0,0:45:41.48,0:45:44.76,Default,,0,0,0,,Finally, the final\Nspecialty of Affe
 Dialogue: 0,0:45:44.84,0:45:46.84,Default,,0,0,0,,is that we have complete\Ntype inference.
-Dialogue: 0,0:45:46.92,0:45:48.36,Default,,0,0,0,,So before I used.
-Dialogue: 0,0:45:50.12,0:45:51.80,Default,,0,0,0,,I used a type annotation here
-Dialogue: 0,0:45:51.84,0:45:56.20,Default,,0,0,0,,to simplify, to make\Nit easier to read.
-Dialogue: 0,0:45:56.36,0:46:01.32,Default,,0,0,0,,But I don't need to. Here\Ntype is completely inferred.
-Dialogue: 0,0:46:03.20,0:46:06.52,Default,,0,0,0,,So, to present Affe, I'm going to\Ngo through various of its features,
-Dialogue: 0,0:46:06.60,0:46:08.84,Default,,0,0,0,,and I'm going to start by linearity.
-Dialogue: 0,0:46:09.24,0:46:11.56,Default,,0,0,0,,So as I said before\Nkinds determine usage.
-Dialogue: 0,0:46:12.44,0:46:17.04,Default,,0,0,0,,We have three kinds linear, resource\Nmust be used exactly once.
-Dialogue: 0,0:46:17.88,0:46:22.96,Default,,0,0,0,,Affine or resource must be used\Nexactly at most one zero ones.
-Dialogue: 0,0:46:23.20,0:46:26.44,Default,,0,0,0,,And unrestricted\Nthe object can use
+Dialogue: 0,0:45:46.92,0:45:48.36,Default,,0,0,0,,Before I used
+Dialogue: 0,0:45:50.12,0:45:51.80,Default,,0,0,0,,a type annotation here
+Dialogue: 0,0:45:51.84,0:45:56.20,Default,,0,0,0,,to make\Nit easier to read.
+Dialogue: 0,0:45:56.36,0:46:01.32,Default,,0,0,0,,But I don't need to. The\Ntype is completely inferred.
+Dialogue: 0,0:46:03.20,0:46:06.52,Default,,0,0,0,,To present Affe, I'm going to\Ngo through various of its features,
+Dialogue: 0,0:46:06.60,0:46:08.84,Default,,0,0,0,,and I'm going to start with linearity.
+Dialogue: 0,0:46:09.24,0:46:11.56,Default,,0,0,0,,As I said before\Nkinds determine usage.
+Dialogue: 0,0:46:12.44,0:46:17.04,Default,,0,0,0,,We have three kinds: linear resources\Nmust be used exactly once.
+Dialogue: 0,0:46:17.88,0:46:22.96,Default,,0,0,0,,Affine resources must be used\Nat most once.
+Dialogue: 0,0:46:23.20,0:46:26.44,Default,,0,0,0,,An unrestricted\Nobject can be used
 Dialogue: 0,0:46:26.44,0:46:29.48,Default,,0,0,0,,arbitrary many times\Nfrom zero to infinity.
 Dialogue: 0,0:46:29.56,0:46:31.08,Default,,0,0,0,,Here are a few examples.
 Dialogue: 0,0:46:31.60,0:46:33.40,Default,,0,0,0,,We have a database type of
-Dialogue: 0,0:46:33.48,0:46:38.72,Default,,0,0,0,,kind lin, a string type of type,\Nof kind unrestricted.
-Dialogue: 0,0:46:39.24,0:46:41.40,Default,,0,0,0,,We can also have parameterized kind.
-Dialogue: 0,0:46:41.48,0:46:42.84,Default,,0,0,0,,So, for example, a list.
+Dialogue: 0,0:46:33.48,0:46:38.72,Default,,0,0,0,,kind Lin, a string type\Nof kind Unrestricted.
+Dialogue: 0,0:46:39.24,0:46:41.40,Default,,0,0,0,,We can also have parameterized kinds.
+Dialogue: 0,0:46:41.48,0:46:42.84,Default,,0,0,0,,For example, a list.
 Dialogue: 0,0:46:43.36,0:46:45.04,Default,,0,0,0,,As the kind of content,
 Dialogue: 0,0:46:45.20,0:46:46.88,Default,,0,0,0,,if we have a list of database.
-Dialogue: 0,0:46:47.12,0:46:49.40,Default,,0,0,0,,Then, this must be used linearly.
+Dialogue: 0,0:46:47.12,0:46:49.40,Default,,0,0,0,,Then this list must be used linearly.
 Dialogue: 0,0:46:49.80,0:46:51.12,Default,,0,0,0,,If we have a list of strings,
 Dialogue: 0,0:46:51.12,0:46:54.16,Default,,0,0,0,,it can be used in\Nan unrestricted fashion
-Dialogue: 0,0:46:55.40,0:46:58.76,Default,,0,0,0,,to use these kind of parameters kind
-Dialogue: 0,0:46:58.80,0:47:00.44,Default,,0,0,0,,We also have kind constraints.
-Dialogue: 0,0:47:00.48,0:47:04.84,Default,,0,0,0,,So here, we can, a we\Nhave the type function,
-Dialogue: 0,0:47:04.88,0:47:06.92,Default,,0,0,0,,create list which takes an element
-Dialogue: 0,0:47:07.00,0:47:12.00,Default,,0,0,0,,and replicates it multiple\Ntime to create a list.
+Dialogue: 0,0:46:55.40,0:46:58.76,Default,,0,0,0,,to use these kind of parameters,
+Dialogue: 0,0:46:58.80,0:47:00.44,Default,,0,0,0,,We have kind constraints.
+Dialogue: 0,0:47:00.48,0:47:04.84,Default,,0,0,0,,So here we\Nhave the type of a function
+Dialogue: 0,0:47:04.88,0:47:06.92,Default,,0,0,0,,that creates a list which takes an element
+Dialogue: 0,0:47:07.00,0:47:12.00,Default,,0,0,0,,and replicates it multiple\Ntimes to create a list.
 Dialogue: 0,0:47:13.24,0:47:15.48,Default,,0,0,0,,Since the element is\Ngoing to be replicated.
-Dialogue: 0,0:47:15.96,0:47:17.72,Default,,0,0,0,,Because then naturally,
+Dialogue: 0,0:47:15.96,0:47:17.72,Default,,0,0,0,,Then naturally,
 Dialogue: 0,0:47:18.20,0:47:20.12,Default,,0,0,0,,its content must be unrestricted.
 Dialogue: 0,0:47:20.12,0:47:23.44,Default,,0,0,0,,And that's exactly what\Nthis constraint says.
 Dialogue: 0,0:47:24.92,0:47:27.12,Default,,0,0,0,,Finally, we also use subkinding,
-Dialogue: 0,0:47:27.52,0:47:30.88,Default,,0,0,0,,so un is smaller than f\Nwhich is smaller than lin.
+Dialogue: 0,0:47:27.52,0:47:30.88,Default,,0,0,0,,kind Un is smaller than Aff\Nwhich is smaller than Lin.
 Dialogue: 0,0:47:31.04,0:47:36.04,Default,,0,0,0,,And that means that if a function\Nonly expect linear objects,
 Dialogue: 0,0:47:36.32,0:47:38.56,Default,,0,0,0,,we can pass it unrestricted objects.
-Dialogue: 0,0:47:38.64,0:47:40.24,Default,,0,0,0,,And the reason is that if something
+Dialogue: 0,0:47:38.64,0:47:40.24,Default,,0,0,0,,The reason is that if something
 Dialogue: 0,0:47:40.24,0:47:41.96,Default,,0,0,0,,can be used in unrestricted fashion,
 Dialogue: 0,0:47:41.96,0:47:44.32,Default,,0,0,0,,in particular, it can\Nbe used linearly
 Dialogue: 0,0:47:46.76,0:47:48.76,Default,,0,0,0,,This is the base of our language,
 Dialogue: 0,0:47:48.84,0:47:51.96,Default,,0,0,0,,and we're going to\Nuse it to build up everything else.
-Dialogue: 0,0:47:52.00,0:47:54.92,Default,,0,0,0,,And in particular,\Nfunctions and captures.
-Dialogue: 0,0:47:56.68,0:48:01.40,Default,,0,0,0,,So here's a piece of code where\Nwe open the grade database.
-Dialogue: 0,0:48:01.44,0:48:05.64,Default,,0,0,0,,Then we create a function\Nthat logs, some message,
-Dialogue: 0,0:48:05.72,0:48:07.24,Default,,0,0,0,,and then close the database.
+Dialogue: 0,0:47:52.00,0:47:54.92,Default,,0,0,0,,And in particular,\Nfunctions and closures.
+Dialogue: 0,0:47:56.68,0:48:01.40,Default,,0,0,0,,Here's a piece of code where\Nwe open the grade database.
+Dialogue: 0,0:48:01.44,0:48:05.64,Default,,0,0,0,,Then we create a function\Nthat logs some message
+Dialogue: 0,0:48:05.72,0:48:07.24,Default,,0,0,0,,and then closes the database.
 Dialogue: 0,0:48:07.56,0:48:09.88,Default,,0,0,0,,As you can see, we\Nhave a capture here,
-Dialogue: 0,0:48:10.64,0:48:13.20,Default,,0,0,0,,the login, login close\Nfunction captures
+Dialogue: 0,0:48:10.64,0:48:13.20,Default,,0,0,0,,the closure of the login\Nfunction captures
 Dialogue: 0,0:48:13.20,0:48:17.96,Default,,0,0,0,,a grade database and grade,\Na grade database is linear,
 Dialogue: 0,0:48:18.04,0:48:19.80,Default,,0,0,0,,it must be used exactly once.
 Dialogue: 0,0:48:20.20,0:48:24.64,Default,,0,0,0,,And so, the log function must\Nalso be called exactly once.
-Dialogue: 0,0:48:25.52,0:48:28.40,Default,,0,0,0,,If we ask the Affe checker
+Dialogue: 0,0:48:25.52,0:48:28.40,Default,,0,0,0,,If we ask the Affe typechecker
 Dialogue: 0,0:48:28.44,0:48:32.72,Default,,0,0,0,,it's going to give us\Nthis type, string arrow
-Dialogue: 0,0:48:32.84,0:48:35.36,Default,,0,0,0,,Annotated by Lin, and unit,
+Dialogue: 0,0:48:32.84,0:48:35.36,Default,,0,0,0,,Annotated by Lin to unit,
 Dialogue: 0,0:48:35.68,0:48:38.76,Default,,0,0,0,,and the annotation on\Nthe arrow indicates
-Dialogue: 0,0:48:38.84,0:48:41.96,Default,,0,0,0,,that, indicates\Nthe usage of this function,
-Dialogue: 0,0:48:42.00,0:48:45.00,Default,,0,0,0,,it indicates that log n close\Nmust be called exactly once.
+Dialogue: 0,0:48:38.84,0:48:41.96,Default,,0,0,0,,the usage of this function.
+Dialogue: 0,0:48:42.00,0:48:45.00,Default,,0,0,0,,It indicates that the login closure\Nmust be called exactly once.
 Dialogue: 0,0:48:48.24,0:48:50.68,Default,,0,0,0,,If you're wanting to\Nmake everything here.
-Dialogue: 0,0:48:50.96,0:48:52.92,Default,,0,0,0,,This will, this annotation,
+Dialogue: 0,0:48:50.96,0:48:52.92,Default,,0,0,0,,This annotation,
 Dialogue: 0,0:48:53.08,0:48:55.40,Default,,0,0,0,,does not say anything\Nabout the argument.
 Dialogue: 0,0:48:55.40,0:48:58.64,Default,,0,0,0,,Here the argument is of type\Nstring so it's unrestricted,
 Dialogue: 0,0:48:58.72,0:49:00.56,Default,,0,0,0,,you can do whatever\Nyou want with it.
 Dialogue: 0,0:49:00.96,0:49:04.76,Default,,0,0,0,,The arrow and in particular\Nthis linear arrow
-Dialogue: 0,0:49:04.84,0:49:06.92,Default,,0,0,0,,is not early but from linear logic.
+Dialogue: 0,0:49:04.84,0:49:06.92,Default,,0,0,0,,is not the lollipop from linear logic.
 Dialogue: 0,0:49:07.64,0:49:10.96,Default,,0,0,0,,It only says something\Nabout the function itself
-Dialogue: 0,0:49:12.72,0:49:14.44,Default,,0,0,0,,All right, so we can do.
+Dialogue: 0,0:49:12.72,0:49:14.44,Default,,0,0,0,,All right, so we can do
 Dialogue: 0,0:49:15.12,0:49:17.48,Default,,0,0,0,,Nice functional\Nprogramming with all this.
 Dialogue: 0,0:49:18.08,0:49:19.56,Default,,0,0,0,,Let's look about imperative.
 Dialogue: 0,0:49:19.80,0:49:22.16,Default,,0,0,0,,Let's look at imperative\Nprogramming,
 Dialogue: 0,0:49:22.16,0:49:25.04,Default,,0,0,0,,and for that we need\Nborrows and regions
 Dialogue: 0,0:49:26.64,0:49:28.64,Default,,0,0,0,,as in Rust and other languages,
-Dialogue: 0,0:49:28.64,0:49:33.04,Default,,0,0,0,,a borrow is a temporary\Nloan of a resource, A.
+Dialogue: 0,0:49:28.64,0:49:33.04,Default,,0,0,0,,a borrow is a temporary\Nloan of a resource.
 Dialogue: 0,0:49:33.28,0:49:35.76,Default,,0,0,0,,And we have two types\Nof  borrow.
-Dialogue: 0,0:49:35.76,0:49:39.08,Default,,0,0,0,,Shared burrows for\Nobserving the resource
-Dialogue: 0,0:49:39.16,0:49:42.92,Default,,0,0,0,,and Exclusive burrows are\Nfor modifying the resource.
+Dialogue: 0,0:49:35.76,0:49:39.08,Default,,0,0,0,,Shared borrows for\Nobserving the resource
+Dialogue: 0,0:49:39.16,0:49:42.92,Default,,0,0,0,,and Exclusive borrows\Nfor modifying the resource.
 Dialogue: 0,0:49:44.92,0:49:47.68,Default,,0,0,0,,Here is an example of\Na correct use of borrow.
-Dialogue: 0,0:49:48.92,0:49:53.08,Default,,0,0,0,,We start by looking up,\Ntwo grades concurrently
-Dialogue: 0,0:49:53.08,0:49:55.56,Default,,0,0,0,,so this is a read action so we use
+Dialogue: 0,0:49:48.92,0:49:53.08,Default,,0,0,0,,We start by looking up\Ntwo grades concurrently.
+Dialogue: 0,0:49:53.08,0:49:55.56,Default,,0,0,0,,This is a read action so we use
 Dialogue: 0,0:49:55.60,0:49:58.60,Default,,0,0,0,,a shared borrow for observing the data.
-Dialogue: 0,0:50:00.00,0:50:02.52,Default,,0,0,0,,Since it's since it's shared,
+Dialogue: 0,0:50:00.00,0:50:02.52,Default,,0,0,0,,Since it's shared,
 Dialogue: 0,0:50:02.56,0:50:06.04,Default,,0,0,0,,we can look up two things at\Nthe same time concurrently,
 Dialogue: 0,0:50:06.08,0:50:09.28,Default,,0,0,0,,and in particular the kind\Nof this is unrestricted.
 Dialogue: 0,0:50:09.72,0:50:11.80,Default,,0,0,0,,Once we are done with looking up
@@ -780,13 +780,13 @@ Dialogue: 0,0:50:11.88,0:50:15.20,Default,,0,0,0,,these two grades\Nand making t
 Dialogue: 0,0:50:15.24,0:50:20.04,Default,,0,0,0,,we can write in the database\Nusing an exclusive borrow
 Dialogue: 0,0:50:21.88,0:50:25.00,Default,,0,0,0,,and exclusive are, as\NI said, exclusive
 Dialogue: 0,0:50:25.04,0:50:28.12,Default,,0,0,0,,and they are, in particular,\Nof kind affine.
-Dialogue: 0,0:50:28.56,0:50:31.72,Default,,0,0,0,,So there are a few rules\Nto use this borrows.
-Dialogue: 0,0:50:31.76,0:50:35.04,Default,,0,0,0,,The first rule is that\Nwe, you cannot use
-Dialogue: 0,0:50:35.08,0:50:39.12,Default,,0,0,0,,a borrow and the resource,\Nitself, at the same time.
-Dialogue: 0,0:50:39.12,0:50:43.80,Default,,0,0,0,,Here, the f function is\Ncalled with the resource,
+Dialogue: 0,0:50:28.56,0:50:31.72,Default,,0,0,0,,There are a few rules\Nto use this borrows.
+Dialogue: 0,0:50:31.76,0:50:35.04,Default,,0,0,0,,The first rule is that\Nwe cannot use
+Dialogue: 0,0:50:35.08,0:50:39.12,Default,,0,0,0,,a borrow and the resource\Nitself at the same time.
+Dialogue: 0,0:50:39.12,0:50:43.80,Default,,0,0,0,,Here, the function is\Ncalled with the resource,
 Dialogue: 0,0:50:43.80,0:50:46.36,Default,,0,0,0,,and a borrow, and that's not allowed
-Dialogue: 0,0:50:46.52,0:50:48.24,Default,,0,0,0,,as a type checker will reject this.
-Dialogue: 0,0:50:50.24,0:50:53.36,Default,,0,0,0,,A second rule is that\Nwe can not use an
+Dialogue: 0,0:50:46.52,0:50:48.24,Default,,0,0,0,,and the type checker will reject this.
+Dialogue: 0,0:50:50.24,0:50:53.36,Default,,0,0,0,,A second rule is that\Nwe cannot use an
 Dialogue: 0,0:50:53.36,0:50:57.32,Default,,0,0,0,,exclusive borrow and any\Nother borrow, so here,
 Dialogue: 0,0:50:57.32,0:51:00.20,Default,,0,0,0,,I have an exclusive\Nborrow and another borrow,
 Dialogue: 0,0:51:00.52,0:51:03.48,Default,,0,0,0,,and the type checker\Nwill again reject this.
@@ -794,36 +794,36 @@ Dialogue: 0,0:51:05.04,0:51:08.44,Default,,0,0,0,,Finally, a borrow must not esc
 Dialogue: 0,0:51:08.84,0:51:12.84,Default,,0,0,0,,Here we have\Na declaration of database
 Dialogue: 0,0:51:13.08,0:51:17.24,Default,,0,0,0,,and then pair composed\Nwhich contains a borrow.
 Dialogue: 0,0:51:17.32,0:51:20.32,Default,,0,0,0,,And then we try to leak the borrow
-Dialogue: 0,0:51:20.32,0:51:23.00,Default,,0,0,0,,while the database is still\Ncapture inside the function.
-Dialogue: 0,0:51:23.64,0:51:25.60,Default,,0,0,0,,So this is not allowed\Nbecause the borrow
-Dialogue: 0,0:51:25.60,0:51:28.00,Default,,0,0,0,,is escaping it's region.
+Dialogue: 0,0:51:20.32,0:51:23.00,Default,,0,0,0,,while the database is still\Ncaptured inside the function.
+Dialogue: 0,0:51:23.64,0:51:25.60,Default,,0,0,0,,This is not allowed\Nbecause the borrow
+Dialogue: 0,0:51:25.60,0:51:28.00,Default,,0,0,0,,is escaping its region.
 Dialogue: 0,0:51:28.64,0:51:32.68,Default,,0,0,0,,And here is the region,\Ndelimiting a borrow.
 Dialogue: 0,0:51:33.08,0:51:36.04,Default,,0,0,0,,So the regions are\Nalmost lexical scoping
 Dialogue: 0,0:51:36.04,0:51:39.28,Default,,0,0,0,,with a few tweaks\Nand the way we check
-Dialogue: 0,0:51:39.56,0:51:43.40,Default,,0,0,0,,for this kind of escape is\Nby using the indexed kinds
-Dialogue: 0,0:51:43.48,0:51:47.16,Default,,0,0,0,,so before I said the kinds were\Nunrestricted affine and linear.
-Dialogue: 0,0:51:47.48,0:51:48.68,Default,,0,0,0,,Actually there are a bit more
-Dialogue: 0,0:51:48.72,0:51:50.72,Default,,0,0,0,,zero indexed by the nesting.
+Dialogue: 0,0:51:39.56,0:51:43.40,Default,,0,0,0,,for this kind of escape is\Nby using indexed kinds
+Dialogue: 0,0:51:43.48,0:51:47.16,Default,,0,0,0,,Before I said the kinds were\Nunrestricted, affine, and linear.
+Dialogue: 0,0:51:47.48,0:51:48.68,Default,,0,0,0,,Actually there is a bit more
+Dialogue: 0,0:51:48.72,0:51:50.72,Default,,0,0,0,,they are zero-indexed by the nesting.
 Dialogue: 0,0:51:51.28,0:51:54.80,Default,,0,0,0,,And here the grade, the borrow
 Dialogue: 0,0:51:54.80,0:52:00.20,Default,,0,0,0,,of the database is in\Na second nesting,
-Dialogue: 0,0:52:00.44,0:52:04.08,Default,,0,0,0,,so it's annotated by un two.
+Dialogue: 0,0:52:00.44,0:52:04.08,Default,,0,0,0,,so it's annotated by Un-two.
 Dialogue: 0,0:52:04.36,0:52:09.36,Default,,0,0,0,,Whereas, the region around it\Nis at the nesting level one.
 Dialogue: 0,0:52:09.88,0:52:12.68,Default,,0,0,0,,And so we will simply check\Ntwo is bigger than one,
 Dialogue: 0,0:52:12.68,0:52:14.28,Default,,0,0,0,,so the borrow cannot escape.
-Dialogue: 0,0:52:14.68,0:52:17.12,Default,,0,0,0,,And the type checker will\Nagain, rejects this.
-Dialogue: 0,0:52:18.40,0:52:21.00,Default,,0,0,0,,Alright so we have borrow,\Nwe have closure, we have functions,
-Dialogue: 0,0:52:21.08,0:52:23.04,Default,,0,0,0,,we have linearity let's\Nput everything together.
+Dialogue: 0,0:52:14.68,0:52:17.12,Default,,0,0,0,,And the type checker will\Nagain reject this.
+Dialogue: 0,0:52:18.40,0:52:21.00,Default,,0,0,0,,Alright so we have borrows,\Nwe have closures, we have functions,
+Dialogue: 0,0:52:21.08,0:52:23.04,Default,,0,0,0,,we have linearity. Let's\Nput everything together.
 Dialogue: 0,0:52:24.56,0:52:27.40,Default,,0,0,0,,Here is the API for the database
-Dialogue: 0,0:52:27.48,0:52:30.08,Default,,0,0,0,,that they've used since\Nthe beginning of this talk.
-Dialogue: 0,0:52:30.40,0:52:33.04,Default,,0,0,0,,the type database is of linear kind,
-Dialogue: 0,0:52:33.80,0:52:36.36,Default,,0,0,0,,we have defined functions,\Nthat takes a borrow.
-Dialogue: 0,0:52:37.16,0:52:43.20,Default,,0,0,0,,With its kind, and takes\Nthe string and return an integer.
+Dialogue: 0,0:52:27.48,0:52:30.08,Default,,0,0,0,,that I've used since\Nthe beginning of this talk.
+Dialogue: 0,0:52:30.40,0:52:33.04,Default,,0,0,0,,The type database is of kind linear,
+Dialogue: 0,0:52:33.80,0:52:36.36,Default,,0,0,0,,we have defined functions,\Nthat take a borrow.
+Dialogue: 0,0:52:37.16,0:52:43.20,Default,,0,0,0,,With its kind, and take\Nthe string and return an integer.
 Dialogue: 0,0:52:43.96,0:52:47.88,Default,,0,0,0,,We have the add function that\Ntakes an exclusive borrow.
 Dialogue: 0,0:52:48.12,0:52:50.60,Default,,0,0,0,,a string, an integer\Nand returns units.
-Dialogue: 0,0:52:50.92,0:52:53.72,Default,,0,0,0,,And since the functions\Nare currified,
+Dialogue: 0,0:52:50.92,0:52:53.72,Default,,0,0,0,,And since the functions\Nare curried,
 Dialogue: 0,0:52:53.76,0:52:57.28,Default,,0,0,0,,you can, here the database borrow
 Dialogue: 0,0:52:57.36,0:52:59.16,Default,,0,0,0,,is captured later on\Nand so the functions
-Dialogue: 0,0:52:59.20,0:53:03.20,Default,,0,0,0,,are annotated with\Nthe kind that is capture here.
+Dialogue: 0,0:52:59.20,0:53:03.20,Default,,0,0,0,,are annotated with\Nthe kind that is captured here.
 Dialogue: 0,0:53:06.24,0:53:09.64,Default,,0,0,0,,Here is a simple use of this API,
 Dialogue: 0,0:53:10.04,0:53:12.44,Default,,0,0,0,,as I said, which was\Npresented before.
 Dialogue: 0,0:53:12.48,0:53:16.68,Default,,0,0,0,,So we have, two concurrent\NLookups,
@@ -834,70 +834,70 @@ Dialogue: 0,0:53:27.88,0:53:29.24,Default,,0,0,0,,lookup aspect
 Dialogue: 0,0:53:29.32,0:53:33.92,Default,,0,0,0,,by creating a grade function\Nthat captures a database,
 Dialogue: 0,0:53:33.96,0:53:37.92,Default,,0,0,0,,and look up the topic\Nor the subjects of the grade.
 Dialogue: 0,0:53:38.80,0:53:43.36,Default,,0,0,0,,And here we repeat\Nthe argument subject and subject.
-Dialogue: 0,0:53:43.44,0:53:45.76,Default,,0,0,0,,so we can simply partially\Napplies a function,
+Dialogue: 0,0:53:43.44,0:53:45.76,Default,,0,0,0,,so we can simply partially\Napply a function,
 Dialogue: 0,0:53:45.92,0:53:50.96,Default,,0,0,0,,and it will compute the borrows\Nand the kinds accordingly.
 Dialogue: 0,0:53:51.72,0:53:53.48,Default,,0,0,0,,And finally we can even go further
-Dialogue: 0,0:53:53.56,0:53:58.00,Default,,0,0,0,,and use a function\Nattraction to pull
+Dialogue: 0,0:53:53.56,0:53:58.00,Default,,0,0,0,,and use a function\Nabstraction to pull
 Dialogue: 0,0:53:58.40,0:54:01.08,Default,,0,0,0,,the function computing\Nthe average outside
 Dialogue: 0,0:54:01.16,0:54:03.68,Default,,0,0,0,,by taking a list of subjects
-Dialogue: 0,0:54:04.08,0:54:07.88,Default,,0,0,0,,and applying a partially\Napplied function in list of map,
+Dialogue: 0,0:54:04.08,0:54:07.88,Default,,0,0,0,,and applying a partially\Napplied function to map over the list,
 Dialogue: 0,0:54:07.92,0:54:10.56,Default,,0,0,0,,and so on and so forth,\Nand use any other functions
 Dialogue: 0,0:54:10.72,0:54:14.08,Default,,0,0,0,,as we would want to\Nin a functional language
 Dialogue: 0,0:54:20.40,0:54:23.44,Default,,0,0,0,,The type checker will\Nannotate the region
 Dialogue: 0,0:54:23.72,0:54:26.68,Default,,0,0,0,,as we would expect, here we are
 Dialogue: 0,0:54:26.84,0:54:29.64,Default,,0,0,0,,the disjoint region\Nfor the shared borrow
 Dialogue: 0,0:54:29.68,0:54:33.00,Default,,0,0,0,,and the exclusive borrow
-Dialogue: 0,0:54:33.08,0:54:35.60,Default,,0,0,0,,and they are perfectly disjointed.
+Dialogue: 0,0:54:33.08,0:54:35.60,Default,,0,0,0,,and they are perfectly disjoint.
 Dialogue: 0,0:54:35.84,0:54:37.32,Default,,0,0,0,,Finally, as we said before,
 Dialogue: 0,0:54:37.32,0:54:38.92,Default,,0,0,0,,we have no type annotations,
 Dialogue: 0,0:54:38.96,0:54:42.00,Default,,0,0,0,,so even if I used the average.
 Dialogue: 0,0:54:42.32,0:54:46.04,Default,,0,0,0,,Even if I lifted\Nthe average function, I
 Dialogue: 0,0:54:46.04,0:54:47.40,Default,,0,0,0,,I still have no type annotation
 Dialogue: 0,0:54:47.48,0:54:49.52,Default,,0,0,0,,here we have complete\Ntype inference.
-Dialogue: 0,0:54:50.32,0:54:53.56,Default,,0,0,0,,Alright so let's, look a little bit
-Dialogue: 0,0:54:53.60,0:54:56.28,Default,,0,0,0,,under the hood at\Ninference and constraint.
-Dialogue: 0,0:54:56.68,0:55:00.16,Default,,0,0,0,,The first step is to\Nelaborate the region.
+Dialogue: 0,0:54:50.32,0:54:53.56,Default,,0,0,0,,Alright so let's look a little bit
+Dialogue: 0,0:54:53.60,0:54:56.28,Default,,0,0,0,,under the hood at\Ninference and constraints.
+Dialogue: 0,0:54:56.68,0:55:00.16,Default,,0,0,0,,The first step is to\Nelaborate the regions.
 Dialogue: 0,0:55:00.56,0:55:03.28,Default,,0,0,0,,By using the information provided
-Dialogue: 0,0:55:03.44,0:55:06.84,Default,,0,0,0,,by the position of the borrow,\Nthe scopes of the borrow
+Dialogue: 0,0:55:03.44,0:55:06.84,Default,,0,0,0,,by the position of the borrow,\Nthe scopes of the borrows
 Dialogue: 0,0:55:07.00,0:55:08.92,Default,,0,0,0,,and the borrowing rules I presented,
 Dialogue: 0,0:55:08.96,0:55:11.00,Default,,0,0,0,,which allow us to\Ncompletely determine
 Dialogue: 0,0:55:11.04,0:55:13.68,Default,,0,0,0,,the biggest region\Nwe could use.
-Dialogue: 0,0:55:14.08,0:55:16.68,Default,,0,0,0,,Again second step is to\Ngenerate constraint,
-Dialogue: 0,0:55:17.28,0:55:20.88,Default,,0,0,0,,which we encode, type\Nlinearity and borrowing checks.
-Dialogue: 0,0:55:21.56,0:55:24.36,Default,,0,0,0,,And to prove - check that
+Dialogue: 0,0:55:14.08,0:55:16.68,Default,,0,0,0,,The second step is to\Ngenerate constraints,
+Dialogue: 0,0:55:17.28,0:55:20.88,Default,,0,0,0,,which encode type,\Nlinearity and borrowing checks.
+Dialogue: 0,0:55:21.56,0:55:24.36,Default,,0,0,0,,And to check that
 Dialogue: 0,0:55:24.48,0:55:26.84,Default,,0,0,0,,nothing escapes that shouldn't.
-Dialogue: 0,0:55:26.84,0:55:30.00,Default,,0,0,0,,This constraint system\Nis custom to encode.
+Dialogue: 0,0:55:26.84,0:55:30.00,Default,,0,0,0,,This constraint system\Nis customized to encode.
 Dialogue: 0,0:55:30.00,0:55:34.40,Default,,0,0,0,,the rule we want\Nand based on HM(X).
 Dialogue: 0,0:55:34.40,0:55:36.96,Default,,0,0,0,,Finally, we solve the constraints
 Dialogue: 0,0:55:36.96,0:55:39.96,Default,,0,0,0,,using custom algorithms\Nthat we provide,
 Dialogue: 0,0:55:39.96,0:55:47.12,Default,,0,0,0,,and we obtain principal type schemes\Nfor all the functions in our program.
-Dialogue: 0,0:55:47.12,0:55:50.80,Default,,0,0,0,,So this principle type\Nscheme can sometimes still
+Dialogue: 0,0:55:47.12,0:55:50.80,Default,,0,0,0,,So this principal type\Nscheme can sometimes still
 Dialogue: 0,0:55:50.80,0:55:52.32,Default,,0,0,0,,be a little bit complicated,
-Dialogue: 0,0:55:52.32,0:55:58.24,Default,,0,0,0,,and so we use subkinding rules\Nwith positive and negative position
+Dialogue: 0,0:55:52.32,0:55:58.24,Default,,0,0,0,,and so we use the subkinding rules\Nconsidering positive and negative positions
 Dialogue: 0,0:55:58.24,0:56:03.40,Default,,0,0,0,,to simplify the type further down.
-Dialogue: 0,0:56:03.40,0:56:10.24,Default,,0,0,0,,Alright, and so we obtain, finally,\Nthe simple type schemes.
-Dialogue: 0,0:56:10.64,0:56:14.16,Default,,0,0,0,,So to summarize, I presented\Nthe Affe language,
+Dialogue: 0,0:56:03.40,0:56:10.24,Default,,0,0,0,,Alright, and so we obtain, finally,\Nsimplified type schemes.
+Dialogue: 0,0:56:10.64,0:56:14.16,Default,,0,0,0,,To summarize, I presented\Nthe Affe language,
 Dialogue: 0,0:56:14.16,0:56:19.16,Default,,0,0,0,,a prototype is available\Nat this address online.
 Dialogue: 0,0:56:19.60,0:56:23.24,Default,,0,0,0,,We've provided Linearity,\NClosure, Borrows and Regions,
 Dialogue: 0,0:56:23.24,0:56:24.44,Default,,0,0,0,,to provide good support
 Dialogue: 0,0:56:24.44,0:56:27.08,Default,,0,0,0,,for both imperative\Nand functional programming,
 Dialogue: 0,0:56:27.08,0:56:29.44,Default,,0,0,0,,we support managed\Nand unmanaged objects,
-Dialogue: 0,0:56:29.44,0:56:32.96,Default,,0,0,0,,and principal and type inference,\Nwhich is something very noble,
-Dialogue: 0,0:56:32.96,0:56:35.80,Default,,0,0,0,,for which type support borrows.
-Dialogue: 0,0:56:35.80,0:56:40.64,Default,,0,0,0,,The downside is that so far we do\Nnot support real flow sensitivity,
+Dialogue: 0,0:56:29.44,0:56:32.96,Default,,0,0,0,,and principal type inference,\Nwhich is something very remarkable,
+Dialogue: 0,0:56:32.96,0:56:35.80,Default,,0,0,0,,for a type system supporting borrows.
+Dialogue: 0,0:56:35.80,0:56:40.64,Default,,0,0,0,,The downside is that so far we do\Nnot support flow sensitivity,
 Dialogue: 0,0:56:40.64,0:56:45.76,Default,,0,0,0,,we can emulate this a bit,\Nbut it has no proper support,
-Dialogue: 0,0:56:46.12,0:56:49.12,Default,,0,0,0,,and we do not have yet\Na concurrency story
+Dialogue: 0,0:56:46.12,0:56:49.12,Default,,0,0,0,,and we do not yet have\Na concurrency story
 Dialogue: 0,0:56:49.12,0:56:51.12,Default,,0,0,0,,so that's something\Nwe're working on.
-Dialogue: 0,0:56:51.12,0:56:54.24,Default,,0,0,0,,In the paper you can\Nfind many many examples
+Dialogue: 0,0:56:51.12,0:56:54.24,Default,,0,0,0,,In the paper you can\Nfind many examples
 Dialogue: 0,0:56:54.24,0:56:58.64,Default,,0,0,0,,to show that we can indeed support\Nmany types of programming,
 Dialogue: 0,0:56:58.64,0:57:01.48,Default,,0,0,0,,both functional imperative.
 Dialogue: 0,0:57:01.48,0:57:08.08,Default,,0,0,0,,On the theory side, we provide\Na syntax-directed type system for Affe,
 Dialogue: 0,0:57:08.08,0:57:12.72,Default,,0,0,0,,how to encode into\Nan ML-style type-system,
-Dialogue: 0,0:57:12.72,0:57:16.68,Default,,0,0,0,,we provide the formal account\Nsemantics and proof of soundness,
+Dialogue: 0,0:57:12.72,0:57:16.68,Default,,0,0,0,,we provide the formal account\Nof the semantics and proof of soundness,
 Dialogue: 0,0:57:16.68,0:57:19.20,Default,,0,0,0,,and an inference algorithm for Affe,
 Dialogue: 0,0:57:19.20,0:57:25.64,Default,,0,0,0,,which provide values, novel\Ncontribution in particular
-Dialogue: 0,0:57:25.64,0:57:28.76,Default,,0,0,0,,an extension to HM(X),\Nnovel constraint system
-Dialogue: 0,0:57:28.76,0:57:33.44,Default,,0,0,0,,and it's constraint algorithm\Nand proof of completeness.
+Dialogue: 0,0:57:25.64,0:57:28.76,Default,,0,0,0,,an extension to HM(X),\Na novel constraint system
+Dialogue: 0,0:57:28.76,0:57:33.44,Default,,0,0,0,,and its constraint simplification algorithm\Nand proof of completeness.
 Dialogue: 0,0:57:33.44,0:57:35.20,Default,,0,0,0,,That's all I have.\NThank you very much.
 Dialogue: 0,0:57:35.20,0:57:40.20,Default,,0,0,0,,(AUDIENCE APPLAUSE)
 Dialogue: 0,0:57:42.56,0:57:44.60,Default,,0,0,0,,ALAN JEFFREY: So, thank you Gabriel.
