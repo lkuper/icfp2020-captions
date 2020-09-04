@@ -1534,9 +1534,9 @@ Dialogue: 0,1:29:13.12,1:29:16.60,Default,,0,0,0,,An expression is either a vari
 Dialogue: 0,1:29:16.60,1:29:17.88,Default,,0,0,0,,to another expression
 Dialogue: 0,1:29:17.88,1:29:22.32,Default,,0,0,0,,or has the form lambda var.e.
 Dialogue: 0,1:29:22.32,1:29:24.04,Default,,0,0,0,,The binder is an attribute,
-Dialogue: 0,1:29:24.04,1:29:27.60,Default,,0,0,0,,which will trigger the internal\Ndecision mechanism in K
+Dialogue: 0,1:29:24.04,1:29:27.60,Default,,0,0,0,,which will trigger the internal\Nsubstitution mechanism in K
 Dialogue: 0,1:29:27.60,1:29:29.56,Default,,0,0,0,,to provide the correct implementation
-Dialogue: 0,1:29:29.56,1:29:31.60,Default,,0,0,0,,of capture avoiding substitution.
+Dialogue: 0,1:29:29.56,1:29:31.60,Default,,0,0,0,,of capture-avoiding substitution.
 Dialogue: 0,1:29:31.60,1:29:34.36,Default,,0,0,0,,Currently, this only works\Nfor a restricted form
 Dialogue: 0,1:29:34.36,1:29:36.80,Default,,0,0,0,,of binders but with this paper,
 Dialogue: 0,1:29:36.80,1:29:38.44,Default,,0,0,0,,we can give the binding attributes
@@ -1552,7 +1552,7 @@ Dialogue: 0,1:29:58.80,1:30:04.36,Default,,0,0,0,,is to show how to define binde
 Dialogue: 0,1:30:04.36,1:30:06.76,Default,,0,0,0,,Matching logic is expressive.
 Dialogue: 0,1:30:06.76,1:30:09.20,Default,,0,0,0,,Many important logical\Nsystems can be defined
 Dialogue: 0,1:30:09.20,1:30:11.08,Default,,0,0,0,,as matching logic theories.
-Dialogue: 0,1:30:11.08,1:30:13.24,Default,,0,0,0,,These include first logic,
+Dialogue: 0,1:30:11.08,1:30:13.24,Default,,0,0,0,,These include first-order logic,
 Dialogue: 0,1:30:13.24,1:30:17.16,Default,,0,0,0,,separation logic, Hoare\Nlogic for verification,
 Dialogue: 0,1:30:17.16,1:30:19.72,Default,,0,0,0,,temporal logics,\Nand many others.
 Dialogue: 0,1:30:19.72,1:30:23.84,Default,,0,0,0,,However no logical systems where\Nbinding plays a major role
@@ -1571,53 +1571,53 @@ Dialogue: 0,1:30:52.16,1:30:54.52,Default,,0,0,0,,Firstly, we simplify matching 
 Dialogue: 0,1:30:54.52,1:30:57.04,Default,,0,0,0,,and propose a variant\Nthat is more suitable
 Dialogue: 0,1:30:57.04,1:30:58.36,Default,,0,0,0,,to define binders.
 Dialogue: 0,1:30:58.36,1:31:01.84,Default,,0,0,0,,Secondly, we use lambda\Ncalculus as an example
-Dialogue: 0,1:31:01.84,1:31:05.60,Default,,0,0,0,,and define it as a machine\Nlogic theory, gamma lambda.
-Dialogue: 0,1:31:05.60,1:31:08.44,Default,,0,0,0,,The key observation\Nis then lambda XE
+Dialogue: 0,1:31:01.84,1:31:05.60,Default,,0,0,0,,and define it as a machine\Nlogic theory, Gamma lambda.
+Dialogue: 0,1:31:05.60,1:31:08.44,Default,,0,0,0,,The key observation\Nis that lambda X.E
 Dialogue: 0,1:31:08.44,1:31:10.44,Default,,0,0,0,,does two things at a time.
 Dialogue: 0,1:31:10.44,1:31:12.68,Default,,0,0,0,,It creates the binding of X in E
-Dialogue: 0,1:31:12.68,1:31:15.68,Default,,0,0,0,,and also builds a term,\Nlambda XE.
+Dialogue: 0,1:31:12.68,1:31:15.68,Default,,0,0,0,,and also builds a term,\Nlambda X.E.
 Dialogue: 0,1:31:15.68,1:31:18.92,Default,,0,0,0,,In matching logic, we\Nseparate these two.
-Dialogue: 0,1:31:18.92,1:31:21.40,Default,,0,0,0,,We first use bracket XE
+Dialogue: 0,1:31:18.92,1:31:21.40,Default,,0,0,0,,We first use [X]E
 Dialogue: 0,1:31:21.40,1:31:23.68,Default,,0,0,0,,to define the graph of the function
 Dialogue: 0,1:31:23.68,1:31:25.56,Default,,0,0,0,,that maps X to E.
-Dialogue: 0,1:31:25.56,1:31:28.76,Default,,0,0,0,,Here, XE is the pair of X and E
+Dialogue: 0,1:31:25.56,1:31:28.76,Default,,0,0,0,,Here, <X,E> is the pair of X and E
 Dialogue: 0,1:31:28.76,1:31:31.60,Default,,0,0,0,,and the matching logic\Nexists means union.
-Dialogue: 0,1:31:31.60,1:31:35.80,Default,,0,0,0,,So this pattern is\Nthe set of all pairs XE
+Dialogue: 0,1:31:31.60,1:31:35.80,Default,,0,0,0,,So this pattern is\Nthe set of all pairs <X,E>
 Dialogue: 0,1:31:35.80,1:31:38.96,Default,,0,0,0,,where X ranges over the variables.
 Dialogue: 0,1:31:38.96,1:31:42.60,Default,,0,0,0,,The intention packs\Nthe graph set into one element,
 Dialogue: 0,1:31:42.60,1:31:46.60,Default,,0,0,0,,which then includes all\Nthe binding information.
-Dialogue: 0,1:31:46.60,1:31:50.84,Default,,0,0,0,,Then we define lambda XE by\Napplying the construct to lambda
-Dialogue: 0,1:31:50.84,1:31:53.08,Default,,0,0,0,,to the graph set XE.
+Dialogue: 0,1:31:46.60,1:31:50.84,Default,,0,0,0,,Then we define lambda X.E by\Napplying the construct lambda
+Dialogue: 0,1:31:50.84,1:31:53.08,Default,,0,0,0,,to the graph set [X]E.
 Dialogue: 0,1:31:53.08,1:31:55.64,Default,,0,0,0,,The constructor builds the term.
 Dialogue: 0,1:31:55.64,1:31:59.76,Default,,0,0,0,,In short, we use the built-in\Nexist binder of matching logic
 Dialogue: 0,1:31:59.76,1:32:02.60,Default,,0,0,0,,to build a graph set\Nand create a binding
 Dialogue: 0,1:32:02.60,1:32:06.88,Default,,0,0,0,,and then use constructors\Nto build the term.
 Dialogue: 0,1:32:06.88,1:32:11.08,Default,,0,0,0,,To show that the above\Ndefinition is indeed correct,
 Dialogue: 0,1:32:11.08,1:32:13.16,Default,,0,0,0,,we prove the following theorems.
-Dialogue: 0,1:32:13.16,1:32:16.60,Default,,0,0,0,,We proof that gamma lambda\Nis a conservative extension
+Dialogue: 0,1:32:13.16,1:32:16.60,Default,,0,0,0,,We proof that Gamma lambda\Nis a conservative extension
 Dialogue: 0,1:32:16.60,1:32:18.00,Default,,0,0,0,,of lambda calculus.
 Dialogue: 0,1:32:18.00,1:32:21.00,Default,,0,0,0,,So any equations between\Ntwo lambda expressions
 Dialogue: 0,1:32:21.00,1:32:23.40,Default,,0,0,0,,are provable in lambda calculus
-Dialogue: 0,1:32:23.40,1:32:27.08,Default,,0,0,0,,if and only if they are probable\Nin theory gamma lambda.
-Dialogue: 0,1:32:27.08,1:32:29.04,Default,,0,0,0,,We also show that gamma lambda
+Dialogue: 0,1:32:23.40,1:32:27.08,Default,,0,0,0,,if and only if they are probable\Nin theory Gamma lambda.
+Dialogue: 0,1:32:27.08,1:32:29.04,Default,,0,0,0,,We also show that Gamma lambda
 Dialogue: 0,1:32:29.04,1:32:30.44,Default,,0,0,0,,is sound and complete.
 Dialogue: 0,1:32:30.44,1:32:34.56,Default,,0,0,0,,So semantic validity\Nand provability coincide.
 Dialogue: 0,1:32:34.56,1:32:37.20,Default,,0,0,0,,One important advantage\Nof our approach
-Dialogue: 0,1:32:37.20,1:32:40.68,Default,,0,0,0,,is that the theory gamma\Nlambda automatically
+Dialogue: 0,1:32:37.20,1:32:40.68,Default,,0,0,0,,is that the theory Gamma\Nlambda automatically
 Dialogue: 0,1:32:40.68,1:32:43.36,Default,,0,0,0,,gives a class of\Nmatching logic models
 Dialogue: 0,1:32:43.36,1:32:46.76,Default,,0,0,0,,and the following two theorems\Nconnect those models
 Dialogue: 0,1:32:46.76,1:32:48.48,Default,,0,0,0,,to lambda calculus.
 Dialogue: 0,1:32:48.48,1:32:51.56,Default,,0,0,0,,The representative\Ncompleteness states
-Dialogue: 0,1:32:51.56,1:32:54.00,Default,,0,0,0,,that for any lambda theory, t,
+Dialogue: 0,1:32:51.56,1:32:54.00,Default,,0,0,0,,that for any lambda theory, T,
 Dialogue: 0,1:32:54.00,1:32:57.00,Default,,0,0,0,,which is a set of lambda equations,
-Dialogue: 0,1:32:57.00,1:33:01.08,Default,,0,0,0,,there is a model MT of\Ntheory gamma lambda,
-Dialogue: 0,1:33:01.08,1:33:05.16,Default,,0,0,0,,such that MT captures\Nprecisely the lambda theory t.
-Dialogue: 0,1:33:05.16,1:33:08.92,Default,,0,0,0,,That is E1 equals E2\Nis provable in t,
-Dialogue: 0,1:33:08.92,1:33:12.36,Default,,0,0,0,,if and only if it holds in MT.
+Dialogue: 0,1:32:57.00,1:33:01.08,Default,,0,0,0,,there is a model M_T of\Ntheory Gamma lambda,
+Dialogue: 0,1:33:01.08,1:33:05.16,Default,,0,0,0,,such that M_T captures\Nprecisely the lambda theory T.
+Dialogue: 0,1:33:05.16,1:33:08.92,Default,,0,0,0,,That is E1 equals E2\Nis provable in T,
+Dialogue: 0,1:33:08.92,1:33:12.36,Default,,0,0,0,,if and only if it holds in M_T.
 Dialogue: 0,1:33:12.36,1:33:13.80,Default,,0,0,0,,The last theorem states
 Dialogue: 0,1:33:13.80,1:33:16.52,Default,,0,0,0,,that for any lambda\Ncalculus model A,
-Dialogue: 0,1:33:16.52,1:33:18.84,Default,,0,0,0,,there is a matching logic model, MA,
-Dialogue: 0,1:33:18.84,1:33:22.36,Default,,0,0,0,,of the theory gamma\Nlambda that captures A.
+Dialogue: 0,1:33:16.52,1:33:18.84,Default,,0,0,0,,there is a matching logic model, M_A,
+Dialogue: 0,1:33:18.84,1:33:22.36,Default,,0,0,0,,of the theory Gamma\Nlambda that captures A.
 Dialogue: 0,1:33:22.36,1:33:24.48,Default,,0,0,0,,Lambda calculus has\Nmany different models.
 Dialogue: 0,1:33:24.48,1:33:26.52,Default,,0,0,0,,In this paper, we\Nconsider the models
 Dialogue: 0,1:33:26.52,1:33:28.84,Default,,0,0,0,,that are concrete Cartesian\Nclosed categories
@@ -1644,9 +1644,9 @@ Dialogue: 0,1:34:18.56,1:34:20.48,Default,,0,0,0,,and yet, expressive logic.
 Dialogue: 0,1:34:20.48,1:34:23.84,Default,,0,0,0,,It is the logical foundation\Nof the K framework.
 Dialogue: 0,1:34:23.84,1:34:25.84,Default,,0,0,0,,Its syntax defines formulas,
 Dialogue: 0,1:34:25.84,1:34:27.52,Default,,0,0,0,,which we call patterns,
-Dialogue: 0,1:34:27.52,1:34:29.64,Default,,0,0,0,,using only certain constructs.
+Dialogue: 0,1:34:27.52,1:34:29.64,Default,,0,0,0,,using only 7 constructs.
 Dialogue: 0,1:34:29.64,1:34:32.16,Default,,0,0,0,,They are element variables,
-Dialogue: 0,1:34:32.16,1:34:34.48,Default,,0,0,0,,which are like first logic variables
+Dialogue: 0,1:34:32.16,1:34:34.48,Default,,0,0,0,,which are like first-order logic variables
 Dialogue: 0,1:34:34.48,1:34:36.52,Default,,0,0,0,,that range over elements.
 Dialogue: 0,1:34:36.52,1:34:39.68,Default,,0,0,0,,Set variables, which are like\Npropositional variables
 Dialogue: 0,1:34:39.68,1:34:42.88,Default,,0,0,0,,in modal logic that\Nrange over subsets.
@@ -1656,14 +1656,14 @@ Dialogue: 0,1:34:47.92,1:34:50.76,Default,,0,0,0,,by the models and do not chang
 Dialogue: 0,1:34:50.76,1:34:53.56,Default,,0,0,0,,Phi one, phi two is\Nthe application value
 Dialogue: 0,1:34:53.56,1:34:55.68,Default,,0,0,0,,where we apply phi one to phi two.
 Dialogue: 0,1:34:55.68,1:34:58.00,Default,,0,0,0,,if phi one is\Na functional constructor,
-Dialogue: 0,1:34:58.00,1:35:00.56,Default,,0,0,0,,then the result is like\Na first logic term.
+Dialogue: 0,1:34:58.00,1:35:00.56,Default,,0,0,0,,then the result is like\Na first-order logic term.
 Dialogue: 0,1:35:00.56,1:35:02.00,Default,,0,0,0,,If phi one is a predicate,
-Dialogue: 0,1:35:02.00,1:35:05.52,Default,,0,0,0,,then the result is like\Na first logic (INAUDIBLE) formula
+Dialogue: 0,1:35:02.00,1:35:05.52,Default,,0,0,0,,then the result is like\Na first-order logic atomic formula
 Dialogue: 0,1:35:05.52,1:35:08.00,Default,,0,0,0,,but in general, any\Npattern can be applied
 Dialogue: 0,1:35:08.00,1:35:09.44,Default,,0,0,0,,to any other pattern,
 Dialogue: 0,1:35:09.44,1:35:12.84,Default,,0,0,0,,giving matching logic\Nmaximum flexibility.
-Dialogue: 0,1:35:12.84,1:35:16.56,Default,,0,0,0,,Next to constructs,\Nbottom and implication
-Dialogue: 0,1:35:16.56,1:35:19.48,Default,,0,0,0,,are standard propositional\Nconstraints.
+Dialogue: 0,1:35:12.84,1:35:16.56,Default,,0,0,0,,Next two constructs,\Nbottom and implication
+Dialogue: 0,1:35:16.56,1:35:19.48,Default,,0,0,0,,are standard propositional\Nconstructs.
 Dialogue: 0,1:35:19.48,1:35:23.76,Default,,0,0,0,,Other propositional operations\Ncan be defined from these two.
 Dialogue: 0,1:35:23.76,1:35:25.88,Default,,0,0,0,,Finally exists x phi
 Dialogue: 0,1:35:25.88,1:35:29.72,Default,,0,0,0,,is the existential quantification\Nlike in first-order logic.
@@ -1671,7 +1671,7 @@ Dialogue: 0,1:35:29.72,1:35:32.20,Default,,0,0,0,,Now, we move on to the semanti
 Dialogue: 0,1:35:32.20,1:35:34.96,Default,,0,0,0,,The semantics of matching\Nlogic is one sentence,
 Dialogue: 0,1:35:34.96,1:35:38.60,Default,,0,0,0,,a pattern phi is interpreted\Nas the set of elements
 Dialogue: 0,1:35:38.60,1:35:42.60,Default,,0,0,0,,that match it, in other\Nwords, patterns mean sets.
-Dialogue: 0,1:35:42.60,1:35:46.00,Default,,0,0,0,,Formerly, a model M has\Na non-empty carrier set
+Dialogue: 0,1:35:42.60,1:35:46.00,Default,,0,0,0,,Formally, a model M has\Na non-empty carrier set
 Dialogue: 0,1:35:46.00,1:35:49.72,Default,,0,0,0,,and binary application\Nfunction from M x M
 Dialogue: 0,1:35:49.72,1:35:51.64,Default,,0,0,0,,to the power set of M,
 Dialogue: 0,1:35:51.64,1:35:54.88,Default,,0,0,0,,which will be used to interpret\Nthe application pattern.
@@ -1687,9 +1687,9 @@ Dialogue: 0,1:36:23.72,1:36:27.52,Default,,0,0,0,,Application is interpreted\Nus
 Dialogue: 0,1:36:27.52,1:36:30.68,Default,,0,0,0,,but now phi one\Nand phi two are also sets,
 Dialogue: 0,1:36:30.68,1:36:34.12,Default,,0,0,0,,we range over their\Ninhabitants by a1 and a2
 Dialogue: 0,1:36:34.12,1:36:36.40,Default,,0,0,0,,and take the union\Nof all the results,
-Dialogue: 0,1:36:36.40,1:36:39.64,Default,,0,0,0,,this is called\Nthe point wise extension.
+Dialogue: 0,1:36:36.40,1:36:39.64,Default,,0,0,0,,this is called\Nthe pointwise extension.
 Dialogue: 0,1:36:39.64,1:36:42.56,Default,,0,0,0,,Finally, exists x phi is interpreted
-Dialogue: 0,1:36:42.56,1:36:45.48,Default,,0,0,0,,by ranging over all elements a in n,
+Dialogue: 0,1:36:42.56,1:36:45.48,Default,,0,0,0,,by ranging over all elements a in M,
 Dialogue: 0,1:36:45.48,1:36:48.56,Default,,0,0,0,,and taking the big union of\Nall the resulting sets,
 Dialogue: 0,1:36:48.56,1:36:53.88,Default,,0,0,0,,in short, exists means big\Nunion in matching logic.
 Dialogue: 0,1:36:53.88,1:36:54.88,Default,,0,0,0,,In matching logic,
@@ -1702,14 +1702,14 @@ Dialogue: 0,1:37:07.32,1:37:11.08,Default,,0,0,0,,We also define notations which
 Dialogue: 0,1:37:11.08,1:37:12.88,Default,,0,0,0,,With the proper notations,
 Dialogue: 0,1:37:12.88,1:37:15.40,Default,,0,0,0,,we can capture the formulas\Nof those expressions
 Dialogue: 0,1:37:15.40,1:37:19.76,Default,,0,0,0,,in the target system as is\Nwithout any translation.
-Dialogue: 0,1:37:19.76,1:37:23.28,Default,,0,0,0,,We say that a model M is\Na model of the theory, gamma,
+Dialogue: 0,1:37:19.76,1:37:23.28,Default,,0,0,0,,We say that a model M is\Na model of the theory, Gamma,
 Dialogue: 0,1:37:23.28,1:37:25.60,Default,,0,0,0,,if all axioms hold in a model,
 Dialogue: 0,1:37:25.60,1:37:29.04,Default,,0,0,0,,that is they are interpreted\Nto the total sets,
 Dialogue: 0,1:37:29.04,1:37:33.12,Default,,0,0,0,,then for each theory, we have\Na class of these models
 Dialogue: 0,1:37:33.12,1:37:35.80,Default,,0,0,0,,whose properties can be\Nexpressed by patterns
-Dialogue: 0,1:37:35.80,1:37:39.08,Default,,0,0,0,,for gamma to correctly\Ncapture the target system,
+Dialogue: 0,1:37:35.80,1:37:39.08,Default,,0,0,0,,for Gamma to correctly\Ncapture the target system,
 Dialogue: 0,1:37:39.08,1:37:41.56,Default,,0,0,0,,we need to establish an equivalence
-Dialogue: 0,1:37:41.56,1:37:43.12,Default,,0,0,0,,between the models of gamma
+Dialogue: 0,1:37:41.56,1:37:43.12,Default,,0,0,0,,between the models of Gamma
 Dialogue: 0,1:37:43.12,1:37:45.28,Default,,0,0,0,,and the models of the target system.
 Dialogue: 0,1:37:45.28,1:37:48.84,Default,,0,0,0,,Then, we can use matching\Nlogic patterns to express
 Dialogue: 0,1:37:48.84,1:37:54.08,Default,,0,0,0,,and reason about the properties\Nabout the target system.
@@ -1718,14 +1718,14 @@ Dialogue: 0,1:37:56.12,1:37:58.08,Default,,0,0,0,,we define the matching logic t
 Dialogue: 0,1:37:58.08,1:38:01.72,Default,,0,0,0,,that captures many important\Nmathematical concepts
 Dialogue: 0,1:38:01.72,1:38:04.36,Default,,0,0,0,,such as equality, membership,
 Dialogue: 0,1:38:04.36,1:38:07.08,Default,,0,0,0,,the concept of sorts\Nand many sorted functions,
-Dialogue: 0,1:38:07.08,1:38:09.76,Default,,0,0,0,,pairs and the power\Nsort two to the s,
+Dialogue: 0,1:38:07.08,1:38:09.76,Default,,0,0,0,,pairs and the power\Nsort 2 to the s,
 Dialogue: 0,1:38:09.76,1:38:13.36,Default,,0,0,0,,whose elements are the sets\Nof elements of sort s.
 Dialogue: 0,1:38:13.36,1:38:16.28,Default,,0,0,0,,Based on these\Ninfrastructure definitions,
 Dialogue: 0,1:38:16.28,1:38:20.56,Default,,0,0,0,,we now define binders\Nin matching logic.
-Dialogue: 0,1:38:20.56,1:38:22.84,Default,,0,0,0,,We define the theory gamma lambda
+Dialogue: 0,1:38:20.56,1:38:22.84,Default,,0,0,0,,We define the theory Gamma lambda
 Dialogue: 0,1:38:22.84,1:38:24.76,Default,,0,0,0,,that captures lambda calculus
-Dialogue: 0,1:38:24.76,1:38:28.36,Default,,0,0,0,,due to time limits are only\Nshowed intuitive ideas.
-Dialogue: 0,1:38:28.36,1:38:32.16,Default,,0,0,0,,Intuitively, the lambda\Nabstraction, lambda Xe,
+Dialogue: 0,1:38:24.76,1:38:28.36,Default,,0,0,0,,due to time limits I'll only\Nshow intuitive ideas.
+Dialogue: 0,1:38:28.36,1:38:32.16,Default,,0,0,0,,Intuitively, the lambda\Nabstraction, lambda X.e,
 Dialogue: 0,1:38:32.16,1:38:36.16,Default,,0,0,0,,creates infinitely many alpha\Nequivalent representations,
 Dialogue: 0,1:38:36.16,1:38:39.32,Default,,0,0,0,,lambda X1 e, X1 substitutes for X, etc.
 Dialogue: 0,1:38:40.00,1:38:44.52,Default,,0,0,0,,Our idea is to\Ncapture these representations.
@@ -1742,12 +1742,12 @@ Dialogue: 0,1:39:14.48,1:39:17.44,Default,,0,0,0,,The intension of a set\Nequals
 Dialogue: 0,1:39:17.44,1:39:21.28,Default,,0,0,0,,but the set is no longer regarded\Nas a collection of elements
 Dialogue: 0,1:39:21.28,1:39:24.64,Default,,0,0,0,,but as a single element\Nin a power set domain.
 Dialogue: 0,1:39:24.64,1:39:28.24,Default,,0,0,0,,This way we can avoid\Nthe pointwise extension
-Dialogue: 0,1:39:28.24,1:39:31.64,Default,,0,0,0,,when we apply the constructed\Nlambda to the set.
-Dialogue: 0,1:39:31.64,1:39:36.76,Default,,0,0,0,,We introduce a notation (x, e) to\Nmean the intension of the graph set
+Dialogue: 0,1:39:28.24,1:39:31.64,Default,,0,0,0,,when we apply the constructor\Nlambda to the set.
+Dialogue: 0,1:39:31.64,1:39:36.76,Default,,0,0,0,,We introduce a notation [X]E to\Nmean the intension of the graph set
 Dialogue: 0,1:39:36.76,1:39:38.20,Default,,0,0,0,,which is one element
 Dialogue: 0,1:39:38.20,1:39:42.16,Default,,0,0,0,,that includes all the binding\Ninformation of x into e.
-Dialogue: 0,1:39:42.16,1:39:46.60,Default,,0,0,0,,And finally, we define lambda x,\Ne as the application pattern
-Dialogue: 0,1:39:46.60,1:39:51.56,Default,,0,0,0,,where the constructed lambda is\Napplied to the graph set (x, e).
+Dialogue: 0,1:39:42.16,1:39:46.60,Default,,0,0,0,,And finally, we define lambda x.e\N as the application pattern
+Dialogue: 0,1:39:46.60,1:39:51.56,Default,,0,0,0,,where the constructed lambda is\Napplied to the graph set [X]E.
 Dialogue: 0,1:39:51.56,1:39:54.52,Default,,0,0,0,,In short, to define\Nlambda abstraction
 Dialogue: 0,1:39:54.52,1:39:58.92,Default,,0,0,0,,we first use the building binder\Nexist to define the graph set
 Dialogue: 0,1:39:58.92,1:40:01.20,Default,,0,0,0,,and capture the binding behavior
@@ -1761,32 +1761,32 @@ Dialogue: 0,1:40:20.00,1:40:21.64,Default,,0,0,0,,In terms of the syntax,
 Dialogue: 0,1:40:21.64,1:40:25.40,Default,,0,0,0,,matching logic captures\Nlambda expressions verbatim.
 Dialogue: 0,1:40:25.40,1:40:31.80,Default,,0,0,0,,The lambda abstraction\Nbecomes this pattern
 Dialogue: 0,1:40:31.80,1:40:34.04,Default,,0,0,0,,where we use lambda to build a term
-Dialogue: 0,1:40:34.04,1:40:38.84,Default,,0,0,0,,and use (x, e) which is\Nthe graph set to build the binding.
+Dialogue: 0,1:40:34.04,1:40:38.84,Default,,0,0,0,,and use [X]E which is\Nthe graph set to build the binding.
 Dialogue: 0,1:40:38.84,1:40:42.36,Default,,0,0,0,,In lambda calculus formal reasoning\Nmeans equational reasoning
-Dialogue: 0,1:40:42.36,1:40:44.28,Default,,0,0,0,,thus the beta-reduction rule.
+Dialogue: 0,1:40:42.36,1:40:44.28,Default,,0,0,0,,plus the beta-reduction rule.
 Dialogue: 0,1:40:44.28,1:40:46.52,Default,,0,0,0,,To capture that we\Nadd beta reduction
-Dialogue: 0,1:40:46.52,1:40:49.68,Default,,0,0,0,,as an axiom schema to\Nthe theory lambda
-Dialogue: 0,1:40:49.68,1:40:52.20,Default,,0,0,0,,then we can prove that gamma lambda
+Dialogue: 0,1:40:46.52,1:40:49.68,Default,,0,0,0,,as an axiom schema to\Nthe theory Gamma lambda
+Dialogue: 0,1:40:49.68,1:40:52.20,Default,,0,0,0,,then we can prove that Gamma lambda
 Dialogue: 0,1:40:52.20,1:40:55.12,Default,,0,0,0,,indeed captures lambda\Ncalculus faithfully
 Dialogue: 0,1:40:55.12,1:40:57.68,Default,,0,0,0,,in the sense that lambda\Ncalculus reasoning
 Dialogue: 0,1:40:57.68,1:41:00.88,Default,,0,0,0,,is equivalent to the matching\Nlogic formal reasoning
-Dialogue: 0,1:41:00.88,1:41:02.76,Default,,0,0,0,,within the theory gamma lambda
+Dialogue: 0,1:41:00.88,1:41:02.76,Default,,0,0,0,,within the theory Gamma lambda
 Dialogue: 0,1:41:02.76,1:41:06.00,Default,,0,0,0,,and is also equivalent to\Nthe semantic validity
-Dialogue: 0,1:41:06.00,1:41:09.12,Default,,0,0,0,,within the theory gamma lambda.
+Dialogue: 0,1:41:06.00,1:41:09.12,Default,,0,0,0,,within the theory Gamma lambda.
 Dialogue: 0,1:41:09.12,1:41:11.12,Default,,0,0,0,,To conclude in this paper
 Dialogue: 0,1:41:11.12,1:41:15.32,Default,,0,0,0,,we gave a generic way to dealing\Nwith binding using matching logic.
-Dialogue: 0,1:41:15.32,1:41:18.40,Default,,0,0,0,,Since matching logic is\Nthe logic foundation of K
+Dialogue: 0,1:41:15.32,1:41:18.40,Default,,0,0,0,,Since matching logic is\Nthe logical foundation of K
 Dialogue: 0,1:41:18.40,1:41:22.12,Default,,0,0,0,,our work is useful to\Nthe development of K.
 Dialogue: 0,1:41:22.12,1:41:25.40,Default,,0,0,0,,In the paper we proposed\Na simple matching logic variant
-Dialogue: 0,1:41:25.40,1:41:27.92,Default,,0,0,0,,that has only 7 synthetic constructs
-Dialogue: 0,1:41:27.92,1:41:31.68,Default,,0,0,0,,and with fully developed\Nmodels and proof theories.
+Dialogue: 0,1:41:25.40,1:41:27.92,Default,,0,0,0,,that has only 7 syntactic constructs
+Dialogue: 0,1:41:27.92,1:41:31.68,Default,,0,0,0,,and we fully developed\Nmodels and proof theories.
 Dialogue: 0,1:41:31.68,1:41:35.12,Default,,0,0,0,,Then we defined the matching\Nlogic theory for lambda calculus
 Dialogue: 0,1:41:35.12,1:41:40.20,Default,,0,0,0,,where lambda abstraction is defined\Nby applying the construct lambda
-Dialogue: 0,1:41:40.20,1:41:42.20,Default,,0,0,0,,to the graph set (x, e).
+Dialogue: 0,1:41:40.20,1:41:42.20,Default,,0,0,0,,to the graph set [X]E.
 Dialogue: 0,1:41:42.20,1:41:44.76,Default,,0,0,0,,We proved the correctness\Nof this definition
 Dialogue: 0,1:41:44.76,1:41:47.40,Default,,0,0,0,,by showing the equivalence\Namong the validity
 Dialogue: 0,1:41:47.40,1:41:52.00,Default,,0,0,0,,and the provability of lambda\Ncalculus and matching logic.
-Dialogue: 0,1:41:52.00,1:41:56.60,Default,,0,0,0,,Finally, we extending our approach\Nto all binders in a systematic way
+Dialogue: 0,1:41:52.00,1:41:56.60,Default,,0,0,0,,Finally, we extended our approach\Nto all binders in a systematic way
 Dialogue: 0,1:41:56.60,1:41:59.32,Default,,0,0,0,,where the details can\Nbe found in the paper.
 Dialogue: 0,1:41:59.32,1:42:00.72,Default,,0,0,0,,Due to the time limit,
 Dialogue: 0,1:42:00.72,1:42:04.12,Default,,0,0,0,,I cannot fully cover all\Ntechnical details in this talk.
