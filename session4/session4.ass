@@ -35,8 +35,8 @@ Dialogue: 0,0:13:18.24,0:13:20.24,Default,,0,0,0,,is on the clarity of expositio
 Dialogue: 0,0:13:20.24,0:13:23.84,Default,,0,0,0,,and I'm sure that you'll agree that\N this paper is a beautiful read.
 Dialogue: 0,0:13:23.84,0:13:26.92,Default,,0,0,0,,This paper will be presented\N by Lionel Parreaux
 Dialogue: 0,0:13:26.92,0:13:28.72,Default,,0,0,0,,and he will tell us about
-Dialogue: 0,0:13:28.72,0:13:31.48,Default,,0,0,0,,The Simple Essence of\N Algebraic Subtyping,
-Dialogue: 0,0:13:31.48,0:13:34.48,Default,,0,0,0,,Principal Type with Principal\N Subtyping Made Easy.
+Dialogue: 0,0:13:28.72,0:13:31.48,Default,,0,0,0,,The Simple Essence of\N Algebraic Subtyping:
+Dialogue: 0,0:13:31.48,0:13:34.48,Default,,0,0,0,,Principal Type Inference with\N Subtyping Made Easy.
 Dialogue: 0,0:13:35.40,0:13:36.40,Default,,0,0,0,,LIONEL PARREAUX: Hi, I'm Lionel Parreaux
 Dialogue: 0,0:13:36.40,0:13:37.96,Default,,0,0,0,,and I will present\N my functional pearl
 Dialogue: 0,0:13:37.96,0:13:40.36,Default,,0,0,0,,on the simple essence of\N algebraic subtyping.
@@ -62,18 +62,18 @@ Dialogue: 0,0:14:22.96,0:14:25.40,Default,,0,0,0,,Moreover, we focus on\N implic
 Dialogue: 0,0:14:25.40,0:14:27.56,Default,,0,0,0,,which means that expressions\N of a certain type
 Dialogue: 0,0:14:27.56,0:14:29.20,Default,,0,0,0,,do not need to be annotated,
 Dialogue: 0,0:14:29.20,0:14:31.44,Default,,0,0,0,,in order to be used at\N a less specific type.
-Dialogue: 0,0:14:32.04,0:14:33.84,Default,,0,0,0,,So when we write 1+2,
+Dialogue: 0,0:14:32.04,0:14:33.84,Default,,0,0,0,,So when we write 1 + 2,
 Dialogue: 0,0:14:33.84,0:14:36.00,Default,,0,0,0,,we don't need to explicitly annotate
 Dialogue: 0,0:14:36.00,0:14:39.28,Default,,0,0,0,,1 as being of type int, although\N it's also of type nat.
 Dialogue: 0,0:14:39.92,0:14:42.00,Default,,0,0,0,,Now let us see a few\N examples of subtyping.
 Dialogue: 0,0:14:42.84,0:14:46.20,Default,,0,0,0,,Singleton types are types\N which represent single values.
 Dialogue: 0,0:14:46.20,0:14:48.32,Default,,0,0,0,,For instance, the type written 0
 Dialogue: 0,0:14:48.32,0:14:50.48,Default,,0,0,0,,is the singleton type\N of the value 0.
-Dialogue: 0,0:14:51.32,0:14:53.84,Default,,0,0,0,,Union types are used\N to type expressions,
+Dialogue: 0,0:14:51.32,0:14:53.84,Default,,0,0,0,,Union types are used\N to type expressions
 Dialogue: 0,0:14:53.84,0:14:56.36,Default,,0,0,0,,which can be either one\N of two given types.
-Dialogue: 0,0:14:56.36,0:14:59.20,Default,,0,0,0,,Intersection types are\N used to type expressions,
+Dialogue: 0,0:14:56.36,0:14:59.20,Default,,0,0,0,,Intersection types are\N used to type expressions
 Dialogue: 0,0:14:59.20,0:15:01.08,Default,,0,0,0,,which are of both given types.
-Dialogue: 0,0:15:01.88,0:15:04.88,Default,,0,0,0,,As an example, subtyping\N relationship between these,
+Dialogue: 0,0:15:01.88,0:15:04.88,Default,,0,0,0,,As an example subtyping\N relationship between these,
 Dialogue: 0,0:15:04.88,0:15:08.56,Default,,0,0,0,,the type 0 is a subtype\N of the union of 0 and 1,
 Dialogue: 0,0:15:08.56,0:15:10.44,Default,,0,0,0,,which is itself a subtype of nat.
 Dialogue: 0,0:15:11.20,0:15:14.24,Default,,0,0,0,,In fact, subtyping naturally\N lets us design types,
@@ -81,100 +81,100 @@ Dialogue: 0,0:15:14.24,0:15:18.00,Default,,0,0,0,,which are as close as desired 
 Dialogue: 0,0:15:18.84,0:15:22.36,Default,,0,0,0,,For instance, we can define\N the singleton type of empty lists
 Dialogue: 0,0:15:22.36,0:15:25.48,Default,,0,0,0,,as well as the type of\N prepending a value to a lists.
 Dialogue: 0,0:15:26.68,0:15:29.16,Default,,0,0,0,,This allows us to use\N the same list syntax
-Dialogue: 0,0:15:29.16,0:15:31.64,Default,,0,0,0,,in representation to\N express things like
+Dialogue: 0,0:15:29.16,0:15:31.64,Default,,0,0,0,,and representation to\N express things like
 Dialogue: 0,0:15:31.64,0:15:35.44,Default,,0,0,0,,tuple types, non-empty lists\N and everything in between.
 Dialogue: 0,0:15:37.76,0:15:40.84,Default,,0,0,0,,Subtyping is not just for\N object-oriented programming.
 Dialogue: 0,0:15:40.84,0:15:43.40,Default,,0,0,0,,In fact, it has found\N a host of applications
 Dialogue: 0,0:15:43.40,0:15:45.36,Default,,0,0,0,,in functional programming.
 Dialogue: 0,0:15:45.36,0:15:48.72,Default,,0,0,0,,It can, for example, be used\N for predicate refinement types,
-Dialogue: 0,0:15:48.72,0:15:52.44,Default,,0,0,0,,first-class modules, XML\N transformations and much more.
+Dialogue: 0,0:15:48.72,0:15:52.44,Default,,0,0,0,,first-class modules, XML\N transformations, and much more.
 Dialogue: 0,0:15:54.00,0:15:55.72,Default,,0,0,0,,Now some may be under the impression
-Dialogue: 0,0:15:55.72,0:15:59.32,Default,,0,0,0,,that functional languages,\N usually try to avoid subtyping.
+Dialogue: 0,0:15:55.72,0:15:59.32,Default,,0,0,0,,that functional languages\N usually try to avoid subtyping.
 Dialogue: 0,0:15:59.32,0:16:02.32,Default,,0,0,0,,But, in fact, subtyping is present\N in many of those languages
 Dialogue: 0,0:16:02.32,0:16:04.84,Default,,0,0,0,,including OCaml, Haskell and Rust.
-Dialogue: 0,0:16:04.84,0:16:08.16,Default,,0,0,0,,In Rust, subtyping is used to\N relate the location lifetimes.
+Dialogue: 0,0:16:04.84,0:16:08.16,Default,,0,0,0,,In Rust, subtyping is used to\N relate allocation lifetimes.
 Dialogue: 0,0:16:08.16,0:16:10.08,Default,,0,0,0,,In Ocaml, where\N subtyping is explicit,
 Dialogue: 0,0:16:10.08,0:16:13.04,Default,,0,0,0,,it is used in many places such\N as polymorphic variants,
-Dialogue: 0,0:16:13.04,0:16:15.60,Default,,0,0,0,,first-class modules\N and the object system.
+Dialogue: 0,0:16:13.04,0:16:15.60,Default,,0,0,0,,first-class modules,\N and the object system.
 Dialogue: 0,0:16:15.60,0:16:18.28,Default,,0,0,0,,In Haskell, subtyping is\N used in the context of
 Dialogue: 0,0:16:18.28,0:16:21.44,Default,,0,0,0,,first-class polymorphism to check\N inferred types against signatures.
-Dialogue: 0,0:16:22.24,0:16:24.64,Default,,0,0,0,,Yet all these languages\N use type inference engines
+Dialogue: 0,0:16:22.24,0:16:24.64,Default,,0,0,0,,Yet, all these languages\N use type inference engines
 Dialogue: 0,0:16:24.64,0:16:25.88,Default,,0,0,0,,based on unification, which
 Dialogue: 0,0:16:26.64,0:16:28.44,Default,,0,0,0,,does not\N handle subtyping well
 Dialogue: 0,0:16:28.44,0:16:31.60,Default,,0,0,0,,and limits its applicability.
 Dialogue: 0,0:16:31.60,0:16:34.56,Default,,0,0,0,,What we'd really like is\N a way of integrating subtyping
-Dialogue: 0,0:16:34.56,0:16:40.96,Default,,0,0,0,,in ML style type inference, more\N consistently and reliably.
+Dialogue: 0,0:16:34.56,0:16:40.96,Default,,0,0,0,,in ML style type inference more\N consistently and reliably.
 Dialogue: 0,0:16:40.96,0:16:43.32,Default,,0,0,0,,So first, let's review\N the way ML languages
-Dialogue: 0,0:16:43.32,0:16:47.00,Default,,0,0,0,,have traditionally inferred\N types based on unification,
-Dialogue: 0,0:16:47.00,0:16:49.56,Default,,0,0,0,,the Hindley-Milner type\N inference algorithm relies
-Dialogue: 0,0:16:49.56,0:16:51.44,Default,,0,0,0,,and introducing type variables
+Dialogue: 0,0:16:43.32,0:16:47.00,Default,,0,0,0,,have traditionally inferred\N types based on unification.
+Dialogue: 0,0:16:47.00,0:16:49.56,Default,,0,0,0,,The Hindley-Milner type\N inference algorithm relies
+Dialogue: 0,0:16:49.56,0:16:51.44,Default,,0,0,0,,on introducing type variables
 Dialogue: 0,0:16:51.44,0:16:53.88,Default,,0,0,0,,when the types of expressions\N are not yet known,
 Dialogue: 0,0:16:53.88,0:16:57.12,Default,,0,0,0,,and type variables are later\N unified with concrete types
 Dialogue: 0,0:16:57.12,0:16:58.60,Default,,0,0,0,,or with other type variables,
 Dialogue: 0,0:16:58.60,0:17:02.04,Default,,0,0,0,,based on the way these\N expressions are used.
 Dialogue: 0,0:17:02.04,0:17:04.44,Default,,0,0,0,,As an example, consider\N the following term,
-Dialogue: 0,0:17:04.44,0:17:06.84,Default,,0,0,0,,which takes two parameters, X and Y,
-Dialogue: 0,0:17:06.84,0:17:10.12,Default,,0,0,0,,compares them and returns\N the smaller of the two.
-Dialogue: 0,0:17:10.12,0:17:12.00,Default,,0,0,0,,We start from a context gamma,
+Dialogue: 0,0:17:04.44,0:17:06.84,Default,,0,0,0,,which takes two parameters x and y,
+Dialogue: 0,0:17:06.84,0:17:10.12,Default,,0,0,0,,compares them, and returns\N the smaller of the two.
+Dialogue: 0,0:17:10.12,0:17:12.00,Default,,0,0,0,,We start from a context Gamma,
 Dialogue: 0,0:17:12.00,0:17:15.00,Default,,0,0,0,,including only the comparison\N operation defined
-Dialogue: 0,0:17:15.00,0:17:18.04,Default,,0,0,0,,to operate an integer values.
-Dialogue: 0,0:17:18.04,0:17:21.80,Default,,0,0,0,,First, we can see that\N the outer lambda binding X,
-Dialogue: 0,0:17:21.80,0:17:23.84,Default,,0,0,0,,we assign X to\N type variable alpha,
-Dialogue: 0,0:17:23.84,0:17:26.68,Default,,0,0,0,,and place it in the context,
-Dialogue: 0,0:17:26.68,0:17:30.16,Default,,0,0,0,,then we look at\N the inner lambda binding Y
+Dialogue: 0,0:17:15.00,0:17:18.04,Default,,0,0,0,,to operate on integer values.
+Dialogue: 0,0:17:18.04,0:17:21.80,Default,,0,0,0,,First, we consider\N the outer lambda binding x.
+Dialogue: 0,0:17:21.80,0:17:23.84,Default,,0,0,0,,We assign x the\N type variable alpha,
+Dialogue: 0,0:17:23.84,0:17:26.68,Default,,0,0,0,,and place it in the context.
+Dialogue: 0,0:17:26.68,0:17:30.16,Default,,0,0,0,,Then, we look at\N the inner lambda binding y
 Dialogue: 0,0:17:30.16,0:17:31.76,Default,,0,0,0,,and similarly extend the context
 Dialogue: 0,0:17:31.76,0:17:34.60,Default,,0,0,0,,with a new type variable, beta.
 Dialogue: 0,0:17:34.60,0:17:37.60,Default,,0,0,0,,Then, we consider\N the if-then-else expression,
-Dialogue: 0,0:17:37.60,0:17:39.76,Default,,0,0,0,,in particular, the condition,
-Dialogue: 0,0:17:39.76,0:17:42.24,Default,,0,0,0,,variable X has type alpha
+Dialogue: 0,0:17:37.60,0:17:39.76,Default,,0,0,0,,in particular, the condition.
+Dialogue: 0,0:17:39.76,0:17:42.24,Default,,0,0,0,,Variable x has type alpha
 Dialogue: 0,0:17:42.24,0:17:44.00,Default,,0,0,0,,and it's used on the left hand side
-Dialogue: 0,0:17:44.00,0:17:50.24,Default,,0,0,0,,of the less than operation,\N so we unify alpha with int.
-Dialogue: 0,0:17:50.24,0:17:52.48,Default,,0,0,0,,Variable Y has type beta
+Dialogue: 0,0:17:44.00,0:17:50.24,Default,,0,0,0,,of the less-than operation,\N so we unify alpha with int.
+Dialogue: 0,0:17:50.24,0:17:52.48,Default,,0,0,0,,Variable y has type beta
 Dialogue: 0,0:17:52.48,0:17:53.96,Default,,0,0,0,,and it's used on the right hand side
 Dialogue: 0,0:17:53.96,0:17:59.80,Default,,0,0,0,,of the comparison operation,\N so we unify beta with int.
-Dialogue: 0,0:17:59.80,0:18:03.48,Default,,0,0,0,,Then we consider the branches\N of the if statement,
-Dialogue: 0,0:18:03.48,0:18:05.96,Default,,0,0,0,,the first branch has type alpha,
+Dialogue: 0,0:17:59.80,0:18:03.48,Default,,0,0,0,,Then we consider the branches\N of the if statement.
+Dialogue: 0,0:18:03.48,0:18:05.96,Default,,0,0,0,,The first branch has type alpha,
 Dialogue: 0,0:18:05.96,0:18:09.20,Default,,0,0,0,,the second branch\N has type beta,
 Dialogue: 0,0:18:09.20,0:18:12.56,Default,,0,0,0,,and since the if-then-else\N must return a single type,
 Dialogue: 0,0:18:12.56,0:18:14.68,Default,,0,0,0,,we unify alpha and beta,
 Dialogue: 0,0:18:14.68,0:18:19.52,Default,,0,0,0,,which is the same as unifying\N int with int and is trivial.
 Dialogue: 0,0:18:19.52,0:18:23.20,Default,,0,0,0,,The result type of\N the if-then-else is alpha,
-Dialogue: 0,0:18:23.20,0:18:25.56,Default,,0,0,0,,so the result type is int
+Dialogue: 0,0:18:23.20,0:18:25.56,Default,,0,0,0,,so the result type is int,
 Dialogue: 0,0:18:25.56,0:18:28.96,Default,,0,0,0,,because we have unified\N int with alpha.
-Dialogue: 0,0:18:28.96,0:18:31.80,Default,,0,0,0,,The result of the inner\N lambda is beta to int,
+Dialogue: 0,0:18:28.96,0:18:31.80,Default,,0,0,0,,The result type of the inner\N lambda is beta to int,
 Dialogue: 0,0:18:31.80,0:18:33.60,Default,,0,0,0,,which is int to int,
 Dialogue: 0,0:18:33.60,0:18:36.84,Default,,0,0,0,,and the final result type\N is alpha to int to int,
 Dialogue: 0,0:18:36.84,0:18:39.24,Default,,0,0,0,,which is int to int to int.
-Dialogue: 0,0:18:39.24,0:18:42.32,Default,,0,0,0,,Now let's review how to adapt\N this algorithm to subtyping,
-Dialogue: 0,0:18:42.32,0:18:44.76,Default,,0,0,0,,instead of tracking\N equalities between types,
+Dialogue: 0,0:18:39.24,0:18:42.32,Default,,0,0,0,,Now let's review how to adapt\N this algorithm to subtyping.
+Dialogue: 0,0:18:42.32,0:18:44.76,Default,,0,0,0,,Instead of tracking\N equalities between types,
 Dialogue: 0,0:18:44.76,0:18:47.60,Default,,0,0,0,,we now track inequalities\N between types.
 Dialogue: 0,0:18:47.60,0:18:49.12,Default,,0,0,0,,We do not unify type variables,
 Dialogue: 0,0:18:49.12,0:18:52.64,Default,,0,0,0,,but instead we keep track\N of their assumed subtypes
-Dialogue: 0,0:18:52.64,0:18:57.44,Default,,0,0,0,,and super types, that is we\N keep track of their bounds.
+Dialogue: 0,0:18:52.64,0:18:57.44,Default,,0,0,0,,and supertypes — that is, we\N keep track of their bounds.
 Dialogue: 0,0:18:57.44,0:18:58.52,Default,,0,0,0,,We base our approach
-Dialogue: 0,0:18:58.52,0:19:00.88,Default,,0,0,0,,on the previous\N algorithm called ML-sub,
+Dialogue: 0,0:18:58.52,0:19:00.88,Default,,0,0,0,,on a previous\N algorithm called ML-sub,
 Dialogue: 0,0:19:00.88,0:19:03.04,Default,,0,0,0,,which was the first to\N infer most specific types
 Dialogue: 0,0:19:03.04,0:19:05.20,Default,,0,0,0,,in the presence of subtyping,
 Dialogue: 0,0:19:05.20,0:19:06.92,Default,,0,0,0,,but whose presentation was complex
 Dialogue: 0,0:19:06.92,0:19:09.20,Default,,0,0,0,,and difficult to understand.
-Dialogue: 0,0:19:09.20,0:19:10.24,Default,,0,0,0,,In the paper,
-Dialogue: 0,0:19:10.24,0:19:12.40,Default,,0,0,0,,the new synthesis\N algorithm is introduced,
+Dialogue: 0,0:19:09.20,0:19:10.24,Default,,0,0,0,,In the (our) paper,
+Dialogue: 0,0:19:10.24,0:19:12.40,Default,,0,0,0,,the new Simple-sub\N algorithm is introduced,
 Dialogue: 0,0:19:12.40,0:19:15.12,Default,,0,0,0,,which is closer to the traditional\N type inference algorithm
 Dialogue: 0,0:19:15.12,0:19:16.12,Default,,0,0,0,,we have just seen,
-Dialogue: 0,0:19:16.12,0:19:19.04,Default,,0,0,0,,and it's easier to\N specify and implement.
+Dialogue: 0,0:19:16.12,0:19:19.04,Default,,0,0,0,,and is easier to\N specify and implement.
 Dialogue: 0,0:19:19.04,0:19:21.32,Default,,0,0,0,,Going back to our example,
-Dialogue: 0,0:19:21.32,0:19:23.72,Default,,0,0,0,,we look at the outer lambda again,
-Dialogue: 0,0:19:23.72,0:19:28.32,Default,,0,0,0,,we extend the context with\N a new type variable as before,
-Dialogue: 0,0:19:28.32,0:19:30.88,Default,,0,0,0,,same for the second\N lambda abstraction,
-Dialogue: 0,0:19:30.88,0:19:34.28,Default,,0,0,0,,we extend the context with\N the new type variable beta.
-Dialogue: 0,0:19:34.28,0:19:36.68,Default,,0,0,0,,Then we'll look at\N the condition again,
-Dialogue: 0,0:19:36.68,0:19:40.20,Default,,0,0,0,,the variable X has type\N alpha, but this time,
+Dialogue: 0,0:19:21.32,0:19:23.72,Default,,0,0,0,,we look at the outer lambda again.
+Dialogue: 0,0:19:23.72,0:19:28.32,Default,,0,0,0,,We extend the context with\N a new type variable, as before.
+Dialogue: 0,0:19:28.32,0:19:30.88,Default,,0,0,0,,Same for the second\N lambda abstraction.
+Dialogue: 0,0:19:30.88,0:19:34.28,Default,,0,0,0,,We extend the context with\N the new type variable beta.
+Dialogue: 0,0:19:34.28,0:19:36.68,Default,,0,0,0,,Then we look at\N the condition again;
+Dialogue: 0,0:19:36.68,0:19:40.20,Default,,0,0,0,,the variable x has type\N alpha, but this time,
 Dialogue: 0,0:19:40.20,0:19:42.52,Default,,0,0,0,,instead of unifying alpha with int,
 Dialogue: 0,0:19:42.52,0:19:45.44,Default,,0,0,0,,we simply specify that alpha\N should be a subtype of int,
-Dialogue: 0,0:19:45.44,0:19:50.12,Default,,0,0,0,,so we register int as one of\N the upper bounds of alpha,
-Dialogue: 0,0:19:50.12,0:19:55.16,Default,,0,0,0,,we do the same for beta,\N and then we look at the branches.
-Dialogue: 0,0:19:55.16,0:19:56.96,Default,,0,0,0,,The first branch has type alpha,
-Dialogue: 0,0:19:56.96,0:19:58.92,Default,,0,0,0,,second  branch has type beta,
+Dialogue: 0,0:19:45.44,0:19:50.12,Default,,0,0,0,,so we register int as one of\N the upper bounds of alpha.
+Dialogue: 0,0:19:50.12,0:19:55.16,Default,,0,0,0,,We do the same for beta,\N and then we look at the branches.
+Dialogue: 0,0:19:55.16,0:19:56.96,Default,,0,0,0,,The first branch has type alpha;
+Dialogue: 0,0:19:56.96,0:19:58.92,Default,,0,0,0,,second branch has type beta;
 Dialogue: 0,0:19:58.92,0:20:01.72,Default,,0,0,0,,but this time we introduced\N a new type variable
 Dialogue: 0,0:20:01.72,0:20:05.72,Default,,0,0,0,,to represent the union\N of the two branches.
 Dialogue: 0,0:20:05.72,0:20:08.28,Default,,0,0,0,,We constraint this type\N variable to be a super type
@@ -187,28 +187,28 @@ Dialogue: 0,0:20:26.72,0:20:30.20,Default,,0,0,0,,where alpha is less than\N int
 Dialogue: 0,0:20:30.20,0:20:33.12,Default,,0,0,0,,and alpha union beta\N is less than gamma,
 Dialogue: 0,0:20:33.12,0:20:35.32,Default,,0,0,0,,which means that\N gamma is a super type
 Dialogue: 0,0:20:35.32,0:20:37.80,Default,,0,0,0,,of both alpha and beta.
-Dialogue: 0,0:20:37.80,0:20:40.32,Default,,0,0,0,,Now the call F of zero and one
-Dialogue: 0,0:20:40.32,0:20:44.88,Default,,0,0,0,,is more precisely typed\N as nat instead of int,
-Dialogue: 0,0:20:44.88,0:20:48.12,Default,,0,0,0,,but is this really a type\N we want to show users?
-Dialogue: 0,0:20:48.12,0:20:50.88,Default,,0,0,0,,It looks much more confusing\N than the type we had before,
+Dialogue: 0,0:20:37.80,0:20:40.32,Default,,0,0,0,,Now the call f 0 1
+Dialogue: 0,0:20:40.32,0:20:44.88,Default,,0,0,0,,is more precisely typed\N as nat instead of int.
+Dialogue: 0,0:20:44.88,0:20:48.12,Default,,0,0,0,,But is this really a type\N we want to show users?
+Dialogue: 0,0:20:48.12,0:20:50.88,Default,,0,0,0,,It looks much more confusing\N than the type we had before
 Dialogue: 0,0:20:50.88,0:20:53.60,Default,,0,0,0,,we introduced\N subtyping into the mix.
-Dialogue: 0,0:20:53.60,0:20:55.96,Default,,0,0,0,,In fact, we can inline so to say,
+Dialogue: 0,0:20:53.60,0:20:55.96,Default,,0,0,0,,In fact, we can inline, so to say,
 Dialogue: 0,0:20:55.96,0:20:59.20,Default,,0,0,0,,the bounds of each type\N variable into the result type
-Dialogue: 0,0:20:59.20,0:21:03.72,Default,,0,0,0,,to use the simpler type, this\N is called bounds coalescing.
+Dialogue: 0,0:20:59.20,0:21:03.72,Default,,0,0,0,,to yield a simpler type. This\N is called bounds coalescing.
 Dialogue: 0,0:21:03.72,0:21:05.80,Default,,0,0,0,,We replace each type\N variable occurrence
 Dialogue: 0,0:21:05.80,0:21:08.72,Default,,0,0,0,,with the composition of\N the variable's bounds.
-Dialogue: 0,0:21:08.72,0:21:13.32,Default,,0,0,0,,For occurrences in output position\N or in positive position,
+Dialogue: 0,0:21:08.72,0:21:13.32,Default,,0,0,0,,For occurrences in output position\N – or in positive position –
 Dialogue: 0,0:21:13.32,0:21:17.16,Default,,0,0,0,,we use a union of the type\N variable with its lower bounds.
-Dialogue: 0,0:21:17.16,0:21:21.68,Default,,0,0,0,,Conversely, for occurrences in\N input or negative positions,
+Dialogue: 0,0:21:17.16,0:21:21.68,Default,,0,0,0,,Conversely, for occurrences in\N input — or negative — positions,
 Dialogue: 0,0:21:21.68,0:21:24.12,Default,,0,0,0,,we use an intersection\N of the type variable
 Dialogue: 0,0:21:24.12,0:21:26.00,Default,,0,0,0,,with its upper bounds.
-Dialogue: 0,0:21:26.00,0:21:28.48,Default,,0,0,0,,We can actually simplify\N these type further
+Dialogue: 0,0:21:26.00,0:21:28.48,Default,,0,0,0,,We can actually simplify\N this type further
 Dialogue: 0,0:21:28.48,0:21:29.60,Default,,0,0,0,,by removing gamma,
-Dialogue: 0,0:21:29.60,0:21:32.56,Default,,0,0,0,,which is useless\N and merging alpha and beta
-Dialogue: 0,0:21:32.56,0:21:34.12,Default,,0,0,0,,using a type expression,
+Dialogue: 0,0:21:29.60,0:21:32.56,Default,,0,0,0,,which is useless,\N and merging alpha and beta,
+Dialogue: 0,0:21:32.56,0:21:34.12,Default,,0,0,0,,yielding a type expression
 Dialogue: 0,0:21:34.12,0:21:38.00,Default,,0,0,0,,which is much more\N compact and easy to read.
-Dialogue: 0,0:21:38.00,0:21:39.92,Default,,0,0,0,,Both of these simplifications,
-Dialogue: 0,0:21:39.92,0:21:42.92,Default,,0,0,0,,leave us with a type that is\N equivalent to the original
+Dialogue: 0,0:21:38.00,0:21:39.92,Default,,0,0,0,,Both of these simplifications
+Dialogue: 0,0:21:39.92,0:21:42.92,Default,,0,0,0,,leave us with a type that is\N equivalent to the original,
 Dialogue: 0,0:21:42.92,0:21:44.44,Default,,0,0,0,,unsimplified type,
 Dialogue: 0,0:21:44.44,0:21:48.84,Default,,0,0,0,,despite not featuring the same\N number of type variables.
 Dialogue: 0,0:21:48.84,0:21:50.40,Default,,0,0,0,,To understand why that is correct,
@@ -221,9 +221,9 @@ Dialogue: 0,0:22:04.52,0:22:07.84,Default,,0,0,0,,Indeed, using the resulting\N 
 Dialogue: 0,0:22:07.84,0:22:10.32,Default,,0,0,0,,requires an argument\N whose type is a subtype
 Dialogue: 0,0:22:10.32,0:22:11.88,Default,,0,0,0,,of the said intersection,
 Dialogue: 0,0:22:11.88,0:22:13.80,Default,,0,0,0,,which is to say that\N it must be a subtype
-Dialogue: 0,0:22:13.80,0:22:18.44,Default,,0,0,0,,of the type variable and each\N of its intersected bounds.
-Dialogue: 0,0:22:18.44,0:22:21.92,Default,,0,0,0,,In our case,\N the bound is just int.
-Dialogue: 0,0:22:21.92,0:22:25.40,Default,,0,0,0,,In particular where users\N of the function are free
+Dialogue: 0,0:22:13.80,0:22:18.44,Default,,0,0,0,,of the type variable and each\N of its intersected bounds
+Dialogue: 0,0:22:18.44,0:22:21.92,Default,,0,0,0,,(in our case,\N the bound is just int).
+Dialogue: 0,0:22:21.92,0:22:25.40,Default,,0,0,0,,In particular, while users\N of the function are free
 Dialogue: 0,0:22:25.40,0:22:28.60,Default,,0,0,0,,to instantiate alpha to\N whatever type they like,
 Dialogue: 0,0:22:28.60,0:22:30.28,Default,,0,0,0,,the function will not be callable
 Dialogue: 0,0:22:30.28,0:22:32.08,Default,,0,0,0,,if alpha is taken to be a type
@@ -232,21 +232,21 @@ Dialogue: 0,0:22:37.20,0:22:40.56,Default,,0,0,0,,Next, let us look at\N the sec
 Dialogue: 0,0:22:40.56,0:22:42.68,Default,,0,0,0,,Here, the insight is\N that alpha and beta
 Dialogue: 0,0:22:42.68,0:22:45.24,Default,,0,0,0,,are indistinguishable\N from each other
 Dialogue: 0,0:22:45.24,0:22:48.92,Default,,0,0,0,,since they always occur together\N in positive positions,
-Dialogue: 0,0:22:48.92,0:22:53.08,Default,,0,0,0,,which is to say here in\N the result type of the function.
+Dialogue: 0,0:22:48.92,0:22:53.08,Default,,0,0,0,,which is to say, here, in\N the result type of the function.
 Dialogue: 0,0:22:53.08,0:22:55.60,Default,,0,0,0,,Formally, the subsumption relation
 Dialogue: 0,0:22:55.60,0:22:57.56,Default,,0,0,0,,between two polymorphic types
 Dialogue: 0,0:22:57.56,0:22:59.84,Default,,0,0,0,,can be used to reason\N about the equivalence
 Dialogue: 0,0:22:59.84,0:23:03.28,Default,,0,0,0,,of simplified\N and unsimplified types.
 Dialogue: 0,0:23:03.28,0:23:05.88,Default,,0,0,0,,To show that one type\N subsumes another,
-Dialogue: 0,0:23:05.88,0:23:10.12,Default,,0,0,0,,that is tau zero less\N than for all tau one,
+Dialogue: 0,0:23:05.88,0:23:10.12,Default,,0,0,0,,that is, tau zero\Nless-than-for-all tau one,
 Dialogue: 0,0:23:10.12,0:23:11.72,Default,,0,0,0,,it is sufficient to\N pick an assignment
 Dialogue: 0,0:23:11.72,0:23:13.92,Default,,0,0,0,,of tau zero's type variables,
 Dialogue: 0,0:23:13.92,0:23:17.60,Default,,0,0,0,,which satisfies tau zero\N less than tau one.
 Dialogue: 0,0:23:17.60,0:23:19.52,Default,,0,0,0,,For the first subsumption direction,
 Dialogue: 0,0:23:19.52,0:23:21.36,Default,,0,0,0,,which is to show that\N the original type
 Dialogue: 0,0:23:21.36,0:23:23.64,Default,,0,0,0,,subsumes the simplified type,
-Dialogue: 0,0:23:23.64,0:23:26.92,Default,,0,0,0,,we can pick the following\N variable assignments.
-Dialogue: 0,0:23:26.92,0:23:30.76,Default,,0,0,0,,Alpha is left as alpha,\N and beta is taken to be alpha.
+Dialogue: 0,0:23:23.64,0:23:26.92,Default,,0,0,0,,we can pick the following\N variable assignments:
+Dialogue: 0,0:23:26.92,0:23:30.76,Default,,0,0,0,,alpha is left as alpha,\N and beta is taken to be alpha.
 Dialogue: 0,0:23:30.76,0:23:33.72,Default,,0,0,0,,This makes both types identical,\N which trivially means
 Dialogue: 0,0:23:33.72,0:23:37.04,Default,,0,0,0,,that the former subsumes the latter.
 Dialogue: 0,0:23:37.04,0:23:39.04,Default,,0,0,0,,For the other subsumption direction,
@@ -256,39 +256,39 @@ Dialogue: 0,0:23:46.16,0:23:51.24,Default,,0,0,0,,that the simplified type is\N 
 Dialogue: 0,0:23:51.24,0:23:53.88,Default,,0,0,0,,Let us once again go back to\N the type inference example,
 Dialogue: 0,0:23:53.88,0:23:56.32,Default,,0,0,0,,but this time consider\N the same term applied
 Dialogue: 0,0:23:56.32,0:23:58.32,Default,,0,0,0,,to the value zero.
-Dialogue: 0,0:23:58.32,0:24:01.44,Default,,0,0,0,,We go back to the state of\N type inference as we left it.
-Dialogue: 0,0:24:01.44,0:24:04.52,Default,,0,0,0,,And now consider\N the application of argument zero
+Dialogue: 0,0:23:58.32,0:24:01.44,Default,,0,0,0,,We go back to the state of\N type inference as we left it,
+Dialogue: 0,0:24:01.44,0:24:04.52,Default,,0,0,0,,and now consider\N the application of argument zero
 Dialogue: 0,0:24:04.52,0:24:05.68,Default,,0,0,0,,of type nat.
 Dialogue: 0,0:24:05.68,0:24:07.80,Default,,0,0,0,,This generates a constraint\N that nat should be
 Dialogue: 0,0:24:07.80,0:24:09.08,Default,,0,0,0,,a subtype of alpha,
 Dialogue: 0,0:24:09.08,0:24:11.80,Default,,0,0,0,,which is the argument\N type of the function.
 Dialogue: 0,0:24:11.80,0:24:14.84,Default,,0,0,0,,So we register nat as\N a lower bound of alpha.
-Dialogue: 0,0:24:14.84,0:24:16.48,Default,,0,0,0,,But we are not done yet.
-Dialogue: 0,0:24:16.48,0:24:18.48,Default,,0,0,0,,We also have to propagate\N the constraint,
+Dialogue: 0,0:24:14.84,0:24:16.48,Default,,0,0,0,,But we are not done yet;
+Dialogue: 0,0:24:16.48,0:24:18.48,Default,,0,0,0,,we also have to propagate\N the constraint
 Dialogue: 0,0:24:18.48,0:24:22.04,Default,,0,0,0,,and check that nat is\N also a subtype of int,
 Dialogue: 0,0:24:22.04,0:24:23.52,Default,,0,0,0,,which works out.
 Dialogue: 0,0:24:23.52,0:24:26.40,Default,,0,0,0,,This gives us the result\N type beta to gamma,
 Dialogue: 0,0:24:26.40,0:24:28.20,Default,,0,0,0,,with these new constraints,
-Dialogue: 0,0:24:28.20,0:24:31.40,Default,,0,0,0,,which yields the following\N simplified type.
-Dialogue: 0,0:24:31.40,0:24:34.36,Default,,0,0,0,,Alpha intersection int,\N to alpha union nat.
+Dialogue: 0,0:24:28.20,0:24:31.40,Default,,0,0,0,,which yields the following\N simplified type:
+Dialogue: 0,0:24:31.40,0:24:34.36,Default,,0,0,0,,alpha intersection int\N to alpha union nat.
 Dialogue: 0,0:24:37.44,0:24:39.88,Default,,0,0,0,,But what happens if we\N have a type error?
 Dialogue: 0,0:24:39.88,0:24:42.12,Default,,0,0,0,,For example, if we tried\N to apply the function
-Dialogue: 0,0:24:42.12,0:24:45.24,Default,,0,0,0,,with the Boolean literal false?
+Dialogue: 0,0:24:42.12,0:24:45.24,Default,,0,0,0,,with the boolean literal false?
 Dialogue: 0,0:24:45.24,0:24:49.92,Default,,0,0,0,,In this case, we use bool\N as a lower bound of alpha,
 Dialogue: 0,0:24:49.92,0:24:52.24,Default,,0,0,0,,but while propagating\N the constraint,
 Dialogue: 0,0:24:52.24,0:24:55.40,Default,,0,0,0,,we are left constraining bool\N to be a subtype of int,
 Dialogue: 0,0:24:55.40,0:24:59.24,Default,,0,0,0,,which obviously leads to an error.
 Dialogue: 0,0:24:59.24,0:25:01.76,Default,,0,0,0,,As you can imagine, there's\N a lot more to talk about.
-Dialogue: 0,0:25:01.76,0:25:04.48,Default,,0,0,0,,You can read the paper to\N learn about let-polymorphism,
-Dialogue: 0,0:25:04.48,0:25:06.88,Default,,0,0,0,,which complicates\N the picture quite a bit,
-Dialogue: 0,0:25:06.88,0:25:09.00,Default,,0,0,0,,the handling of recursive constraints,
-Dialogue: 0,0:25:09.00,0:25:11.64,Default,,0,0,0,,different approaches to\N type simplification.
-Dialogue: 0,0:25:11.64,0:25:13.96,Default,,0,0,0,,The soundness and completeness\N of type inference,
-Dialogue: 0,0:25:13.96,0:25:16.44,Default,,0,0,0,,and how subtyping\N enables typing terms,
+Dialogue: 0,0:25:01.76,0:25:04.48,Default,,0,0,0,,You can read the paper to\N learn about: let polymorphism,
+Dialogue: 0,0:25:04.48,0:25:06.88,Default,,0,0,0,,which complicates\N the picture quite a bit;
+Dialogue: 0,0:25:06.88,0:25:09.00,Default,,0,0,0,,the handling of recursive constraints;
+Dialogue: 0,0:25:09.00,0:25:11.64,Default,,0,0,0,,different approaches to\N type simplification;
+Dialogue: 0,0:25:11.64,0:25:13.96,Default,,0,0,0,,the soundness and completeness\N of type inference;
+Dialogue: 0,0:25:13.96,0:25:16.44,Default,,0,0,0,,and how subtyping\N enables typing terms
 Dialogue: 0,0:25:16.44,0:25:19.40,Default,,0,0,0,,which were not typable before.
 Dialogue: 0,0:25:19.40,0:25:22.24,Default,,0,0,0,,Finally, I'd like to correct\N some common misunderstandings
 Dialogue: 0,0:25:22.24,0:25:24.16,Default,,0,0,0,,about algebraic subtyping.
-Dialogue: 0,0:25:24.16,0:25:26.64,Default,,0,0,0,,First union and intersection types,
+Dialogue: 0,0:25:24.16,0:25:26.64,Default,,0,0,0,,First, union and intersection types
 Dialogue: 0,0:25:26.64,0:25:28.52,Default,,0,0,0,,are not truly first-class.
 Dialogue: 0,0:25:28.52,0:25:31.28,Default,,0,0,0,,As we have seen, they simply\N result from the printing
 Dialogue: 0,0:25:31.28,0:25:33.44,Default,,0,0,0,,of compact type representations.
@@ -298,22 +298,22 @@ Dialogue: 0,0:25:38.96,0:25:40.80,Default,,0,0,0,,because in our approach,
 Dialogue: 0,0:25:40.80,0:25:43.72,Default,,0,0,0,,there are syntactic restrictions\N on the places where unions
 Dialogue: 0,0:25:43.72,0:25:46.36,Default,,0,0,0,,and intersections are\N allowed to occur.
 Dialogue: 0,0:25:46.36,0:25:48.36,Default,,0,0,0,,Supporting first-class\N unions and intersections
-Dialogue: 0,0:25:48.36,0:25:49.92,Default,,0,0,0,,would be difficult when maintaining
-Dialogue: 0,0:25:49.92,0:25:51.72,Default,,0,0,0,,the principle type property.
-Dialogue: 0,0:25:51.72,0:25:55.04,Default,,0,0,0,,That is the ability to always\N infer a most specific type.
+Dialogue: 0,0:25:48.36,0:25:49.92,Default,,0,0,0,,would be difficult while maintaining
+Dialogue: 0,0:25:49.92,0:25:51.72,Default,,0,0,0,,the principle type property
+Dialogue: 0,0:25:51.72,0:25:55.04,Default,,0,0,0,,— that is, the ability to always\N infer a most specific type.
 Dialogue: 0,0:25:55.04,0:25:56.64,Default,,0,0,0,,Moreover, it would\N make simplification
 Dialogue: 0,0:25:56.64,0:25:58.48,Default,,0,0,0,,and other algorithms difficult.
 Dialogue: 0,0:25:58.48,0:26:01.28,Default,,0,0,0,,So the expressiveness of\N the language studied in the paper
-Dialogue: 0,0:26:01.28,0:26:04.16,Default,,0,0,0,,is in fact, similar to\N a structurally typed Java,
+Dialogue: 0,0:26:01.28,0:26:04.16,Default,,0,0,0,,is in fact similar to\N a structurally typed Java,
 Dialogue: 0,0:26:04.16,0:26:10.08,Default,,0,0,0,,which includes its F-bounded\N quantification features.
-Dialogue: 0,0:26:10.08,0:26:11.72,Default,,0,0,0,,Another aspect of\N algebraic subtyping,
+Dialogue: 0,0:26:10.08,0:26:11.72,Default,,0,0,0,,Another aspect of\N algebraic subtyping
 Dialogue: 0,0:26:11.72,0:26:13.20,Default,,0,0,0,,which I would like to clarify
 Dialogue: 0,0:26:13.20,0:26:15.92,Default,,0,0,0,,is its relation with invariance.
-Dialogue: 0,0:26:15.92,0:26:19.56,Default,,0,0,0,,As a typical example of invariance\N consider the ref data type,
+Dialogue: 0,0:26:15.92,0:26:19.56,Default,,0,0,0,,As a typical example of invariance,\N consider the ref data type,
 Dialogue: 0,0:26:19.56,0:26:22.20,Default,,0,0,0,,which is the type of\N mutable variable references
 Dialogue: 0,0:26:22.20,0:26:25.40,Default,,0,0,0,,and which is invariant\N in its type argument.
 Dialogue: 0,0:26:25.40,0:26:29.60,Default,,0,0,0,,When constraining one ref type\N to be a subtype of another,
-Dialogue: 0,0:26:29.60,0:26:33.80,Default,,0,0,0,,it is sufficient to constrain\N the type arguments, both ways.
+Dialogue: 0,0:26:29.60,0:26:33.80,Default,,0,0,0,,it is sufficient to constrain\N the type arguments both ways.
 Dialogue: 0,0:26:33.80,0:26:36.80,Default,,0,0,0,,However, we can no longer\N coalesce the type arguments
 Dialogue: 0,0:26:36.80,0:26:38.60,Default,,0,0,0,,of invariant types easily,
 Dialogue: 0,0:26:38.60,0:26:42.76,Default,,0,0,0,,since coalescing relies on\N the polarity of types to work.
@@ -322,19 +322,19 @@ Dialogue: 0,0:26:44.24,0:26:46.08,Default,,0,0,0,,to work around the problem.
 Dialogue: 0,0:26:46.08,0:26:48.20,Default,,0,0,0,,We can simply avoid coalescing types
 Dialogue: 0,0:26:48.20,0:26:50.08,Default,,0,0,0,,in invariant position,
 Dialogue: 0,0:26:50.08,0:26:52.20,Default,,0,0,0,,or we could introduce new notation
-Dialogue: 0,0:26:52.20,0:26:54.40,Default,,0,0,0,,to express ranges\N overload type arguments
+Dialogue: 0,0:26:52.20,0:26:54.40,Default,,0,0,0,,to express ranges\N of allowed type arguments
 Dialogue: 0,0:26:54.40,0:26:59.48,Default,,0,0,0,,in invariant position.
 Dialogue: 0,0:26:59.48,0:27:03.80,Default,,0,0,0,,In conclusion, contrary to\N what many people believe,
 Dialogue: 0,0:27:03.80,0:27:05.64,Default,,0,0,0,,complete type inference\N with subtyping
 Dialogue: 0,0:27:05.64,0:27:07.76,Default,,0,0,0,,is not actually that hard.
 Dialogue: 0,0:27:07.76,0:27:11.08,Default,,0,0,0,,As long as we restrict\N the usage of unions, intersections,
-Dialogue: 0,0:27:11.08,0:27:13.72,Default,,0,0,0,,accept a little more verbosity\N around variance,
+Dialogue: 0,0:27:11.08,0:27:13.72,Default,,0,0,0,,accept a little more verbosity\N around invariance,
 Dialogue: 0,0:27:13.72,0:27:15.84,Default,,0,0,0,,and support recursive types.
 Dialogue: 0,0:27:15.84,0:27:17.88,Default,,0,0,0,,Simple Sub is available online
 Dialogue: 0,0:27:17.88,0:27:20.32,Default,,0,0,0,,and is less than 500 lines of code,
 Dialogue: 0,0:27:20.32,0:27:22.64,Default,,0,0,0,,including parsing, type\N inference, simplification,
 Dialogue: 0,0:27:22.64,0:27:24.48,Default,,0,0,0,,and pretty printing.
-Dialogue: 0,0:27:24.48,0:27:28.20,Default,,0,0,0,,That's it from our presentation.\N Thanks for watching.
+Dialogue: 0,0:27:24.48,0:27:28.20,Default,,0,0,0,,That's it for my presentation.\N Thanks for watching!
 Dialogue: 0,0:27:28.20,0:27:35.84,Default,,0,0,0,,(AUDIENCE CLAPS)
 Dialogue: 0,0:27:35.84,0:27:37.68,Default,,0,0,0,,STEPHANIE: Thank you Lionel.
 Dialogue: 0,0:27:37.68,0:27:42.12,Default,,0,0,0,,If you're watching this talk as\N live as an ICFP participant,
