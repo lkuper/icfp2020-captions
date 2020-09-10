@@ -2083,10 +2083,10 @@ Dialogue: 0,1:58:51.76,1:58:55.08,Default,,0,0,0,,a leak in Instagram's\Nsuggest
 Dialogue: 0,1:58:55.40,1:58:58.52,Default,,0,0,0,,This kind of thing affects many\Nmore of us than just the Comeys
 Dialogue: 0,1:58:58.52,1:59:01.72,Default,,0,0,0,,and it happens more\Nand more everyday.
 Dialogue: 0,1:59:02.40,1:59:03.84,Default,,0,0,0,,NADIA POLIKARPOVA: Today's software
-Dialogue: 0,1:59:03.84,1:59:05.92,Default,,0,0,0,,handles lot of sensitive information
+Dialogue: 0,1:59:03.84,1:59:05.92,Default,,0,0,0,,handles a lot of sensitive information
 Dialogue: 0,1:59:05.92,1:59:08.64,Default,,0,0,0,,subject to complex\Nsecurity policies.
 Dialogue: 0,1:59:09.08,1:59:11.60,Default,,0,0,0,,Traditionally, programmers\Nenforce these policies
-Dialogue: 0,1:59:11.60,1:59:15.48,Default,,0,0,0,,by string policy enforcing\Ncode or policy checks
+Dialogue: 0,1:59:11.60,1:59:15.48,Default,,0,0,0,,by strewing policy enforcing\Ncode or policy checks
 Dialogue: 0,1:59:15.48,1:59:17.28,Default,,0,0,0,,throughout the application.
 Dialogue: 0,1:59:18.00,1:59:21.04,Default,,0,0,0,,It is all too easy to\Nmiss a check by mistake
 Dialogue: 0,1:59:21.04,1:59:23.72,Default,,0,0,0,,causing a potential\Ninformation leak.
@@ -2120,17 +2120,17 @@ Dialogue: 0,2:01:05.48,2:01:08.16,Default,,0,0,0,,based on type driven\Nprogram 
 Dialogue: 0,2:01:08.16,2:01:09.84,Default,,0,0,0,,In the rest of this talk,
 Dialogue: 0,2:01:09.84,2:01:13.60,Default,,0,0,0,,I will first introduce our encoding\Nof IFC into liquid types.
 Dialogue: 0,2:01:14.40,2:01:17.64,Default,,0,0,0,,I will then give a demo of what\Nit's like to program in Lifty.
-Dialogue: 0,2:01:17.64,2:01:20.56,Default,,0,0,0,,And finally, I will\Ngive an overall review
+Dialogue: 0,2:01:17.64,2:01:20.56,Default,,0,0,0,,And finally, I will\Ngive an overview
 Dialogue: 0,2:01:20.56,2:01:22.76,Default,,0,0,0,,of how Lifty's leak repair works.
-Dialogue: 0,2:01:24.88,2:01:26.92,Default,,0,0,0,,In the liquid types system,
+Dialogue: 0,2:01:24.88,2:01:26.92,Default,,0,0,0,,In a liquid types system,
 Dialogue: 0,2:01:26.92,2:01:29.56,Default,,0,0,0,,types are annotated with\Nlogical predicates
 Dialogue: 0,2:01:29.56,2:01:31.24,Default,,0,0,0,,called refinements.
 Dialogue: 0,2:01:31.68,2:01:33.40,Default,,0,0,0,,For example, this is how
 Dialogue: 0,2:01:33.40,2:01:35.92,Default,,0,0,0,,you would specify\Nthe type of natural numbers.
 Dialogue: 0,2:01:36.44,2:01:39.04,Default,,0,0,0,,By restricting refinements\Nto decidable logics,
 Dialogue: 0,2:01:39.04,2:01:42.04,Default,,0,0,0,,liquid types provide fully\Nautomatic type checking
-Dialogue: 0,2:01:42.04,2:01:44.12,Default,,0,0,0,,of non-trivial program properties,
-Dialogue: 0,2:01:44.48,2:01:48.20,Default,,0,0,0,,but can we use refinement types\Nto encode security policies?
+Dialogue: 0,2:01:42.04,2:01:44.12,Default,,0,0,0,,of non-trivial program properties.
+Dialogue: 0,2:01:44.48,2:01:48.20,Default,,0,0,0,,But can we use refinement types\Nto encode security policies?
 Dialogue: 0,2:01:48.72,2:01:51.52,Default,,0,0,0,,To answer this question,\Nwe draw inspiration
 Dialogue: 0,2:01:51.52,2:01:54.96,Default,,0,0,0,,from another line of prior\Nwork, security monads.
 Dialogue: 0,2:01:55.88,2:01:59.52,Default,,0,0,0,,In this approach, computations\Nthat manipulate sensitive data
@@ -2143,50 +2143,50 @@ Dialogue: 0,2:02:15.44,2:02:17.32,Default,,0,0,0,,that the computation manipulat
 Dialogue: 0,2:02:17.32,2:02:20.84,Default,,0,0,0,,and to disallow unsafe\Ninformation flows.
 Dialogue: 0,2:02:21.32,2:02:26.32,Default,,0,0,0,,In Lifty, the security level is\Nrecorded in the TIO type itself.
 Dialogue: 0,2:02:26.80,2:02:28.36,Default,,0,0,0,,Apart from the return type,
-Dialogue: 0,2:02:28.36,2:02:31.24,Default,,0,0,0,,TIO is parameterized by\Ntwo refinement predicate -
-Dialogue: 0,2:02:31.24,2:02:33.64,Default,,0,0,0,,the input and the output label
+Dialogue: 0,2:02:28.36,2:02:31.24,Default,,0,0,0,,TIO is parameterized by\Ntwo refinement predicates -
+Dialogue: 0,2:02:31.24,2:02:33.64,Default,,0,0,0,,the input and the output label -
 Dialogue: 0,2:02:34.04,2:02:37.52,Default,,0,0,0,,which specify the security levels\Nof the input and output effects
 Dialogue: 0,2:02:37.52,2:02:39.76,Default,,0,0,0,,of a TIO computation.
-Dialogue: 0,2:02:40.36,2:02:44.12,Default,,0,0,0,,More precisely, the input labels\Nspecifies the set of users
+Dialogue: 0,2:02:40.36,2:02:44.12,Default,,0,0,0,,More precisely, the input label\Nspecifies the set of users
 Dialogue: 0,2:02:44.12,2:02:47.68,Default,,0,0,0,,that are allowed to see\Nthe data read by this computation.
 Dialogue: 0,2:02:48.04,2:02:50.68,Default,,0,0,0,,The output label specifies\Nthe set of users
 Dialogue: 0,2:02:50.68,2:02:54.20,Default,,0,0,0,,who will see the data\Nwritten by this computation.
 Dialogue: 0,2:02:54.68,2:02:57.64,Default,,0,0,0,,Both labels are predicates\Nfrom the refinement logic
 Dialogue: 0,2:02:57.64,2:03:00.12,Default,,0,0,0,,and can refer to variables in scope
 Dialogue: 0,2:03:00.12,2:03:02.52,Default,,0,0,0,,as well as a special\Nviewer variable.
-Dialogue: 0,2:03:03.60,2:03:08.16,Default,,0,0,0,,Now, let's see how our Lifty\Nprogrammer builds TIO computations.
+Dialogue: 0,2:03:03.60,2:03:08.16,Default,,0,0,0,,Now, let's see how a Lifty\Nprogrammer builds TIO computations.
 Dialogue: 0,2:03:08.60,2:03:11.48,Default,,0,0,0,,The building blocks\Nof a TIO computation
 Dialogue: 0,2:03:11.48,2:03:15.80,Default,,0,0,0,,are atomic input and output\Nactions that the programmer writes
 Dialogue: 0,2:03:15.80,2:03:19.84,Default,,0,0,0,,to model sources and sinks of\Nsensitive data in the system.
 Dialogue: 0,2:03:20.36,2:03:23.88,Default,,0,0,0,,For example, if my program\Ncan access a shared key
 Dialogue: 0,2:03:23.88,2:03:26.24,Default,,0,0,0,,that belongs to Alice and Bob,
-Dialogue: 0,2:03:26.24,2:03:28.60,Default,,0,0,0,,I can give this action\Nin the following type.
+Dialogue: 0,2:03:26.24,2:03:28.60,Default,,0,0,0,,I can give this action\Nthe following type.
 Dialogue: 0,2:03:29.24,2:03:31.24,Default,,0,0,0,,Here, the input label specifies
-Dialogue: 0,2:03:31.24,2:03:33.68,Default,,0,0,0,,that the key's only\Nvisible to Alice and Bob,
+Dialogue: 0,2:03:31.24,2:03:33.68,Default,,0,0,0,,that the key is only\Nvisible to Alice and Bob,
 Dialogue: 0,2:03:33.68,2:03:37.40,Default,,0,0,0,,while the output label false\Nguarantees that this computation
-Dialogue: 0,2:03:37.40,2:03:41.24,Default,,0,0,0,,will not perform any\Nuser visible output.
+Dialogue: 0,2:03:37.40,2:03:41.24,Default,,0,0,0,,will not perform any\Nuser-visible output.
 Dialogue: 0,2:03:41.88,2:03:45.84,Default,,0,0,0,,On the other hand, I can\Ndefine an output action print
 Dialogue: 0,2:03:45.84,2:03:49.24,Default,,0,0,0,,that outputs a string\Nto a given recipient.
 Dialogue: 0,2:03:49.64,2:03:52.52,Default,,0,0,0,,The output label of\Nits type guarantees
 Dialogue: 0,2:03:52.52,2:03:55.80,Default,,0,0,0,,that only the intended\Nrecipient will see the string
 Dialogue: 0,2:03:55.80,2:03:59.28,Default,,0,0,0,,while the input label true indicates
 Dialogue: 0,2:03:59.28,2:04:01.96,Default,,0,0,0,,that the return value\Nunit is public.
-Dialogue: 0,2:04:02.60,2:04:04.68,Default,,0,0,0,,Good luck trying to hide a unit.
-Dialogue: 0,2:04:05.48,2:04:08.60,Default,,0,0,0,,Know that function types in\NLifty can be dependent,
+Dialogue: 0,2:04:02.60,2:04:04.68,Default,,0,0,0,,Good luck trying to hide a unit!
+Dialogue: 0,2:04:05.48,2:04:08.60,Default,,0,0,0,,Note that function types in\NLifty can be dependent,
 Dialogue: 0,2:04:08.60,2:04:13.32,Default,,0,0,0,,so the label of the result can depend\Non the value of the argument.
 Dialogue: 0,2:04:13.32,2:04:17.24,Default,,0,0,0,,This allows Lifty programmers to\Nencode rich security policies
 Dialogue: 0,2:04:17.24,2:04:19.68,Default,,0,0,0,,as types of TIO actions.
 Dialogue: 0,2:04:20.84,2:04:26.12,Default,,0,0,0,,Atomic actions are combined into\Ncomputations using the TIO API
 Dialogue: 0,2:04:26.12,2:04:27.96,Default,,0,0,0,,that Lifty provides.
-Dialogue: 0,2:04:28.40,2:04:31.88,Default,,0,0,0,,The core of the API under\Nstandard monadic primitives
+Dialogue: 0,2:04:28.40,2:04:31.88,Default,,0,0,0,,The core of the API are\Nthe standard monadic primitives
 Dialogue: 0,2:04:31.96,2:04:33.96,Default,,0,0,0,,return and bind.
-Dialogue: 0,2:04:33.96,2:04:38.32,Default,,0,0,0,,Return simply wraps a pure value\Ninto a sensitive computation.
-Dialogue: 0,2:04:38.64,2:04:40.80,Default,,0,0,0,,And so, its labels are trivial.
+Dialogue: 0,2:04:33.96,2:04:38.32,Default,,0,0,0,,Return simply wraps a pure value\Ninto a sensitive computation,
+Dialogue: 0,2:04:38.64,2:04:40.80,Default,,0,0,0,,and so, its labels are trivial.
 Dialogue: 0,2:04:41.20,2:04:42.88,Default,,0,0,0,,The type of bind on the other hand
 Dialogue: 0,2:04:42.88,2:04:46.88,Default,,0,0,0,,is key to correctly tracking\Ninformation flow in Lifty.
 Dialogue: 0,2:04:47.28,2:04:50.52,Default,,0,0,0,,Bind sequences two\Ncomputations X and Y
 Dialogue: 0,2:04:50.52,2:04:53.80,Default,,0,0,0,,such that the result\Nof X flows into Y.
-Dialogue: 0,2:04:54.56,2:04:58.12,Default,,0,0,0,,The type of bind is polymorphic\Nin labels of these actions,
+Dialogue: 0,2:04:54.56,2:04:58.12,Default,,0,0,0,,The type of bind is polymorphic\Nin the labels of these actions,
 Dialogue: 0,2:04:58.12,2:05:00.96,Default,,0,0,0,,but not any four labels would do.
 Dialogue: 0,2:05:00.96,2:05:06.56,Default,,0,0,0,,To avoid leaks, we need to ensure\Nthat Y only outputs to those users
 Dialogue: 0,2:05:06.60,2:05:09.20,Default,,0,0,0,,who are allowed to\Nsee the result of X.
@@ -2197,9 +2197,9 @@ Dialogue: 0,2:05:22.44,2:05:25.76,Default,,0,0,0,,Finally, the input label of\Nt
 Dialogue: 0,2:05:25.76,2:05:28.12,Default,,0,0,0,,is the conjunction of\Ntheir input labels
 Dialogue: 0,2:05:28.12,2:05:31.96,Default,,0,0,0,,and the output label is\Nthe disjunction of their output labels.
 Dialogue: 0,2:05:33.08,2:05:36.52,Default,,0,0,0,,The TIO API has a third\Nprimitive operation
-Dialogue: 0,2:05:36.52,2:05:40.40,Default,,0,0,0,,for leak-free downgrade\Nwhich plays an important role
+Dialogue: 0,2:05:36.52,2:05:40.40,Default,,0,0,0,,for leak-free downgrading\Nwhich plays an important role
 Dialogue: 0,2:05:40.40,2:05:42.52,Default,,0,0,0,,in applications with rich policies
-Dialogue: 0,2:05:42.52,2:05:45.76,Default,,0,0,0,,but I will skip this description\Nin the interest of time.
+Dialogue: 0,2:05:42.52,2:05:45.76,Default,,0,0,0,,but I will skip its description\Nin the interest of time.
 Dialogue: 0,2:05:47.12,2:05:49.28,Default,,0,0,0,,The TIO library also provides
 Dialogue: 0,2:05:49.28,2:05:52.04,Default,,0,0,0,,a range of convenient\Nmonadic combinators -
 Dialogue: 0,2:05:52.04,2:05:57.04,Default,,0,0,0,,for example, mapM for mapping\Na sensitive computation over a list.
@@ -2220,7 +2220,7 @@ Dialogue: 0,2:06:39.76,2:06:41.92,Default,,0,0,0,,until the notifications are ou
 Dialogue: 0,2:06:42.72,2:06:46.20,Default,,0,0,0,,Consider the following\Nhypothetical but insidious leak
 Dialogue: 0,2:06:46.20,2:06:48.36,Default,,0,0,0,,that violates this policy.
 Dialogue: 0,2:06:48.84,2:06:54.24,Default,,0,0,0,,As a reviewer, I can sort the list\Nof all submissions by their score.
-Dialogue: 0,2:06:54.24,2:06:56.40,Default,,0,0,0,,If the programmer's not careful,
+Dialogue: 0,2:06:54.24,2:06:56.40,Default,,0,0,0,,If the programmer is not careful,
 Dialogue: 0,2:06:56.40,2:06:59.76,Default,,0,0,0,,the sorting function might\Nuse the true hidden value
 Dialogue: 0,2:06:59.76,2:07:03.20,Default,,0,0,0,,of the score for my\Npaper for ordering.
 Dialogue: 0,2:07:03.60,2:07:06.48,Default,,0,0,0,,In this case, even though\Nthe score is still masked,
@@ -2243,19 +2243,19 @@ Dialogue: 0,2:07:50.36,2:07:52.40,Default,,0,0,0,,So, I would like to\Nchange th
 Dialogue: 0,2:07:52.40,2:07:55.08,Default,,0,0,0,,of getPaperScore to\Nreflect this policy.
 Dialogue: 0,2:07:55.60,2:07:57.68,Default,,0,0,0,,Although the refinement\Nlogic does not allow
 Dialogue: 0,2:07:57.68,2:07:59.28,Default,,0,0,0,,mentioning program level functions
-Dialogue: 0,2:07:59.28,2:08:02.16,Default,,0,0,0,,like getPaperConflict inside labels.
-Dialogue: 0,2:08:02.52,2:08:06.24,Default,,0,0,0,,I can define an uninterpreted\Nlogic level function conflicts
+Dialogue: 0,2:07:59.28,2:08:02.16,Default,,0,0,0,,like getPaperConflicts inside labels.
+Dialogue: 0,2:08:02.52,2:08:06.24,Default,,0,0,0,,I can define an uninterpreted\Nlogic-level function conflicts
 Dialogue: 0,2:08:06.24,2:08:09.84,Default,,0,0,0,,that denotes the set of user\Nconflicted with a given paper.
 Dialogue: 0,2:08:10.32,2:08:14.40,Default,,0,0,0,,I can now use this function to\Nspecify the desired policy on scores
 Dialogue: 0,2:08:14.40,2:08:16.28,Default,,0,0,0,,that they are only visible to users
 Dialogue: 0,2:08:16.28,2:08:18.28,Default,,0,0,0,,who are not in the set of conflicts.
-Dialogue: 0,2:08:18.68,2:08:22.16,Default,,0,0,0,,To connect my logic level function\Nto the data ID from the store,
+Dialogue: 0,2:08:18.68,2:08:22.16,Default,,0,0,0,,To connect my logic level function\Nto the data I get from the store,
 Dialogue: 0,2:08:22.16,2:08:25.92,Default,,0,0,0,,I will refine the result\Ntype of getPaperConflicts
 Dialogue: 0,2:08:25.92,2:08:29.28,Default,,0,0,0,,stating that it retrieves\Nexactly the same users
 Dialogue: 0,2:08:29.28,2:08:31.60,Default,,0,0,0,,as those denoted by conflicts.
 Dialogue: 0,2:08:32.20,2:08:35.00,Default,,0,0,0,,Finally, let's implement\Nthe sorting functionality.
 Dialogue: 0,2:08:35.36,2:08:39.16,Default,,0,0,0,,To this end, I will write\Na function sortPapersByScore
-Dialogue: 0,2:08:39.16,2:08:41.56,Default,,0,0,0,,that takes an input\Nat data store, ds
+Dialogue: 0,2:08:39.16,2:08:41.56,Default,,0,0,0,,that takes as input\Na data store, ds
 Dialogue: 0,2:08:41.56,2:08:43.52,Default,,0,0,0,,and the current user, client.
 Dialogue: 0,2:08:44.04,2:08:46.48,Default,,0,0,0,,Lifty supports\Na Haskell-like do notation
 Dialogue: 0,2:08:46.48,2:08:50.60,Default,,0,0,0,,that desugars into invocations\Nof bind in a standard way.
@@ -2275,11 +2275,11 @@ Dialogue: 0,2:09:18.68,2:09:21.04,Default,,0,0,0,,If I ask to type check my prog
 Dialogue: 0,2:09:21.04,2:09:23.36,Default,,0,0,0,,it reports two policy violations
 Dialogue: 0,2:09:23.36,2:09:25.72,Default,,0,0,0,,for the two calls to getPaperScore.
 Dialogue: 0,2:09:25.72,2:09:30.00,Default,,0,0,0,,Lifty is complaining that\Nthey're not visible to client.
-Dialogue: 0,2:09:30.00,2:09:32.36,Default,,0,0,0,,Instead of trying to\Ndecipher that error message
+Dialogue: 0,2:09:30.00,2:09:32.36,Default,,0,0,0,,Instead of trying to\Ndecipher the error message
 Dialogue: 0,2:09:32.36,2:09:33.84,Default,,0,0,0,,and fix the leak myself
 Dialogue: 0,2:09:33.84,2:09:36.20,Default,,0,0,0,,I can ask Lifty to do it for me.
 Dialogue: 0,2:09:36.20,2:09:39.44,Default,,0,0,0,,In this case, Lifty\Nreturns a modified program
-Dialogue: 0,2:09:39.44,2:09:43.76,Default,,0,0,0,,where I call to get paper score\Nis wrapper in a policy check.
+Dialogue: 0,2:09:39.44,2:09:43.76,Default,,0,0,0,,where either call to getPaperScore\Nis wrapper in a policy check.
 Dialogue: 0,2:09:43.76,2:09:47.28,Default,,0,0,0,,The check retrieves\Nthe conflict list for this paper
 Dialogue: 0,2:09:47.28,2:09:50.44,Default,,0,0,0,,and checks whether\Nthe client is on that list.
 Dialogue: 0,2:09:50.44,2:09:52.44,Default,,0,0,0,,If client is in fact conflicted
@@ -2294,7 +2294,7 @@ Dialogue: 0,2:10:15.60,2:10:18.04,Default,,0,0,0,,How does Lifty repair this lea
 Dialogue: 0,2:10:18.04,2:10:20.80,Default,,0,0,0,,The key insight is to\Nuse the information
 Dialogue: 0,2:10:20.80,2:10:23.12,Default,,0,0,0,,from the failed type\Nchecking attempt
 Dialogue: 0,2:10:23.12,2:10:29.20,Default,,0,0,0,,to localize the leak and infer\Na local specification for the patch.
-Dialogue: 0,2:10:29.24,2:10:34.24,Default,,0,0,0,,First, let's desugar the denotation\Ninto invocations of bind.
+Dialogue: 0,2:10:29.24,2:10:34.24,Default,,0,0,0,,First, let's desugar the do-notation\Ninto invocations of bind.
 Dialogue: 0,2:10:34.24,2:10:35.88,Default,,0,0,0,,While type checking the program
 Dialogue: 0,2:10:35.88,2:10:39.40,Default,,0,0,0,,Lifty infers the following\Ntypes for the two computations
 Dialogue: 0,2:10:39.40,2:10:41.40,Default,,0,0,0,,sequenced by bind.
@@ -2309,7 +2309,7 @@ Dialogue: 0,2:11:03.76,2:11:06.96,Default,,0,0,0,,and the program is deemed ill-
 Dialogue: 0,2:11:06.96,2:11:10.04,Default,,0,0,0,,Lifty keeps track of\Nwhich input action
 Dialogue: 0,2:11:10.04,2:11:13.40,Default,,0,0,0,,generated the right-hand side\Nof the failed implication.
 Dialogue: 0,2:11:13.40,2:11:17.04,Default,,0,0,0,,So it knows exactly\Nwhere the leak occurred.
-Dialogue: 0,2:11:17.04,2:11:20.56,Default,,0,0,0,,In this case, the problem is\Nthe call to get paper score
+Dialogue: 0,2:11:17.04,2:11:20.56,Default,,0,0,0,,In this case, the problem is\Nthe call to getPaperScore
 Dialogue: 0,2:11:20.56,2:11:24.64,Default,,0,0,0,,whose result is too\Nsensitive for its context.
 Dialogue: 0,2:11:24.64,2:11:28.40,Default,,0,0,0,,To fix the leak Lifty replaces\Nthe offending input action
 Dialogue: 0,2:11:28.40,2:11:29.88,Default,,0,0,0,,with a patch template
