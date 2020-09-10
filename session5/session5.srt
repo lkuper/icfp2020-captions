@@ -3185,7 +3185,7 @@ as we started with.
 665
 00:46:15,520 --> 00:46:17,720
 Plus r, we just make
-our criss-cross plus r.
+our recursive call with plus r.
 
 666
 00:46:17,720 --> 00:46:19,360
@@ -3737,7 +3737,7 @@ a substructure, sub data structure
 
 784
 00:50:45,880 --> 00:50:49,920
-of type fr, in other words,
+of type F R, in other words,
 you're given this little package
 
 785
@@ -3948,11 +3948,11 @@ except we change a little bit,
 826
 00:52:41,680 --> 00:52:44,200
 the return type
-of your function.
+of your function
 
 827
 00:52:44,200 --> 00:52:49,160
-Now couldn't is now
+now couldn't- is now-
 could depend on D.
 
 828
@@ -4008,7 +4008,7 @@ So a recursion is then allowed
 838
 00:53:18,640 --> 00:53:21,000
 on values that
-Val has returned.
+eval has returned.
 
 839
 00:53:21,000 --> 00:53:22,720
@@ -4097,7 +4097,7 @@ we're indicating
 
 856
 00:54:13,560 --> 00:54:17,600
-the functionality of X
+the functoriality of X
 and X does have to be
 
 857
@@ -4484,7 +4484,7 @@ about Duplo a framework
 
 934
 00:58:15,160 --> 00:58:18,960
-for Ocaml post link optimization.
+for OCaml post link optimization.
 I built with Dr. Tim Jones
 
 935
@@ -4498,11 +4498,11 @@ Why build a post link optimizer?
 937
 00:58:23,240 --> 00:58:26,200
 And why build one
-for Ocaml in particular.
+for OCaml in particular.
 
 938
 00:58:26,200 --> 00:58:28,640
-Ocaml is a high level language,
+OCaml is a high level language,
 which means that it is not
 
 939
@@ -4532,7 +4532,7 @@ as a pair of floats,
 
 944
 00:58:40,760 --> 00:58:43,040
-we ended up
+we end up
 with many allocations,
 
 945
@@ -4573,7 +4573,7 @@ possibly fiddling with bits
 952
 00:59:03,240 --> 00:59:04,920
 and express the type
-in Ocaml.
+in OCaml.
 
 953
 00:59:04,920 --> 00:59:08,160
@@ -4618,11 +4618,11 @@ low level constructs
 961
 00:59:26,320 --> 00:59:29,360
 in C and call them
-from Ocaml.
+from OCaml.
 
 962
 00:59:29,920 --> 00:59:33,040
-The FFI of Ocaml
+The FFI of OCaml
 is particularly powerful.
 
 963
@@ -4637,13 +4637,13 @@ to read arbitrary objects
 
 965
 00:59:39,200 --> 00:59:41,560
-from the Ocaml heap
+from the OCaml heap
 and also to allocate
 
 966
 00:59:41,560 --> 00:59:44,320
 arbitrary objects
-on the Ocaml heap.
+on the OCaml heap.
 
 967
 00:59:44,320 --> 00:59:47,120
@@ -4668,7 +4668,7 @@ that heap management code
 971
 00:59:56,720 --> 00:59:59,000
 requires to invoke
-C from Ocaml,
+C from OCaml,
 
 972
 00:59:59,000 --> 01:00:02,480
@@ -4677,7 +4677,7 @@ optimization opportunities.
 
 973
 01:00:02,480 --> 01:00:05,600
-In the typical build, Ocaml
+In the typical build, OCaml
 and C meet in assembly
 
 974
@@ -4722,7 +4722,7 @@ However, on one side,
 
 982
 01:00:30,520 --> 01:00:32,920
-we have a Ocaml
+we have a OCaml
 and C on the other.
 
 983
@@ -4748,7 +4748,7 @@ capable of capturing
 987
 01:00:43,160 --> 01:00:46,480
 the semantics of both
-C and Ocaml.
+C and OCaml.
 
 988
 01:00:46,480 --> 01:00:48,440
@@ -4767,13 +4767,13 @@ a custom version
 
 991
 01:00:54,400 --> 01:00:57,520
-of (INAUDIBLE) to LLIR
+of Clang to LLIR
 a custom version
 
 992
 01:00:57,520 --> 01:01:00,640
-of the Ocaml compiler
-to lower Ocaml to LLIR
+of the OCaml compiler
+to lower OCaml to LLIR
 
 993
 01:01:00,640 --> 01:01:03,160
@@ -4842,8 +4842,8 @@ and iterators
 
 1006
 01:01:39,760 --> 01:01:43,160
-such as dominator reconstruction.
-And (INAUDIBLE) traversals.
+such as dominator reconstruction
+and graph traversals.
 
 1007
 01:01:43,160 --> 01:01:45,480
@@ -4881,7 +4881,7 @@ entirely constrained
 
 1014
 01:02:04,000 --> 01:02:06,240
-by the Ocaml compiler
+by the OCaml compiler
 and the intermediate
 
 1015
@@ -4902,7 +4902,7 @@ equivalent in LLVM.
 1018
 01:02:13,320 --> 01:02:16,920
 Requires to step one level down
-in the Ocaml compiler.
+in the OCaml compiler.
 
 1019
 01:02:16,920 --> 01:02:19,280
@@ -4960,7 +4960,7 @@ specific machine IR.
 
 1030
 01:02:47,560 --> 01:02:49,960
-On the Ocaml side.
+On the OCaml side.
 We generate LLIR
 
 1031
@@ -5000,7 +5000,7 @@ pieces of code
 
 1038
 01:03:09,240 --> 01:03:11,640
-and Ocaml has run time
+and OCaml has run time
 and a garbage collector
 
 1039
@@ -5034,7 +5034,7 @@ custom instructions
 
 1045
 01:03:24,360 --> 01:03:27,320
-required by the Ocaml GC
+required by the OCaml GC
 we're using the entirety
 
 1046
@@ -5194,7 +5194,7 @@ a specific to the needs
 
 1077
 01:04:58,080 --> 01:05:01,160
-of Ocaml. Through Duplo
+of OCaml. Through Duplo
 we made significant progress though.
 
 1078
@@ -5214,7 +5214,7 @@ the frame tables used by the,
 
 1081
 01:05:09,120 --> 01:05:13,280
-the default Ocaml
+the default OCaml
 garbage collector and run time.
 
 1082
@@ -5240,7 +5240,7 @@ which confused the magnitude
 1086
 01:05:26,920 --> 01:05:30,240
 of a vector allocated
-on your Ocaml heap.
+on your OCaml heap.
 
 1087
 01:05:30,240 --> 01:05:32,640
@@ -5279,7 +5279,7 @@ notice the annotations,
 
 1094
 01:05:49,000 --> 01:05:50,960
-the Ocaml runtime requires us
+the OCaml runtime requires us
 
 1095
 01:05:50,960 --> 01:05:53,120
@@ -5322,7 +5322,7 @@ optimizations should be scarce
 
 1104
 01:06:13,160 --> 01:06:15,520
-Ocaml should have
+OCaml should have
 already optimized everything
 
 1105
@@ -5342,7 +5342,7 @@ opportunities
 
 1108
 01:06:22,600 --> 01:06:24,600
-that are exposed only when both Ocaml
+that are exposed only when both OCaml
 
 1109
 01:06:24,600 --> 01:06:27,160
@@ -5374,7 +5374,7 @@ a body into a callee.
 1115
 01:06:39,040 --> 01:06:42,040
 The world is split into two
-realms: Ocaml and C,
+realms: OCaml and C,
 
 1116
 01:06:42,040 --> 01:06:43,840
@@ -5387,12 +5387,12 @@ for the runtime.
 
 1118
 01:06:47,480 --> 01:06:49,480
-When we inline C into Ocaml,
+When we inline C into OCaml,
 
 1119
 01:06:49,480 --> 01:06:51,480
 we actually create
-a bigger Ocaml function
+a bigger OCaml function
 
 1120
 01:06:51,480 --> 01:06:53,280
@@ -5410,7 +5410,7 @@ one, each kind of allocation,
 
 1123
 01:07:00,280 --> 01:07:03,120
-doesn't need one, in Ocaml FF,
+doesn't need one, in OCaml FF,
 
 1124
 01:07:03,120 --> 01:07:04,480
@@ -5419,7 +5419,7 @@ we are left with a mess.
 1125
 01:07:04,480 --> 01:07:07,080
 The function now tracks heap
-roots using both Ocaml values
+roots using both OCaml values
 
 1126
 01:07:07,080 --> 01:07:12,080
@@ -5434,7 +5434,7 @@ address this problem
 1128
 01:07:14,240 --> 01:07:16,680
 by moving roots over to
-the Ocaml value mechanism.
+the OCaml value mechanism.
 
 1129
 01:07:16,680 --> 01:07:18,440
@@ -5462,7 +5462,7 @@ move C functions,
 1134
 01:07:28,000 --> 01:07:30,280
 which allocate over
-to the Ocaml realm.
+to the OCaml realm.
 
 1135
 01:07:30,280 --> 01:07:32,600
@@ -5472,7 +5472,7 @@ root management,
 1136
 01:07:32,600 --> 01:07:36,080
 and possibly ending up on
-using Ocaml value annotations
+using OCaml value annotations
 
 1137
 01:07:36,080 --> 01:07:38,680
@@ -5490,7 +5490,7 @@ about whether our function
 
 1140
 01:07:43,120 --> 01:07:46,280
-is Ocaml specific or C
+is OCaml specific or C
 specific erasing the boundary
 
 1141
@@ -5513,7 +5513,7 @@ to it and boxing it back,
 
 1145
 01:07:56,080 --> 01:07:58,560
-sending it back to the Ocaml heap.
+sending it back to the OCaml heap.
 
 1146
 01:07:58,560 --> 01:07:59,760
@@ -5574,7 +5574,7 @@ the common ground between C
 
 1158
 01:08:32,840 --> 01:08:34,400
-and Ocaml memory
+and OCaml memory
 representations
 
 1159
@@ -5892,8 +5892,8 @@ for cross-language optimization
 
 1228
 01:11:26,880 --> 01:11:29,000
-as our in-line heuristics
-and (INAUDIBLE) analysis
+as our inlining heuristics
+and points-to analyses
 
 1229
 01:11:29,000 --> 01:11:30,440
@@ -7246,7 +7246,7 @@ The binder is an attribute,
 1524
 01:29:24,040 --> 01:29:27,600
 which will trigger the internal
-decision mechanism in K
+substitution mechanism in K
 
 1525
 01:29:27,600 --> 01:29:29,560
@@ -7254,7 +7254,7 @@ to provide the correct implementation
 
 1526
 01:29:29,560 --> 01:29:31,600
-of capture avoiding substitution.
+of capture-avoiding substitution.
 
 1527
 01:29:31,600 --> 01:29:34,360
@@ -7325,7 +7325,7 @@ as matching logic theories.
 
 1542
 01:30:11,080 --> 01:30:13,240
-These include first logic,
+These include first-order logic,
 
 1543
 01:30:13,240 --> 01:30:17,160
@@ -7415,12 +7415,12 @@ calculus as an example
 1561
 01:31:01,840 --> 01:31:05,600
 and define it as a machine
-logic theory, gamma lambda.
+logic theory, Gamma lambda.
 
 1562
 01:31:05,600 --> 01:31:08,440
 The key observation
-is then lambda XE
+is that lambda X.E
 
 1563
 01:31:08,440 --> 01:31:10,440
@@ -7433,7 +7433,7 @@ It creates the binding of X in E
 1565
 01:31:12,680 --> 01:31:15,680
 and also builds a term,
-lambda XE.
+lambda X.E.
 
 1566
 01:31:15,680 --> 01:31:18,920
@@ -7442,7 +7442,7 @@ separate these two.
 
 1567
 01:31:18,920 --> 01:31:21,400
-We first use bracket XE
+We first use [X]E
 
 1568
 01:31:21,400 --> 01:31:23,680
@@ -7454,7 +7454,7 @@ that maps X to E.
 
 1570
 01:31:25,560 --> 01:31:28,760
-Here, XE is the pair of X and E
+Here, <X,E> is the pair of X and E
 
 1571
 01:31:28,760 --> 01:31:31,600
@@ -7464,7 +7464,7 @@ exists means union.
 1572
 01:31:31,600 --> 01:31:35,800
 So this pattern is
-the set of all pairs XE
+the set of all pairs <X,E>
 
 1573
 01:31:35,800 --> 01:31:38,960
@@ -7482,12 +7482,12 @@ the binding information.
 
 1576
 01:31:46,600 --> 01:31:50,840
-Then we define lambda XE by
-applying the construct to lambda
+Then we define lambda X.E by
+applying the construct lambda
 
 1577
 01:31:50,840 --> 01:31:53,080
-to the graph set XE.
+to the graph set [X]E.
 
 1578
 01:31:53,080 --> 01:31:55,640
@@ -7519,7 +7519,7 @@ we prove the following theorems.
 
 1584
 01:32:13,160 --> 01:32:16,600
-We proof that gamma lambda
+We proof that Gamma lambda
 is a conservative extension
 
 1585
@@ -7538,11 +7538,11 @@ are provable in lambda calculus
 1588
 01:32:23,400 --> 01:32:27,080
 if and only if they are probable
-in theory gamma lambda.
+in theory Gamma lambda.
 
 1589
 01:32:27,080 --> 01:32:29,040
-We also show that gamma lambda
+We also show that Gamma lambda
 
 1590
 01:32:29,040 --> 01:32:30,440
@@ -7560,7 +7560,7 @@ of our approach
 
 1593
 01:32:37,200 --> 01:32:40,680
-is that the theory gamma
+is that the theory Gamma
 lambda automatically
 
 1594
@@ -7584,7 +7584,7 @@ completeness states
 
 1598
 01:32:51,560 --> 01:32:54,000
-that for any lambda theory, t,
+that for any lambda theory, T,
 
 1599
 01:32:54,000 --> 01:32:57,000
@@ -7592,22 +7592,22 @@ which is a set of lambda equations,
 
 1600
 01:32:57,000 --> 01:33:01,080
-there is a model MT of
-theory gamma lambda,
+there is a model M_T of
+theory Gamma lambda,
 
 1601
 01:33:01,080 --> 01:33:05,160
-such that MT captures
-precisely the lambda theory t.
+such that M_T captures
+precisely the lambda theory T.
 
 1602
 01:33:05,160 --> 01:33:08,920
 That is E1 equals E2
-is provable in t,
+is provable in T,
 
 1603
 01:33:08,920 --> 01:33:12,360
-if and only if it holds in MT.
+if and only if it holds in M_T.
 
 1604
 01:33:12,360 --> 01:33:13,800
@@ -7620,11 +7620,11 @@ calculus model A,
 
 1606
 01:33:16,520 --> 01:33:18,840
-there is a matching logic model, MA,
+there is a matching logic model, M_A,
 
 1607
 01:33:18,840 --> 01:33:22,360
-of the theory gamma
+of the theory Gamma
 lambda that captures A.
 
 1608
@@ -7745,7 +7745,7 @@ which we call patterns,
 
 1634
 01:34:27,520 --> 01:34:29,640
-using only certain constructs.
+using only 7 constructs.
 
 1635
 01:34:29,640 --> 01:34:32,160
@@ -7753,7 +7753,7 @@ They are element variables,
 
 1636
 01:34:32,160 --> 01:34:34,480
-which are like first logic variables
+which are like first-order logic variables
 
 1637
 01:34:34,480 --> 01:34:36,520
@@ -7799,7 +7799,7 @@ a functional constructor,
 1646
 01:34:58,000 --> 01:35:00,560
 then the result is like
-a first logic term.
+a first-order logic term.
 
 1647
 01:35:00,560 --> 01:35:02,000
@@ -7808,7 +7808,7 @@ If phi one is a predicate,
 1648
 01:35:02,000 --> 01:35:05,520
 then the result is like
-a first logic (INAUDIBLE) formula
+a first-order logic atomic formula
 
 1649
 01:35:05,520 --> 01:35:08,000
@@ -7826,13 +7826,13 @@ maximum flexibility.
 
 1652
 01:35:12,840 --> 01:35:16,560
-Next to constructs,
+Next two constructs,
 bottom and implication
 
 1653
 01:35:16,560 --> 01:35:19,480
 are standard propositional
-constraints.
+constructs.
 
 1654
 01:35:19,480 --> 01:35:23,760
@@ -7869,7 +7869,7 @@ words, patterns mean sets.
 
 1661
 01:35:42,600 --> 01:35:46,000
-Formerly, a model M has
+Formally, a model M has
 a non-empty carrier set
 
 1662
@@ -7948,7 +7948,7 @@ of all the results,
 1677
 01:36:36,400 --> 01:36:39,640
 this is called
-the point wise extension.
+the pointwise extension.
 
 1678
 01:36:39,640 --> 01:36:42,560
@@ -7956,7 +7956,7 @@ Finally, exists x phi is interpreted
 
 1679
 01:36:42,560 --> 01:36:45,480
-by ranging over all elements a in n,
+by ranging over all elements a in M,
 
 1680
 01:36:45,480 --> 01:36:48,560
@@ -8017,7 +8017,7 @@ without any translation.
 1692
 01:37:19,760 --> 01:37:23,280
 We say that a model M is
-a model of the theory, gamma,
+a model of the theory, Gamma,
 
 1693
 01:37:23,280 --> 01:37:25,600
@@ -8040,7 +8040,7 @@ expressed by patterns
 
 1697
 01:37:35,800 --> 01:37:39,080
-for gamma to correctly
+for Gamma to correctly
 capture the target system,
 
 1698
@@ -8049,7 +8049,7 @@ we need to establish an equivalence
 
 1699
 01:37:41,560 --> 01:37:43,120
-between the models of gamma
+between the models of Gamma
 
 1700
 01:37:43,120 --> 01:37:45,280
@@ -8090,7 +8090,7 @@ and many sorted functions,
 1708
 01:38:07,080 --> 01:38:09,760
 pairs and the power
-sort two to the s,
+sort 2 to the s,
 
 1709
 01:38:09,760 --> 01:38:13,360
@@ -8109,7 +8109,7 @@ in matching logic.
 
 1712
 01:38:20,560 --> 01:38:22,840
-We define the theory gamma lambda
+We define the theory Gamma lambda
 
 1713
 01:38:22,840 --> 01:38:24,760
@@ -8117,13 +8117,13 @@ that captures lambda calculus
 
 1714
 01:38:24,760 --> 01:38:28,360
-due to time limits are only
-showed intuitive ideas.
+due to time limits I'll only
+show intuitive ideas.
 
 1715
 01:38:28,360 --> 01:38:32,160
 Intuitively, the lambda
-abstraction, lambda Xe,
+abstraction, lambda X.e,
 
 1716
 01:38:32,160 --> 01:38:36,160
@@ -8205,12 +8205,12 @@ the pointwise extension
 
 1732
 01:39:28,240 --> 01:39:31,640
-when we apply the constructed
+when we apply the constructor
 lambda to the set.
 
 1733
 01:39:31,640 --> 01:39:36,760
-We introduce a notation (x, e) to
+We introduce a notation [X]E to
 mean the intension of the graph set
 
 1734
@@ -8224,13 +8224,13 @@ information of x into e.
 
 1736
 01:39:42,160 --> 01:39:46,600
-And finally, we define lambda x,
-e as the application pattern
+And finally, we define lambda x.e
+ as the application pattern
 
 1737
 01:39:46,600 --> 01:39:51,560
 where the constructed lambda is
-applied to the graph set (x, e).
+applied to the graph set [X]E.
 
 1738
 01:39:51,560 --> 01:39:54,520
@@ -8295,7 +8295,7 @@ where we use lambda to build a term
 
 1751
 01:40:34,040 --> 01:40:38,840
-and use (x, e) which is
+and use [X]E which is
 the graph set to build the binding.
 
 1752
@@ -8305,7 +8305,7 @@ means equational reasoning
 
 1753
 01:40:42,360 --> 01:40:44,280
-thus the beta-reduction rule.
+plus the beta-reduction rule.
 
 1754
 01:40:44,280 --> 01:40:46,520
@@ -8315,11 +8315,11 @@ add beta reduction
 1755
 01:40:46,520 --> 01:40:49,680
 as an axiom schema to
-the theory lambda
+the theory Gamma lambda
 
 1756
 01:40:49,680 --> 01:40:52,200
-then we can prove that gamma lambda
+then we can prove that Gamma lambda
 
 1757
 01:40:52,200 --> 01:40:55,120
@@ -8338,7 +8338,7 @@ logic formal reasoning
 
 1760
 01:41:00,880 --> 01:41:02,760
-within the theory gamma lambda
+within the theory Gamma lambda
 
 1761
 01:41:02,760 --> 01:41:06,000
@@ -8347,7 +8347,7 @@ the semantic validity
 
 1762
 01:41:06,000 --> 01:41:09,120
-within the theory gamma lambda.
+within the theory Gamma lambda.
 
 1763
 01:41:09,120 --> 01:41:11,120
@@ -8361,7 +8361,7 @@ with binding using matching logic.
 1765
 01:41:15,320 --> 01:41:18,400
 Since matching logic is
-the logic foundation of K
+the logical foundation of K
 
 1766
 01:41:18,400 --> 01:41:22,120
@@ -8375,11 +8375,11 @@ a simple matching logic variant
 
 1768
 01:41:25,400 --> 01:41:27,920
-that has only 7 synthetic constructs
+that has only 7 syntactic constructs
 
 1769
 01:41:27,920 --> 01:41:31,680
-and with fully developed
+and we fully developed
 models and proof theories.
 
 1770
@@ -8394,7 +8394,7 @@ by applying the construct lambda
 
 1772
 01:41:40,200 --> 01:41:42,200
-to the graph set (x, e).
+to the graph set [X]E.
 
 1773
 01:41:42,200 --> 01:41:44,760
@@ -8413,7 +8413,7 @@ calculus and matching logic.
 
 1776
 01:41:52,000 --> 01:41:56,600
-Finally, we extending our approach
+Finally, we extended our approach
 to all binders in a systematic way
 
 1777

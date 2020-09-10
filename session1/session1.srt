@@ -145,7 +145,7 @@ progress through the session.
 31
 00:14:09,760 --> 00:14:12,120
 First up, we're going to have
-Benoit Montagu telling us
+Benoît Montagu telling us
 
 32
 00:14:12,120 --> 00:14:16,360
@@ -155,7 +155,7 @@ for higher order programs.
 33
 00:14:16,360 --> 00:14:18,280
 BENOIT MONTAGU: Hello, my name
-is Benoit Montagu,
+is Benoît Montagu,
 
 34
 00:14:18,280 --> 00:14:21,200
@@ -165,7 +165,7 @@ joint work with Thomas Jensen
 35
 00:14:21,200 --> 00:14:25,400
 about the abstract interpretation
-of high order programs.
+of higher-order programs.
 
 36
 00:14:25,400 --> 00:14:29,880
@@ -179,7 +179,7 @@ we want to detect
 
 38
 00:14:31,120 --> 00:14:33,440
-when a function call
+what a function call
 does not change.
 
 39
@@ -214,8 +214,8 @@ to perform common
 
 45
 00:14:54,160 --> 00:14:56,760
-sub expression elimination
-and across function calls.
+sub-expression elimination
+across function calls.
 
 46
 00:14:56,760 --> 00:14:58,520
@@ -228,18 +228,18 @@ program verification.
 
 48
 00:15:00,720 --> 00:15:04,760
-In particular, invariant preservation
-proves the properties
+And in particular, invariant preservation
+proofs:
 
 49
 00:15:04,760 --> 00:15:07,080
-of the parts
-of the Other states
+The properties of the parts
+of the state
 
 50
 00:15:07,080 --> 00:15:11,520
 that have not changed
-or indeed automatically preserved.
+are indeed automatically preserved.
 
 51
 00:15:12,480 --> 00:15:15,360
@@ -253,8 +253,8 @@ It's a static analysis
 
 53
 00:15:18,680 --> 00:15:21,360
-that infers frames for,
-for first order programs.
+that infers frames
+for first-order programs.
 
 54
 00:15:21,360 --> 00:15:24,280
@@ -284,7 +284,7 @@ to extend the correlation analysis
 59
 00:15:38,600 --> 00:15:41,280
 to infer frames for
-a higher order language.
+a higher-order language.
 
 60
 00:15:41,280 --> 00:15:45,240
@@ -394,7 +394,7 @@ is to apply successive abstractions
 81
 00:16:47,800 --> 00:16:52,080
 on the collecting semantics.
-By doing so you obtain an analysis
+By doing so, you obtain an analysis
 
 82
 00:16:52,080 --> 00:16:54,960
@@ -409,7 +409,7 @@ we have used two abstractions.
 84
 00:16:57,320 --> 00:16:59,840
 The first one is
-a variant of a well known
+a variant of the well-known
 
 85
 00:16:59,840 --> 00:17:04,040
@@ -419,12 +419,12 @@ and the second one introduces
 86
 00:17:04,040 --> 00:17:06,600
 the correlation domain
-represented last year,
+we presented last year,
 
 87
 00:17:06,600 --> 00:17:10,640
-that we extend to
-support first class functions.
+that we extended to
+support first-class functions.
 
 88
 00:17:10,640 --> 00:17:14,920
@@ -439,7 +439,7 @@ And we have mechanically verified
 90
 00:17:19,600 --> 00:17:23,080
 all these results
-in the Coq system.
+in the Coq proof assistant.
 
 91
 00:17:23,080 --> 00:17:26,000
@@ -468,13 +468,12 @@ for call by value
 
 96
 00:17:37,280 --> 00:17:42,040
-that perform a substitution t,
+that performs a substitution
 to reduce a beta redex.
 
 97
 00:17:42,600 --> 00:17:45,240
-For this for this
-higher order language,
+For this higher-order language,
 
 98
 00:17:45,240 --> 00:17:48,640
@@ -483,7 +482,7 @@ between the inputs of programs
 
 99
 00:17:48,640 --> 00:17:52,440
-and the outputs.
+and their outputs.
 But what are the inputs?
 
 100
@@ -563,7 +562,7 @@ Now, we remark that if sigma
 
 115
 00:18:42,120 --> 00:18:45,640
-might define all the inputs
+defines all the inputs
 of a program t,
 
 116
@@ -633,8 +632,8 @@ substitution sigma
 
 129
 00:19:24,440 --> 00:19:27,840
-related to similar
-is related to some input v,
+is related is
+related to some output v,
 
 130
 00:19:27,840 --> 00:19:30,960
@@ -649,16 +648,16 @@ be related to the same value v.
 132
 00:19:35,800 --> 00:19:39,800
 This definition should not
-surprise the logicians among you,
+surprise the logicians among you:
 
 133
 00:19:39,800 --> 00:19:43,520
-what we call stability is similar
+What we call stability is similar
 to the notion of persistence
 
 134
 00:19:43,520 --> 00:19:46,320
-that is seen
+that is found
 in Kripke-style semantics.
 
 135
@@ -668,7 +667,7 @@ holds in some world
 
 136
 00:19:49,440 --> 00:19:53,880
-it will it must also hold
+it must also hold
 in any larger world.
 
 137
@@ -678,7 +677,7 @@ no surprise to the semanticists
 
 138
 00:19:56,880 --> 00:20:00,680
-among you either because
+among you either, because
 a stable relation is in fact
 
 139
@@ -703,8 +702,8 @@ in the paper a denotation
 
 143
 00:20:13,000 --> 00:20:16,000
-that's given a term t
-and environment E
+that given a term t
+and an environment E
 
 144
 00:20:16,000 --> 00:20:18,960
@@ -713,8 +712,8 @@ between the inputs
 
 145
 00:20:18,960 --> 00:20:21,880
-and the outputs of t,
-the environment denotes
+and the outputs of t.
+The environment denotes
 
 146
 00:20:21,880 --> 00:20:25,480
@@ -788,7 +787,7 @@ the input-output in the sense
 
 160
 00:21:07,560 --> 00:21:12,200
-that it is an overall approximation
+that it is an over-approximation
 of the input-output relation
 
 161
@@ -814,7 +813,7 @@ gives you an output value v,
 165
 00:21:26,520 --> 00:21:29,920
 then the input-output pair
-(sigma, v) is predicatively
+(sigma, v) is predictably
 
 166
 00:21:29,920 --> 00:21:32,880
@@ -833,7 +832,7 @@ the denotation
 
 169
 00:21:39,880 --> 00:21:44,000
-of the input-output relation
+and the input-output relation
 are the same.
 
 170
@@ -843,8 +842,8 @@ verified these results
 
 171
 00:21:47,000 --> 00:21:52,520
-in the Coq proof systems...
-A denotation must treat
+in the Coq proof assistant...
+Our denotation must treat
 
 172
 00:21:52,520 --> 00:21:55,440
@@ -864,11 +863,11 @@ for the variable in the environment.
 175
 00:22:01,960 --> 00:22:06,120
 This is indeed
-a correct over-approximation
+a correct over-approximation.
 
 176
 00:22:06,120 --> 00:22:09,840
-Within the paper we give
+But in the paper we give
 a sound and complete definition.
 
 177
@@ -879,7 +878,7 @@ explain all the details,
 178
 00:22:13,120 --> 00:22:18,200
 but just notice that the definition
-uses a relation self (x).
+uses a relation SELF(x).
 
 179
 00:22:18,200 --> 00:22:21,640
@@ -924,11 +923,11 @@ This has consequences
 187
 00:22:45,080 --> 00:22:47,480
 on the well-formedness,
-of the definition,
+of the definition.
 
 188
 00:22:47,480 --> 00:22:50,600
-you need to show for example,
+You need to show for example,
 that the free variables
 
 189
@@ -972,7 +971,7 @@ have a look at the paper.
 
 197
 00:23:15,000 --> 00:23:17,320
-Now how do we
+Now, how do we
 handle functions?
 
 198
@@ -987,8 +986,8 @@ applied to t2
 
 200
 00:23:22,600 --> 00:23:27,000
-is the app
-of the denotations.
+is the "APP"
+of their denotations.
 
 201
 00:23:27,000 --> 00:23:30,600
@@ -1093,17 +1092,17 @@ for all possible extensions
 221
 00:24:38,360 --> 00:24:41,600
 of the input substitutions,
-as is usually from
+as is usually found
 
 222
 00:24:41,600 --> 00:24:46,760
-the in Kripke style semantics.
+in Kripke-style semantics.
 And this is essential
 
 223
 00:24:46,760 --> 00:24:48,640
 because this quantification
-of our extensions
+over extensions
 
 224
 00:24:48,640 --> 00:24:51,480
@@ -1142,12 +1141,12 @@ behavior of programs.
 
 231
 00:25:11,800 --> 00:25:16,200
-And we use it as a starting point
+And we used it as a starting point
 to build a static analysis.
 
 232
 00:25:16,200 --> 00:25:20,000
-So following the abstract
+So, following the abstract
 interpretation methodology,
 
 233
@@ -1163,7 +1162,7 @@ tells us how the inputs
 235
 00:25:26,200 --> 00:25:31,720
 are related to the outputs globally.
-We first apply a invariant
+We first apply a variant
 
 236
 00:25:31,720 --> 00:25:34,720
@@ -1172,12 +1171,12 @@ attribute abstraction,
 
 237
 00:25:34,720 --> 00:25:37,560
-working at this point
-what we call point-wise relations,
+We obtain at this point
+what we call pointwise relations,
 
 238
 00:25:37,560 --> 00:25:41,320
-that, that tell us how each input
+that tell us how each input
 is independently related
 
 239
@@ -1217,13 +1216,13 @@ is an extension
 
 246
 00:26:04,560 --> 00:26:07,720
-of the correlation of subdomain
+of the correlation of abstract domain
 from our previous work
 
 247
 00:26:07,720 --> 00:26:10,640
 that we extended
-with first class functions.
+with first-class functions.
 
 248
 00:26:10,640 --> 00:26:12,640
@@ -1264,7 +1263,7 @@ designed to compete with
 
 256
 00:26:33,280 --> 00:26:39,120
-existing control flow analysis
+existing control flow analyses
 and it does not compete.
 
 257
@@ -1330,7 +1329,7 @@ to the first injection.
 269
 00:27:23,240 --> 00:27:27,440
 Then, the summary is
-instantiated the second time
+instantiated a second time
 
 270
 00:27:27,440 --> 00:27:30,960
@@ -1402,12 +1401,12 @@ of the theoretical development.
 284
 00:28:13,000 --> 00:28:16,480
 As a long-term goal, we would
-like to integrate such analysis
+like to integrate such an analysis
 
 285
 00:28:16,480 --> 00:28:19,120
 with a proof assistant to
-reduce the proof efforts
+reduce the proof effort
 
 286
 00:28:19,120 --> 00:28:21,520
@@ -1416,7 +1415,7 @@ large programs.
 
 287
 00:28:22,280 --> 00:28:26,800
-On the shorter term, we want to
+On a shorter term, we want to
 support more language features
 
 288
@@ -1454,7 +1453,7 @@ That's all. Thank you for watching.
 
 295
 00:28:54,640 --> 00:28:56,000
-ADAM: Thanks Benoit.
+ADAM: Thanks Benoît.
 
 296
 00:28:56,000 --> 00:28:57,640
@@ -3979,6 +3978,7 @@ lots of recent work
 
 837
 00:58:23,160 --> 00:58:24,440
+in this community
 on this topic,
 
 838
@@ -3992,7 +3992,7 @@ for verification.
 
 840
 00:58:28,360 --> 00:58:31,080
-But our main success stories
+One of the main success stories
 is the Iris project,
 
 841
@@ -4021,7 +4021,7 @@ We really do enjoy, for instance,
 
 846
 00:58:44,480 --> 00:58:46,680
-the use in type theory based proof assistants,
+their use in type theory based proof assistants,
 
 847
 00:58:46,680 --> 00:58:49,280
@@ -4055,7 +4055,7 @@ a shallow embedding work?
 853
 00:59:01,440 --> 00:59:03,720
 But it comes with
-certain challenges.
+several challenges.
 
 854
 00:59:04,360 --> 00:59:07,120
@@ -4075,7 +4075,7 @@ support partial correctness,
 857
 00:59:13,640 --> 00:59:15,240
 which is needed when
-reasoning with programs
+reasoning about programs
 
 858
 00:59:15,240 --> 00:59:18,280
@@ -4084,7 +4084,7 @@ and that might not terminate?
 
 859
 00:59:18,280 --> 00:59:21,120
-And lastly, IRIS provides this
+And lastly, Iris provides this
 very convenient feature
 
 860
@@ -4121,8 +4121,8 @@ a framework called Steel,
 
 867
 00:59:35,680 --> 00:59:38,480
-which is a concurrency
-version, which is DSL for F*,
+which is a concurrent
+separation logic DSL for F*,
 
 868
 00:59:38,480 --> 00:59:41,520
@@ -4132,7 +4132,7 @@ language designed for verification.
 869
 00:59:41,520 --> 00:59:44,440
 And in this talk, I'm going to
-talk especially about Steel core,
+talk especially about Steelcore,
 
 870
 00:59:44,440 --> 00:59:47,080
@@ -4156,7 +4156,7 @@ using action trees.
 874
 00:59:54,760 --> 00:59:58,280
 And these action trees are
-characterized by state typeclass,
+parameterized by a state typeclass,
 
 875
 00:59:58,280 --> 01:00:02,120
@@ -4185,7 +4185,7 @@ is that this allows us to,
 
 880
 01:00:15,440 --> 01:00:17,960
-reasonably to prove
+reason about, to prove
 a soundness of our semantics,
 
 881
@@ -4200,7 +4200,7 @@ this state typeclass
 
 883
 01:00:24,800 --> 01:00:26,360
-of a rich Concurrent
+with a rich Concurrent
 Separation Logic.
 
 884
@@ -4240,26 +4240,26 @@ our state typeclass.
 891
 01:00:48,600 --> 01:00:52,000
 What this typeclass contains
-is first the type for memory
+is first a type for memory
 
 892
 01:00:52,000 --> 01:00:55,800
-and second the type for separation
+and second a type for separation
 logic assertions slprop.
 
 893
 01:00:55,800 --> 01:01:00,320
-As well as, operators
-which form a commutative monoid structure.
+As well as, operators which form a
+commutative monoid structure over slprops.
 
 894
 01:01:00,320 --> 01:01:03,280
 And lastly, we need to
-find a way to interpret
+define a way to interpret
 
 895
 01:01:03,280 --> 01:01:05,360
-the separation logic
+a separation logic
 assertion in a given memory.
 
 896
@@ -4270,7 +4270,7 @@ the separation logic assertion
 897
 01:01:08,160 --> 01:01:11,640
 holds or not in a given memory,
-which is this intrep function.
+which is this interp function.
 
 898
 01:01:12,680 --> 01:01:15,600
@@ -4285,11 +4285,11 @@ by our state typeclass.
 900
 01:01:19,280 --> 01:01:21,880
 These action trees are
-indexed by prefix.
+indexed by three things.
 
 901
 01:01:21,880 --> 01:01:24,160
-First, the written type a,
+First, a return type a,
 
 902
 01:01:24,160 --> 01:01:27,080
@@ -4343,7 +4343,7 @@ seen as computations.
 913
 01:01:52,320 --> 01:01:55,000
 We can then define composition
-of the computations
+of two computations
 
 914
 01:01:55,000 --> 01:01:56,560
@@ -4361,7 +4361,7 @@ of separation logic.
 
 917
 01:02:03,040 --> 01:02:06,040
-The first condition q of
+The postcondition q of
 the first computation
 
 918
@@ -4390,7 +4390,7 @@ We can see here this Dv effect,
 923
 01:02:19,560 --> 01:02:22,760
 which is a primitive effect
-in F* for diversions.
+in F* for divergence.
 
 924
 01:02:23,240 --> 01:02:25,720
@@ -4400,7 +4400,7 @@ in this composition,
 925
 01:02:25,720 --> 01:02:28,240
 we are actually encoding
-positive divergence,
+possibly divergent,
 
 926
 01:02:28,240 --> 01:02:30,680
@@ -4409,12 +4409,12 @@ computations.
 
 927
 01:02:31,640 --> 01:02:35,640
-Lastly, we can define the node
+Lastly, we can define a node
 Par for structured parallelism.
 
 928
 01:02:36,360 --> 01:02:39,440
-The Par role is stand out in
+The Par rule is standard in
 concurrent separation logic.
 
 929
@@ -4424,7 +4424,7 @@ the indices of our computations
 
 930
 01:02:43,040 --> 01:02:45,120
-capture this classic role.
+capture this classic rule.
 
 931
 01:02:45,960 --> 01:02:48,120
@@ -4433,18 +4433,18 @@ the preconditions p and p prime,
 
 932
 01:02:48,120 --> 01:02:51,560
-offered to computations
-are disjoint,
+of the two computations are disjoint,
+or can be starred with each other
 
 933
 01:02:51,560 --> 01:02:55,120
-then it can safely execute with
-computations in parallel.
+then we can safely execute the
+two computations in parallel.
 
 934
 01:02:55,120 --> 01:02:59,120
 Finally, returning the star of
-the first conditions q and q prime.
+their postconditions q and q prime.
 
 935
 01:03:00,040 --> 01:03:01,800
@@ -4513,17 +4513,17 @@ a partial-correctness setting
 
 949
 01:03:43,520 --> 01:03:47,120
-because NST can model possible
-diversions computations.
+because NST can model possibly
+divergent computations.
 
 950
 01:03:47,960 --> 01:03:49,920
-No that we have a generic semantics,
+Now that we have a generic semantics,
 
 951
 01:03:49,920 --> 01:03:52,960
 we need to instantiate
-a state typeclass
+our state typeclass
 
 952
 01:03:52,960 --> 01:03:54,640
@@ -4541,7 +4541,7 @@ remain standard
 
 955
 01:04:01,000 --> 01:04:02,800
-and consider memory to be the map
+and consider memory to be a map
 
 956
 01:04:02,800 --> 01:04:05,280
@@ -4597,12 +4597,12 @@ sharing disciplines.
 
 967
 01:04:33,280 --> 01:04:37,640
-And lastly, they often provide
+And lastly, we will also provide
 dynamically allocated invariants
 
 968
 01:04:37,640 --> 01:04:40,280
-associated to separate
+associated to separation
 logic assertions.
 
 969
@@ -4638,11 +4638,11 @@ separation logic assertion p.
 
 976
 01:05:01,080 --> 01:05:03,760
-And so it still a named invariant
+And so in Steel, a named invariant
 
 977
 01:05:03,760 --> 01:05:07,760
-is going to be association of
+is going to be this association of
 a name with this refinement,
 
 978
@@ -4684,7 +4684,7 @@ new invariant,
 
 986
 01:05:28,760 --> 01:05:31,600
-which takes as an invariant
+which takes as an argument a
 separation logic assertion p.
 
 987
@@ -4704,18 +4704,18 @@ the indices of the Steel effect
 
 990
 01:05:42,040 --> 01:05:45,240
-corresponds to the indices
-of all action trees.
+correspond to the indices
+of our action trees.
 
 991
 01:05:45,240 --> 01:05:48,680
-First index is the type
+The first index is the type
 returned by the computation,
 
 992
 01:05:48,680 --> 01:05:51,560
 which is here an invariant
-associated to P.
+associated to p.
 
 993
 01:05:51,560 --> 01:05:55,240
@@ -4725,12 +4725,12 @@ initially we need ownership,
 994
 01:05:55,240 --> 01:05:59,000
 we need the validity of
-the separation logic assertion P.
+the separation logic assertion p.
 
 995
 01:05:59,000 --> 01:06:02,000
 After execution of the function
-and creation of invariant,
+and creation of the invariant,
 
 996
 01:06:02,000 --> 01:06:03,920
@@ -4768,7 +4768,7 @@ you to go read the paper.
 1003
 01:06:20,560 --> 01:06:25,320
 Now that we defined invariants in
-Steel, where do we actually use them?
+Steel, how do we actually use them?
 
 1004
 01:06:25,320 --> 01:06:29,880
@@ -4782,17 +4782,17 @@ commands can access invariants
 
 1006
 01:06:34,400 --> 01:06:38,880
-as long as I restore
+as long as they restore
 them after execution.
 
 1007
 01:06:38,880 --> 01:06:40,920
-So, what is atomic
-commands in Steel?
+So, what is an atomic
+command in Steel?
 
 1008
 01:06:40,920 --> 01:06:44,440
-Well, first of all atomic
+Well, first, all atomic
 actions are atomic commands,
 
 1009
@@ -4827,7 +4827,7 @@ from regular Steel programs,
 1015
 01:07:02,840 --> 01:07:07,320
 we define a new effect SteelAtomic
-as the effect of the Steel effect.
+as a subeffect of the Steel effect.
 
 1016
 01:07:07,320 --> 01:07:10,040
@@ -4836,16 +4836,16 @@ similarities with the Steel effect.
 
 1017
 01:07:10,040 --> 01:07:11,440
-It still has original type A
+It still has a return type a
 
 1018
 01:07:11,440 --> 01:07:14,040
-as well as the precondition
-p and postcondition q.
+as well as a precondition
+p and a postcondition q.
 
 1019
 01:07:14,040 --> 01:07:17,440
-But it also has the additional
+But it also has this additional
 index is_ghost which indicates
 
 1020
@@ -4870,27 +4870,27 @@ can define an invariant handler
 
 1024
 01:07:29,680 --> 01:07:33,160
-which takes an argument
-an invariant I associated to an slprop P
+which takes as argument
+an invariant i associated to an slprop p
 
 1025
 01:07:33,160 --> 01:07:34,760
-and a function F.
+and a function f.
 
 1026
 01:07:34,760 --> 01:07:38,280
 And what this handler says that
-if F is an atomic function,
+if f is an atomic function,
 
 1027
 01:07:38,280 --> 01:07:41,480
-which accesses p, but
-stores it after execution,
+which accesses p, but also
+restores it after execution,
 
 1028
 01:07:41,480 --> 01:07:44,680
-then you can safely open
-the invariant execute F
+then we can safely open
+the invariant, execute F
 
 1029
 01:07:44,680 --> 01:07:46,280
@@ -4904,26 +4904,26 @@ can give a signature
 1031
 01:07:47,960 --> 01:07:52,680
 that does not involve p in
-specification.
+its specification anymore.
 
 1032
 01:07:52,680 --> 01:07:56,120
-In practice, the last index
-of the Steel effect I was mentioning,
+In practice, the last index of the
+SteelAtomic effect I was mentioning,
 
 1033
 01:07:56,120 --> 01:07:59,120
 is a set of currently
-open invariants
+opened invariants
 
 1034
 01:07:59,120 --> 01:08:02,400
-in the sense that in
-the invariants are applicable,
+in the sense that although
+invariants are duplicable,
 
 1035
 01:08:02,400 --> 01:08:05,320
-The separation track assertions
+The separation logic assertions
 that they protect might not be
 
 1036
@@ -4937,7 +4937,7 @@ might actually lead to unsoundness.
 
 1038
 01:08:10,840 --> 01:08:14,120
-And so that's what's
+And so that's what
 SteelCore consists of.
 
 1039
@@ -4962,17 +4962,17 @@ instantiated a program logic
 
 1043
 01:08:26,520 --> 01:08:29,400
-with a memory and original
-separation logic
+with a memory and a rich
+concurrent separation logic
 
 1044
 01:08:29,400 --> 01:08:30,960
-containing standard connectors,
+containing standard connectives,
 
 1045
 01:08:30,960 --> 01:08:34,920
 as well as a PCM based
-memory model and invariance.
+memory model and invariants.
 
 1046
 01:08:34,920 --> 01:08:38,960
@@ -4986,7 +4986,7 @@ allows us to operate on memory.
 
 1048
 01:08:43,920 --> 01:08:48,760
-Now, we can actually use this to
+Now, we can actually use the Steel
 framework to implement verified
 
 1049
@@ -4996,7 +4996,7 @@ such as, for instance,
 
 1050
 01:08:51,480 --> 01:08:54,880
-the library for SpinLock,
+a library for SpinLock,
 and there is no reason to stop here
 
 1051
@@ -5029,7 +5029,7 @@ The idea is that to each channel,
 1057
 01:09:12,240 --> 01:09:15,120
 we're going to associate
-one protocol P.
+one protocol p.
 
 1058
 01:09:15,120 --> 01:09:18,680
@@ -5043,7 +5043,7 @@ to reason about these channels.
 
 1060
 01:09:22,680 --> 01:09:25,120
-Using the separation logic assertions,
+Using these separation logic assertions,
 
 1061
 01:09:25,120 --> 01:09:28,480
@@ -5052,18 +5052,18 @@ and implement a send function,
 
 1062
 01:09:28,480 --> 01:09:32,680
-which will take as arguments for
-channel C associated to protocol P
+which will take as arguments a
+channel c associated to protocol p
 
 1063
 01:09:32,680 --> 01:09:36,200
-as well as message x,
+as well as a message x,
 which is compatible
 
 1064
 01:09:36,200 --> 01:09:38,480
 with the current
-state of a protocol.
+state of the protocol.
 
 1065
 01:09:38,480 --> 01:09:42,200
@@ -5073,16 +5073,16 @@ this function states is that
 1066
 01:09:42,200 --> 01:09:46,320
 if we initially have send
-permission on this channel C,
+permission on this channel c,
 
 1067
 01:09:46,320 --> 01:09:48,560
 and the channel is
-currently as a stage where
+currently at a stage where
 
 1068
 01:09:48,560 --> 01:09:52,840
-it currently needs to be executed, then
+cur remains to be executed, then
 we can indeed send this message.
 
 1069
@@ -5116,7 +5116,7 @@ such as, for instance,
 
 1075
 01:10:13,800 --> 01:10:18,040
-the simple PingPong protocol.
+this simple PingPong protocol.
 What this protocol says is that
 
 1076
@@ -5142,7 +5142,7 @@ of our protocol.
 1080
 01:10:31,480 --> 01:10:36,000
 And we can now implement
-the client version of his protocol
+a client version of this protocol
 
 1081
 01:10:36,000 --> 01:10:37,720
@@ -5151,7 +5151,7 @@ that takes as argument a channel
 1082
 01:10:37,720 --> 01:10:40,480
 which is ensured to follow
-PingPong protocol.
+the PingPong protocol.
 
 1083
 01:10:40,480 --> 01:10:43,840
@@ -5160,13 +5160,13 @@ a message on the channel,
 
 1084
 01:10:43,840 --> 01:10:49,000
-which we hear p to be 17. We
-then received a new integer.
+which we here pick to be 17. We
+then receive a new integer.
 
 1085
 01:10:49,000 --> 01:10:51,920
 And since the channel is
-expected to follow protocol,
+expected to follow the protocol,
 
 1086
 01:10:51,920 --> 01:10:55,200
@@ -5190,7 +5190,7 @@ virtue of type checking.
 
 1090
 01:11:04,880 --> 01:11:08,040
-If we're for instance to start
+If we were for instance to start
 our client implementation
 
 1091
@@ -5199,35 +5199,35 @@ by trying to receive a message,
 
 1092
 01:11:09,800 --> 01:11:12,600
-verification will fail because
+verification would fail because
 the protocol states that
 
 1093
 01:11:12,600 --> 01:11:15,840
-the first action has to be send.
+the first action has to be a send.
 
 1094
 01:11:15,840 --> 01:11:17,240
-To conclude in this talk,
+To conclude, in this talk,
 
 1095
 01:11:17,240 --> 01:11:20,400
 I presented the core semantics
-and prognostic of steel
+and program logic of Steel
 
 1096
 01:11:20,400 --> 01:11:23,440
-the shallow embedding of
+a shallow embedding of
 concurrent separation logic in F*
 
 1097
 01:11:23,440 --> 01:11:25,440
-with dependent-typed language.
+a dependently-typed language.
 
 1098
 01:11:25,440 --> 01:11:27,600
-A Steel Program logic has
-a member model which is based
+The Steel program logic has
+a memory model which is based
 
 1099
 01:11:27,600 --> 01:11:29,440
@@ -5269,7 +5269,7 @@ is to provide
 1107
 01:11:46,200 --> 01:11:48,680
 a full-fledged dependently
-type programming language,
+typed programming language,
 
 1108
 01:11:48,680 --> 01:11:50,400
@@ -5283,7 +5283,7 @@ and distributed programming.
 1110
 01:11:52,240 --> 01:11:55,040
 All of this being built on
-top of a lower memory model.
+top of a low-level memory model.
 
 1111
 01:11:55,040 --> 01:11:58,280
@@ -5292,16 +5292,16 @@ logic which is expressed in
 
 1112
 01:11:58,280 --> 01:12:00,720
-an embedded way in F*.
+and embedded within in F*.
 
 1113
 01:12:00,720 --> 01:12:04,480
 During this talk, there are many details
-of our work I didn't mention.
+of our work that I didn't mention.
 
 1114
 01:12:04,480 --> 01:12:07,200
-First of all our semantics
+First of all our semantics are
 actually much more complicated
 
 1115
@@ -5337,7 +5337,7 @@ First of all, we provide
 
 1122
 01:12:24,880 --> 01:12:27,440
-the SpinLocks and functional
+the SpinLocks and ForkJoin
 libraries that I mentioned.
 
 1123
@@ -5352,8 +5352,8 @@ local states using
 
 1125
 01:12:32,840 --> 01:12:37,160
-closures over slprop. if you're interested
-by any of these things,
+closures over slprop for the latter.
+If you're interested by any of these things,
 
 1126
 01:12:37,160 --> 01:12:42,160

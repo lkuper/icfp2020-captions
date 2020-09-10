@@ -413,7 +413,7 @@ TVM comes with a tutorial
 93
 00:16:34,600 --> 00:16:38,200
 on how to optimize matrix
-modifications for CPU's.
+multiplications for CPU's.
 
 94
 00:16:38,200 --> 00:16:41,520
@@ -442,7 +442,7 @@ from the TVM tutorial,
 99
 00:16:52,920 --> 00:16:56,320
 which applies some specific
-group transformations.
+loop transformations.
 
 100
 00:16:56,320 --> 00:16:58,320
@@ -489,11 +489,11 @@ the schedule are not fully separated.
 109
 00:17:19,000 --> 00:17:22,040
 Here, the schedule uses
-the same path in identifier,
+the same python identifiers,
 
 110
 00:17:22,040 --> 00:17:24,120
-that has been declared
+that have been declared
 in the algorithm.
 
 111
@@ -622,7 +622,7 @@ to separate concerns, by
 138
 00:18:30,160 --> 00:18:32,280
 specifying computation at
-a high obstruction level only,
+a high abstraction level only,
 
 139
 00:18:32,280 --> 00:18:36,840
@@ -710,8 +710,8 @@ level program that is written in
 
 156
 00:19:29,360 --> 00:19:31,200
-the function programming
-language called rise.
+the functional programming
+language called RISE.
 
 157
 00:19:31,200 --> 00:19:34,760
@@ -725,8 +725,8 @@ an optimization strategy that describes
 
 159
 00:19:38,520 --> 00:19:42,440
-how to optimize that rise program.
-And this is written in elevate,
+how to optimize that RISE program.
+And this is written in Elevate,
 
 160
 00:19:42,440 --> 00:19:46,080
@@ -736,12 +736,12 @@ published in the late nineties.
 161
 00:19:47,200 --> 00:19:50,800
 Our compiler then rewrites
-the rise program based on the
+the RISE program based on the
 
 162
 00:19:50,800 --> 00:19:53,560
 optimizations described in
-the elevate strategy and
+the Elevate strategy and
 
 163
 00:19:53,560 --> 00:19:56,440
@@ -775,7 +775,7 @@ this and we'll start by taking
 169
 00:20:13,520 --> 00:20:15,640
 a closer look at
-elevate our language
+Elevate our language
 
 170
 00:20:15,640 --> 00:20:18,280
@@ -784,7 +784,7 @@ for describing the optimizations.
 171
 00:20:18,440 --> 00:20:22,480
 The most basic building block
-in elevate is a strategy and
+in Elevate is a strategy and
 
 172
 00:20:22,480 --> 00:20:25,440
@@ -793,8 +793,8 @@ from some program P to what
 
 173
 00:20:25,440 --> 00:20:29,800
-we call a rewrite result and
-a rewrite result is simply saying
+we call a RewriteResult and
+a RewriteResult is simply saying
 
 174
 00:20:29,800 --> 00:20:33,440
@@ -823,8 +823,8 @@ go ahead and implement
 
 179
 00:20:44,520 --> 00:20:49,040
-the typical fusion rule for rise
-programs as an elevate strategy.
+the typical fusion rule for RISE
+programs as an Elevate strategy.
 
 180
 00:20:49,040 --> 00:20:52,480
@@ -833,7 +833,7 @@ rule simply says that whenever
 
 181
 00:20:52,480 --> 00:20:55,480
-you see a rise program that
+you see a RISE program that
 contains two consecutive maps,
 
 182
@@ -858,7 +858,7 @@ we can combine tools
 
 186
 00:21:08,720 --> 00:21:11,480
-and elevate using several
+and Elevate using several
 different combinators.
 
 187
@@ -912,7 +912,7 @@ the following situation.
 
 197
 00:21:45,120 --> 00:21:48,120
-Here you see a rise program
+Here you see a RISE program
 that contains three maps.
 
 198
@@ -937,7 +937,7 @@ precisely define locations in
 
 202
 00:22:01,120 --> 00:22:03,920
-the AST using so-called traverses.
+the AST using so-called traversals.
 
 203
 00:22:04,080 --> 00:22:07,320
@@ -966,11 +966,11 @@ for the other nodes and
 208
 00:22:19,480 --> 00:22:22,800
 could for example, apply
-for the argument of fusion,
+body(argument(mapFusion)),
 
 209
 00:22:22,800 --> 00:22:26,440
-for fusing the last thing that's in
+for fusing the last two maps in
 this expression and in the paper,
 
 210
@@ -980,7 +980,7 @@ to describe precise locations
 
 211
 00:22:29,320 --> 00:22:31,960
-using these and other traverses.
+using these and other traversals.
 
 212
 00:22:32,360 --> 00:22:35,760
@@ -1004,8 +1004,8 @@ up or top down do.
 
 216
 00:22:44,920 --> 00:22:49,240
-So these traverses strategies,
-traverse AST either like from top
+So these traversal strategies,
+traverse the AST either like from top
 
 217
 00:22:49,240 --> 00:22:52,240
@@ -1035,7 +1035,7 @@ the give expression.
 222
 00:23:05,280 --> 00:23:08,800
 And in the paper we define a few
-normal forms for rise expression.
+normal forms for RISE expressions.
 
 223
 00:23:08,800 --> 00:23:11,440
@@ -1064,7 +1064,7 @@ and try to especially define
 
 228
 00:23:24,640 --> 00:23:27,640
-elevate strategies that
+Elevate strategies that
 apply the same optimizations
 
 229
@@ -1084,7 +1084,7 @@ the matrix multiplication using
 
 232
 00:23:37,800 --> 00:23:40,880
-the pipe and API and use
+the python and API and use
 the default schedule
 
 233
@@ -1098,7 +1098,7 @@ the matrix multiplication
 
 235
 00:23:46,880 --> 00:23:50,000
-computation using rise
+computation using RISE
 and its functional array
 
 236
@@ -1109,11 +1109,11 @@ map and reduce.
 237
 00:23:51,760 --> 00:23:54,840
 And we define a separate
-strategy in elevate,
+strategy in Elevate,
 
 238
 00:23:54,840 --> 00:23:58,560
-which explained how to
+which explains how to
 optimize this computation.
 
 239
@@ -1134,7 +1134,7 @@ strategy implicitly describes
 242
 00:24:09,360 --> 00:24:12,480
 some way of lowering
-the program to execute the code.
+the program to executable code.
 
 243
 00:24:12,480 --> 00:24:15,600
@@ -1240,7 +1240,7 @@ describe the whole optimization
 264
 00:25:15,920 --> 00:25:19,880
 from scratch because we cannot
-easily define our own abstraction.
+easily define our own abstractions.
 
 265
 00:25:19,880 --> 00:25:23,680
@@ -1263,18 +1263,18 @@ optimizations.
 
 269
 00:25:31,840 --> 00:25:35,320
-Our approach with rise and elevate
+Our approach with RISE and Elevate
 does not require us to do so.
 
 270
 00:25:35,320 --> 00:25:39,120
-And we use the same rise matrix
+And we use the same RISE matrix
 multiplication that is optimized
 
 271
 00:25:39,120 --> 00:25:42,640
 by seven different
-and separate elevate strategies.
+and separate Elevate strategies.
 
 272
 00:25:43,400 --> 00:25:46,200
@@ -1283,13 +1283,13 @@ we look at two things.
 
 273
 00:25:46,200 --> 00:25:51,920
-So first in the first experiment,
+So in the first experiment,
 we simply counted the number of
 
 274
 00:25:51,960 --> 00:25:55,240
-successful rewrite steps for
-versions, which you can see here.
+successful rewrite steps per
+version, which you can see here.
 
 275
 00:25:55,240 --> 00:25:58,800
@@ -1309,7 +1309,7 @@ actual program optimizations,
 278
 00:26:06,800 --> 00:26:10,440
 we reach about yeah,
-45 thousands and
+45,000 and
 
 279
 00:26:10,440 --> 00:26:13,400
@@ -1329,7 +1329,7 @@ the complex TVM like optimizations
 282
 00:26:19,120 --> 00:26:22,560
 by simply composing a few
-rewrite rules using elevate.
+rewrite rules using Elevate.
 
 283
 00:26:22,840 --> 00:26:26,280
@@ -1369,7 +1369,7 @@ to achieve a similar trend,
 290
 00:26:44,120 --> 00:26:46,520
 which means that our
-elevate strategies encode
+Elevate strategies encode
 
 291
 00:26:46,520 --> 00:26:49,680
@@ -1398,16 +1398,16 @@ paper and with this,
 
 296
 00:27:00,680 --> 00:27:02,120
-I'd like to end the presentation.
+I'd like to end the presentation
 
 297
 00:27:02,120 --> 00:27:04,480
-I mentioned that you can find
+and mention that you can find
 all our implementations
 
 298
 00:27:04,480 --> 00:27:08,280
-online or in the artifacts.
+online or in the artifact.
 Thanks for your attention.
 
 299
@@ -3128,7 +3128,7 @@ grade, and print it.
 
 659
 00:44:11,680 --> 00:44:16,800
-So the OCaml type checker
+The OCaml type checker
 will happily type check
 
 660
@@ -3151,16 +3151,16 @@ and today I'm going to present Affe,
 
 664
 00:44:32,200 --> 00:44:34,200
-which is an ML like language
+which is an ML-like language
 
 665
 00:44:34,520 --> 00:44:37,520
-that prevent precisely
+that prevents precisely
 this kind of error.
 
 666
 00:44:38,000 --> 00:44:40,520
-So here is the same program
+Here is the same program
 written in Affe.
 
 667
@@ -3178,13 +3178,13 @@ reach the last line
 
 670
 00:44:48,240 --> 00:44:53,040
-and the type checker will refuse
-at compile time, this program.
+the type checker will refuse
+this program at compile time.
 
 671
 00:44:53,480 --> 00:44:56,600
-So we have a few
-specificity in Affe.
+We have a few
+specialties in Affe.
 
 672
 00:44:56,720 --> 00:45:02,680
@@ -3193,17 +3193,17 @@ kinds, to determine usage.
 
 673
 00:45:02,760 --> 00:45:07,000
-So, here is a grade database
-is of type database,
+Here is a grade database
+of type database,
 
 674
 00:45:07,280 --> 00:45:09,960
-and the database is kind of linear.
+the database is kind of linear.
 
 675
 00:45:10,040 --> 00:45:13,360
-And so this resource
-must be use linearly,
+So this resource
+must be used linearly,
 
 676
 00:45:13,520 --> 00:45:15,960
@@ -3217,7 +3217,7 @@ have the math string
 
 678
 00:45:20,840 --> 00:45:22,560
-and string are unrestricted.
+and strings are unrestricted.
 
 679
 00:45:22,720 --> 00:45:26,400
@@ -3227,12 +3227,12 @@ in unrestricted fashions.
 680
 00:45:29,440 --> 00:45:34,280
 Furthermore, we have borrows,
-so as present in rust
+as present in Rust
 
 681
 00:45:34,440 --> 00:45:36,280
-and other languages
-borrows allows
+and other languages.
+Borrows allow
 
 682
 00:45:36,360 --> 00:45:39,040
@@ -3246,7 +3246,7 @@ and that's why we use them here.
 684
 00:45:41,480 --> 00:45:44,760
 Finally, the final
-specificity of affe
+specialty of Affe
 
 685
 00:45:44,840 --> 00:45:46,840
@@ -3255,50 +3255,50 @@ type inference.
 
 686
 00:45:46,920 --> 00:45:48,360
-So before I used.
+Before I used
 
 687
 00:45:50,120 --> 00:45:51,800
-I used a type annotation here
+a type annotation here
 
 688
 00:45:51,840 --> 00:45:56,200
-to simplify, to make
+to make
 it easier to read.
 
 689
 00:45:56,360 --> 00:46:01,320
-But I don't need to. Here
+But I don't need to. The
 type is completely inferred.
 
 690
 00:46:03,200 --> 00:46:06,520
-So, to present Affe, I'm going to
+To present Affe, I'm going to
 go through various of its features,
 
 691
 00:46:06,600 --> 00:46:08,840
-and I'm going to start by linearity.
+and I'm going to start with linearity.
 
 692
 00:46:09,240 --> 00:46:11,560
-So as I said before
+As I said before
 kinds determine usage.
 
 693
 00:46:12,440 --> 00:46:17,040
-We have three kinds linear, resource
+We have three kinds: linear resources
 must be used exactly once.
 
 694
 00:46:17,880 --> 00:46:22,960
-Affine or resource must be used
-exactly at most one zero ones.
+Affine resources must be used
+at most once.
 
 695
 00:46:23,200 --> 00:46:26,440
-And unrestricted
-the object can use
+An unrestricted
+object can be used
 
 696
 00:46:26,440 --> 00:46:29,480
@@ -3315,16 +3315,16 @@ We have a database type of
 
 699
 00:46:33,480 --> 00:46:38,720
-kind lin, a string type of type,
-of kind unrestricted.
+kind Lin, a string type
+of kind Unrestricted.
 
 700
 00:46:39,240 --> 00:46:41,400
-We can also have parameterized kind.
+We can also have parameterized kinds.
 
 701
 00:46:41,480 --> 00:46:42,840
-So, for example, a list.
+For example, a list.
 
 702
 00:46:43,360 --> 00:46:45,040
@@ -3336,7 +3336,7 @@ if we have a list of database.
 
 704
 00:46:47,120 --> 00:46:49,400
-Then, this must be used linearly.
+Then this list must be used linearly.
 
 705
 00:46:49,800 --> 00:46:51,120
@@ -3349,25 +3349,25 @@ an unrestricted fashion
 
 707
 00:46:55,400 --> 00:46:58,760
-to use these kind of parameters kind
+to use these kind of parameters,
 
 708
 00:46:58,800 --> 00:47:00,440
-We also have kind constraints.
+We have kind constraints.
 
 709
 00:47:00,480 --> 00:47:04,840
-So here, we can, a we
-have the type function,
+So here we
+have the type of a function
 
 710
 00:47:04,880 --> 00:47:06,920
-create list which takes an element
+that creates a list which takes an element
 
 711
 00:47:07,000 --> 00:47:12,000
 and replicates it multiple
-time to create a list.
+times to create a list.
 
 712
 00:47:13,240 --> 00:47:15,480
@@ -3376,7 +3376,7 @@ going to be replicated.
 
 713
 00:47:15,960 --> 00:47:17,720
-Because then naturally,
+Then naturally,
 
 714
 00:47:18,200 --> 00:47:20,120
@@ -3393,8 +3393,8 @@ Finally, we also use subkinding,
 
 717
 00:47:27,520 --> 00:47:30,880
-so un is smaller than f
-which is smaller than lin.
+kind Un is smaller than Aff
+which is smaller than Lin.
 
 718
 00:47:31,040 --> 00:47:36,040
@@ -3407,7 +3407,7 @@ we can pass it unrestricted objects.
 
 720
 00:47:38,640 --> 00:47:40,240
-And the reason is that if something
+The reason is that if something
 
 721
 00:47:40,240 --> 00:47:41,960
@@ -3430,21 +3430,21 @@ use it to build up everything else.
 725
 00:47:52,000 --> 00:47:54,920
 And in particular,
-functions and captures.
+functions and closures.
 
 726
 00:47:56,680 --> 00:48:01,400
-So here's a piece of code where
+Here's a piece of code where
 we open the grade database.
 
 727
 00:48:01,440 --> 00:48:05,640
 Then we create a function
-that logs, some message,
+that logs some message
 
 728
 00:48:05,720 --> 00:48:07,240
-and then close the database.
+and then closes the database.
 
 729
 00:48:07,560 --> 00:48:09,880
@@ -3453,7 +3453,7 @@ have a capture here,
 
 730
 00:48:10,640 --> 00:48:13,200
-the login, login close
+the closure of the login
 function captures
 
 731
@@ -3472,7 +3472,7 @@ also be called exactly once.
 
 734
 00:48:25,520 --> 00:48:28,400
-If we ask the Affe checker
+If we ask the Affe typechecker
 
 735
 00:48:28,440 --> 00:48:32,720
@@ -3481,7 +3481,7 @@ this type, string arrow
 
 736
 00:48:32,840 --> 00:48:35,360
-Annotated by Lin, and unit,
+Annotated by Lin to unit,
 
 737
 00:48:35,680 --> 00:48:38,760
@@ -3490,12 +3490,11 @@ the arrow indicates
 
 738
 00:48:38,840 --> 00:48:41,960
-that, indicates
-the usage of this function,
+the usage of this function.
 
 739
 00:48:42,000 --> 00:48:45,000
-it indicates that log n close
+It indicates that the login closure
 must be called exactly once.
 
 740
@@ -3505,7 +3504,7 @@ make everything here.
 
 741
 00:48:50,960 --> 00:48:52,920
-This will, this annotation,
+This annotation,
 
 742
 00:48:53,080 --> 00:48:55,400
@@ -3529,7 +3528,7 @@ this linear arrow
 
 746
 00:49:04,840 --> 00:49:06,920
-is not early but from linear logic.
+is not the lollipop from linear logic.
 
 747
 00:49:07,640 --> 00:49:10,960
@@ -3538,7 +3537,7 @@ about the function itself
 
 748
 00:49:12,720 --> 00:49:14,440
-All right, so we can do.
+All right, so we can do
 
 749
 00:49:15,120 --> 00:49:17,480
@@ -3566,7 +3565,7 @@ as in Rust and other languages,
 754
 00:49:28,640 --> 00:49:33,040
 a borrow is a temporary
-loan of a resource, A.
+loan of a resource.
 
 755
 00:49:33,280 --> 00:49:35,760
@@ -3575,12 +3574,12 @@ of  borrow.
 
 756
 00:49:35,760 --> 00:49:39,080
-Shared burrows for
+Shared borrows for
 observing the resource
 
 757
 00:49:39,160 --> 00:49:42,920
-and Exclusive burrows are
+and Exclusive borrows
 for modifying the resource.
 
 758
@@ -3590,12 +3589,12 @@ a correct use of borrow.
 
 759
 00:49:48,920 --> 00:49:53,080
-We start by looking up,
-two grades concurrently
+We start by looking up
+two grades concurrently.
 
 760
 00:49:53,080 --> 00:49:55,560
-so this is a read action so we use
+This is a read action so we use
 
 761
 00:49:55,600 --> 00:49:58,600
@@ -3603,7 +3602,7 @@ a shared borrow for observing the data.
 
 762
 00:50:00,000 --> 00:50:02,520
-Since it's since it's shared,
+Since it's shared,
 
 763
 00:50:02,560 --> 00:50:06,040
@@ -3641,22 +3640,22 @@ of kind affine.
 
 770
 00:50:28,560 --> 00:50:31,720
-So there are a few rules
+There are a few rules
 to use this borrows.
 
 771
 00:50:31,760 --> 00:50:35,040
 The first rule is that
-we, you cannot use
+we cannot use
 
 772
 00:50:35,080 --> 00:50:39,120
-a borrow and the resource,
-itself, at the same time.
+a borrow and the resource
+itself at the same time.
 
 773
 00:50:39,120 --> 00:50:43,800
-Here, the f function is
+Here, the function is
 called with the resource,
 
 774
@@ -3665,12 +3664,12 @@ and a borrow, and that's not allowed
 
 775
 00:50:46,520 --> 00:50:48,240
-as a type checker will reject this.
+and the type checker will reject this.
 
 776
 00:50:50,240 --> 00:50:53,360
 A second rule is that
-we can not use an
+we cannot use an
 
 777
 00:50:53,360 --> 00:50:57,320
@@ -3708,16 +3707,16 @@ And then we try to leak the borrow
 784
 00:51:20,320 --> 00:51:23,000
 while the database is still
-capture inside the function.
+captured inside the function.
 
 785
 00:51:23,640 --> 00:51:25,600
-So this is not allowed
+This is not allowed
 because the borrow
 
 786
 00:51:25,600 --> 00:51:28,000
-is escaping it's region.
+is escaping its region.
 
 787
 00:51:28,640 --> 00:51:32,680
@@ -3737,20 +3736,20 @@ and the way we check
 790
 00:51:39,560 --> 00:51:43,400
 for this kind of escape is
-by using the indexed kinds
+by using indexed kinds
 
 791
 00:51:43,480 --> 00:51:47,160
-so before I said the kinds were
-unrestricted affine and linear.
+Before I said the kinds were
+unrestricted, affine, and linear.
 
 792
 00:51:47,480 --> 00:51:48,680
-Actually there are a bit more
+Actually there is a bit more
 
 793
 00:51:48,720 --> 00:51:50,720
-zero indexed by the nesting.
+they are zero-indexed by the nesting.
 
 794
 00:51:51,280 --> 00:51:54,800
@@ -3763,7 +3762,7 @@ a second nesting,
 
 796
 00:52:00,440 --> 00:52:04,080
-so it's annotated by un two.
+so it's annotated by Un-two.
 
 797
 00:52:04,360 --> 00:52:09,360
@@ -3782,16 +3781,16 @@ so the borrow cannot escape.
 800
 00:52:14,680 --> 00:52:17,120
 And the type checker will
-again, rejects this.
+again reject this.
 
 801
 00:52:18,400 --> 00:52:21,000
-Alright so we have borrow,
-we have closure, we have functions,
+Alright so we have borrows,
+we have closures, we have functions,
 
 802
 00:52:21,080 --> 00:52:23,040
-we have linearity let's
+we have linearity. Let's
 put everything together.
 
 803
@@ -3800,21 +3799,21 @@ Here is the API for the database
 
 804
 00:52:27,480 --> 00:52:30,080
-that they've used since
+that I've used since
 the beginning of this talk.
 
 805
 00:52:30,400 --> 00:52:33,040
-the type database is of linear kind,
+The type database is of kind linear,
 
 806
 00:52:33,800 --> 00:52:36,360
 we have defined functions,
-that takes a borrow.
+that take a borrow.
 
 807
 00:52:37,160 --> 00:52:43,200
-With its kind, and takes
+With its kind, and take
 the string and return an integer.
 
 808
@@ -3830,7 +3829,7 @@ and returns units.
 810
 00:52:50,920 --> 00:52:53,720
 And since the functions
-are currified,
+are curried,
 
 811
 00:52:53,760 --> 00:52:57,280
@@ -3844,7 +3843,7 @@ and so the functions
 813
 00:52:59,200 --> 00:53:03,200
 are annotated with
-the kind that is capture here.
+the kind that is captured here.
 
 814
 00:53:06,240 --> 00:53:09,640
@@ -3895,7 +3894,7 @@ the argument subject and subject.
 824
 00:53:43,440 --> 00:53:45,760
 so we can simply partially
-applies a function,
+apply a function,
 
 825
 00:53:45,920 --> 00:53:50,960
@@ -3909,7 +3908,7 @@ And finally we can even go further
 827
 00:53:53,560 --> 00:53:58,000
 and use a function
-attraction to pull
+abstraction to pull
 
 828
 00:53:58,400 --> 00:54:01,080
@@ -3923,7 +3922,7 @@ by taking a list of subjects
 830
 00:54:04,080 --> 00:54:07,880
 and applying a partially
-applied function in list of map,
+applied function to map over the list,
 
 831
 00:54:07,920 --> 00:54:10,560
@@ -3955,7 +3954,7 @@ and the exclusive borrow
 
 837
 00:54:33,080 --> 00:54:35,600
-and they are perfectly disjointed.
+and they are perfectly disjoint.
 
 838
 00:54:35,840 --> 00:54:37,320
@@ -3985,17 +3984,17 @@ type inference.
 
 844
 00:54:50,320 --> 00:54:53,560
-Alright so let's, look a little bit
+Alright so let's look a little bit
 
 845
 00:54:53,600 --> 00:54:56,280
 under the hood at
-inference and constraint.
+inference and constraints.
 
 846
 00:54:56,680 --> 00:55:00,160
 The first step is to
-elaborate the region.
+elaborate the regions.
 
 847
 00:55:00,560 --> 00:55:03,280
@@ -4004,7 +4003,7 @@ By using the information provided
 848
 00:55:03,440 --> 00:55:06,840
 by the position of the borrow,
-the scopes of the borrow
+the scopes of the borrows
 
 849
 00:55:07,000 --> 00:55:08,920
@@ -4022,17 +4021,17 @@ we could use.
 
 852
 00:55:14,080 --> 00:55:16,680
-Again second step is to
-generate constraint,
+The second step is to
+generate constraints,
 
 853
 00:55:17,280 --> 00:55:20,880
-which we encode, type
+which encode type,
 linearity and borrowing checks.
 
 854
 00:55:21,560 --> 00:55:24,360
-And to prove - check that
+And to check that
 
 855
 00:55:24,480 --> 00:55:26,840
@@ -4041,7 +4040,7 @@ nothing escapes that shouldn't.
 856
 00:55:26,840 --> 00:55:30,000
 This constraint system
-is custom to encode.
+is customized to encode.
 
 857
 00:55:30,000 --> 00:55:34,400
@@ -4064,7 +4063,7 @@ for all the functions in our program.
 
 861
 00:55:47,120 --> 00:55:50,800
-So this principle type
+So this principal type
 scheme can sometimes still
 
 862
@@ -4073,8 +4072,8 @@ be a little bit complicated,
 
 863
 00:55:52,320 --> 00:55:58,240
-and so we use subkinding rules
-with positive and negative position
+and so we use the subkinding rules
+considering positive and negative positions
 
 864
 00:55:58,240 --> 00:56:03,400
@@ -4083,11 +4082,11 @@ to simplify the type further down.
 865
 00:56:03,400 --> 00:56:10,240
 Alright, and so we obtain, finally,
-the simple type schemes.
+simplified type schemes.
 
 866
 00:56:10,640 --> 00:56:14,160
-So to summarize, I presented
+To summarize, I presented
 the Affe language,
 
 867
@@ -4116,17 +4115,17 @@ and unmanaged objects,
 
 872
 00:56:29,440 --> 00:56:32,960
-and principal and type inference,
-which is something very noble,
+and principal type inference,
+which is something very remarkable,
 
 873
 00:56:32,960 --> 00:56:35,800
-for which type support borrows.
+for a type system supporting borrows.
 
 874
 00:56:35,800 --> 00:56:40,640
 The downside is that so far we do
-not support real flow sensitivity,
+not support flow sensitivity,
 
 875
 00:56:40,640 --> 00:56:45,760
@@ -4135,7 +4134,7 @@ but it has no proper support,
 
 876
 00:56:46,120 --> 00:56:49,120
-and we do not have yet
+and we do not yet have
 a concurrency story
 
 877
@@ -4146,7 +4145,7 @@ we're working on.
 878
 00:56:51,120 --> 00:56:54,240
 In the paper you can
-find many many examples
+find many examples
 
 879
 00:56:54,240 --> 00:56:58,640
@@ -4170,7 +4169,7 @@ an ML-style type-system,
 883
 00:57:12,720 --> 00:57:16,680
 we provide the formal account
-semantics and proof of soundness,
+of the semantics and proof of soundness,
 
 884
 00:57:16,680 --> 00:57:19,200
@@ -4184,11 +4183,11 @@ contribution in particular
 886
 00:57:25,640 --> 00:57:28,760
 an extension to HM(X),
-novel constraint system
+a novel constraint system
 
 887
 00:57:28,760 --> 00:57:33,440
-and it's constraint algorithm
+and its constraint simplification algorithm
 and proof of completeness.
 
 888
@@ -8234,7 +8233,7 @@ please come back and join us
 
 1750
 01:41:12,320 --> 01:41:30,120
-for the next paper in this session. 
+for the next paper in this session.
 
 1751
 01:41:30,120 --> 01:42:48,360
@@ -9724,7 +9723,7 @@ NADIA POLIKARPOVA: Today's software
 
 2073
 01:59:03,840 --> 01:59:05,920
-handles lot of sensitive information
+handles a lot of sensitive information
 
 2074
 01:59:05,920 --> 01:59:08,640
@@ -9738,7 +9737,7 @@ enforce these policies
 
 2076
 01:59:11,600 --> 01:59:15,480
-by string policy enforcing
+by strewing policy enforcing
 code or policy checks
 
 2077
@@ -9904,7 +9903,7 @@ it's like to program in Lifty.
 2110
 02:01:17,640 --> 02:01:20,560
 And finally, I will
-give an overall review
+give an overview
 
 2111
 02:01:20,560 --> 02:01:22,760
@@ -9912,7 +9911,7 @@ of how Lifty's leak repair works.
 
 2112
 02:01:24,880 --> 02:01:26,920
-In the liquid types system,
+In a liquid types system,
 
 2113
 02:01:26,920 --> 02:01:29,560
@@ -9944,11 +9943,11 @@ automatic type checking
 
 2119
 02:01:42,040 --> 02:01:44,120
-of non-trivial program properties,
+of non-trivial program properties.
 
 2120
 02:01:44,480 --> 02:01:48,200
-but can we use refinement types
+But can we use refinement types
 to encode security policies?
 
 2121
@@ -10010,11 +10009,11 @@ Apart from the return type,
 2133
 02:02:28,360 --> 02:02:31,240
 TIO is parameterized by
-two refinement predicate -
+two refinement predicates -
 
 2134
 02:02:31,240 --> 02:02:33,640
-the input and the output label
+the input and the output label -
 
 2135
 02:02:34,040 --> 02:02:37,520
@@ -10027,7 +10026,7 @@ of a TIO computation.
 
 2137
 02:02:40,360 --> 02:02:44,120
-More precisely, the input labels
+More precisely, the input label
 specifies the set of users
 
 2138
@@ -10061,7 +10060,7 @@ viewer variable.
 
 2144
 02:03:03,600 --> 02:03:08,160
-Now, let's see how our Lifty
+Now, let's see how a Lifty
 programmer builds TIO computations.
 
 2145
@@ -10091,7 +10090,7 @@ that belongs to Alice and Bob,
 2150
 02:03:26,240 --> 02:03:28,600
 I can give this action
-in the following type.
+the following type.
 
 2151
 02:03:29,240 --> 02:03:31,240
@@ -10099,7 +10098,7 @@ Here, the input label specifies
 
 2152
 02:03:31,240 --> 02:03:33,680
-that the key's only
+that the key is only
 visible to Alice and Bob,
 
 2153
@@ -10110,7 +10109,7 @@ guarantees that this computation
 2154
 02:03:37,400 --> 02:03:41,240
 will not perform any
-user visible output.
+user-visible output.
 
 2155
 02:03:41,880 --> 02:03:45,840
@@ -10143,11 +10142,11 @@ unit is public.
 
 2161
 02:04:02,600 --> 02:04:04,680
-Good luck trying to hide a unit.
+Good luck trying to hide a unit!
 
 2162
 02:04:05,480 --> 02:04:08,600
-Know that function types in
+Note that function types in
 Lifty can be dependent,
 
 2163
@@ -10175,8 +10174,8 @@ that Lifty provides.
 
 2168
 02:04:28,400 --> 02:04:31,880
-The core of the API under
-standard monadic primitives
+The core of the API are
+the standard monadic primitives
 
 2169
 02:04:31,960 --> 02:04:33,960
@@ -10185,11 +10184,11 @@ return and bind.
 2170
 02:04:33,960 --> 02:04:38,320
 Return simply wraps a pure value
-into a sensitive computation.
+into a sensitive computation,
 
 2171
 02:04:38,640 --> 02:04:40,800
-And so, its labels are trivial.
+and so, its labels are trivial.
 
 2172
 02:04:41,200 --> 02:04:42,880
@@ -10213,7 +10212,7 @@ of X flows into Y.
 2176
 02:04:54,560 --> 02:04:58,120
 The type of bind is polymorphic
-in labels of these actions,
+in the labels of these actions,
 
 2177
 02:04:58,120 --> 02:05:00,960
@@ -10266,7 +10265,7 @@ primitive operation
 
 2187
 02:05:36,520 --> 02:05:40,400
-for leak-free downgrade
+for leak-free downgrading
 which plays an important role
 
 2188
@@ -10275,7 +10274,7 @@ in applications with rich policies
 
 2189
 02:05:42,520 --> 02:05:45,760
-but I will skip this description
+but I will skip its description
 in the interest of time.
 
 2190
@@ -10375,7 +10374,7 @@ of all submissions by their score.
 
 2210
 02:06:54,240 --> 02:06:56,400
-If the programmer's not careful,
+If the programmer is not careful,
 
 2211
 02:06:56,400 --> 02:06:59,760
@@ -10485,12 +10484,12 @@ mentioning program level functions
 
 2233
 02:07:59,280 --> 02:08:02,160
-like getPaperConflict inside labels.
+like getPaperConflicts inside labels.
 
 2234
 02:08:02,520 --> 02:08:06,240
 I can define an uninterpreted
-logic level function conflicts
+logic-level function conflicts
 
 2235
 02:08:06,240 --> 02:08:09,840
@@ -10513,7 +10512,7 @@ who are not in the set of conflicts.
 2239
 02:08:18,680 --> 02:08:22,160
 To connect my logic level function
-to the data ID from the store,
+to the data I get from the store,
 
 2240
 02:08:22,160 --> 02:08:25,920
@@ -10541,8 +10540,8 @@ a function sortPapersByScore
 
 2245
 02:08:39,160 --> 02:08:41,560
-that takes an input
-at data store, ds
+that takes as input
+a data store, ds
 
 2246
 02:08:41,560 --> 02:08:43,520
@@ -10632,7 +10631,7 @@ they're not visible to client.
 2265
 02:09:30,000 --> 02:09:32,360
 Instead of trying to
-decipher that error message
+decipher the error message
 
 2266
 02:09:32,360 --> 02:09:33,840
@@ -10649,7 +10648,7 @@ returns a modified program
 
 2269
 02:09:39,440 --> 02:09:43,760
-where I call to get paper score
+where either call to getPaperScore
 is wrapper in a policy check.
 
 2270
@@ -10719,7 +10718,7 @@ a local specification for the patch.
 
 2284
 02:10:29,240 --> 02:10:34,240
-First, let's desugar the denotation
+First, let's desugar the do-notation
 into invocations of bind.
 
 2285
@@ -10790,7 +10789,7 @@ where the leak occurred.
 2299
 02:11:17,040 --> 02:11:20,560
 In this case, the problem is
-the call to get paper score
+the call to getPaperScore
 
 2300
 02:11:20,560 --> 02:11:24,640

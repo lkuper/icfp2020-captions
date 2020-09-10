@@ -104,11 +104,11 @@ and he will tell us about
 25
 00:13:28,720 --> 00:13:31,480
 The Simple Essence of
- Algebraic Subtyping,
+ Algebraic Subtyping:
 
 26
 00:13:31,480 --> 00:13:34,480
-Principal Type with Principal
+Principal Type Inference with
  Subtyping Made Easy.
 
 27
@@ -232,7 +232,7 @@ in order to be used at
 
 52
 00:14:32,040 --> 00:14:33,840
-So when we write 1+2,
+So when we write 1 + 2,
 
 53
 00:14:33,840 --> 00:14:36,000
@@ -265,7 +265,7 @@ is the singleton type
 59
 00:14:51,320 --> 00:14:53,840
 Union types are used
- to type expressions,
+ to type expressions
 
 60
 00:14:53,840 --> 00:14:56,360
@@ -275,7 +275,7 @@ which can be either one
 61
 00:14:56,360 --> 00:14:59,200
 Intersection types are
- used to type expressions,
+ used to type expressions
 
 62
 00:14:59,200 --> 00:15:01,080
@@ -283,7 +283,7 @@ which are of both given types.
 
 63
 00:15:01,880 --> 00:15:04,880
-As an example, subtyping
+As an example subtyping
  relationship between these,
 
 64
@@ -322,7 +322,7 @@ This allows us to use
 
 71
 00:15:29,160 --> 00:15:31,640
-in representation to
+and representation to
  express things like
 
 72
@@ -352,7 +352,7 @@ It can, for example, be used
 77
 00:15:48,720 --> 00:15:52,440
 first-class modules, XML
- transformations and much more.
+ transformations, and much more.
 
 78
 00:15:54,000 --> 00:15:55,720
@@ -360,7 +360,7 @@ Now some may be under the impression
 
 79
 00:15:55,720 --> 00:15:59,320
-that functional languages,
+that functional languages
  usually try to avoid subtyping.
 
 80
@@ -375,7 +375,7 @@ including OCaml, Haskell and Rust.
 82
 00:16:04,840 --> 00:16:08,160
 In Rust, subtyping is used to
- relate the location lifetimes.
+ relate allocation lifetimes.
 
 83
 00:16:08,160 --> 00:16:10,080
@@ -389,7 +389,7 @@ it is used in many places such
 
 85
 00:16:13,040 --> 00:16:15,600
-first-class modules
+first-class modules,
  and the object system.
 
 86
@@ -404,7 +404,7 @@ first-class polymorphism to check
 
 88
 00:16:22,240 --> 00:16:24,640
-Yet all these languages
+Yet, all these languages
  use type inference engines
 
 89
@@ -427,7 +427,7 @@ What we'd really like is
 
 93
 00:16:34,560 --> 00:16:40,960
-in ML style type inference, more
+in ML style type inference more
  consistently and reliably.
 
 94
@@ -438,16 +438,16 @@ So first, let's review
 95
 00:16:43,320 --> 00:16:47,000
 have traditionally inferred
- types based on unification,
+ types based on unification.
 
 96
 00:16:47,000 --> 00:16:49,560
-the Hindley-Milner type
+The Hindley-Milner type
  inference algorithm relies
 
 97
 00:16:49,560 --> 00:16:51,440
-and introducing type variables
+on introducing type variables
 
 98
 00:16:51,440 --> 00:16:53,880
@@ -475,16 +475,16 @@ As an example, consider
 
 103
 00:17:04,440 --> 00:17:06,840
-which takes two parameters, X and Y,
+which takes two parameters x and y,
 
 104
 00:17:06,840 --> 00:17:10,120
-compares them and returns
+compares them, and returns
  the smaller of the two.
 
 105
 00:17:10,120 --> 00:17:12,000
-We start from a context gamma,
+We start from a context Gamma,
 
 106
 00:17:12,000 --> 00:17:15,000
@@ -493,26 +493,26 @@ including only the comparison
 
 107
 00:17:15,000 --> 00:17:18,040
-to operate an integer values.
+to operate on integer values.
 
 108
 00:17:18,040 --> 00:17:21,800
-First, we can see that
- the outer lambda binding X,
+First, we consider
+ the outer lambda binding x.
 
 109
 00:17:21,800 --> 00:17:23,840
-we assign X to
+We assign x the
  type variable alpha,
 
 110
 00:17:23,840 --> 00:17:26,680
-and place it in the context,
+and place it in the context.
 
 111
 00:17:26,680 --> 00:17:30,160
-then we look at
- the inner lambda binding Y
+Then, we look at
+ the inner lambda binding y
 
 112
 00:17:30,160 --> 00:17:31,760
@@ -529,11 +529,11 @@ Then, we consider
 
 115
 00:17:37,600 --> 00:17:39,760
-in particular, the condition,
+in particular, the condition.
 
 116
 00:17:39,760 --> 00:17:42,240
-variable X has type alpha
+Variable x has type alpha
 
 117
 00:17:42,240 --> 00:17:44,000
@@ -541,12 +541,12 @@ and it's used on the left hand side
 
 118
 00:17:44,000 --> 00:17:50,240
-of the less than operation,
+of the less-than operation,
  so we unify alpha with int.
 
 119
 00:17:50,240 --> 00:17:52,480
-Variable Y has type beta
+Variable y has type beta
 
 120
 00:17:52,480 --> 00:17:53,960
@@ -560,11 +560,11 @@ of the comparison operation,
 122
 00:17:59,800 --> 00:18:03,480
 Then we consider the branches
- of the if statement,
+ of the if statement.
 
 123
 00:18:03,480 --> 00:18:05,960
-the first branch has type alpha,
+The first branch has type alpha,
 
 124
 00:18:05,960 --> 00:18:09,200
@@ -592,7 +592,7 @@ The result type of
 
 129
 00:18:23,200 --> 00:18:25,560
-so the result type is int
+so the result type is int,
 
 130
 00:18:25,560 --> 00:18:28,960
@@ -601,7 +601,7 @@ because we have unified
 
 131
 00:18:28,960 --> 00:18:31,800
-The result of the inner
+The result type of the inner
  lambda is beta to int,
 
 132
@@ -620,11 +620,11 @@ which is int to int to int.
 135
 00:18:39,240 --> 00:18:42,320
 Now let's review how to adapt
- this algorithm to subtyping,
+ this algorithm to subtyping.
 
 136
 00:18:42,320 --> 00:18:44,760
-instead of tracking
+Instead of tracking
  equalities between types,
 
 137
@@ -643,7 +643,7 @@ but instead we keep track
 
 140
 00:18:52,640 --> 00:18:57,440
-and super types, that is we
+and supertypes — that is, we
  keep track of their bounds.
 
 141
@@ -652,7 +652,7 @@ We base our approach
 
 142
 00:18:58,520 --> 00:19:00,880
-on the previous
+on a previous
  algorithm called ML-sub,
 
 143
@@ -674,11 +674,11 @@ and difficult to understand.
 
 147
 00:19:09,200 --> 00:19:10,240
-In the paper,
+In the (our) paper,
 
 148
 00:19:10,240 --> 00:19:12,400
-the new synthesis
+the new Simple-sub
  algorithm is introduced,
 
 149
@@ -692,7 +692,7 @@ we have just seen,
 
 151
 00:19:16,120 --> 00:19:19,040
-and it's easier to
+and is easier to
  specify and implement.
 
 152
@@ -701,31 +701,31 @@ Going back to our example,
 
 153
 00:19:21,320 --> 00:19:23,720
-we look at the outer lambda again,
+we look at the outer lambda again.
 
 154
 00:19:23,720 --> 00:19:28,320
-we extend the context with
- a new type variable as before,
+We extend the context with
+ a new type variable, as before.
 
 155
 00:19:28,320 --> 00:19:30,880
-same for the second
- lambda abstraction,
+Same for the second
+ lambda abstraction.
 
 156
 00:19:30,880 --> 00:19:34,280
-we extend the context with
+We extend the context with
  the new type variable beta.
 
 157
 00:19:34,280 --> 00:19:36,680
-Then we'll look at
- the condition again,
+Then we look at
+ the condition again;
 
 158
 00:19:36,680 --> 00:19:40,200
-the variable X has type
+the variable x has type
  alpha, but this time,
 
 159
@@ -740,20 +740,20 @@ we simply specify that alpha
 161
 00:19:45,440 --> 00:19:50,120
 so we register int as one of
- the upper bounds of alpha,
+ the upper bounds of alpha.
 
 162
 00:19:50,120 --> 00:19:55,160
-we do the same for beta,
+We do the same for beta,
  and then we look at the branches.
 
 163
 00:19:55,160 --> 00:19:56,960
-The first branch has type alpha,
+The first branch has type alpha;
 
 164
 00:19:56,960 --> 00:19:58,920
-second  branch has type beta,
+second branch has type beta;
 
 165
 00:19:58,920 --> 00:20:01,720
@@ -816,22 +816,22 @@ of both alpha and beta.
 
 177
 00:20:37,800 --> 00:20:40,320
-Now the call F of zero and one
+Now the call f 0 1
 
 178
 00:20:40,320 --> 00:20:44,880
 is more precisely typed
- as nat instead of int,
+ as nat instead of int.
 
 179
 00:20:44,880 --> 00:20:48,120
-but is this really a type
+But is this really a type
  we want to show users?
 
 180
 00:20:48,120 --> 00:20:50,880
 It looks much more confusing
- than the type we had before,
+ than the type we had before
 
 181
 00:20:50,880 --> 00:20:53,600
@@ -840,7 +840,7 @@ we introduced
 
 182
 00:20:53,600 --> 00:20:55,960
-In fact, we can inline so to say,
+In fact, we can inline, so to say,
 
 183
 00:20:55,960 --> 00:20:59,200
@@ -849,7 +849,7 @@ the bounds of each type
 
 184
 00:20:59,200 --> 00:21:03,720
-to use the simpler type, this
+to yield a simpler type. This
  is called bounds coalescing.
 
 185
@@ -865,7 +865,7 @@ with the composition of
 187
 00:21:08,720 --> 00:21:13,320
 For occurrences in output position
- or in positive position,
+ – or in positive position –
 
 188
 00:21:13,320 --> 00:21:17,160
@@ -875,7 +875,7 @@ we use a union of the type
 189
 00:21:17,160 --> 00:21:21,680
 Conversely, for occurrences in
- input or negative positions,
+ input — or negative — positions,
 
 190
 00:21:21,680 --> 00:21:24,120
@@ -889,7 +889,7 @@ with its upper bounds.
 192
 00:21:26,000 --> 00:21:28,480
 We can actually simplify
- these type further
+ this type further
 
 193
 00:21:28,480 --> 00:21:29,600
@@ -897,12 +897,12 @@ by removing gamma,
 
 194
 00:21:29,600 --> 00:21:32,560
-which is useless
- and merging alpha and beta
+which is useless,
+ and merging alpha and beta,
 
 195
 00:21:32,560 --> 00:21:34,120
-using a type expression,
+yielding a type expression
 
 196
 00:21:34,120 --> 00:21:38,000
@@ -911,12 +911,12 @@ which is much more
 
 197
 00:21:38,000 --> 00:21:39,920
-Both of these simplifications,
+Both of these simplifications
 
 198
 00:21:39,920 --> 00:21:42,920
 leave us with a type that is
- equivalent to the original
+ equivalent to the original,
 
 199
 00:21:42,920 --> 00:21:44,440
@@ -977,16 +977,16 @@ which is to say that
 211
 00:22:13,800 --> 00:22:18,440
 of the type variable and each
- of its intersected bounds.
+ of its intersected bounds
 
 212
 00:22:18,440 --> 00:22:21,920
-In our case,
- the bound is just int.
+(in our case,
+ the bound is just int).
 
 213
 00:22:21,920 --> 00:22:25,400
-In particular where users
+In particular, while users
  of the function are free
 
 214
@@ -1029,7 +1029,7 @@ since they always occur together
 
 222
 00:22:48,920 --> 00:22:53,080
-which is to say here in
+which is to say, here, in
  the result type of the function.
 
 223
@@ -1057,8 +1057,8 @@ To show that one type
 
 228
 00:23:05,880 --> 00:23:10,120
-that is tau zero less
- than for all tau one,
+that is, tau zero
+less-than-for-all tau one,
 
 229
 00:23:10,120 --> 00:23:11,720
@@ -1090,11 +1090,11 @@ subsumes the simplified type,
 235
 00:23:23,640 --> 00:23:26,920
 we can pick the following
- variable assignments.
+ variable assignments:
 
 236
 00:23:26,920 --> 00:23:30,760
-Alpha is left as alpha,
+alpha is left as alpha,
  and beta is taken to be alpha.
 
 237
@@ -1142,11 +1142,11 @@ to the value zero.
 246
 00:23:58,320 --> 00:24:01,440
 We go back to the state of
- type inference as we left it.
+ type inference as we left it,
 
 247
 00:24:01,440 --> 00:24:04,520
-And now consider
+and now consider
  the application of argument zero
 
 248
@@ -1174,12 +1174,12 @@ So we register nat as
 
 253
 00:24:14,840 --> 00:24:16,480
-But we are not done yet.
+But we are not done yet;
 
 254
 00:24:16,480 --> 00:24:18,480
-We also have to propagate
- the constraint,
+we also have to propagate
+ the constraint
 
 255
 00:24:18,480 --> 00:24:22,040
@@ -1202,11 +1202,11 @@ with these new constraints,
 259
 00:24:28,200 --> 00:24:31,400
 which yields the following
- simplified type.
+ simplified type:
 
 260
 00:24:31,400 --> 00:24:34,360
-Alpha intersection int,
+alpha intersection int
  to alpha union nat.
 
 261
@@ -1221,7 +1221,7 @@ For example, if we tried
 
 263
 00:24:42,120 --> 00:24:45,240
-with the Boolean literal false?
+with the boolean literal false?
 
 264
 00:24:45,240 --> 00:24:49,920
@@ -1250,31 +1250,31 @@ As you can imagine, there's
 269
 00:25:01,760 --> 00:25:04,480
 You can read the paper to
- learn about let-polymorphism,
+ learn about: let polymorphism,
 
 270
 00:25:04,480 --> 00:25:06,880
 which complicates
- the picture quite a bit,
+ the picture quite a bit;
 
 271
 00:25:06,880 --> 00:25:09,000
-the handling of recursive constraints,
+the handling of recursive constraints;
 
 272
 00:25:09,000 --> 00:25:11,640
 different approaches to
- type simplification.
+ type simplification;
 
 273
 00:25:11,640 --> 00:25:13,960
-The soundness and completeness
- of type inference,
+the soundness and completeness
+ of type inference;
 
 274
 00:25:13,960 --> 00:25:16,440
 and how subtyping
- enables typing terms,
+ enables typing terms
 
 275
 00:25:16,440 --> 00:25:19,400
@@ -1291,7 +1291,7 @@ about algebraic subtyping.
 
 278
 00:25:24,160 --> 00:25:26,640
-First union and intersection types,
+First, union and intersection types
 
 279
 00:25:26,640 --> 00:25:28,520
@@ -1337,15 +1337,15 @@ Supporting first-class
 
 288
 00:25:48,360 --> 00:25:49,920
-would be difficult when maintaining
+would be difficult while maintaining
 
 289
 00:25:49,920 --> 00:25:51,720
-the principle type property.
+the principle type property
 
 290
 00:25:51,720 --> 00:25:55,040
-That is the ability to always
+— that is, the ability to always
  infer a most specific type.
 
 291
@@ -1364,7 +1364,7 @@ So the expressiveness of
 
 294
 00:26:01,280 --> 00:26:04,160
-is in fact, similar to
+is in fact similar to
  a structurally typed Java,
 
 295
@@ -1375,7 +1375,7 @@ which includes its F-bounded
 296
 00:26:10,080 --> 00:26:11,720
 Another aspect of
- algebraic subtyping,
+ algebraic subtyping
 
 297
 00:26:11,720 --> 00:26:13,200
@@ -1387,7 +1387,7 @@ is its relation with invariance.
 
 299
 00:26:15,920 --> 00:26:19,560
-As a typical example of invariance
+As a typical example of invariance,
  consider the ref data type,
 
 300
@@ -1408,7 +1408,7 @@ When constraining one ref type
 303
 00:26:29,600 --> 00:26:33,800
 it is sufficient to constrain
- the type arguments, both ways.
+ the type arguments both ways.
 
 304
 00:26:33,800 --> 00:26:36,800
@@ -1447,7 +1447,7 @@ or we could introduce new notation
 312
 00:26:52,200 --> 00:26:54,400
 to express ranges
- overload type arguments
+ of allowed type arguments
 
 313
 00:26:54,400 --> 00:26:59,480
@@ -1475,7 +1475,7 @@ As long as we restrict
 318
 00:27:11,080 --> 00:27:13,720
 accept a little more verbosity
- around variance,
+ around invariance,
 
 319
 00:27:13,720 --> 00:27:15,840
@@ -1500,8 +1500,8 @@ and pretty printing.
 
 324
 00:27:24,480 --> 00:27:28,200
-That's it from our presentation.
- Thanks for watching.
+That's it for my presentation.
+ Thanks for watching!
 
 325
 00:27:28,200 --> 00:27:35,840
@@ -6408,12 +6408,12 @@ in the Glasgow Haskell Compiler.
 1394
 01:13:20,560 --> 01:13:25,560
 This work has been developed by
- Alejandro Serrano, Jurean Hawk,
+ Alejandro Serrano, Jurriaan Hage,
 
 1395
 01:13:27,080 --> 01:13:30,920
-Simon Payton-Jones,
- and Dimitrios Vitinyadas.
+Simon Peyton Jones,
+ and Dimitrios Vytiniotis.
 
 1396
 01:13:30,920 --> 01:13:36,320
@@ -6573,7 +6573,7 @@ every time you instantiate
 1430
 01:15:04,640 --> 01:15:09,160
 like I am doing here
- with at for all A A to A,
+ with at for all A, A to A,
 
 1431
 01:15:09,160 --> 01:15:12,160
@@ -6635,7 +6635,7 @@ But there are several questions.
 1443
 01:15:44,440 --> 01:15:47,840
 First of all, how do we
- instantiate the cones?
+ instantiate the cons?
 
 1444
 01:15:47,840 --> 01:15:49,560
@@ -6693,7 +6693,7 @@ Quick Look phase through
 
 1455
 01:16:23,480 --> 01:16:26,520
-impredicative activity
+impredicativity
  as much as possible.
 
 1456
@@ -6707,11 +6707,11 @@ Let me show you an example.
 
 1458
 01:16:34,160 --> 01:16:37,280
-For example, I have here cons ID
+For example, I have here cons id
 
 1459
 01:16:37,280 --> 01:16:41,080
-where instead of using ID directly,
+where instead of using id directly,
 
 1460
 01:16:41,560 --> 01:16:43,640
@@ -6750,7 +6750,7 @@ I'm going to call it
 1467
 01:16:59,960 --> 01:17:03,800
 and then you have
- the argument ID and ISs.
+ the argument id and ids.
 
 1468
 01:17:03,800 --> 01:17:08,800
@@ -6832,7 +6832,7 @@ In this case we're
 
 1485
 01:17:48,720 --> 01:17:50,840
-from the first argument IDs,
+from the first argument id,
 
 1486
 01:17:50,840 --> 01:17:52,760
@@ -6842,7 +6842,7 @@ and from the second arguments
 1487
 01:17:52,760 --> 01:17:57,040
 that alpha has to be
- exactly for all A to A.
+ exactly for all A, A to A.
 
 1488
 01:17:57,040 --> 01:17:58,440
@@ -6856,8 +6856,8 @@ the type of these arguments are
 
 1490
 01:18:01,200 --> 01:18:05,520
-they are exactly for all Aa to A
- and list of for all Aa to A.
+they are exactly for all A, A to A
+ and list of for all A, A to A.
 
 1491
 01:18:05,520 --> 01:18:08,080
@@ -6870,16 +6870,16 @@ and type checking can succeed.
 1493
 01:18:12,480 --> 01:18:15,760
 Now I've said that we
- learn nothing from ID,
+ learn nothing from id,
 
 1494
 01:18:15,760 --> 01:18:19,280
-but from IDs we learn
+but from ids we learn
  that alpha must be
 
 1495
 01:18:19,280 --> 01:18:21,800
-for all A A to A, so you
+for all A, A to A, so you
  might be wondering
 
 1496
@@ -6908,8 +6908,8 @@ from looking at
 
 1501
 01:18:37,240 --> 01:18:39,520
-In the case of ID,
- the type which is push
+In the case of id,
+ the type which is pushed
 
 1502
 01:18:39,520 --> 01:18:43,880
@@ -6919,11 +6919,11 @@ is this single type
 1503
 01:18:43,880 --> 01:18:46,520
 we get from
- the variable is for all A A to A
+ the variable is for all A, A to A
 
 1504
 01:18:46,520 --> 01:18:48,120
-and from IDs it's
+and from ids it's
  the same,
 
 1505
@@ -6933,7 +6933,7 @@ but everything
 
 1506
 01:18:53,320 --> 01:18:57,800
-So actually in the case of IDs
+So actually in the case of ids
  we have only one possibility.
 
 1507
@@ -6943,7 +6943,7 @@ In order for the list of alpha
 1508
 01:18:59,720 --> 01:19:03,760
 and the list of for all
- A A to B to be equal,
+ A, A to B to be equal,
 
 1509
 01:19:03,760 --> 01:19:08,760
@@ -6990,7 +6990,7 @@ is what we call guarded,
 1518
 01:19:32,440 --> 01:19:35,680
 which means it appears
- under a type construct.
+ under a type constructor.
 
 1519
 01:19:35,680 --> 01:19:39,280
@@ -7023,7 +7023,7 @@ If you have a single type
 
 1525
 01:19:51,520 --> 01:19:53,960
-like in a type of IDs, you
+like in a type of ids, you
  don't know what to do,
 
 1526
@@ -7043,7 +7043,7 @@ that quick look gets
 1529
 01:20:01,000 --> 01:20:03,840
 That's, for example, cons
- ID with an empty list.
+ id with an empty list.
 
 1530
 01:20:03,840 --> 01:20:06,720
@@ -7056,7 +7056,7 @@ have a quick look at the arguments,
 
 1532
 01:20:08,600 --> 01:20:10,840
-and we will learn nothing from ID,
+and we will learn nothing from id,
 
 1533
 01:20:10,840 --> 01:20:12,720
@@ -7091,7 +7091,7 @@ We can also take some other
 1539
 01:20:30,280 --> 01:20:33,800
 Imagine, for example, we
- have this go to single ID.
+ have this go to single id.
 
 1540
 01:20:33,800 --> 01:20:37,360
@@ -7100,7 +7100,7 @@ Well, we have a pretty similar
 
 1541
 01:20:37,360 --> 01:20:41,400
-The type of ID is going to be
+The type of id is going to be
  alpha when we push it,
 
 1542
@@ -7143,7 +7143,7 @@ and in that case, we
 1550
 01:21:02,400 --> 01:21:05,320
 as we did for
- the cons of ID with IDs.
+ the cons of id with ids.
 
 1551
 01:21:05,320 --> 01:21:08,120
@@ -7225,7 +7225,7 @@ and if you think, for example,
 1568
 01:21:52,240 --> 01:21:56,000
 into this goal cons
- ID to cons ID IDs,
+ id to cons id ids,
 
 1569
 01:21:56,000 --> 01:21:58,040
@@ -7238,7 +7238,7 @@ to be correctly instantiated,
 1571
 01:21:59,360 --> 01:22:03,920
 you need to go up to
- the IDs so that you learn that,
+ the ids so that you learn that,
 
 1572
 01:22:03,920 --> 01:22:06,160
@@ -7267,7 +7267,7 @@ We don't want to go
 
 1577
 01:22:18,240 --> 01:22:21,000
-So we don't inspect Lambdas.
+So we don't inspect lambdas.
  We don't inspect
 
 1578
@@ -7287,7 +7287,7 @@ with multiple branches,
 
 1581
 01:22:29,120 --> 01:22:33,000
-because it's (INAUDIBLE)
+because it will lead us
  that we need to not only
 
 1582
@@ -7383,7 +7383,7 @@ without annotations.
 1600
 01:23:22,920 --> 01:23:25,800
 is objective in the paper.
- We have a big list of example,
+ We have a big list of examples,
 
 1601
 01:23:25,800 --> 01:23:27,560
@@ -7412,7 +7412,7 @@ so we really want to push
 
 1606
 01:23:37,280 --> 01:23:39,760
-impredicatively
+impredicativity
  information as we can,
 
 1607
@@ -7463,7 +7463,7 @@ massive changes.
 1616
 01:24:08,920 --> 01:24:11,720
 about the fact that
- quick look is very localized.
+ Quick Look is very localized.
 
 1617
 01:24:11,720 --> 01:24:14,800
@@ -7557,7 +7557,7 @@ all of this together.
 
 1635
 01:25:04,160 --> 01:25:06,880
-we built QuickLook
+we built Quick Look
  impredicativity.
 
 1636
@@ -7578,7 +7578,7 @@ how we integrate quick look
 1639
 01:25:16,640 --> 01:25:21,200
 And the reason is that when,
- when quick look fails,
+ when Quick Look fails,
 
 1640
 01:25:21,200 --> 01:25:23,960
@@ -7613,12 +7613,12 @@ Well, we also talk
 1646
 01:25:34,920 --> 01:25:37,440
 and GADTs is integrated
- with quick look
+ with Quick Look
 
 1647
 01:25:37,440 --> 01:25:40,000
 and also lots of related work,
- because as I shown
+ because as I've shown
 
 1648
 01:25:40,000 --> 01:25:41,760
