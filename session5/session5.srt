@@ -6086,7 +6086,7 @@ So let's try to motivate
 
 1271
 01:13:54,480 --> 01:14:01,120
-why you such a thing might be
+why such a thing might be
 useful with some examples.
 
 1272
@@ -6109,45 +6109,45 @@ So map is a higher order function,
 
 1276
 01:14:13,000 --> 01:14:15,080
-which takes the function F
+which takes the function f
 
 1277
 01:14:15,080 --> 01:14:17,600
 and applies it to every
-element of the list,
+element of the list recursively.
 
 1278
 01:14:17,600 --> 01:14:20,080
-because there are at least two
+There are at least two
 different ways of writing map.
 
 1279
 01:14:24,560 --> 01:14:25,560
-In map one,
+In map1,
 
 1280
 01:14:25,560 --> 01:14:29,320
-we recursively call map one
+we recursively call map1
 on the tail of the list
 
 1281
 01:14:29,320 --> 01:14:32,960
-before evaluating F on
+before evaluating f on
 the head of the list.
 
 1282
 01:14:32,960 --> 01:14:34,600
-And in map two,
+In map2,
 
 1283
 01:14:34,600 --> 01:14:37,200
-we evaluate F on
+we evaluate f on
 the head of the list
 
 1284
 01:14:37,200 --> 01:14:42,360
 before recursively calling
-map two on the tail of the list.
+map2 on the tail of the list.
 
 1285
 01:14:42,360 --> 01:14:45,920
@@ -6169,12 +6169,12 @@ So, as an example,
 
 1289
 01:14:53,200 --> 01:14:58,080
-let's evaluate map one and map
-two on the following inputs.
+let's evaluate map1 and map2
+ on the following inputs.
 
 1290
 01:14:58,080 --> 01:15:01,480
-So here F is the identity
+So here f is the identity
 function on strings,
 
 1291
@@ -6192,7 +6192,7 @@ before returning it.
 
 1294
 01:15:09,680 --> 01:15:13,160
-So let's try to use map one.
+So let's try to use map1.
 
 1295
 01:15:13,160 --> 01:15:15,960
@@ -6205,16 +6205,16 @@ that it reaches the end of the list
 1297
 01:15:19,160 --> 01:15:23,360
 when it tries to evaluate
-F on the string right.
+f on the string right.
 
 1298
 01:15:23,360 --> 01:15:26,600
-So this prints, right.
+So this prints right.
 
 1299
 01:15:26,600 --> 01:15:30,880
-Reducing more where you see
-that it calls F on to,
+Reducing more we see
+that it calls f on to,
 
 1300
 01:15:30,880 --> 01:15:32,720
@@ -6222,7 +6222,7 @@ which prints to,
 
 1301
 01:15:32,720 --> 01:15:37,200
-and then it calls F on left,
+and then it calls f on left,
 which prints left
 
 1302
@@ -6237,8 +6237,8 @@ where it printed right to left.
 
 1304
 01:15:47,720 --> 01:15:51,880
-If however, we reduce map
-two on the same inputs,
+If however, we reduce map2
+ on the same inputs,
 
 1305
 01:15:51,880 --> 01:15:56,880
@@ -6275,7 +6275,7 @@ these two functions f and g
 
 1312
 01:16:19,040 --> 01:16:20,720
-from int to int.
+from Int to Int.
 
 1313
 01:16:21,480 --> 01:16:23,560
@@ -6291,11 +6291,11 @@ Now, suppose we map g on xs,
 
 1316
 01:16:30,120 --> 01:16:34,200
-followed by mapping f on the output,
+followed by mapping f on the output.
 
 1317
 01:16:34,200 --> 01:16:38,080
-and optimizing compiler
+An optimizing compiler
 could perform map fusion
 
 1318
@@ -6350,11 +6350,11 @@ in this language with some examples.
 
 1329
 01:17:16,640 --> 01:17:19,480
-Let's consider the function g.
+Let's consider this function g.
 
 1330
 01:17:19,480 --> 01:17:23,680
-It takes the channel c, a string s,
+It takes a channel c, a string s,
 
 1331
 01:17:23,680 --> 01:17:28,840
@@ -6377,7 +6377,7 @@ to perform an effect.
 1335
 01:17:37,200 --> 01:17:42,320
 Now consider this function
-f from string to string.
+f from String to String.
 
 1336
 01:17:42,320 --> 01:17:44,680
@@ -6457,7 +6457,7 @@ the notion of capabilities.
 
 1353
 01:18:38,640 --> 01:18:40,560
-So capabilities are
+Capabilities are
 a well known thing
 
 1354
@@ -6476,15 +6476,15 @@ for example, a security token
 
 1357
 01:18:51,280 --> 01:18:54,480
-or a permission
+or a permission.
 
 1358
 01:18:54,480 --> 01:18:56,360
-in our impure language.
+In our impure language,
 
 1359
 01:18:56,360 --> 01:18:59,200
-A channel variable, for
+a channel variable, for
 example, standard out
 
 1360
@@ -6513,15 +6513,15 @@ it has access to at runtime.
 1365
 01:19:15,840 --> 01:19:20,440
 So for example, this function
-G is capability safe,
+g is capability safe,
 
 1366
 01:19:20,440 --> 01:19:24,480
-but F is not.
+but f is not.
 
 1367
 01:19:24,480 --> 01:19:28,680
-But G is not pure, it's only safe.
+Ah, but g is not pure, it's only safe.
 
 1368
 01:19:28,680 --> 01:19:30,080
@@ -6561,7 +6561,7 @@ variables in our language.
 1376
 01:19:55,840 --> 01:20:01,320
 So we use these qualifiers,
-S or I in blue and red
+s or i in blue and red
 
 1377
 01:20:01,320 --> 01:20:06,240
@@ -6607,11 +6607,11 @@ We also have a new safety judgment
 1386
 01:20:36,800 --> 01:20:41,040
 which we use to judge
-whether a term E of type A
+whether a term e of type A
 
 1387
 01:20:41,040 --> 01:20:46,520
-is safe in context gamma.
+is safe in context Gamma.
 
 1388
 01:20:46,520 --> 01:20:49,600
@@ -6625,12 +6625,12 @@ other safe variables.
 
 1390
 01:20:53,080 --> 01:20:57,760
-So we add a sub structural
-operation on our contexts,
+So we add a substructural
+operation on our contexts.
 
 1391
 01:20:57,760 --> 01:21:00,480
-so this purify operation
+So this purify operation
 
 1392
 01:21:00,480 --> 01:21:05,560
@@ -6670,16 +6670,16 @@ for our box type constructor.
 
 1400
 01:21:30,840 --> 01:21:33,440
-So if E1 is a boxed term,
+So if e1 is a boxed term,
 
 1401
 01:21:33,440 --> 01:21:36,520
-we can bind to
-the underlying value X.
+we can bind
+the underlying value x.
 
 1402
 01:21:36,520 --> 01:21:39,160
-And we can eliminate to E2
+And we can eliminate to e2
 
 1403
 01:21:39,160 --> 01:21:42,960
@@ -6688,7 +6688,7 @@ the extended context,
 
 1404
 01:21:42,960 --> 01:21:49,000
-where X is marked with
+where x is marked with
 a safe annotation.
 
 1405
@@ -6713,11 +6713,11 @@ For functions, to introduce a lambda
 1409
 01:22:05,960 --> 01:22:09,120
 we allow the bound
-variable to be impure.
+variable to be impure
 
 1410
 01:22:09,120 --> 01:22:12,640
-So that we can substitute
+so that we can substitute
 arbitrary expressions.
 
 1411
@@ -6765,7 +6765,7 @@ reconstruction of S4 modal logic.
 
 1420
 01:22:51,000 --> 01:22:53,040
-Instead of a dual context,
+Instead of dual contexts,
 
 1421
 01:22:53,040 --> 01:22:56,440
@@ -6821,8 +6821,8 @@ we can now write a pure variant
 
 1432
 01:23:39,320 --> 01:23:44,040
-of our map one
-and map two functions.
+of our map1
+and map2 functions.
 
 1433
 01:23:44,040 --> 01:23:47,800
@@ -6841,12 +6841,12 @@ box to rewrite the body
 
 1436
 01:23:57,840 --> 01:24:00,720
-of map one and map two.
+of map1 and map2.
 
 1437
 01:24:00,720 --> 01:24:05,800
 So using this new definition
-for map one and map two,
+for map1 and map2,
 
 1438
 01:24:05,800 --> 01:24:09,040
@@ -6869,7 +6869,7 @@ takeaways from this talk.
 1442
 01:24:20,400 --> 01:24:26,080
 First, we can use this notion
-of capabilities to control effects,
+of capabilities to encode effects,
 
 1443
 01:24:26,080 --> 01:24:30,640
@@ -6887,7 +6887,7 @@ the environment can be captured
 
 1446
 01:24:38,320 --> 01:24:43,360
-using a comonad
+using a comonadic
 type discipline.
 
 1447
@@ -6902,7 +6902,7 @@ in our paper.
 1449
 01:24:48,320 --> 01:24:52,440
 We formalize an effectful
-calculus and we extended
+calculus and we extend it
 
 1450
 01:24:52,440 --> 01:24:57,000
@@ -6920,12 +6920,12 @@ from capability safety.
 
 1453
 01:25:04,680 --> 01:25:09,240
-And we also discussed how
-to do capability taming.
+And we also discuss how
+to do capability taming,
 
 1454
 01:25:09,240 --> 01:25:13,000
-That is, how to incrementally
+that is, how to incrementally
 add safety to an already
 
 1455
@@ -6978,7 +6978,7 @@ construction in fact
 1465
 01:25:46,520 --> 01:25:50,640
 comes from an old paper
-of Martin Hoffman.
+of Martin Hofmann.
 
 1466
 01:25:50,640 --> 01:25:53,480
@@ -6993,11 +6993,11 @@ for our semantics.
 1468
 01:25:57,080 --> 01:26:00,640
 It can be used to give
-the model of linear type theory,
+a model of linear type theory,
 
 1469
 01:26:00,640 --> 01:26:04,560
-which we discussed in the paper.
+which we discuss in the paper.
 
 1470
 01:26:04,560 --> 01:26:08,320

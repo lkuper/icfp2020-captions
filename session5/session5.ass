@@ -1281,40 +1281,40 @@ Dialogue: 0,1:13:41.76,1:13:46.36,Default,,0,0,0,,However, what if we already ha
 Dialogue: 0,1:13:46.36,1:13:48.36,Default,,0,0,0,,Can we extend the type system
 Dialogue: 0,1:13:48.36,1:13:52.76,Default,,0,0,0,,to encode the absence of effects?
 Dialogue: 0,1:13:52.76,1:13:54.48,Default,,0,0,0,,So let's try to motivate
-Dialogue: 0,1:13:54.48,1:14:01.12,Default,,0,0,0,,why you such a thing might be\Nuseful with some examples.
+Dialogue: 0,1:13:54.48,1:14:01.12,Default,,0,0,0,,why such a thing might be\Nuseful with some examples.
 Dialogue: 0,1:14:01.12,1:14:04.64,Default,,0,0,0,,Consider a strict call\Nby value language,
 Dialogue: 0,1:14:04.64,1:14:06.64,Default,,0,0,0,,which allows side effects
 Dialogue: 0,1:14:06.64,1:14:11.00,Default,,0,0,0,,and let's consider\Nthe map functional.
 Dialogue: 0,1:14:11.00,1:14:13.00,Default,,0,0,0,,So map is a higher order function,
-Dialogue: 0,1:14:13.00,1:14:15.08,Default,,0,0,0,,which takes the function F
-Dialogue: 0,1:14:15.08,1:14:17.60,Default,,0,0,0,,and applies it to every\Nelement of the list,
-Dialogue: 0,1:14:17.60,1:14:20.08,Default,,0,0,0,,because there are at least two\Ndifferent ways of writing map.
-Dialogue: 0,1:14:24.56,1:14:25.56,Default,,0,0,0,,In map one,
-Dialogue: 0,1:14:25.56,1:14:29.32,Default,,0,0,0,,we recursively call map one\Non the tail of the list
-Dialogue: 0,1:14:29.32,1:14:32.96,Default,,0,0,0,,before evaluating F on\Nthe head of the list.
-Dialogue: 0,1:14:32.96,1:14:34.60,Default,,0,0,0,,And in map two,
-Dialogue: 0,1:14:34.60,1:14:37.20,Default,,0,0,0,,we evaluate F on\Nthe head of the list
-Dialogue: 0,1:14:37.20,1:14:42.36,Default,,0,0,0,,before recursively calling\Nmap two on the tail of the list.
+Dialogue: 0,1:14:13.00,1:14:15.08,Default,,0,0,0,,which takes the function f
+Dialogue: 0,1:14:15.08,1:14:17.60,Default,,0,0,0,,and applies it to every\Nelement of the list recursively.
+Dialogue: 0,1:14:17.60,1:14:20.08,Default,,0,0,0,,There are at least two\Ndifferent ways of writing map.
+Dialogue: 0,1:14:24.56,1:14:25.56,Default,,0,0,0,,In map1,
+Dialogue: 0,1:14:25.56,1:14:29.32,Default,,0,0,0,,we recursively call map1\Non the tail of the list
+Dialogue: 0,1:14:29.32,1:14:32.96,Default,,0,0,0,,before evaluating f on\Nthe head of the list.
+Dialogue: 0,1:14:32.96,1:14:34.60,Default,,0,0,0,,In map2,
+Dialogue: 0,1:14:34.60,1:14:37.20,Default,,0,0,0,,we evaluate f on\Nthe head of the list
+Dialogue: 0,1:14:37.20,1:14:42.36,Default,,0,0,0,,before recursively calling\Nmap2 on the tail of the list.
 Dialogue: 0,1:14:42.36,1:14:45.92,Default,,0,0,0,,So these two functions\Nshould be equal,
 Dialogue: 0,1:14:45.92,1:14:48.72,Default,,0,0,0,,but in an impure language like this,
 Dialogue: 0,1:14:48.72,1:14:51.44,Default,,0,0,0,,they can have different\Nside effects.
 Dialogue: 0,1:14:51.44,1:14:53.20,Default,,0,0,0,,So, as an example,
-Dialogue: 0,1:14:53.20,1:14:58.08,Default,,0,0,0,,let's evaluate map one and map\Ntwo on the following inputs.
-Dialogue: 0,1:14:58.08,1:15:01.48,Default,,0,0,0,,So here F is the identity\Nfunction on strings,
+Dialogue: 0,1:14:53.20,1:14:58.08,Default,,0,0,0,,let's evaluate map1 and map2\N on the following inputs.
+Dialogue: 0,1:14:58.08,1:15:01.48,Default,,0,0,0,,So here f is the identity\Nfunction on strings,
 Dialogue: 0,1:15:01.48,1:15:02.88,Default,,0,0,0,,but it's impure.
 Dialogue: 0,1:15:02.88,1:15:05.76,Default,,0,0,0,,It prints its input\Nstring to standard out
 Dialogue: 0,1:15:05.76,1:15:09.68,Default,,0,0,0,,before returning it.
-Dialogue: 0,1:15:09.68,1:15:13.16,Default,,0,0,0,,So let's try to use map one.
+Dialogue: 0,1:15:09.68,1:15:13.16,Default,,0,0,0,,So let's try to use map1.
 Dialogue: 0,1:15:13.16,1:15:15.96,Default,,0,0,0,,We expand the let and we observe
 Dialogue: 0,1:15:15.96,1:15:19.16,Default,,0,0,0,,that it reaches the end of the list
-Dialogue: 0,1:15:19.16,1:15:23.36,Default,,0,0,0,,when it tries to evaluate\NF on the string right.
-Dialogue: 0,1:15:23.36,1:15:26.60,Default,,0,0,0,,So this prints, right.
-Dialogue: 0,1:15:26.60,1:15:30.88,Default,,0,0,0,,Reducing more where you see\Nthat it calls F on to,
+Dialogue: 0,1:15:19.16,1:15:23.36,Default,,0,0,0,,when it tries to evaluate\Nf on the string right.
+Dialogue: 0,1:15:23.36,1:15:26.60,Default,,0,0,0,,So this prints right.
+Dialogue: 0,1:15:26.60,1:15:30.88,Default,,0,0,0,,Reducing more we see\Nthat it calls f on to,
 Dialogue: 0,1:15:30.88,1:15:32.72,Default,,0,0,0,,which prints to,
-Dialogue: 0,1:15:32.72,1:15:37.20,Default,,0,0,0,,and then it calls F on left,\Nwhich prints left
+Dialogue: 0,1:15:32.72,1:15:37.20,Default,,0,0,0,,and then it calls f on left,\Nwhich prints left
 Dialogue: 0,1:15:37.20,1:15:41.36,Default,,0,0,0,,and finally it\Nreturns the original list.
 Dialogue: 0,1:15:41.36,1:15:47.72,Default,,0,0,0,,So it produced a side effect\Nwhere it printed right to left.
-Dialogue: 0,1:15:47.72,1:15:51.88,Default,,0,0,0,,If however, we reduce map\Ntwo on the same inputs,
+Dialogue: 0,1:15:47.72,1:15:51.88,Default,,0,0,0,,If however, we reduce map2\N on the same inputs,
 Dialogue: 0,1:15:51.88,1:15:56.88,Default,,0,0,0,,we notice that it evaluates\Nf first on the string left,
 Dialogue: 0,1:15:56.88,1:16:01.20,Default,,0,0,0,,then on the string to\Nand then on right,
 Dialogue: 0,1:16:01.20,1:16:04.68,Default,,0,0,0,,and finally returns\Nthe original list.
@@ -1322,12 +1322,12 @@ Dialogue: 0,1:16:04.68,1:16:07.04,Default,,0,0,0,,So even though both of\Nthese 
 Dialogue: 0,1:16:07.04,1:16:08.92,Default,,0,0,0,,return the same output,
 Dialogue: 0,1:16:08.92,1:16:15.12,Default,,0,0,0,,they produce different side effects.
 Dialogue: 0,1:16:15.12,1:16:19.04,Default,,0,0,0,,Alternatively consider\Nthese two functions f and g
-Dialogue: 0,1:16:19.04,1:16:20.72,Default,,0,0,0,,from int to int.
+Dialogue: 0,1:16:19.04,1:16:20.72,Default,,0,0,0,,from Int to Int.
 Dialogue: 0,1:16:21.48,1:16:23.56,Default,,0,0,0,,They perform different side effects
 Dialogue: 0,1:16:23.56,1:16:26.84,Default,,0,0,0,,before returning their output.
 Dialogue: 0,1:16:26.84,1:16:30.12,Default,,0,0,0,,Now, suppose we map g on xs,
-Dialogue: 0,1:16:30.12,1:16:34.20,Default,,0,0,0,,followed by mapping f on the output,
-Dialogue: 0,1:16:34.20,1:16:38.08,Default,,0,0,0,,and optimizing compiler\Ncould perform map fusion
+Dialogue: 0,1:16:30.12,1:16:34.20,Default,,0,0,0,,followed by mapping f on the output.
+Dialogue: 0,1:16:34.20,1:16:38.08,Default,,0,0,0,,An optimizing compiler\Ncould perform map fusion
 Dialogue: 0,1:16:38.08,1:16:40.08,Default,,0,0,0,,on this expression.
 Dialogue: 0,1:16:40.08,1:16:42.80,Default,,0,0,0,,But in this impure language,
 Dialogue: 0,1:16:42.80,1:16:46.08,Default,,0,0,0,,if we mapped f compose g on xs,
@@ -1339,13 +1339,13 @@ Dialogue: 0,1:17:02.80,1:17:06.00,Default,,0,0,0,,to be able to encode\Nthe abse
 Dialogue: 0,1:17:06.00,1:17:07.84,Default,,0,0,0,,in an impure language.
 Dialogue: 0,1:17:07.84,1:17:11.12,Default,,0,0,0,,So first let's see how\Neffects are being encoded
 Dialogue: 0,1:17:11.12,1:17:16.64,Default,,0,0,0,,in this language with some examples.
-Dialogue: 0,1:17:16.64,1:17:19.48,Default,,0,0,0,,Let's consider the function g.
-Dialogue: 0,1:17:19.48,1:17:23.68,Default,,0,0,0,,It takes the channel c, a string s,
+Dialogue: 0,1:17:16.64,1:17:19.48,Default,,0,0,0,,Let's consider this function g.
+Dialogue: 0,1:17:19.48,1:17:23.68,Default,,0,0,0,,It takes a channel c, a string s,
 Dialogue: 0,1:17:23.68,1:17:28.84,Default,,0,0,0,,prints s on the channel\Nc, then returns s.
 Dialogue: 0,1:17:28.84,1:17:31.72,Default,,0,0,0,,So this function is impure\Nbecause it uses the channel
 Dialogue: 0,1:17:31.72,1:17:33.60,Default,,0,0,0,,it was passed to,
 Dialogue: 0,1:17:33.60,1:17:37.20,Default,,0,0,0,,to perform an effect.
-Dialogue: 0,1:17:37.20,1:17:42.32,Default,,0,0,0,,Now consider this function\Nf from string to string.
+Dialogue: 0,1:17:37.20,1:17:42.32,Default,,0,0,0,,Now consider this function\Nf from String to String.
 Dialogue: 0,1:17:42.32,1:17:44.68,Default,,0,0,0,,This is also impure,
 Dialogue: 0,1:17:44.68,1:17:50.24,Default,,0,0,0,,but it is defined by partially\Napplying g to standard out.
 Dialogue: 0,1:17:50.24,1:17:52.80,Default,,0,0,0,,Now standard out is\Na channel that's available
@@ -1363,21 +1363,21 @@ Dialogue: 0,1:18:20.68,1:18:24.68,Default,,0,0,0,,that a function has access\Nto
 Dialogue: 0,1:18:24.68,1:18:26.96,Default,,0,0,0,,So we were interested in purity,
 Dialogue: 0,1:18:26.96,1:18:33.40,Default,,0,0,0,,but we can refine this to\Na different notion of safety.
 Dialogue: 0,1:18:33.40,1:18:38.64,Default,,0,0,0,,So we formalize this idea using\Nthe notion of capabilities.
-Dialogue: 0,1:18:38.64,1:18:40.56,Default,,0,0,0,,So capabilities are\Na well known thing
+Dialogue: 0,1:18:38.64,1:18:40.56,Default,,0,0,0,,Capabilities are\Na well known thing
 Dialogue: 0,1:18:40.56,1:18:44.60,Default,,0,0,0,,in the systems\Nprogramming community.
 Dialogue: 0,1:18:44.60,1:18:48.60,Default,,0,0,0,,A capability is defined to\Nbe a token of authority,
 Dialogue: 0,1:18:48.60,1:18:51.28,Default,,0,0,0,,for example, a security token
-Dialogue: 0,1:18:51.28,1:18:54.48,Default,,0,0,0,,or a permission
-Dialogue: 0,1:18:54.48,1:18:56.36,Default,,0,0,0,,in our impure language.
-Dialogue: 0,1:18:56.36,1:18:59.20,Default,,0,0,0,,A channel variable, for\Nexample, standard out
+Dialogue: 0,1:18:51.28,1:18:54.48,Default,,0,0,0,,or a permission.
+Dialogue: 0,1:18:54.48,1:18:56.36,Default,,0,0,0,,In our impure language,
+Dialogue: 0,1:18:56.36,1:18:59.20,Default,,0,0,0,,a channel variable, for\Nexample, standard out
 Dialogue: 0,1:18:59.20,1:19:02.68,Default,,0,0,0,,is a capability.
 Dialogue: 0,1:19:02.68,1:19:06.48,Default,,0,0,0,,Then we define the notion\Nof capability safety.
 Dialogue: 0,1:19:06.48,1:19:09.16,Default,,0,0,0,,We say that a program\Nis capability safe
 Dialogue: 0,1:19:09.16,1:19:12.84,Default,,0,0,0,,when it only performs effects\Nusing the capabilities
 Dialogue: 0,1:19:12.84,1:19:15.84,Default,,0,0,0,,it has access to at runtime.
-Dialogue: 0,1:19:15.84,1:19:20.44,Default,,0,0,0,,So for example, this function\NG is capability safe,
-Dialogue: 0,1:19:20.44,1:19:24.48,Default,,0,0,0,,but F is not.
-Dialogue: 0,1:19:24.48,1:19:28.68,Default,,0,0,0,,But G is not pure, it's only safe.
+Dialogue: 0,1:19:15.84,1:19:20.44,Default,,0,0,0,,So for example, this function\Ng is capability safe,
+Dialogue: 0,1:19:20.44,1:19:24.48,Default,,0,0,0,,but f is not.
+Dialogue: 0,1:19:24.48,1:19:28.68,Default,,0,0,0,,Ah, but g is not pure, it's only safe.
 Dialogue: 0,1:19:28.68,1:19:30.08,Default,,0,0,0,,So, we'll come back to how
 Dialogue: 0,1:19:30.08,1:19:33.44,Default,,0,0,0,,we could encode purity using safety.
 Dialogue: 0,1:19:33.44,1:19:39.76,Default,,0,0,0,,But for now, let's try to extend\Nour language with safety.
@@ -1386,7 +1386,7 @@ Dialogue: 0,1:19:41.44,1:19:43.76,Default,,0,0,0,,between two kinds of variables
 Dialogue: 0,1:19:43.76,1:19:47.48,Default,,0,0,0,,safe variables and impure variables.
 Dialogue: 0,1:19:47.48,1:19:52.04,Default,,0,0,0,,Safe variables, are capability\Nsafe and impure variables
 Dialogue: 0,1:19:52.04,1:19:55.84,Default,,0,0,0,,are just arbitrary\Nvariables in our language.
-Dialogue: 0,1:19:55.84,1:20:01.32,Default,,0,0,0,,So we use these qualifiers,\NS or I in blue and red
+Dialogue: 0,1:19:55.84,1:20:01.32,Default,,0,0,0,,So we use these qualifiers,\Ns or i in blue and red
 Dialogue: 0,1:20:01.32,1:20:06.24,Default,,0,0,0,,to annotate the bindings of\Nvariables in our context.
 Dialogue: 0,1:20:06.24,1:20:10.40,Default,,0,0,0,,Then, we would like to\Ninternalize the notion of safety
 Dialogue: 0,1:20:10.40,1:20:13.52,Default,,0,0,0,,using a safe type constructor.
@@ -1396,12 +1396,12 @@ Dialogue: 0,1:20:22.20,1:20:25.04,Default,,0,0,0,,So, these are expressions and
 Dialogue: 0,1:20:25.04,1:20:28.76,Default,,0,0,0,,we distinguish between\Nexpressions and values.
 Dialogue: 0,1:20:28.76,1:20:33.12,Default,,0,0,0,,Boxing an expression\Nturns it into a value.
 Dialogue: 0,1:20:33.12,1:20:36.80,Default,,0,0,0,,We also have a new safety judgment
-Dialogue: 0,1:20:36.80,1:20:41.04,Default,,0,0,0,,which we use to judge\Nwhether a term E of type A
-Dialogue: 0,1:20:41.04,1:20:46.52,Default,,0,0,0,,is safe in context gamma.
+Dialogue: 0,1:20:36.80,1:20:41.04,Default,,0,0,0,,which we use to judge\Nwhether a term e of type A
+Dialogue: 0,1:20:41.04,1:20:46.52,Default,,0,0,0,,is safe in context Gamma.
 Dialogue: 0,1:20:46.52,1:20:49.60,Default,,0,0,0,,So now we want to ensure\Nthat safe variables
 Dialogue: 0,1:20:49.60,1:20:53.08,Default,,0,0,0,,can only depend on\Nother safe variables.
-Dialogue: 0,1:20:53.08,1:20:57.76,Default,,0,0,0,,So we add a sub structural\Noperation on our contexts,
-Dialogue: 0,1:20:57.76,1:21:00.48,Default,,0,0,0,,so this purify operation
+Dialogue: 0,1:20:53.08,1:20:57.76,Default,,0,0,0,,So we add a substructural\Noperation on our contexts.
+Dialogue: 0,1:20:57.76,1:21:00.48,Default,,0,0,0,,So this purify operation
 Dialogue: 0,1:21:00.48,1:21:05.56,Default,,0,0,0,,drops all the impure\Nvariables in our context.
 Dialogue: 0,1:21:05.56,1:21:09.72,Default,,0,0,0,,Then, if we know that\Na term is well typed
 Dialogue: 0,1:21:09.72,1:21:13.96,Default,,0,0,0,,in a safe context, we\Nknow that it's safe.
@@ -1410,17 +1410,17 @@ Dialogue: 0,1:21:17.04,1:21:19.16,Default,,0,0,0,,we can put it inside the box
 Dialogue: 0,1:21:19.16,1:21:22.84,Default,,0,0,0,,using our box introduction rule.
 Dialogue: 0,1:21:23.88,1:21:28.04,Default,,0,0,0,,And finally, we also have\Na let box elimination rule
 Dialogue: 0,1:21:28.04,1:21:30.84,Default,,0,0,0,,for our box type constructor.
-Dialogue: 0,1:21:30.84,1:21:33.44,Default,,0,0,0,,So if E1 is a boxed term,
-Dialogue: 0,1:21:33.44,1:21:36.52,Default,,0,0,0,,we can bind to\Nthe underlying value X.
-Dialogue: 0,1:21:36.52,1:21:39.16,Default,,0,0,0,,And we can eliminate to E2
+Dialogue: 0,1:21:30.84,1:21:33.44,Default,,0,0,0,,So if e1 is a boxed term,
+Dialogue: 0,1:21:33.44,1:21:36.52,Default,,0,0,0,,we can bind\Nthe underlying value x.
+Dialogue: 0,1:21:36.52,1:21:39.16,Default,,0,0,0,,And we can eliminate to e2
 Dialogue: 0,1:21:39.16,1:21:42.96,Default,,0,0,0,,if it is well typed in\Nthe extended context,
-Dialogue: 0,1:21:42.96,1:21:49.00,Default,,0,0,0,,where X is marked with\Na safe annotation.
+Dialogue: 0,1:21:42.96,1:21:49.00,Default,,0,0,0,,where x is marked with\Na safe annotation.
 Dialogue: 0,1:21:49.00,1:21:53.12,Default,,0,0,0,,So these were the additional\Ntyping rules for the box type.
 Dialogue: 0,1:21:53.12,1:21:58.20,Default,,0,0,0,,Let's also take a quick look\Nat the other typing rules.
 Dialogue: 0,1:21:58.20,1:22:03.24,Default,,0,0,0,,The rules for variables\Nremains essentially unchanged.
 Dialogue: 0,1:22:03.24,1:22:05.96,Default,,0,0,0,,For functions, to introduce a lambda
-Dialogue: 0,1:22:05.96,1:22:09.12,Default,,0,0,0,,we allow the bound\Nvariable to be impure.
-Dialogue: 0,1:22:09.12,1:22:12.64,Default,,0,0,0,,So that we can substitute\Narbitrary expressions.
+Dialogue: 0,1:22:05.96,1:22:09.12,Default,,0,0,0,,we allow the bound\Nvariable to be impure
+Dialogue: 0,1:22:09.12,1:22:12.64,Default,,0,0,0,,so that we can substitute\Narbitrary expressions.
 Dialogue: 0,1:22:13.32,1:22:18.28,Default,,0,0,0,,The Lambda application\Nrule remains the same.
 Dialogue: 0,1:22:18.28,1:22:23.08,Default,,0,0,0,,And then finally, the rule for\Nprint is just as expected.
 Dialogue: 0,1:22:23.08,1:22:26.72,Default,,0,0,0,,It's simply a unit.
@@ -1430,7 +1430,7 @@ Dialogue: 0,1:22:32.92,1:22:37.64,Default,,0,0,0,,It has a co-unit,\Nand it has 
 Dialogue: 0,1:22:37.64,1:22:40.48,Default,,0,0,0,,And in fact, our syntax\Nfor adding comonads
 Dialogue: 0,1:22:40.48,1:22:44.80,Default,,0,0,0,,to our type theory is inspired\Nby the classic Pfenning Davies
 Dialogue: 0,1:22:44.80,1:22:51.00,Default,,0,0,0,,paper on the judgmental\Nreconstruction of S4 modal logic.
-Dialogue: 0,1:22:51.00,1:22:53.04,Default,,0,0,0,,Instead of a dual context,
+Dialogue: 0,1:22:51.00,1:22:53.04,Default,,0,0,0,,Instead of dual contexts,
 Dialogue: 0,1:22:53.04,1:22:56.44,Default,,0,0,0,,we use annotations on our variables.
 Dialogue: 0,1:22:56.44,1:23:03.28,Default,,0,0,0,,And for more details on\Nthe syntax, see our paper.
 Dialogue: 0,1:23:03.28,1:23:06.16,Default,,0,0,0,,So coming back to our\Noriginal motivation,
@@ -1442,29 +1442,29 @@ Dialogue: 0,1:23:25.24,1:23:28.20,Default,,0,0,0,,but they're not necessarily pu
 Dialogue: 0,1:23:28.20,1:23:34.56,Default,,0,0,0,,And box of box of A arrow\NB is the the type of pure functions.
 Dialogue: 0,1:23:34.56,1:23:37.40,Default,,0,0,0,,So going back to our\Noriginal example,
 Dialogue: 0,1:23:37.40,1:23:39.32,Default,,0,0,0,,we can now write a pure variant
-Dialogue: 0,1:23:39.32,1:23:44.04,Default,,0,0,0,,of our map one\Nand map two functions.
+Dialogue: 0,1:23:39.32,1:23:44.04,Default,,0,0,0,,of our map1\Nand map2 functions.
 Dialogue: 0,1:23:44.04,1:23:47.80,Default,,0,0,0,,We force the function\Nargument to be pure
 Dialogue: 0,1:23:47.80,1:23:54.28,Default,,0,0,0,,and it should be only applied\Nto a list of safe expressions.
 Dialogue: 0,1:23:54.28,1:23:57.84,Default,,0,0,0,,We can use box and let\Nbox to rewrite the body
-Dialogue: 0,1:23:57.84,1:24:00.72,Default,,0,0,0,,of map one and map two.
-Dialogue: 0,1:24:00.72,1:24:05.80,Default,,0,0,0,,So using this new definition\Nfor map one and map two,
+Dialogue: 0,1:23:57.84,1:24:00.72,Default,,0,0,0,,of map1 and map2.
+Dialogue: 0,1:24:00.72,1:24:05.80,Default,,0,0,0,,So using this new definition\Nfor map1 and map2,
 Dialogue: 0,1:24:05.80,1:24:09.04,Default,,0,0,0,,we can show that they\Nare provably equal
 Dialogue: 0,1:24:09.04,1:24:13.64,Default,,0,0,0,,in the extended calculus.
 Dialogue: 0,1:24:13.64,1:24:17.32,Default,,0,0,0,,Finally to conclude, let me\Npoint out some of the main
 Dialogue: 0,1:24:17.32,1:24:20.40,Default,,0,0,0,,takeaways from this talk.
-Dialogue: 0,1:24:20.40,1:24:26.08,Default,,0,0,0,,First, we can use this notion\Nof capabilities to control effects,
+Dialogue: 0,1:24:20.40,1:24:26.08,Default,,0,0,0,,First, we can use this notion\Nof capabilities to encode effects,
 Dialogue: 0,1:24:26.08,1:24:30.64,Default,,0,0,0,,and to control the usage of effects.
 Dialogue: 0,1:24:30.64,1:24:34.96,Default,,0,0,0,,This idea of capability\Nsafety or denying the usage
 Dialogue: 0,1:24:34.96,1:24:38.32,Default,,0,0,0,,of a capability from\Nthe environment can be captured
-Dialogue: 0,1:24:38.32,1:24:43.36,Default,,0,0,0,,using a comonad\Ntype discipline.
+Dialogue: 0,1:24:38.32,1:24:43.36,Default,,0,0,0,,using a comonadic\Ntype discipline.
 Dialogue: 0,1:24:43.36,1:24:45.84,Default,,0,0,0,,Let me also highlight some\Nof the technical results
 Dialogue: 0,1:24:45.84,1:24:48.32,Default,,0,0,0,,in our paper.
-Dialogue: 0,1:24:48.32,1:24:52.44,Default,,0,0,0,,We formalize an effectful\Ncalculus and we extended
+Dialogue: 0,1:24:48.32,1:24:52.44,Default,,0,0,0,,We formalize an effectful\Ncalculus and we extend it
 Dialogue: 0,1:24:52.44,1:24:57.00,Default,,0,0,0,,with a safety modality and we\Nshow how to do substitution
 Dialogue: 0,1:24:57.00,1:25:00.12,Default,,0,0,0,,and so on.
 Dialogue: 0,1:25:00.12,1:25:04.68,Default,,0,0,0,,We show how to recover purity\Nfrom capability safety.
-Dialogue: 0,1:25:04.68,1:25:09.24,Default,,0,0,0,,And we also discussed how\Nto do capability taming.
-Dialogue: 0,1:25:09.24,1:25:13.00,Default,,0,0,0,,That is, how to incrementally\Nadd safety to an already
+Dialogue: 0,1:25:04.68,1:25:09.24,Default,,0,0,0,,And we also discuss how\Nto do capability taming,
+Dialogue: 0,1:25:09.24,1:25:13.00,Default,,0,0,0,,that is, how to incrementally\Nadd safety to an already
 Dialogue: 0,1:25:13.00,1:25:17.24,Default,,0,0,0,,impure language or a library.
 Dialogue: 0,1:25:17.24,1:25:21.08,Default,,0,0,0,,We give a categorical\Nsemantics for this language.
 Dialogue: 0,1:25:21.08,1:25:24.32,Default,,0,0,0,,It is given by a cartesian\Nclosed category
@@ -1475,11 +1475,11 @@ Dialogue: 0,1:25:33.24,1:25:36.40,Default,,0,0,0,,which give us\Na denotational 
 Dialogue: 0,1:25:36.40,1:25:40.64,Default,,0,0,0,,which satisfies the axiomatic\Ncategorical structure
 Dialogue: 0,1:25:40.64,1:25:44.32,Default,,0,0,0,,that we need for our semantics.
 Dialogue: 0,1:25:44.32,1:25:46.52,Default,,0,0,0,,The idea of this\Nconstruction in fact
-Dialogue: 0,1:25:46.52,1:25:50.64,Default,,0,0,0,,comes from an old paper\Nof Martin Hoffman.
+Dialogue: 0,1:25:46.52,1:25:50.64,Default,,0,0,0,,comes from an old paper\Nof Martin Hofmann.
 Dialogue: 0,1:25:50.64,1:25:53.48,Default,,0,0,0,,Also capability spaces\Nhave more structure
 Dialogue: 0,1:25:53.48,1:25:57.08,Default,,0,0,0,,than we actually use\Nfor our semantics.
-Dialogue: 0,1:25:57.08,1:26:00.64,Default,,0,0,0,,It can be used to give\Nthe model of linear type theory,
-Dialogue: 0,1:26:00.64,1:26:04.56,Default,,0,0,0,,which we discussed in the paper.
+Dialogue: 0,1:25:57.08,1:26:00.64,Default,,0,0,0,,It can be used to give\Na model of linear type theory,
+Dialogue: 0,1:26:00.64,1:26:04.56,Default,,0,0,0,,which we discuss in the paper.
 Dialogue: 0,1:26:04.56,1:26:08.32,Default,,0,0,0,,We also give the full equational\Ntheory for this calculus
 Dialogue: 0,1:26:08.32,1:26:11.00,Default,,0,0,0,,and we use our\Ndenotational semantics
 Dialogue: 0,1:26:11.00,1:26:14.28,Default,,0,0,0,,to prove its soundness.
