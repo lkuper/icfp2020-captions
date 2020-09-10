@@ -1404,8 +1404,8 @@ Dialogue: 0,1:13:02.12,1:13:05.28,Default,,0,0,0,,please remember to\N join the 
 Dialogue: 0,1:13:05.28,1:13:10.36,Default,,0,0,0,,if it is available\N in your time zone.
 Dialogue: 0,1:13:13.76,1:13:18.16,Default,,0,0,0,,Our next talk is a new approach to\N impredicative polymorphism,
 Dialogue: 0,1:13:18.16,1:13:20.56,Default,,0,0,0,,in the Glasgow Haskell Compiler.
-Dialogue: 0,1:13:20.56,1:13:25.56,Default,,0,0,0,,This work has been developed by\N Alejandro Serrano, Jurean Hawk,
-Dialogue: 0,1:13:27.08,1:13:30.92,Default,,0,0,0,,Simon Payton-Jones,\N and Dimitrios Vitinyadas.
+Dialogue: 0,1:13:20.56,1:13:25.56,Default,,0,0,0,,This work has been developed by\N Alejandro Serrano, Jurriaan Hage,
+Dialogue: 0,1:13:27.08,1:13:30.92,Default,,0,0,0,,Simon Peyton Jones,\N and Dimitrios Vytiniotis.
 Dialogue: 0,1:13:30.92,1:13:36.32,Default,,0,0,0,,Alejandro Serrano will be\N giving the presentation.
 Dialogue: 0,1:13:36.32,1:13:38.48,Default,,0,0,0,,ALEJANDRO SERRANO: Hi.\N I'm Alejandro.
 Dialogue: 0,1:13:38.48,1:13:39.72,Default,,0,0,0,,I'm going to talk to you about
@@ -1440,7 +1440,7 @@ Dialogue: 0,1:14:53.96,1:14:57.00,Default,,0,0,0,,But, you have to be very\N exp
 Dialogue: 0,1:14:57.00,1:14:58.24,Default,,0,0,0,,You need to annotate.
 Dialogue: 0,1:14:58.24,1:15:01.16,Default,,0,0,0,,In fact, in System F,\N you need to annotate
 Dialogue: 0,1:15:01.16,1:15:04.64,Default,,0,0,0,,every time you instantiate\N with a type application,
-Dialogue: 0,1:15:04.64,1:15:09.16,Default,,0,0,0,,like I am doing here\N with at for all A A to A,
+Dialogue: 0,1:15:04.64,1:15:09.16,Default,,0,0,0,,like I am doing here\N with at for all A, A to A,
 Dialogue: 0,1:15:09.16,1:15:12.16,Default,,0,0,0,,and you also have to annotate\N every time you generalize,
 Dialogue: 0,1:15:12.16,1:15:14.48,Default,,0,0,0,,every time you need to\N have a for all in a type,
 Dialogue: 0,1:15:14.48,1:15:16.60,Default,,0,0,0,,with a big lambda,\N like I am doing here,
@@ -1453,7 +1453,7 @@ Dialogue: 0,1:15:30.92,1:15:35.16,Default,,0,0,0,,which is itself a list\N of fo
 Dialogue: 0,1:15:35.16,1:15:38.60,Default,,0,0,0,,and we want the inference
 Dialogue: 0,1:15:38.60,1:15:42.52,Default,,0,0,0,,and to be able to add\N anything we need.
 Dialogue: 0,1:15:42.52,1:15:44.44,Default,,0,0,0,,But there are several questions.
-Dialogue: 0,1:15:44.44,1:15:47.84,Default,,0,0,0,,First of all, how do we\N instantiate the cones?
+Dialogue: 0,1:15:44.44,1:15:47.84,Default,,0,0,0,,First of all, how do we\N instantiate the cons?
 Dialogue: 0,1:15:47.84,1:15:49.56,Default,,0,0,0,,Hindley-Damas-Milner\N for example,
 Dialogue: 0,1:15:49.56,1:15:53.32,Default,,0,0,0,,which is one of the best known\N inference algorithms,
 Dialogue: 0,1:15:53.32,1:15:57.12,Default,,0,0,0,,that's not allowed polymorphic\N instantiation at all.
@@ -1465,11 +1465,11 @@ Dialogue: 0,1:16:11.44,1:16:14.44,Default,,0,0,0,,There are so many related work
 Dialogue: 0,1:16:14.44,1:16:18.52,Default,,0,0,0,,Here I want to present Quick\N Look which is a new idea
 Dialogue: 0,1:16:18.52,1:16:20.96,Default,,0,0,0,,in which what we do is\N we introduce a new
 Dialogue: 0,1:16:20.96,1:16:23.48,Default,,0,0,0,,Quick Look phase through\N an instantiation which discovers
-Dialogue: 0,1:16:23.48,1:16:26.52,Default,,0,0,0,,impredicative activity\N as much as possible.
+Dialogue: 0,1:16:23.48,1:16:26.52,Default,,0,0,0,,impredicativity\N as much as possible.
 Dialogue: 0,1:16:26.52,1:16:32.64,Default,,0,0,0,,And then there is a type checking\N just remains as it was.
 Dialogue: 0,1:16:32.64,1:16:34.16,Default,,0,0,0,,Let me show you an example.
-Dialogue: 0,1:16:34.16,1:16:37.28,Default,,0,0,0,,For example, I have here cons ID
-Dialogue: 0,1:16:37.28,1:16:41.08,Default,,0,0,0,,where instead of using ID directly,
+Dialogue: 0,1:16:34.16,1:16:37.28,Default,,0,0,0,,For example, I have here cons id
+Dialogue: 0,1:16:37.28,1:16:41.08,Default,,0,0,0,,where instead of using id directly,
 Dialogue: 0,1:16:41.56,1:16:43.64,Default,,0,0,0,,I'm putting this into\N a local binding,
 Dialogue: 0,1:16:43.64,1:16:46.56,Default,,0,0,0,,but here you can see all the types.
 Dialogue: 0,1:16:46.56,1:16:48.72,Default,,0,0,0,,If you do inference with\N Hindley-Damas-Milner,
@@ -1477,7 +1477,7 @@ Dialogue: 0,1:16:48.72,1:16:51.24,Default,,0,0,0,,what will happen is\N that you
 Dialogue: 0,1:16:51.24,1:16:54.76,Default,,0,0,0,,the type of cons\N and you're introducing cons
 Dialogue: 0,1:16:54.76,1:16:58.40,Default,,0,0,0,,applied to one type\N variable, you don't know
 Dialogue: 0,1:16:58.40,1:16:59.96,Default,,0,0,0,,I'm going to call it\N alpha here,
-Dialogue: 0,1:16:59.96,1:17:03.80,Default,,0,0,0,,and then you have\N the argument ID and ISs.
+Dialogue: 0,1:16:59.96,1:17:03.80,Default,,0,0,0,,and then you have\N the argument id and ids.
 Dialogue: 0,1:17:03.80,1:17:08.80,Default,,0,0,0,,The type of the arguments are then\N alpha and list of alphas.
 Dialogue: 0,1:17:10.12,1:17:12.76,Default,,0,0,0,,The question now is what\N is alpha of course,
 Dialogue: 0,1:17:12.76,1:17:14.72,Default,,0,0,0,,and if you have a declarative spec,
@@ -1495,30 +1495,30 @@ Dialogue: 0,1:17:40.84,1:17:43.36,Default,,0,0,0,,You try to get as many\N infor
 Dialogue: 0,1:17:43.36,1:17:45.12,Default,,0,0,0,,the impredicativity\N you need by looking
 Dialogue: 0,1:17:45.12,1:17:47.32,Default,,0,0,0,,at having a peek at the arguments.
 Dialogue: 0,1:17:47.32,1:17:48.72,Default,,0,0,0,,In this case we're\N going to learn nothing
-Dialogue: 0,1:17:48.72,1:17:50.84,Default,,0,0,0,,from the first argument IDs,
+Dialogue: 0,1:17:48.72,1:17:50.84,Default,,0,0,0,,from the first argument id,
 Dialogue: 0,1:17:50.84,1:17:52.76,Default,,0,0,0,,and from the second arguments\N we're going to learn
-Dialogue: 0,1:17:52.76,1:17:57.04,Default,,0,0,0,,that alpha has to be\N exactly for all A to A.
+Dialogue: 0,1:17:52.76,1:17:57.04,Default,,0,0,0,,that alpha has to be\N exactly for all A, A to A.
 Dialogue: 0,1:17:57.04,1:17:58.44,Default,,0,0,0,,At this point, what we\N know is that
 Dialogue: 0,1:17:58.44,1:18:01.20,Default,,0,0,0,,the type of these arguments are\N not just any alpha,
-Dialogue: 0,1:18:01.20,1:18:05.52,Default,,0,0,0,,they are exactly for all Aa to A\N and list of for all Aa to A.
+Dialogue: 0,1:18:01.20,1:18:05.52,Default,,0,0,0,,they are exactly for all A, A to A\N and list of for all A, A to A.
 Dialogue: 0,1:18:05.52,1:18:08.08,Default,,0,0,0,,And there is nothing else to guess
 Dialogue: 0,1:18:08.08,1:18:12.48,Default,,0,0,0,,and type checking can succeed.
-Dialogue: 0,1:18:12.48,1:18:15.76,Default,,0,0,0,,Now I've said that we\N learn nothing from ID,
-Dialogue: 0,1:18:15.76,1:18:19.28,Default,,0,0,0,,but from IDs we learn\N that alpha must be
-Dialogue: 0,1:18:19.28,1:18:21.80,Default,,0,0,0,,for all A A to A, so you\N might be wondering
+Dialogue: 0,1:18:12.48,1:18:15.76,Default,,0,0,0,,Now I've said that we\N learn nothing from id,
+Dialogue: 0,1:18:15.76,1:18:19.28,Default,,0,0,0,,but from ids we learn\N that alpha must be
+Dialogue: 0,1:18:19.28,1:18:21.80,Default,,0,0,0,,for all A, A to A, so you\N might be wondering
 Dialogue: 0,1:18:21.80,1:18:24.96,Default,,0,0,0,,what's difference between\N these two arguments?
 Dialogue: 0,1:18:24.96,1:18:27.16,Default,,0,0,0,,Let me try to explain this.
 Dialogue: 0,1:18:27.16,1:18:30.16,Default,,0,0,0,,Here are the types we are\N push, the types that went
 Dialogue: 0,1:18:30.16,1:18:35.08,Default,,0,0,0,,from the instantiation,\N and the types that are obtained
 Dialogue: 0,1:18:35.08,1:18:37.24,Default,,0,0,0,,from looking at\N the type of the variables.
-Dialogue: 0,1:18:37.24,1:18:39.52,Default,,0,0,0,,In the case of ID,\N the type which is push
+Dialogue: 0,1:18:37.24,1:18:39.52,Default,,0,0,0,,In the case of id,\N the type which is pushed
 Dialogue: 0,1:18:39.52,1:18:43.88,Default,,0,0,0,,is this single type\N variable alpha
-Dialogue: 0,1:18:43.88,1:18:46.52,Default,,0,0,0,,we get from\N the variable is for all A A to A
-Dialogue: 0,1:18:46.52,1:18:48.12,Default,,0,0,0,,and from IDs it's\N the same,
+Dialogue: 0,1:18:43.88,1:18:46.52,Default,,0,0,0,,we get from\N the variable is for all A, A to A
+Dialogue: 0,1:18:46.52,1:18:48.12,Default,,0,0,0,,and from ids it's\N the same,
 Dialogue: 0,1:18:48.12,1:18:53.32,Default,,0,0,0,,but everything\N is wrapped in a list construct.
-Dialogue: 0,1:18:53.32,1:18:57.80,Default,,0,0,0,,So actually in the case of IDs\N we have only one possibility.
+Dialogue: 0,1:18:53.32,1:18:57.80,Default,,0,0,0,,So actually in the case of ids\N we have only one possibility.
 Dialogue: 0,1:18:57.80,1:18:59.72,Default,,0,0,0,,In order for the list of alpha
-Dialogue: 0,1:18:59.72,1:19:03.76,Default,,0,0,0,,and the list of for all\N A A to B to be equal,
+Dialogue: 0,1:18:59.72,1:19:03.76,Default,,0,0,0,,and the list of for all\N A, A to B to be equal,
 Dialogue: 0,1:19:03.76,1:19:08.76,Default,,0,0,0,,just alpha has to be\N for all A, A to A.
 Dialogue: 0,1:19:10.20,1:19:13.64,Default,,0,0,0,,Now for the second case, we\N actually have two possibilities.
 Dialogue: 0,1:19:13.64,1:19:16.36,Default,,0,0,0,,It could be that alpha\N is for all A, A to A,
@@ -1528,30 +1528,30 @@ Dialogue: 0,1:19:20.08,1:19:23.16,Default,,0,0,0,,so the for all A, A to\N A bec
 Dialogue: 0,1:19:23.16,1:19:27.68,Default,,0,0,0,,and then we make alpha\N equal to this beta to beta.
 Dialogue: 0,1:19:27.68,1:19:30.68,Default,,0,0,0,,The difference here is that\N alpha in the second case
 Dialogue: 0,1:19:30.68,1:19:32.44,Default,,0,0,0,,is what we call guarded,
-Dialogue: 0,1:19:32.44,1:19:35.68,Default,,0,0,0,,which means it appears\N under a type construct.
+Dialogue: 0,1:19:32.44,1:19:35.68,Default,,0,0,0,,which means it appears\N under a type constructor.
 Dialogue: 0,1:19:35.68,1:19:39.28,Default,,0,0,0,,And the key idea is that\N the instantiation relation
 Dialogue: 0,1:19:39.28,1:19:41.60,Default,,0,0,0,,becomes simple equality\N when you have
 Dialogue: 0,1:19:41.60,1:19:43.48,Default,,0,0,0,,a type constructor on top.
 Dialogue: 0,1:19:43.48,1:19:45.96,Default,,0,0,0,,So in the second case, you\N have nothing to decide.
 Dialogue: 0,1:19:45.96,1:19:48.08,Default,,0,0,0,,There is only one\N choice, so you take it.
 Dialogue: 0,1:19:48.08,1:19:51.52,Default,,0,0,0,,If you have a single type\N variable lying around,
-Dialogue: 0,1:19:51.52,1:19:53.96,Default,,0,0,0,,like in a type of IDs, you\N don't know what to do,
+Dialogue: 0,1:19:51.52,1:19:53.96,Default,,0,0,0,,like in a type of ids, you\N don't know what to do,
 Dialogue: 0,1:19:53.96,1:19:57.40,Default,,0,0,0,,so we just say, "Well, at this\N point we learn nothing."
 Dialogue: 0,1:19:57.40,1:19:58.48,Default,,0,0,0,,And actually, it can be the case
 Dialogue: 0,1:19:58.48,1:20:01.00,Default,,0,0,0,,that quick look gets\N us no information.
-Dialogue: 0,1:20:01.00,1:20:03.84,Default,,0,0,0,,That's, for example, cons\N ID with an empty list.
+Dialogue: 0,1:20:01.00,1:20:03.84,Default,,0,0,0,,That's, for example, cons\N id with an empty list.
 Dialogue: 0,1:20:03.84,1:20:06.72,Default,,0,0,0,,In this list, we will\N instantiate the type of cons,
 Dialogue: 0,1:20:06.72,1:20:08.60,Default,,0,0,0,,have a quick look at the arguments,
-Dialogue: 0,1:20:08.60,1:20:10.84,Default,,0,0,0,,and we will learn nothing from ID,
+Dialogue: 0,1:20:08.60,1:20:10.84,Default,,0,0,0,,and we will learn nothing from id,
 Dialogue: 0,1:20:10.84,1:20:12.72,Default,,0,0,0,,and we will learn nothing\N from the empty list,
 Dialogue: 0,1:20:12.72,1:20:15.92,Default,,0,0,0,,so we need to fall back to\N monomorphic instantiation.
 Dialogue: 0,1:20:15.92,1:20:18.44,Default,,0,0,0,,And the result will be\N that the inferred type
 Dialogue: 0,1:20:18.44,1:20:22.80,Default,,0,0,0,,is the most useful\N list of tau to tau,
 Dialogue: 0,1:20:22.80,1:20:27.00,Default,,0,0,0,,where these taus are\N monomorphic types.
 Dialogue: 0,1:20:27.00,1:20:30.28,Default,,0,0,0,,We can also take some other\N information into account.
-Dialogue: 0,1:20:30.28,1:20:33.80,Default,,0,0,0,,Imagine, for example, we\N have this go to single ID.
+Dialogue: 0,1:20:30.28,1:20:33.80,Default,,0,0,0,,Imagine, for example, we\N have this go to single id.
 Dialogue: 0,1:20:33.80,1:20:37.36,Default,,0,0,0,,Well, we have a pretty similar\N story with the arguments.
-Dialogue: 0,1:20:37.36,1:20:41.40,Default,,0,0,0,,The type of ID is going to be\N alpha when we push it,
+Dialogue: 0,1:20:37.36,1:20:41.40,Default,,0,0,0,,The type of id is going to be\N alpha when we push it,
 Dialogue: 0,1:20:41.40,1:20:43.92,Default,,0,0,0,,and then we have\N a for all A, A to A.
 Dialogue: 0,1:20:43.92,1:20:45.56,Default,,0,0,0,,So we have two choices here, again:
 Dialogue: 0,1:20:45.56,1:20:47.72,Default,,0,0,0,,we can make alpha equal\N to for all A, A to A,
@@ -1560,7 +1560,7 @@ Dialogue: 0,1:20:49.60,1:20:53.96,Default,,0,0,0,,So quick look gives you\N no i
 Dialogue: 0,1:20:53.96,1:20:56.80,Default,,0,0,0,,But if we have a better look,
 Dialogue: 0,1:20:56.80,1:21:00.08,Default,,0,0,0,,we can also take into consideration\N the type of the result,
 Dialogue: 0,1:21:00.08,1:21:02.40,Default,,0,0,0,,and in that case, we\N can play the same trick
-Dialogue: 0,1:21:02.40,1:21:05.32,Default,,0,0,0,,as we did for\N the cons of ID with IDs.
+Dialogue: 0,1:21:02.40,1:21:05.32,Default,,0,0,0,,as we did for\N the cons of id with ids.
 Dialogue: 0,1:21:05.32,1:21:08.12,Default,,0,0,0,,The type we get pushed\N is for all A, A to A,
 Dialogue: 0,1:21:08.12,1:21:09.24,Default,,0,0,0,,that's from the annotation,
 Dialogue: 0,1:21:09.24,1:21:12.84,Default,,0,0,0,,and the type we get from\N the instantiation is list of alpha.
@@ -1578,20 +1578,20 @@ Dialogue: 0,1:21:43.36,1:21:45.28,Default,,0,0,0,,and this application had argum
 Dialogue: 0,1:21:45.28,1:21:47.96,Default,,0,0,0,,but those arguments\N were all variables.
 Dialogue: 0,1:21:47.96,1:21:51.08,Default,,0,0,0,,We can actually go deeper\N and inspect nested applications,
 Dialogue: 0,1:21:51.08,1:21:52.24,Default,,0,0,0,,and if you think, for example,
-Dialogue: 0,1:21:52.24,1:21:56.00,Default,,0,0,0,,into this goal cons\N ID to cons ID IDs,
+Dialogue: 0,1:21:52.24,1:21:56.00,Default,,0,0,0,,into this goal cons\N id to cons id ids,
 Dialogue: 0,1:21:56.00,1:21:58.04,Default,,0,0,0,,in order for the top-most cons
 Dialogue: 0,1:21:58.04,1:21:59.36,Default,,0,0,0,,to be correctly instantiated,
-Dialogue: 0,1:21:59.36,1:22:03.92,Default,,0,0,0,,you need to go up to\N the IDs so that you learn that,
+Dialogue: 0,1:21:59.36,1:22:03.92,Default,,0,0,0,,you need to go up to\N the ids so that you learn that,
 Dialogue: 0,1:22:03.92,1:22:06.16,Default,,0,0,0,,well, this should\N have a type of list
 Dialogue: 0,1:22:06.16,1:22:09.44,Default,,0,0,0,,of for all A, A to A, and this\N will inform both constants.
 Dialogue: 0,1:22:09.44,1:22:12.64,Default,,0,0,0,,So you gain something by\N inspecting nested applications.
 Dialogue: 0,1:22:13.32,1:22:15.84,Default,,0,0,0,,But we don't know more.\N We really want to keep this simple.
 Dialogue: 0,1:22:15.84,1:22:18.24,Default,,0,0,0,,We don't want to go\N into environmental changes.
-Dialogue: 0,1:22:18.24,1:22:21.00,Default,,0,0,0,,So we don't inspect Lambdas.\N We don't inspect
+Dialogue: 0,1:22:18.24,1:22:21.00,Default,,0,0,0,,So we don't inspect lambdas.\N We don't inspect
 Dialogue: 0,1:22:21.00,1:22:24.28,Default,,0,0,0,,let's because this introduce\N new things into the environment.
 Dialogue: 0,1:22:24.28,1:22:26.32,Default,,0,0,0,,And we don't try\N to inspect them
 Dialogue: 0,1:22:26.32,1:22:29.12,Default,,0,0,0,,with multiple branches,\N like ifs or pattern matching
-Dialogue: 0,1:22:29.12,1:22:33.00,Default,,0,0,0,,because it's (INAUDIBLE)\N that we need to not only
+Dialogue: 0,1:22:29.12,1:22:33.00,Default,,0,0,0,,because it will lead us\N that we need to not only
 Dialogue: 0,1:22:33.00,1:22:35.24,Default,,0,0,0,,unify things in a simple way\N we also need
 Dialogue: 0,1:22:35.24,1:22:38.04,Default,,0,0,0,,to consider the case\N in which these two branches
 Dialogue: 0,1:22:38.04,1:22:41.52,Default,,0,0,0,,don't have a similar type.\N So we just really want
@@ -1610,13 +1610,13 @@ Dialogue: 0,1:23:10.76,1:23:13.48,Default,,0,0,0,,One thing will succeed.\N And 
 Dialogue: 0,1:23:13.48,1:23:16.36,Default,,0,0,0,,break where the annotations\N should be placed,
 Dialogue: 0,1:23:17.00,1:23:19.48,Default,,0,0,0,,we also want obvious\N programs to be typable
 Dialogue: 0,1:23:19.48,1:23:22.92,Default,,0,0,0,,without annotations.\N And of course, what obvious are,
-Dialogue: 0,1:23:22.92,1:23:25.80,Default,,0,0,0,,is objective in the paper.\N We have a big list of example,
+Dialogue: 0,1:23:22.92,1:23:25.80,Default,,0,0,0,,is objective in the paper.\N We have a big list of examples,
 Dialogue: 0,1:23:25.80,1:23:27.56,Default,,0,0,0,,would we need,\N should we think
 Dialogue: 0,1:23:27.56,1:23:29.84,Default,,0,0,0,,we should be typable\N without annotations.
 Dialogue: 0,1:23:29.84,1:23:31.84,Default,,0,0,0,,And many of the examples\N I've shown here
 Dialogue: 0,1:23:31.84,1:23:33.72,Default,,0,0,0,,are also typable\N without annotations
 Dialogue: 0,1:23:33.72,1:23:37.28,Default,,0,0,0,,so we really want to push\N for getting as much
-Dialogue: 0,1:23:37.28,1:23:39.76,Default,,0,0,0,,impredicatively\N information as we can,
+Dialogue: 0,1:23:37.28,1:23:39.76,Default,,0,0,0,,impredicativity\N information as we can,
 Dialogue: 0,1:23:39.76,1:23:44.24,Default,,0,0,0,,so that developers don't have\N to annotate all the time.
 Dialogue: 0,1:23:45.08,1:23:48.00,Default,,0,0,0,,The other goal we have\N is to be a conservative extension
 Dialogue: 0,1:23:48.00,1:23:51.16,Default,,0,0,0,,of existing features.\N So we want this thing
@@ -1626,7 +1626,7 @@ Dialogue: 0,1:23:55.68,1:23:58.68,Default,,0,0,0,,and also to be localized\N in 
 Dialogue: 0,1:23:58.68,1:24:01.04,Default,,0,0,0,,implementation.\N Because as I was saying,
 Dialogue: 0,1:24:01.04,1:24:04.00,Default,,0,0,0,,we want to implement\N this in GHC without
 Dialogue: 0,1:24:04.00,1:24:08.92,Default,,0,0,0,,massive changes.\N So let me talk a bit more
-Dialogue: 0,1:24:08.92,1:24:11.72,Default,,0,0,0,,about the fact that\N quick look is very localized.
+Dialogue: 0,1:24:08.92,1:24:11.72,Default,,0,0,0,,about the fact that\N Quick Look is very localized.
 Dialogue: 0,1:24:11.72,1:24:14.80,Default,,0,0,0,,And as I said,\N this only affects instantiation.
 Dialogue: 0,1:24:14.80,1:24:18.24,Default,,0,0,0,,The rest of the type\N check-in has no changes.
 Dialogue: 0,1:24:18.24,1:24:20.64,Default,,0,0,0,,So we've integrated\N this into GHC,
@@ -1645,19 +1645,19 @@ Dialogue: 0,1:24:50.60,1:24:53.52,Default,,0,0,0,,type inference and constraint\
 Dialogue: 0,1:24:53.52,1:24:57.76,Default,,0,0,0,,down in a paper.\N This is what was inside GHC,
 Dialogue: 0,1:24:57.76,1:25:01.96,Default,,0,0,0,,but there was no nothing written\N about how you integrate
 Dialogue: 0,1:25:01.96,1:25:04.16,Default,,0,0,0,,all of this together.\N And on top of that,
-Dialogue: 0,1:25:04.16,1:25:06.88,Default,,0,0,0,,we built QuickLook\N impredicativity.
+Dialogue: 0,1:25:04.16,1:25:06.88,Default,,0,0,0,,we built Quick Look\N impredicativity.
 Dialogue: 0,1:25:06.88,1:25:08.76,Default,,0,0,0,,Of course we have,\N we talk about
 Dialogue: 0,1:25:08.76,1:25:13.16,Default,,0,0,0,,metatheoretical properties.\N Also we talk about
 Dialogue: 0,1:25:13.16,1:25:16.64,Default,,0,0,0,,how we integrate quick look\N with visible type application.
-Dialogue: 0,1:25:16.64,1:25:21.20,Default,,0,0,0,,And the reason is that when,\N when quick look fails,
+Dialogue: 0,1:25:16.64,1:25:21.20,Default,,0,0,0,,And the reason is that when,\N when Quick Look fails,
 Dialogue: 0,1:25:21.20,1:25:23.96,Default,,0,0,0,,the easiest way to override\N this is a way to tell
 Dialogue: 0,1:25:23.96,1:25:26.04,Default,,0,0,0,,the compiler\N what this instantiation
 Dialogue: 0,1:25:26.04,1:25:28.20,Default,,0,0,0,,should be is to use\N visible type application.
 Dialogue: 0,1:25:28.20,1:25:29.60,Default,,0,0,0,,So we think it's really\N important that does
 Dialogue: 0,1:25:29.60,1:25:31.60,Default,,0,0,0,,these two things\N play together.
 Dialogue: 0,1:25:31.60,1:25:34.92,Default,,0,0,0,,Well, we also talk\N a bit about how qualified type
-Dialogue: 0,1:25:34.92,1:25:37.44,Default,,0,0,0,,and GADTs is integrated\N with quick look
-Dialogue: 0,1:25:37.44,1:25:40.00,Default,,0,0,0,,and also lots of related work,\N because as I shown
+Dialogue: 0,1:25:34.92,1:25:37.44,Default,,0,0,0,,and GADTs is integrated\N with Quick Look
+Dialogue: 0,1:25:37.44,1:25:40.00,Default,,0,0,0,,and also lots of related work,\N because as I've shown
 Dialogue: 0,1:25:40.00,1:25:41.76,Default,,0,0,0,,at the beginning,\N a lot of people
 Dialogue: 0,1:25:41.76,1:25:43.80,Default,,0,0,0,,have been struggling\N with this problem
 Dialogue: 0,1:25:43.80,1:25:47.08,Default,,0,0,0,,and trying to solve it\N for a long time.
