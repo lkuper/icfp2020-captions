@@ -944,17 +944,17 @@ Dialogue: 0,0:58:01.96,0:58:05.88,Default,,0,0,0,,Next up we have Nandor Licker\
 Dialogue: 0,0:58:05.88,0:58:10.04,Default,,0,0,0,,a framework for\NOcaml post-link optimization.
 Dialogue: 0,0:58:10.68,0:58:12.56,Default,,0,0,0,,NANDOR LICKER: Hello,\Nmy name is Nandor Licker
 Dialogue: 0,0:58:12.56,0:58:15.16,Default,,0,0,0,,And today I'm going to talk\Nabout Duplo a framework
-Dialogue: 0,0:58:15.16,0:58:18.96,Default,,0,0,0,,for Ocaml post link optimization.\NI built with Dr. Tim Jones
+Dialogue: 0,0:58:15.16,0:58:18.96,Default,,0,0,0,,for OCaml post link optimization.\NI built with Dr. Tim Jones
 Dialogue: 0,0:58:18.96,0:58:21.32,Default,,0,0,0,,at the university of Cambridge.
 Dialogue: 0,0:58:21.32,0:58:23.24,Default,,0,0,0,,Why build a post link optimizer?
-Dialogue: 0,0:58:23.24,0:58:26.20,Default,,0,0,0,,And why build one\Nfor Ocaml in particular.
-Dialogue: 0,0:58:26.20,0:58:28.64,Default,,0,0,0,,Ocaml is a high level language,\Nwhich means that it is not
+Dialogue: 0,0:58:23.24,0:58:26.20,Default,,0,0,0,,And why build one\Nfor OCaml in particular.
+Dialogue: 0,0:58:26.20,0:58:28.64,Default,,0,0,0,,OCaml is a high level language,\Nwhich means that it is not
 Dialogue: 0,0:58:28.64,0:58:31.80,Default,,0,0,0,,well suited for expressing\Nspecific low-level constructs
 Dialogue: 0,0:58:31.80,0:58:34.40,Default,,0,0,0,,as an example,\Nwe consider a simple type
 Dialogue: 0,0:58:34.40,0:58:36.84,Default,,0,0,0,,to represent complex numbers,\Ncomposed of an imaginary
 Dialogue: 0,0:58:36.84,0:58:39.16,Default,,0,0,0,,and a real component.\NIf we declare
 Dialogue: 0,0:58:39.16,0:58:40.76,Default,,0,0,0,,a complex number\Nas a pair of floats,
-Dialogue: 0,0:58:40.76,0:58:43.04,Default,,0,0,0,,we ended up\Nwith many allocations,
+Dialogue: 0,0:58:40.76,0:58:43.04,Default,,0,0,0,,we end up\Nwith many allocations,
 Dialogue: 0,0:58:43.04,0:58:45.16,Default,,0,0,0,,even though we only care\Nabout eight bytes of data
 Dialogue: 0,0:58:45.16,0:58:48.16,Default,,0,0,0,,to store two 32 bit floats,\Nthe object will be spread
 Dialogue: 0,0:58:48.16,0:58:51.56,Default,,0,0,0,,across 56 bytes\Nand three distinct allocations
@@ -962,7 +962,7 @@ Dialogue: 0,0:58:51.56,0:58:54.84,Default,,0,0,0,,producing three distinct block
 Dialogue: 0,0:58:54.84,0:58:57.32,Default,,0,0,0,,Ideally, we'd like\Na single block with a header
 Dialogue: 0,0:58:57.32,0:59:00.76,Default,,0,0,0,,and eight bytes of data.\NSo how do we get there?
 Dialogue: 0,0:59:00.76,0:59:03.24,Default,,0,0,0,,We can write a lot of code,\Npossibly fiddling with bits
-Dialogue: 0,0:59:03.24,0:59:04.92,Default,,0,0,0,,and express the type\Nin Ocaml.
+Dialogue: 0,0:59:03.24,0:59:04.92,Default,,0,0,0,,and express the type\Nin OCaml.
 Dialogue: 0,0:59:04.92,0:59:08.16,Default,,0,0,0,,However, the solution\Nis unlikely to be elegant.
 Dialogue: 0,0:59:08.16,0:59:11.04,Default,,0,0,0,,We could also change\Nthe runtime or the compiler.
 Dialogue: 0,0:59:11.04,0:59:13.32,Default,,0,0,0,,However, this is not\Npractical nor scalable,
@@ -971,19 +971,19 @@ Dialogue: 0,0:59:15.80,0:59:17.40,Default,,0,0,0,,We choose to instead\Nuse an e
 Dialogue: 0,0:59:17.40,0:59:20.80,Default,,0,0,0,,language feature namely\Nthe foreign function interface,
 Dialogue: 0,0:59:20.80,0:59:24.52,Default,,0,0,0,,the FFI allows us to use\Nthe right tool for the right job.
 Dialogue: 0,0:59:24.52,0:59:26.32,Default,,0,0,0,,We can express\Nlow level constructs
-Dialogue: 0,0:59:26.32,0:59:29.36,Default,,0,0,0,,in C and call them\Nfrom Ocaml.
-Dialogue: 0,0:59:29.92,0:59:33.04,Default,,0,0,0,,The FFI of Ocaml\Nis particularly powerful.
+Dialogue: 0,0:59:26.32,0:59:29.36,Default,,0,0,0,,in C and call them\Nfrom OCaml.
+Dialogue: 0,0:59:29.92,0:59:33.04,Default,,0,0,0,,The FFI of OCaml\Nis particularly powerful.
 Dialogue: 0,0:59:33.04,0:59:37.00,Default,,0,0,0,,Thanks to its minimal runtime\Nand simple object representation.
 Dialogue: 0,0:59:37.00,0:59:39.20,Default,,0,0,0,,This allows us\Nto read arbitrary objects
-Dialogue: 0,0:59:39.20,0:59:41.56,Default,,0,0,0,,from the Ocaml heap\Nand also to allocate
-Dialogue: 0,0:59:41.56,0:59:44.32,Default,,0,0,0,,arbitrary objects\Non the Ocaml heap.
+Dialogue: 0,0:59:39.20,0:59:41.56,Default,,0,0,0,,from the OCaml heap\Nand also to allocate
+Dialogue: 0,0:59:41.56,0:59:44.32,Default,,0,0,0,,arbitrary objects\Non the OCaml heap.
 Dialogue: 0,0:59:44.32,0:59:47.12,Default,,0,0,0,,Such features allow the FFI\Nto be flexible enough
 Dialogue: 0,0:59:47.12,0:59:50.76,Default,,0,0,0,,to build a wide variety\Nof types and functions.
 Dialogue: 0,0:59:50.76,0:59:53.64,Default,,0,0,0,,However, the FFI\Ndoes not come for free.
 Dialogue: 0,0:59:53.64,0:59:56.72,Default,,0,0,0,,Besides the implicit trampolines\Nthat heap management code
-Dialogue: 0,0:59:56.72,0:59:59.00,Default,,0,0,0,,requires to invoke\NC from Ocaml,
+Dialogue: 0,0:59:56.72,0:59:59.00,Default,,0,0,0,,requires to invoke\NC from OCaml,
 Dialogue: 0,0:59:59.00,1:00:02.48,Default,,0,0,0,,we pay the cost of missed\Noptimization opportunities.
-Dialogue: 0,1:00:02.48,1:00:05.60,Default,,0,0,0,,In the typical build, Ocaml\Nand C meet in assembly
+Dialogue: 0,1:00:02.48,1:00:05.60,Default,,0,0,0,,In the typical build, OCaml\Nand C meet in assembly
 Dialogue: 0,1:00:05.60,1:00:08.64,Default,,0,0,0,,and the linker unfortunately\Nhigh level transformations
 Dialogue: 0,1:00:08.64,1:00:11.00,Default,,0,0,0,,in machine code\Nare far from trivial.
 Dialogue: 0,1:00:11.00,1:00:14.60,Default,,0,0,0,,We need a common form,\Nmore suitable for analysis,
@@ -992,17 +992,17 @@ Dialogue: 0,1:00:17.20,1:00:21.08,Default,,0,0,0,,through register allocation\Nn
 Dialogue: 0,1:00:21.08,1:00:25.40,Default,,0,0,0,,So the goal of Duplo is to\Nameliorate this FFI overhead
 Dialogue: 0,1:00:25.40,1:00:27.76,Default,,0,0,0,,and to lose the overhead,\Nwe want to optimize
 Dialogue: 0,1:00:27.76,1:00:30.52,Default,,0,0,0,,across the language boundary.\NHowever, on one side,
-Dialogue: 0,1:00:30.52,1:00:32.92,Default,,0,0,0,,we have a Ocaml\Nand C on the other.
+Dialogue: 0,1:00:30.52,1:00:32.92,Default,,0,0,0,,we have a OCaml\Nand C on the other.
 Dialogue: 0,1:00:32.92,1:00:35.68,Default,,0,0,0,,Two very different languages\Nwith different memory models
 Dialogue: 0,1:00:35.68,1:00:39.12,Default,,0,0,0,,and different run times.\NIn order to apply
 Dialogue: 0,1:00:39.12,1:00:41.16,Default,,0,0,0,,any optimizations,\Nwe need to first find
 Dialogue: 0,1:00:41.16,1:00:43.16,Default,,0,0,0,,a common denominator\Ncapable of capturing
-Dialogue: 0,1:00:43.16,1:00:46.48,Default,,0,0,0,,the semantics of both\NC and Ocaml.
+Dialogue: 0,1:00:43.16,1:00:46.48,Default,,0,0,0,,the semantics of both\NC and OCaml.
 Dialogue: 0,1:00:46.48,1:00:48.44,Default,,0,0,0,,Duplo achieves this\Nwith representation,
 Dialogue: 0,1:00:48.44,1:00:52.20,Default,,0,0,0,,we call LLIR, low level\Nintermediate representation.
 Dialogue: 0,1:00:52.20,1:00:54.40,Default,,0,0,0,,The framework provides\Na custom version
-Dialogue: 0,1:00:54.40,1:00:57.52,Default,,0,0,0,,of (INAUDIBLE) to LLIR\Na custom version
-Dialogue: 0,1:00:57.52,1:01:00.64,Default,,0,0,0,,of the Ocaml compiler\Nto lower Ocaml to LLIR
+Dialogue: 0,1:00:54.40,1:00:57.52,Default,,0,0,0,,of Clang to LLIR\Na custom version
+Dialogue: 0,1:00:57.52,1:01:00.64,Default,,0,0,0,,of the OCaml compiler\Nto lower OCaml to LLIR
 Dialogue: 0,1:01:00.64,1:01:03.16,Default,,0,0,0,,and an entire tool chain\Nturning LLIR modules
 Dialogue: 0,1:01:03.16,1:01:06.56,Default,,0,0,0,,into a single module containing\Nwhole program information.
 Dialogue: 0,1:01:06.56,1:01:09.52,Default,,0,0,0,,And finally an optimizer,\Nwhich we call LLIR opt
@@ -1016,7 +1016,7 @@ Dialogue: 0,1:01:27.40,1:01:30.68,Default,,0,0,0,,even though it is not LLVM IR\
 Dialogue: 0,1:01:30.68,1:01:34.52,Default,,0,0,0,,in C++ is almost\Nidentical to LLVM IR.
 Dialogue: 0,1:01:34.52,1:01:37.64,Default,,0,0,0,,Mirroring several useful methods\Nand we're using support libraries,
 Dialogue: 0,1:01:37.64,1:01:39.76,Default,,0,0,0,,including valuable functions\Nand iterators
-Dialogue: 0,1:01:39.76,1:01:43.16,Default,,0,0,0,,such as dominator reconstruction.\NAnd (INAUDIBLE) traversals.
+Dialogue: 0,1:01:39.76,1:01:43.16,Default,,0,0,0,,such as dominator reconstruction\Nand graph traversals.
 Dialogue: 0,1:01:43.16,1:01:45.48,Default,,0,0,0,,We find a cool style\Nof our transformations
 Dialogue: 0,1:01:45.48,1:01:48.00,Default,,0,0,0,,to be quite similar\Nto that of LLVM.
 Dialogue: 0,1:01:48.00,1:01:50.68,Default,,0,0,0,,And this familiarity\Nis highly valuable.
@@ -1024,11 +1024,11 @@ Dialogue: 0,1:01:50.68,1:01:54.84,Default,,0,0,0,,Despite some similarities LLVM
 Dialogue: 0,1:01:54.84,1:01:58.52,Default,,0,0,0,,It is less abstract\Nand a lot closer to hardware.
 Dialogue: 0,1:01:59.40,1:02:01.80,Default,,0,0,0,,Why is LLIR low level?
 Dialogue: 0,1:02:01.80,1:02:04.00,Default,,0,0,0,,This choice is almost\Nentirely constrained
-Dialogue: 0,1:02:04.00,1:02:06.24,Default,,0,0,0,,by the Ocaml compiler\Nand the intermediate
+Dialogue: 0,1:02:04.00,1:02:06.24,Default,,0,0,0,,by the OCaml compiler\Nand the intermediate
 Dialogue: 0,1:02:06.24,1:02:09.36,Default,,0,0,0,,representations found in clang.\NOcaml first compiles
 Dialogue: 0,1:02:09.36,1:02:10.88,Default,,0,0,0,,to Lambda form\Nwith closures,
 Dialogue: 0,1:02:10.88,1:02:13.32,Default,,0,0,0,,which have no direct\Nequivalent in LLVM.
-Dialogue: 0,1:02:13.32,1:02:16.92,Default,,0,0,0,,Requires to step one level down\Nin the Ocaml compiler.
+Dialogue: 0,1:02:13.32,1:02:16.92,Default,,0,0,0,,Requires to step one level down\Nin the OCaml compiler.
 Dialogue: 0,1:02:16.92,1:02:19.28,Default,,0,0,0,,The next step is CMM,\Nwhich still has
 Dialogue: 0,1:02:19.28,1:02:20.92,Default,,0,0,0,,some high level features.\NSo we need to go
 Dialogue: 0,1:02:20.92,1:02:23.56,Default,,0,0,0,,down another level.\NWe are left with building
@@ -1040,7 +1040,7 @@ Dialogue: 0,1:02:33.52,1:02:38.52,Default,,0,0,0,,Conveniently, we defined LLIR\
 Dialogue: 0,1:02:38.52,1:02:41.64,Default,,0,0,0,,We lower LLVM IR\Nto LLIR to the target
 Dialogue: 0,1:02:41.64,1:02:44.04,Default,,0,0,0,,specific back end of LLVM\Npassing through
 Dialogue: 0,1:02:44.04,1:02:47.56,Default,,0,0,0,,selection DAG and LLIR\Nspecific machine IR.
-Dialogue: 0,1:02:47.56,1:02:49.96,Default,,0,0,0,,On the Ocaml side.\NWe generate LLIR
+Dialogue: 0,1:02:47.56,1:02:49.96,Default,,0,0,0,,On the OCaml side.\NWe generate LLIR
 Dialogue: 0,1:02:49.96,1:02:52.64,Default,,0,0,0,,from linear as the mapping\Nis almost one to one.
 Dialogue: 0,1:02:52.64,1:02:54.36,Default,,0,0,0,,We are essentially\Ncross-compiling
 Dialogue: 0,1:02:54.36,1:02:57.80,Default,,0,0,0,,to a new target\Nin both compilers.
@@ -1048,14 +1048,14 @@ Dialogue: 0,1:02:57.80,1:03:01.68,Default,,0,0,0,,Getting to LLIR\Nis only the s
 Dialogue: 0,1:03:01.68,1:03:04.00,Default,,0,0,0,,We also need to generate\Nmachine code from LLIR.
 Dialogue: 0,1:03:04.00,1:03:06.52,Default,,0,0,0,,And this step is not trivial.\NCode generators
 Dialogue: 0,1:03:06.52,1:03:09.24,Default,,0,0,0,,tend to be complex\Npieces of code
-Dialogue: 0,1:03:09.24,1:03:11.64,Default,,0,0,0,,and Ocaml has run time\Nand a garbage collector
+Dialogue: 0,1:03:09.24,1:03:11.64,Default,,0,0,0,,and OCaml has run time\Nand a garbage collector
 Dialogue: 0,1:03:11.64,1:03:13.76,Default,,0,0,0,,that we do not wish\Nto alter that imposes
 Dialogue: 0,1:03:13.76,1:03:16.44,Default,,0,0,0,,further constraints.\NSince our tool chain
 Dialogue: 0,1:03:16.44,1:03:18.52,Default,,0,0,0,,already includes clang\NWe decided to use
 Dialogue: 0,1:03:18.52,1:03:21.04,Default,,0,0,0,,the LLVM code generator\Nfrom its selection diagram
 Dialogue: 0,1:03:21.04,1:03:22.52,Default,,0,0,0,,presentation onwards.
 Dialogue: 0,1:03:22.52,1:03:24.36,Default,,0,0,0,,We have added\Ncustom instructions
-Dialogue: 0,1:03:24.36,1:03:27.32,Default,,0,0,0,,required by the Ocaml GC\Nwe're using the entirety
+Dialogue: 0,1:03:24.36,1:03:27.32,Default,,0,0,0,,required by the OCaml GC\Nwe're using the entirety
 Dialogue: 0,1:03:27.32,1:03:30.52,Default,,0,0,0,,of the target-specific\Nmachine IR pipeline.
 Dialogue: 0,1:03:31.08,1:03:34.16,Default,,0,0,0,,Since we cross compile C to LLIR,\Nwe have a mapping
 Dialogue: 0,1:03:34.16,1:03:37.36,Default,,0,0,0,,from a selection DAG to LLIR,\Nin our back end,
@@ -1087,16 +1087,16 @@ Dialogue: 0,1:04:48.92,1:04:50.56,Default,,0,0,0,,a shadow stack\Nfor root point
 Dialogue: 0,1:04:50.56,1:04:52.92,Default,,0,0,0,,This aspect is crucial\Nfor performance
 Dialogue: 0,1:04:52.92,1:04:55.72,Default,,0,0,0,,while LLVM offers some support\Nfor garbage collectors.
 Dialogue: 0,1:04:55.72,1:04:58.08,Default,,0,0,0,,It does not get\Na specific to the needs
-Dialogue: 0,1:04:58.08,1:05:01.16,Default,,0,0,0,,of Ocaml. Through Duplo\Nwe made significant progress though.
+Dialogue: 0,1:04:58.08,1:05:01.16,Default,,0,0,0,,of OCaml. Through Duplo\Nwe made significant progress though.
 Dialogue: 0,1:05:01.16,1:05:03.16,Default,,0,0,0,,We have added\Nthe required instruction
 Dialogue: 0,1:05:03.16,1:05:06.68,Default,,0,0,0,,to a single portion\Nof the target specific pipeline
 Dialogue: 0,1:05:06.68,1:05:09.12,Default,,0,0,0,,in order to handle\Nthe frame tables used by the,
-Dialogue: 0,1:05:09.12,1:05:13.28,Default,,0,0,0,,the default Ocaml\Ngarbage collector and run time.
+Dialogue: 0,1:05:09.12,1:05:13.28,Default,,0,0,0,,the default OCaml\Ngarbage collector and run time.
 Dialogue: 0,1:05:13.28,1:05:16.48,Default,,0,0,0,,However, to achieve\Nthe same ideal at the LLVM IR level,
 Dialogue: 0,1:05:16.48,1:05:19.72,Default,,0,0,0,,extensive changes\Nare required.
 Dialogue: 0,1:05:21.84,1:05:24.72,Default,,0,0,0,,To illustrate LLIR,\Nwe can look at the simple methods
 Dialogue: 0,1:05:24.72,1:05:26.92,Default,,0,0,0,,in LLIR form,\Nwhich confused the magnitude
-Dialogue: 0,1:05:26.92,1:05:30.24,Default,,0,0,0,,of a vector allocated\Non your Ocaml heap.
+Dialogue: 0,1:05:26.92,1:05:30.24,Default,,0,0,0,,of a vector allocated\Non your OCaml heap.
 Dialogue: 0,1:05:30.24,1:05:32.64,Default,,0,0,0,,It reads an argument,\Na pointer to a pair
 Dialogue: 0,1:05:32.64,1:05:34.92,Default,,0,0,0,,using an arg instruction.\NIndividual elements
 Dialogue: 0,1:05:34.92,1:05:37.52,Default,,0,0,0,,are loaded using LD\Nfrom offsets computed
@@ -1104,7 +1104,7 @@ Dialogue: 0,1:05:37.52,1:05:40.92,Default,,0,0,0,,using basic pointer arithmetic
 Dialogue: 0,1:05:40.92,1:05:44.32,Default,,0,0,0,,using the multiply instruction,\Nare passed on to the sqrt function
 Dialogue: 0,1:05:44.32,1:05:46.00,Default,,0,0,0,,before being boxed\Ninto a heap allocated.
 Dialogue: 0,1:05:46.64,1:05:49.00,Default,,0,0,0,,block, we can\Nnotice the annotations,
-Dialogue: 0,1:05:49.00,1:05:50.96,Default,,0,0,0,,the Ocaml runtime requires us
+Dialogue: 0,1:05:49.00,1:05:50.96,Default,,0,0,0,,the OCaml runtime requires us
 Dialogue: 0,1:05:50.96,1:05:53.12,Default,,0,0,0,,to identify all heap pointers,
 Dialogue: 0,1:05:53.12,1:05:54.76,Default,,0,0,0,,which we do using @camel_value.
 Dialogue: 0,1:05:54.76,1:05:57.20,Default,,0,0,0,,And emit frame tables\Ndescribing those which are live
@@ -1114,48 +1114,48 @@ Dialogue: 0,1:06:03.16,1:06:04.84,Default,,0,0,0,,Finding a common representatio
 Dialogue: 0,1:06:04.84,1:06:06.80,Default,,0,0,0,,is the only part of the problem.
 Dialogue: 0,1:06:06.80,1:06:10.08,Default,,0,0,0,,In this representation,\Noptimizations,
 Dialogue: 0,1:06:10.08,1:06:13.16,Default,,0,0,0,,opportunities to prefer\Noptimizations should be scarce
-Dialogue: 0,1:06:13.16,1:06:15.52,Default,,0,0,0,,Ocaml should have\Nalready optimized everything
+Dialogue: 0,1:06:13.16,1:06:15.52,Default,,0,0,0,,OCaml should have\Nalready optimized everything
 Dialogue: 0,1:06:15.52,1:06:18.68,Default,,0,0,0,,LLVM should have also\Noptimized everything,
 Dialogue: 0,1:06:18.68,1:06:20.72,Default,,0,0,0,,and we are left with\Nthe nontrivial task
 Dialogue: 0,1:06:20.72,1:06:22.60,Default,,0,0,0,,of identifying optimization\Nopportunities
-Dialogue: 0,1:06:22.60,1:06:24.60,Default,,0,0,0,,that are exposed only when both Ocaml
+Dialogue: 0,1:06:22.60,1:06:24.60,Default,,0,0,0,,that are exposed only when both OCaml
 Dialogue: 0,1:06:24.60,1:06:27.16,Default,,0,0,0,,and C sources are present.
 Dialogue: 0,1:06:27.16,1:06:28.84,Default,,0,0,0,,Naturally, the first step is
 Dialogue: 0,1:06:28.84,1:06:32.00,Default,,0,0,0,,to create optimization\Nopportunities for other steps.
 Dialogue: 0,1:06:32.00,1:06:33.60,Default,,0,0,0,,Inlining achieves this,
 Dialogue: 0,1:06:33.60,1:06:35.44,Default,,0,0,0,,unfortunately, inlining\Nin this context
 Dialogue: 0,1:06:35.44,1:06:39.04,Default,,0,0,0,,is not as simple as copying\Na body into a callee.
-Dialogue: 0,1:06:39.04,1:06:42.04,Default,,0,0,0,,The world is split into two\Nrealms: Ocaml and C,
+Dialogue: 0,1:06:39.04,1:06:42.04,Default,,0,0,0,,The world is split into two\Nrealms: OCaml and C,
 Dialogue: 0,1:06:42.04,1:06:43.84,Default,,0,0,0,,the two communicate through a trampoline
 Dialogue: 0,1:06:43.84,1:06:47.48,Default,,0,0,0,,recording vital information\Nfor the runtime.
-Dialogue: 0,1:06:47.48,1:06:49.48,Default,,0,0,0,,When we inline C into Ocaml,
-Dialogue: 0,1:06:49.48,1:06:51.48,Default,,0,0,0,,we actually create\Na bigger Ocaml function
+Dialogue: 0,1:06:47.48,1:06:49.48,Default,,0,0,0,,When we inline C into OCaml,
+Dialogue: 0,1:06:49.48,1:06:51.48,Default,,0,0,0,,we actually create\Na bigger OCaml function
 Dialogue: 0,1:06:51.48,1:06:53.28,Default,,0,0,0,,and push the trampolines down.
 Dialogue: 0,1:06:53.28,1:06:56.08,Default,,0,0,0,,Even though G initially called\NF without a trampoline,
 Dialogue: 0,1:06:56.08,1:07:00.28,Default,,0,0,0,,after in-lining, it requires\None, each kind of allocation,
-Dialogue: 0,1:07:00.28,1:07:03.12,Default,,0,0,0,,doesn't need one, in Ocaml FF,
+Dialogue: 0,1:07:00.28,1:07:03.12,Default,,0,0,0,,doesn't need one, in OCaml FF,
 Dialogue: 0,1:07:03.12,1:07:04.48,Default,,0,0,0,,we are left with a mess.
-Dialogue: 0,1:07:04.48,1:07:07.08,Default,,0,0,0,,The function now tracks heap\Nroots using both Ocaml values
+Dialogue: 0,1:07:04.48,1:07:07.08,Default,,0,0,0,,The function now tracks heap\Nroots using both OCaml values
 Dialogue: 0,1:07:07.08,1:07:12.08,Default,,0,0,0,,and the specific root measurement\Nmechanism specific to C.
 Dialogue: 0,1:07:12.08,1:07:14.24,Default,,0,0,0,,In the future, we aim to\Naddress this problem
-Dialogue: 0,1:07:14.24,1:07:16.68,Default,,0,0,0,,by moving roots over to\Nthe Ocaml value mechanism.
+Dialogue: 0,1:07:14.24,1:07:16.68,Default,,0,0,0,,by moving roots over to\Nthe OCaml value mechanism.
 Dialogue: 0,1:07:16.68,1:07:18.44,Default,,0,0,0,,This is a great improvement
 Dialogue: 0,1:07:18.44,1:07:21.56,Default,,0,0,0,,since it eliminates the upfront\Ncost of root management,
 Dialogue: 0,1:07:21.56,1:07:24.40,Default,,0,0,0,,that's necessary in C.
 Dialogue: 0,1:07:24.40,1:07:26.40,Default,,0,0,0,,As your global information,\Nin the future,
 Dialogue: 0,1:07:26.40,1:07:28.00,Default,,0,0,0,,we will also build to\Nmove C functions,
-Dialogue: 0,1:07:28.00,1:07:30.28,Default,,0,0,0,,which allocate over\Nto the Ocaml realm.
+Dialogue: 0,1:07:28.00,1:07:30.28,Default,,0,0,0,,which allocate over\Nto the OCaml realm.
 Dialogue: 0,1:07:30.28,1:07:32.60,Default,,0,0,0,,First simplify manual\Nroot management,
-Dialogue: 0,1:07:32.60,1:07:36.08,Default,,0,0,0,,and possibly ending up on\Nusing Ocaml value annotations
+Dialogue: 0,1:07:32.60,1:07:36.08,Default,,0,0,0,,and possibly ending up on\Nusing OCaml value annotations
 Dialogue: 0,1:07:36.08,1:07:38.68,Default,,0,0,0,,to identify roots.
 Dialogue: 0,1:07:38.68,1:07:40.92,Default,,0,0,0,,While you're not there\Nyet, at some point,
 Dialogue: 0,1:07:40.92,1:07:43.12,Default,,0,0,0,,we will be able to not care\Nabout whether our function
-Dialogue: 0,1:07:43.12,1:07:46.28,Default,,0,0,0,,is Ocaml specific or C\Nspecific erasing the boundary
+Dialogue: 0,1:07:43.12,1:07:46.28,Default,,0,0,0,,is OCaml specific or C\Nspecific erasing the boundary
 Dialogue: 0,1:07:46.28,1:07:48.88,Default,,0,0,0,,between the two heaps.
 Dialogue: 0,1:07:48.88,1:07:50.20,Default,,0,0,0,,To illustrate some more problems,
 Dialogue: 0,1:07:50.20,1:07:52.60,Default,,0,0,0,,we consider a function that\Nincrements of double,
 Dialogue: 0,1:07:52.60,1:07:56.08,Default,,0,0,0,,unboxing a value, adding one\Nto it and boxing it back,
-Dialogue: 0,1:07:56.08,1:07:58.56,Default,,0,0,0,,sending it back to the Ocaml heap.
+Dialogue: 0,1:07:56.08,1:07:58.56,Default,,0,0,0,,sending it back to the OCaml heap.
 Dialogue: 0,1:07:58.56,1:07:59.76,Default,,0,0,0,,After in-lining,
 Dialogue: 0,1:07:59.76,1:08:02.64,Default,,0,0,0,,we see that the boxing\NOcaml copy double call
 Dialogue: 0,1:08:02.64,1:08:06.44,Default,,0,0,0,,is now annotated,\Nand it has a trampoline.
@@ -1168,7 +1168,7 @@ Dialogue: 0,1:08:22.92,1:08:25.16,Default,,0,0,0,,to perform even\Na simple tran
 Dialogue: 0,1:08:25.16,1:08:29.12,Default,,0,0,0,,such as constant propagation.
 Dialogue: 0,1:08:29.12,1:08:31.68,Default,,0,0,0,,And the stage we are at in\Nthe pipeline does not help,
 Dialogue: 0,1:08:31.68,1:08:32.84,Default,,0,0,0,,the common ground between C
-Dialogue: 0,1:08:32.84,1:08:34.40,Default,,0,0,0,,and Ocaml memory\Nrepresentations
+Dialogue: 0,1:08:32.84,1:08:34.40,Default,,0,0,0,,and OCaml memory\Nrepresentations
 Dialogue: 0,1:08:34.40,1:08:36.36,Default,,0,0,0,,is not particularly verbose.
 Dialogue: 0,1:08:36.36,1:08:38.72,Default,,0,0,0,,We can work only with the assumption
 Dialogue: 0,1:08:38.72,1:08:40.20,Default,,0,0,0,,that pointers have stored
@@ -1238,7 +1238,7 @@ Dialogue: 0,1:11:19.36,1:11:21.36,Default,,0,0,0,,of transformations we\Nhave im
 Dialogue: 0,1:11:21.36,1:11:23.44,Default,,0,0,0,,the effect is moderate.
 Dialogue: 0,1:11:23.44,1:11:25.08,Default,,0,0,0,,There are not many opportunities
 Dialogue: 0,1:11:25.08,1:11:26.88,Default,,0,0,0,,for cross-language optimization
-Dialogue: 0,1:11:26.88,1:11:29.00,Default,,0,0,0,,as our in-line heuristics\Nand (INAUDIBLE) analysis
+Dialogue: 0,1:11:26.88,1:11:29.00,Default,,0,0,0,,as our inlining heuristics\Nand points-to analyses
 Dialogue: 0,1:11:29.00,1:11:30.44,Default,,0,0,0,,are quite primitive.
 Dialogue: 0,1:11:30.44,1:11:33.36,Default,,0,0,0,,As an example, we currently\Ninline aggressively functions
 Dialogue: 0,1:11:33.36,1:11:35.04,Default,,0,0,0,,which box or\Ndeconstruct arguments
