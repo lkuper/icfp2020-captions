@@ -194,7 +194,7 @@ Dialogue: 0,0:22:46.84,0:22:49.44,Default,,0,0,0,,you can write a polymorphicall
 Dialogue: 0,0:22:49.44,0:22:52.44,Default,,0,0,0,,with the location abstraction\Nover location variable
 Dialogue: 0,0:22:53.16,0:22:56.16,Default,,0,0,0,,and location application\Nas you see in the slide.
 Dialogue: 0,0:22:56.16,0:22:59.20,Default,,0,0,0,,Then you have only to apply\Nto the client location
-Dialogue: 0,0:22:59.20,0:23:00.80,Default,,0,0,0,,to get a client map function. 
+Dialogue: 0,0:22:59.20,0:23:00.80,Default,,0,0,0,,to get a client map function.
 Dialogue: 0,0:23:02.04,0:23:05.12,Default,,0,0,0,,You can also apply to\Nthe server location
 Dialogue: 0,0:23:06.12,0:23:07.56,Default,,0,0,0,,to get a server map function.
 Dialogue: 0,0:23:09.04,0:23:12.16,Default,,0,0,0,,This slide shows the comparison\Namong the RPC calculi
@@ -438,10 +438,10 @@ Dialogue: 0,0:35:42.84,0:35:46.60,Default,,0,0,0,,In reasoning about programs, w
 Dialogue: 0,0:35:46.60,0:35:50.00,Default,,0,0,0,,such as the ones stemming from\Nmathematical properties.
 Dialogue: 0,0:35:50.00,0:35:54.04,Default,,0,0,0,,For instance, the functions f1\Nand f2 can be considered equal,
 Dialogue: 0,0:35:54.04,0:35:57.88,Default,,0,0,0,,since x+x = 2*x.
-Dialogue: 0,0:35:57.88,0:36:00.28,Default,,0,0,0,,Program equivalents gets much harder
+Dialogue: 0,0:35:57.88,0:36:00.28,Default,,0,0,0,,Program equivalence gets much harder
 Dialogue: 0,0:36:00.28,0:36:03.04,Default,,0,0,0,,when we start using\Ncomputational effects.
 Dialogue: 0,0:36:03.04,0:36:04.72,Default,,0,0,0,,For instance, when using print,
-Dialogue: 0,0:36:04.72,0:36:08.48,Default,,0,0,0,,it's not entirely clear why they're\Nprinting the same string twice,
+Dialogue: 0,0:36:04.72,0:36:08.48,Default,,0,0,0,,it's not entirely clear whether\Nprinting the same string twice,
 Dialogue: 0,0:36:08.48,0:36:11.92,Default,,0,0,0,,is the same as printing\Na double string.
 Dialogue: 0,0:36:11.92,0:36:15.00,Default,,0,0,0,,We do not know whether the language\Nadds a new line separator
 Dialogue: 0,0:36:15.00,0:36:16.36,Default,,0,0,0,,at the end of each output,
@@ -486,7 +486,7 @@ Dialogue: 0,0:38:28.00,0:38:32.52,Default,,0,0,0,,if we randomly select one of\N
 Dialogue: 0,0:38:32.52,0:38:35.88,Default,,0,0,0,,that is not a suitable\Nimplementation.
 Dialogue: 0,0:38:35.88,0:38:41.88,Default,,0,0,0,,The main issue here is how\Nexactly to state such a property.
 Dialogue: 0,0:38:41.88,0:38:46.52,Default,,0,0,0,,One way to do that is to use\Nequations. In the original approach,
-Dialogue: 0,0:38:46.52,0:38:50.44,Default,,0,0,0,,the effect handlers, the theory\Nconsisted of an effect signature
+Dialogue: 0,0:38:46.52,0:38:50.44,Default,,0,0,0,,to effect handlers, the theory\Nconsisted of an effect signature
 Dialogue: 0,0:38:50.44,0:38:53.36,Default,,0,0,0,,and equations between operations.
 Dialogue: 0,0:38:53.36,0:38:55.84,Default,,0,0,0,,For instance,\Nassociativity of choice,
 Dialogue: 0,0:38:55.84,0:38:58.28,Default,,0,0,0,,which is what we wanted\Nin the previous example,
@@ -499,25 +499,25 @@ Dialogue: 0,0:39:18.12,0:39:22.92,Default,,0,0,0,,The original approach assumes\
 Dialogue: 0,0:39:22.92,0:39:25.88,Default,,0,0,0,,but this turned out to\Nbe very restricting.
 Dialogue: 0,0:39:25.88,0:39:27.40,Default,,0,0,0,,There are many useful handlers
 Dialogue: 0,0:39:27.40,0:39:30.48,Default,,0,0,0,,that work with entirely\Ndifferent theories, and
-Dialogue: 0,0:39:30.48,0:39:35.88,Default,,0,0,0,,by fixing the global theory,\Nwe are unable to solve them.
+Dialogue: 0,0:39:30.48,0:39:35.88,Default,,0,0,0,,by fixing the global theory,\Nwe are unable to use some of them.
 Dialogue: 0,0:39:35.88,0:39:38.52,Default,,0,0,0,,This is where our work comes in.
 Dialogue: 0,0:39:38.52,0:39:41.28,Default,,0,0,0,,We transition to local theories
 Dialogue: 0,0:39:41.28,0:39:46.28,Default,,0,0,0,,by packing equations into\Ncomputation types instead.
 Dialogue: 0,0:39:47.08,0:39:51.96,Default,,0,0,0,,A computation type now states\Nthe type of return values,
 Dialogue: 0,0:39:51.96,0:39:55.12,Default,,0,0,0,,the names and types of\Noperations that may be called,
 Dialogue: 0,0:39:55.12,0:39:58.04,Default,,0,0,0,,and the equational theory.
-Dialogue: 0,0:39:58.04,0:40:01.84,Default,,0,0,0,,Of this type, all computations\Nare considered equivalent,
+Dialogue: 0,0:39:58.04,0:40:01.84,Default,,0,0,0,,At this type, all computations\Nare considered equivalent,
 Dialogue: 0,0:40:01.84,0:40:05.12,Default,,0,0,0,,modulo the equations ε.
 Dialogue: 0,0:40:05.12,0:40:08.08,Default,,0,0,0,,Let's take a look at\Na small example.
-Dialogue: 0,0:40:08.08,0:40:11.16,Default,,0,0,0,,In this signature, we\Ndefine operation signal
+Dialogue: 0,0:40:08.08,0:40:11.16,Default,,0,0,0,,In this signature, we\Ndefine an operation signal
 Dialogue: 0,0:40:11.16,0:40:14.20,Default,,0,0,0,,that accepts a unit\Nand returns a unit.
 Dialogue: 0,0:40:14.20,0:40:16.48,Default,,0,0,0,,It truly does nothing\Nmore than just signal
 Dialogue: 0,0:40:16.48,0:40:19.36,Default,,0,0,0,,to the handler that it was called.
 Dialogue: 0,0:40:19.36,0:40:23.20,Default,,0,0,0,,And in the effect theory we\Ncan be a bit more expressive.
 Dialogue: 0,0:40:23.20,0:40:26.08,Default,,0,0,0,,The equation states that\Nif we signal twice,
 Dialogue: 0,0:40:26.08,0:40:29.08,Default,,0,0,0,,and then proceed with\Nan arbitrary computation, that
-Dialogue: 0,0:40:29.08,0:40:32.20,Default,,0,0,0,,it's no different than\Nif we signal only once
-Dialogue: 0,0:40:32.20,0:40:34.52,Default,,0,0,0,,and then continue with that.
+Dialogue: 0,0:40:29.08,0:40:32.20,Default,,0,0,0,,is no different than\Nif we signal only once
+Dialogue: 0,0:40:32.20,0:40:34.52,Default,,0,0,0,,and then continue with z.
 Dialogue: 0,0:40:34.52,0:40:37.20,Default,,0,0,0,,Now an example of a handler\Nthat fits the equation
 Dialogue: 0,0:40:37.20,0:40:40.76,Default,,0,0,0,,is one that returns true as\Nsoon as a signal occurs,
 Dialogue: 0,0:40:40.76,0:40:46.00,Default,,0,0,0,,and false if the computation is\Nevaluated without a single signal.
@@ -551,7 +551,7 @@ Dialogue: 0,0:42:18.36,0:42:22.96,Default,,0,0,0,,and ε′ on the right states\
 Dialogue: 0,0:42:23.68,0:42:27.12,Default,,0,0,0,,We have to check that\Nfor every equation in ε,
 Dialogue: 0,0:42:27.12,0:42:32.24,Default,,0,0,0,,if we handle both sides, we end\Nup with equivalent computations.
 Dialogue: 0,0:42:32.24,0:42:36.28,Default,,0,0,0,,The equivalence is considered\Nin the theory of ε′,
-Dialogue: 0,0:42:36.28,0:42:42.56,Default,,0,0,0,,so we may be aided by\Nthe equations that are act in ε′.
+Dialogue: 0,0:42:36.28,0:42:42.56,Default,,0,0,0,,so we may be aided by\Nthe equations that are packed in ε′.
 Dialogue: 0,0:42:42.56,0:42:45.16,Default,,0,0,0,,Handler correctness is undecidable.
 Dialogue: 0,0:42:45.16,0:42:48.40,Default,,0,0,0,,So the proofs are\Nconstructed in a logic
 Dialogue: 0,0:42:48.40,0:42:52.20,Default,,0,0,0,,that is coupled with\Nthe type system.
@@ -567,14 +567,14 @@ Dialogue: 0,0:43:27.88,0:43:30.64,Default,,0,0,0,,Or If we use local effect theo
 Dialogue: 0,0:43:30.64,0:43:33.36,Default,,0,0,0,,the changes to the language\Nare rather minor,
 Dialogue: 0,0:43:33.36,0:43:36.92,Default,,0,0,0,,and the resulting system\Nis also easy to use.
 Dialogue: 0,0:43:36.92,0:43:40.08,Default,,0,0,0,,We do not need to switch to\Ndenotational semantics,
-Dialogue: 0,0:43:40.08,0:43:45.08,Default,,0,0,0,,or to a full-fledged\Ndependently type checking.
+Dialogue: 0,0:43:40.08,0:43:45.08,Default,,0,0,0,,or to a full-fledged\Ndependently typed setting.
 Dialogue: 0,0:43:45.76,0:43:50.16,Default,,0,0,0,,The drawback is clearly the need for\Nuser input when typing handlers,
 Dialogue: 0,0:43:50.16,0:43:53.76,Default,,0,0,0,,but handler definitions are\Nthe only point where this is required,
 Dialogue: 0,0:43:53.76,0:43:58.32,Default,,0,0,0,,so most of the work\Nis still automated.
 Dialogue: 0,0:43:58.32,0:43:59.64,Default,,0,0,0,,Since the paper was published,
 Dialogue: 0,0:43:59.64,0:44:03.16,Default,,0,0,0,,we have done some\Nconsiderable advancements.
 Dialogue: 0,0:44:03.16,0:44:05.92,Default,,0,0,0,,We have extended\Nthe language with recursion
-Dialogue: 0,0:44:05.92,0:44:09.72,Default,,0,0,0,,and some basic data types,\Nproducts or lists.
+Dialogue: 0,0:44:05.92,0:44:09.72,Default,,0,0,0,,and some basic data types,\Nsuch as products or lists.
 Dialogue: 0,0:44:09.72,0:44:14.16,Default,,0,0,0,,We also included the non-trivial\Nextension of subtyping,
 Dialogue: 0,0:44:14.16,0:44:18.04,Default,,0,0,0,,which greatly improves\Nthe usefulness of the language.
 Dialogue: 0,0:44:18.04,0:44:22.48,Default,,0,0,0,,All of this has been formalized\Nin the Coq proof assistant,
@@ -582,7 +582,7 @@ Dialogue: 0,0:44:22.48,0:44:25.12,Default,,0,0,0,,alongside some smaller example
 Dialogue: 0,0:44:25.12,0:44:26.76,Default,,0,0,0,,And we also constructed a
 Dialogue: 0,0:44:26.76,0:44:29.24,Default,,0,0,0,,sound and adequate\Ndenotational semantics,
 Dialogue: 0,0:44:29.24,0:44:33.92,Default,,0,0,0,,which takes into account all\Nthe aforementioned extensions.
-Dialogue: 0,0:44:33.92,0:44:38.64,Default,,0,0,0,,The approach was also implemented\Non top of the f framework.
+Dialogue: 0,0:44:33.92,0:44:38.64,Default,,0,0,0,,The approach was also implemented\Non top of the Eff framework.
 Dialogue: 0,0:44:38.64,0:44:42.12,Default,,0,0,0,,We decided to use\Na bi-directional type inference
 Dialogue: 0,0:44:42.12,0:44:46.28,Default,,0,0,0,,as it's more suited for\Nworking with effect theories.
 Dialogue: 0,0:44:46.28,0:44:49.76,Default,,0,0,0,,But the system does not\Nautomate correctness proofs,
@@ -595,8 +595,8 @@ Dialogue: 0,0:45:03.12,0:45:08.80,Default,,0,0,0,,The important extension that h
 Dialogue: 0,0:45:08.80,0:45:12.32,Default,,0,0,0,,We wish to have types that are\Npolymorphic in the value component,
 Dialogue: 0,0:45:12.32,0:45:16.84,Default,,0,0,0,,as well as polymorphic in\Nthe signature and equations.
 Dialogue: 0,0:45:16.84,0:45:18.52,Default,,0,0,0,,The extension could\Nbe far from trivial
-Dialogue: 0,0:45:18.52,0:45:21.96,Default,,0,0,0,,but it's ultimately important\Nif you want the language,
-Dialogue: 0,0:45:21.96,0:45:24.36,Default,,0,0,0,,it can be used in practice.
+Dialogue: 0,0:45:18.52,0:45:21.96,Default,,0,0,0,,but it's ultimately important\Nif you want a language,
+Dialogue: 0,0:45:21.96,0:45:24.36,Default,,0,0,0,,that can be used in practice.
 Dialogue: 0,0:45:24.36,0:45:27.60,Default,,0,0,0,,Another key aspect that we're\Nnot yet entirely satisfied with,
 Dialogue: 0,0:45:27.60,0:45:30.64,Default,,0,0,0,,is proving handler correctness.
 Dialogue: 0,0:45:30.64,0:45:34.44,Default,,0,0,0,,Automation would be great,\Nbut even just easing the burden
