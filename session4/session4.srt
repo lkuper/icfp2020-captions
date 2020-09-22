@@ -3166,43 +3166,43 @@ Our next talk
 
 666
 00:43:31,920 --> 00:43:34,280
-by Glenn Mevel,
+by Glen Mével,
  who will be presenting
 
 667
 00:43:34,280 --> 00:43:38,600
 a concurrent separation logic
- for multi-core OCaml.
+ for Multicore OCaml.
 
 668
 00:43:39,800 --> 00:43:42,000
-GLEN MEVEL: So welcome to this talk,
- I'm Glen Mevel, with
+GLEN MÉVEL: Welcome to this talk,
+ I'm Glen Mével, and with
 
 669
 00:43:42,000 --> 00:43:43,480
 Jacques-Henri Jourdan
- and Francois Pottier,
+ and François Pottier,
 
 670
 00:43:43,480 --> 00:43:46,320
 we've been working on
- a concurrent separation logic,
+ a concurrent separation logic
 
 671
 00:43:46,320 --> 00:43:48,720
-Multicore OCaml
- What does that mean
+for Multicore OCaml
+ What does that mean?
 
 672
 00:43:48,720 --> 00:43:51,840
-our aim is to verify,
+Our aim is to verify,
  fine-grained concurrent programs
 
 673
 00:43:51,840 --> 00:43:53,240
 in the setting
- of the multicore
+ of the Multicore
 
 674
 00:43:53,240 --> 00:43:57,160
@@ -3212,7 +3212,7 @@ OCaml memory model,
 675
 00:43:57,160 --> 00:43:59,520
 In this talk,
- I present a concurrence
+ I present a concurrent
 
 676
 00:43:59,520 --> 00:44:02,440
@@ -3221,12 +3221,12 @@ separation logic
 
 677
 00:44:04,080 --> 00:44:06,600
-So if you (INAUDIBLE)
- Multicore Ocaml
+So a few words about
+ Multicore Ocaml:
 
 678
 00:44:06,600 --> 00:44:08,880
-as the name suggests
+as the name suggests,
  it is an extension
 
 679
@@ -3237,22 +3237,22 @@ of the OCaml
 680
 00:44:10,440 --> 00:44:13,120
 with support
- for Multicore programming,
+ for multicore programming.
 
 681
 00:44:13,120 --> 00:44:16,320
-it comes with a weak memory model
+It comes with a weak memory model
  which has been formalized
 
 682
 00:44:16,320 --> 00:44:19,520
-in the paper PLDI '18,
+in a paper at PLDI '18,
  and it features
 
 683
 00:44:19,520 --> 00:44:24,520
 two flavors of locations
- which are atomic and non-atomic.
+ which are dubbed "atomic" and "non-atomic".
 
 684
 00:44:25,120 --> 00:44:27,520
@@ -3284,8 +3284,8 @@ Essentially, the challenge
 
 690
 00:44:40,360 --> 00:44:43,280
-the weak memory
- and sequential consistency,
+the weak memory.
+ Under sequential consistency,
 
 691
 00:44:43,280 --> 00:44:46,080
@@ -3294,8 +3294,8 @@ traditional concurrent
 
 692
 00:44:46,080 --> 00:44:49,520
-gives you a (INAUDIBLE),
- x points to V
+gives you a points-to assertion,
+ "x points to V"
 
 693
 00:44:49,520 --> 00:44:51,920
@@ -3304,23 +3304,23 @@ which expresses your
 
 694
 00:44:51,920 --> 00:44:55,120
-of the memory location X
+of the memory location x
  and which also
 
 695
 00:44:55,120 --> 00:44:58,440
 says which value
- we started with.
+ is stored in x.
 
 696
 00:44:58,440 --> 00:45:01,880
 Then you have the usual
- Hoare style resolving rules.
+ Hoare-style reasoning rules.
 
 697
 00:45:01,880 --> 00:45:04,880
-And this assertion
- gives you ownership of X
+This assertion
+ gives you ownership of x
 
 698
 00:45:04,880 --> 00:45:06,120
@@ -3330,26 +3330,26 @@ but you may
 699
 00:45:06,120 --> 00:45:08,680
 this ownership
- and goals, right..
+ among all threads.
 
 700
 00:45:08,680 --> 00:45:12,120
-To do so, And use assertion,
- is to put the assertion,
+To do so, an usual solution
+ is to put the assertion
 
 701
 00:45:12,120 --> 00:45:14,280
-in an invariant,
+in an invariant.
 
 702
 00:45:14,280 --> 00:45:16,880
-intuitively an invariant
+Intuitively an invariant
  holds at all times,
 
 703
 00:45:16,880 --> 00:45:19,520
-and it contains
- contents can be accessed equally
+and its contents
+ can be accessed equally
 
 704
 00:45:19,520 --> 00:45:21,320
@@ -3358,27 +3358,27 @@ by all threads.
 705
 00:45:21,840 --> 00:45:24,640
 Here, we can put
- X points to something
+ "x points to something"
 
 706
 00:45:24,640 --> 00:45:26,920
 in an invariant
- which we denote
+ (which we denote
 
 707
 00:45:26,920 --> 00:45:29,960
-by boxing the assertion,
+by boxing the assertion),
  then any thread
 
 708
 00:45:29,960 --> 00:45:35,360
-that can access X as long as
- it presents the invariants.
+can access x as long as
+ it preserves the invariant.
 
 709
 00:45:35,360 --> 00:45:38,680
 Now, what breaks
- in the weak memory model
+ under a weak memory model
 
 710
 00:45:38,680 --> 00:45:41,240
@@ -3418,7 +3418,7 @@ subjective assertions.
 717
 00:46:00,640 --> 00:46:03,320
 invariants hold
- equality for all threads,
+ equally for all threads,
 
 718
 00:46:03,320 --> 00:46:05,960
@@ -3433,32 +3433,32 @@ where by objective
 720
 00:46:11,080 --> 00:46:14,200
 Then the challenge
- is to give a program logic,
+ is to keep a program logic
 
 721
 00:46:14,200 --> 00:46:16,880
-which felt simple
+which feels simple
  and natural enough
 
 722
 00:46:16,880 --> 00:46:18,960
-that at the same time
+but at the same time
  is able to deal
 
 723
 00:46:18,960 --> 00:46:21,160
-with subjectivity
- on the laws
+with subjectivity,
+ and allows
 
 724
 00:46:21,160 --> 00:46:24,320
-subject assertions
- to be shared, between threads.
+subjective assertions
+ to be shared between threads.
 
 725
 00:46:26,800 --> 00:46:30,040
 I just spoke about the view
- of a thread on how it is
+ of a thread and how it is
 
 726
 00:46:30,040 --> 00:46:33,080
@@ -3468,17 +3468,17 @@ central to the challenge
 727
 00:46:33,080 --> 00:46:34,960
 but I haven't defined
- this concept yet.
+ this concept yet,
 
 728
 00:46:34,960 --> 00:46:38,360
-So let me do that now,
- because of weak memory
+so let me do that now.
+ Because of weak memory
 
 729
 00:46:38,360 --> 00:46:41,200
-each thread only know
- the subset of all writes
+each thread only knows
+ a subset of all writes
 
 730
 00:46:41,200 --> 00:46:44,000
@@ -3487,18 +3487,18 @@ that have happened
 
 731
 00:46:44,000 --> 00:46:48,120
-This affects how the threads
- how the thread reads
+This affects how
+ a thread reads
 
 732
 00:46:48,120 --> 00:46:50,440
-or writes the memory,
- for example
+and writes the memory.
+ For example,
 
 733
 00:46:50,440 --> 00:46:53,120
 once it has learned
- about the writes,
+ about a write,
 
 734
 00:46:53,120 --> 00:46:56,440
@@ -3512,32 +3512,32 @@ This is an example
 
 736
 00:46:58,360 --> 00:47:03,880
-memory model would say U,
- and this subset of write events,
+memory model would say you.
+ And this subset of write events,
 
 737
 00:47:03,880 --> 00:47:06,120
-we will call it a view,
- so the view of a thread
+we will call it a view.
+ So the view of a thread
 
 738
 00:47:06,120 --> 00:47:09,440
-of the view of a thread
- is the set of
+is the set of
+ write events it knows about.
 
 739
 00:47:09,440 --> 00:47:12,480
-of the write events
- it knows about.
+is the set of
+ write events it knows about.
 
 740
 00:47:13,360 --> 00:47:17,040
 Now, we want to manipulate
- these views from logic.
+ these views from the logic.
 
 741
 00:47:17,040 --> 00:47:20,800
-For that, we have new
+For that, we add new
  kinds of assertions.
 
 742
@@ -3547,23 +3547,23 @@ The first new kind
 
 743
 00:47:22,880 --> 00:47:25,880
-this upper view where
- U is a view,
+this "up-arrow U"
+ where U is a view,
 
 744
 00:47:25,880 --> 00:47:28,960
 we pronounce it
- as we have seen U,
+ as "we have seen U",
 
 745
 00:47:28,960 --> 00:47:30,840
-but it means that
+and it means that
  the current thread
 
 746
 00:47:30,840 --> 00:47:32,960
-knows all writes
- and U is an assertion
+knows all writes in U.
+ So it is an assertion
 
 747
 00:47:32,960 --> 00:47:36,440
@@ -3572,18 +3572,18 @@ about the current view
 
 748
 00:47:37,000 --> 00:47:39,800
-And the second
- new session is P at U,
+The second
+ new assertion is "P at U",
 
 749
 00:47:39,800 --> 00:47:42,080
-were P
- in an assertion,
+where P
+ is an assertion
 
 750
 00:47:42,080 --> 00:47:46,040
-and U is a view
- it means that P holds in the eyes
+and U is a view.
+ It means that P holds in the eyes
 
 751
 00:47:46,040 --> 00:47:48,920
@@ -3607,12 +3607,12 @@ Then it requires the current view
 
 755
 00:47:58,200 --> 00:48:01,800
-(INAUDIBLE) subjective.
+So asserting P is subjective.
 
 756
 00:48:01,800 --> 00:48:04,240
 But instead we're going to
- (INAUDIBLE)
+ say that whatever
 
 757
 00:48:04,240 --> 00:48:06,760
@@ -3626,7 +3626,7 @@ that write event,
 
 759
 00:48:10,160 --> 00:48:14,240
-And I say these, we do not
+And by saying this, we do not
  depend anymore on the current view.
 
 760
@@ -3636,18 +3636,18 @@ So saying this is objective,
 
 761
 00:48:18,320 --> 00:48:21,240
-maybe subjective.
+may be subjective.
  And that's what
 
 762
 00:48:21,240 --> 00:48:26,240
-the @U means when
- U contains the given write events.
+"P at U" means when
+ U contains the given write event.
 
 763
 00:48:28,840 --> 00:48:30,840
 So we can make
- a subjective assertions objective
+ a subjective assertion objective
 
 764
 00:48:30,840 --> 00:48:35,840
@@ -3656,38 +3656,37 @@ by specifying the view
 
 765
 00:48:37,560 --> 00:48:39,720
-On the way
- U is interesting
+And why is it
+ interesting?
 
 766
 00:48:39,720 --> 00:48:43,080
-because these new
- assertions, complementary,
+Because these new
+ assertions are complementary.
 
 767
 00:48:43,080 --> 00:48:47,080
-or precisely in a logic
- an assertion P
+More precisely, in our logic,
+ any assertion P
 
 768
 00:48:47,080 --> 00:48:49,160
 is equivalent
- to an objective,
 
 769
 00:48:49,160 --> 00:48:51,960
-assertion, any assertion
- is equivalent
+to an objective assertion
+ of the form "P at U",
 
 770
 00:48:51,960 --> 00:48:55,320
 to an objective assertion
- of the form P at U
+ of the form "P at U",
 
 771
 00:48:55,320 --> 00:48:58,480
 and a assertion of the form,
- upper U,
+ "up-arrow U",
 
 772
 00:48:58,480 --> 00:49:02,640
@@ -3696,32 +3695,31 @@ for some view U.
 
 773
 00:49:02,640 --> 00:49:06,320
-that your assertions
- of the form upper U.
+that view assertions
+ of the form "up-arrow U"
 
 774
 00:49:06,320 --> 00:49:08,760
-Capture all the
- subjectivity of the,
+capture all the
+ subjectivity of the
 
 775
 00:49:08,760 --> 00:49:12,240
-all the subjectivity
- of the weak memory.
+weak memory.
 
 776
 00:49:12,760 --> 00:49:16,960
-And this decomposition, will allow us
- to share subjective assertions,
+And this decomposition will allow us
+ to share subjective assertions
 
 777
 00:49:16,960 --> 00:49:19,320
-but in Threads, by using
+between threads, by using
  a different mechanism for each part.
 
 778
 00:49:22,440 --> 00:49:24,480
-The first part P@U,
+The first part, "P at U",
 
 779
 00:49:24,480 --> 00:49:25,320
@@ -3729,24 +3727,24 @@ is objective
 
 780
 00:49:25,320 --> 00:49:27,720
-so it can be shared by an invariant,
+so it can be shared via an invariant,
 
 781
 00:49:27,720 --> 00:49:29,440
-via an invariant,
+so it can be shared via an invariant,
 
 782
 00:49:29,440 --> 00:49:33,600
 just as in usual
- concurrent separation logic.
+ concurrent separation logics.
 
 783
 00:49:33,600 --> 00:49:35,080
-Regarding the second parts,
+Regarding the second part,
 
 784
 00:49:35,080 --> 00:49:37,080
-sharing upper U,
+sharing "up-arrow U"
 
 785
 00:49:37,080 --> 00:49:38,960
@@ -3754,7 +3752,7 @@ means exchanging information
 
 786
 00:49:38,960 --> 00:49:41,200
-about write events into threads.
+about write events between threads.
 
 787
 00:49:41,200 --> 00:49:42,040
@@ -3767,7 +3765,7 @@ it means synchronizing.
 789
 00:49:44,320 --> 00:49:48,200
 So we will rely on some form
- of thread synchronization,
+ of thread synchronization
 
 790
 00:49:48,200 --> 00:49:50,720
@@ -3784,7 +3782,7 @@ Now I show you what is
 
 793
 00:49:59,560 --> 00:50:01,440
-to reason about program and memory,
+to reason about programs and memory,
 
 794
 00:50:01,440 --> 00:50:03,200
@@ -3800,16 +3798,16 @@ For atomic locations,
 
 797
 00:50:07,880 --> 00:50:10,520
-we have a neutral looking
+we have an usual-looking
  points-to assertion,
 
 798
 00:50:11,920 --> 00:50:13,680
-atomic x points to v,
+"atomic x points to v",
 
 799
 00:50:13,680 --> 00:50:15,160
-which means that (INAUDIBLE)
+which means that we own the
 
 800
 00:50:15,160 --> 00:50:17,080
@@ -3825,11 +3823,12 @@ We are able to say such a thing,
 
 803
 00:50:22,680 --> 00:50:25,680
-because atomic locations behave
+because atomic locations
+ in Multicore OCaml
 
 804
 00:50:25,680 --> 00:50:28,040
-in a sequentially consistent way.
+behave in a sequentially consistent way.
 
 805
 00:50:28,040 --> 00:50:29,120
@@ -3845,19 +3844,19 @@ In particular,
 
 808
 00:50:34,840 --> 00:50:36,520
-this assertion is subjective,
+this assertion is objective,
 
 809
 00:50:37,480 --> 00:50:39,320
-they should come as no surprise,
+then it should come as no surprise
 
 810
 00:50:39,320 --> 00:50:42,000
-that atomic x's are by the usual,
+that atomic accesses obey the usual
 
 811
 00:50:42,000 --> 00:50:45,360
-Hoare triples both reads and writes.
+Hoare triples, both reads and writes.
 
 812
 00:50:48,280 --> 00:50:49,760
@@ -3869,16 +3868,16 @@ is for non-atomic locations.
 
 814
 00:50:51,800 --> 00:50:53,520
-The non-atomic locations of particular
+The non-atomic locations of Multicore
 
 815
 00:50:53,520 --> 00:50:55,960
-OCaml have relaxed behavior.
+OCaml have a relaxed behavior.
 
 816
 00:50:57,040 --> 00:51:00,280
-In a logic we still have
- an assertion x points to v,
+In our logic we still have
+ an assertion "x points to v",
 
 817
 00:51:00,280 --> 00:51:02,440
@@ -3886,11 +3885,11 @@ with its meaning differ slightly.
 
 818
 00:51:02,440 --> 00:51:04,200
-It still asserts the (INAUDIBLE) of x,
+It still asserts the ownership of x,
 
 819
 00:51:04,200 --> 00:51:05,800
-but instead of saying that,
+but instead of saying that
 
 820
 00:51:06,640 --> 00:51:08,160
@@ -3899,7 +3898,7 @@ the value of x is v,
 821
 00:51:08,160 --> 00:51:11,360
 it says that we have seen
- the (INAUDIBLE) to x,
+ the latest write to x,
 
 822
 00:51:11,360 --> 00:51:13,040
@@ -3930,7 +3929,7 @@ about the same writes to x.
 828
 00:51:28,840 --> 00:51:31,720
 What is really nice with
- this points to assertion ,
+ this points-to assertion,
 
 829
 00:51:31,720 --> 00:51:34,240
@@ -3938,7 +3937,7 @@ is that it also obeys the standard rules.
 
 830
 00:51:34,240 --> 00:51:37,920
-So we have a simple looking assertion,
+So we have a simple looking assertion
 
 831
 00:51:37,920 --> 00:51:39,720
@@ -3946,16 +3945,17 @@ that behaves in a natural way,
 
 832
 00:51:39,720 --> 00:51:42,760
-and the price for it
- is that the assertion,
+but the price for it
+ is that the assertion
 
 833
 00:51:42,760 --> 00:51:47,040
-hides more (INAUDIBLE) it is subjective.
+hides more behind the scenes
+ and it is subjective.
 
 834
 00:51:47,040 --> 00:51:48,240
-So we cannot share it,
+So we cannot share it
 
 835
 00:51:48,240 --> 00:51:50,480
@@ -3963,15 +3963,16 @@ only by using an invariant.
 
 836
 00:51:52,480 --> 00:51:54,440
-So let's see how we can share it none
+So let's see how
+ we can share it nonetheless,
 
 837
 00:51:54,440 --> 00:51:56,320
-the less and for that,
+and for that,
 
 838
 00:51:56,320 --> 00:51:58,520
-let's consider the typical lock pattern,
+let's consider that typical code pattern
 
 839
 00:51:58,520 --> 00:51:59,920
@@ -3987,12 +3988,12 @@ that want to access the same resource,
 
 842
 00:52:05,200 --> 00:52:08,440
-such as a single monotone location.
+such as a single non-atomic location.
 
 843
 00:52:08,440 --> 00:52:11,000
 Then we can use an atomic
- flag to guard a resource,
+ flag to guard that resource:
 
 844
 00:52:11,000 --> 00:52:12,200
@@ -4022,7 +4023,7 @@ the lock can be seen as
 
 850
 00:52:22,920 --> 00:52:24,080
-which means subjective,
+which may be subjective,
 
 851
 00:52:24,080 --> 00:52:24,920
@@ -4030,16 +4031,16 @@ for example,
 
 852
 00:52:24,920 --> 00:52:26,720
-it may be another
- points to assertion,
+it may be a non-atomic
+ points-to assertion,
 
 853
 00:52:26,720 --> 00:52:28,680
-as we've seen before.
+as evoked just before.
 
 854
 00:52:28,680 --> 00:52:30,760
-The first thread has P,
+The first thread has P
 
 855
 00:52:30,760 --> 00:52:32,520
@@ -4052,7 +4053,7 @@ The second thread will get P
 
 857
 00:52:36,400 --> 00:52:38,920
-So we want P to be transferred,
+So we want P to be transferred
 
 858
 00:52:38,920 --> 00:52:41,760
@@ -4064,12 +4065,12 @@ To see how that works,
 
 860
 00:52:44,480 --> 00:52:45,920
-let's consider,
+let's consider
 
 861
 00:52:45,920 --> 00:52:48,640
-I'll need a comprehensive
- operation that exists,
+only the compare-and-set
+ operation that succeeds,
 
 862
 00:52:48,640 --> 00:52:51,840
@@ -4078,7 +4079,7 @@ because that's when the transfer happens.
 863
 00:52:53,400 --> 00:52:56,280
 As we've seen we decompose
- P to an objective part,
+ P into an objective part
 
 864
 00:52:56,280 --> 00:52:57,600
@@ -4090,12 +4091,12 @@ so that we can transfer each part.
 
 866
 00:53:00,280 --> 00:53:03,680
-The first part P@U is objective.
+The first part, "P at U", is objective.
 
 867
 00:53:03,680 --> 00:53:06,440
 So it can be transferred
- using an invariant as before.
+ using an invariant as usual.
 
 868
 00:53:06,440 --> 00:53:08,040
@@ -4107,7 +4108,7 @@ So now we are down to the problem
 
 870
 00:53:10,120 --> 00:53:12,200
-of transferring up U assertion.
+of transferring a view assertion.
 
 871
 00:53:14,160 --> 00:53:15,040
@@ -4116,20 +4117,20 @@ As I said before,
 872
 00:53:15,040 --> 00:53:17,640
 we need some form of
- synchronization on here.
+ synchronization and, here,
 
 873
 00:53:17,640 --> 00:53:19,000
-What OCaml gives us,
+What Multicore OCaml gives us
 
 874
 00:53:19,000 --> 00:53:21,160
-is a happens-before relationship,
+is a happens-before relationship
 
 875
 00:53:21,160 --> 00:53:24,520
-from the releasing write
- to the acquired read.
+from the release write
+ to the acquire read.
 
 876
 00:53:24,520 --> 00:53:27,440
@@ -4138,59 +4139,59 @@ So instead of adding
 
 877
 00:53:27,440 --> 00:53:29,080
-multicore OCaml made the choice
+Multicore OCaml made the choice
 
 878
 00:53:29,080 --> 00:53:32,360
-of performing release-acquire
+of performing release/acquire
  synchronization on atomic access.
 
 879
 00:53:34,320 --> 00:53:37,040
-And we need to reflect
+We need to reflect
  this in our program logic,
 
 880
 00:53:37,040 --> 00:53:38,720
-and we do so,
+and we do so
 
 881
 00:53:38,720 --> 00:53:40,920
 by extending the atomic
- points to predicate.
+ points-to predicate.
 
 882
 00:53:43,280 --> 00:53:46,760
-So recall that atomic points to v,
+So recall that "atomic points to v"
 
 883
 00:53:46,760 --> 00:53:48,760
-means that x stores the value of v.
+means that x stores the value v.
 
 884
 00:53:50,560 --> 00:53:52,200
-We know what's done this assertion.
+We now extend this assertion,
 
 885
 00:53:52,200 --> 00:53:55,080
-So that atomic locations stores the pair
+so that an atomic location stores the pair
 
 886
 00:53:55,960 --> 00:53:57,160
-of the value and a view,
+of a value and a view.
 
 887
 00:53:59,600 --> 00:54:02,000
-so accesses still behave the same,
+So accesses still behave the same
 
 888
 00:54:02,000 --> 00:54:04,040
-with respect to the view value,
+with respect to the value,
 
 889
 00:54:04,960 --> 00:54:08,920
 but they also perform a
- release acquire synchronization
+ release/acquire synchronization
 
 890
 00:54:08,920 --> 00:54:09,760
@@ -4218,12 +4219,12 @@ And conversely,
 
 896
 00:54:21,400 --> 00:54:25,440
-when reading we pull into a local view,
+when reading, we pull into our local view
 
 897
 00:54:25,440 --> 00:54:28,480
 any information stored
- in a shared location.
+ in the shared location.
 
 898
 00:54:28,480 --> 00:54:29,720
@@ -4247,27 +4248,27 @@ the spin lock has two operations,
 
 903
 00:54:40,080 --> 00:54:41,960
-release and acquire,
+release and acquire.
 
 904
 00:54:41,960 --> 00:54:44,880
-in the interface (INAUDIBLE) assertion P,
+In the interface it guards an assertion P.
 
 905
 00:54:44,880 --> 00:54:47,200
-we give the spin lock a specification,
+We give the spin lock a specification,
 
 906
 00:54:47,200 --> 00:54:49,800
-which holds under some invariant,
+which holds under some invariant.
 
 907
 00:54:49,800 --> 00:54:50,880
-and now,
+And now,
 
 908
 00:54:50,880 --> 00:54:55,080
-to put this specification in
+to prove this specification in
  the usual separation logic,
 
 909
@@ -4276,15 +4277,15 @@ with sequential consistency,
 
 910
 00:54:58,640 --> 00:55:00,440
-we state an invariant like this.
+we state an invariant like this:
 
 911
 00:55:01,400 --> 00:55:04,560
-We are either locked or unlocked,
+we are either locked or unlocked,
 
 912
 00:55:04,560 --> 00:55:05,840
-in the latter case
+and in the latter case
 
 913
 00:55:05,840 --> 00:55:08,760
@@ -4297,7 +4298,7 @@ Now in our program
 
 915
 00:55:14,920 --> 00:55:16,560
-P is subjective,
+P may be subjective,
 
 916
 00:55:16,560 --> 00:55:20,000
@@ -4315,8 +4316,8 @@ In fact,
 
 919
 00:55:28,520 --> 00:55:31,600
-it is the same as in your
- old separation logic,
+it is the same as in
+ usual separation logic,
 
 920
 00:55:31,600 --> 00:55:33,000
@@ -4328,7 +4329,7 @@ To remain objective,
 
 922
 00:55:34,920 --> 00:55:36,240
-we make it explicit,
+we make it explicit
 
 923
 00:55:36,240 --> 00:55:39,120
@@ -4336,11 +4337,11 @@ at which view we have P,
 
 924
 00:55:39,120 --> 00:55:41,280
-and we say that if it is the same view,
+and we say that it is the same view
 
 925
 00:55:41,280 --> 00:55:43,000
-as is stored in our case.
+as is stored in lk.
 
 926
 00:55:43,920 --> 00:55:45,240
@@ -4348,7 +4349,7 @@ In other words,
 
 927
 00:55:45,240 --> 00:55:48,560
-P holds in the eyes of whoever,
+P holds in the eyes of whoever
 
 928
 00:55:48,560 --> 00:55:50,120
@@ -4356,11 +4357,11 @@ last released the lock.
 
 929
 00:55:52,440 --> 00:55:55,560
-So that P@U in the invariants,
+So that "P at U" in the invariant
 
 930
 00:55:55,560 --> 00:55:57,360
-obviously allows to transfer,
+obviously allows to transfer
 
 931
 00:55:57,360 --> 00:55:59,800
@@ -4368,7 +4369,7 @@ the objective part of P,
 
 932
 00:55:59,800 --> 00:56:01,520
-where the atomic location itself,
+while the atomic location itself
 
 933
 00:56:01,520 --> 00:56:05,360
@@ -4386,11 +4387,11 @@ And in addition to this example,
 936
 00:56:14,960 --> 00:56:17,440
 we did more case studies with
- different kinds of locks.
+ different kinds of locks
 
 937
 00:56:17,440 --> 00:56:20,600
-Like algorithms for mutual exclusion,
+and algorithms for mutual exclusion,
 
 938
 00:56:20,600 --> 00:56:21,960
@@ -4406,8 +4407,8 @@ of sprinkling views over our invariants.
 
 941
 00:56:30,400 --> 00:56:33,720
-So our general method
- for proving correctness,
+So a general method
+ for proving correctness
 
 942
 00:56:33,720 --> 00:56:36,000
@@ -4424,15 +4425,15 @@ as if we had a sequentially
 
 945
 00:56:40,560 --> 00:56:43,240
-expressing the invariant in the usual
+express the invariant in the usual
 
 946
 00:56:43,240 --> 00:56:45,040
-concurrent sequential logic.
+concurrent separation logic.
 
 947
 00:56:45,040 --> 00:56:49,000
-Then identifying where
+Then identify where
  synchronization happens,
 
 948
@@ -4442,11 +4443,11 @@ and make it explicit by adding views.
 949
 00:56:55,080 --> 00:56:57,080
 To sum up I have presented
- a program logic,
+ a program logic
 
 950
 00:56:57,080 --> 00:56:58,880
-for OCaml,
+for Multicore OCaml,
 
 951
 00:56:58,880 --> 00:57:01,720
@@ -4459,7 +4460,7 @@ I argued that this logic enables concise
 
 953
 00:57:04,640 --> 00:57:08,120
-and natural reasoning of
+and natural reasoning on
  how threads synchronize.
 
 954
@@ -4485,7 +4486,7 @@ This entire work is mechanized
 
 959
 00:57:24,240 --> 00:57:27,120
-using the Iris logic framework.
+using the Iris separation logic framework.
 
 960
 00:57:27,120 --> 00:57:29,680
@@ -4493,13 +4494,13 @@ So we have a verified proof of soundness,
 
 961
 00:57:29,680 --> 00:57:32,760
-and an entire language with
+and a toy language with
  which we can write programs
 
 962
 00:57:32,760 --> 00:57:36,120
 and prove them correct using
- Hoare logic.
+ our program logic.
 
 963
 00:57:37,640 --> 00:57:38,800
@@ -4512,17 +4513,17 @@ we would like to verify
 
 965
 00:57:41,680 --> 00:57:45,080
-Thus so we would like to
+Also we would like to
  investigate data races,
 
 966
 00:57:45,080 --> 00:57:47,880
 because data races are currently
- not supported in logic.
+ not supported in logic,
 
 967
 00:57:49,240 --> 00:57:52,480
-Even though the underlying memory model,
+even though the underlying memory model
 
 968
 00:57:52,480 --> 00:57:54,640
@@ -4530,16 +4531,16 @@ gives a few guarantees about them.
 
 969
 00:57:56,000 --> 00:57:57,280
-Thank you for your attention.
+Thank you for your attention,
 
 970
 00:57:57,280 --> 00:57:59,240
-And if you have seen on previous slides,
+and if you have seen all previous slides,
 
 971
 00:57:59,240 --> 00:58:01,840
 you hold the right to
- ask questions though.
+ ask questions now.
 
 972
 00:58:03,240 --> 00:58:05,480
@@ -4547,7 +4548,7 @@ you hold the right to
 
 973
 00:58:12,040 --> 00:58:14,160
-STEPHANIE: Thank you Glenn.
+STEPHANIE: Thank you Glen.
 
 974
 00:58:14,160 --> 00:58:16,040

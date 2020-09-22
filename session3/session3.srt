@@ -849,7 +849,7 @@ to the client location
 
 184
 00:22:59,200 --> 00:23:00,800
-to get a client map function. 
+to get a client map function.
 
 185
 00:23:02,040 --> 00:23:05,120
@@ -1999,7 +1999,7 @@ since x+x = 2*x.
 
 428
 00:35:57,880 --> 00:36:00,280
-Program equivalents gets much harder
+Program equivalence gets much harder
 
 429
 00:36:00,280 --> 00:36:03,040
@@ -2012,7 +2012,7 @@ For instance, when using print,
 
 431
 00:36:04,720 --> 00:36:08,480
-it's not entirely clear why they're
+it's not entirely clear whether
 printing the same string twice,
 
 432
@@ -2227,7 +2227,7 @@ equations. In the original approach,
 
 476
 00:38:46,520 --> 00:38:50,440
-the effect handlers, the theory
+to effect handlers, the theory
 consisted of an effect signature
 
 477
@@ -2290,7 +2290,7 @@ different theories, and
 489
 00:39:30,480 --> 00:39:35,880
 by fixing the global theory,
-we are unable to solve them.
+we are unable to use some of them.
 
 490
 00:39:35,880 --> 00:39:38,520
@@ -2321,7 +2321,7 @@ and the equational theory.
 
 496
 00:39:58,040 --> 00:40:01,840
-Of this type, all computations
+At this type, all computations
 are considered equivalent,
 
 497
@@ -2336,7 +2336,7 @@ a small example.
 499
 00:40:08,080 --> 00:40:11,160
 In this signature, we
-define operation signal
+define an operation signal
 
 500
 00:40:11,160 --> 00:40:14,200
@@ -2369,12 +2369,12 @@ an arbitrary computation, that
 
 506
 00:40:29,080 --> 00:40:32,200
-it's no different than
+is no different than
 if we signal only once
 
 507
 00:40:32,200 --> 00:40:34,520
-and then continue with that.
+and then continue with z.
 
 508
 00:40:34,520 --> 00:40:37,200
@@ -2538,7 +2538,7 @@ in the theory of ε′,
 541
 00:42:36,280 --> 00:42:42,560
 so we may be aided by
-the equations that are act in ε′.
+the equations that are packed in ε′.
 
 542
 00:42:42,560 --> 00:42:45,160
@@ -2616,7 +2616,7 @@ denotational semantics,
 557
 00:43:40,080 --> 00:43:45,080
 or to a full-fledged
-dependently type checking.
+dependently typed setting.
 
 558
 00:43:45,760 --> 00:43:50,160
@@ -2650,7 +2650,7 @@ the language with recursion
 564
 00:44:05,920 --> 00:44:09,720
 and some basic data types,
-products or lists.
+such as products or lists.
 
 565
 00:44:09,720 --> 00:44:14,160
@@ -2688,7 +2688,7 @@ the aforementioned extensions.
 572
 00:44:33,920 --> 00:44:38,640
 The approach was also implemented
-on top of the f framework.
+on top of the Eff framework.
 
 573
 00:44:38,640 --> 00:44:42,120
@@ -2751,11 +2751,11 @@ be far from trivial
 585
 00:45:18,520 --> 00:45:21,960
 but it's ultimately important
-if you want the language,
+if you want a language,
 
 586
 00:45:21,960 --> 00:45:24,360
-it can be used in practice.
+that can be used in practice.
 
 587
 00:45:24,360 --> 00:45:27,600
@@ -5185,7 +5185,7 @@ thus allowing this bug.
 1100
 01:10:22,280 --> 01:10:26,040
 After that's all unpacked,
-look at ways to address the problem.
+we'll look at ways to address the problem.
 
 1101
 01:10:26,040 --> 01:10:27,720
@@ -5208,7 +5208,7 @@ the derivative value called a tangent.
 
 1105
 01:10:37,640 --> 01:10:41,960
-This is like a dual number,
+This is a dual number,
 like a complex number inside the computer,
 
 1106
@@ -5232,7 +5232,7 @@ the tangent of an output.
 
 1110
 01:10:53,120 --> 01:10:56,400
-I'll show how his is used to perform
+I'll show how this is used to perform
 forward automatic differentiation
 
 1111
@@ -5251,7 +5251,7 @@ the derivative of f at a point x
 
 1114
 01:11:06,400 --> 01:11:14,120
-by fitting x plus epsilon into f
+by feeding x plus epsilon into f
 extracting the tangent of the output.
 
 1115
@@ -5280,7 +5280,7 @@ get the derivative of 0.105.
 1120
 01:11:31,600 --> 01:11:35,480
 This function is also the solution
-to Verhulst epidemic equation.
+to Verhulst's epidemic equation.
 
 1121
 01:11:35,480 --> 01:11:37,200
@@ -5290,12 +5290,12 @@ the rate of infection.
 1122
 01:11:37,200 --> 01:11:41,800
 So did you really think you could
-go whole talk without Coronavirus?
+go a whole talk without Coronavirus?
 
 1123
 01:11:41,800 --> 01:11:43,880
 It used to be that
-nesting was initial idea,
+nesting was a niche idea,
 
 1124
 01:11:43,880 --> 01:11:46,360
@@ -5353,7 +5353,7 @@ mathematical notation
 
 1136
 01:12:12,320 --> 01:12:13,480
-for nested derivative.
+for a nested derivative.
 
 1137
 01:12:13,480 --> 01:12:16,680
@@ -5458,7 +5458,7 @@ derivatives of higher-order functions,
 
 1158
 01:13:26,400 --> 01:13:28,600
-not plain or higher-order
+not plain higher-order
 derivatives,
 
 1159
@@ -5478,7 +5478,7 @@ of a higher-order function?
 
 1162
 01:13:38,040 --> 01:13:40,440
-Well, in part there
+Well, in part that
 was the motivation
 
 1163
@@ -5493,21 +5493,21 @@ field of differential geometry
 1165
 01:13:46,440 --> 01:13:51,240
 But let's give a simple example
-of binary curried function.
+of a binary curried function.
 
 1166
 01:13:51,240 --> 01:13:54,800
-So f of xy equals x squared
+So f of x y equals x squared
 plus blah, blah, blah.
 
 1167
 01:13:54,800 --> 01:13:59,080
-We can take F at the 0.5
+We can take f at the point five
 and get a function from y,
 
 1168
 01:13:59,080 --> 01:14:01,280
-225 plus yq, blah, blah, blah.
+225 plus y squared, blah, blah, blah.
 
 1169
 01:14:01,280 --> 01:14:04,160
@@ -5524,7 +5524,7 @@ with respect to its first argument.
 
 1172
 01:14:09,040 --> 01:14:12,680
-So map from y to the derivative
+So the map from y to the derivative
 of that expression,
 
 1173
@@ -5534,7 +5534,7 @@ the point x equals five and y.
 
 1174
 01:14:18,880 --> 01:14:22,080
-I'm ignoring derivatives of function
+I'm ignoring derivatives of functions
 whose domain is a function.
 
 1175
@@ -5678,7 +5678,7 @@ when D was invoked,
 
 1205
 01:15:49,520 --> 01:15:55,120
-the thing is Ds of
+the thing is D s of
 zero returned a value
 
 1206
@@ -5697,7 +5697,7 @@ That's really bad.
 
 1209
 01:16:08,760 --> 01:16:10,080
-OK, I'll unpack.
+OK, all unpacked.
 
 1210
 01:16:10,080 --> 01:16:13,240
@@ -5725,7 +5725,7 @@ nested derivatives.
 
 1215
 01:16:24,040 --> 01:16:25,960
-And that's cause derivatives
+And that's because derivatives
 of higher-order functions
 
 1216
@@ -5745,7 +5745,7 @@ about engineers and accountants
 1219
 01:16:35,080 --> 01:16:37,440
 traveling with fewer tickets
-then people are hiding in the loo
+than people are hiding in the loo
 
 1220
 01:16:37,440 --> 01:16:39,120
@@ -5768,7 +5768,7 @@ calculation policy.
 
 1224
 01:16:50,440 --> 01:16:54,840
-The key issue is, that we need
+The key issue is that we need
 to distinguish the tangents,
 
 1225
@@ -5777,7 +5777,7 @@ the tags for different derivatives,
 
 1226
 01:16:56,680 --> 01:17:00,120
-even though the different derivative
+even though the derivative
 operator is called only once.
 
 1227
@@ -5856,7 +5856,7 @@ a non-function containing value.
 
 1243
 01:17:40,640 --> 01:17:43,240
-So we'd have separate versions of D,
+So we'd have separate versions of D
 
 1244
 01:17:43,240 --> 01:17:48,240
@@ -5866,11 +5866,11 @@ binary curried functions, etc.
 1245
 01:17:49,400 --> 01:17:53,120
 This could also be accomplished
-using polymorphic recursion.
+using polymorphic recursion,
 
 1246
 01:17:53,120 --> 01:17:56,400
-Although that gets hairy when
+although that gets hairy when
 the underlying language
 
 1247
@@ -5956,7 +5956,7 @@ We have some ideas for solving this.
 
 1265
 01:18:47,160 --> 01:18:49,600
-And I propose two
+And I proposes two
 solution frameworks.
 
 1266
@@ -5965,7 +5965,7 @@ One is based on eta expansion,
 
 1267
 01:18:51,280 --> 01:18:55,920
-and the other is on renaming tags away
+and the other on renaming tags away
 and then renaming them back
 
 1268
@@ -6008,7 +6008,7 @@ work on this some more
 1276
 01:19:24,000 --> 01:19:26,920
 to get the efficiency right,
-those constant factor efficiency,
+both constant factor efficiency,
 
 1277
 01:19:26,920 --> 01:19:30,240
@@ -6133,7 +6133,7 @@ spreadsheet functions
 
 1303
 01:20:43,800 --> 01:20:45,800
-through variable-size input arrays,
+to variable-size input arrays,
 
 1304
 01:20:45,800 --> 01:20:49,760
@@ -6168,7 +6168,7 @@ given without tax.
 1310
 01:21:02,240 --> 01:21:05,440
 We want to compute the total amount
-we'll pay including the tax.
+we'll pay, including the tax.
 
 1311
 01:21:05,440 --> 01:21:07,480
@@ -6197,7 +6197,7 @@ and then copy the formula.
 1316
 01:21:17,280 --> 01:21:20,040
 We have to be a little careful with
-relative and absolute referencing
+relative and absolute referencing,
 
 1317
 01:21:20,040 --> 01:21:23,440
@@ -6211,7 +6211,7 @@ and always see all the data at once.
 
 1319
 01:21:26,480 --> 01:21:30,840
-So for a simple problem like this
+So for a simple problem like this,
 we never have to think very hard.
 
 1320
@@ -6227,7 +6227,7 @@ independent copies of the formulas,
 1322
 01:21:37,080 --> 01:21:39,640
 we'd like to reuse them so that
-if we have to fix the bug
+if we have to fix a bug
 
 1323
 01:21:39,640 --> 01:21:41,160
@@ -6241,7 +6241,7 @@ all the shopping lists.
 1325
 01:21:43,560 --> 01:21:46,720
 Since we're familiar with calling
-built in functions like sum,
+built-in functions like SUM,
 
 1326
 01:21:46,720 --> 01:21:48,960
@@ -6255,7 +6255,7 @@ that we could call?
 1328
 01:21:50,360 --> 01:21:52,840
 In current mainstream
-spreadsheet tools we can,
+spreadsheet tools, we can,
 
 1329
 01:21:52,840 --> 01:21:55,520
@@ -6264,7 +6264,7 @@ a separate programming language
 
 1330
 01:21:55,520 --> 01:21:57,000
-such as visual basic,
+such as Visual Basic,
 
 1331
 01:21:57,000 --> 01:22:01,960
@@ -6279,16 +6279,16 @@ an easier approach
 1333
 01:22:03,440 --> 01:22:05,440
 that has appeared in
-many research systems.
+many research systems,
 
 1334
 01:22:05,440 --> 01:22:08,520
-And we think it's only a matter of
-time before it becomes mainstream,
+and we think it's only a matter of
+time before it becomes mainstream:
 
 1335
 01:22:08,520 --> 01:22:10,520
-the sheet defined function or SDF.
+the sheet-defined function, or SDF.
 
 1336
 01:22:10,520 --> 01:22:13,400
@@ -6307,12 +6307,12 @@ the function and give it a name.
 
 1339
 01:22:17,640 --> 01:22:19,560
-Now we can call shop
+Now we can call SHOP
 on the second list,
 
 1340
 01:22:19,560 --> 01:22:22,240
-just like a built in function.
+just like a built-in function.
 
 1341
 01:22:22,240 --> 01:22:25,120
@@ -6321,12 +6321,12 @@ a temporary copy of the function body
 
 1342
 01:22:25,120 --> 01:22:28,240
-with our new input substituted in
-and returns to new output.
+with our new inputs substituted in
+and returns the new output,
 
 1343
 01:22:28,240 --> 01:22:30,800
-But of course the tool can
+but of course the tool can
 optimize this process.
 
 1344
@@ -6342,7 +6342,7 @@ think a little harder,
 1346
 01:22:35,600 --> 01:22:38,160
 but we think many of them will
-be comfortable defining SDFs
+be comfortable defining SDFs,
 
 1347
 01:22:38,160 --> 01:22:42,080
@@ -6356,17 +6356,17 @@ run into a problem
 
 1349
 01:22:43,720 --> 01:22:46,120
-if we call shop on a shopping list
+if we call SHOP on a shopping list
 of a different length
 
 1350
 01:22:46,120 --> 01:22:47,360
-than the original,
+than the original.
 
 1351
 01:22:47,360 --> 01:22:49,840
-when we try to put the pretax
-prices in the input range
+When we try to put the pre-tax
+prices in the input range,
 
 1352
 01:22:49,840 --> 01:22:53,040
@@ -6376,15 +6376,15 @@ and we'll get the wrong answer.
 1353
 01:22:53,040 --> 01:22:55,120
 The result we'd like is
-if the body of shop
+as if the body of SHOP
 
 1354
 01:22:55,120 --> 01:22:57,000
-are resized to fit the input,
+were resized to fit the input.
 
 1355
 01:22:57,000 --> 01:23:00,040
-how can we make shop
+How can we make SHOP
 behave this way?
 
 1356
@@ -6399,7 +6399,7 @@ be stored in a single cell.
 1358
 01:23:04,120 --> 01:23:06,600
 If we apply an operator
-like plus to two arrays,
+like "+" to two arrays,
 
 1359
 01:23:06,600 --> 01:23:09,240
@@ -6419,7 +6419,7 @@ for users to learn,
 1362
 01:23:13,840 --> 01:23:17,160
 but it's a plausible
-solution for shop.
+solution for SHOP.
 
 1363
 01:23:17,160 --> 01:23:18,760
@@ -6432,7 +6432,7 @@ becomes unmanageable.
 
 1365
 01:23:21,520 --> 01:23:23,640
-Here's the sheet containing
+Here's a sheet containing
 the transaction history
 
 1366
@@ -6448,16 +6448,16 @@ after a transaction,
 1368
 01:23:28,720 --> 01:23:31,080
 first we apply the interest
-of the previous balance
+to the previous balance
 
 1369
 01:23:31,080 --> 01:23:34,200
 based on the number of days
-since the previous transaction,
+since the previous transaction.
 
 1370
 01:23:34,200 --> 01:23:37,080
-then we add the amount of
+Then we add the amount of
 the current transaction.
 
 1371
@@ -6490,7 +6490,7 @@ designed for array programming
 
 1377
 01:23:50,160 --> 01:23:52,440
-will have a shift down
+will have a SHIFT_DOWN
 function to do that.
 
 1378
@@ -6504,7 +6504,7 @@ if we tried to do the same thing,
 
 1380
 01:23:56,440 --> 01:23:58,920
-we'd ended up with the whole
+we'd end up with the whole
 array in C4 depending on itself
 
 1381
@@ -6517,12 +6517,12 @@ To handle the iteration,
 
 1383
 01:24:01,400 --> 01:24:03,800
-we need to use this special
+we need to use a special
 function called VSCAN2
 
 1384
 01:24:03,800 --> 01:24:04,840
-and pass the lambda function
+and pass a lambda function
 
 1385
 01:24:04,840 --> 01:24:07,400
@@ -6542,7 +6542,7 @@ the web that's similar enough
 1388
 01:24:11,480 --> 01:24:14,880
 that they can adapt
-to their problem.
+it to their problem.
 
 1389
 01:24:14,880 --> 01:24:17,160
@@ -6574,12 +6574,12 @@ to make the trip hasn't arrived yet.
 
 1395
 01:24:26,560 --> 01:24:29,480
-We want this SDF to re
-size in three different
+We want this SDF to resize
+in three different
 
 1396
 01:24:29,480 --> 01:24:31,360
-ways, the of time
+ways: the number of time
 steps in the simulation
 
 1397
@@ -6604,7 +6604,7 @@ is possible to write
 
 1401
 01:24:40,720 --> 01:24:41,720
-using array programming
+using array programming,
 
 1402
 01:24:41,720 --> 01:24:43,800
@@ -6626,12 +6626,12 @@ it to handle inputs
 
 1406
 01:24:51,320 --> 01:24:54,800
-of variable size,
+of variable size;
 we call the result an elastic SDF.
 
 1407
 01:24:54,800 --> 01:24:56,280
-Maybe the user can somehow
+Maybe the user could somehow
 
 1408
 01:24:56,280 --> 01:24:58,120
@@ -6640,7 +6640,7 @@ the resizing should work.
 
 1409
 01:24:58,120 --> 01:25:00,000
-But it turns out that for many SDF's
+But it turns out that for many SDFs,
 
 1410
 01:25:00,000 --> 01:25:01,760
@@ -6667,22 +6667,22 @@ the generalization process works
 
 1415
 01:25:11,400 --> 01:25:13,000
-in the simplest shop example
+in the simpler SHOP example.
 
 1416
 01:25:13,000 --> 01:25:14,840
-for the purpose of
+For the purpose of
 describing our work,
 
 1417
 01:25:14,840 --> 01:25:17,080
 we use a textual
-notation for SDF's.
+notation for SDFs.
 
 1418
 01:25:17,080 --> 01:25:19,520
 Users don't need to know anything
-about this notation
+about this notation,
 
 1419
 01:25:19,520 --> 01:25:22,440
@@ -6697,22 +6697,22 @@ and the input and output ranges.
 1421
 01:25:25,560 --> 01:25:28,040
 Each line of the body
-describes the rectangular tile
+describes a rectangular tile
 
 1422
 01:25:28,040 --> 01:25:30,440
 of one or more cells with
-the copied formula.
+a copied formula.
 
 1423
 01:25:30,440 --> 01:25:33,760
 For example, the first line
-describes these three cells,
+describes these three cells;
 
 1424
 01:25:33,760 --> 01:25:35,960
 the given formula is placed
-in the top left cell
+in the top-left cell
 
 1425
 01:25:35,960 --> 01:25:37,080
@@ -6734,27 +6734,27 @@ that we want in this notation
 1429
 01:25:43,720 --> 01:25:45,600
 by introducing a length
-variable alpha,
+variable α
 
 1430
 01:25:45,600 --> 01:25:47,640
-that can take any non
-negative integer value.
+that can take any nonnegative
+integer value.
 
 1431
 01:25:48,200 --> 01:25:51,680
-Of course, if we set alpha to three
-we get the original shop back,
+Of course, if we set α to 3,
+we get the original SHOP back.
 
 1432
 01:25:51,680 --> 01:25:54,680
-we'll call this elastic SDF shop1
+We'll call this elastic SDF SHOP1
 for reference in this talk,
 
 1433
 01:25:54,680 --> 01:25:57,320
-Though the user would invoke it
-using the original name shop.
+though the user would invoke it
+using the original name SHOP.
 
 1434
 01:25:58,720 --> 01:26:00,800
@@ -6762,17 +6762,17 @@ When an elastic SDF is called,
 
 1435
 01:26:00,800 --> 01:26:03,760
-We set the length variables
-to match the argument sizes
+we set the length variables
+to match the argument sizes,
 
 1436
 01:26:03,760 --> 01:26:05,800
-in this case setting alpha to six
+in this case setting α to 6,
 
 1437
 01:26:05,800 --> 01:26:07,560
 and substitute them
-into the definition
+into the definition,
 
 1438
 01:26:07,560 --> 01:26:10,440
@@ -6781,17 +6781,17 @@ we can evaluate as before.
 
 1439
 01:26:11,080 --> 01:26:13,680
-Now if the tiles may
-collide when they expand,
+Note that tiles may
+collide when they expand.
 
 1440
 01:26:13,680 --> 01:26:15,680
-we address this by
+We address this by
 labeling each reference
 
 1441
 01:26:15,680 --> 01:26:17,840
-with the tile or tiles that
+with the tile or tiles it
 originally pointed to
 
 1442
@@ -6805,21 +6805,21 @@ even if others overlap them.
 
 1444
 01:26:21,760 --> 01:26:24,880
-Here the reference, in the sum
-reached H7 of tile four,
+Here, the reference in the SUM
+reads the H7 of tile 4,
 
 1445
 01:26:24,880 --> 01:26:28,160
-while the output reference reached
-H7 of tile five.
+while the output reference reads
+the H7 of tile 5.
 
 1446
 01:26:28,160 --> 01:26:29,480
-We do this for all SDF's but
+We do this for all SDFs, but
 
 1447
 01:26:29,480 --> 01:26:30,960
-to reduce clutter we won't show
+to reduce clutter, we won't show
 
 1448
 01:26:30,960 --> 01:26:32,520
@@ -6827,16 +6827,16 @@ the labels for the rest of the talk.
 
 1449
 01:26:34,280 --> 01:26:35,880
-The question immediately comes up
+The question immediately comes up:
 
 1450
 01:26:35,880 --> 01:26:38,880
-Is the best generalization of
-the given SDF always clear?
+is the best generalization of
+a given SDF always clear?
 
 1451
 01:26:38,880 --> 01:26:41,760
-for one thing we want
+For one thing, we want
 a generalization that's well defined,
 
 1452
@@ -6854,21 +6854,21 @@ For example, if we set the height
 
 1455
 01:26:47,440 --> 01:26:49,120
-of the column H tile to alpha,
+of the column-H tile to α
 
 1456
 01:26:49,120 --> 01:26:51,040
 but the height of
-the column G tile the three.
+the column-G tile to 3,
 
 1457
 01:26:51,040 --> 01:26:53,520
-Then when alpha increases the H tile
+then when α increases, the H tile
 
 1458
 01:26:53,520 --> 01:26:56,160
 will be referring to undefined
-cells below the G tile
+cells below the G tile,
 
 1459
 01:26:56,160 --> 01:26:58,520
@@ -6877,16 +6877,16 @@ is not well defined.
 
 1460
 01:26:58,520 --> 01:27:01,520
-From now on we'll consider only
+From now on, we'll consider only
 well defined generalizations.
 
 1461
 01:27:02,800 --> 01:27:04,040
-To illustrate the next point
+To illustrate the next point,
 
 1462
 01:27:04,040 --> 01:27:06,240
-consider this contrived sum two SPF
+consider this contrived SUM2 SDF
 
 1463
 01:27:06,240 --> 01:27:08,600
@@ -6896,36 +6896,36 @@ and adds the totals.
 1464
 01:27:08,600 --> 01:27:10,840
 Here are two well
-defined generalizations
+defined generalizations:
 
 1465
 01:27:10,840 --> 01:27:13,880
-sum 2 D allows the arrays to be
-different lengths alpha and beta,
+SUM2_D allows the arrays to be
+different lengths α and β,
 
 1466
 01:27:13,880 --> 01:27:17,160
-while sum 2 S requires them
-to be the same length alpha.
+while SUM2_S requires them
+to be the same length α.
 
 1467
 01:27:17,160 --> 01:27:20,040
-We say that sum 2 D is more
-general than sum 2 S
+We say that SUM2_D is more
+general than SUM2_S
 
 1468
 01:27:20,040 --> 01:27:21,880
 since it can be
-converted to sum 2 S
+converted to SUM2_S
 
 1469
 01:27:21,880 --> 01:27:24,080
 by substituting for
-the length variables,
+the length variables.
 
 1470
 01:27:24,080 --> 01:27:26,080
-we prefer sum 2 D to make sure
+We prefer SUM2_D to make sure
 
 1471
 01:27:26,080 --> 01:27:27,840
@@ -6938,11 +6938,11 @@ in the original SDF as possible.
 
 1473
 01:27:31,080 --> 01:27:33,120
-So given an SDF like shop.
+So given an SDF like SHOP,
 
 1474
 01:27:33,120 --> 01:27:34,640
-If there's a well
+if there's a well
 defined generalization
 
 1475
@@ -6952,21 +6952,21 @@ than all the others,
 
 1476
 01:27:36,480 --> 01:27:37,680
-which we call principle.
+which we call principal,
 
 1477
 01:27:37,680 --> 01:27:38,960
-That's the one we want.
+that's the one we want.
 
 1478
 01:27:38,960 --> 01:27:40,680
-Unfortunately there
+Unfortunately, there
 are several problems
 
 1479
 01:27:40,680 --> 01:27:42,920
-that can cause them to be no
-principle generalization,
+that can cause there to be no
+principal generalization;
 
 1480
 01:27:42,920 --> 01:27:44,680
@@ -6974,16 +6974,16 @@ we'll look at one of them.
 
 1481
 01:27:44,680 --> 01:27:46,000
-In addition to shop1
+In addition to SHOP1
 
 1482
 01:27:46,000 --> 01:27:48,720
-that we saw earlier shop
+that we saw earlier, SHOP
 has two other contrived,
 
 1483
 01:27:48,720 --> 01:27:50,520
-but well defined generalizations
+but well defined, generalizations:
 
 1484
 01:27:50,520 --> 01:27:52,280
@@ -6993,7 +6993,7 @@ the first three items
 1485
 01:27:52,280 --> 01:27:54,960
 of the input and one
-is the last three.
+that uses only the last three.
 
 1486
 01:27:54,960 --> 01:27:57,080
@@ -7003,7 +7003,7 @@ can be converted
 1487
 01:27:57,080 --> 01:27:59,520
 to any of the others by
-substituting for alpha.
+substituting for α.
 
 1488
 01:27:59,520 --> 01:28:00,600
@@ -7019,7 +7019,7 @@ it should be intuitively clear
 
 1491
 01:28:03,560 --> 01:28:05,240
-there isn't a principle
+there isn't a principal
 generalization
 
 1492
@@ -7028,22 +7028,22 @@ that's more general than all three.
 
 1493
 01:28:07,120 --> 01:28:08,600
-The user probably want shop1,
+The user probably wants SHOP1,
 
 1494
 01:28:08,600 --> 01:28:10,760
-But we have to
+but we have to
 formalize that somehow.
 
 1495
 01:28:10,760 --> 01:28:13,560
-So we introduced the concept
-of regular generalization
+So we introduce a concept
+of a regular generalization,
 
 1496
 01:28:13,560 --> 01:28:16,800
 which satisfies several conditions
-on top as well-definedness,
+on top of well-definedness,
 
 1497
 01:28:16,800 --> 01:28:18,200
@@ -7053,11 +7053,11 @@ a cell reference
 1498
 01:28:18,200 --> 01:28:20,560
 can't pick three elements
-out of a larger tile,
+out of a larger tile.
 
 1499
 01:28:20,560 --> 01:28:21,680
-so shop1 is regular
+So SHOP1 is regular
 
 1500
 01:28:21,680 --> 01:28:23,680
@@ -7066,7 +7066,7 @@ generalizations are not.
 
 1501
 01:28:25,320 --> 01:28:27,400
-Now out of all the well
+Now, out of all the well
 defined generalizations
 
 1502
@@ -7080,7 +7080,7 @@ we can prove that there's
 
 1504
 01:28:32,160 --> 01:28:34,480
-always a principle
+always a principal
 regular generalization.
 
 1505
@@ -7098,7 +7098,7 @@ functional programming language.
 
 1508
 01:28:44,120 --> 01:28:45,640
-Our algorithm to find the principle
+Our algorithm to find the principal
 
 1509
 01:28:45,640 --> 01:28:48,160
@@ -7107,20 +7107,20 @@ introduces all the variables
 
 1510
 01:28:48,160 --> 01:28:49,920
-that could possibly need
+it could possibly need,
 
 1511
 01:28:49,920 --> 01:28:51,520
-generate constraints on them
+generates constraints on them
 
 1512
 01:28:51,520 --> 01:28:53,440
 based on the definition
-of regularity.
+of regularity,
 
 1513
 01:28:53,960 --> 01:28:55,920
-And then solves the constraints.
+and then solves the constraints.
 
 1514
 01:28:55,920 --> 01:28:57,960
@@ -7142,8 +7142,8 @@ the heights of those tiles are equal.
 
 1518
 01:29:03,720 --> 01:29:06,160
-Again this is analogous to
-the type inference algorithm
+Again, this is analogous to
+a type inference algorithm
 
 1519
 01:29:06,160 --> 01:29:07,880
@@ -7153,7 +7153,7 @@ programming language.
 1520
 01:29:10,240 --> 01:29:12,840
 We've seen that in order to have
-a principle generalization
+a principal generalization,
 
 1521
 01:29:12,840 --> 01:29:15,040
@@ -7177,13 +7177,13 @@ judgment calls. Our goals,
 
 1525
 01:29:22,600 --> 01:29:25,120
-aside from having a principle
-of regular generalization,
+aside from having a principal
+regular generalization,
 
 1526
 01:29:25,120 --> 01:29:29,000
-or to support as many realistic
-SDF design patterns as we can,
+are to support as many realistic
+SDF design patterns as we can
 
 1527
 01:29:29,000 --> 01:29:31,160
@@ -7197,16 +7197,16 @@ the detailed rules.
 
 1529
 01:29:33,480 --> 01:29:35,000
-Our work represents the first draft
+Our work represents a first draft
 
 1530
 01:29:35,000 --> 01:29:38,000
-of the definition,
-we expect future work will refine it.
+of the definition;
+we expect that future work will refine it.
 
 1531
 01:29:39,480 --> 01:29:40,920
-This is all technically elegant
+This is all technically elegant,
 
 1532
 01:29:40,920 --> 01:29:42,680
@@ -7219,7 +7219,7 @@ making things easier for users.
 
 1534
 01:29:44,800 --> 01:29:47,400
-So we did a user's study
+So we did a user study
 to compare elastic SDFs
 
 1535
@@ -7228,7 +7228,7 @@ to the best existing alternative,
 
 1536
 01:29:48,840 --> 01:29:51,440
-namely array programming
+namely array programming,
 on a set of tasks
 
 1537
@@ -7243,7 +7243,7 @@ a few findings.
 
 1539
 01:29:58,040 --> 01:29:59,880
-First users experience
+First, users experienced
 lower cognitive
 
 1540
@@ -7253,11 +7253,11 @@ compared to array programming,
 
 1541
 01:30:03,360 --> 01:30:04,680
-based on the standard survey
+based on a standard survey
 
 1542
 01:30:04,680 --> 01:30:07,000
-called the NASA task load index.
+called the NASA Task Load Index.
 
 1543
 01:30:07,000 --> 01:30:08,840
@@ -7266,7 +7266,7 @@ data suggesting
 
 1544
 01:30:08,840 --> 01:30:10,920
-that users solve tasks
+that users solved tasks
 faster on average
 
 1545
@@ -7282,7 +7282,7 @@ stated a preference
 1547
 01:30:16,000 --> 01:30:17,920
 for array programming
-for simple tasks
+for simple tasks,
 
 1548
 01:30:17,920 --> 01:30:21,000
@@ -7292,7 +7292,7 @@ for more complex tasks.
 1549
 01:30:21,000 --> 01:30:23,200
 This is no surprise
-given the complex tasks
+given that complex tasks
 
 1550
 01:30:23,200 --> 01:30:25,640
@@ -7302,7 +7302,7 @@ with array programming.
 1551
 01:30:25,640 --> 01:30:27,520
 These results are
-really promising them,
+really promising, though
 
 1552
 01:30:27,520 --> 01:30:30,480
@@ -7317,17 +7317,17 @@ how we can use ideas
 1554
 01:30:34,680 --> 01:30:36,960
 from programming language
-theory to offer spreadsheets
+theory to offer spreadsheet
 
 1555
 01:30:36,960 --> 01:30:40,800
-uses an easier way to reuse logic
+users an easier way to reuse logic
 on inputs of different sizes.
 
 1556
 01:30:40,800 --> 01:30:43,840
-You can find the full definitions
-algorithms and proofs in the paper.
+You can find the full definitions,
+algorithms, and proofs in the paper.
 
 1557
 01:30:44,480 --> 01:30:46,160
