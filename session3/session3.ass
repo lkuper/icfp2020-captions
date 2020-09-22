@@ -1110,30 +1110,30 @@ Dialogue: 0,1:10:13.32,1:10:15.20,Default,,0,0,0,,We'll think about derivatives\
 Dialogue: 0,1:10:15.20,1:10:17.84,Default,,0,0,0,,and see how allowing them breaks\Nthe one-to-one correspondence
 Dialogue: 0,1:10:17.84,1:10:20.68,Default,,0,0,0,,between invoking derivative\Noperators and taking derivatives,
 Dialogue: 0,1:10:20.68,1:10:22.28,Default,,0,0,0,,thus allowing this bug.
-Dialogue: 0,1:10:22.28,1:10:26.04,Default,,0,0,0,,After that's all unpacked,\Nlook at ways to address the problem.
+Dialogue: 0,1:10:22.28,1:10:26.04,Default,,0,0,0,,After that's all unpacked,\Nwe'll look at ways to address the problem.
 Dialogue: 0,1:10:26.04,1:10:27.72,Default,,0,0,0,,In forward automatic\Ndifferentiation,
 Dialogue: 0,1:10:27.72,1:10:30.24,Default,,0,0,0,,derivatives are piggybacked\Non primal values.
 Dialogue: 0,1:10:30.24,1:10:32.72,Default,,0,0,0,,So we have x plus x prime epsilon,
 Dialogue: 0,1:10:32.72,1:10:37.64,Default,,0,0,0,,x is the primal, x prime is\Nthe derivative value called a tangent.
-Dialogue: 0,1:10:37.64,1:10:41.96,Default,,0,0,0,,This is like a dual number,\Nlike a complex number inside the computer,
+Dialogue: 0,1:10:37.64,1:10:41.96,Default,,0,0,0,,This is a dual number,\Nlike a complex number inside the computer,
 Dialogue: 0,1:10:41.96,1:10:45.24,Default,,0,0,0,,it's represented as\Na two element pair.
 Dialogue: 0,1:10:45.24,1:10:47.84,Default,,0,0,0,,These are propagated according\Nto the rules of calculus,
 Dialogue: 0,1:10:47.84,1:10:51.04,Default,,0,0,0,,and we have an operator for\Nextracting the epsilon coefficient,
 Dialogue: 0,1:10:51.04,1:10:53.12,Default,,0,0,0,,the tangent of an output.
-Dialogue: 0,1:10:53.12,1:10:56.40,Default,,0,0,0,,I'll show how his is used to perform\Nforward automatic differentiation
+Dialogue: 0,1:10:53.12,1:10:56.40,Default,,0,0,0,,I'll show how this is used to perform\Nforward automatic differentiation
 Dialogue: 0,1:10:56.40,1:10:59.08,Default,,0,0,0,,on a simple but topical function.
 Dialogue: 0,1:10:59.08,1:11:02.48,Default,,0,0,0,,Let's say f of t is one over one\Nplus e to the minus t.
 Dialogue: 0,1:11:02.48,1:11:06.40,Default,,0,0,0,,We define the operator D to take\Nthe derivative of f at a point x
-Dialogue: 0,1:11:06.40,1:11:14.12,Default,,0,0,0,,by fitting x plus epsilon into f\Nextracting the tangent of the output.
+Dialogue: 0,1:11:06.40,1:11:14.12,Default,,0,0,0,,by feeding x plus epsilon into f\Nextracting the tangent of the output.
 Dialogue: 0,1:11:14.12,1:11:16.68,Default,,0,0,0,,We can take f of two\Nto get 0.881,
 Dialogue: 0,1:11:16.68,1:11:18.88,Default,,0,0,0,,and take the derivative of f at two,
 Dialogue: 0,1:11:18.88,1:11:21.60,Default,,0,0,0,,take f of two plus epsilon,
 Dialogue: 0,1:11:21.60,1:11:26.56,Default,,0,0,0,,crank that through,\Nwe get 0.881 plus 0.105 epsilon.
 Dialogue: 0,1:11:26.56,1:11:31.60,Default,,0,0,0,,We extract the tangent to\Nget the derivative of 0.105.
-Dialogue: 0,1:11:31.60,1:11:35.48,Default,,0,0,0,,This function is also the solution\Nto Verhulst epidemic equation.
+Dialogue: 0,1:11:31.60,1:11:35.48,Default,,0,0,0,,This function is also the solution\Nto Verhulst's epidemic equation.
 Dialogue: 0,1:11:35.48,1:11:37.20,Default,,0,0,0,,The derivative is\Nthe rate of infection.
-Dialogue: 0,1:11:37.20,1:11:41.80,Default,,0,0,0,,So did you really think you could\Ngo whole talk without Coronavirus?
-Dialogue: 0,1:11:41.80,1:11:43.88,Default,,0,0,0,,It used to be that\Nnesting was initial idea,
+Dialogue: 0,1:11:37.20,1:11:41.80,Default,,0,0,0,,So did you really think you could\Ngo a whole talk without Coronavirus?
+Dialogue: 0,1:11:41.80,1:11:43.88,Default,,0,0,0,,It used to be that\Nnesting was a niche idea,
 Dialogue: 0,1:11:43.88,1:11:46.36,Default,,0,0,0,,but many applications\Ndemand nesting.
 Dialogue: 0,1:11:46.36,1:11:47.96,Default,,0,0,0,,When done in frameworks\Nthat don't support it
 Dialogue: 0,1:11:47.96,1:11:51.00,Default,,0,0,0,,programmers end up going through\Nall kinds of crazy hoops
@@ -1146,7 +1146,7 @@ Dialogue: 0,1:11:59.88,1:12:02.28,Default,,0,0,0,,We want it to be natural.
 Dialogue: 0,1:12:02.92,1:12:04.56,Default,,0,0,0,,Here's some simple nesting.
 Dialogue: 0,1:12:04.56,1:12:08.08,Default,,0,0,0,,D takes a derivative at a point.
 Dialogue: 0,1:12:09.24,1:12:12.32,Default,,0,0,0,,On the left here is conventional\Nmathematical notation
-Dialogue: 0,1:12:12.32,1:12:13.48,Default,,0,0,0,,for nested derivative.
+Dialogue: 0,1:12:12.32,1:12:13.48,Default,,0,0,0,,for a nested derivative.
 Dialogue: 0,1:12:13.48,1:12:16.68,Default,,0,0,0,,Notice how much nicer the functional\Nnotation on the right is.
 Dialogue: 0,1:12:16.68,1:12:20.76,Default,,0,0,0,,Regular calculus is better\Nwith lambda calculus, right?
 Dialogue: 0,1:12:20.76,1:12:23.12,Default,,0,0,0,,Look at the definition of D.
@@ -1168,23 +1168,23 @@ Dialogue: 0,1:13:14.72,1:13:17.20,Default,,0,0,0,,The phrase higher-order\Nautom
 Dialogue: 0,1:13:17.20,1:13:19.56,Default,,0,0,0,,is used in a bunch of different\Nsenses in the literature.
 Dialogue: 0,1:13:19.56,1:13:22.72,Default,,0,0,0,,When we use it here\Nwe mean the hard one.
 Dialogue: 0,1:13:22.72,1:13:26.40,Default,,0,0,0,,This first definition, taking\Nderivatives of higher-order functions,
-Dialogue: 0,1:13:26.40,1:13:28.60,Default,,0,0,0,,not plain or higher-order\Nderivatives,
+Dialogue: 0,1:13:26.40,1:13:28.60,Default,,0,0,0,,not plain higher-order\Nderivatives,
 Dialogue: 0,1:13:28.60,1:13:30.56,Default,,0,0,0,,and not derivatives of\Nfirst order functions
 Dialogue: 0,1:13:30.56,1:13:34.60,Default,,0,0,0,,defined using\Nhigher-order operators.
 Dialogue: 0,1:13:35.08,1:13:38.04,Default,,0,0,0,,What is meant by the derivative\Nof a higher-order function?
-Dialogue: 0,1:13:38.04,1:13:40.44,Default,,0,0,0,,Well, in part there\Nwas the motivation
+Dialogue: 0,1:13:38.04,1:13:40.44,Default,,0,0,0,,Well, in part that\Nwas the motivation
 Dialogue: 0,1:13:40.44,1:13:43.08,Default,,0,0,0,,for the development of the whole\Nfield of differential geometry
 Dialogue: 0,1:13:43.08,1:13:45.72,Default,,0,0,0,,100s of years ago.
-Dialogue: 0,1:13:46.44,1:13:51.24,Default,,0,0,0,,But let's give a simple example\Nof binary curried function.
-Dialogue: 0,1:13:51.24,1:13:54.80,Default,,0,0,0,,So f of xy equals x squared\Nplus blah, blah, blah.
-Dialogue: 0,1:13:54.80,1:13:59.08,Default,,0,0,0,,We can take F at the 0.5\Nand get a function from y,
-Dialogue: 0,1:13:59.08,1:14:01.28,Default,,0,0,0,,225 plus yq, blah, blah, blah.
+Dialogue: 0,1:13:46.44,1:13:51.24,Default,,0,0,0,,But let's give a simple example\Nof a binary curried function.
+Dialogue: 0,1:13:51.24,1:13:54.80,Default,,0,0,0,,So f of x y equals x squared\Nplus blah, blah, blah.
+Dialogue: 0,1:13:54.80,1:13:59.08,Default,,0,0,0,,We can take f at the point five\Nand get a function from y,
+Dialogue: 0,1:13:59.08,1:14:01.28,Default,,0,0,0,,225 plus y squared, blah, blah, blah.
 Dialogue: 0,1:14:01.28,1:14:04.16,Default,,0,0,0,,We take the derivative of f at five,
 Dialogue: 0,1:14:04.16,1:14:06.68,Default,,0,0,0,,and we'll get\Nthe partial derivative of f
 Dialogue: 0,1:14:06.68,1:14:09.04,Default,,0,0,0,,with respect to its first argument.
-Dialogue: 0,1:14:09.04,1:14:12.68,Default,,0,0,0,,So map from y to the derivative\Nof that expression,
+Dialogue: 0,1:14:09.04,1:14:12.68,Default,,0,0,0,,So the map from y to the derivative\Nof that expression,
 Dialogue: 0,1:14:12.68,1:14:17.68,Default,,0,0,0,,with respect to x at\Nthe point x equals five and y.
-Dialogue: 0,1:14:18.88,1:14:22.08,Default,,0,0,0,,I'm ignoring derivatives of function\Nwhose domain is a function.
+Dialogue: 0,1:14:18.88,1:14:22.08,Default,,0,0,0,,I'm ignoring derivatives of functions\Nwhose domain is a function.
 Dialogue: 0,1:14:22.08,1:14:24.76,Default,,0,0,0,,Read the paper for that.
 Dialogue: 0,1:14:24.76,1:14:26.64,Default,,0,0,0,,In order for this to go through,
 Dialogue: 0,1:14:26.64,1:14:28.68,Default,,0,0,0,,we're going to have to extend\Nthe derivative operator.
@@ -1215,28 +1215,28 @@ Dialogue: 0,1:15:37.68,1:15:41.08,Default,,0,0,0,,but D hat gives us\Na constant
 Dialogue: 0,1:15:41.08,1:15:44.32,Default,,0,0,0,,when used in this nested fashion.
 Dialogue: 0,1:15:44.32,1:15:45.76,Default,,0,0,0,,What happened?
 Dialogue: 0,1:15:45.76,1:15:49.52,Default,,0,0,0,,Well, the fresh triggered\Nwhen D was invoked,
-Dialogue: 0,1:15:49.52,1:15:55.12,Default,,0,0,0,,the thing is Ds of\Nzero returned a value
+Dialogue: 0,1:15:49.52,1:15:55.12,Default,,0,0,0,,the thing is D s of\Nzero returned a value
 Dialogue: 0,1:15:55.12,1:15:58.64,Default,,0,0,0,,which has a single tag in it,\Na single concrete tag.
 Dialogue: 0,1:15:58.64,1:16:02.36,Default,,0,0,0,,So when it's nested,\Nwe can get a collision.
 Dialogue: 0,1:16:05.40,1:16:08.16,Default,,0,0,0,,That's really bad.
-Dialogue: 0,1:16:08.76,1:16:10.08,Default,,0,0,0,,OK, I'll unpack.
+Dialogue: 0,1:16:08.76,1:16:10.08,Default,,0,0,0,,OK, all unpacked.
 Dialogue: 0,1:16:10.08,1:16:13.24,Default,,0,0,0,,That's the dirty laundry of higher-order\Nautomatic differentiation.
 Dialogue: 0,1:16:13.24,1:16:16.68,Default,,0,0,0,,Now, let's get to\Nthe bottom of this mess.
 Dialogue: 0,1:16:17.52,1:16:19.08,Default,,0,0,0,,What's the root cause?
 Dialogue: 0,1:16:19.08,1:16:22.24,Default,,0,0,0,,Note D was invoked once in\Nthe definition of D hat,
 Dialogue: 0,1:16:22.24,1:16:24.04,Default,,0,0,0,,but we can still get\Nnested derivatives.
-Dialogue: 0,1:16:24.04,1:16:25.96,Default,,0,0,0,,And that's cause derivatives\Nof higher-order functions
+Dialogue: 0,1:16:24.04,1:16:25.96,Default,,0,0,0,,And that's because derivatives\Nof higher-order functions
 Dialogue: 0,1:16:25.96,1:16:27.80,Default,,0,0,0,,breaks the one-to-one relationship
 Dialogue: 0,1:16:27.80,1:16:32.44,Default,,0,0,0,,between invoking a derivative\Noperator and taking a derivative.
 Dialogue: 0,1:16:32.44,1:16:35.08,Default,,0,0,0,,It's like those corny jokes\Nabout engineers and accountants
-Dialogue: 0,1:16:35.08,1:16:37.44,Default,,0,0,0,,traveling with fewer tickets\Nthen people are hiding in the loo
+Dialogue: 0,1:16:35.08,1:16:37.44,Default,,0,0,0,,traveling with fewer tickets\Nthan people are hiding in the loo
 Dialogue: 0,1:16:37.44,1:16:39.12,Default,,0,0,0,,and the conductor comes\Nto check tickets.
 Dialogue: 0,1:16:39.12,1:16:42.52,Default,,0,0,0,,There's a disconnect between allocating\Nthe tags and using the tags.
 Dialogue: 0,1:16:42.52,1:16:46.24,Default,,0,0,0,,And we have poor enforcement of\Nthe one tag per nested derivative
 Dialogue: 0,1:16:46.24,1:16:49.40,Default,,0,0,0,,calculation policy.
-Dialogue: 0,1:16:50.44,1:16:54.84,Default,,0,0,0,,The key issue is, that we need\Nto distinguish the tangents,
+Dialogue: 0,1:16:50.44,1:16:54.84,Default,,0,0,0,,The key issue is that we need\Nto distinguish the tangents,
 Dialogue: 0,1:16:54.84,1:16:56.68,Default,,0,0,0,,the tags for different derivatives,
-Dialogue: 0,1:16:56.68,1:17:00.12,Default,,0,0,0,,even though the different derivative\Noperator is called only once.
+Dialogue: 0,1:16:56.68,1:17:00.12,Default,,0,0,0,,even though the derivative\Noperator is called only once.
 Dialogue: 0,1:17:00.12,1:17:03.52,Default,,0,0,0,,If we don't, we get\Nperturbation confusion.
 Dialogue: 0,1:17:03.52,1:17:05.24,Default,,0,0,0,,Here's an idea for a workaround.
 Dialogue: 0,1:17:05.24,1:17:06.68,Default,,0,0,0,,We would have gotten\Nthe correct result
@@ -1253,10 +1253,10 @@ Dialogue: 0,1:17:32.36,1:17:33.52,Default,,0,0,0,,We would delay the fresh
 Dialogue: 0,1:17:33.52,1:17:36.64,Default,,0,0,0,,until all the arguments needed\Nfor post-composition of tangent
 Dialogue: 0,1:17:36.64,1:17:37.64,Default,,0,0,0,,are available.
 Dialogue: 0,1:17:37.64,1:17:40.64,Default,,0,0,0,,So immediately beta reduces to\Na non-function containing value.
-Dialogue: 0,1:17:40.64,1:17:43.24,Default,,0,0,0,,So we'd have separate versions of D,
+Dialogue: 0,1:17:40.64,1:17:43.24,Default,,0,0,0,,So we'd have separate versions of D
 Dialogue: 0,1:17:43.24,1:17:48.24,Default,,0,0,0,,for scalar functions,\Nbinary curried functions, etc.
-Dialogue: 0,1:17:49.40,1:17:53.12,Default,,0,0,0,,This could also be accomplished\Nusing polymorphic recursion.
-Dialogue: 0,1:17:53.12,1:17:56.40,Default,,0,0,0,,Although that gets hairy when\Nthe underlying language
+Dialogue: 0,1:17:49.40,1:17:53.12,Default,,0,0,0,,This could also be accomplished\Nusing polymorphic recursion,
+Dialogue: 0,1:17:53.12,1:17:56.40,Default,,0,0,0,,although that gets hairy when\Nthe underlying language
 Dialogue: 0,1:17:56.40,1:17:58.36,Default,,0,0,0,,gets more complicated.
 Dialogue: 0,1:17:58.36,1:18:00.48,Default,,0,0,0,,Here's another idea.
 Dialogue: 0,1:18:00.48,1:18:04.08,Default,,0,0,0,,What's going wrong is that\Nthe value passed into the function
@@ -1275,9 +1275,9 @@ Dialogue: 0,1:18:37.56,1:18:40.24,Default,,0,0,0,,Now, it might be a stretch to\
 Dialogue: 0,1:18:40.24,1:18:41.44,Default,,0,0,0,,It's a pretty crowded field,
 Dialogue: 0,1:18:41.44,1:18:44.12,Default,,0,0,0,,but I hope you'll agree\Nthat it's an amazing bug.
 Dialogue: 0,1:18:44.12,1:18:47.16,Default,,0,0,0,,We have some ideas for solving this.
-Dialogue: 0,1:18:47.16,1:18:49.60,Default,,0,0,0,,And I propose two\Nsolution frameworks.
+Dialogue: 0,1:18:47.16,1:18:49.60,Default,,0,0,0,,And I proposes two\Nsolution frameworks.
 Dialogue: 0,1:18:49.60,1:18:51.28,Default,,0,0,0,,One is based on eta expansion,
-Dialogue: 0,1:18:51.28,1:18:55.92,Default,,0,0,0,,and the other is on renaming tags away\Nand then renaming them back
+Dialogue: 0,1:18:51.28,1:18:55.92,Default,,0,0,0,,and the other on renaming tags away\Nand then renaming them back
 Dialogue: 0,1:18:55.92,1:19:00.92,Default,,0,0,0,,when they're passing through\Nthe tangents of closures.
 Dialogue: 0,1:19:03.60,1:19:07.44,Default,,0,0,0,,Recent formulations of forward\Nof automatic differentiation
 Dialogue: 0,1:19:07.44,1:19:09.24,Default,,0,0,0,,still often get this wrong.
@@ -1286,7 +1286,7 @@ Dialogue: 0,1:19:13.60,1:19:15.16,Default,,0,0,0,,The two solutions that I propo
 Dialogue: 0,1:19:15.16,1:19:17.48,Default,,0,0,0,,they solve the correctness issue
 Dialogue: 0,1:19:17.48,1:19:20.44,Default,,0,0,0,,but they do have some issues\Nwith complexity.
 Dialogue: 0,1:19:20.44,1:19:24.00,Default,,0,0,0,,So we would like to\Nwork on this some more
-Dialogue: 0,1:19:24.00,1:19:26.92,Default,,0,0,0,,to get the efficiency right,\Nthose constant factor efficiency,
+Dialogue: 0,1:19:24.00,1:19:26.92,Default,,0,0,0,,to get the efficiency right,\Nboth constant factor efficiency,
 Dialogue: 0,1:19:26.92,1:19:30.24,Default,,0,0,0,,and these solutions\Nimplemented naively at least
 Dialogue: 0,1:19:30.24,1:19:34.28,Default,,0,0,0,,would seem to break some of\Nthe complexity guarantees
 Dialogue: 0,1:19:34.28,1:19:38.28,Default,,0,0,0,,that we'd like to make\Nan automatic differentiation.
