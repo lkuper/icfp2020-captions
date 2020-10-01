@@ -999,7 +999,7 @@ that corresponds to the machine
 
 216
 00:24:44,080 --> 00:24:46,440
-and it is retrofitted for
+and that is better fitted for
 the proof of the property.
 
 217
@@ -1022,8 +1022,8 @@ is widely recognized
 
 221
 00:24:58,080 --> 00:25:01,280
-in the full implementation of programming
-languages and (INAUDIBLE).
+in the theory and implementation of
+programming languages and proof assistants.
 
 222
 00:25:02,040 --> 00:25:06,160
@@ -1032,7 +1032,7 @@ the term up to a normal form.
 
 223
 00:25:06,160 --> 00:25:08,800
-That is a term without redexes
+That is, a term without redexes.
 
 224
 00:25:09,800 --> 00:25:12,760
@@ -1074,8 +1074,8 @@ as input a lambda term
 
 232
 00:25:31,520 --> 00:25:34,880
-that it embeds in closure in
-an environment that preserves bindings
+that it embeds in a closure with
+an environment that stores bindings
 
 233
 00:25:35,400 --> 00:25:37,240
@@ -1088,12 +1088,12 @@ level of the term being evaluated.
 
 235
 00:25:42,320 --> 00:25:44,120
-The machine looks up in environment
+The machine looks up in the environment
 
 236
 00:25:44,120 --> 00:25:47,000
 the binding of a variable
-represented by a De Bruijn index
+represented by a de Bruijn index
 
 237
 00:25:47,520 --> 00:25:50,160
@@ -1107,7 +1107,7 @@ the operator is an abstraction
 
 239
 00:25:54,160 --> 00:25:56,240
-and place it as a binding
+and places it as a binding
 in the environment.
 
 240
@@ -1132,7 +1132,7 @@ of the abstraction.
 
 244
 00:26:07,480 --> 00:26:11,080
-Calculates the De Bruijn index
+Calculates the de Bruijn index
 of such a formal parameter
 
 245
@@ -1151,7 +1151,7 @@ a special kind of closure
 
 248
 00:26:17,560 --> 00:26:19,080
-that preserves (INAUDIBLE) terms.
+that stores pure terms.
 
 249
 00:26:19,560 --> 00:26:23,000
@@ -1185,7 +1185,7 @@ and continuation stacks at the low level.
 255
 00:26:39,360 --> 00:26:41,600
 And this format is not ready
-to the deploy proofs by
+to deploy proofs by
 
 256
 00:26:41,600 --> 00:26:42,680
@@ -1194,7 +1194,7 @@ structural induction.
 257
 00:26:44,400 --> 00:26:47,880
 Our approach is to introduce a
-higher order calculus of closures
+higher-order calculus of closures
 
 258
 00:26:47,880 --> 00:26:50,440
@@ -1203,7 +1203,7 @@ that mimics the machine
 
 259
 00:26:50,960 --> 00:26:53,800
-and that is suited for
+and that is suited for deploying
 proofs by structural induction.
 
 260
@@ -1242,7 +1242,7 @@ and an environment.
 
 267
 00:27:15,760 --> 00:27:18,080
-The term uses the De Bruijn
+The term uses the de Bruijn
 indices representation,
 
 268
@@ -1274,7 +1274,7 @@ When an application is reached
 
 274
 00:27:36,120 --> 00:27:38,240
-it's operand is embedded
+its operand is embedded
 into a closure
 
 275
@@ -1284,8 +1284,8 @@ the current environment.
 
 276
 00:27:41,360 --> 00:27:45,520
-Then the binding at position
-0 is looked up and retrieved
+Then, the binding at position
+zero is looked up and retrieved
 
 277
 00:27:45,520 --> 00:27:46,800
@@ -1306,7 +1306,7 @@ the operator in an application
 
 281
 00:27:54,720 --> 00:27:58,280
-is reduced in multiple step fashion
+is reduced in multiple-step fashion
 to a weak head normal form.
 
 282
@@ -1316,11 +1316,11 @@ defining a reduction relation
 
 283
 00:28:02,760 --> 00:28:04,200
-which is purely single step.
+which is purely single-step.
 
 284
 00:28:05,440 --> 00:28:07,680
-This issue whilst
+This issue was
 observed and fixed
 
 285
@@ -1368,7 +1368,7 @@ in the classical literature
 
 294
 00:28:36,960 --> 00:28:38,640
-in higher order
+in higher-order
 functional programming.
 
 295
@@ -1390,7 +1390,7 @@ reduce as before.
 
 299
 00:28:51,040 --> 00:28:54,000
-The Biernacka and Danvy's
+Biernacka and Danvy's
 lambda hat rho
 
 300
@@ -1409,8 +1409,8 @@ in this calculus.
 
 303
 00:29:02,160 --> 00:29:05,400
-However it cannot accommodate
-full reducing strategies.
+However, it cannot accommodate
+full-reducing strategies.
 
 304
 00:29:06,640 --> 00:29:09,920
@@ -1448,8 +1448,8 @@ in the environment.
 
 311
 00:29:28,800 --> 00:29:32,600
-In calculus, a variable is
-represented by a De Bruijn index
+In our calculus, a variable is
+represented by a de Bruijn index
 
 312
 00:29:33,320 --> 00:29:35,280
@@ -1463,7 +1463,7 @@ occurrence of the variable
 
 314
 00:29:37,760 --> 00:29:41,200
-and it's binding occurrence
+and its binding occurrence
 in the abstract syntax tree.
 
 315
@@ -1473,7 +1473,7 @@ immediately above the variable,
 
 316
 00:29:46,840 --> 00:29:47,960
-then the index is 0.
+then the index is zero.
 
 317
 00:29:48,480 --> 00:29:52,080
@@ -1486,7 +1486,7 @@ to its binding lambda increases.
 
 319
 00:29:55,920 --> 00:29:59,760
-However if we place the De Bruijn
+However, if we place the de Bruijn
 index of the formal parameter
 
 320
@@ -1496,7 +1496,7 @@ under more lambdas
 
 321
 00:30:03,080 --> 00:30:04,440
-than it's binding occurrence,
+than its binding occurrence,
 
 322
 00:30:04,920 --> 00:30:07,480
@@ -1505,17 +1505,17 @@ index by adding to it
 
 323
 00:30:07,480 --> 00:30:09,480
-the number of lambdas going down.
+the number of lambdas gone down.
 
 324
 00:30:11,240 --> 00:30:15,080
-Inspired by KN, we used
-instead De Bruijn level
+Inspired by KN, we use
+instead the de Bruijn level
 
 325
 00:30:15,080 --> 00:30:17,640
-of the formal parameter
-here over lined
+of the formal parameter,
+here overlined,
 
 326
 00:30:18,160 --> 00:30:20,800
@@ -1539,7 +1539,7 @@ the binding lambda is further down.
 330
 00:30:31,560 --> 00:30:33,600
 The advantage of
-the De Bruijn levels
+the de Bruijn levels
 
 331
 00:30:33,600 --> 00:30:37,240
@@ -1552,7 +1552,7 @@ that are nested under more lambdas.
 
 333
 00:30:40,200 --> 00:30:41,920
-In order to use the De Bruijn level
+In order to use the de Bruijn level
 
 334
 00:30:42,440 --> 00:30:44,920
@@ -1571,11 +1571,11 @@ pushes into the environment
 
 337
 00:30:50,680 --> 00:30:52,720
-the current level increment by one.
+the current level incremented by one
 
 338
 00:30:52,720 --> 00:30:55,000
-Since the formal parameter
+since the formal parameter
 has crossed the lambda.
 
 339
@@ -1629,7 +1629,7 @@ for absolute indices.
 349
 00:31:28,360 --> 00:31:31,680
 Absolute indices are formal parameters
-of an applied abstractions
+of unapplied abstractions
 
 350
 00:31:31,680 --> 00:31:33,960
@@ -1644,7 +1644,7 @@ sequence in our calculus.
 352
 00:31:38,840 --> 00:31:41,880
 The sequence starts with
-a term within the environment
+a term with an empty environment
 
 353
 00:31:41,880 --> 00:31:44,320
@@ -1675,7 +1675,7 @@ We also show how reduction acts
 
 359
 00:31:59,840 --> 00:32:01,680
-on any applied abstraction.
+on an unapplied abstraction.
 
 360
 00:32:02,160 --> 00:32:04,560
@@ -1723,7 +1723,7 @@ the current lambda nesting level.
 369
 00:32:30,200 --> 00:32:33,240
 Which is embedded as
-the absolute index 0.
+the absolute index zero.
 
 370
 00:32:35,000 --> 00:32:37,400
@@ -1766,7 +1766,7 @@ by the commuting diagram here.
 
 378
 00:33:02,160 --> 00:33:05,360
-On the top, 0 or more
+On the top, zero or more
 administrative steps
 
 379
