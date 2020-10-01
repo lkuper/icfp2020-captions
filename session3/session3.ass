@@ -226,14 +226,14 @@ Dialogue: 0,0:24:32.76,0:24:35.92,Default,,0,0,0,,In particular that the machine
 Dialogue: 0,0:24:35.92,0:24:38.28,Default,,0,0,0,,than the normal other strategy\Nof the lambda calculus.
 Dialogue: 0,0:24:39.28,0:24:42.24,Default,,0,0,0,,We prove this result by\Nintroducing a semantic artifact
 Dialogue: 0,0:24:42.24,0:24:44.08,Default,,0,0,0,,that corresponds to the machine
-Dialogue: 0,0:24:44.08,0:24:46.44,Default,,0,0,0,,and it is retrofitted for\Nthe proof of the property.
+Dialogue: 0,0:24:44.08,0:24:46.44,Default,,0,0,0,,and that is better fitted for\Nthe proof of the property.
 Dialogue: 0,0:24:47.44,0:24:50.52,Default,,0,0,0,,The corresponding artifact is\Na reduction strategy in a calculus
 Dialogue: 0,0:24:50.52,0:24:51.52,Default,,0,0,0,,of closures.
 Dialogue: 0,0:24:52.52,0:24:54.56,Default,,0,0,0,,As this quote by Cregut shows,
 Dialogue: 0,0:24:54.56,0:24:58.08,Default,,0,0,0,,the importance of full reduction\Nis widely recognized
-Dialogue: 0,0:24:58.08,0:25:01.28,Default,,0,0,0,,in the full implementation of programming\Nlanguages and (INAUDIBLE).
+Dialogue: 0,0:24:58.08,0:25:01.28,Default,,0,0,0,,in the theory and implementation of\Nprogramming languages and proof assistants.
 Dialogue: 0,0:25:02.04,0:25:06.16,Default,,0,0,0,,Full reduction refers to reducing\Nthe term up to a normal form.
-Dialogue: 0,0:25:06.16,0:25:08.80,Default,,0,0,0,,That is a term without redexes
+Dialogue: 0,0:25:06.16,0:25:08.80,Default,,0,0,0,,That is, a term without redexes.
 Dialogue: 0,0:25:09.80,0:25:12.76,Default,,0,0,0,,For instance, this is especially\Nimportant with nowadays
 Dialogue: 0,0:25:12.76,0:25:14.52,Default,,0,0,0,,proof assistants with\Ndependent types
 Dialogue: 0,0:25:14.52,0:25:17.56,Default,,0,0,0,,which needs to reach\Nthe normal form of a type
@@ -242,34 +242,34 @@ Dialogue: 0,0:25:20.80,0:25:24.40,Default,,0,0,0,,The machine we study is Cregut
 Dialogue: 0,0:25:24.40,0:25:25.68,Default,,0,0,0,,the Krivine abstract machine
 Dialogue: 0,0:25:26.20,0:25:27.52,Default,,0,0,0,,which we abbreviate to KN.
 Dialogue: 0,0:25:28.52,0:25:31.52,Default,,0,0,0,,In a nutshell, KN takes\Nas input a lambda term
-Dialogue: 0,0:25:31.52,0:25:34.88,Default,,0,0,0,,that it embeds in closure in\Nan environment that preserves bindings
+Dialogue: 0,0:25:31.52,0:25:34.88,Default,,0,0,0,,that it embeds in a closure with\Nan environment that stores bindings
 Dialogue: 0,0:25:35.40,0:25:37.24,Default,,0,0,0,,and uses a continuation stack
 Dialogue: 0,0:25:37.24,0:25:41.08,Default,,0,0,0,,and tracks the lambda nesting\Nlevel of the term being evaluated.
-Dialogue: 0,0:25:42.32,0:25:44.12,Default,,0,0,0,,The machine looks up in environment
-Dialogue: 0,0:25:44.12,0:25:47.00,Default,,0,0,0,,the binding of a variable\Nrepresented by a De Bruijn index
+Dialogue: 0,0:25:42.32,0:25:44.12,Default,,0,0,0,,The machine looks up in the environment
+Dialogue: 0,0:25:44.12,0:25:47.00,Default,,0,0,0,,the binding of a variable\Nrepresented by a de Bruijn index
 Dialogue: 0,0:25:47.52,0:25:50.16,Default,,0,0,0,,pushes the operand of\Nan application onto the stack
 Dialogue: 0,0:25:51.16,0:25:54.16,Default,,0,0,0,,retrieves such an operand when\Nthe operator is an abstraction
-Dialogue: 0,0:25:54.16,0:25:56.24,Default,,0,0,0,,and place it as a binding\Nin the environment.
+Dialogue: 0,0:25:54.16,0:25:56.24,Default,,0,0,0,,and places it as a binding\Nin the environment.
 Dialogue: 0,0:25:57.48,0:25:59.64,Default,,0,0,0,,Reduces the body of\Nan applied abstraction
 Dialogue: 0,0:25:59.64,0:26:01.60,Default,,0,0,0,,by pushing a special\Nsymbol on the stack
 Dialogue: 0,0:26:02.08,0:26:04.96,Default,,0,0,0,,and placing in the environment\Nthe lambda nesting level
 Dialogue: 0,0:26:04.96,0:26:06.48,Default,,0,0,0,,of the formal parameter\Nof the abstraction.
-Dialogue: 0,0:26:07.48,0:26:11.08,Default,,0,0,0,,Calculates the De Bruijn index\Nof such a formal parameter
+Dialogue: 0,0:26:07.48,0:26:11.08,Default,,0,0,0,,Calculates the de Bruijn index\Nof such a formal parameter
 Dialogue: 0,0:26:11.08,0:26:12.44,Default,,0,0,0,,retrieved from the environment,
 Dialogue: 0,0:26:13.20,0:26:15.52,Default,,0,0,0,,reduces the operand\Nof a normal form
 Dialogue: 0,0:26:15.52,0:26:17.56,Default,,0,0,0,,which is embedded in\Na special kind of closure
-Dialogue: 0,0:26:17.56,0:26:19.08,Default,,0,0,0,,that preserves (INAUDIBLE) terms.
+Dialogue: 0,0:26:17.56,0:26:19.08,Default,,0,0,0,,that stores pure terms.
 Dialogue: 0,0:26:19.56,0:26:23.00,Default,,0,0,0,,And finally flattens\Nthe stack into a normal form
 Dialogue: 0,0:26:23.00,0:26:26.60,Default,,0,0,0,,that is returned when all\Nthe symbols in the stack are consumed.
 Dialogue: 0,0:26:27.84,0:26:30.96,Default,,0,0,0,,KN has been proven to find\Nthe normal form of a term
 Dialogue: 0,0:26:30.96,0:26:32.00,Default,,0,0,0,,when it has some.
 Dialogue: 0,0:26:32.52,0:26:35.40,Default,,0,0,0,,However the machine is\Na first order transition system
 Dialogue: 0,0:26:35.40,0:26:38.36,Default,,0,0,0,,that manipulates environments\Nand continuation stacks at the low level.
-Dialogue: 0,0:26:39.36,0:26:41.60,Default,,0,0,0,,And this format is not ready\Nto the deploy proofs by
+Dialogue: 0,0:26:39.36,0:26:41.60,Default,,0,0,0,,And this format is not ready\Nto deploy proofs by
 Dialogue: 0,0:26:41.60,0:26:42.68,Default,,0,0,0,,structural induction.
-Dialogue: 0,0:26:44.40,0:26:47.88,Default,,0,0,0,,Our approach is to introduce a\Nhigher order calculus of closures
+Dialogue: 0,0:26:44.40,0:26:47.88,Default,,0,0,0,,Our approach is to introduce a\Nhigher-order calculus of closures
 Dialogue: 0,0:26:47.88,0:26:50.44,Default,,0,0,0,,with a reduction strategy\Nthat mimics the machine
-Dialogue: 0,0:26:50.96,0:26:53.80,Default,,0,0,0,,and that is suited for\Nproofs by structural induction.
+Dialogue: 0,0:26:50.96,0:26:53.80,Default,,0,0,0,,and that is suited for deploying\Nproofs by structural induction.
 Dialogue: 0,0:26:54.56,0:26:58.68,Default,,0,0,0,,And later to prove that the said\Ncalculus realizes the normal order
 Dialogue: 0,0:26:58.68,0:27:00.64,Default,,0,0,0,,strategy of\Nthe pure lambda calculus.
 Dialogue: 0,0:27:01.88,0:27:04.24,Default,,0,0,0,,We arrived at such\Ncalculus of closures
@@ -277,24 +277,24 @@ Dialogue: 0,0:27:04.24,0:27:07.68,Default,,0,0,0,,from the ones in the tradition
 Dialogue: 0,0:27:07.68,0:27:08.68,Default,,0,0,0,,lambda rho.
 Dialogue: 0,0:27:09.64,0:27:12.16,Default,,0,0,0,,Curien's calculus\Ncontains proper closures
 Dialogue: 0,0:27:12.16,0:27:14.52,Default,,0,0,0,,made up of a term\Nand an environment.
-Dialogue: 0,0:27:15.76,0:27:18.08,Default,,0,0,0,,The term uses the De Bruijn\Nindices representation,
+Dialogue: 0,0:27:15.76,0:27:18.08,Default,,0,0,0,,The term uses the de Bruijn\Nindices representation,
 Dialogue: 0,0:27:19.08,0:27:20.72,Default,,0,0,0,,the environment stores closures
 Dialogue: 0,0:27:20.72,0:27:24.04,Default,,0,0,0,,and the indices are used to access\Nthe bindings in the environment
 Dialogue: 0,0:27:24.52,0:27:27.24,Default,,0,0,0,,where positions in\Nthe environment start at 0.
 Dialogue: 0,0:27:28.00,0:27:31.48,Default,,0,0,0,,In the example here,\Nreduction starts with a closure
 Dialogue: 0,0:27:31.48,0:27:32.80,Default,,0,0,0,,with empty environment.
 Dialogue: 0,0:27:33.80,0:27:35.64,Default,,0,0,0,,When an application is reached
-Dialogue: 0,0:27:36.12,0:27:38.24,Default,,0,0,0,,it's operand is embedded\Ninto a closure
+Dialogue: 0,0:27:36.12,0:27:38.24,Default,,0,0,0,,its operand is embedded\Ninto a closure
 Dialogue: 0,0:27:38.24,0:27:40.36,Default,,0,0,0,,and prepended to\Nthe current environment.
-Dialogue: 0,0:27:41.36,0:27:45.52,Default,,0,0,0,,Then the binding at position\N0 is looked up and retrieved
+Dialogue: 0,0:27:41.36,0:27:45.52,Default,,0,0,0,,Then, the binding at position\Nzero is looked up and retrieved
 Dialogue: 0,0:27:45.52,0:27:46.80,Default,,0,0,0,,from the environment.
 Dialogue: 0,0:27:47.56,0:27:50.24,Default,,0,0,0,,And then reduction\Nresumes on such bindings.
 Dialogue: 0,0:27:51.00,0:27:53.16,Default,,0,0,0,,In the beta rule of this calculus
 Dialogue: 0,0:27:53.16,0:27:54.72,Default,,0,0,0,,the operator in an application
-Dialogue: 0,0:27:54.72,0:27:58.28,Default,,0,0,0,,is reduced in multiple step fashion\Nto a weak head normal form.
+Dialogue: 0,0:27:54.72,0:27:58.28,Default,,0,0,0,,is reduced in multiple-step fashion\Nto a weak head normal form.
 Dialogue: 0,0:27:59.52,0:28:02.76,Default,,0,0,0,,This poses some problems when\Ndefining a reduction relation
-Dialogue: 0,0:28:02.76,0:28:04.20,Default,,0,0,0,,which is purely single step.
-Dialogue: 0,0:28:05.44,0:28:07.68,Default,,0,0,0,,This issue whilst\Nobserved and fixed
+Dialogue: 0,0:28:02.76,0:28:04.20,Default,,0,0,0,,which is purely single-step.
+Dialogue: 0,0:28:05.44,0:28:07.68,Default,,0,0,0,,This issue was\Nobserved and fixed
 Dialogue: 0,0:28:07.68,0:28:11.08,Default,,0,0,0,,in the Biernacka and Danvy's\NLambda hat Rho calculus.
 Dialogue: 0,0:28:12.32,0:28:16.12,Default,,0,0,0,,This variant of Curien's\Ncalculus considers a constructor
 Dialogue: 0,0:28:16.12,0:28:17.68,Default,,0,0,0,,for closure application
@@ -304,16 +304,16 @@ Dialogue: 0,0:28:23.84,0:28:26.48,Default,,0,0,0,,The calculus also includes\Nan
 Dialogue: 0,0:28:26.48,0:28:29.24,Default,,0,0,0,,that expands applications\Nto closure applications.
 Dialogue: 0,0:28:30.48,0:28:33.80,Default,,0,0,0,,This mechanism is reminiscent\Nof the apply stage
 Dialogue: 0,0:28:33.80,0:28:36.96,Default,,0,0,0,,in the eval-apply evaluators\Nin the classical literature
-Dialogue: 0,0:28:36.96,0:28:38.64,Default,,0,0,0,,in higher order\Nfunctional programming.
+Dialogue: 0,0:28:36.96,0:28:38.64,Default,,0,0,0,,in higher-order\Nfunctional programming.
 Dialogue: 0,0:28:40.16,0:28:42.40,Default,,0,0,0,,Now reduction expands applications.
 Dialogue: 0,0:28:43.12,0:28:44.92,Default,,0,0,0,,Reduces the operator if needed,
 Dialogue: 0,0:28:44.92,0:28:46.76,Default,,0,0,0,,performs beta reduction
 Dialogue: 0,0:28:47.24,0:28:50.28,Default,,0,0,0,,and then continues to\Nreduce as before.
-Dialogue: 0,0:28:51.04,0:28:54.00,Default,,0,0,0,,The Biernacka and Danvy's\Nlambda hat rho
+Dialogue: 0,0:28:51.04,0:28:54.00,Default,,0,0,0,,Biernacka and Danvy's\Nlambda hat rho
 Dialogue: 0,0:28:54.00,0:28:55.64,Default,,0,0,0,,is enough for weak reduction.
 Dialogue: 0,0:28:56.36,0:28:59.44,Default,,0,0,0,,They give account of\Nboth call by name and call by value
 Dialogue: 0,0:28:59.44,0:29:01.40,Default,,0,0,0,,weak reducing strategies\Nin this calculus.
-Dialogue: 0,0:29:02.16,0:29:05.40,Default,,0,0,0,,However it cannot accommodate\Nfull reducing strategies.
+Dialogue: 0,0:29:02.16,0:29:05.40,Default,,0,0,0,,However, it cannot accommodate\Nfull-reducing strategies.
 Dialogue: 0,0:29:06.64,0:29:09.92,Default,,0,0,0,,We remedy this by further\Nextending the calculus
 Dialogue: 0,0:29:09.92,0:29:12.76,Default,,0,0,0,,with a construction for\Nclosure abstraction.
 Dialogue: 0,0:29:13.76,0:29:16.08,Default,,0,0,0,,We also provide a new expansion rule
@@ -321,34 +321,34 @@ Dialogue: 0,0:29:16.84,0:29:19.32,Default,,0,0,0,,that expands abstractions\Nint
 Dialogue: 0,0:29:20.60,0:29:22.56,Default,,0,0,0,,But before presenting\Nthis rule in detail
 Dialogue: 0,0:29:23.04,0:29:25.96,Default,,0,0,0,,we discuss how to represent\Nthe formal parameter
 Dialogue: 0,0:29:25.96,0:29:27.52,Default,,0,0,0,,of the abstraction\Nin the environment.
-Dialogue: 0,0:29:28.80,0:29:32.60,Default,,0,0,0,,In calculus, a variable is\Nrepresented by a De Bruijn index
+Dialogue: 0,0:29:28.80,0:29:32.60,Default,,0,0,0,,In our calculus, a variable is\Nrepresented by a de Bruijn index
 Dialogue: 0,0:29:33.32,0:29:35.28,Default,,0,0,0,,which stands for\Nthe relative distance
 Dialogue: 0,0:29:35.28,0:29:37.76,Default,,0,0,0,,between the applied\Noccurrence of the variable
-Dialogue: 0,0:29:37.76,0:29:41.20,Default,,0,0,0,,and it's binding occurrence\Nin the abstract syntax tree.
+Dialogue: 0,0:29:37.76,0:29:41.20,Default,,0,0,0,,and its binding occurrence\Nin the abstract syntax tree.
 Dialogue: 0,0:29:42.72,0:29:46.08,Default,,0,0,0,,If the binding lambda is\Nimmediately above the variable,
-Dialogue: 0,0:29:46.84,0:29:47.96,Default,,0,0,0,,then the index is 0.
+Dialogue: 0,0:29:46.84,0:29:47.96,Default,,0,0,0,,then the index is zero.
 Dialogue: 0,0:29:48.48,0:29:52.08,Default,,0,0,0,,Otherwise the index gets\Nincremented as the distance
 Dialogue: 0,0:29:52.08,0:29:53.68,Default,,0,0,0,,to its binding lambda increases.
-Dialogue: 0,0:29:55.92,0:29:59.76,Default,,0,0,0,,However if we place the De Bruijn\Nindex of the formal parameter
+Dialogue: 0,0:29:55.92,0:29:59.76,Default,,0,0,0,,However, if we place the de Bruijn\Nindex of the formal parameter
 Dialogue: 0,0:29:59.76,0:30:03.08,Default,,0,0,0,,in a scope which is nested\Nunder more lambdas
-Dialogue: 0,0:30:03.08,0:30:04.44,Default,,0,0,0,,than it's binding occurrence,
+Dialogue: 0,0:30:03.08,0:30:04.44,Default,,0,0,0,,than its binding occurrence,
 Dialogue: 0,0:30:04.92,0:30:07.48,Default,,0,0,0,,then we have to adjust that\Nindex by adding to it
-Dialogue: 0,0:30:07.48,0:30:09.48,Default,,0,0,0,,the number of lambdas going down.
-Dialogue: 0,0:30:11.24,0:30:15.08,Default,,0,0,0,,Inspired by KN, we used\Ninstead De Bruijn level
-Dialogue: 0,0:30:15.08,0:30:17.64,Default,,0,0,0,,of the formal parameter\Nhere over lined
+Dialogue: 0,0:30:07.48,0:30:09.48,Default,,0,0,0,,the number of lambdas gone down.
+Dialogue: 0,0:30:11.24,0:30:15.08,Default,,0,0,0,,Inspired by KN, we use\Ninstead the de Bruijn level
+Dialogue: 0,0:30:15.08,0:30:17.64,Default,,0,0,0,,of the formal parameter,\Nhere overlined,
 Dialogue: 0,0:30:18.16,0:30:20.80,Default,,0,0,0,,which stands for the absolute\Nlambda nesting level
 Dialogue: 0,0:30:20.80,0:30:23.08,Default,,0,0,0,,of the binding lambda in\Nthe abstract index tree.
 Dialogue: 0,0:30:24.32,0:30:26.40,Default,,0,0,0,,One stands for the first lambda.
 Dialogue: 0,0:30:26.88,0:30:30.32,Default,,0,0,0,,And the level increases if\Nthe binding lambda is further down.
-Dialogue: 0,0:30:31.56,0:30:33.60,Default,,0,0,0,,The advantage of\Nthe De Bruijn levels
+Dialogue: 0,0:30:31.56,0:30:33.60,Default,,0,0,0,,The advantage of\Nthe de Bruijn levels
 Dialogue: 0,0:30:33.60,0:30:37.24,Default,,0,0,0,,is that they need not be a adjusted\Nwhen placed in scopes of the term
 Dialogue: 0,0:30:37.24,0:30:39.20,Default,,0,0,0,,that are nested under more lambdas.
-Dialogue: 0,0:30:40.20,0:30:41.92,Default,,0,0,0,,In order to use the De Bruijn level
+Dialogue: 0,0:30:40.20,0:30:41.92,Default,,0,0,0,,In order to use the de Bruijn level
 Dialogue: 0,0:30:42.44,0:30:44.92,Default,,0,0,0,,we first decorate our\Nreduction relation
 Dialogue: 0,0:30:44.92,0:30:46.76,Default,,0,0,0,,with the current\Nlambda nesting level.
 Dialogue: 0,0:30:47.52,0:30:50.68,Default,,0,0,0,,And then the expansion rule\Npushes into the environment
-Dialogue: 0,0:30:50.68,0:30:52.72,Default,,0,0,0,,the current level increment by one.
-Dialogue: 0,0:30:52.72,0:30:55.00,Default,,0,0,0,,Since the formal parameter\Nhas crossed the lambda.
+Dialogue: 0,0:30:50.68,0:30:52.72,Default,,0,0,0,,the current level incremented by one
+Dialogue: 0,0:30:52.72,0:30:55.00,Default,,0,0,0,,since the formal parameter\Nhas crossed the lambda.
 Dialogue: 0,0:30:56.00,0:30:59.40,Default,,0,0,0,,We also add to the calculus\Na construction for such levels
 Dialogue: 0,0:30:59.92,0:31:03.88,Default,,0,0,0,,and we restrict the environments\Nto either contain proper closures
 Dialogue: 0,0:31:03.88,0:31:07.88,Default,,0,0,0,,or levels since this would be\Nenough for the reduction strategy
@@ -359,17 +359,17 @@ Dialogue: 0,0:31:15.56,0:31:18.64,Default,,0,0,0,,by subtracting the level from\
 Dialogue: 0,0:31:19.64,0:31:21.96,Default,,0,0,0,,A new rule takes care\Nof this calculation
 Dialogue: 0,0:31:22.48,0:31:25.92,Default,,0,0,0,,and embeds the calculated\Nindex into a new construction
 Dialogue: 0,0:31:25.92,0:31:27.08,Default,,0,0,0,,for absolute indices.
-Dialogue: 0,0:31:28.36,0:31:31.68,Default,,0,0,0,,Absolute indices are formal parameters\Nof an applied abstractions
+Dialogue: 0,0:31:28.36,0:31:31.68,Default,,0,0,0,,Absolute indices are formal parameters\Nof unapplied abstractions
 Dialogue: 0,0:31:31.68,0:31:33.96,Default,,0,0,0,,that are not relative\Nto any environment.
 Dialogue: 0,0:31:34.96,0:31:38.08,Default,,0,0,0,,We show an example of a reduction\Nsequence in our calculus.
-Dialogue: 0,0:31:38.84,0:31:41.88,Default,,0,0,0,,The sequence starts with\Na term within the environment
+Dialogue: 0,0:31:38.84,0:31:41.88,Default,,0,0,0,,The sequence starts with\Na term with an empty environment
 Dialogue: 0,0:31:41.88,0:31:44.32,Default,,0,0,0,,and expands the application\Ninto a closure application.
 Dialogue: 0,0:31:45.32,0:31:48.80,Default,,0,0,0,,But now it also expands\Nthe operator to a closure abstraction
 Dialogue: 0,0:31:48.80,0:31:50.48,Default,,0,0,0,,before performing the beta step
 Dialogue: 0,0:31:50.96,0:31:53.64,Default,,0,0,0,,which replaces the formal\Nparameter by the operand
 Dialogue: 0,0:31:54.12,0:31:56.64,Default,,0,0,0,,then the sequence goes on as before.
 Dialogue: 0,0:31:57.88,0:31:59.84,Default,,0,0,0,,We also show how reduction acts
-Dialogue: 0,0:31:59.84,0:32:01.68,Default,,0,0,0,,on any applied abstraction.
+Dialogue: 0,0:31:59.84,0:32:01.68,Default,,0,0,0,,on an unapplied abstraction.
 Dialogue: 0,0:32:02.16,0:32:04.56,Default,,0,0,0,,The abstraction is expanded\Nto a closure abstraction
 Dialogue: 0,0:32:04.56,0:32:07.32,Default,,0,0,0,,and later the level of\Nthe formal parameter
 Dialogue: 0,0:32:07.32,0:32:09.04,Default,,0,0,0,,is retrieved from the environment.
@@ -379,7 +379,7 @@ Dialogue: 0,0:32:16.48,0:32:19.32,Default,,0,0,0,,that increments the level deco
 Dialogue: 0,0:32:20.32,0:32:22.68,Default,,0,0,0,,Combined with the rule\Nfor index calculation
 Dialogue: 0,0:32:23.40,0:32:26.60,Default,,0,0,0,,this results in the level\None of the formal parameter
 Dialogue: 0,0:32:26.60,0:32:29.68,Default,,0,0,0,,being subtracted from\Nthe current lambda nesting level.
-Dialogue: 0,0:32:30.20,0:32:33.24,Default,,0,0,0,,Which is embedded as\Nthe absolute index 0.
+Dialogue: 0,0:32:30.20,0:32:33.24,Default,,0,0,0,,Which is embedded as\Nthe absolute index zero.
 Dialogue: 0,0:32:35.00,0:32:37.40,Default,,0,0,0,,Notice that the input term\Nwas already a normal form
 Dialogue: 0,0:32:37.92,0:32:41.44,Default,,0,0,0,,and that reduction has only\Nperformed administrative steps
 Dialogue: 0,0:32:41.44,0:32:44.52,Default,,0,0,0,,which amount to flattening\Nthe explicit substitution in the closure
@@ -388,7 +388,7 @@ Dialogue: 0,0:32:47.20,0:32:50.20,Default,,0,0,0,,Our main result is a one\Nto o
 Dialogue: 0,0:32:50.20,0:32:53.92,Default,,0,0,0,,between the non-administrative\Nsteps in our calculus
 Dialogue: 0,0:32:53.92,0:32:56.48,Default,,0,0,0,,and the steps of normal\Norder in lambda.
 Dialogue: 0,0:32:58.24,0:33:01.40,Default,,0,0,0,,This correspondence is captured\Nby the commuting diagram here.
-Dialogue: 0,0:33:02.16,0:33:05.36,Default,,0,0,0,,On the top, 0 or more\Nadministrative steps
+Dialogue: 0,0:33:02.16,0:33:05.36,Default,,0,0,0,,On the top, zero or more\Nadministrative steps
 Dialogue: 0,0:33:05.36,0:33:07.08,Default,,0,0,0,,followed by one beta step
 Dialogue: 0,0:33:07.60,0:33:10.20,Default,,0,0,0,,correspond to the one\Nbeta step on the bottom.
 Dialogue: 0,0:33:11.48,0:33:15.48,Default,,0,0,0,,A substitution function sigma\Nmediates between the closures above
