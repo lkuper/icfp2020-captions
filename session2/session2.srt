@@ -5503,12 +5503,12 @@ First-Class Control,"
 1162
 01:13:22,800 --> 01:13:27,400
 and it's going to be presented
-by Daniel Hillerstrom.
+by Daniel Hillerström.
 
 1163
 01:13:27,400 --> 01:13:29,520
-DANIEL HILLERSTROM: Hi, my
-name is Daniel Hillerstom,
+DANIEL HILLERSTRÖM: Hi, my
+name is Daniel Hillerström,
 
 1164
 01:13:29,520 --> 01:13:31,760
@@ -5602,7 +5602,7 @@ reasonable languages,
 1183
 01:14:11,640 --> 01:14:15,000
 with first-order types
-as being equally expressive.
+as being equi-expressive.
 
 1184
 01:14:15,000 --> 01:14:17,560
@@ -5630,7 +5630,7 @@ this generic count problem
 
 1189
 01:14:26,160 --> 01:14:27,760
-which is asked to implement
+which asks us to implement
 the third-order function
 
 1190
@@ -5724,8 +5724,8 @@ still provide a particular
 
 1209
 01:15:17,080 --> 01:15:18,960
-structure form of
-the limited control,
+structured form of
+delimited control,
 
 1210
 01:15:18,960 --> 01:15:22,720
@@ -5803,7 +5803,7 @@ for why this result is true.
 1226
 01:15:57,360 --> 01:16:00,920
 I will elaborate a bit
-on the methodology.
+on our methodology.
 
 1227
 01:16:00,920 --> 01:16:03,480
@@ -6093,7 +6093,7 @@ where the efficiency gap
 1287
 01:18:44,680 --> 01:18:47,040
 between PCF and PCF
-for the effect handles
+with effect handles
 
 1288
 01:18:47,040 --> 01:18:49,840
@@ -6110,7 +6110,7 @@ of generic count
 
 1291
 01:18:53,480 --> 01:18:55,320
-with effect handles.
+with effect handlers.
 
 1292
 01:18:55,320 --> 01:18:57,720
@@ -6120,7 +6120,7 @@ one might go about
 1293
 01:18:57,720 --> 01:19:01,280
 and implement generic
-count with effect handles.
+count with effect handlers.
 
 1294
 01:19:01,280 --> 01:19:03,640
@@ -6140,21 +6140,21 @@ as the invocation
 1297
 01:19:09,440 --> 01:19:12,320
 of an abstract operation
-called branch.
+called Branch.
 
 1298
 01:19:12,320 --> 01:19:14,120
-The only thing we know about branch
+The only thing we know about Branch
 
 1299
 01:19:14,120 --> 01:19:17,720
 is that it's going to ultimately
-return a Boolean value.
+return a boolean value.
 
 1300
 01:19:17,720 --> 01:19:19,800
 And also, given
-the interpretation of branch,
+the interpretation of Branch,
 
 1301
 01:19:19,800 --> 01:19:23,000
@@ -6207,7 +6207,7 @@ the continuation
 
 1311
 01:19:46,040 --> 01:19:49,520
-of the branch operation inside
+of the Branch operation inside
 the predicate computation.
 
 1312
@@ -6251,7 +6251,7 @@ component of the point.
 1320
 01:20:14,920 --> 01:20:18,480
 This query causes an invocation
-of the branch operation.
+of the Branch operation.
 
 1321
 01:20:18,480 --> 01:20:20,720
@@ -6290,7 +6290,7 @@ same thing will happen.
 1328
 01:20:36,680 --> 01:20:38,680
 Another invocation of
-branch will occur
+Branch will occur
 
 1329
 01:20:38,680 --> 01:20:41,520
@@ -6369,11 +6369,11 @@ but this time with the answer true,
 
 1345
 01:21:22,880 --> 01:21:26,480
-meaning that will return a one.
+meaning that it will return a one.
 
 1346
 01:21:26,480 --> 01:21:28,840
-The handle is now going
+The handler is now going
 to sum up the answers
 
 1347
@@ -6426,7 +6426,7 @@ Big O two to the N steps.
 
 1358
 01:22:03,000 --> 01:22:05,160
-Now, in PCF, we don't have effect handles.
+Now, in PCF, we don't have effect handlers.
 
 1359
 01:22:05,160 --> 01:22:06,640
@@ -6440,7 +6440,7 @@ for sharing computation.
 1361
 01:22:08,560 --> 01:22:10,920
 Therefore, every generic
-counter function must restart
+count function must restart
 
 1362
 01:22:10,920 --> 01:22:13,120
@@ -6454,7 +6454,7 @@ what this means.
 1364
 01:22:15,560 --> 01:22:17,480
 Let's consider some generic
-comm function
+count function
 
 1365
 01:22:17,480 --> 01:22:19,840
@@ -6467,7 +6467,7 @@ and let's for simplicity,
 1367
 01:22:21,320 --> 01:22:23,480
 assume that this
-generic cunt function
+generic count function
 
 1368
 01:22:23,480 --> 01:22:25,720
@@ -6493,7 +6493,7 @@ which returns true,
 
 1373
 01:22:34,560 --> 01:22:38,320
-meaning that'd be the sent down
+meaning that we descend down
 the left branch in the tree.
 
 1374
@@ -6546,7 +6546,7 @@ some work along the way,
 1384
 01:23:05,440 --> 01:23:08,280
 in order to finally
-the arrive at the second leaf.
+arrive at the second leaf.
 
 1385
 01:23:08,280 --> 01:23:10,120
@@ -6582,7 +6582,7 @@ the generic count function
 
 1392
 01:23:26,400 --> 01:23:28,160
-will have to construct points
+will have to construct n points
 
 1393
 01:23:28,160 --> 01:23:30,480
@@ -6595,7 +6595,7 @@ involves, at least,
 
 1395
 01:23:33,440 --> 01:23:36,520
-two to the n steps.
+n two to the n steps.
 
 1396
 01:23:36,520 --> 01:23:40,080
@@ -6754,18 +6754,18 @@ would like to consider
 
 1429
 01:24:57,000 --> 01:25:00,200
-how linear handles fits
+how linear handlers fit
 into the picture.
 
 1430
 01:25:00,200 --> 01:25:02,560
-So linear handles are
+So linear handlers are
 a special form of handlers
 
 1431
 01:25:02,560 --> 01:25:06,640
 that only allow the continuation
-to have been booked once.
+to to be invoked once.
 
 1432
 01:25:06,640 --> 01:25:09,080
@@ -6774,12 +6774,12 @@ current proof techniques
 
 1433
 01:25:09,080 --> 01:25:10,480
-will adapt vertically
+will adapt readily
 to the situation,
 
 1434
 01:25:10,480 --> 01:25:11,760
-with the new handlers.
+with the linear handlers.
 
 1435
 01:25:11,760 --> 01:25:14,160
@@ -6797,8 +6797,8 @@ would be a richer type system.
 
 1438
 01:25:16,920 --> 01:25:18,640
-Say, one of the features
-effect-typing,
+Say, one that features
+effect typing,
 
 1439
 01:25:18,640 --> 01:25:21,240
