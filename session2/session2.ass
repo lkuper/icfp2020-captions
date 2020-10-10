@@ -1297,7 +1297,7 @@ Dialogue: 0,1:18:38.00,1:18:39.60,Default,,0,0,0,,to N standard predicates.
 Dialogue: 0,1:18:39.60,1:18:42.12,Default,,0,0,0,,This restriction serves to\Nsimplify the analysis,
 Dialogue: 0,1:18:42.12,1:18:43.68,Default,,0,0,0,,but it also provides us an instance
 Dialogue: 0,1:18:43.68,1:18:44.68,Default,,0,0,0,,where the efficiency gap
-Dialogue: 0,1:18:44.68,1:18:47.04,Default,,0,0,0,,between PCF and PCF\Nwith effect handles
+Dialogue: 0,1:18:44.68,1:18:47.04,Default,,0,0,0,,between PCF and PCF\Nwith effect handlers
 Dialogue: 0,1:18:47.04,1:18:49.84,Default,,0,0,0,,manifests as clearly as possible.
 Dialogue: 0,1:18:49.84,1:18:50.84,Default,,0,0,0,,This restriction will enable us
 Dialogue: 0,1:18:50.84,1:18:53.48,Default,,0,0,0,,to give a crisp implementation\Nof generic count
