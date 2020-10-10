@@ -10245,7 +10245,7 @@ makes a statically
 2195
 02:01:42,640 --> 02:01:47,320
 This is because algebraic effect
- handles have the ability
+ handlers have the ability
 
 2196
 02:01:47,320 --> 02:01:50,200

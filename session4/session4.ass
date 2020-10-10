@@ -2211,7 +2211,7 @@ Dialogue: 0,2:01:30.80,2:01:32.20,Default,,0,0,0,,and implicit polymorphism.
 Dialogue: 0,2:01:32.68,2:01:36.48,Default,,0,0,0,,So, this is a problem because\N the right combination
 Dialogue: 0,2:01:36.48,2:01:38.80,Default,,0,0,0,,of these programming features
 Dialogue: 0,2:01:38.80,2:01:42.64,Default,,0,0,0,,makes a statically\N typed language unsafe.
-Dialogue: 0,2:01:42.64,2:01:47.32,Default,,0,0,0,,This is because algebraic effect\N handles have the ability
+Dialogue: 0,2:01:42.64,2:01:47.32,Default,,0,0,0,,This is because algebraic effect\N handlers have the ability
 Dialogue: 0,2:01:47.32,2:01:50.20,Default,,0,0,0,,to manipulate delimited\N continuations.
 Dialogue: 0,2:01:50.20,2:01:56.04,Default,,0,0,0,,But the combination\N of the use of continuations
 Dialogue: 0,2:01:56.04,2:02:01.04,Default,,0,0,0,,and implicit polymorphism\N is known to be unsafe.
